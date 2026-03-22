@@ -1,11 +1,13 @@
 name: Scrape Philadelphia Cultural Events
 
 on:
-  # Run on button click from the site
   workflow_dispatch:
-  # Run daily at 8 AM ET (noon UTC)
   schedule:
     - cron: '0 12 * * *'
+  push:
+    branches: [main, 'claude/**']
+    paths:
+      - 'scraper/**'
 
 permissions:
   contents: write
