@@ -1,0 +1,37 @@
+name: Scrape Philadelphia Cultural Events
+
+on:
+  # Run on button click from the site
+  workflow_dispatch:
+  # Run daily at 8 AM ET (noon UTC)
+  schedule:
+    - cron: '0 12 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper
+        run: python scraper/scrape_events.py
+
+      - name: Commit updated events
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/sources.json
+          git diff --staged --quiet || git commit -m "chore: update event listings $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
