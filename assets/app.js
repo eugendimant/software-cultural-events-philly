@@ -55,7 +55,7 @@
       renderAnalytics();
     } catch (err) {
       console.error('Error loading events:', err);
-      eventsList.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-dim)"><p>Could not load events. Run the scraper first:</p><code style="display:block;margin-top:1rem;color:var(--accent)">python scraper/scrape_events.py</code></div>';
+      eventsList.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-dim)"><p>Could not load events data.</p><p style="margin-top:0.5rem">The scraper may not have run yet. Events will appear once the GitHub Actions workflow completes.</p></div>';
     }
   }
 
