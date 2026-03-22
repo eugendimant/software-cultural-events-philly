@@ -820,3 +820,128 @@ body::before {
 }
 button:focus:not(:focus-visible),
 a:focus:not(:focus-visible) { outline: none; }
+
+/* ---- ITERATION 11: Spotlight Tonight/Tomorrow ---- */
+.spotlight-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg) 0;
+  position: relative;
+  z-index: 1;
+}
+.spotlight-group { margin-bottom: var(--space-md); }
+.spotlight-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+.spotlight-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.spotlight-dot.tonight { background: var(--c-concert); animation: pulse 2s ease-in-out infinite; }
+.spotlight-dot.tomorrow { background: var(--accent); }
+.spotlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.spotlight-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.spotlight-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.spotlight-cat { margin-bottom: 6px; display: inline-block; }
+.spotlight-title { font-weight: 600; font-size: 0.9375rem; margin-bottom: 4px; }
+.spotlight-venue { font-size: 0.75rem; color: var(--text-muted); }
+.spotlight-price { font-size: 0.75rem; color: var(--accent); margin-top: 4px; font-weight: 600; }
+
+/* ---- ITERATION 12: Analytics ---- */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+.analytics-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+.analytics-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-md);
+}
+.donut-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.donut-chart { width: 120px; height: 120px; flex-shrink: 0; }
+.legend { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.legend-item { display: flex; align-items: center; gap: var(--space-sm); font-size: 0.75rem; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.legend-label { color: var(--text-muted); flex: 1; }
+.legend-count { color: var(--text); font-weight: 600; }
+
+.venue-bars { display: flex; flex-direction: column; gap: 8px; }
+.venue-bar-row { display: flex; align-items: center; gap: var(--space-sm); }
+.venue-bar-label { font-size: 0.6875rem; color: var(--text-muted); width: 140px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.venue-bar-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.venue-bar-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.5s var(--ease); }
+.venue-bar-count { font-size: 0.6875rem; color: var(--text); font-weight: 600; width: 20px; text-align: right; }
+
+/* ---- ITERATION 14: Share button on cards ---- */
+.card-action-row { display: flex; gap: 4px; justify-content: flex-end; }
+.share-btn {
+  background: none; border: none; color: var(--text-dim); padding: 4px;
+  border-radius: 50%; transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+}
+.share-btn:hover { color: var(--accent); transform: scale(1.15); }
+
+/* ---- Toast notification ---- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  z-index: 2000;
+  opacity: 0;
+  transition: all 0.3s var(--ease);
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive additions */
+@media (max-width: 768px) {
+  .spotlight-cards { grid-template-columns: 1fr; }
+  .analytics-grid { grid-template-columns: 1fr; }
+  .donut-container { flex-direction: column; align-items: flex-start; }
+  .venue-bar-label { width: 100px; }
+}

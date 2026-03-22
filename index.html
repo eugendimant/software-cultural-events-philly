@@ -14,7 +14,6 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
@@ -22,27 +21,34 @@
         <p class="tagline">Your guide to Philadelphia's performing arts</p>
       </div>
       <div class="header-actions">
+        <button id="emailDigestBtn" class="btn btn-ghost" title="Email weekly digest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Email</span>
+        </button>
+        <button id="analyticsToggle" class="btn btn-ghost" title="View analytics">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span>Stats</span>
+        </button>
         <button id="favToggle" class="btn btn-ghost" title="Show saved events">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           <span>Saved</span>
         </button>
         <button id="sourcesToggle" class="btn btn-ghost" title="View all sources">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           <span>Sources</span>
         </button>
         <button id="refreshBtn" class="btn btn-primary" title="Refresh events">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
           <span>Refresh</span>
         </button>
         <button id="viewToggle" class="btn btn-ghost" title="Toggle view">
-          <svg class="icon-calendar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <svg class="icon-list hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <svg class="icon-calendar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <svg class="icon-list hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Filters -->
   <section class="filters-bar">
     <div class="filters-inner">
       <div class="filter-row">
@@ -72,7 +78,7 @@
             <option value="price-high">Sort: Price (high)</option>
           </select>
           <div class="search-box">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="text" id="searchInput" placeholder="Search events, venues..." autocomplete="off">
           </div>
         </div>
@@ -80,7 +86,6 @@
     </div>
   </section>
 
-  <!-- Stats bar -->
   <section class="stats-bar">
     <div class="stats-inner">
       <span id="eventCount" class="stat-text"></span>
@@ -91,90 +96,53 @@
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- Spotlight: Tonight / Tomorrow -->
+  <section id="spotlightSection" class="spotlight-section hidden"></section>
+
   <main class="main-content">
-    <!-- Calendar View -->
     <div id="calendarView" class="view-container hidden">
       <div class="calendar-header">
-        <button id="prevMonth" class="btn btn-icon" aria-label="Previous month">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
+        <button id="prevMonth" class="btn btn-icon" aria-label="Previous month"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
         <h2 id="calendarTitle" class="calendar-month-title"></h2>
-        <button id="nextMonth" class="btn btn-icon" aria-label="Next month">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
+        <button id="nextMonth" class="btn btn-icon" aria-label="Next month"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
       </div>
       <div class="calendar-grid">
-        <div class="calendar-day-header">Sun</div>
-        <div class="calendar-day-header">Mon</div>
-        <div class="calendar-day-header">Tue</div>
-        <div class="calendar-day-header">Wed</div>
-        <div class="calendar-day-header">Thu</div>
-        <div class="calendar-day-header">Fri</div>
-        <div class="calendar-day-header">Sat</div>
+        <div class="calendar-day-header">Sun</div><div class="calendar-day-header">Mon</div><div class="calendar-day-header">Tue</div><div class="calendar-day-header">Wed</div><div class="calendar-day-header">Thu</div><div class="calendar-day-header">Fri</div><div class="calendar-day-header">Sat</div>
         <div id="calendarDays" class="calendar-days-container"></div>
       </div>
     </div>
-
-    <!-- List View -->
     <div id="listView" class="view-container">
       <div id="eventsList" class="events-list"></div>
     </div>
-
-    <!-- Empty state -->
     <div id="emptyState" class="empty-state hidden">
-      <div class="empty-icon">🔍</div>
-      <h3>No events found</h3>
-      <p>Try adjusting your filters or search terms</p>
+      <div class="empty-icon">🔍</div><h3>No events found</h3><p>Try adjusting your filters or search terms</p>
     </div>
   </main>
 
-  <!-- Event Detail Modal -->
+  <!-- Event Modal -->
   <div id="eventModal" class="modal-overlay hidden" role="dialog" aria-modal="true">
     <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Close">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+      <button class="modal-close" id="modalClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       <div class="modal-badges" id="modalBadges"></div>
       <h2 class="modal-title" id="modalTitle"></h2>
       <div class="modal-meta">
-        <div class="modal-meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span id="modalDate"></span>
-        </div>
-        <div class="modal-meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span id="modalTime"></span>
-        </div>
-        <div class="modal-meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span id="modalVenue"></span>
-        </div>
-        <div class="modal-meta-item" id="modalPriceRow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span id="modalPrice"></span>
-        </div>
+        <div class="modal-meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span id="modalDate"></span></div>
+        <div class="modal-meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="modalTime"></span></div>
+        <div class="modal-meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span id="modalVenue"></span></div>
+        <div class="modal-meta-item" id="modalPriceRow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span id="modalPrice"></span></div>
       </div>
       <p class="modal-description" id="modalDescription"></p>
-      <div class="modal-source">
-        <span>Source: </span><a id="modalSource" href="#" target="_blank" rel="noopener"></a>
-      </div>
+      <div class="modal-source"><span>Source: </span><a id="modalSource" href="#" target="_blank" rel="noopener"></a></div>
       <div class="modal-actions">
-        <a id="modalTicketLink" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          Get Tickets / More Info
+        <a id="modalTicketLink" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get Tickets</a>
+        <a id="modalGcalLink" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" title="Add to Google Calendar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          <span>GCal</span>
         </a>
-        <a id="modalMapLink" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Map</span>
-        </a>
-        <button id="modalCalLink" class="btn btn-ghost btn-lg">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span>.ics</span>
-        </button>
-        <button id="modalFavBtn" class="btn btn-ghost btn-lg">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          <span>Save</span>
-        </button>
+        <a id="modalMapLink" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Map</span></a>
+        <button id="modalCalLink" class="btn btn-ghost btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>.ics</span></button>
+        <button id="modalShareBtn" class="btn btn-ghost btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span>Share</span></button>
+        <button id="modalFavBtn" class="btn btn-ghost btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Save</span></button>
       </div>
     </div>
   </div>
@@ -182,23 +150,22 @@
   <!-- Sources Panel -->
   <div id="sourcesOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
     <div class="sources-panel">
-      <div class="sources-header">
-        <h2>Event Sources</h2>
-        <p class="sources-subtitle">We aggregate from 14 Philadelphia performing arts organizations</p>
-        <button class="modal-close" id="sourcesClose" aria-label="Close">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
+      <div class="sources-header"><h2>Event Sources</h2><p class="sources-subtitle">We aggregate from 14 Philadelphia performing arts organizations</p><button class="modal-close" id="sourcesClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
       <div id="sourcesPanel" class="sources-grid"></div>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Analytics Panel -->
+  <div id="analyticsOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="sources-panel">
+      <div class="sources-header"><h2>Event Analytics</h2><p class="sources-subtitle">Breakdown of current events by category and venue</p><button class="modal-close" id="analyticsClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+      <div id="analyticsSection" class="analytics-grid"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
-      <p class="footer-text">
-        PhillyCulture — Aggregating <span id="footerSourceCount">14</span> Philadelphia performing arts sources
-      </p>
+      <p class="footer-text">PhillyCulture — Aggregating <span id="footerSourceCount">14</span> Philadelphia performing arts sources</p>
       <p class="footer-sub">Data refreshed on demand via GitHub Actions. Not affiliated with any venue.</p>
     </div>
   </footer>
