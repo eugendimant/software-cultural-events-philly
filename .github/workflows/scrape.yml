@@ -1,14 +1,15 @@
 name: Scrape Philadelphia Cultural Events
 
 on:
-  # Run on button click from the site
   workflow_dispatch:
-  # Run daily at 8 AM ET (noon UTC)
   schedule:
+    # Run daily at 8 AM ET (noon UTC)
     - cron: '0 12 * * *'
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   scrape:
@@ -28,10 +29,37 @@ jobs:
       - name: Run scraper
         run: python scraper/scrape_events.py
 
+      - name: Check results
+        run: |
+          EVENT_COUNT=$(python -c "import json; print(json.load(open('data/events.json'))['total_events'])")
+          echo "Scraped $EVENT_COUNT events"
+          if [ "$EVENT_COUNT" -eq 0 ]; then
+            echo "WARNING: No events scraped. Check scraper logs above."
+          fi
+
       - name: Commit updated events
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/sources.json
-          git diff --staged --quiet || git commit -m "chore: update event listings $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git diff --staged --quiet || git commit -m "data: update event listings $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
+
+  # After scraping, deploy the updated site
+  deploy:
+    needs: scrape
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - run: git pull origin ${{ github.ref_name }}
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4

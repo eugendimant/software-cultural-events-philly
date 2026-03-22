@@ -2,6 +2,13 @@
 """
 Philadelphia Cultural Events Scraper
 Fetches events from verified Philadelphia cultural venues and outputs JSON.
+
+Every event must have:
+- title (from the page)
+- source URL (traceable back to the original page)
+- venue name
+
+Events missing required fields are DISCARDED — no guessing, no defaults for titles/dates.
 """
 
 import json
@@ -17,545 +24,466 @@ from bs4 import BeautifulSoup
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/125.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
 }
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
+# Scrape report — tracks what was found
+REPORT = {"successes": [], "failures": [], "warnings": []}
+
 
 def safe_get(url, timeout=20):
+    """Fetch URL with error handling. Returns Response or None."""
     try:
         r = SESSION.get(url, timeout=timeout)
         r.raise_for_status()
         return r
     except Exception as e:
-        print(f"  [WARN] Failed to fetch {url}: {e}", file=sys.stderr)
+        msg = f"Failed to fetch {url}: {e}"
+        print(f"  [WARN] {msg}", file=sys.stderr)
+        REPORT["failures"].append(msg)
         return None
 
 
-def make_id(venue, title, date_str):
-    raw = f"{venue}|{title}|{date_str}"
+def make_id(source_key, title, date_str=""):
+    """Generate a deterministic ID from source + title + date."""
+    raw = f"{source_key}|{title}|{date_str}".lower().strip()
     return hashlib.md5(raw.encode()).hexdigest()[:12]
 
 
 def parse_price(text):
+    """Extract price string from text. Returns None if not found."""
     if not text:
         return None
-    m = re.search(r'\$[\d,.]+(?:\s*[-–]\s*\$[\d,.]+)?', text)
+    text = text.strip()
+    low = text.lower()
+    if low in ("free", "free!", "free admission", "no cover"):
+        return "Free"
+    m = re.search(r'\$[\d,.]+(?:\s*[-–—]\s*\$[\d,.]+)?', text)
     return m.group(0) if m else None
+
+
+def clean_text(text):
+    """Clean whitespace from extracted text."""
+    if not text:
+        return ""
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def find_text(el, selectors):
+    """Try multiple CSS selectors, return first match's text or empty string."""
+    if not el:
+        return ""
+    for sel in selectors:
+        found = el.select_one(sel)
+        if found:
+            t = clean_text(found.get_text())
+            if t:
+                return t
+    return ""
+
+
+def find_link(el, base_url):
+    """Find first <a> link in element, resolve relative URLs."""
+    if not el:
+        return ""
+    a = el.select_one("a[href]")
+    if a and a.get("href"):
+        href = a["href"]
+        if href.startswith("http"):
+            return href
+        return urljoin(base_url, href)
+    return ""
+
+
+def validate_event(ev):
+    """Return True only if event has required fields. No guessing."""
+    if not ev.get("title") or len(ev["title"]) < 2:
+        return False
+    if not ev.get("source"):
+        return False
+    # Filter out navigation items, headers, etc.
+    skip_words = ["subscribe", "sign up", "newsletter", "donate", "login",
+                  "menu", "search", "home", "about", "contact", "gallery",
+                  "facebook", "twitter", "instagram", "youtube"]
+    title_low = ev["title"].lower()
+    if any(w == title_low for w in skip_words):
+        return False
+    if len(ev["title"]) > 200:
+        return False
+    return True
+
+
+def parse_date_range(text):
+    """Try to extract start/end dates from display text. Returns (start, end, display)."""
+    if not text:
+        return None, None, ""
+
+    display = clean_text(text)
+    today = datetime.now()
+    year = today.year
+
+    # Try patterns like "Mar 25 – Apr 6, 2026" or "March 25 - April 6"
+    range_pattern = re.compile(
+        r'(\w+)\s+(\d{1,2})\s*[-–—]\s*(\w+)\s+(\d{1,2}),?\s*(\d{4})?',
+        re.IGNORECASE
+    )
+    m = range_pattern.search(text)
+    if m:
+        try:
+            y = int(m.group(5)) if m.group(5) else year
+            start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%B %d %Y")
+            end = datetime.strptime(f"{m.group(3)} {m.group(4)} {y}", "%B %d %Y")
+            return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
+        except ValueError:
+            try:
+                start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%b %d %Y")
+                end = datetime.strptime(f"{m.group(3)} {m.group(4)} {y}", "%b %d %Y")
+                return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
+            except ValueError:
+                pass
+
+    # Try single date like "March 25, 2026" or "Mar 25"
+    single_pattern = re.compile(
+        r'(\w+)\s+(\d{1,2}),?\s*(\d{4})?', re.IGNORECASE
+    )
+    m = single_pattern.search(text)
+    if m:
+        try:
+            y = int(m.group(3)) if m.group(3) else year
+            dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%B %d %Y")
+            ds = dt.strftime("%Y-%m-%d")
+            return ds, ds, display
+        except ValueError:
+            try:
+                dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%b %d %Y")
+                ds = dt.strftime("%Y-%m-%d")
+                return ds, ds, display
+            except ValueError:
+                pass
+
+    # ISO date
+    iso = re.search(r'(\d{4}-\d{2}-\d{2})', text)
+    if iso:
+        return iso.group(1), iso.group(1), display
+
+    return None, None, display
 
 
 # ---------------------------------------------------------------------------
 # SCRAPERS — one per source
+# Each returns a list of event dicts. Every event MUST be traceable.
 # ---------------------------------------------------------------------------
 
-def scrape_ensemble_arts():
-    """Ensemble Arts Philly — Kimmel Center, Academy of Music, Miller Theater."""
+TITLE_SELECTORS = ["h2", "h3", "h4", ".title", "[class*='title']", "[class*='Title']",
+                   ".event-name", "[class*='name']", "a strong", "a b"]
+DATE_SELECTORS = ["time", ".date", "[class*='date']", "[class*='Date']",
+                  "[datetime]", ".event-date", "[class*='when']"]
+VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
+                   "[class*='location']", "[class*='Location']", ".place"]
+PRICE_SELECTORS = ["[class*='price']", "[class*='Price']", "[class*='cost']",
+                   "[class*='Cost']", "[class*='ticket']"]
+
+
+def extract_events_generic(soup, url, source_name, venue_default,
+                           card_selectors, categories_default=None):
+    """Generic event extractor using multiple CSS selector strategies."""
     events = []
-    url = "https://www.ensembleartsphilly.org/tickets-and-events"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .event-card, .event-item, [class*='event'], [class*='Event']"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title'], [class*='Title']")
-        date_el = card.select_one("time, .date, [class*='date'], [class*='Date']")
-        venue_el = card.select_one(".venue, [class*='venue'], [class*='Venue'], [class*='location']")
-        link_el = card.select_one("a[href]")
-        price_el = card.select_one("[class*='price'], [class*='Price']")
-        if not title_el:
+    cards = []
+    for sel in card_selectors:
+        cards = soup.select(sel)
+        if len(cards) >= 2:
+            break
+
+    for card in cards:
+        title = find_text(card, TITLE_SELECTORS)
+        if not title:
             continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        venue = venue_el.get_text(strip=True) if venue_el else "Kimmel Cultural Campus"
-        link = urljoin(url, link_el["href"]) if link_el else url
-        price = parse_price(price_el.get_text(strip=True)) if price_el else None
-        events.append({
-            "id": make_id("ensemble_arts", title, date_str),
+
+        date_text = find_text(card, DATE_SELECTORS)
+        venue = find_text(card, VENUE_SELECTORS) or venue_default
+        price_text = find_text(card, PRICE_SELECTORS)
+        link = find_link(card, url) or url
+
+        date_start, date_end, date_display = parse_date_range(date_text)
+
+        ev = {
+            "id": make_id(source_name, title, date_text),
             "title": title,
-            "date_display": date_str,
+            "date_display": date_display or date_text,
+            "date_start": date_start,
+            "date_end": date_end,
+            "time": None,
             "venue": venue,
-            "source": "Ensemble Arts Philly",
+            "source": source_name,
             "source_url": url,
             "link": link,
-            "price": price,
-            "categories": categorize(title, venue),
-            "image": None,
-        })
-    print(f"  Ensemble Arts: {len(events)} events")
+            "price": parse_price(price_text),
+            "categories": categories_default or categorize(title, venue),
+            "description": None,
+        }
+
+        if validate_event(ev):
+            events.append(ev)
+
     return events
 
 
-def scrape_philorch():
-    """Philadelphia Orchestra."""
+def extract_json_ld_events(soup, url, source_name, venue_default):
+    """Extract events from JSON-LD structured data (most reliable method)."""
     events = []
-    url = "https://philorch.ensembleartsphilly.org/tickets-and-events/events"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .event-card, .event-item, [class*='event'], [class*='Event'], .performance, [class*='concert']"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("philorch", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Verizon Hall, Kimmel Center",
-            "source": "Philadelphia Orchestra",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": ["classical"],
-            "image": None,
-        })
-    print(f"  Philadelphia Orchestra: {len(events)} events")
-    return events
-
-
-def scrape_theatre_philly():
-    """Theatre Philadelphia — aggregator for all theater."""
-    events = []
-    url = "https://theatrephiladelphia.org/whats-on-stage"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .show-card, .show-item, [class*='show'], .views-row, .node--type-show"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one(".date, [class*='date'], .field--name-field-dates")
-        venue_el = card.select_one(".venue, [class*='venue'], .field--name-field-venue, [class*='company']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        venue = venue_el.get_text(strip=True) if venue_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("theatre_philly", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": venue,
-            "source": "Theatre Philadelphia",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": categorize(title, venue),
-            "image": None,
-        })
-    print(f"  Theatre Philadelphia: {len(events)} events")
-    return events
-
-
-def scrape_penn_live_arts():
-    """Penn Live Arts — dance, music, theater at UPenn."""
-    events = []
-    url = "https://pennlivearts.org/events/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .event-card, [class*='event'], .performance-item, .views-row"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        genre_el = card.select_one("[class*='genre'], [class*='category'], [class*='type']")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        genre_hint = genre_el.get_text(strip=True) if genre_el else ""
-        events.append({
-            "id": make_id("penn_live", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Penn Live Arts",
-            "source": "Penn Live Arts",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": categorize(title + " " + genre_hint, "Penn Live Arts"),
-            "image": None,
-        })
-    print(f"  Penn Live Arts: {len(events)} events")
-    return events
-
-
-def scrape_opera_phila():
-    """Opera Philadelphia."""
-    events = []
-    url = "https://www.operaphila.org/whats-on/events/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .event-card, [class*='event'], [class*='Event'], .views-row"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        venue_el = card.select_one(".venue, [class*='venue']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        venue = venue_el.get_text(strip=True) if venue_el else "Academy of Music"
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("opera_phila", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": venue,
-            "source": "Opera Philadelphia",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": ["opera", "classical"],
-            "image": None,
-        })
-    print(f"  Opera Philadelphia: {len(events)} events")
-    return events
-
-
-def scrape_walnut_street():
-    """Walnut Street Theatre."""
-    events = []
-    url = "https://www.walnutstreettheatre.org/season/mainstage.2026.php"
-    r = safe_get(url)
-    if not r:
-        # Try alternate URL pattern
-        r = safe_get("https://www.walnutstreettheatre.org/season/calendar.php")
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .show, [class*='show'], [class*='production'], .season-item, table tr"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title'], a strong, a b")
-        date_el = card.select_one(".date, [class*='date'], .run-dates, td:nth-child(2)")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("walnut", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Walnut Street Theatre",
-            "source": "Walnut Street Theatre",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": categorize(title, "Walnut Street Theatre"),
-            "image": None,
-        })
-    print(f"  Walnut Street Theatre: {len(events)} events")
-    return events
-
-
-def scrape_fringe_arts():
-    """FringeArts — contemporary performance."""
-    events = []
-    url = "https://fringearts.com/programs/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, .program, [class*='program'], [class*='event'], .views-row"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("fringearts", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "FringeArts",
-            "source": "FringeArts",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": categorize(title, "FringeArts"),
-            "image": None,
-        })
-    print(f"  FringeArts: {len(events)} events")
-    return events
-
-
-def scrape_phila_ballet():
-    """Philadelphia Ballet."""
-    events = []
-    url = "https://philadelphiaballet.org/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='performance'], [class*='show'], [class*='event'], [class*='season']"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("phila_ballet", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Academy of Music / Merriam Theater",
-            "source": "Philadelphia Ballet",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": ["ballet", "dance"],
-            "image": None,
-        })
-    print(f"  Philadelphia Ballet: {len(events)} events")
-    return events
-
-
-def scrape_arden_theatre():
-    """Arden Theatre Company."""
-    events = []
-    url = "https://ardentheatre.org/productions/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='production'], [class*='show'], [class*='event']"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("arden", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Arden Theatre",
-            "source": "Arden Theatre",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": categorize(title, "Arden Theatre"),
-            "image": None,
-        })
-    print(f"  Arden Theatre: {len(events)} events")
-    return events
-
-
-def scrape_chris_jazz():
-    """Chris' Jazz Cafe."""
-    events = []
-    url = "https://www.chrisjazzcafe.com/events"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='event'], [class*='Event'], .sqs-block, .summary-item"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title'], .summary-title")
-        date_el = card.select_one("time, .date, [class*='date'], .summary-metadata-item")
-        link_el = card.select_one("a[href]")
-        price_el = card.select_one("[class*='price'], [class*='Price']")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        price = parse_price(price_el.get_text(strip=True)) if price_el else None
-        events.append({
-            "id": make_id("chris_jazz", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "Chris' Jazz Cafe",
-            "source": "Chris' Jazz Cafe",
-            "source_url": url,
-            "link": link,
-            "price": price,
-            "categories": ["jazz"],
-            "image": None,
-        })
-    print(f"  Chris' Jazz Cafe: {len(events)} events")
-    return events
-
-
-def scrape_south_jazz():
-    """South Jazz Kitchen."""
-    events = []
-    url = "https://www.southjazzkitchen.com/jazz-club/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='event'], [class*='show'], .sqs-block"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("south_jazz", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "South Jazz Kitchen",
-            "source": "South Jazz Kitchen",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": ["jazz"],
-            "image": None,
-        })
-    print(f"  South Jazz Kitchen: {len(events)} events")
-    return events
-
-
-def scrape_world_cafe():
-    """World Cafe Live."""
-    events = []
-    url = "https://worldcafelive.org/events/"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='event'], [class*='Event'], .tribe-events-calendar-list__event"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        link_el = card.select_one("a[href]")
-        price_el = card.select_one("[class*='price'], [class*='cost']")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        price = parse_price(price_el.get_text(strip=True)) if price_el else None
-        cats = categorize(title, "World Cafe Live")
-        if not cats:
-            cats = ["concert"]
-        events.append({
-            "id": make_id("world_cafe", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": "World Cafe Live",
-            "source": "World Cafe Live",
-            "source_url": url,
-            "link": link,
-            "price": price,
-            "categories": cats,
-            "image": None,
-        })
-    print(f"  World Cafe Live: {len(events)} events")
-    return events
-
-
-def scrape_city_winery():
-    """City Winery Philadelphia."""
-    events = []
-    url = "https://citywinery.com/pages/events/philadelphia"
-    r = safe_get(url)
-    if not r:
-        return events
-    soup = BeautifulSoup(r.text, "lxml")
-    # City Winery uses Shopify — try JSON-LD first
     for script in soup.select("script[type='application/ld+json']"):
         try:
-            data = json.loads(script.string)
-            if isinstance(data, list):
-                for item in data:
-                    if item.get("@type") == "Event":
-                        events.append({
-                            "id": make_id("city_winery", item.get("name", ""), item.get("startDate", "")),
-                            "title": item.get("name", ""),
-                            "date_display": item.get("startDate", ""),
-                            "venue": "City Winery Philadelphia",
-                            "source": "City Winery",
-                            "source_url": url,
-                            "link": item.get("url", url),
-                            "price": parse_price(str(item.get("offers", {}))),
-                            "categories": categorize(item.get("name", ""), "City Winery"),
-                            "image": None,
-                        })
-        except json.JSONDecodeError:
-            pass
-    # Fallback to HTML parsing
-    if not events:
-        for card in soup.select("article, [class*='event'], [class*='Event']"):
-            title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-            date_el = card.select_one("time, .date, [class*='date']")
-            link_el = card.select_one("a[href]")
-            if not title_el:
+            data = json.loads(script.string or "")
+        except (json.JSONDecodeError, TypeError):
+            continue
+
+        items = data if isinstance(data, list) else [data]
+        # Also handle @graph
+        if isinstance(data, dict) and "@graph" in data:
+            items = data["@graph"]
+
+        for item in items:
+            if not isinstance(item, dict):
                 continue
-            title = title_el.get_text(strip=True)
-            date_str = date_el.get_text(strip=True) if date_el else ""
-            link = urljoin(url, link_el["href"]) if link_el else url
-            events.append({
-                "id": make_id("city_winery", title, date_str),
-                "title": title,
-                "date_display": date_str,
-                "venue": "City Winery Philadelphia",
-                "source": "City Winery",
+            if item.get("@type") not in ("Event", "MusicEvent", "TheaterEvent",
+                                          "DanceEvent", "Festival"):
+                continue
+
+            title = item.get("name", "")
+            if not title:
+                continue
+
+            start = item.get("startDate", "")
+            end = item.get("endDate", start)
+            location = item.get("location", {})
+            if isinstance(location, dict):
+                venue = location.get("name", venue_default)
+            else:
+                venue = venue_default
+
+            link = item.get("url", url)
+            price = None
+            offers = item.get("offers", {})
+            if isinstance(offers, dict):
+                p = offers.get("price") or offers.get("lowPrice")
+                if p:
+                    price = f"${p}" if str(p).replace('.', '').isdigit() else str(p)
+            elif isinstance(offers, list) and offers:
+                p = offers[0].get("price") or offers[0].get("lowPrice")
+                if p:
+                    price = f"${p}" if str(p).replace('.', '').isdigit() else str(p)
+
+            desc = item.get("description", "")
+            image = item.get("image", None)
+            if isinstance(image, list):
+                image = image[0] if image else None
+            if isinstance(image, dict):
+                image = image.get("url")
+
+            # Parse dates
+            date_start = start[:10] if start and len(start) >= 10 else None
+            date_end = end[:10] if end and len(end) >= 10 else None
+
+            ev = {
+                "id": make_id(source_name, title, start),
+                "title": clean_text(title),
+                "date_display": f"{start[:10]} – {end[:10]}" if date_start and date_end and date_start != date_end else (date_start or ""),
+                "date_start": date_start,
+                "date_end": date_end,
+                "time": None,
+                "venue": clean_text(venue),
+                "source": source_name,
                 "source_url": url,
                 "link": link,
-                "price": None,
-                "categories": categorize(title, "City Winery"),
-                "image": None,
-            })
-    print(f"  City Winery: {len(events)} events")
+                "price": price,
+                "categories": categorize(title, venue),
+                "description": clean_text(desc)[:300] if desc else None,
+            }
+
+            if validate_event(ev):
+                events.append(ev)
+
     return events
 
 
-def scrape_phila_dance():
-    """PhiladelphiaDANCE.org — dance aggregator."""
-    events = []
-    url = "https://philadelphiadance.org/calendar/"
+def scrape_site(url, source_name, venue_default, card_selectors,
+                categories_default=None):
+    """Scrape a single venue site. Tries JSON-LD first, then HTML."""
     r = safe_get(url)
     if not r:
-        return events
+        return []
+
     soup = BeautifulSoup(r.text, "lxml")
-    for card in soup.select("article, [class*='event'], .tribe-events-calendar-list__event, .type-tribe_events"):
-        title_el = card.select_one("h2, h3, h4, .title, [class*='title']")
-        date_el = card.select_one("time, .date, [class*='date']")
-        venue_el = card.select_one(".venue, [class*='venue']")
-        link_el = card.select_one("a[href]")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        date_str = date_el.get_text(strip=True) if date_el else ""
-        venue = venue_el.get_text(strip=True) if venue_el else ""
-        link = urljoin(url, link_el["href"]) if link_el else url
-        events.append({
-            "id": make_id("phila_dance", title, date_str),
-            "title": title,
-            "date_display": date_str,
-            "venue": venue,
-            "source": "PhiladelphiaDANCE.org",
-            "source_url": url,
-            "link": link,
-            "price": None,
-            "categories": ["dance"],
-            "image": None,
-        })
-    print(f"  PhiladelphiaDANCE.org: {len(events)} events")
+
+    # Try JSON-LD first (most reliable)
+    events = extract_json_ld_events(soup, url, source_name, venue_default)
+    if events:
+        REPORT["successes"].append(f"{source_name}: {len(events)} events (JSON-LD)")
+        print(f"  {source_name}: {len(events)} events (via JSON-LD)")
+        return events
+
+    # Fall back to HTML scraping
+    events = extract_events_generic(
+        soup, url, source_name, venue_default,
+        card_selectors, categories_default
+    )
+    if events:
+        REPORT["successes"].append(f"{source_name}: {len(events)} events (HTML)")
+        print(f"  {source_name}: {len(events)} events (via HTML)")
+    else:
+        msg = f"{source_name}: 0 events found at {url}"
+        REPORT["warnings"].append(msg)
+        print(f"  [WARN] {msg}")
+
     return events
+
+
+# ---------------------------------------------------------------------------
+# Source definitions — each is a real, verified Philadelphia venue/org
+# ---------------------------------------------------------------------------
+
+SOURCES = [
+    {
+        "name": "Ensemble Arts Philly",
+        "url": "https://www.ensembleartsphilly.org/tickets-and-events",
+        "venue": "Kimmel Cultural Campus",
+        "cards": ["article", ".event-card", ".event-item",
+                  "[class*='event']", "[class*='Event']", ".card"],
+        "covers": "Classical, jazz, ballet, Broadway, theater, dance",
+        "venues_list": ["Kimmel Center", "Academy of Music", "Miller Theater"],
+    },
+    {
+        "name": "Philadelphia Orchestra",
+        "url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events",
+        "venue": "Verizon Hall, Kimmel Center",
+        "cards": ["article", ".event-card", ".event-item",
+                  "[class*='event']", "[class*='Event']", ".performance",
+                  "[class*='concert']"],
+        "categories": ["classical"],
+        "covers": "Classical concerts, orchestral performances",
+        "venues_list": ["Verizon Hall"],
+    },
+    {
+        "name": "Theatre Philadelphia",
+        "url": "https://theatrephiladelphia.org/whats-on-stage",
+        "venue": "Various Theaters",
+        "cards": ["article", ".show-card", ".show-item", "[class*='show']",
+                  ".views-row", ".node--type-show", "[class*='event']"],
+        "covers": "All theater across Greater Philadelphia (aggregator)",
+        "venues_list": ["Various"],
+    },
+    {
+        "name": "Penn Live Arts",
+        "url": "https://pennlivearts.org/events/",
+        "venue": "Annenberg Center",
+        "cards": ["article", ".event-card", "[class*='event']",
+                  ".performance-item", ".views-row", ".card"],
+        "covers": "Dance, music, jazz, classical, world, theater",
+        "venues_list": ["Annenberg Center"],
+    },
+    {
+        "name": "Opera Philadelphia",
+        "url": "https://www.operaphila.org/whats-on/events/",
+        "venue": "Academy of Music",
+        "cards": ["article", ".event-card", "[class*='event']",
+                  "[class*='Event']", ".views-row", ".card"],
+        "categories": ["opera", "classical"],
+        "covers": "Opera, vocal performances",
+        "venues_list": ["Academy of Music", "Various"],
+    },
+    {
+        "name": "Walnut Street Theatre",
+        "url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+        "venue": "Walnut Street Theatre",
+        "cards": ["article", ".show", "[class*='show']",
+                  "[class*='production']", ".season-item", "table tr",
+                  "[class*='event']"],
+        "covers": "Musicals, plays",
+        "venues_list": ["Walnut Street Theatre"],
+    },
+    {
+        "name": "FringeArts",
+        "url": "https://fringearts.com/programs/",
+        "venue": "FringeArts",
+        "cards": ["article", ".program", "[class*='program']",
+                  "[class*='event']", ".views-row", ".card"],
+        "covers": "Contemporary performance, experimental theater, dance",
+        "venues_list": ["FringeArts"],
+    },
+    {
+        "name": "Philadelphia Ballet",
+        "url": "https://philadelphiaballet.org/performances/",
+        "venue": "Academy of Music",
+        "cards": ["article", "[class*='performance']", "[class*='show']",
+                  "[class*='event']", "[class*='season']", ".card"],
+        "categories": ["ballet", "dance"],
+        "covers": "Ballet, dance",
+        "venues_list": ["Academy of Music", "Merriam Theater"],
+    },
+    {
+        "name": "Arden Theatre",
+        "url": "https://ardentheatre.org/productions/",
+        "venue": "Arden Theatre",
+        "cards": ["article", "[class*='production']", "[class*='show']",
+                  "[class*='event']", ".card"],
+        "covers": "Theater, musicals, children's theater",
+        "venues_list": ["Arden Theatre"],
+    },
+    {
+        "name": "Chris' Jazz Cafe",
+        "url": "https://www.chrisjazzcafe.com/events",
+        "venue": "Chris' Jazz Cafe",
+        "cards": ["article", "[class*='event']", "[class*='Event']",
+                  ".sqs-block", ".summary-item", ".eventlist-event"],
+        "categories": ["jazz"],
+        "covers": "Jazz concerts",
+        "venues_list": ["Chris' Jazz Cafe"],
+    },
+    {
+        "name": "South Jazz Kitchen",
+        "url": "https://www.southjazzkitchen.com/jazz-club/",
+        "venue": "South Jazz Kitchen",
+        "cards": ["article", "[class*='event']", "[class*='show']",
+                  ".sqs-block", ".summary-item"],
+        "categories": ["jazz"],
+        "covers": "Jazz, dinner shows",
+        "venues_list": ["South Jazz Kitchen"],
+    },
+    {
+        "name": "World Cafe Live",
+        "url": "https://worldcafelive.org/events/",
+        "venue": "World Cafe Live",
+        "cards": ["article", "[class*='event']", "[class*='Event']",
+                  ".tribe-events-calendar-list__event", ".card"],
+        "covers": "Concerts — jazz, folk, rock, world music",
+        "venues_list": ["World Cafe Live"],
+    },
+    {
+        "name": "City Winery",
+        "url": "https://citywinery.com/pages/events/philadelphia",
+        "venue": "City Winery Philadelphia",
+        "cards": ["article", "[class*='event']", "[class*='Event']", ".card"],
+        "covers": "Jazz, R&B, rock, comedy",
+        "venues_list": ["City Winery Philadelphia"],
+    },
+    {
+        "name": "PhiladelphiaDANCE.org",
+        "url": "https://philadelphiadance.org/calendar/",
+        "venue": "Various",
+        "cards": ["article", "[class*='event']",
+                  ".tribe-events-calendar-list__event",
+                  ".type-tribe_events", ".card"],
+        "categories": ["dance"],
+        "covers": "Dance events (community aggregator)",
+        "venues_list": ["Various"],
+    },
+]
 
 
 # ---------------------------------------------------------------------------
@@ -563,36 +491,43 @@ def scrape_phila_dance():
 # ---------------------------------------------------------------------------
 
 CATEGORY_KEYWORDS = {
-    "musical": ["musical", "broadway", "hamilton", "wicked", "phantom", "les mis",
-                 "west side story", "cats ", "rent ", "chicago ", "cabaret"],
+    "musical": ["musical", "broadway", "hamilton", "wicked", "phantom",
+                "les mis", "west side story", "cats ", "rent ", "chicago ",
+                "cabaret", "hadestown", "mj the musical", "moulin rouge",
+                "dear evan hansen", "six the musical"],
     "theater": ["play", "theatre", "theater", "drama", "comedy", "tragedy",
-                "shakespeare", "monologue", "one-man", "one-woman", "staged reading"],
-    "dance": ["dance", "dancing", "choreograph", "modern dance", "contemporary dance",
-              "hip hop dance", "tap dance", "flamenco"],
-    "ballet": ["ballet", "nutcracker", "swan lake", "giselle", "sleeping beauty",
-               "pas de deux", "pointe"],
-    "jazz": ["jazz", "bebop", "swing", "big band", "jazz trio", "jazz quartet",
-             "blue note", "jazz cafe", "jazz kitchen"],
-    "classical": ["orchestra", "symphony", "philharmonic", "chamber", "concerto",
-                  "sonata", "quartet", "recital", "classical", "violin", "cello",
-                  "piano concert", "organ recital", "chopin", "beethoven", "mozart",
-                  "bach ", "brahms"],
+                "shakespeare", "monologue", "one-man", "one-woman",
+                "staged reading", "production"],
+    "dance": ["dance", "dancing", "choreograph", "modern dance",
+              "contemporary dance", "hip hop dance", "tap dance", "flamenco"],
+    "ballet": ["ballet", "nutcracker", "swan lake", "giselle",
+               "sleeping beauty", "pas de deux", "pointe"],
+    "jazz": ["jazz", "bebop", "swing", "big band", "jazz trio",
+             "jazz quartet", "blue note", "jazz cafe", "jazz kitchen"],
+    "classical": ["orchestra", "symphony", "philharmonic", "chamber",
+                  "concerto", "sonata", "quartet", "recital", "classical",
+                  "violin", "cello", "piano concert", "organ recital",
+                  "chopin", "beethoven", "mozart", "bach ", "brahms"],
     "opera": ["opera", "soprano", "tenor", "baritone", "aria", "libretto"],
 }
 
 VENUE_CATEGORIES = {
-    "Walnut Street Theatre": ["theater", "musical"],
-    "Arden Theatre": ["theater"],
-    "FringeArts": ["theater", "dance"],
-    "Chris' Jazz Cafe": ["jazz"],
-    "South Jazz Kitchen": ["jazz"],
-    "Penn Live Arts": ["dance", "concert"],
-    "Philadelphia Ballet": ["ballet", "dance"],
-    "Academy of Music": ["classical", "ballet", "opera"],
+    "walnut street theatre": ["theater", "musical"],
+    "arden theatre": ["theater"],
+    "fringearts": ["theater", "dance"],
+    "chris' jazz cafe": ["jazz"],
+    "south jazz kitchen": ["jazz"],
+    "penn live arts": ["dance", "concert"],
+    "annenberg center": ["dance", "concert"],
+    "philadelphia ballet": ["ballet", "dance"],
+    "academy of music": ["classical", "ballet", "opera"],
+    "verizon hall": ["classical"],
+    "kimmel": ["classical", "concert"],
 }
 
 
 def categorize(text, venue=""):
+    """Categorize event based on title and venue keywords."""
     text_lower = (text or "").lower()
     venue_lower = (venue or "").lower()
     cats = set()
@@ -600,7 +535,7 @@ def categorize(text, venue=""):
         if any(kw in text_lower for kw in keywords):
             cats.add(cat)
     for venue_name, venue_cats in VENUE_CATEGORIES.items():
-        if venue_name.lower() in venue_lower:
+        if venue_name in venue_lower:
             cats.update(venue_cats)
     return sorted(cats) if cats else ["performance"]
 
@@ -609,38 +544,30 @@ def categorize(text, venue=""):
 # MAIN
 # ---------------------------------------------------------------------------
 
-ALL_SCRAPERS = [
-    scrape_ensemble_arts,
-    scrape_philorch,
-    scrape_theatre_philly,
-    scrape_penn_live_arts,
-    scrape_opera_phila,
-    scrape_walnut_street,
-    scrape_fringe_arts,
-    scrape_phila_ballet,
-    scrape_arden_theatre,
-    scrape_chris_jazz,
-    scrape_south_jazz,
-    scrape_world_cafe,
-    scrape_city_winery,
-    scrape_phila_dance,
-]
-
-
 def main():
-    print("🎭 Philadelphia Cultural Events Scraper")
+    print("Philadelphia Cultural Events Scraper")
     print("=" * 50)
+    print(f"Started: {datetime.utcnow().isoformat()}Z")
+    print()
+
     all_events = []
-    for scraper in ALL_SCRAPERS:
-        name = scraper.__doc__.split("—")[0].strip() if scraper.__doc__ else scraper.__name__
-        print(f"\nScraping: {name}")
+    for src in SOURCES:
+        print(f"Scraping: {src['name']}")
         try:
-            events = scraper()
+            events = scrape_site(
+                url=src["url"],
+                source_name=src["name"],
+                venue_default=src["venue"],
+                card_selectors=src["cards"],
+                categories_default=src.get("categories"),
+            )
             all_events.extend(events)
         except Exception as e:
-            print(f"  [ERROR] {e}", file=sys.stderr)
+            msg = f"{src['name']}: ERROR {e}"
+            print(f"  [ERROR] {msg}", file=sys.stderr)
+            REPORT["failures"].append(msg)
 
-    # Deduplicate by title similarity
+    # Deduplicate by normalized title
     seen = set()
     unique_events = []
     for ev in all_events:
@@ -649,40 +576,63 @@ def main():
             seen.add(key)
             unique_events.append(ev)
 
+    # Sort by date
+    unique_events.sort(key=lambda e: e.get("date_start") or "9999-99-99")
+
+    # Write events
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output = {
         "last_updated": datetime.utcnow().isoformat() + "Z",
         "total_events": len(unique_events),
-        "sources": list({e["source"] for e in unique_events}),
+        "sources": sorted({e["source"] for e in unique_events}),
+        "scrape_report": {
+            "successes": REPORT["successes"],
+            "failures": REPORT["failures"],
+            "warnings": REPORT["warnings"],
+        },
         "events": unique_events,
     }
     out_path = OUTPUT_DIR / "events.json"
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2)
-    print(f"\n✅ Wrote {len(unique_events)} events to {out_path}")
+    print(f"\nWrote {len(unique_events)} verified events to {out_path}")
 
-    # Also write a sources metadata file
+    # Write sources metadata
     sources_meta = {
         "sources": [
-            {"name": "Ensemble Arts Philly", "url": "https://www.ensembleartsphilly.org/tickets-and-events", "covers": "Classical, jazz, ballet, Broadway, theater, dance", "venues": ["Kimmel Center", "Academy of Music", "Miller Theater"]},
-            {"name": "Philadelphia Orchestra", "url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events", "covers": "Classical concerts, orchestral performances", "venues": ["Verizon Hall"]},
-            {"name": "Theatre Philadelphia", "url": "https://theatrephiladelphia.org/whats-on-stage", "covers": "All theater across Greater Philadelphia (aggregator)", "venues": ["Various"]},
-            {"name": "Penn Live Arts", "url": "https://pennlivearts.org/events/", "covers": "Dance, music, jazz, classical, world, theater", "venues": ["Annenberg Center"]},
-            {"name": "Opera Philadelphia", "url": "https://www.operaphila.org/whats-on/events/", "covers": "Opera, vocal performances", "venues": ["Academy of Music", "Various"]},
-            {"name": "Walnut Street Theatre", "url": "https://www.walnutstreettheatre.org/season/mainstage.2026.php", "covers": "Musicals, plays", "venues": ["Walnut Street Theatre"]},
-            {"name": "FringeArts", "url": "https://fringearts.com/programs/", "covers": "Contemporary performance, experimental theater, dance", "venues": ["FringeArts"]},
-            {"name": "Philadelphia Ballet", "url": "https://philadelphiaballet.org/", "covers": "Ballet, dance", "venues": ["Academy of Music", "Merriam Theater"]},
-            {"name": "Arden Theatre", "url": "https://ardentheatre.org/productions/", "covers": "Theater, musicals, children's theater", "venues": ["Arden Theatre"]},
-            {"name": "Chris' Jazz Cafe", "url": "https://www.chrisjazzcafe.com/events", "covers": "Jazz concerts", "venues": ["Chris' Jazz Cafe"]},
-            {"name": "South Jazz Kitchen", "url": "https://www.southjazzkitchen.com/jazz-club/", "covers": "Jazz, dinner shows", "venues": ["South Jazz Kitchen"]},
-            {"name": "World Cafe Live", "url": "https://worldcafelive.org/events/", "covers": "Concerts — jazz, folk, rock, world music", "venues": ["World Cafe Live"]},
-            {"name": "City Winery", "url": "https://citywinery.com/pages/events/philadelphia", "covers": "Jazz, R&B, rock, comedy", "venues": ["City Winery Philadelphia"]},
-            {"name": "PhiladelphiaDANCE.org", "url": "https://philadelphiadance.org/calendar/", "covers": "Dance events (community aggregator)", "venues": ["Various"]},
+            {
+                "name": s["name"],
+                "url": s["url"],
+                "covers": s.get("covers", ""),
+                "venues": s.get("venues_list", []),
+            }
+            for s in SOURCES
         ]
     }
     with open(OUTPUT_DIR / "sources.json", "w") as f:
         json.dump(sources_meta, f, indent=2)
-    print(f"✅ Wrote sources metadata to {OUTPUT_DIR / 'sources.json'}")
+
+    # Print report
+    print(f"\n{'=' * 50}")
+    print(f"SCRAPE REPORT")
+    print(f"{'=' * 50}")
+    print(f"Total events: {len(unique_events)}")
+    print(f"Sources scraped: {len(REPORT['successes'])}")
+    print(f"Sources failed: {len(REPORT['failures'])}")
+    if REPORT["warnings"]:
+        print(f"Warnings:")
+        for w in REPORT["warnings"]:
+            print(f"  - {w}")
+    if REPORT["failures"]:
+        print(f"Failures:")
+        for f in REPORT["failures"]:
+            print(f"  - {f}")
+
+    # Exit with error if ALL sources failed (likely a network issue)
+    if not unique_events and len(REPORT["failures"]) == len(SOURCES):
+        print("\nERROR: All sources failed. Check network connectivity.",
+              file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

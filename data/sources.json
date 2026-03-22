@@ -1,18 +1,120 @@
 {
   "sources": [
-    {"name": "Ensemble Arts Philly", "url": "https://www.ensembleartsphilly.org/tickets-and-events", "covers": "Classical, jazz, ballet, Broadway, theater, dance", "venues": ["Kimmel Center", "Academy of Music", "Miller Theater"]},
-    {"name": "Philadelphia Orchestra", "url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events", "covers": "Classical concerts, orchestral performances", "venues": ["Verizon Hall"]},
-    {"name": "Theatre Philadelphia", "url": "https://theatrephiladelphia.org/whats-on-stage", "covers": "All theater across Greater Philadelphia (aggregator)", "venues": ["Various"]},
-    {"name": "Penn Live Arts", "url": "https://pennlivearts.org/events/", "covers": "Dance, music, jazz, classical, world, theater", "venues": ["Annenberg Center"]},
-    {"name": "Opera Philadelphia", "url": "https://www.operaphila.org/whats-on/events/", "covers": "Opera, vocal performances", "venues": ["Academy of Music", "Various"]},
-    {"name": "Walnut Street Theatre", "url": "https://www.walnutstreettheatre.org/season/mainstage.2026.php", "covers": "Musicals, plays", "venues": ["Walnut Street Theatre"]},
-    {"name": "FringeArts", "url": "https://fringearts.com/programs/", "covers": "Contemporary performance, experimental theater, dance", "venues": ["FringeArts"]},
-    {"name": "Philadelphia Ballet", "url": "https://philadelphiaballet.org/", "covers": "Ballet, dance", "venues": ["Academy of Music", "Merriam Theater"]},
-    {"name": "Arden Theatre", "url": "https://ardentheatre.org/productions/", "covers": "Theater, musicals, children's theater", "venues": ["Arden Theatre"]},
-    {"name": "Chris' Jazz Cafe", "url": "https://www.chrisjazzcafe.com/events", "covers": "Jazz concerts", "venues": ["Chris' Jazz Cafe"]},
-    {"name": "South Jazz Kitchen", "url": "https://www.southjazzkitchen.com/jazz-club/", "covers": "Jazz, dinner shows", "venues": ["South Jazz Kitchen"]},
-    {"name": "World Cafe Live", "url": "https://worldcafelive.org/events/", "covers": "Concerts — jazz, folk, rock, world music", "venues": ["World Cafe Live"]},
-    {"name": "City Winery", "url": "https://citywinery.com/pages/events/philadelphia", "covers": "Jazz, R&B, rock, comedy", "venues": ["City Winery Philadelphia"]},
-    {"name": "PhiladelphiaDANCE.org", "url": "https://philadelphiadance.org/calendar/", "covers": "Dance events (community aggregator)", "venues": ["Various"]}
+    {
+      "name": "Ensemble Arts Philly",
+      "url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "covers": "Classical, jazz, ballet, Broadway, theater, dance",
+      "venues": [
+        "Kimmel Center",
+        "Academy of Music",
+        "Miller Theater"
+      ]
+    },
+    {
+      "name": "Philadelphia Orchestra",
+      "url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events",
+      "covers": "Classical concerts, orchestral performances",
+      "venues": [
+        "Verizon Hall"
+      ]
+    },
+    {
+      "name": "Theatre Philadelphia",
+      "url": "https://theatrephiladelphia.org/whats-on-stage",
+      "covers": "All theater across Greater Philadelphia (aggregator)",
+      "venues": [
+        "Various"
+      ]
+    },
+    {
+      "name": "Penn Live Arts",
+      "url": "https://pennlivearts.org/events/",
+      "covers": "Dance, music, jazz, classical, world, theater",
+      "venues": [
+        "Annenberg Center"
+      ]
+    },
+    {
+      "name": "Opera Philadelphia",
+      "url": "https://www.operaphila.org/whats-on/events/",
+      "covers": "Opera, vocal performances",
+      "venues": [
+        "Academy of Music",
+        "Various"
+      ]
+    },
+    {
+      "name": "Walnut Street Theatre",
+      "url": "https://www.walnutstreettheatre.org/season/mainstage.2026.php",
+      "covers": "Musicals, plays",
+      "venues": [
+        "Walnut Street Theatre"
+      ]
+    },
+    {
+      "name": "FringeArts",
+      "url": "https://fringearts.com/programs/",
+      "covers": "Contemporary performance, experimental theater, dance",
+      "venues": [
+        "FringeArts"
+      ]
+    },
+    {
+      "name": "Philadelphia Ballet",
+      "url": "https://philadelphiaballet.org/",
+      "covers": "Ballet, dance",
+      "venues": [
+        "Academy of Music",
+        "Merriam Theater"
+      ]
+    },
+    {
+      "name": "Arden Theatre",
+      "url": "https://ardentheatre.org/productions/",
+      "covers": "Theater, musicals, children's theater",
+      "venues": [
+        "Arden Theatre"
+      ]
+    },
+    {
+      "name": "Chris' Jazz Cafe",
+      "url": "https://www.chrisjazzcafe.com/events",
+      "covers": "Jazz concerts",
+      "venues": [
+        "Chris' Jazz Cafe"
+      ]
+    },
+    {
+      "name": "South Jazz Kitchen",
+      "url": "https://www.southjazzkitchen.com/jazz-club/",
+      "covers": "Jazz, dinner shows",
+      "venues": [
+        "South Jazz Kitchen"
+      ]
+    },
+    {
+      "name": "World Cafe Live",
+      "url": "https://worldcafelive.org/events/",
+      "covers": "Concerts \u2014 jazz, folk, rock, world music",
+      "venues": [
+        "World Cafe Live"
+      ]
+    },
+    {
+      "name": "City Winery",
+      "url": "https://citywinery.com/pages/events/philadelphia",
+      "covers": "Jazz, R&B, rock, comedy",
+      "venues": [
+        "City Winery Philadelphia"
+      ]
+    },
+    {
+      "name": "PhiladelphiaDANCE.org",
+      "url": "https://philadelphiadance.org/calendar/",
+      "covers": "Dance events (community aggregator)",
+      "venues": [
+        "Various"
+      ]
+    }
   ]
 }
