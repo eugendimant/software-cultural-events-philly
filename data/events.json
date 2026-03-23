@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T15:33:15.699597Z",
+  "last_updated": "2026-03-23T18:55:16.238473Z",
   "total_events": 37,
   "sources": [
     "Arden Theatre",
@@ -29,15 +29,15 @@
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/",
-      "link": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "price": "$33 – $247",
+      "link": "https://www.walnutstreettheatre.org/season/a-delicate-balance",
+      "price": "$33 \u2013 $247",
       "categories": [
         "theater"
       ],
-      "description": "Edward Albee's Pulitzer Prize-winning play — an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
+      "description": "Edward Albee's Pulitzer Prize-winning play \u2014 an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
+      "time": "8:00 PM",
       "id": "add290357161",
-      "date_display": "Mar 04 – Mar 29, 2026",
-      "time": null
+      "date_display": "Mar 04 \u2013 Mar 29, 2026"
     },
     {
       "title": "Romeo and Juliet",
@@ -46,15 +46,15 @@
       "venue": "Arden Theatre",
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
-      "link": "https://ardentheatre.org/productions/",
-      "price": "$37 – $70",
+      "link": "https://ardentheatre.org/productions/romeo-and-juliet/",
+      "price": "$37 \u2013 $70",
       "categories": [
         "theater"
       ],
-      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core — passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
+      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core \u2014 passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
+      "time": "7:00 PM",
       "id": "75b756c1876c",
-      "date_display": "Mar 12 – Apr 05, 2026",
-      "time": null
+      "date_display": "Mar 12 \u2013 Apr 05, 2026"
     },
     {
       "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
@@ -63,15 +63,15 @@
       "venue": "The Wilma Theater",
       "source": "The Wilma Theater",
       "source_url": "https://www.wilmatheater.org/whats-on/",
-      "link": "https://www.wilmatheater.org/whats-on/",
+      "link": "https://www.wilmatheater.org/whats-on/the-most-spectacularly-lamentable-trial-of-miz-martha-washington/",
       "price": null,
       "categories": [
         "theater"
       ],
-      "description": "From Pulitzer Prize winner James Ijames — First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
+      "description": "From Pulitzer Prize winner James Ijames \u2014 First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
+      "time": "7:30 PM",
       "id": "68dc3fe25e51",
-      "date_display": "Mar 17 – Apr 05, 2026",
-      "time": null
+      "date_display": "Mar 17 \u2013 Apr 05, 2026"
     },
     {
       "title": "Sound All Around",
@@ -80,7 +80,7 @@
       "venue": "Kimmel Cultural Campus",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/sound-all-around",
       "price": null,
       "categories": [
         "classical",
@@ -88,7 +88,7 @@
       ],
       "description": "A free weekend of interactive musical experiences for all ages at the Kimmel Cultural Campus. Explore instruments, meet musicians, enjoy mini-performances, and discover the world of orchestral music up close.",
       "id": "3c5336ba953c",
-      "date_display": "Mar 21 – Mar 23, 2026",
+      "date_display": "Mar 21 \u2013 Mar 23, 2026",
       "time": null
     },
     {
@@ -104,9 +104,9 @@
         "ballet",
         "dance"
       ],
-      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan — Show Me, Broke Apart, and more.",
+      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan \u2014 Show Me, Broke Apart, and more.",
       "id": "7cfc9fdbaabc",
-      "date_display": "Mar 27 – Mar 29, 2026",
+      "date_display": "Mar 27 \u2013 Mar 29, 2026",
       "time": null
     },
     {
@@ -116,15 +116,15 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/endea-owens-the-cookout",
       "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert — now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
+      "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert \u2014 now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
+      "time": "7:30 PM",
       "id": "6c2ca9ffdf54",
-      "date_display": "Mar 28, 2026",
-      "time": null
+      "date_display": "Mar 28, 2026"
     },
     {
       "title": "ECCO with Anthony McGill & Tai Murray",
@@ -133,7 +133,7 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/ecco-with-anthony-mcgill-tai-murray",
       "time": "7:30 PM",
       "price": null,
       "categories": [
@@ -150,15 +150,15 @@
       "venue": "Academy of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
       "price": null,
       "categories": [
         "musical"
       ],
       "description": "Rodgers & Hammerstein's beloved classic at the Academy of Music. Directed by three-time Tony winner Jack O'Brien. Broadway Series.",
+      "time": "7:30 PM",
       "id": "34b2cd2178e1",
-      "date_display": "Mar 31 – Apr 05, 2026",
-      "time": null
+      "date_display": "Mar 31 \u2013 Apr 05, 2026"
     },
     {
       "title": "Dance Theatre of Harlem",
@@ -167,16 +167,16 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/event/DTH2026",
-      "link": "https://pennlivearts.org/event/DTH2026",
+      "link": "https://pennlivearts.org/event/dance-theatre-of-harlem",
       "price": null,
       "categories": [
         "ballet",
         "dance"
       ],
       "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
+      "time": "8:00 PM",
       "id": "8718f37312c9",
-      "date_display": "Apr 03 – Apr 04, 2026",
-      "time": null
+      "date_display": "Apr 03 \u2013 Apr 04, 2026"
     },
     {
       "title": "Peppa Pig: My First Concert",
@@ -185,7 +185,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/peppa-pig-my-first-concert",
       "price": "From $63",
       "categories": [
         "performance"
@@ -196,21 +196,21 @@
       "time": null
     },
     {
-      "title": "A Benefit Concert for the Musicians' Retirement Fund",
+      "title": "Lang Lang and Yannick",
       "date_start": "2026-04-07",
       "date_end": "2026-04-07",
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/lang-lang-and-yannick",
+      "time": "7:30 PM",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "An annual tradition of musical excellence — this benefit concert supports retired musicians of the Philadelphia Orchestra. Expect surprise guest artists and a program curated to celebrate the Orchestra's storied legacy.",
-      "id": "3dc1fc6a1284",
-      "date_display": "Apr 07, 2026",
-      "time": null
+      "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick N\u00e9zet-S\u00e9guin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
+      "id": "21e6d1a0a917",
+      "date_display": "Apr 07, 2026"
     },
     {
       "title": "The Stinky Cheese Man and Other Fairly Stupid Tales",
@@ -219,7 +219,7 @@
       "venue": "Arden Theatre",
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
-      "link": "https://ardentheatre.org/productions/",
+      "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
         "theater",
@@ -227,7 +227,7 @@
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family.",
       "id": "0fbd1bf9075c",
-      "date_display": "Apr 08 – May 31, 2026",
+      "date_display": "Apr 08 \u2013 May 31, 2026",
       "time": null
     },
     {
@@ -237,15 +237,15 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/mozarts-requiem",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
+      "description": "Yannick N\u00e9zet-S\u00e9guin conducts Mozart's final masterwork \u2014 the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
+      "time": "8:00 PM",
       "id": "a323707db356",
-      "date_display": "Apr 09 – Apr 12, 2026",
-      "time": null
+      "date_display": "Apr 09 \u2013 Apr 12, 2026"
     },
     {
       "title": "Wilderness Generation",
@@ -254,15 +254,15 @@
       "venue": "Suzanne Roberts Theatre",
       "source": "Philadelphia Theatre Company",
       "source_url": "https://www.philatheatreco.org/",
-      "link": "https://www.philatheatreco.org/",
+      "link": "https://www.philatheatreco.org/wilderness-generation",
       "price": null,
       "categories": [
         "theater"
       ],
       "description": "World premiere by James Ijames at Philadelphia Theatre Company. A compelling new work exploring identity and belonging.",
+      "time": "7:00 PM",
       "id": "d52cabce3ae6",
-      "date_display": "Apr 10 – May 03, 2026",
-      "time": null
+      "date_display": "Apr 10 \u2013 May 03, 2026"
     },
     {
       "title": "Ukulele Orchestra of Great Britain",
@@ -271,15 +271,15 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/ukulele-orchestra-of-great-britain",
       "price": null,
       "categories": [
         "concert"
       ],
-      "description": "'The best musical entertainment in the country' — from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
+      "description": "'The best musical entertainment in the country' \u2014 from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
+      "time": "8:00 PM",
       "id": "96648d5f3e14",
-      "date_display": "Apr 11, 2026",
-      "time": null
+      "date_display": "Apr 11, 2026"
     },
     {
       "title": "Shen Yun",
@@ -288,7 +288,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/shen-yun",
       "time": "7:30 PM",
       "price": "From $132",
       "categories": [
@@ -312,9 +312,9 @@
         "jazz"
       ],
       "description": "Grammy Award-winning percussionist Pablo Batista leads 20 big band musicians performing legendary Latin jazz.",
+      "time": "7:00 PM",
       "id": "ae84a0086b29",
-      "date_display": "Apr 17, 2026",
-      "time": null
+      "date_display": "Apr 17, 2026"
     },
     {
       "title": "Explosive: Bold New Works on the Rise",
@@ -323,16 +323,16 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/explosive-bold-new-works-on-the-rise",
       "price": null,
       "categories": [
         "dance",
         "ballet"
       ],
       "description": "Philadelphia Ballet's Spring Residency showcases bold new choreography from emerging and established creators. An intimate showcase at the Perelman Theater where you'll see tomorrow's masterworks taking shape today.",
+      "time": "7:30 PM",
       "id": "38b52970ec99",
-      "date_display": "Apr 17 – Apr 19, 2026",
-      "time": null
+      "date_display": "Apr 17 \u2013 Apr 19, 2026"
     },
     {
       "title": "Paul Taylor Dance Company",
@@ -341,15 +341,15 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/event/PTDC2026",
-      "link": "https://pennlivearts.org/event/PTDC2026",
+      "link": "https://pennlivearts.org/event/paul-taylor-dance-company",
       "price": null,
       "categories": [
         "dance"
       ],
       "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season.",
+      "time": "8:00 PM",
       "id": "1b2b04d87d0e",
-      "date_display": "Apr 17 – Apr 18, 2026",
-      "time": null
+      "date_display": "Apr 17 \u2013 Apr 18, 2026"
     },
     {
       "title": "Christian McBride & Edgar Meyer",
@@ -358,15 +358,15 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/christian-mcbride-edgar-meyer",
       "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
+      "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
+      "time": "7:30 PM",
       "id": "7d736861b122",
-      "date_display": "Apr 21, 2026",
-      "time": null
+      "date_display": "Apr 21, 2026"
     },
     {
       "title": "Shucked",
@@ -375,15 +375,15 @@
       "venue": "Forrest Theatre",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/shucked",
       "price": null,
       "categories": [
         "musical"
       ],
       "description": "The hilarious Tony-nominated Broadway musical. A small-town comedy with heart, corn, and unforgettable laughs.",
+      "time": "7:30 PM",
       "id": "1e8f51060f81",
-      "date_display": "Apr 21 – May 03, 2026",
-      "time": null
+      "date_display": "Apr 21 \u2013 May 03, 2026"
     },
     {
       "title": "Sleepers Awake (World Premiere)",
@@ -392,15 +392,15 @@
       "venue": "Academy of Music",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/sleepers-awake-world-premiere/",
       "price": null,
       "categories": [
         "opera"
       ],
-      "description": "World premiere by composer Gregory Spears — inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
+      "description": "World premiere by composer Gregory Spears \u2014 inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
+      "time": "8:00 PM",
       "id": "bba414d078f3",
-      "date_display": "Apr 22 – Apr 26, 2026",
-      "time": null
+      "date_display": "Apr 22 \u2013 Apr 26, 2026"
     },
     {
       "title": "Bolero and Don Juan",
@@ -409,15 +409,15 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/bolero-and-don-juan",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
+      "description": "Two orchestral showstoppers in one program \u2014 Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
+      "time": "8:00 PM",
       "id": "bba3e110c5f1",
-      "date_display": "Apr 23 – Apr 25, 2026",
-      "time": null
+      "date_display": "Apr 23 \u2013 Apr 25, 2026"
     },
     {
       "title": "Tiburtina Ensemble: Celestial Harmony",
@@ -426,15 +426,15 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/tiburtina-ensemble-celestial-harmony",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen — the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
+      "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen \u2014 the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
+      "time": "7:30 PM",
       "id": "4f919f8be978",
-      "date_display": "Apr 23, 2026",
-      "time": null
+      "date_display": "Apr 23, 2026"
     },
     {
       "title": "Dog Man: The Musical",
@@ -443,7 +443,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/dog-man-the-musical",
       "price": null,
       "categories": [
         "musical",
@@ -451,7 +451,7 @@
       ],
       "description": "The hero who is part dog, part police officer leaps off the page and onto the stage in this action-packed musical based on Dav Pilkey's mega-bestselling series. Fun for the whole family. Sensory Friendly Performance available on Sunday, April 26.",
       "id": "b93378b09cc3",
-      "date_display": "Apr 25 – Apr 26, 2026",
+      "date_display": "Apr 25 \u2013 Apr 26, 2026",
       "time": null
     },
     {
@@ -461,15 +461,15 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/delbert-anderson-quartet-beyond-belief",
       "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "A world premiere — Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
+      "description": "A world premiere \u2014 Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
+      "time": "8:00 PM",
       "id": "90631a6e061b",
-      "date_display": "Apr 26, 2026",
-      "time": null
+      "date_display": "Apr 26, 2026"
     },
     {
       "title": "Copland's American Inspiration",
@@ -478,15 +478,15 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/coplands-american-inspiration",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
+      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works \u2014 from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
+      "time": "8:00 PM",
       "id": "b960e665bd64",
-      "date_display": "Apr 30 – May 02, 2026",
-      "time": null
+      "date_display": "Apr 30 \u2013 May 02, 2026"
     },
     {
       "title": "Family Concert: Hip-Hop Orchestra",
@@ -495,7 +495,7 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/family-concert-hip-hop-orchestra",
       "time": "11:30 AM",
       "price": null,
       "categories": [
@@ -513,14 +513,14 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/philadelphia-childrens-festival",
       "price": null,
       "categories": [
         "performance"
       ],
       "description": "Family-friendly performances, hands-on activities, and outdoor PLAYground. Includes The Magic School Bus, Bill Blagg Magic, and more.",
       "id": "140ef0c71762",
-      "date_display": "May 03 – May 05, 2026",
+      "date_display": "May 03 \u2013 May 05, 2026",
       "time": null
     },
     {
@@ -530,14 +530,14 @@
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/",
-      "link": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/1776-the-musical",
       "price": null,
       "categories": [
         "musical"
       ],
-      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence — in the city where it happened.",
+      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence \u2014 in the city where it happened.",
       "id": "445270b9c2be",
-      "date_display": "May 05 – Jun 07, 2026",
+      "date_display": "May 05 \u2013 Jun 07, 2026",
       "time": null
     },
     {
@@ -547,15 +547,15 @@
       "venue": "FringeArts",
       "source": "FringeArts",
       "source_url": "https://fringearts.com/programs/",
-      "link": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/girl-dolls-the-american-musical/",
       "price": null,
       "categories": [
         "theater",
         "musical"
       ],
-      "description": "BYO your favorite doll — The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity.",
+      "description": "BYO your favorite doll \u2014 The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity.",
       "id": "394410b6c45a",
-      "date_display": "May 09 – May 17, 2026",
+      "date_display": "May 09 \u2013 May 17, 2026",
       "time": null
     },
     {
@@ -565,7 +565,7 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/orchestra-after-5-postcards-from-spain",
       "time": "6:30 PM",
       "price": null,
       "categories": [
@@ -582,33 +582,33 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/the-black-clown-philadelphia-premiere/",
       "price": null,
       "categories": [
         "opera",
         "musical"
       ],
-      "description": "Philadelphia premiere — a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
+      "description": "Philadelphia premiere \u2014 a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
+      "time": "8:00 PM",
       "id": "b390aef23dce",
-      "date_display": "May 14 – May 17, 2026",
-      "time": null
+      "date_display": "May 14 \u2013 May 17, 2026"
     },
     {
-      "title": "Yannick Nézet-Séguin: Mahler & Sorey",
+      "title": "Yannick N\u00e9zet-S\u00e9guin: Mahler & Sorey",
       "date_start": "2026-05-15",
       "date_end": "2026-05-16",
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/yannick-nzet-sguin-mahler-sorey",
       "price": null,
       "categories": [
         "classical"
       ],
-      "description": "Music Director Yannick Nézet-Séguin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey — one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
+      "description": "Music Director Yannick N\u00e9zet-S\u00e9guin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey \u2014 one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
+      "time": "8:00 PM",
       "id": "d90ef2a8fb40",
-      "date_display": "May 15 – May 16, 2026",
-      "time": null
+      "date_display": "May 15 \u2013 May 16, 2026"
     },
     {
       "title": "The Outsiders",
@@ -617,15 +617,15 @@
       "venue": "Academy of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-outsiders",
       "price": null,
       "categories": [
         "musical"
       ],
       "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic.",
+      "time": "7:30 PM",
       "id": "d65264a06703",
-      "date_display": "May 26 – Jun 07, 2026",
-      "time": null
+      "date_display": "May 26 \u2013 Jun 07, 2026"
     },
     {
       "title": "Beethoven & Marsalis",
@@ -634,16 +634,16 @@
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/beethoven-marsalis",
       "price": null,
       "categories": [
         "classical",
         "jazz"
       ],
       "description": "The Philadelphia Orchestra teams up with Jazz at Lincoln Center Orchestra to honor Beethoven and Wynton Marsalis.",
+      "time": "8:00 PM",
       "id": "83317acc4391",
-      "date_display": "May 28 – May 30, 2026",
-      "time": null
+      "date_display": "May 28 \u2013 May 30, 2026"
     },
     {
       "title": "Martha Graham Dance Company",
@@ -652,15 +652,15 @@
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/event/MGDC2026",
-      "link": "https://pennlivearts.org/event/MGDC2026",
+      "link": "https://pennlivearts.org/event/martha-graham-dance-company",
       "price": null,
       "categories": [
         "dance"
       ],
-      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' — co-commissioned with ArtPhilly.",
+      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' \u2014 co-commissioned with ArtPhilly.",
+      "time": "8:00 PM",
       "id": "94a522c7b0bc",
-      "date_display": "May 29 – May 30, 2026",
-      "time": null
+      "date_display": "May 29 \u2013 May 30, 2026"
     }
   ]
 }

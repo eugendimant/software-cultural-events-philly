@@ -12,12 +12,77 @@ philadelphiaballet.org, balletx.org
 """
 
 import hashlib
+import re
 from datetime import datetime
 
 
 def make_id(source, title, date_str=""):
     raw = f"{source}|{title}|{date_str}".lower().strip()
     return hashlib.md5(raw.encode()).hexdigest()[:12]
+
+
+def _slugify(text):
+    """Convert text to URL slug: 'Lang Lang and Yannick' -> 'lang-lang-and-yannick'."""
+    text = (text or "").lower().strip()
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+    text = re.sub(r'[\s]+', '-', text)
+    text = re.sub(r'-+', '-', text).strip('-')
+    return text
+
+
+def _auto_link(ev):
+    """Generate a direct event page link based on source and title.
+    Falls back to the source_url if no pattern matches.
+    """
+    source = ev.get("source", "")
+    title = ev.get("title", "")
+    slug = _slugify(title)
+    if not slug:
+        return ev.get("source_url", "")
+
+    venue = (ev.get("venue") or "").lower()
+    cats = ev.get("categories", [])
+
+    if source in ("Ensemble Arts Philly", "Philadelphia Orchestra"):
+        # Ensemble Arts URLs: /tickets-and-events/<org>/<season>/<slug>
+        if "orchestra" in source.lower() or "orchestra" in venue:
+            return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}"
+        if "musical" in cats and ("academy" in venue or "forrest" in venue):
+            return f"https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/{slug}"
+        if "jazz" in cats:
+            return f"https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/{slug}"
+        # General Ensemble Arts events
+        return f"https://www.ensembleartsphilly.org/tickets-and-events/events/{slug}"
+
+    if source == "Penn Live Arts":
+        return f"https://pennlivearts.org/event/{slug}"
+
+    if source == "Arden Theatre":
+        return f"https://ardentheatre.org/productions/{slug}/"
+
+    if source == "The Wilma Theater":
+        return f"https://www.wilmatheater.org/whats-on/{slug}/"
+
+    if source == "Opera Philadelphia":
+        return f"https://www.operaphila.org/whats-on/events/{slug}/"
+
+    if source == "FringeArts":
+        return f"https://fringearts.com/event/{slug}/"
+
+    if source == "Walnut Street Theatre":
+        return f"https://www.walnutstreettheatre.org/season/{slug}"
+
+    if source == "Philadelphia Theatre Company":
+        return f"https://www.philatheatreco.org/{slug}"
+
+    if source == "Philadelphia Ballet":
+        return f"https://philadelphiaballet.org/performances/{slug}/"
+
+    if source == "BalletX":
+        return f"https://www.balletx.org/seasons/{slug}/"
+
+    # Fallback to source URL
+    return ev.get("source_url", "")
 
 
 def get_seed_events():
@@ -37,6 +102,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Yannick Nézet-Séguin conducts Mahler's monumental Symphony No. 2 'Resurrection' featuring vocalists Ying Fang and Joyce DiDonato.",
+            "time": "8:00 PM",
         },
         {
             "title": "Yo-Yo Ma and Interlochen Center for the Arts",
@@ -49,6 +115,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Legendary cellist Yo-Yo Ma performs with the Interlochen Center for the Arts to Celebrate America at 250.",
+            "time": "8:00 PM",
         },
         {
             "title": "The Young Person's Guide to the Orchestra",
@@ -61,6 +128,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical", "performance"],
             "description": "Part of the Family Discovery Series — a magical introduction to the orchestra designed for young audiences. Explore Britten's beloved guide to every instrument family, from the delicate flute to the thundering timpani. Ideal for ages 3–10.",
+            "time": "11:30 AM",
         },
         {
             "title": "Brodsky Star Spotlight: Víkingur Ólafsson",
@@ -73,6 +141,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Acclaimed Icelandic pianist Víkingur Ólafsson takes the stage in the Brodsky Star Spotlight Series. Known for his revelatory Bach and Debussy recordings, Ólafsson brings his signature intensity and clarity to a solo recital.",
+            "time": "7:30 PM",
         },
         {
             "title": "Marin Leads Rachmaninoff and Schumann",
@@ -85,6 +154,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Conductor Marin Alsop leads the Philadelphia Orchestra in Rachmaninoff's lush Symphonic Dances and Schumann's deeply romantic Second Symphony. A program that showcases the Orchestra's legendary warmth and power.",
+            "time": "8:00 PM",
         },
         {
             "title": "Distant Worlds: Music from Final Fantasy",
@@ -125,16 +195,17 @@ def get_seed_events():
             "description": "The East Coast Chamber Orchestra (ECCO) performs a conductor-less program featuring clarinetist Anthony McGill (NY Philharmonic principal) and violinist Tai Murray. An intimate evening of chamber music at the Perelman.",
         },
         {
-            "title": "A Benefit Concert for the Musicians' Retirement Fund",
+            "title": "Lang Lang and Yannick",
             "date_start": "2026-04-07",
             "date_end": "2026-04-07",
             "venue": "Marian Anderson Hall, Kimmel Center",
             "source": "Philadelphia Orchestra",
             "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-            "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
+            "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/lang-lang-and-yannick",
+            "time": "7:30 PM",
             "price": None,
             "categories": ["classical"],
-            "description": "An annual tradition of musical excellence — this benefit concert supports retired musicians of the Philadelphia Orchestra. Expect surprise guest artists and a program curated to celebrate the Orchestra's storied legacy.",
+            "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick Nézet-Séguin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
         },
         {
             "title": "Mozart's Requiem",
@@ -147,6 +218,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
+            "time": "8:00 PM",
         },
         {
             "title": "Bolero and Don Juan",
@@ -159,6 +231,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
+            "time": "8:00 PM",
         },
         {
             "title": "Copland's American Inspiration",
@@ -171,6 +244,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
+            "time": "8:00 PM",
         },
         {
             "title": "Family Concert: Hip-Hop Orchestra",
@@ -209,6 +283,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Music Director Yannick Nézet-Séguin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey — one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
+            "time": "8:00 PM",
         },
         {
             "title": "Beethoven & Marsalis",
@@ -221,6 +296,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical", "jazz"],
             "description": "The Philadelphia Orchestra teams up with Jazz at Lincoln Center Orchestra to honor Beethoven and Wynton Marsalis.",
+            "time": "8:00 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -250,6 +326,7 @@ def get_seed_events():
             "price": None,
             "categories": ["jazz"],
             "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert — now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
+            "time": "7:30 PM",
         },
         {
             "title": "Pablo Batista: Latin Jazz Orchestra",
@@ -262,6 +339,7 @@ def get_seed_events():
             "price": None,
             "categories": ["jazz"],
             "description": "Grammy Award-winning percussionist Pablo Batista leads 20 big band musicians performing legendary Latin jazz.",
+            "time": "7:00 PM",
         },
         {
             "title": "Christian McBride & Edgar Meyer",
@@ -274,6 +352,7 @@ def get_seed_events():
             "price": None,
             "categories": ["jazz"],
             "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
+            "time": "7:30 PM",
         },
         {
             "title": "Delbert Anderson Quartet: Beyond Belief",
@@ -286,6 +365,7 @@ def get_seed_events():
             "price": None,
             "categories": ["jazz"],
             "description": "A world premiere — Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
+            "time": "8:00 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -302,6 +382,7 @@ def get_seed_events():
             "price": "$37 – $70",
             "categories": ["theater"],
             "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core — passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
+            "time": "7:00 PM",
         },
         {
             "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
@@ -314,6 +395,7 @@ def get_seed_events():
             "price": None,
             "categories": ["theater"],
             "description": "From Pulitzer Prize winner James Ijames — First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
+            "time": "7:30 PM",
         },
         {
             "title": "Sh!t-Faced Shakespeare",
@@ -326,6 +408,7 @@ def get_seed_events():
             "price": None,
             "categories": ["theater"],
             "description": "The international smash hit where a full cast performs Shakespeare — except one actor is genuinely intoxicated. Hilarious, unpredictable, and surprisingly theatrical. Not your English teacher's Shakespeare. Ages 18+.",
+            "time": "7:30 PM",
         },
         {
             "title": "A Delicate Balance",
@@ -334,10 +417,11 @@ def get_seed_events():
             "venue": "Walnut Street Theatre",
             "source": "Walnut Street Theatre",
             "source_url": "https://www.walnutstreettheatre.org/",
-            "link": "https://www.walnutstreettheatre.org/season/mainstage.php",
+            "link": None,
             "price": "$33 – $247",
             "categories": ["theater"],
             "description": "Edward Albee's Pulitzer Prize-winning play — an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
+            "time": "8:00 PM",
         },
         {
             "title": "The Stinky Cheese Man and Other Fairly Stupid Tales",
@@ -362,6 +446,7 @@ def get_seed_events():
             "price": None,
             "categories": ["theater"],
             "description": "World premiere by James Ijames at Philadelphia Theatre Company. A compelling new work exploring identity and belonging.",
+            "time": "7:00 PM",
         },
         {
             "title": "Shucked",
@@ -374,6 +459,7 @@ def get_seed_events():
             "price": None,
             "categories": ["musical"],
             "description": "The hilarious Tony-nominated Broadway musical. A small-town comedy with heart, corn, and unforgettable laughs.",
+            "time": "7:30 PM",
         },
         {
             "title": "1776 The Musical",
@@ -382,7 +468,7 @@ def get_seed_events():
             "venue": "Walnut Street Theatre",
             "source": "Walnut Street Theatre",
             "source_url": "https://www.walnutstreettheatre.org/",
-            "link": "https://www.walnutstreettheatre.org/season/mainstage.php",
+            "link": None,
             "price": None,
             "categories": ["musical"],
             "description": "The Tony Award-winning musical about the signing of the Declaration of Independence — in the city where it happened.",
@@ -402,6 +488,7 @@ def get_seed_events():
             "price": "From $87",
             "categories": ["musical"],
             "description": "From humble beginnings in Nutbush, Tennessee to becoming the Queen of Rock 'n' Roll — TINA chronicles Tina Turner's extraordinary journey of resilience, reinvention, and raw talent. Featuring iconic hits including 'Proud Mary' and 'What's Love Got to Do with It.'",
+            "time": "7:30 PM",
         },
         {
             "title": "The Sound of Music",
@@ -414,6 +501,7 @@ def get_seed_events():
             "price": None,
             "categories": ["musical"],
             "description": "Rodgers & Hammerstein's beloved classic at the Academy of Music. Directed by three-time Tony winner Jack O'Brien. Broadway Series.",
+            "time": "7:30 PM",
         },
         {
             "title": "The Outsiders",
@@ -426,6 +514,7 @@ def get_seed_events():
             "price": None,
             "categories": ["musical"],
             "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic.",
+            "time": "7:30 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -442,6 +531,7 @@ def get_seed_events():
             "price": None,
             "categories": ["ballet", "dance"],
             "description": "Philadelphia Ballet presents Ronald Hynd's celebrated choreography set to Franz Lehár's gorgeous music. A Parisian love story.",
+            "time": "7:30 PM",
         },
         {
             "title": "Rennie Harris Puremovement: Losing My Religion",
@@ -454,6 +544,7 @@ def get_seed_events():
             "price": None,
             "categories": ["dance"],
             "description": "World premiere fusing street dance and visual art. Rennie Harris abstractly examines our nation's cycle of injustice.",
+            "time": "8:00 PM",
         },
         {
             "title": "Explosive: Bold New Works on the Rise",
@@ -466,6 +557,7 @@ def get_seed_events():
             "price": None,
             "categories": ["dance", "ballet"],
             "description": "Philadelphia Ballet's Spring Residency showcases bold new choreography from emerging and established creators. An intimate showcase at the Perelman Theater where you'll see tomorrow's masterworks taking shape today.",
+            "time": "7:30 PM",
         },
         {
             "title": "Paul Taylor Dance Company",
@@ -478,6 +570,7 @@ def get_seed_events():
             "price": None,
             "categories": ["dance"],
             "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season.",
+            "time": "8:00 PM",
         },
         {
             "title": "BalletX Spring Series 2026",
@@ -502,6 +595,7 @@ def get_seed_events():
             "price": None,
             "categories": ["dance"],
             "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' — co-commissioned with ArtPhilly.",
+            "time": "8:00 PM",
         },
         {
             "title": "Dance Theatre of Harlem",
@@ -514,6 +608,7 @@ def get_seed_events():
             "price": None,
             "categories": ["ballet", "dance"],
             "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
+            "time": "8:00 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -530,6 +625,7 @@ def get_seed_events():
             "price": None,
             "categories": ["opera"],
             "description": "World premiere by composer Gregory Spears — inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
+            "time": "8:00 PM",
         },
         {
             "title": "The Black Clown (Philadelphia Premiere)",
@@ -542,6 +638,7 @@ def get_seed_events():
             "price": None,
             "categories": ["opera", "musical"],
             "description": "Philadelphia premiere — a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
+            "time": "8:00 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -558,6 +655,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Contemporary ensemble Alarm Will Sound with Bora Yoon — diverse works exploring shifting perspectives and identities.",
+            "time": "8:00 PM",
         },
         {
             "title": "Ukulele Orchestra of Great Britain",
@@ -570,6 +668,7 @@ def get_seed_events():
             "price": None,
             "categories": ["concert"],
             "description": "'The best musical entertainment in the country' — from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
+            "time": "8:00 PM",
         },
         {
             "title": "Tiburtina Ensemble: Celestial Harmony",
@@ -582,6 +681,7 @@ def get_seed_events():
             "price": None,
             "categories": ["classical"],
             "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen — the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
+            "time": "7:30 PM",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -672,5 +772,12 @@ def get_seed_events():
             ev["date_display"] = ""
         ev.setdefault("time", None)
         ev.setdefault("description", None)
+
+        # Auto-generate direct event page links (replaces generic listing page URLs)
+        current_link = ev.get("link") or ""
+        source_url = ev.get("source_url", "")
+        # If link is missing, None, or same as source_url (generic listing page), generate a better one
+        if not current_link or current_link == source_url:
+            ev["link"] = _auto_link(ev)
 
     return events
