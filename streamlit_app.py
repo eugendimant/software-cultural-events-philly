@@ -249,6 +249,41 @@ def share_url(event):
     return f"mailto:?{params}"
 
 
+def event_description(event, max_sentences=4):
+    """Get event description, truncated to max_sentences. Generate fallback if empty."""
+    desc = _s(event, "description").strip()
+    if not desc:
+        # Build a useful fallback from available fields
+        title = _s(event, "title")
+        venue = _s(event, "venue")
+        cats = _cats(event)
+        cat_label = " and ".join(c.capitalize() for c in cats[:2]) if cats else "performing arts"
+        date_disp = _s(event, "date_display")
+        price = _s(event, "price")
+
+        parts = []
+        if venue:
+            parts.append(f"{cat_label} event at {venue}.")
+        else:
+            parts.append(f"{cat_label} event in Philadelphia.")
+        if date_disp:
+            parts.append(f"Showing {date_disp}.")
+        if price and price.lower() != "free":
+            parts.append(f"Tickets from {price}.")
+        elif price and price.lower() == "free":
+            parts.append("Free admission.")
+        desc = " ".join(parts)
+
+    # Truncate to max_sentences
+    import re
+    sentences = re.split(r'(?<=[.!?])\s+', desc)
+    if len(sentences) > max_sentences:
+        desc = " ".join(sentences[:max_sentences])
+        if not desc.endswith((".", "!", "?")):
+            desc += "."
+    return desc
+
+
 def category_badge_html(cat):
     color = CAT_COLORS.get(cat, "#a0aec0")
     icon = CAT_ICONS.get(cat, "")
@@ -709,6 +744,7 @@ def main():
                 badges = "".join(category_badge_html(c) for c in _cats(event))
                 price_html = f' <span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
                 link = _s(event, "link")
+                spot_desc = event_description(event, max_sentences=3)
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
@@ -716,6 +752,7 @@ def main():
                     <div class="event-title">{_s(event, 'title')}</div>
                     <div class="event-meta"><span class="event-venue">{_s(event, 'venue')}</span></div>
                     <div class="event-meta">{_s(event, 'date_display')}{price_html}</div>
+                    <div class="event-desc" style="margin-top:0.4rem;font-size:0.82rem">{spot_desc}</div>
                     <div style="margin-top:0.5rem">{badges}</div>
                     <div style="margin-top:0.6rem;font-size:0.78rem;color:#a78bfa;font-weight:500">🎟 Get Tickets →</div>
                 </div>
@@ -802,6 +839,8 @@ def main():
             time_html = f' · {_s(event, "time")}' if _s(event, "time") else ""
             urg = urgency_badge(event)
 
+            desc = event_description(event)
+
             st.markdown(f"""
             <div class="event-card">
                 <div class="event-title">{_s(event, 'title')}{urg}</div>
@@ -811,7 +850,7 @@ def main():
                 <div class="event-meta">
                     {_s(event, 'date_display')}{' · ' if _s(event, 'price') else ''}{price_html}
                 </div>
-                <div class="event-desc">{_s(event, 'description')}</div>
+                <div class="event-desc">{desc}</div>
                 <div style="margin-top:0.6rem">{badges}</div>
             </div>
             """, unsafe_allow_html=True)

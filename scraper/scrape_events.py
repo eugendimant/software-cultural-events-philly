@@ -244,6 +244,11 @@ VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
 PRICE_SELECTORS = ["[class*='price']", "[class*='Price']", "[class*='cost']",
                    "[class*='Cost']", "[class*='ticket']", "[class*='Ticket']",
                    "[itemprop='price']", "[itemprop='lowPrice']"]
+DESC_SELECTORS = ["[class*='description']", "[class*='Description']", "[class*='desc']",
+                  "[class*='synopsis']", "[class*='Synopsis']", "[class*='summary']",
+                  "[class*='Summary']", "[class*='excerpt']", "[class*='Excerpt']",
+                  "[class*='body']", "[class*='teaser']", "[class*='detail']",
+                  "[itemprop='description']", "p"]
 
 
 def extract_events_generic(soup, url, source_name, venue_default,
@@ -264,9 +269,15 @@ def extract_events_generic(soup, url, source_name, venue_default,
         date_text = find_text(card, DATE_SELECTORS)
         venue = find_text(card, VENUE_SELECTORS) or venue_default
         price_text = find_text(card, PRICE_SELECTORS)
+        desc_text = find_text(card, DESC_SELECTORS)
         link = find_link(card, url) or url
 
         date_start, date_end, date_display = parse_date_range(date_text)
+
+        # Clean up description: cap at 300 chars, skip if it's just the title repeated
+        desc = None
+        if desc_text and desc_text.strip().lower() != title.strip().lower() and len(desc_text) > 10:
+            desc = clean_text(desc_text)[:300]
 
         ev = {
             "id": make_id(source_name, title, date_text),
@@ -281,7 +292,7 @@ def extract_events_generic(soup, url, source_name, venue_default,
             "link": link,
             "price": parse_price(price_text),
             "categories": categories_default or categorize(title, venue),
-            "description": None,
+            "description": desc,
         }
 
         if validate_event(ev):
