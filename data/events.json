@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T02:51:12.281907Z",
+  "last_updated": "2026-03-23T03:03:02.415903Z",
   "total_events": 8,
   "sources": [
     "Arden Theatre",
@@ -9,26 +9,9 @@
   ],
   "scrape_report": {
     "successes": [
-      "Seed data: 8 verified events added"
+      "Seed data: 8 verified events"
     ],
-    "failures": [
-      "Failed to fetch https://www.ensembleartsphilly.org/tickets-and-events after 3 attempts: HTTPSConnectionPool(host='www.ensembleartsphilly.org', port=443): Max retries exceeded with url: /tickets-and-events (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://philorch.ensembleartsphilly.org/tickets-and-events/events after 3 attempts: HTTPSConnectionPool(host='philorch.ensembleartsphilly.org', port=443): Max retries exceeded with url: /tickets-and-events/events (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://theatrephiladelphia.org/whats-on-stage after 3 attempts: HTTPSConnectionPool(host='theatrephiladelphia.org', port=443): Max retries exceeded with url: /whats-on-stage (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://pennlivearts.org/events/ after 3 attempts: HTTPSConnectionPool(host='pennlivearts.org', port=443): Max retries exceeded with url: /events/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.operaphila.org/whats-on/events/ after 3 attempts: HTTPSConnectionPool(host='www.operaphila.org', port=443): Max retries exceeded with url: /whats-on/events/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.walnutstreettheatre.org/season/mainstage.php after 3 attempts: HTTPSConnectionPool(host='www.walnutstreettheatre.org', port=443): Max retries exceeded with url: /season/mainstage.php (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://fringearts.com/programs/ after 3 attempts: HTTPSConnectionPool(host='fringearts.com', port=443): Max retries exceeded with url: /programs/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://philadelphiaballet.org/performances/ after 3 attempts: HTTPSConnectionPool(host='philadelphiaballet.org', port=443): Max retries exceeded with url: /performances/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://ardentheatre.org/productions/ after 3 attempts: HTTPSConnectionPool(host='ardentheatre.org', port=443): Max retries exceeded with url: /productions/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.chrisjazzcafe.com/events after 3 attempts: HTTPSConnectionPool(host='www.chrisjazzcafe.com', port=443): Max retries exceeded with url: /events (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.southjazzkitchen.com/jazz-club/ after 3 attempts: HTTPSConnectionPool(host='www.southjazzkitchen.com', port=443): Max retries exceeded with url: /jazz-club/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://citywinery.com/pages/events/philadelphia after 3 attempts: HTTPSConnectionPool(host='citywinery.com', port=443): Max retries exceeded with url: /pages/events/philadelphia (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://philadelphiadance.org/calendar/ after 3 attempts: HTTPSConnectionPool(host='philadelphiadance.org', port=443): Max retries exceeded with url: /calendar/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.philaculture.org/events-calendar after 3 attempts: HTTPSConnectionPool(host='www.philaculture.org', port=443): Max retries exceeded with url: /events-calendar (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-      "Failed to fetch https://www.wilmatheater.org/whats-on/ after 3 attempts: HTTPSConnectionPool(host='www.wilmatheater.org', port=443): Max retries exceeded with url: /whats-on/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
-    ],
+    "failures": [],
     "warnings": []
   },
   "events": [
