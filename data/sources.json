@@ -131,6 +131,38 @@
       "venues": [
         "The Wilma Theater"
       ]
+    },
+    {
+      "name": "BalletX",
+      "url": "https://www.balletx.org/season-and-tickets/",
+      "covers": "Contemporary ballet, dance",
+      "venues": [
+        "Various"
+      ]
+    },
+    {
+      "name": "Philadelphia Theatre Company",
+      "url": "https://www.philatheatreco.org/",
+      "covers": "Contemporary theater, world premieres",
+      "venues": [
+        "Suzanne Roberts Theatre"
+      ]
+    },
+    {
+      "name": "Visit Philadelphia Events",
+      "url": "https://www.visitphilly.com/things-to-do/events/",
+      "covers": "All Philadelphia events (tourism aggregator)",
+      "venues": [
+        "Various"
+      ]
+    },
+    {
+      "name": "Philly Fun Guide",
+      "url": "https://phillyfunguide.com/",
+      "covers": "All Philadelphia performing arts (TKTS discount aggregator)",
+      "venues": [
+        "Various"
+      ]
     }
   ]
 }
