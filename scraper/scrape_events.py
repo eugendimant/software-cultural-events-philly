@@ -277,7 +277,7 @@ def extract_events_generic(soup, url, source_name, venue_default,
         # Clean up description: cap at 300 chars, skip if it's just the title repeated
         desc = None
         if desc_text and desc_text.strip().lower() != title.strip().lower() and len(desc_text) > 10:
-            desc = clean_text(desc_text)[:300]
+            desc = clean_text(desc_text)[:500]
 
         ev = {
             "id": make_id(source_name, title, date_text),
@@ -377,7 +377,7 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
                 "link": link,
                 "price": price,
                 "categories": categorize(title, venue),
-                "description": clean_text(desc)[:300] if desc else None,
+                "description": clean_text(desc)[:500] if desc else None,
             }
 
             if validate_event(ev):
@@ -420,7 +420,7 @@ def extract_microdata_events(soup, url, source_name, venue_default):
                 price = f"${p}" if p.replace('.', '').isdigit() else parse_price(p)
 
         desc_el = item.select_one('[itemprop="description"]')
-        desc = clean_text(desc_el.get_text())[:300] if desc_el else None
+        desc = clean_text(desc_el.get_text())[:500] if desc_el else None
 
         date_start = start_date[:10] if start_date and len(start_date) >= 10 else None
         date_end = end_date[:10] if end_date and len(end_date) >= 10 else None
@@ -824,27 +824,38 @@ def main():
         if i < len(SOURCES) - 1:
             time.sleep(1)
 
-    # Merge in seed events if scraping yielded few results
+    # Always merge seed events — they have verified descriptions and rich metadata
     scraped_count = len(all_events)
-    if scraped_count < 5:
-        print(f"\nOnly {scraped_count} scraped events — merging seed data...")
-        seed = get_seed_events()
-        # Filter seed events to only include future/current events
-        today = datetime.now().strftime("%Y-%m-%d")
-        seed = [e for e in seed if (e.get("date_end") or e.get("date_start", "")) >= today]
-        all_events.extend(seed)
-        REPORT["successes"].append(f"Seed data: {len(seed)} verified events added")
-        print(f"  Added {len(seed)} seed events (verified from public sources)")
+    seed = get_seed_events()
+    today = datetime.now().strftime("%Y-%m-%d")
+    seed = [e for e in seed if (e.get("date_end") or e.get("date_start", "")) >= today]
+    all_events.extend(seed)
+    REPORT["successes"].append(f"Seed data: {len(seed)} verified events merged")
+    print(f"\n  Merged {len(seed)} seed events (verified descriptions + metadata)")
 
-    # Deduplicate by source + normalized title (same show at different venues is kept)
-    seen = set()
+    # Deduplicate by source + normalized title — keep event with richest data
+    seen = {}  # key -> index in unique_events
     unique_events = []
     for ev in all_events:
         norm_title = re.sub(r'\s+', ' ', ev["title"].lower().strip())
         key = (ev.get("source", ""), norm_title)
         if key not in seen:
-            seen.add(key)
+            seen[key] = len(unique_events)
             unique_events.append(ev)
+        else:
+            # Merge: for each field, prefer the non-empty value
+            existing = unique_events[seen[key]]
+            for field in ("description", "price", "time", "link", "source_url",
+                          "date_start", "date_end", "date_display", "venue"):
+                new_val = ev.get(field)
+                old_val = existing.get(field)
+                if new_val and (not old_val or len(str(new_val)) > len(str(old_val))):
+                    existing[field] = new_val
+            # Merge categories
+            old_cats = set(existing.get("categories") or [])
+            new_cats = set(ev.get("categories") or [])
+            if new_cats - old_cats:
+                existing["categories"] = list(old_cats | new_cats)
 
     # Sort by date
     unique_events.sort(key=lambda e: e.get("date_start") or "9999-99-99")

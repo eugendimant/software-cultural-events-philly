@@ -410,16 +410,19 @@ div[data-testid="stDecoration"] {display: none;}
     font-weight: 500;
 }
 
-/* Event cards — glassmorphism */
+/* Event cards — Apple-quality glassmorphism */
 .event-card {
     background: rgba(22, 22, 31, 0.65);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
-    padding: 1.3rem 1.5rem;
-    margin-bottom: 0.4rem;
+    padding: 1.1rem 1.3rem 0.9rem;
+    margin-bottom: 0.3rem;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .event-card:hover {
     border-color: rgba(124, 106, 255, 0.25);
@@ -437,46 +440,55 @@ div[data-testid="stDecoration"] {display: none;}
 }
 .event-card-past:hover { opacity: 0.8; }
 .event-title {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: #f0f0f8;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
     letter-spacing: -0.01em;
+    line-height: 1.3;
 }
 .event-meta {
     color: #8888a0;
-    font-size: 0.86rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.2rem;
 }
-.event-venue { color: #a78bfa; font-weight: 500; }
+.event-venue { color: #a78bfa; font-weight: 500; font-size: 0.82rem; }
 .event-desc {
     color: #c0c0d4;
-    font-size: 0.88rem;
-    line-height: 1.65;
-    margin-top: 0.5rem;
-    margin-bottom: 0.3rem;
-    max-width: 90ch;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    flex: 1;
+}
+.event-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
 .price-tag {
     background: rgba(104, 211, 145, 0.12);
     color: #68d391;
-    padding: 3px 12px;
+    padding: 2px 10px;
     border-radius: 20px;
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.02em;
 }
-
-/* Info pills — compact metadata tags inside event cards */
+/* Info pills — compact metadata tags */
 .info-pill {
     display: inline-flex;
     align-items: center;
+    gap: 3px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.06);
     color: #9999b0;
-    padding: 3px 10px;
-    border-radius: 8px;
-    font-size: 0.76rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.72rem;
     font-weight: 500;
     white-space: nowrap;
 }
@@ -484,6 +496,35 @@ div[data-testid="stDecoration"] {display: none;}
     background: rgba(104, 211, 145, 0.08);
     border-color: rgba(104, 211, 145, 0.15);
     color: #68d391;
+}
+/* Compact action icons row inside card */
+.card-actions {
+    display: flex;
+    gap: 2px;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+.card-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #8888a0;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.card-actions a:hover {
+    color: #a78bfa;
+    background: rgba(124, 106, 255, 0.08);
+    border-color: rgba(124, 106, 255, 0.15);
 }
 .month-header {
     font-family: 'Playfair Display', serif;
@@ -864,75 +905,96 @@ def main():
         </div>
         """, unsafe_allow_html=True)
     else:
+        def _event_date_key(ev):
+            return _s(ev, "date_start") or "9999"
+
         current_month = None
+        rendered_dates = set()
         for event in filtered:
             month = get_month_key(_s(event, "date_start"))
+            date_key = _event_date_key(event)
+            group_key = (month, date_key)
+
             if month != current_month:
                 current_month = month
                 st.markdown(f'<div class="month-header">{month}</div>', unsafe_allow_html=True)
 
-            eid = _s(event, "id")
-            badges = "".join(category_badge_html(c) for c in _cats(event))
-            price = _s(event, "price")
-            price_html = f'<span class="price-tag">{price}</span>' if price else ""
-            time_str = _s(event, "time")
-            urg = urgency_badge(event)
-            desc = event_description(event)
-            link = _s(event, "link")
-            venue = _s(event, "venue")
-            date_disp = _s(event, "date_display")
-            source = _s(event, "source")
+            if group_key in rendered_dates:
+                continue
+            rendered_dates.add(group_key)
 
-            # Build info pills row
-            info_pills = []
-            if date_disp:
-                info_pills.append(f'<span class="info-pill">📅 {date_disp}</span>')
-            if time_str:
-                info_pills.append(f'<span class="info-pill">🕐 {time_str}</span>')
-            if price:
-                info_pills.append(f'<span class="info-pill price-pill">{"🆓" if price.lower() == "free" else "🎟"} {price}</span>')
-            if source:
-                info_pills.append(f'<span class="info-pill">via {source}</span>')
-            info_html = " ".join(info_pills)
+            # All events sharing this start date
+            same_date = [e for e in filtered if _event_date_key(e) == date_key
+                         and get_month_key(_s(e, "date_start")) == month]
 
-            st.markdown(f"""
-            <div class="event-card">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start">
-                    <div style="flex:1">
-                        <div class="event-title">{_s(event, 'title')}{urg}</div>
-                        <div class="event-meta" style="margin-bottom:0.5rem">
-                            <span class="event-venue">{venue}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-desc">{desc}</div>
-                <div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
-                    {info_html}
-                </div>
-                <div style="margin-top:0.6rem">{badges}</div>
-            </div>
-            """, unsafe_allow_html=True)
+            # 2-column grid when multiple events share a date
+            use_grid = len(same_date) >= 2
+            if use_grid:
+                cols = st.columns(2)
+            else:
+                cols = [st.container()]
 
-            # Compact action row
-            btn_cols = st.columns([1, 1, 1, 1, 1])
-            with btn_cols[0]:
-                is_selected = eid in st.session_state.selected_ids
-                sel_label = "✅ Selected" if is_selected else "☐ Select"
-                if st.button(sel_label, key=f"sel_{eid}", use_container_width=True):
-                    if is_selected:
-                        st.session_state.selected_ids.discard(eid)
-                    else:
-                        st.session_state.selected_ids.add(eid)
-                    st.rerun()
-            with btn_cols[1]:
-                if link:
-                    st.link_button("🎟 Tickets", link, use_container_width=True)
-            with btn_cols[2]:
-                st.link_button("📅 Calendar", gcal_url(event), use_container_width=True)
-            with btn_cols[3]:
-                st.link_button("📍 Map", maps_url(event), use_container_width=True)
-            with btn_cols[4]:
-                st.link_button("📤 Share", share_url(event), use_container_width=True)
+            for idx, ev in enumerate(same_date):
+                col = cols[idx % 2] if use_grid else cols[0]
+                with col:
+                    _render_event_card(ev, st)
+
+def _render_event_card(event, st_ctx):
+    """Render a single event card with integrated actions."""
+    eid = _s(event, "id")
+    badges = "".join(category_badge_html(c) for c in _cats(event))
+    price = _s(event, "price")
+    time_str = _s(event, "time")
+    urg = urgency_badge(event)
+    desc = event_description(event)
+    link = _s(event, "link")
+    venue = _s(event, "venue")
+    date_disp = _s(event, "date_display")
+    source = _s(event, "source")
+
+    # Build compact info line
+    meta_parts = []
+    if date_disp:
+        meta_parts.append(f'<span class="info-pill">📅 {date_disp}</span>')
+    if time_str:
+        meta_parts.append(f'<span class="info-pill">🕐 {time_str}</span>')
+    if price:
+        is_free = price.lower() == "free"
+        meta_parts.append(f'<span class="info-pill price-pill">{"🆓" if is_free else "🎟"} {price}</span>')
+
+    # Action links (inline HTML — no separate Streamlit buttons)
+    action_links = []
+    if link:
+        action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
+    action_links.append(f'<a href="{gcal_url(event)}" target="_blank">📅 Cal</a>')
+    action_links.append(f'<a href="{maps_url(event)}" target="_blank">📍 Map</a>')
+    action_links.append(f'<a href="{share_url(event)}" target="_blank">📤 Share</a>')
+    actions_html = "".join(action_links)
+
+    st_ctx.markdown(f"""
+    <div class="event-card">
+        <div class="event-title">{_s(event, 'title')}{urg}</div>
+        <div class="event-venue">{venue}</div>
+        <div class="event-desc">{desc}</div>
+        <div class="event-footer">
+            {" ".join(meta_parts)}
+        </div>
+        <div style="margin-top:0.4rem">{badges}</div>
+        <div class="card-actions">
+            {actions_html}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Select button (needs Streamlit interactivity)
+    is_selected = eid in st.session_state.selected_ids
+    sel_label = "✅ Selected" if is_selected else "☐ Select"
+    if st_ctx.button(sel_label, key=f"sel_{eid}", use_container_width=True):
+        if is_selected:
+            st.session_state.selected_ids.discard(eid)
+        else:
+            st.session_state.selected_ids.add(eid)
+        st.rerun()
 
     # ── Past Events Archive ───────────────────────────────────────────────
     if past_events:

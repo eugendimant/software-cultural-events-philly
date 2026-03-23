@@ -60,7 +60,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["classical", "performance"],
-            "description": "Part of the Family Discovery Series — an introduction to the orchestra for young audiences.",
+            "description": "Part of the Family Discovery Series — a magical introduction to the orchestra designed for young audiences. Explore Britten's beloved guide to every instrument family, from the delicate flute to the thundering timpani. Ideal for ages 3–10.",
         },
         {
             "title": "Brodsky Star Spotlight: Víkingur Ólafsson",
@@ -72,7 +72,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["classical"],
-            "description": "Acclaimed Icelandic pianist Víkingur Ólafsson in the Brodsky Star Spotlight Series.",
+            "description": "Acclaimed Icelandic pianist Víkingur Ólafsson takes the stage in the Brodsky Star Spotlight Series. Known for his revelatory Bach and Debussy recordings, Ólafsson brings his signature intensity and clarity to a solo recital.",
         },
         {
             "title": "Marin Leads Rachmaninoff and Schumann",
@@ -84,7 +84,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "The Philadelphia Orchestra performs Rachmaninoff and Schumann under the baton of conductor Marin Alsop.",
+            "description": "Conductor Marin Alsop leads the Philadelphia Orchestra in Rachmaninoff's lush Symphonic Dances and Schumann's deeply romantic Second Symphony. A program that showcases the Orchestra's legendary warmth and power.",
         },
         {
             "title": "Distant Worlds: Music from Final Fantasy",
@@ -109,7 +109,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["classical", "performance"],
-            "description": "Interactive musical experiences for all ages at the Kimmel Cultural Campus.",
+            "description": "A free weekend of interactive musical experiences for all ages at the Kimmel Cultural Campus. Explore instruments, meet musicians, enjoy mini-performances, and discover the world of orchestral music up close.",
         },
         {
             "title": "ECCO with Anthony McGill & Tai Murray",
@@ -122,7 +122,7 @@ def get_seed_events():
             "time": "7:30 PM",
             "price": None,
             "categories": ["classical"],
-            "description": "East Coast Chamber Orchestra performs with clarinetist Anthony McGill and violinist Tai Murray.",
+            "description": "The East Coast Chamber Orchestra (ECCO) performs a conductor-less program featuring clarinetist Anthony McGill (NY Philharmonic principal) and violinist Tai Murray. An intimate evening of chamber music at the Perelman.",
         },
         {
             "title": "A Benefit Concert for the Musicians' Retirement Fund",
@@ -134,7 +134,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "Annual benefit concert supporting the Philadelphia Orchestra's Musicians' Retirement Fund.",
+            "description": "An annual tradition of musical excellence — this benefit concert supports retired musicians of the Philadelphia Orchestra. Expect surprise guest artists and a program curated to celebrate the Orchestra's storied legacy.",
         },
         {
             "title": "Mozart's Requiem",
@@ -146,7 +146,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "The Philadelphia Orchestra performs Mozart's transcendent Requiem in D minor.",
+            "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
         },
         {
             "title": "Bolero and Don Juan",
@@ -158,7 +158,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "Ravel's electrifying Bolero paired with Strauss's Don Juan.",
+            "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
         },
         {
             "title": "Copland's American Inspiration",
@@ -170,7 +170,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "Matthias Pintscher leads Copland's most inspired American works.",
+            "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
         },
         {
             "title": "Family Concert: Hip-Hop Orchestra",
@@ -183,7 +183,7 @@ def get_seed_events():
             "time": "11:30 AM",
             "price": None,
             "categories": ["classical", "performance"],
-            "description": "A family-friendly concert fusing hip-hop and orchestral music.",
+            "description": "A high-energy family concert where hip-hop meets the symphony. MC and beatboxer performers join the Philadelphia Orchestra in an explosive fusion of classical instruments and urban beats. Ages 5 and up.",
         },
         {
             "title": "Orchestra After 5: Postcards from Spain",
@@ -196,7 +196,7 @@ def get_seed_events():
             "time": "6:30 PM",
             "price": None,
             "categories": ["classical"],
-            "description": "Bizet's Carmen Suite No. 1 and Falla's The Three-Cornered Hat in a relaxed after-work format.",
+            "description": "Unwind after work with the Philadelphia Orchestra's casual concert series. This edition transports you to Spain with Bizet's fiery Carmen Suite No. 1 and de Falla's colorful The Three-Cornered Hat. Cash bar and socializing included.",
         },
         {
             "title": "Yannick Nézet-Séguin: Mahler & Sorey",
@@ -208,7 +208,7 @@ def get_seed_events():
             "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
             "price": None,
             "categories": ["classical"],
-            "description": "Music Director Yannick Nézet-Séguin conducts Mahler and Tyshawn Sorey.",
+            "description": "Music Director Yannick Nézet-Séguin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey — one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
         },
         {
             "title": "Beethoven & Marsalis",
@@ -237,7 +237,7 @@ def get_seed_events():
             "time": "7:30 PM",
             "price": None,
             "categories": ["jazz"],
-            "description": "Pianist Emmet Cohen celebrates the centennials of Miles Davis and John Coltrane.",
+            "description": "Rising star pianist Emmet Cohen pays tribute to two giants who transformed American music — Miles Davis and John Coltrane, both born in 1926. Expect reimagined classics from Kind of Blue, A Love Supreme, and beyond.",
         },
         {
             "title": "Endea Owens & The Cookout",
@@ -249,7 +249,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["jazz"],
-            "description": "The Late Show's bassist Endea Owens brings her dynamic ensemble The Cookout to the Jazz Series.",
+            "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert — now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
         },
         {
             "title": "Pablo Batista: Latin Jazz Orchestra",
@@ -273,7 +273,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["jazz"],
-            "description": "Philly's own Christian McBride joined by fellow bassist Edgar Meyer in the Jazz Series.",
+            "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
         },
         {
             "title": "Delbert Anderson Quartet: Beyond Belief",
@@ -301,7 +301,7 @@ def get_seed_events():
             "link": "https://ardentheatre.org/productions/",
             "price": "$37 – $70",
             "categories": ["theater"],
-            "description": "A bold reimagining of Shakespeare's star-crossed lovers at the Arden Theatre.",
+            "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core — passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
         },
         {
             "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
@@ -325,7 +325,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["theater"],
-            "description": "The hilariously irreverent Shakespeare show where one cast member has had a few too many.",
+            "description": "The international smash hit where a full cast performs Shakespeare — except one actor is genuinely intoxicated. Hilarious, unpredictable, and surprisingly theatrical. Not your English teacher's Shakespeare. Ages 18+.",
         },
         {
             "title": "A Delicate Balance",
@@ -401,7 +401,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": "From $87",
             "categories": ["musical"],
-            "description": "The electrifying biographical musical about the Queen of Rock 'n' Roll at the Miller Theater.",
+            "description": "From humble beginnings in Nutbush, Tennessee to becoming the Queen of Rock 'n' Roll — TINA chronicles Tina Turner's extraordinary journey of resilience, reinvention, and raw talent. Featuring iconic hits including 'Proud Mary' and 'What's Love Got to Do with It.'",
         },
         {
             "title": "The Sound of Music",
@@ -425,7 +425,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["musical"],
-            "description": "S.E. Hinton's classic novel brought to life as a Broadway musical at the Academy of Music.",
+            "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic.",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -465,7 +465,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["dance", "ballet"],
-            "description": "Spring Residency — Philadelphia Ballet dancers perform explosive new choreography.",
+            "description": "Philadelphia Ballet's Spring Residency showcases bold new choreography from emerging and established creators. An intimate showcase at the Perelman Theater where you'll see tomorrow's masterworks taking shape today.",
         },
         {
             "title": "Paul Taylor Dance Company",
@@ -477,7 +477,7 @@ def get_seed_events():
             "link": "https://pennlivearts.org/event/PTDC2026",
             "price": None,
             "categories": ["dance"],
-            "description": "One of America's most celebrated modern dance companies performs at the Annenberg Center.",
+            "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season.",
         },
         {
             "title": "BalletX Spring Series 2026",
@@ -541,7 +541,7 @@ def get_seed_events():
             "link": "https://www.operaphila.org/whats-on/events/",
             "price": None,
             "categories": ["opera", "musical"],
-            "description": "Based on Langston Hughes' poetry. Fuses vaudeville, gospel, opera, jazz, and spirituals.",
+            "description": "Philadelphia premiere — a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -581,7 +581,7 @@ def get_seed_events():
             "link": "https://pennlivearts.org/events/",
             "price": None,
             "categories": ["classical"],
-            "description": "Music for the Heavenly Court by Hildegard of Bingen — transcendent medieval vocal music.",
+            "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen — the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
         },
 
         # ═══════════════════════════════════════════════════════════════════
@@ -597,7 +597,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": "From $63",
             "categories": ["performance"],
-            "description": "Family Discovery Series. Ages 18 months and up. 1:00 PM and 4:00 PM shows.",
+            "description": "Peppa Pig comes to life in this interactive concert designed for the youngest music lovers. Sing along, dance, and explore instruments with Peppa and friends. Shows at 1:00 PM and 4:00 PM. Ages 18 months and up.",
         },
         {
             "title": "Shen Yun",
@@ -622,7 +622,7 @@ def get_seed_events():
             "link": "https://www.ensembleartsphilly.org/tickets-and-events",
             "price": None,
             "categories": ["musical", "performance"],
-            "description": "Based on Dav Pilkey's best-selling series. Sensory Friendly Performance on Sunday, April 26.",
+            "description": "The hero who is part dog, part police officer leaps off the page and onto the stage in this action-packed musical based on Dav Pilkey's mega-bestselling series. Fun for the whole family. Sensory Friendly Performance available on Sunday, April 26.",
         },
         {
             "title": "Philadelphia Children's Festival",
