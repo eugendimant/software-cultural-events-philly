@@ -809,44 +809,54 @@ div[data-testid="stDecoration"] {display: none;}
     margin-bottom: 0.5rem;
 }
 
-/* Coming up next */
-.coming-up {
+/* Coming up next — compact card grid */
+.coming-up-card {
     background: rgba(18, 18, 26, 0.6);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.35rem;
+    padding: 0.75rem 0.9rem;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    color: inherit;
+    flex-direction: column;
 }
-.coming-up:hover {
-    border-color: rgba(124, 106, 255, 0.2);
-    background: rgba(18, 18, 26, 0.85);
-    transform: translateX(2px);
+.coming-up-card:hover {
+    border-color: rgba(124, 106, 255, 0.25);
+    background: rgba(22, 22, 36, 0.85);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 106, 255, 0.08);
+}
+.coming-up-date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(124, 106, 255, 0.1);
+    color: #a78bfa;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    width: fit-content;
 }
 .coming-up-title {
     font-weight: 600;
-    color: #e8e8f0;
-    font-size: 0.9rem;
+    color: #f0f0f8;
+    font-size: 0.88rem;
     line-height: 1.3;
+    margin-bottom: 0.25rem;
+}
+.coming-up-venue {
+    color: #a78bfa;
+    font-size: 0.76rem;
+    font-weight: 500;
 }
 .coming-up-meta {
-    color: #8888a0;
-    font-size: 0.78rem;
-    margin-top: 2px;
-}
-.coming-up-date {
-    color: #8888a0;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    text-align: right;
-    min-width: fit-content;
+    color: #6e6e88;
+    font-size: 0.72rem;
+    margin-top: auto;
+    padding-top: 0.35rem;
 }
 
 /* Category chip used in filter bar */
@@ -1126,30 +1136,34 @@ def main():
     next_up = upcoming[:3]
     if next_up:
         st.markdown("#### Coming Up Next")
-        for event in next_up:
-            badge = urgency_badge(event)
-            link = _s(event, "link")
-            time_str = _s(event, "time")
-            price_str = _s(event, "price")
-            meta_parts = [f'<span class="event-venue">{_s(event, "venue")}</span>']
-            if time_str:
-                meta_parts.append(time_str)
-            if price_str:
-                meta_parts.append(price_str)
-            meta_html = " · ".join(meta_parts)
-            wrapper_open = f'<a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">' if link else ''
-            wrapper_close = '</a>' if link else ''
-            st.markdown(f"""
-            {wrapper_open}
-            <div class="coming-up">
-                <div style="flex:1;min-width:0">
-                    <div class="coming-up-title">{_s(event, 'title')} {badge}</div>
-                    <div class="coming-up-meta">{meta_html}</div>
+        cols = st.columns(3)
+        for i, event in enumerate(next_up):
+            with cols[i]:
+                urg = urgency_badge(event)
+                link = _s(event, "link")
+                time_str = _s(event, "time")
+                price_str = _s(event, "price")
+                date_disp = _s(event, "date_display")
+                venue = _s(event, "venue")
+                # Bottom meta line
+                meta_parts = []
+                if time_str:
+                    meta_parts.append(time_str)
+                if price_str:
+                    meta_parts.append(price_str)
+                meta_html = " · ".join(meta_parts) if meta_parts else ""
+                wrapper_open = f'<a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">' if link else ''
+                wrapper_close = '</a>' if link else ''
+                st.markdown(f"""
+                {wrapper_open}
+                <div class="coming-up-card">
+                    <div class="coming-up-date-badge">{date_disp} {urg}</div>
+                    <div class="coming-up-title">{_s(event, 'title')}</div>
+                    <div class="coming-up-venue">{venue}</div>
+                    {'<div class="coming-up-meta">' + meta_html + '</div>' if meta_html else ''}
                 </div>
-                <div class="coming-up-date">{_s(event, 'date_display')}</div>
-            </div>
-            {wrapper_close}
-            """, unsafe_allow_html=True)
+                {wrapper_close}
+                """, unsafe_allow_html=True)
         st.markdown("")
 
     st.divider()
