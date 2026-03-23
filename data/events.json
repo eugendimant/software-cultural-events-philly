@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T03:30:01.061175Z",
+  "last_updated": "2026-03-23T15:33:15.699597Z",
   "total_events": 37,
   "sources": [
     "Arden Theatre",
@@ -16,7 +16,7 @@
   ],
   "scrape_report": {
     "successes": [
-      "Seed data: 37 verified events from 11 sources"
+      "Seed data: verified events"
     ],
     "failures": [],
     "warnings": []
@@ -30,13 +30,13 @@
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/",
       "link": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "price": "$33 \u2013 $247",
+      "price": "$33 – $247",
       "categories": [
         "theater"
       ],
-      "description": "Edward Albee's Pulitzer Prize-winning play \u2014 an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
+      "description": "Edward Albee's Pulitzer Prize-winning play — an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
       "id": "add290357161",
-      "date_display": "Mar 04 \u2013 Mar 29, 2026",
+      "date_display": "Mar 04 – Mar 29, 2026",
       "time": null
     },
     {
@@ -47,13 +47,13 @@
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
       "link": "https://ardentheatre.org/productions/",
-      "price": "$37 \u2013 $70",
+      "price": "$37 – $70",
       "categories": [
         "theater"
       ],
-      "description": "A bold reimagining of Shakespeare's star-crossed lovers at the Arden Theatre.",
+      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core — passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
       "id": "75b756c1876c",
-      "date_display": "Mar 12 \u2013 Apr 05, 2026",
+      "date_display": "Mar 12 – Apr 05, 2026",
       "time": null
     },
     {
@@ -68,9 +68,9 @@
       "categories": [
         "theater"
       ],
-      "description": "From Pulitzer Prize winner James Ijames \u2014 First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
+      "description": "From Pulitzer Prize winner James Ijames — First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
       "id": "68dc3fe25e51",
-      "date_display": "Mar 17 \u2013 Apr 05, 2026",
+      "date_display": "Mar 17 – Apr 05, 2026",
       "time": null
     },
     {
@@ -86,9 +86,9 @@
         "classical",
         "performance"
       ],
-      "description": "Interactive musical experiences for all ages at the Kimmel Cultural Campus.",
+      "description": "A free weekend of interactive musical experiences for all ages at the Kimmel Cultural Campus. Explore instruments, meet musicians, enjoy mini-performances, and discover the world of orchestral music up close.",
       "id": "3c5336ba953c",
-      "date_display": "Mar 21 \u2013 Mar 23, 2026",
+      "date_display": "Mar 21 – Mar 23, 2026",
       "time": null
     },
     {
@@ -104,9 +104,9 @@
         "ballet",
         "dance"
       ],
-      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan \u2014 Show Me, Broke Apart, and more.",
+      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan — Show Me, Broke Apart, and more.",
       "id": "7cfc9fdbaabc",
-      "date_display": "Mar 27 \u2013 Mar 29, 2026",
+      "date_display": "Mar 27 – Mar 29, 2026",
       "time": null
     },
     {
@@ -121,7 +121,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "The Late Show's bassist Endea Owens brings her dynamic ensemble The Cookout to the Jazz Series.",
+      "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert — now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
       "id": "6c2ca9ffdf54",
       "date_display": "Mar 28, 2026",
       "time": null
@@ -139,7 +139,7 @@
       "categories": [
         "classical"
       ],
-      "description": "East Coast Chamber Orchestra performs with clarinetist Anthony McGill and violinist Tai Murray.",
+      "description": "The East Coast Chamber Orchestra (ECCO) performs a conductor-less program featuring clarinetist Anthony McGill (NY Philharmonic principal) and violinist Tai Murray. An intimate evening of chamber music at the Perelman.",
       "id": "ac34bd6d21d0",
       "date_display": "Mar 31, 2026"
     },
@@ -157,7 +157,7 @@
       ],
       "description": "Rodgers & Hammerstein's beloved classic at the Academy of Music. Directed by three-time Tony winner Jack O'Brien. Broadway Series.",
       "id": "34b2cd2178e1",
-      "date_display": "Mar 31 \u2013 Apr 05, 2026",
+      "date_display": "Mar 31 – Apr 05, 2026",
       "time": null
     },
     {
@@ -175,7 +175,7 @@
       ],
       "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
       "id": "8718f37312c9",
-      "date_display": "Apr 03 \u2013 Apr 04, 2026",
+      "date_display": "Apr 03 – Apr 04, 2026",
       "time": null
     },
     {
@@ -190,7 +190,7 @@
       "categories": [
         "performance"
       ],
-      "description": "Family Discovery Series. Ages 18 months and up. 1:00 PM and 4:00 PM shows.",
+      "description": "Peppa Pig comes to life in this interactive concert designed for the youngest music lovers. Sing along, dance, and explore instruments with Peppa and friends. Shows at 1:00 PM and 4:00 PM. Ages 18 months and up.",
       "id": "c8849c845e3f",
       "date_display": "Apr 04, 2026",
       "time": null
@@ -207,7 +207,7 @@
       "categories": [
         "classical"
       ],
-      "description": "Annual benefit concert supporting the Philadelphia Orchestra's Musicians' Retirement Fund.",
+      "description": "An annual tradition of musical excellence — this benefit concert supports retired musicians of the Philadelphia Orchestra. Expect surprise guest artists and a program curated to celebrate the Orchestra's storied legacy.",
       "id": "3dc1fc6a1284",
       "date_display": "Apr 07, 2026",
       "time": null
@@ -227,7 +227,7 @@
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family.",
       "id": "0fbd1bf9075c",
-      "date_display": "Apr 08 \u2013 May 31, 2026",
+      "date_display": "Apr 08 – May 31, 2026",
       "time": null
     },
     {
@@ -242,9 +242,9 @@
       "categories": [
         "classical"
       ],
-      "description": "The Philadelphia Orchestra performs Mozart's transcendent Requiem in D minor.",
+      "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
       "id": "a323707db356",
-      "date_display": "Apr 09 \u2013 Apr 12, 2026",
+      "date_display": "Apr 09 – Apr 12, 2026",
       "time": null
     },
     {
@@ -261,7 +261,7 @@
       ],
       "description": "World premiere by James Ijames at Philadelphia Theatre Company. A compelling new work exploring identity and belonging.",
       "id": "d52cabce3ae6",
-      "date_display": "Apr 10 \u2013 May 03, 2026",
+      "date_display": "Apr 10 – May 03, 2026",
       "time": null
     },
     {
@@ -276,7 +276,7 @@
       "categories": [
         "concert"
       ],
-      "description": "'The best musical entertainment in the country' \u2014 from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
+      "description": "'The best musical entertainment in the country' — from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
       "id": "96648d5f3e14",
       "date_display": "Apr 11, 2026",
       "time": null
@@ -329,9 +329,9 @@
         "dance",
         "ballet"
       ],
-      "description": "Spring Residency \u2014 Philadelphia Ballet dancers perform explosive new choreography.",
+      "description": "Philadelphia Ballet's Spring Residency showcases bold new choreography from emerging and established creators. An intimate showcase at the Perelman Theater where you'll see tomorrow's masterworks taking shape today.",
       "id": "38b52970ec99",
-      "date_display": "Apr 17 \u2013 Apr 19, 2026",
+      "date_display": "Apr 17 – Apr 19, 2026",
       "time": null
     },
     {
@@ -346,9 +346,9 @@
       "categories": [
         "dance"
       ],
-      "description": "One of America's most celebrated modern dance companies performs at the Annenberg Center.",
+      "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season.",
       "id": "1b2b04d87d0e",
-      "date_display": "Apr 17 \u2013 Apr 18, 2026",
+      "date_display": "Apr 17 – Apr 18, 2026",
       "time": null
     },
     {
@@ -363,7 +363,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Philly's own Christian McBride joined by fellow bassist Edgar Meyer in the Jazz Series.",
+      "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
       "id": "7d736861b122",
       "date_display": "Apr 21, 2026",
       "time": null
@@ -382,7 +382,7 @@
       ],
       "description": "The hilarious Tony-nominated Broadway musical. A small-town comedy with heart, corn, and unforgettable laughs.",
       "id": "1e8f51060f81",
-      "date_display": "Apr 21 \u2013 May 03, 2026",
+      "date_display": "Apr 21 – May 03, 2026",
       "time": null
     },
     {
@@ -397,9 +397,9 @@
       "categories": [
         "opera"
       ],
-      "description": "World premiere by composer Gregory Spears \u2014 inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
+      "description": "World premiere by composer Gregory Spears — inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
       "id": "bba414d078f3",
-      "date_display": "Apr 22 \u2013 Apr 26, 2026",
+      "date_display": "Apr 22 – Apr 26, 2026",
       "time": null
     },
     {
@@ -414,9 +414,9 @@
       "categories": [
         "classical"
       ],
-      "description": "Ravel's electrifying Bolero paired with Strauss's Don Juan.",
+      "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
       "id": "bba3e110c5f1",
-      "date_display": "Apr 23 \u2013 Apr 25, 2026",
+      "date_display": "Apr 23 – Apr 25, 2026",
       "time": null
     },
     {
@@ -431,7 +431,7 @@
       "categories": [
         "classical"
       ],
-      "description": "Music for the Heavenly Court by Hildegard of Bingen \u2014 transcendent medieval vocal music.",
+      "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen — the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
       "id": "4f919f8be978",
       "date_display": "Apr 23, 2026",
       "time": null
@@ -449,9 +449,9 @@
         "musical",
         "performance"
       ],
-      "description": "Based on Dav Pilkey's best-selling series. Sensory Friendly Performance on Sunday, April 26.",
+      "description": "The hero who is part dog, part police officer leaps off the page and onto the stage in this action-packed musical based on Dav Pilkey's mega-bestselling series. Fun for the whole family. Sensory Friendly Performance available on Sunday, April 26.",
       "id": "b93378b09cc3",
-      "date_display": "Apr 25 \u2013 Apr 26, 2026",
+      "date_display": "Apr 25 – Apr 26, 2026",
       "time": null
     },
     {
@@ -466,7 +466,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "A world premiere \u2014 Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
+      "description": "A world premiere — Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
       "id": "90631a6e061b",
       "date_display": "Apr 26, 2026",
       "time": null
@@ -483,9 +483,9 @@
       "categories": [
         "classical"
       ],
-      "description": "Matthias Pintscher leads Copland's most inspired American works.",
+      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
       "id": "b960e665bd64",
-      "date_display": "Apr 30 \u2013 May 02, 2026",
+      "date_display": "Apr 30 – May 02, 2026",
       "time": null
     },
     {
@@ -502,7 +502,7 @@
         "classical",
         "performance"
       ],
-      "description": "A family-friendly concert fusing hip-hop and orchestral music.",
+      "description": "A high-energy family concert where hip-hop meets the symphony. MC and beatboxer performers join the Philadelphia Orchestra in an explosive fusion of classical instruments and urban beats. Ages 5 and up.",
       "id": "d30795381ef2",
       "date_display": "May 02, 2026"
     },
@@ -520,7 +520,7 @@
       ],
       "description": "Family-friendly performances, hands-on activities, and outdoor PLAYground. Includes The Magic School Bus, Bill Blagg Magic, and more.",
       "id": "140ef0c71762",
-      "date_display": "May 03 \u2013 May 05, 2026",
+      "date_display": "May 03 – May 05, 2026",
       "time": null
     },
     {
@@ -535,9 +535,9 @@
       "categories": [
         "musical"
       ],
-      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence \u2014 in the city where it happened.",
+      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence — in the city where it happened.",
       "id": "445270b9c2be",
-      "date_display": "May 05 \u2013 Jun 07, 2026",
+      "date_display": "May 05 – Jun 07, 2026",
       "time": null
     },
     {
@@ -553,9 +553,9 @@
         "theater",
         "musical"
       ],
-      "description": "BYO your favorite doll \u2014 The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity.",
+      "description": "BYO your favorite doll — The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity.",
       "id": "394410b6c45a",
-      "date_display": "May 09 \u2013 May 17, 2026",
+      "date_display": "May 09 – May 17, 2026",
       "time": null
     },
     {
@@ -571,7 +571,7 @@
       "categories": [
         "classical"
       ],
-      "description": "Bizet's Carmen Suite No. 1 and Falla's The Three-Cornered Hat in a relaxed after-work format.",
+      "description": "Unwind after work with the Philadelphia Orchestra's casual concert series. This edition transports you to Spain with Bizet's fiery Carmen Suite No. 1 and de Falla's colorful The Three-Cornered Hat. Cash bar and socializing included.",
       "id": "2c6c55d413da",
       "date_display": "May 14, 2026"
     },
@@ -588,13 +588,13 @@
         "opera",
         "musical"
       ],
-      "description": "Based on Langston Hughes' poetry. Fuses vaudeville, gospel, opera, jazz, and spirituals.",
+      "description": "Philadelphia premiere — a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
       "id": "b390aef23dce",
-      "date_display": "May 14 \u2013 May 17, 2026",
+      "date_display": "May 14 – May 17, 2026",
       "time": null
     },
     {
-      "title": "Yannick N\u00e9zet-S\u00e9guin: Mahler & Sorey",
+      "title": "Yannick Nézet-Séguin: Mahler & Sorey",
       "date_start": "2026-05-15",
       "date_end": "2026-05-16",
       "venue": "Marian Anderson Hall, Kimmel Center",
@@ -605,9 +605,9 @@
       "categories": [
         "classical"
       ],
-      "description": "Music Director Yannick N\u00e9zet-S\u00e9guin conducts Mahler and Tyshawn Sorey.",
+      "description": "Music Director Yannick Nézet-Séguin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey — one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
       "id": "d90ef2a8fb40",
-      "date_display": "May 15 \u2013 May 16, 2026",
+      "date_display": "May 15 – May 16, 2026",
       "time": null
     },
     {
@@ -622,9 +622,9 @@
       "categories": [
         "musical"
       ],
-      "description": "S.E. Hinton's classic novel brought to life as a Broadway musical at the Academy of Music.",
+      "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic.",
       "id": "d65264a06703",
-      "date_display": "May 26 \u2013 Jun 07, 2026",
+      "date_display": "May 26 – Jun 07, 2026",
       "time": null
     },
     {
@@ -642,7 +642,7 @@
       ],
       "description": "The Philadelphia Orchestra teams up with Jazz at Lincoln Center Orchestra to honor Beethoven and Wynton Marsalis.",
       "id": "83317acc4391",
-      "date_display": "May 28 \u2013 May 30, 2026",
+      "date_display": "May 28 – May 30, 2026",
       "time": null
     },
     {
@@ -657,9 +657,9 @@
       "categories": [
         "dance"
       ],
-      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' \u2014 co-commissioned with ArtPhilly.",
+      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' — co-commissioned with ArtPhilly.",
       "id": "94a522c7b0bc",
-      "date_display": "May 29 \u2013 May 30, 2026",
+      "date_display": "May 29 – May 30, 2026",
       "time": null
     }
   ]
