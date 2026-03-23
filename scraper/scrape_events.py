@@ -729,6 +729,141 @@ def extract_events_generic(soup, url, source_name, venue_default,
     return events
 
 
+def extract_squarespace_events(url, source_name, venue_default,
+                                categories_default=None):
+    """Extract events from Squarespace JSON API (?format=json).
+    Squarespace sites expose a JSON endpoint with full event data including
+    titles, descriptions, dates, URLs, and more. This is the most reliable
+    method for Squarespace-based venues like Chris' Jazz Cafe.
+    Returns list of event dicts, or empty list if not a Squarespace site.
+    """
+    json_url = url.rstrip("/") + "?format=json"
+    events = []
+    try:
+        r = SESSION.get(json_url, timeout=15,
+                        headers={**HEADERS, "Accept": "application/json"})
+        if r.status_code != 200:
+            return []
+        data = r.json()
+    except Exception:
+        return []
+
+    # Squarespace returns events under various keys
+    items = []
+    if isinstance(data, dict):
+        # Try known Squarespace response structures
+        items = data.get("items") or data.get("upcoming") or data.get("events") or []
+        # Also check nested "collection" -> "items"
+        if not items and "collection" in data:
+            items = data["collection"].get("items", [])
+        # Some Squarespace sites return past/upcoming split
+        if not items and "past" in data:
+            items = (data.get("upcoming") or []) + (data.get("past") or [])
+    elif isinstance(data, list):
+        items = data
+
+    base_url = url.rsplit("/", 1)[0] if "/" in url else url
+    site_root = "/".join(url.split("/")[:3])  # e.g., https://www.chrisjazzcafe.com
+
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+
+        title = item.get("title", "").strip()
+        if not title:
+            continue
+
+        # Build detail page URL from fullUrl or urlId
+        full_url = item.get("fullUrl") or item.get("sourceUrl") or ""
+        if full_url and not full_url.startswith("http"):
+            full_url = site_root + full_url
+        item_url = full_url or url
+
+        # Parse dates (Squarespace uses millisecond timestamps)
+        start_ts = item.get("startDate")
+        end_ts = item.get("endDate")
+        date_start = date_end = event_time = None
+        if isinstance(start_ts, (int, float)) and start_ts > 1000000000:
+            # Millisecond timestamp
+            if start_ts > 1e12:
+                start_ts = start_ts / 1000
+            try:
+                dt = datetime.fromtimestamp(start_ts)
+                date_start = dt.strftime("%Y-%m-%d")
+                h, m = dt.hour, dt.minute
+                if h != 0 or m != 0:
+                    period = "AM" if h < 12 else "PM"
+                    dh = h if h <= 12 else h - 12
+                    if dh == 0:
+                        dh = 12
+                    event_time = f"{dh}:{m:02d} {period}"
+            except (ValueError, OSError):
+                pass
+        elif isinstance(start_ts, str):
+            date_start = start_ts[:10] if len(start_ts) >= 10 else None
+            event_time = parse_time_from_iso(start_ts)
+
+        if isinstance(end_ts, (int, float)) and end_ts > 1000000000:
+            if end_ts > 1e12:
+                end_ts = end_ts / 1000
+            try:
+                date_end = datetime.fromtimestamp(end_ts).strftime("%Y-%m-%d")
+            except (ValueError, OSError):
+                date_end = date_start
+        elif isinstance(end_ts, str):
+            date_end = end_ts[:10] if len(end_ts) >= 10 else date_start
+        else:
+            date_end = date_start
+
+        # Description: prefer excerpt, fall back to body text
+        desc = ""
+        excerpt = item.get("excerpt") or item.get("asExcerpt") or ""
+        body = item.get("body") or ""
+        if excerpt:
+            desc = clean_text(BeautifulSoup(excerpt, "lxml").get_text())[:800]
+        elif body:
+            desc = clean_text(BeautifulSoup(body, "lxml").get_text())[:800]
+
+        # Price: try structured data or parse from body/excerpt
+        price = None
+        struct = item.get("structuredContent") or {}
+        if isinstance(struct, dict):
+            price_val = struct.get("ticketPrice") or struct.get("price")
+            if price_val:
+                price = parse_price(str(price_val))
+        if not price and (desc or body):
+            price_text = desc or clean_text(BeautifulSoup(body, "lxml").get_text())
+            price = parse_price(price_text)
+
+        # Date display
+        date_display = ""
+        if date_start and date_end and date_start != date_end:
+            date_display = f"{date_start} – {date_end}"
+        elif date_start:
+            date_display = date_start
+
+        ev = {
+            "id": make_id(source_name, title, str(start_ts or "")),
+            "title": clean_text(title),
+            "date_display": date_display,
+            "date_start": date_start,
+            "date_end": date_end,
+            "time": event_time,
+            "venue": venue_default,
+            "source": source_name,
+            "source_url": url,
+            "link": item_url,
+            "price": price,
+            "categories": categories_default or categorize(title, venue_default),
+            "description": desc if desc and len(desc) > 20 else None,
+        }
+
+        if validate_event(ev):
+            events.append(ev)
+
+    return events
+
+
 def extract_json_ld_events(soup, url, source_name, venue_default):
     """Extract events from JSON-LD structured data (most reliable method)."""
     events = []
@@ -930,6 +1065,10 @@ def discover_event_links(soup, url):
         r'/(event|show|performance|production|concert|program|ticket|season|whats-on)s?/',
         re.IGNORECASE
     )
+    # Also match Squarespace-style numeric URLs like /events/131523 or /shows/363632
+    numeric_url_patterns = re.compile(
+        r'/(event|show)s?/\d+', re.IGNORECASE
+    )
     discovered = {}
     for a in soup.select("a[href]"):
         href = a.get("href", "")
@@ -937,7 +1076,9 @@ def discover_event_links(soup, url):
         # Only consider links that look like event detail pages (not the listing page itself)
         if full_url == url or full_url.rstrip("/") == url.rstrip("/"):
             continue
-        if not event_url_patterns.search(href) and href.count("/") < 3:
+        if (not event_url_patterns.search(href) and
+                not numeric_url_patterns.search(href) and
+                href.count("/") < 3):
             continue
         title = clean_text(a.get_text())
         if title and len(title) >= 3 and len(title) <= 200:
@@ -947,10 +1088,21 @@ def discover_event_links(soup, url):
 
 
 def scrape_site(url, source_name, venue_default, card_selectors,
-                categories_default=None):
+                categories_default=None, squarespace=False):
     """Scrape a single venue site. Tries JSON-LD first, then HTML, then links.
     After extracting events, discovers detail page links from the listing page.
+    If squarespace=True, tries the Squarespace JSON API first.
     """
+    # For Squarespace sites, try JSON API first (most reliable for these sites)
+    if squarespace:
+        events = extract_squarespace_events(
+            url, source_name, venue_default, categories_default
+        )
+        if events:
+            REPORT["successes"].append(f"{source_name}: {len(events)} events (Squarespace JSON)")
+            print(f"  {source_name}: {len(events)} events (via Squarespace JSON)")
+            return events
+
     r = safe_get(url)
     if not r:
         return []
@@ -1116,6 +1268,7 @@ SOURCES = [
         "categories": ["jazz"],
         "covers": "Jazz concerts",
         "venues_list": ["Chris' Jazz Cafe"],
+        "squarespace": True,
     },
     {
         "name": "South Jazz Kitchen",
@@ -1290,6 +1443,7 @@ def main():
                 venue_default=src["venue"],
                 card_selectors=src["cards"],
                 categories_default=src.get("categories"),
+                squarespace=src.get("squarespace", False),
             )
             all_events.extend(events)
         except Exception as e:
