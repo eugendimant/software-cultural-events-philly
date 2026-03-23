@@ -35,24 +35,14 @@ CAT_ICONS = {
 CATEGORIES = ["all", "musical", "theater", "dance", "ballet", "jazz", "classical", "opera"]
 
 
-# ── Embedded fallback events (verified from public sources) ──────────────────
-FALLBACK_EVENTS = [
-    {"id":"rj01","title":"Romeo and Juliet","date_start":"2026-03-12","date_end":"2026-04-05","date_display":"Mar 12 – Apr 05, 2026","time":None,"venue":"Arden Theatre","source":"Arden Theatre","source_url":"https://ardentheatre.org/productions/","link":"https://ardentheatre.org/productions/","price":"$37 – $70","categories":["theater"],"description":"A bold reimagining of Shakespeare's star-crossed lovers at the Arden Theatre."},
-    {"id":"tt01","title":"TINA – The Tina Turner Musical","date_start":"2026-03-10","date_end":"2026-03-15","date_display":"Mar 10 – Mar 15, 2026","time":None,"venue":"Miller Theater","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["musical"],"description":"The electrifying biographical musical about the life and career of Tina Turner."},
-    {"id":"mw02","title":"The Most Spectacularly Lamentable Trial of Miz Martha Washington","date_start":"2026-03-18","date_end":"2026-04-12","date_display":"Mar 18 – Apr 12, 2026","time":None,"venue":"The Wilma Theater","source":"Theatre Philadelphia","source_url":"https://theatrephiladelphia.org/whats-on-stage","link":"https://theatrephiladelphia.org/whats-on-stage","price":None,"categories":["theater"],"description":"A bold new work at The Wilma Theater exploring history through a contemporary lens."},
-    {"id":"vo01","title":"Brodsky Star Spotlight: Víkingur Ólafsson","date_start":"2026-03-19","date_end":"2026-03-19","date_display":"Mar 19, 2026","time":None,"venue":"Marian Anderson Hall, Kimmel Center","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["classical"],"description":"Acclaimed Icelandic pianist Víkingur Ólafsson in the Brodsky Star Spotlight Series."},
-    {"id":"ec01","title":"Emmet Cohen: Miles and Coltrane at 100","date_start":"2026-03-20","date_end":"2026-03-20","date_display":"Mar 20, 2026","time":None,"venue":"Perelman Theater, Kimmel Center","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["jazz"],"description":"Pianist Emmet Cohen celebrates the centennials of Miles Davis and John Coltrane."},
-    {"id":"mr01","title":"Marin Leads Rachmaninoff and Schumann","date_start":"2026-03-20","date_end":"2026-03-22","date_display":"Mar 20 – Mar 22, 2026","time":None,"venue":"Marian Anderson Hall, Kimmel Center","source":"Philadelphia Orchestra","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["classical"],"description":"The Philadelphia Orchestra performs Rachmaninoff and Schumann under conductor Marin Alsop."},
-    {"id":"dw01","title":"Distant Worlds: Music from Final Fantasy","date_start":"2026-03-21","date_end":"2026-03-21","date_display":"Mar 21, 2026","time":"8:00 PM","venue":"Academy of Music","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["classical","concert"],"description":"The beloved music of Final Fantasy performed by a full symphony orchestra and chorus."},
-    {"id":"sa01","title":"Sound All Around","date_start":"2026-03-21","date_end":"2026-03-23","date_display":"Mar 21 – Mar 23, 2026","time":None,"venue":"Kimmel Cultural Campus","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["classical","performance"],"description":"Interactive musical experiences for all ages at the Kimmel Cultural Campus."},
-    {"id":"eo01","title":"Endea Owens & The Cookout","date_start":"2026-03-28","date_end":"2026-03-28","date_display":"Mar 28, 2026","time":None,"venue":"Perelman Theater, Kimmel Center","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["jazz"],"description":"The Late Show's bassist Endea Owens brings her dynamic ensemble The Cookout to the Jazz Series."},
-    {"id":"sm01","title":"The Sound of Music","date_start":"2026-03-31","date_end":"2026-04-05","date_display":"Mar 31 – Apr 05, 2026","time":None,"venue":"Academy of Music","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["musical"],"description":"Rodgers and Hammerstein's beloved musical at the Academy of Music — Broadway Series."},
-    {"id":"pp01","title":"Peppa Pig: My First Concert","date_start":"2026-04-04","date_end":"2026-04-04","date_display":"Apr 04, 2026","time":None,"venue":"Kimmel Cultural Campus","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["performance"],"description":"Part of Ensemble Arts' Family Discovery Series. Geared toward ages 18 months and up."},
-    {"id":"pb01","title":"Pablo Batista: Latin Jazz Orchestra","date_start":"2026-04-17","date_end":"2026-04-17","date_display":"Apr 17, 2026","time":None,"venue":"Esperanza Arts Center","source":"Esperanza Arts Center","source_url":"https://www.philaculture.org/events-calendar","link":"https://www.philaculture.org/events-calendar","price":None,"categories":["jazz"],"description":"Grammy Award-winning percussionist Pablo Batista leads 20 big band musicians performing legendary Latin jazz."},
-    {"id":"cm01","title":"Christian McBride & Edgar Meyer","date_start":"2026-04-21","date_end":"2026-04-21","date_display":"Apr 21, 2026","time":None,"venue":"Perelman Theater, Kimmel Center","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["jazz"],"description":"Philly's own Christian McBride joined by fellow bassist Edgar Meyer in a special Jazz Series performance."},
-    {"id":"mw01","title":"The Merry Widow","date_start":"2026-03-05","date_end":"2026-03-15","date_display":"Mar 05 – Mar 15, 2026","time":None,"venue":"Academy of Music","source":"Philadelphia Ballet","source_url":"https://philadelphiaballet.org/performances/","link":"https://philadelphiaballet.org/performances/","price":None,"categories":["ballet","dance"],"description":"Philadelphia Ballet presents The Merry Widow — an unforgettable love story set in Belle Époque Paris."},
-    {"id":"sf01","title":"Sh!t-Faced Shakespeare","date_start":"2026-03-20","date_end":"2026-03-21","date_display":"Mar 20 – Mar 21, 2026","time":None,"venue":"Perelman Theater, Kimmel Center","source":"Ensemble Arts Philly","source_url":"https://www.ensembleartsphilly.org/tickets-and-events","link":"https://www.ensembleartsphilly.org/tickets-and-events","price":None,"categories":["theater"],"description":"The hilariously irreverent Shakespeare show where one cast member has had a few too many."},
-]
+# ── Load seed events as fallback ─────────────────────────────────────────────
+import sys
+sys.path.insert(0, str(Path(__file__).parent / "scraper"))
+try:
+    from seed_events import get_seed_events
+    FALLBACK_EVENTS = get_seed_events()
+except Exception:
+    FALLBACK_EVENTS = []
 
 
 # ── Load events ──────────────────────────────────────────────────────────────
@@ -71,7 +61,7 @@ def load_events():
             "last_updated": datetime.utcnow().isoformat() + "Z",
             "sources": sorted({e["source"] for e in FALLBACK_EVENTS}),
             "events": FALLBACK_EVENTS,
-            "scrape_report": {"successes": ["Using embedded fallback data"], "failures": [], "warnings": []},
+            "scrape_report": {"successes": ["Using seed data"], "failures": [], "warnings": []},
         }
 
 
@@ -344,7 +334,7 @@ def main():
     last_updated = data.get("last_updated", "")
 
     # ── Header ───────────────────────────────────────────────────────────────
-    col_title, col_spacer, col_s1, col_s2, col_s3 = st.columns([4, 1, 1, 1, 1])
+    col_title, col_spacer, col_s1, col_s2, col_s3, col_refresh = st.columns([4, 0.5, 1, 1, 1, 1])
     with col_title:
         st.markdown('<div class="main-title">Philly<span class="highlight">Culture</span></div>', unsafe_allow_html=True)
         st.markdown('<div class="subtitle">Your guide to Philadelphia\'s performing arts</div>', unsafe_allow_html=True)
@@ -355,6 +345,10 @@ def main():
         st.markdown(f'<div class="stat-box"><div class="stat-value">{now_playing}</div><div class="stat-label">Now Playing</div></div>', unsafe_allow_html=True)
     with col_s3:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(sources)}</div><div class="stat-label">Sources</div></div>', unsafe_allow_html=True)
+    with col_refresh:
+        if st.button("🔄 Refresh", use_container_width=True):
+            st.cache_data.clear()
+            st.rerun()
 
     # ── Last updated line ────────────────────────────────────────────────────
     try:
