@@ -45,7 +45,7 @@
     },
     {
       "name": "Walnut Street Theatre",
-      "url": "https://www.walnutstreettheatre.org/season/mainstage.2026.php",
+      "url": "https://www.walnutstreettheatre.org/season/mainstage.php",
       "covers": "Musicals, plays",
       "venues": [
         "Walnut Street Theatre"
@@ -61,7 +61,7 @@
     },
     {
       "name": "Philadelphia Ballet",
-      "url": "https://philadelphiaballet.org/",
+      "url": "https://philadelphiaballet.org/performances/",
       "covers": "Ballet, dance",
       "venues": [
         "Academy of Music",
