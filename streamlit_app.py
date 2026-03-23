@@ -68,7 +68,38 @@ def load_events():
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
+def _s(event, key, default=""):
+    """Safely get a string field from an event, never returning None."""
+    val = event.get(key)
+    return val if val is not None else default
+
+
+def _cats(event):
+    """Safely get categories list from an event, never returning None."""
+    val = event.get("categories")
+    return val if isinstance(val, list) else []
+
+
+def _parse_date(date_str):
+    """Parse a YYYY-MM-DD string to a date object, or None on failure."""
+    if not date_str:
+        return None
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        return None
+
+
+def _event_dates(event):
+    """Return (start_date, end_date) as date objects. end defaults to start."""
+    start = _parse_date(_s(event, "date_start"))
+    end = _parse_date(_s(event, "date_end")) or start
+    return start, end
+
+
 def get_month_key(iso_str):
+    if not iso_str:
+        return "Unknown"
     try:
         return datetime.strptime(iso_str, "%Y-%m-%d").strftime("%B %Y")
     except Exception:
@@ -80,10 +111,10 @@ def today_str():
 
 
 def is_past(event):
-    end = event.get("date_end") or event.get("date_start") or ""
-    if not end:
+    _start, end = _event_dates(event)
+    if end is None:
         return False
-    return end < today_str()
+    return end < datetime.now().date()
 
 
 def is_current_or_future(event):
@@ -91,91 +122,88 @@ def is_current_or_future(event):
 
 
 def is_this_week(event):
+    start, end = _event_dates(event)
+    if start is None:
+        return False
     today = datetime.now().date()
     end_of_week = today + timedelta(days=(6 - today.weekday()))
-    try:
-        start = datetime.strptime(event["date_start"], "%Y-%m-%d").date()
-        end = datetime.strptime(event.get("date_end") or event["date_start"], "%Y-%m-%d").date()
-    except Exception:
-        return False
     return start <= end_of_week and end >= today
 
 
 def is_this_weekend(event):
+    start, end = _event_dates(event)
+    if start is None:
+        return False
     today = datetime.now().date()
     days_to_fri = (4 - today.weekday()) % 7
     friday = today + timedelta(days=days_to_fri)
     sunday = friday + timedelta(days=2)
-    try:
-        start = datetime.strptime(event["date_start"], "%Y-%m-%d").date()
-        end = datetime.strptime(event.get("date_end") or event["date_start"], "%Y-%m-%d").date()
-    except Exception:
-        return False
     return start <= sunday and end >= friday
 
 
 def is_happening_now(event):
-    t = today_str()
-    return (event.get("date_start", "") <= t
-            and (event.get("date_end") or event.get("date_start", "")) >= t)
+    start, end = _event_dates(event)
+    if start is None:
+        return False
+    today = datetime.now().date()
+    return start <= today <= end
 
 
 def is_free(event):
-    price = (event.get("price") or "").lower().strip()
+    price = _s(event, "price").lower().strip()
     return price in ("free", "$0", "0")
 
 
 def days_until(event):
-    try:
-        start = datetime.strptime(event["date_start"], "%Y-%m-%d").date()
-        delta = (start - datetime.now().date()).days
-        if delta < 0:
-            end = datetime.strptime(event.get("date_end") or event["date_start"], "%Y-%m-%d").date()
-            if end >= datetime.now().date():
-                return "Now"
-            return "Past"
-        elif delta == 0:
-            return "Today"
-        elif delta == 1:
-            return "Tomorrow"
-        elif delta < 7:
-            return f"In {delta} days"
-        else:
-            return f"In {delta // 7}w"
-    except Exception:
+    start, end = _event_dates(event)
+    if start is None:
         return ""
+    today = datetime.now().date()
+    delta = (start - today).days
+    if delta < 0:
+        if end >= today:
+            return "Now"
+        return "Past"
+    elif delta == 0:
+        return "Today"
+    elif delta == 1:
+        return "Tomorrow"
+    elif delta < 7:
+        return f"In {delta} days"
+    else:
+        return f"In {delta // 7}w"
 
 
 def gcal_url(event):
-    start = event.get("date_start", "").replace("-", "")
-    end_raw = event.get("date_end") or event.get("date_start", "")
+    start_str = _s(event, "date_start").replace("-", "")
+    end_raw = _s(event, "date_end") or _s(event, "date_start")
     try:
         end_dt = datetime.strptime(end_raw, "%Y-%m-%d") + timedelta(days=1)
-        end = end_dt.strftime("%Y%m%d")
+        end_str = end_dt.strftime("%Y%m%d")
     except Exception:
-        end = start
+        end_str = start_str
     params = urllib.parse.urlencode({
         "action": "TEMPLATE",
-        "text": event.get("title", ""),
-        "dates": f"{start}/{end}",
-        "details": event.get("description", ""),
-        "location": event.get("venue", ""),
+        "text": _s(event, "title"),
+        "dates": f"{start_str}/{end_str}",
+        "details": _s(event, "description"),
+        "location": _s(event, "venue"),
     })
     return f"https://calendar.google.com/calendar/render?{params}"
 
 
 def maps_url(event):
-    venue = event.get("venue", "")
+    venue = _s(event, "venue")
     return f"https://www.google.com/maps/search/{urllib.parse.quote(venue + ' Philadelphia PA')}"
 
 
 def share_url(event):
     """Generate a mailto: link to share event details with someone."""
-    title = event.get("title", "")
-    venue = event.get("venue", "")
-    dates = event.get("date_display", "")
-    link = event.get("link", "")
-    desc = event.get("description", "")
+    title = _s(event, "title")
+    venue = _s(event, "venue")
+    dates = _s(event, "date_display")
+    link = _s(event, "link")
+    desc = _s(event, "description")
     body = f"{title}\n{venue}\n{dates}\n\n{desc}\n\nTickets: {link}"
     params = urllib.parse.urlencode({
         "subject": f"Check out: {title} in Philly!",
@@ -217,7 +245,7 @@ def events_to_csv(events):
             e.get("date_display", ""),
             e.get("time", ""),
             e.get("price", ""),
-            ", ".join(e.get("categories", [])),
+            ", ".join(_cats(e)),
             e.get("description", ""),
             e.get("link", ""),
             e.get("source", ""),
@@ -499,7 +527,7 @@ def main():
     # ── Split into current and past events ────────────────────────────────
     current_events = [e for e in all_events if is_current_or_future(e)]
     past_events = [e for e in all_events if is_past(e)]
-    past_events.sort(key=lambda e: e.get("date_start", ""), reverse=True)
+    past_events.sort(key=lambda e: _s(e, "date_start"), reverse=True)
 
     # ── Initialize session state ────────────────────────────────────────
     if "selected_ids" not in st.session_state:
@@ -540,7 +568,7 @@ def main():
     col_venue, col_time, col_sort = st.columns([2, 2, 1])
 
     with col_venue:
-        all_venues = sorted({e.get("venue", "") for e in current_events if e.get("venue")})
+        all_venues = sorted({_s(e, "venue") for e in current_events if _s(e, "venue")})
         venue_filter = st.selectbox(
             "Venue",
             ["all"] + all_venues,
@@ -573,7 +601,7 @@ def main():
     # ── Category chips (the primary way to filter by category) ────────
     all_cats = []
     for e in current_events:
-        all_cats.extend(e.get("categories", []))
+        all_cats.extend(_cats(e))
     cat_counts = Counter(all_cats)
     if cat_counts:
         visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
@@ -597,10 +625,10 @@ def main():
 
     active_cat = st.session_state.active_category
     if active_cat != "all":
-        filtered = [e for e in filtered if active_cat in e.get("categories", [])]
+        filtered = [e for e in filtered if active_cat in _cats(e)]
 
     if venue_filter != "all":
-        filtered = [e for e in filtered if e.get("venue") == venue_filter]
+        filtered = [e for e in filtered if _s(e, "venue") == venue_filter]
 
     if time_filter == "this_week":
         filtered = [e for e in filtered if is_this_week(e)]
@@ -608,8 +636,8 @@ def main():
         filtered = [e for e in filtered if is_this_weekend(e)]
     elif time_filter == "this_month":
         this_month = datetime.now().strftime("%Y-%m")
-        filtered = [e for e in filtered if e.get("date_start", "").startswith(this_month)
-                     or e.get("date_end", "").startswith(this_month)]
+        filtered = [e for e in filtered if _s(e, "date_start").startswith(this_month)
+                     or _s(e, "date_end").startswith(this_month)]
     elif time_filter == "free":
         filtered = [e for e in filtered if is_free(e)]
 
@@ -617,19 +645,19 @@ def main():
         q = search.lower()
         filtered = [
             e for e in filtered
-            if q in e.get("title", "").lower()
-            or q in e.get("venue", "").lower()
-            or q in (e.get("description") or "").lower()
-            or q in e.get("source", "").lower()
-            or any(q in c for c in e.get("categories", []))
+            if q in _s(e, "title").lower()
+            or q in _s(e, "venue").lower()
+            or q in _s(e, "description").lower()
+            or q in _s(e, "source").lower()
+            or any(q in c for c in _cats(e))
         ]
 
     if sort_by == "name":
-        filtered.sort(key=lambda e: e.get("title", "").lower())
+        filtered.sort(key=lambda e: _s(e, "title").lower())
     elif sort_by == "venue":
-        filtered.sort(key=lambda e: e.get("venue", "").lower())
+        filtered.sort(key=lambda e: _s(e, "venue").lower())
     else:
-        filtered.sort(key=lambda e: e.get("date_start", "9999"))
+        filtered.sort(key=lambda e: _s(e, "date_start", "9999"))
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in current_events if is_happening_now(e)]
@@ -638,16 +666,16 @@ def main():
         cols = st.columns(min(len(tonight), 4))
         for i, event in enumerate(tonight[:4]):
             with cols[i]:
-                badges = "".join(category_badge_html(c) for c in event.get("categories", []))
-                price_html = f' <span class="price-tag">{event["price"]}</span>' if event.get("price") else ""
-                link = event.get("link", "")
+                badges = "".join(category_badge_html(c) for c in _cats(event))
+                price_html = f' <span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
+                link = _s(event, "link")
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
                     <div class="spotlight-label">Now Playing</div>
-                    <div class="event-title">{event['title']}</div>
-                    <div class="event-meta"><span class="event-venue">{event['venue']}</span></div>
-                    <div class="event-meta">{event.get('date_display', '')}{price_html}</div>
+                    <div class="event-title">{_s(event, 'title')}</div>
+                    <div class="event-meta"><span class="event-venue">{_s(event, 'venue')}</span></div>
+                    <div class="event-meta">{_s(event, 'date_display')}{price_html}</div>
                     <div style="margin-top:0.5rem">{badges}</div>
                     <div style="margin-top:0.6rem;font-size:0.78rem;color:#a78bfa;font-weight:500">🎟 Get Tickets →</div>
                 </div>
@@ -666,11 +694,11 @@ def main():
             st.markdown(f"""
             <div class="coming-up">
                 <div>
-                    <span style="color:#e8e8f0;font-weight:600">{event['title']}</span>
-                    <span style="color:#8888a0;font-size:0.85rem"> at <span class="event-venue">{event['venue']}</span></span>
+                    <span style="color:#e8e8f0;font-weight:600">{_s(event, 'title')}</span>
+                    <span style="color:#8888a0;font-size:0.85rem"> at <span class="event-venue">{_s(event, 'venue')}</span></span>
                     {badge}
                 </div>
-                <div style="color:#8888a0;font-size:0.85rem;white-space:nowrap">{event.get('date_display','')}</div>
+                <div style="color:#8888a0;font-size:0.85rem;white-space:nowrap">{_s(event, 'date_display')}</div>
             </div>
             """, unsafe_allow_html=True)
         st.markdown("")
@@ -685,7 +713,7 @@ def main():
     with export_col2:
         if st.button("☑️ Select All Visible", use_container_width=True):
             for e in filtered:
-                st.session_state.selected_ids.add(e.get("id", ""))
+                st.session_state.selected_ids.add(_s(e, "id"))
             st.rerun()
     with export_col3:
         if st.button("⬜ Clear Selection", use_container_width=True):
@@ -693,7 +721,7 @@ def main():
             st.rerun()
     with export_col4:
         if selected_count > 0:
-            selected_events = [e for e in all_events if e.get("id") in st.session_state.selected_ids]
+            selected_events = [e for e in all_events if _s(e, "id") in st.session_state.selected_ids]
             csv_data = events_to_csv(selected_events)
             st.download_button(
                 "📥 Export CSV",
@@ -723,27 +751,27 @@ def main():
     else:
         current_month = None
         for event in filtered:
-            month = get_month_key(event.get("date_start", ""))
+            month = get_month_key(_s(event, "date_start"))
             if month != current_month:
                 current_month = month
                 st.markdown(f'<div class="month-header">{month}</div>', unsafe_allow_html=True)
 
-            eid = event.get("id", "")
-            badges = "".join(category_badge_html(c) for c in event.get("categories", []))
-            price_html = f'<span class="price-tag">{event["price"]}</span>' if event.get("price") else ""
-            time_html = f' · {event["time"]}' if event.get("time") else ""
+            eid = _s(event, "id")
+            badges = "".join(category_badge_html(c) for c in _cats(event))
+            price_html = f'<span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
+            time_html = f' · {_s(event, "time")}' if _s(event, "time") else ""
             urg = urgency_badge(event)
 
             st.markdown(f"""
             <div class="event-card">
-                <div class="event-title">{event['title']}{urg}</div>
+                <div class="event-title">{_s(event, 'title')}{urg}</div>
                 <div class="event-meta">
-                    <span class="event-venue">{event['venue']}</span>{time_html}
+                    <span class="event-venue">{_s(event, 'venue')}</span>{time_html}
                 </div>
                 <div class="event-meta">
-                    {event.get('date_display', '')}{' · ' if event.get('price') else ''}{price_html}
+                    {_s(event, 'date_display')}{' · ' if _s(event, 'price') else ''}{price_html}
                 </div>
-                <div class="event-desc">{event.get('description', '') or ''}</div>
+                <div class="event-desc">{_s(event, 'description')}</div>
                 <div style="margin-top:0.6rem">{badges}</div>
             </div>
             """, unsafe_allow_html=True)
@@ -760,8 +788,8 @@ def main():
                         st.session_state.selected_ids.add(eid)
                     st.rerun()
             with btn_cols[1]:
-                if event.get("link"):
-                    st.link_button("🎟 Tickets", event["link"], use_container_width=True)
+                if _s(event, "link"):
+                    st.link_button("🎟 Tickets", _s(event, "link"), use_container_width=True)
             with btn_cols[2]:
                 st.link_button("📅 Calendar", gcal_url(event), use_container_width=True)
             with btn_cols[3]:
@@ -775,14 +803,14 @@ def main():
         with st.expander(f"📜 Past Events Archive ({len(past_events)} events)", expanded=False):
             st.caption("These events have already ended. Kept for reference.")
             for event in past_events:
-                badges = "".join(category_badge_html(c) for c in event.get("categories", []))
-                price_html = f'<span class="price-tag">{event["price"]}</span>' if event.get("price") else ""
+                badges = "".join(category_badge_html(c) for c in _cats(event))
+                price_html = f'<span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
                 st.markdown(f"""
                 <div class="event-card-past">
-                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{event['title']}</div>
+                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{_s(event, 'title')}</div>
                     <div class="event-meta">
-                        <span style="color:#6a6a8a">{event['venue']}</span> · {event.get('date_display', '')}
-                        {' · ' + price_html if event.get('price') else ''}
+                        <span style="color:#6a6a8a">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}
+                        {' · ' + price_html if _s(event, 'price') else ''}
                     </div>
                     <div style="margin-top:0.3rem">{badges}</div>
                 </div>
@@ -796,10 +824,10 @@ def main():
 
         # Category breakdown
         st.markdown("**By Category**")
-        for cat in sorted(cat_counts.keys(), key=lambda c: -cat_counts[c]):
+        for cat in sorted(cat_counts.keys(), key=lambda c: -cat_counts.get(c, 0)):
             color = CAT_COLORS.get(cat, "#a0aec0")
             icon = CAT_ICONS.get(cat, "")
-            pct = cat_counts[cat] / len(current_events) * 100 if current_events else 0
+            pct = cat_counts[cat] / max(len(current_events), 1) * 100
             st.markdown(
                 f'<div style="margin-bottom:6px">'
                 f'<span style="color:{color}">{icon} {cat.capitalize()}</span> '
@@ -812,16 +840,21 @@ def main():
 
         st.markdown("")
         st.markdown("**Top Venues**")
-        venue_counts = Counter(e.get("venue", "Unknown") for e in current_events)
+        venue_counts = Counter(_s(e, "venue", "Unknown") for e in current_events)
         for venue, count in venue_counts.most_common(8):
             st.markdown(f'<div style="color:#e8e8f0;font-size:0.9rem">{venue} <span style="color:#7c6aff;font-weight:600">({count})</span></div>', unsafe_allow_html=True)
 
         st.markdown("")
         st.markdown("**Monthly Distribution**")
-        month_counts = Counter(get_month_key(e.get("date_start", "")) for e in current_events)
-        for month in sorted(month_counts.keys(), key=lambda m: datetime.strptime(m, "%B %Y") if m != "Unknown" else datetime.max):
+        month_counts = Counter(get_month_key(_s(e, "date_start")) for e in current_events)
+        def _month_sort_key(m):
+            try:
+                return datetime.strptime(m, "%B %Y")
+            except Exception:
+                return datetime.max
+        for month in sorted(month_counts.keys(), key=_month_sort_key):
             count = month_counts[month]
-            bar_w = count / max(month_counts.values()) * 100 if month_counts else 0
+            bar_w = count / max(month_counts.values(), 1) * 100
             st.markdown(
                 f'<div style="margin-bottom:4px">'
                 f'<span style="color:#e8e8f0;font-size:0.85rem">{month}</span> '
@@ -835,7 +868,7 @@ def main():
         st.markdown("")
         st.markdown("**Data Sources**")
         for source in sorted(sources):
-            src_count = sum(1 for e in current_events if e.get("source") == source)
+            src_count = sum(1 for e in current_events if _s(e, "source") == source)
             st.markdown(f'<div style="color:#8888a0;font-size:0.85rem">• {source} <span style="color:#7c6aff">({src_count})</span></div>', unsafe_allow_html=True)
 
     # ── Footer ───────────────────────────────────────────────────────────
