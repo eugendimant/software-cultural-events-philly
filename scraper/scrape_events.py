@@ -147,6 +147,15 @@ def parse_time_from_text(text):
     return None
 
 
+def slugify(text):
+    """Convert text to URL-friendly slug: 'Lang Lang and Yannick' -> 'lang-lang-and-yannick'."""
+    text = (text or "").lower().strip()
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+    text = re.sub(r'[\s]+', '-', text)
+    text = re.sub(r'-+', '-', text).strip('-')
+    return text
+
+
 def find_text(el, selectors):
     """Try multiple CSS selectors, return first match's text or empty string."""
     if not el:
@@ -171,6 +180,357 @@ def find_link(el, base_url):
             return href
         return urljoin(base_url, href)
     return ""
+
+
+# ---------------------------------------------------------------------------
+# DETAIL PAGE ENRICHMENT
+# Follows event links to detail pages to extract rich descriptions, times,
+# prices, and direct ticket links that aren't available on listing pages.
+# ---------------------------------------------------------------------------
+
+# CSS selectors for detail page content
+DETAIL_DESC_SELECTORS = [
+    "[itemprop='description']",
+    "[class*='event-description']", "[class*='event-detail']",
+    "[class*='production-description']", "[class*='show-description']",
+    "[class*='about']", "[class*='About']",
+    "[class*='synopsis']", "[class*='Synopsis']",
+    "[class*='description']", "[class*='Description']",
+    "[class*='body-text']", "[class*='content-body']",
+    "[class*='entry-content']",
+    "article p", "main p", ".content p",
+]
+
+DETAIL_TIME_SELECTORS = [
+    "[class*='showtime']", "[class*='show-time']",
+    "[class*='event-time']", "[class*='performance-time']",
+    "[class*='start-time']", "[class*='curtain']",
+    "[class*='doors']", "[class*='begins']",
+    "time[datetime]", "[datetime]",
+    "[itemprop='startDate']",
+    "[class*='time']", "[class*='Time']",
+    "[class*='date-time']", "[class*='datetime']",
+]
+
+DETAIL_PRICE_SELECTORS = [
+    "[itemprop='price']", "[itemprop='lowPrice']",
+    "[class*='price']", "[class*='Price']",
+    "[class*='ticket-price']", "[class*='cost']",
+    "[class*='admission']",
+    "[class*='starting-at']", "[class*='from-price']",
+]
+
+DETAIL_TICKET_SELECTORS = [
+    "a[href*='ticket']", "a[href*='buy']", "a[href*='purchase']",
+    "a[href*='checkout']", "a[href*='order']",
+    "a[class*='ticket']", "a[class*='buy']",
+    "[class*='ticket'] a", "[class*='buy'] a",
+    "a[class*='cta']", "a[class*='action']",
+]
+
+
+def scrape_detail_page(url):
+    """Fetch an event detail page and extract rich content.
+    Returns dict with keys: description, time, price, ticket_url (all may be None).
+    """
+    result = {"description": None, "time": None, "price": None, "ticket_url": None}
+
+    r = safe_get(url, timeout=15, retries=2)
+    if not r:
+        return result
+
+    soup = BeautifulSoup(r.text, "lxml")
+
+    # 1. Try JSON-LD first — most reliable source
+    for script in soup.select("script[type='application/ld+json']"):
+        try:
+            data = json.loads(script.string or "")
+        except (json.JSONDecodeError, TypeError):
+            continue
+        items = data if isinstance(data, list) else [data]
+        if isinstance(data, dict) and "@graph" in data:
+            items = data["@graph"]
+        event_types = {"Event", "MusicEvent", "TheaterEvent",
+                       "DanceEvent", "Festival", "ComedyEvent"}
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            item_type = item.get("@type", "")
+            if isinstance(item_type, list):
+                if not any(t in event_types for t in item_type):
+                    continue
+            elif item_type not in event_types:
+                continue
+
+            desc = item.get("description", "")
+            if desc and len(desc) > 20:
+                result["description"] = clean_text(desc)[:800]
+
+            start = item.get("startDate", "")
+            if start and not result["time"]:
+                result["time"] = parse_time_from_iso(start)
+
+            offers = item.get("offers", {})
+            if isinstance(offers, dict):
+                p = offers.get("price") or offers.get("lowPrice")
+                if p:
+                    result["price"] = f"${p}" if str(p).replace('.', '').isdigit() else str(p)
+                ticket_link = offers.get("url")
+                if ticket_link:
+                    result["ticket_url"] = ticket_link
+            elif isinstance(offers, list) and offers:
+                p = offers[0].get("price") or offers[0].get("lowPrice")
+                if p:
+                    result["price"] = f"${p}" if str(p).replace('.', '').isdigit() else str(p)
+                ticket_link = offers[0].get("url")
+                if ticket_link:
+                    result["ticket_url"] = ticket_link
+
+    # 2. Try meta tags (og:description, meta description)
+    if not result["description"]:
+        for meta in soup.select('meta[property="og:description"], meta[name="description"]'):
+            content = meta.get("content", "").strip()
+            if content and len(content) > 30:
+                result["description"] = clean_text(content)[:800]
+                break
+
+    # 3. Try HTML selectors for description
+    if not result["description"]:
+        for sel in DETAIL_DESC_SELECTORS:
+            els = soup.select(sel)
+            for el in els:
+                text = clean_text(el.get_text())
+                # Skip very short text or navigation/boilerplate
+                if len(text) > 50 and not any(skip in text.lower() for skip in
+                    ["cookie", "privacy", "subscribe", "sign up", "newsletter"]):
+                    result["description"] = text[:800]
+                    break
+            if result["description"]:
+                break
+
+    # 4. Try HTML selectors for time
+    if not result["time"]:
+        # Check datetime attributes first
+        for sel in ["time[datetime]", "[datetime]", "[itemprop='startDate']"]:
+            el = soup.select_one(sel)
+            if el:
+                dt_attr = el.get("datetime") or el.get("content") or ""
+                t = parse_time_from_iso(dt_attr)
+                if t:
+                    result["time"] = t
+                    break
+        # Then check text content
+        if not result["time"]:
+            for sel in DETAIL_TIME_SELECTORS:
+                els = soup.select(sel)
+                for el in els:
+                    text = el.get_text()
+                    t = parse_time_from_text(text)
+                    if t:
+                        result["time"] = t
+                        break
+                if result["time"]:
+                    break
+        # Also check full page text for common time patterns like "7:30pm" near date
+        if not result["time"]:
+            page_text = soup.get_text()
+            t = parse_time_from_text(page_text[:5000])  # Only check first part of page
+            if t:
+                result["time"] = t
+
+    # 5. Try HTML selectors for price
+    if not result["price"]:
+        for sel in DETAIL_PRICE_SELECTORS:
+            els = soup.select(sel)
+            for el in els:
+                text = el.get_text().strip()
+                p = parse_price(text)
+                if p:
+                    result["price"] = p
+                    break
+            if result["price"]:
+                break
+        # Also check page text for price patterns
+        if not result["price"]:
+            page_text = soup.get_text()
+            # Look for "Starting at $XX" or "From $XX" or "Tickets: $XX"
+            price_match = re.search(
+                r'(?:starting\s+(?:at|from)|from|tickets?\s*:?\s*(?:from)?)\s*\$[\d,.]+',
+                page_text, re.IGNORECASE
+            )
+            if price_match:
+                result["price"] = parse_price(price_match.group())
+
+    # 6. Try to find direct ticket link
+    if not result["ticket_url"]:
+        for sel in DETAIL_TICKET_SELECTORS:
+            el = soup.select_one(sel)
+            if el:
+                href = el.get("href", "")
+                if href and href.startswith("http"):
+                    result["ticket_url"] = href
+                    break
+                elif href:
+                    result["ticket_url"] = urljoin(url, href)
+                    break
+
+    return result
+
+
+def enrich_events(events, max_detail_fetches=40):
+    """Enrich events by fetching their detail pages for missing data.
+    Only fetches detail pages for events that need enrichment and have a usable link.
+    """
+    enriched = 0
+    for ev in events:
+        if enriched >= max_detail_fetches:
+            print(f"  [INFO] Reached max detail page fetches ({max_detail_fetches})")
+            break
+
+        link = ev.get("link", "")
+        source_url = ev.get("source_url", "")
+
+        # Skip if link is same as source_url (generic listing page) — nothing new to learn
+        # unless we can guess a better URL
+        needs_enrichment = (
+            not ev.get("description")
+            or not ev.get("time")
+            or not ev.get("price")
+            or link == source_url  # link points to generic listing page
+        )
+
+        if not needs_enrichment:
+            continue
+
+        # If link is the same as source_url, try to discover the detail page URL
+        detail_url = link if link != source_url else None
+        if not detail_url:
+            detail_url = guess_detail_url(ev)
+        if not detail_url:
+            continue
+
+        print(f"    Enriching: {ev.get('title', '?')[:50]} from {detail_url[:80]}")
+        detail = scrape_detail_page(detail_url)
+        enriched += 1
+
+        # Merge enrichment data — only fill in missing fields
+        if detail["description"] and not ev.get("description"):
+            ev["description"] = detail["description"]
+        elif detail["description"] and ev.get("description") and len(detail["description"]) > len(ev["description"]) * 1.5:
+            # Use detail page description if it's substantially longer
+            ev["description"] = detail["description"]
+        if detail["time"] and not ev.get("time"):
+            ev["time"] = detail["time"]
+        if detail["price"] and not ev.get("price"):
+            ev["price"] = detail["price"]
+        # Update the event link to point to the actual detail page (not the listing)
+        if link == source_url and detail_url:
+            ev["link"] = detail_url
+
+        # Small delay to be polite
+        time.sleep(0.5)
+
+    print(f"  Enriched {enriched} events from detail pages")
+    return events
+
+
+# ---------------------------------------------------------------------------
+# VENUE-SPECIFIC URL PATTERNS — used to guess detail page URLs
+# ---------------------------------------------------------------------------
+
+# Maps source name -> function that generates a detail page URL from event data
+def _ensemble_arts_url(ev):
+    """Guess Ensemble Arts Philly detail page URL from event title and venue."""
+    slug = slugify(ev.get("title", ""))
+    if not slug:
+        return None
+    venue = (ev.get("venue") or "").lower()
+    # Determine the organization path
+    if "orchestra" in (ev.get("source") or "").lower() or "orchestra" in venue:
+        return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}"
+    # Broadway/musical at Academy or Forrest
+    cats = ev.get("categories", [])
+    if "musical" in cats and ("academy" in venue or "forrest" in venue):
+        return f"https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/{slug}"
+    # Jazz events at Perelman
+    if "jazz" in cats or "perelman" in venue:
+        return f"https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/{slug}"
+    # Default: try the main events path
+    return f"https://www.ensembleartsphilly.org/tickets-and-events/events/{slug}"
+
+
+def _phila_orchestra_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}" if slug else None
+
+
+def _penn_live_arts_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://pennlivearts.org/event/{slug}" if slug else None
+
+
+def _arden_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://ardentheatre.org/productions/{slug}/" if slug else None
+
+
+def _wilma_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.wilmatheater.org/whats-on/{slug}/" if slug else None
+
+
+def _opera_phila_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.operaphila.org/whats-on/events/{slug}/" if slug else None
+
+
+def _fringearts_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://fringearts.com/event/{slug}/" if slug else None
+
+
+def _walnut_street_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.walnutstreettheatre.org/season/{slug}" if slug else None
+
+
+def _phila_theatre_co_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.philatheatreco.org/{slug}" if slug else None
+
+
+def _phila_ballet_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://philadelphiaballet.org/performances/{slug}/" if slug else None
+
+
+def _balletx_url(ev):
+    slug = slugify(ev.get("title", ""))
+    return f"https://www.balletx.org/seasons/{slug}/" if slug else None
+
+
+_VENUE_URL_GUESSERS = {
+    "Ensemble Arts Philly": _ensemble_arts_url,
+    "Philadelphia Orchestra": _phila_orchestra_url,
+    "Penn Live Arts": _penn_live_arts_url,
+    "Arden Theatre": _arden_url,
+    "The Wilma Theater": _wilma_url,
+    "Opera Philadelphia": _opera_phila_url,
+    "FringeArts": _fringearts_url,
+    "Walnut Street Theatre": _walnut_street_url,
+    "Philadelphia Theatre Company": _phila_theatre_co_url,
+    "Philadelphia Ballet": _phila_ballet_url,
+    "BalletX": _balletx_url,
+}
+
+
+def guess_detail_url(ev):
+    """Try to construct a detail page URL for this event based on venue URL patterns."""
+    source = ev.get("source", "")
+    guesser = _VENUE_URL_GUESSERS.get(source)
+    if guesser:
+        return guesser(ev)
+    return None
 
 
 def validate_event(ev):
@@ -562,51 +922,97 @@ def extract_events_from_links(soup, url, source_name, venue_default, categories_
     return events
 
 
+def discover_event_links(soup, url):
+    """Scan a listing page for links that look like individual event detail pages.
+    Returns a dict mapping normalized title -> detail page URL.
+    """
+    event_url_patterns = re.compile(
+        r'/(event|show|performance|production|concert|program|ticket|season|whats-on)s?/',
+        re.IGNORECASE
+    )
+    discovered = {}
+    for a in soup.select("a[href]"):
+        href = a.get("href", "")
+        full_url = urljoin(url, href) if not href.startswith("http") else href
+        # Only consider links that look like event detail pages (not the listing page itself)
+        if full_url == url or full_url.rstrip("/") == url.rstrip("/"):
+            continue
+        if not event_url_patterns.search(href) and href.count("/") < 3:
+            continue
+        title = clean_text(a.get_text())
+        if title and len(title) >= 3 and len(title) <= 200:
+            norm = re.sub(r'\s+', ' ', title.lower().strip())
+            discovered[norm] = full_url
+    return discovered
+
+
 def scrape_site(url, source_name, venue_default, card_selectors,
                 categories_default=None):
-    """Scrape a single venue site. Tries JSON-LD first, then HTML, then links."""
+    """Scrape a single venue site. Tries JSON-LD first, then HTML, then links.
+    After extracting events, discovers detail page links from the listing page.
+    """
     r = safe_get(url)
     if not r:
         return []
 
     soup = BeautifulSoup(r.text, "lxml")
 
+    # Discover per-event links from the listing page upfront
+    discovered_links = discover_event_links(soup, url)
+
     # Try JSON-LD first (most reliable)
     events = extract_json_ld_events(soup, url, source_name, venue_default)
     if events:
         REPORT["successes"].append(f"{source_name}: {len(events)} events (JSON-LD)")
         print(f"  {source_name}: {len(events)} events (via JSON-LD)")
-        return events
+    else:
+        # Try Microdata (schema.org itemscope/itemprop)
+        events = extract_microdata_events(soup, url, source_name, venue_default)
+        if events:
+            REPORT["successes"].append(f"{source_name}: {len(events)} events (Microdata)")
+            print(f"  {source_name}: {len(events)} events (via Microdata)")
+        else:
+            # Fall back to HTML card scraping
+            events = extract_events_generic(
+                soup, url, source_name, venue_default,
+                card_selectors, categories_default
+            )
+            if events:
+                REPORT["successes"].append(f"{source_name}: {len(events)} events (HTML)")
+                print(f"  {source_name}: {len(events)} events (via HTML)")
+            else:
+                # Last resort: extract from event-like links
+                events = extract_events_from_links(
+                    soup, url, source_name, venue_default, categories_default
+                )
+                if events:
+                    REPORT["successes"].append(f"{source_name}: {len(events)} events (links)")
+                    print(f"  {source_name}: {len(events)} events (via link extraction)")
+                else:
+                    msg = f"{source_name}: 0 events found at {url}"
+                    REPORT["warnings"].append(msg)
+                    print(f"  [WARN] {msg}")
 
-    # Try Microdata (schema.org itemscope/itemprop)
-    events = extract_microdata_events(soup, url, source_name, venue_default)
-    if events:
-        REPORT["successes"].append(f"{source_name}: {len(events)} events (Microdata)")
-        print(f"  {source_name}: {len(events)} events (via Microdata)")
-        return events
+    # Match discovered detail page links to events that only have the generic listing URL
+    if discovered_links:
+        for ev in events:
+            if ev.get("link") == url or not ev.get("link"):
+                norm_title = re.sub(r'\s+', ' ', ev["title"].lower().strip())
+                # Try exact match first
+                if norm_title in discovered_links:
+                    ev["link"] = discovered_links[norm_title]
+                    continue
+                # Try partial match (title is substring of link text or vice versa)
+                for link_title, link_url in discovered_links.items():
+                    if norm_title in link_title or link_title in norm_title:
+                        ev["link"] = link_url
+                        break
+                    # Also check if the slug of the title appears in the URL
+                    slug = slugify(ev["title"])
+                    if slug and slug in link_url.lower():
+                        ev["link"] = link_url
+                        break
 
-    # Fall back to HTML card scraping
-    events = extract_events_generic(
-        soup, url, source_name, venue_default,
-        card_selectors, categories_default
-    )
-    if events:
-        REPORT["successes"].append(f"{source_name}: {len(events)} events (HTML)")
-        print(f"  {source_name}: {len(events)} events (via HTML)")
-        return events
-
-    # Last resort: extract from event-like links
-    events = extract_events_from_links(
-        soup, url, source_name, venue_default, categories_default
-    )
-    if events:
-        REPORT["successes"].append(f"{source_name}: {len(events)} events (links)")
-        print(f"  {source_name}: {len(events)} events (via link extraction)")
-        return events
-
-    msg = f"{source_name}: 0 events found at {url}"
-    REPORT["warnings"].append(msg)
-    print(f"  [WARN] {msg}")
     return events
 
 
@@ -902,6 +1308,10 @@ def main():
     all_events.extend(seed)
     REPORT["successes"].append(f"Seed data: {len(seed)} verified events merged")
     print(f"\n  Merged {len(seed)} seed events (verified descriptions + metadata)")
+
+    # Enrich events by fetching detail pages for missing descriptions/times/prices
+    print("\n  Enriching events from detail pages...")
+    all_events = enrich_events(all_events, max_detail_fetches=50)
 
     # Deduplicate by source + normalized title — keep event with richest data
     seen = {}  # key -> index in unique_events
