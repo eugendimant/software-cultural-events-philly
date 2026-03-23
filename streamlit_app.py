@@ -302,90 +302,29 @@ def share_url(event):
     return f"mailto:?{params}"
 
 
-# Venue context — short one-liners about each venue (not about the event)
-_VENUE_CONTEXT = {
-    "chris' jazz cafe": "Philadelphia's premier jazz club · 1421 Sansom St, Center City · Full dinner menu & cocktails · Reservations recommended",
-    "south jazz kitchen": "Jazz supper club · South Street · Southern-inspired cuisine & cocktails · Intimate listening room",
-    "world cafe live": "Iconic music venue · 3025 Walnut St, University City · Two stages · Full bar & restaurant · All ages",
-    "city winery": "Concert venue, restaurant & winery · Fashion District · Award-winning wines · Full dining",
-    "kimmel center": "Philadelphia's premier performing arts center · Avenue of the Arts · Broad & Spruce Streets",
-    "kimmel cultural campus": "Philadelphia's premier performing arts center · Avenue of the Arts · Broad & Spruce Streets",
-    "marian anderson hall": "2,500-seat concert hall · Kimmel Cultural Campus · Home of the Philadelphia Orchestra",
-    "academy of music": "America's oldest opera house still in use (est. 1857) · Avenue of the Arts · National Historic Landmark",
-    "annenberg center": "Penn Live Arts · University of Pennsylvania campus · World-class dance, music & theater since 1971",
-    "perelman theater": "Intimate 599-seat venue · Kimmel Cultural Campus · Ideal for chamber music, jazz & recitals",
-    "miller theater": "State-of-the-art venue · Kimmel Cultural Campus · Avenue of the Arts",
-    "arden theatre": "Award-winning theater · 40 N. 2nd St, Old City · Bold reimaginings & intimate staging",
-    "wilma theater": "Adventurous theater company · Avenue of the Arts · World premieres & daring interpretations",
-    "walnut street theatre": "America's oldest theater (est. 1809) · 825 Walnut St · Philadelphia landmark",
-    "forrest theatre": "Broadway touring house since 1928 · 1114 Walnut St · Blockbuster musicals & plays",
-    "fringearts": "Contemporary performance · Delaware River waterfront · Experimental & boundary-pushing",
-    "suzanne roberts theatre": "Philadelphia Theatre Company · Avenue of the Arts · New American plays & musicals",
-    "esperanza arts center": "Community arts hub · North 5th Street · Music, dance & theater in North Philadelphia",
-}
-
-# Default show times for venues that typically have consistent schedules
-_VENUE_DEFAULT_TIMES = {
-    "chris' jazz cafe": "8:00 PM",
-    "south jazz kitchen": "7:30 PM",
-    "world cafe live": "8:00 PM",
-    "city winery": "8:00 PM",
-}
-
-
-def _get_venue_context(venue):
-    """Get a short venue description line from the lookup."""
-    v = venue.lower().strip()
-    for key, ctx in _VENUE_CONTEXT.items():
-        if key in v or v in key:
-            return ctx
-    return ""
-
-
-def _get_default_time(venue):
-    """Get default show time for venues with consistent schedules."""
-    v = venue.lower().strip()
-    for key, t in _VENUE_DEFAULT_TIMES.items():
-        if key in v or v in key:
-            return t
-    return ""
-
-
 def event_description(event, max_sentences=4):
-    """Get event description, truncated to max_sentences. Generate rich fallback if empty."""
+    """Get event description, truncated to max_sentences. Only uses scraped/verified data."""
     desc = _s(event, "description").strip()
 
     if not desc:
-        title = _s(event, "title")
+        # No description was scraped — build a minimal honest fallback
         venue = _s(event, "venue")
         cats = _cats(event)
         price = _s(event, "price")
-        venue_ctx = _get_venue_context(venue)
-
-        # Build a description that's unique per event (not boilerplate)
-        if venue_ctx:
-            desc = f"{venue_ctx}."
-            if price and price.lower() != "free":
-                desc += f" Tickets {price}."
-            elif price and price.lower() == "free":
-                desc += " Free admission."
-        else:
-            primary_cat = cats[0] if cats else ""
-            cat_labels = {
-                "jazz": "Live jazz", "classical": "Classical music",
-                "musical": "Musical theater", "theater": "Live theater",
-                "ballet": "Ballet", "dance": "Dance performance",
-                "opera": "Opera", "concert": "Live concert",
-                "performance": "Live performance",
-            }
-            cat_label = cat_labels.get(primary_cat, "Live performance")
-            desc = f"{cat_label} in Philadelphia."
-            if venue:
-                desc = f"{cat_label} at {venue}."
-            if price and price.lower() != "free":
-                desc += f" Tickets {price}."
-            elif price and price.lower() == "free":
-                desc += " Free admission."
+        primary_cat = cats[0] if cats else ""
+        cat_labels = {
+            "jazz": "Live jazz", "classical": "Classical music",
+            "musical": "Musical theater", "theater": "Live theater",
+            "ballet": "Ballet", "dance": "Dance performance",
+            "opera": "Opera", "concert": "Live concert",
+            "performance": "Live performance",
+        }
+        cat_label = cat_labels.get(primary_cat, "Live performance")
+        desc = f"{cat_label} at {venue}." if venue else f"{cat_label} in Philadelphia."
+        if price and price.lower() != "free":
+            desc += f" Tickets {price}."
+        elif price and price.lower() == "free":
+            desc += " Free admission."
 
     # Truncate to max_sentences
     sentences = _re.split(r'(?<=[.!?])\s+', desc)
@@ -1118,7 +1057,7 @@ def _render_event_card(event, st_ctx):
     eid = _s(event, "id")
     badges = "".join(category_badge_html(c) for c in _cats(event))
     price = _s(event, "price")
-    time_str = _s(event, "time") or _get_default_time(_s(event, "venue"))
+    time_str = _s(event, "time")
     urg = urgency_badge(event)
     desc = event_description(event)
     link = _s(event, "link")
