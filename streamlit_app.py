@@ -642,6 +642,8 @@ def main():
     cat_counts = Counter(all_cats)
     if cat_counts:
         visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
+        # Cap at 7 categories + "All" = 8 chips max to prevent overflow
+        visible_cats = visible_cats[:7]
         all_chips = ["all"] + visible_cats
         chip_cols = st.columns(len(all_chips))
         for i, cat in enumerate(all_chips):
@@ -697,10 +699,11 @@ def main():
         filtered.sort(key=lambda e: _s(e, "date_start", "9999"))
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
-    tonight = [e for e in current_events if is_happening_now(e)]
+    tonight = [e for e in filtered if is_happening_now(e)]
     if tonight:
         st.markdown("#### 🔴 Happening Now")
-        cols = st.columns(min(len(tonight), 4))
+        # Always use 4 columns so tiles don't stretch full-width
+        cols = st.columns(4)
         for i, event in enumerate(tonight[:4]):
             with cols[i]:
                 badges = "".join(category_badge_html(c) for c in _cats(event))
@@ -721,7 +724,7 @@ def main():
         st.markdown("")
 
     # ── Coming Up Next section ────────────────────────────────────────────
-    upcoming = [e for e in current_events if not is_happening_now(e)]
+    upcoming = [e for e in filtered if not is_happening_now(e)]
     upcoming.sort(key=lambda e: _s(e, "date_start", "9999"))
     next_up = upcoming[:3]
     if next_up:
