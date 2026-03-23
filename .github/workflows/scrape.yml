@@ -33,14 +33,19 @@ jobs:
         run: python scraper/scrape_events.py
         continue-on-error: true
 
-      - name: Check results
+      - name: Validate events.json
         id: check
         run: |
-          EVENT_COUNT=$(python -c "import json; print(json.load(open('data/events.json'))['total_events'])")
-          echo "Scraped $EVENT_COUNT events"
+          if [ ! -f data/events.json ]; then
+            echo "ERROR: data/events.json not found after scraping!"
+            echo "event_count=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          EVENT_COUNT=$(python3 -c "import json; print(len(json.load(open('data/events.json')).get('events',[])))")
+          echo "Events in data/events.json: $EVENT_COUNT"
           echo "event_count=$EVENT_COUNT" >> "$GITHUB_OUTPUT"
           if [ "$EVENT_COUNT" -eq 0 ]; then
-            echo "::warning::No events scraped. Check scraper logs above."
+            echo "::warning::No events in events.json. Fallback in app.js will be used."
           fi
 
       - name: Commit updated events
@@ -52,7 +57,6 @@ jobs:
           git diff --staged --quiet || git commit -m "data: update event listings $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
 
-  # After scraping, deploy the updated site
   deploy:
     needs: scrape
     environment:
@@ -62,11 +66,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
-      - run: git pull origin ${{ github.ref_name }}
+          ref: main
+      - run: git pull origin main
+
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp manifest.json _site/ 2>/dev/null || true
+          cp -r assets _site/
+          cp -r data _site/
+          echo "=== Deploy contents ==="
+          find _site -type f
+
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - id: deployment
         uses: actions/deploy-pages@v4
