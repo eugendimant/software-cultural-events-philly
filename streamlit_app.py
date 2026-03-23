@@ -370,7 +370,8 @@ div[data-testid="stDecoration"] {display: none;}
 .spotlight-card:hover {
     border-color: rgba(124, 106, 255, 0.4);
     box-shadow: 0 12px 40px rgba(124, 106, 255, 0.12);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 .spotlight-label {
     color: #a78bfa;
@@ -620,21 +621,36 @@ def main():
     cat_counts = Counter(all_cats)
     if cat_counts:
         visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
-        chip_cols = st.columns([1] * (len(visible_cats) + 1))
+        # Use two rows if more than 6 categories to prevent overflow
+        row1_cats = visible_cats[:5]
+        row2_cats = visible_cats[5:]
+
+        chip_cols = st.columns([1] + [1] * len(row1_cats))
         with chip_cols[0]:
             if st.button("🎯 All", use_container_width=True,
                          type="primary" if st.session_state.active_category == "all" else "secondary"):
                 st.session_state.active_category = "all"
                 st.rerun()
-        for i, cat in enumerate(visible_cats):
+        for i, cat in enumerate(row1_cats):
             with chip_cols[i + 1]:
                 icon = CAT_ICONS.get(cat, "")
                 count = cat_counts[cat]
-                label = f"{icon} {cat.capitalize()} ({count})"
+                label = f"{icon} {cat[:4].capitalize()} {count}"
                 btn_type = "primary" if st.session_state.active_category == cat else "secondary"
                 if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
                     st.session_state.active_category = cat
                     st.rerun()
+        if row2_cats:
+            chip_cols2 = st.columns([1] * len(row2_cats) + [1] * (6 - len(row2_cats)))
+            for i, cat in enumerate(row2_cats):
+                with chip_cols2[i]:
+                    icon = CAT_ICONS.get(cat, "")
+                    count = cat_counts[cat]
+                    label = f"{icon} {cat[:4].capitalize()} {count}"
+                    btn_type = "primary" if st.session_state.active_category == cat else "secondary"
+                    if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
+                        st.session_state.active_category = cat
+                        st.rerun()
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in current_events if is_happening_now(e)]
@@ -645,14 +661,18 @@ def main():
             with cols[i]:
                 badges = "".join(category_badge_html(c) for c in event.get("categories", []))
                 price_html = f' <span class="price-tag">{event["price"]}</span>' if event.get("price") else ""
+                link = event.get("link", "")
                 st.markdown(f"""
+                <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
                     <div class="spotlight-label">Now Playing</div>
                     <div class="event-title">{event['title']}</div>
                     <div class="event-meta"><span class="event-venue">{event['venue']}</span></div>
                     <div class="event-meta">{event.get('date_display', '')}{price_html}</div>
                     <div style="margin-top:0.5rem">{badges}</div>
+                    <div style="margin-top:0.6rem;font-size:0.78rem;color:#a78bfa;font-weight:500">🎟 Get Tickets →</div>
                 </div>
+                </a>
                 """, unsafe_allow_html=True)
         st.markdown("")
 
