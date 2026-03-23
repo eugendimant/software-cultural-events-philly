@@ -418,11 +418,14 @@ div[data-testid="stHorizontalBlock"] > div { padding: 0 0.3rem; }
 .stButton > button {
     border-radius: 12px !important;
     font-weight: 500 !important;
-    font-size: 0.82rem !important;
-    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.5rem !important;
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 .stButton > button:hover {
     transform: translateY(-1px) !important;
@@ -431,11 +434,12 @@ div[data-testid="stHorizontalBlock"] > div { padding: 0 0.3rem; }
 
 /* Make link buttons match */
 .stLinkButton > a {
-    font-size: 0.82rem !important;
-    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.5rem !important;
     border-radius: 12px !important;
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    white-space: nowrap !important;
 }
 .stLinkButton > a:hover {
     transform: translateY(-1px) !important;
@@ -621,36 +625,20 @@ def main():
     cat_counts = Counter(all_cats)
     if cat_counts:
         visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
-        # Use two rows if more than 6 categories to prevent overflow
-        row1_cats = visible_cats[:5]
-        row2_cats = visible_cats[5:]
-
-        chip_cols = st.columns([1] + [1] * len(row1_cats))
-        with chip_cols[0]:
-            if st.button("🎯 All", use_container_width=True,
-                         type="primary" if st.session_state.active_category == "all" else "secondary"):
-                st.session_state.active_category = "all"
-                st.rerun()
-        for i, cat in enumerate(row1_cats):
-            with chip_cols[i + 1]:
-                icon = CAT_ICONS.get(cat, "")
-                count = cat_counts[cat]
-                label = f"{icon} {cat[:4].capitalize()} {count}"
+        all_chips = ["all"] + visible_cats
+        chip_cols = st.columns(len(all_chips))
+        for i, cat in enumerate(all_chips):
+            with chip_cols[i]:
+                if cat == "all":
+                    label = "All"
+                else:
+                    icon = CAT_ICONS.get(cat, "")
+                    count = cat_counts[cat]
+                    label = f"{icon} {cat.capitalize()} {count}"
                 btn_type = "primary" if st.session_state.active_category == cat else "secondary"
                 if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
                     st.session_state.active_category = cat
                     st.rerun()
-        if row2_cats:
-            chip_cols2 = st.columns([1] * len(row2_cats) + [1] * (6 - len(row2_cats)))
-            for i, cat in enumerate(row2_cats):
-                with chip_cols2[i]:
-                    icon = CAT_ICONS.get(cat, "")
-                    count = cat_counts[cat]
-                    label = f"{icon} {cat[:4].capitalize()} {count}"
-                    btn_type = "primary" if st.session_state.active_category == cat else "secondary"
-                    if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
-                        st.session_state.active_category = cat
-                        st.rerun()
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in current_events if is_happening_now(e)]
