@@ -302,6 +302,55 @@ def share_url(event):
     return f"mailto:?{params}"
 
 
+# Venue context — short one-liners about each venue (not about the event)
+_VENUE_CONTEXT = {
+    "chris' jazz cafe": "Philadelphia's premier jazz club · 1421 Sansom St, Center City · Full dinner menu & cocktails · Reservations recommended",
+    "south jazz kitchen": "Jazz supper club · South Street · Southern-inspired cuisine & cocktails · Intimate listening room",
+    "world cafe live": "Iconic music venue · 3025 Walnut St, University City · Two stages · Full bar & restaurant · All ages",
+    "city winery": "Concert venue, restaurant & winery · Fashion District · Award-winning wines · Full dining",
+    "kimmel center": "Philadelphia's premier performing arts center · Avenue of the Arts · Broad & Spruce Streets",
+    "kimmel cultural campus": "Philadelphia's premier performing arts center · Avenue of the Arts · Broad & Spruce Streets",
+    "marian anderson hall": "2,500-seat concert hall · Kimmel Cultural Campus · Home of the Philadelphia Orchestra",
+    "academy of music": "America's oldest opera house still in use (est. 1857) · Avenue of the Arts · National Historic Landmark",
+    "annenberg center": "Penn Live Arts · University of Pennsylvania campus · World-class dance, music & theater since 1971",
+    "perelman theater": "Intimate 599-seat venue · Kimmel Cultural Campus · Ideal for chamber music, jazz & recitals",
+    "miller theater": "State-of-the-art venue · Kimmel Cultural Campus · Avenue of the Arts",
+    "arden theatre": "Award-winning theater · 40 N. 2nd St, Old City · Bold reimaginings & intimate staging",
+    "wilma theater": "Adventurous theater company · Avenue of the Arts · World premieres & daring interpretations",
+    "walnut street theatre": "America's oldest theater (est. 1809) · 825 Walnut St · Philadelphia landmark",
+    "forrest theatre": "Broadway touring house since 1928 · 1114 Walnut St · Blockbuster musicals & plays",
+    "fringearts": "Contemporary performance · Delaware River waterfront · Experimental & boundary-pushing",
+    "suzanne roberts theatre": "Philadelphia Theatre Company · Avenue of the Arts · New American plays & musicals",
+    "esperanza arts center": "Community arts hub · North 5th Street · Music, dance & theater in North Philadelphia",
+}
+
+# Default show times for venues that typically have consistent schedules
+_VENUE_DEFAULT_TIMES = {
+    "chris' jazz cafe": "8:00 PM",
+    "south jazz kitchen": "7:30 PM",
+    "world cafe live": "8:00 PM",
+    "city winery": "8:00 PM",
+}
+
+
+def _get_venue_context(venue):
+    """Get a short venue description line from the lookup."""
+    v = venue.lower().strip()
+    for key, ctx in _VENUE_CONTEXT.items():
+        if key in v or v in key:
+            return ctx
+    return ""
+
+
+def _get_default_time(venue):
+    """Get default show time for venues with consistent schedules."""
+    v = venue.lower().strip()
+    for key, t in _VENUE_DEFAULT_TIMES.items():
+        if key in v or v in key:
+            return t
+    return ""
+
+
 def event_description(event, max_sentences=4):
     """Get event description, truncated to max_sentences. Generate rich fallback if empty."""
     desc = _s(event, "description").strip()
@@ -311,71 +360,16 @@ def event_description(event, max_sentences=4):
         venue = _s(event, "venue")
         cats = _cats(event)
         price = _s(event, "price")
-        time_str = _s(event, "time")
-        venue_lower = venue.lower()
+        venue_ctx = _get_venue_context(venue)
 
-        # Venue-specific descriptions that are actually useful
-        if "chris" in venue_lower and "jazz" in venue_lower:
-            desc = (f"Live jazz at Chris' Jazz Cafe — Philadelphia's premier jazz club "
-                    f"at 1421 Sansom Street in Center City. {title} takes the stage"
-                    f"{' at ' + time_str if time_str else ''} for an intimate evening "
-                    f"of world-class jazz. Full dinner menu and craft cocktails available. "
-                    f"Reservations recommended.")
-        elif "south jazz" in venue_lower:
-            desc = (f"Live jazz at South Jazz Kitchen — Philly's vibrant jazz supper club "
-                    f"in the heart of South Street. {title} performs"
-                    f"{' at ' + time_str if time_str else ''} with Southern-inspired cuisine "
-                    f"and signature cocktails. An intimate listening room experience.")
-        elif "world cafe" in venue_lower:
-            desc = (f"Live music at World Cafe Live — Philadelphia's beloved venue at "
-                    f"3025 Walnut Street. {title} performs"
-                    f"{' at ' + time_str if time_str else ''}. Two stages, full bar, "
-                    f"and restaurant. All ages welcome in this iconic University City venue.")
-        elif "city winery" in venue_lower:
-            desc = (f"Live performance at City Winery Philadelphia — an intimate "
-                    f"concert venue, restaurant, and winery in the Fashion District. "
-                    f"{title} takes the stage{' at ' + time_str if time_str else ''}. "
-                    f"Enjoy award-winning wines and a full dining experience.")
-        elif "kimmel" in venue_lower or "marian anderson" in venue_lower:
-            desc = (f"{title} at the Kimmel Cultural Campus — Philadelphia's premier "
-                    f"performing arts center on the Avenue of the Arts. "
-                    f"{'Tickets from ' + price + '.' if price else ''}")
-        elif "academy of music" in venue_lower:
-            desc = (f"{title} at the historic Academy of Music — the oldest opera house "
-                    f"in the U.S. still used for its original purpose (since 1857). "
-                    f"Located on the Avenue of the Arts in Center City Philadelphia.")
-        elif "annenberg" in venue_lower or "penn live" in venue_lower:
-            desc = (f"{title} at the Annenberg Center for the Performing Arts — Penn Live Arts' "
-                    f"home on the University of Pennsylvania campus. A cornerstone of "
-                    f"Philadelphia's cultural scene since 1971.")
-        elif "perelman" in venue_lower:
-            desc = (f"{title} at the Perelman Theater — an intimate 599-seat venue inside "
-                    f"the Kimmel Cultural Campus, ideal for chamber music, jazz, and "
-                    f"solo performances on the Avenue of the Arts.")
-        elif "arden" in venue_lower:
-            desc = (f"{title} at the Arden Theatre Company — Philadelphia's award-winning "
-                    f"theater in Old City, known for bold reimaginings and intimate staging "
-                    f"at 40 N. 2nd Street.")
-        elif "wilma" in venue_lower:
-            desc = (f"{title} at The Wilma Theater — one of Philadelphia's most adventurous "
-                    f"theater companies on the Avenue of the Arts. Known for world premieres "
-                    f"and daring interpretations.")
-        elif "walnut" in venue_lower:
-            desc = (f"{title} at the Walnut Street Theatre — America's oldest theater, "
-                    f"founded in 1809. A Philadelphia landmark in the heart of the city's "
-                    f"theater district.")
-        elif "forrest" in venue_lower:
-            desc = (f"{title} at the Forrest Theatre — Philadelphia's home for blockbuster "
-                    f"Broadway touring productions since 1928, located at 1114 Walnut Street.")
-        elif "fringearts" in venue_lower or "fringe" in venue_lower:
-            desc = (f"{title} at FringeArts — Philadelphia's home for contemporary "
-                    f"performance on the Delaware River waterfront. Experimental, bold, "
-                    f"and always surprising.")
-        elif "miller" in venue_lower:
-            desc = (f"{title} at the Miller Theater — the newest jewel of the Kimmel "
-                    f"Cultural Campus, a state-of-the-art venue on the Avenue of the Arts.")
+        # Build a description that's unique per event (not boilerplate)
+        if venue_ctx:
+            desc = f"{venue_ctx}."
+            if price and price.lower() != "free":
+                desc += f" Tickets {price}."
+            elif price and price.lower() == "free":
+                desc += " Free admission."
         else:
-            # Generic but still useful
             primary_cat = cats[0] if cats else ""
             cat_labels = {
                 "jazz": "Live jazz", "classical": "Classical music",
@@ -385,12 +379,13 @@ def event_description(event, max_sentences=4):
                 "performance": "Live performance",
             }
             cat_label = cat_labels.get(primary_cat, "Live performance")
-            desc = f"{cat_label} in Philadelphia"
+            desc = f"{cat_label} in Philadelphia."
             if venue:
-                desc += f" at {venue}"
-            desc += "."
-            if price:
-                desc += f" Tickets {'are free' if price.lower() == 'free' else price}."
+                desc = f"{cat_label} at {venue}."
+            if price and price.lower() != "free":
+                desc += f" Tickets {price}."
+            elif price and price.lower() == "free":
+                desc += " Free admission."
 
     # Truncate to max_sentences
     sentences = _re.split(r'(?<=[.!?])\s+', desc)
@@ -553,6 +548,14 @@ div[data-testid="stDecoration"] {display: none;}
     margin-bottom: 0.2rem;
 }
 .event-venue { color: #a78bfa; font-weight: 500; font-size: 0.82rem; }
+.event-datetime {
+    color: #e8e8f0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin: 0.35rem 0;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
 .event-desc {
     color: #c0c0d4;
     font-size: 0.84rem;
@@ -1115,25 +1118,24 @@ def _render_event_card(event, st_ctx):
     eid = _s(event, "id")
     badges = "".join(category_badge_html(c) for c in _cats(event))
     price = _s(event, "price")
-    time_str = _s(event, "time")
+    time_str = _s(event, "time") or _get_default_time(_s(event, "venue"))
     urg = urgency_badge(event)
     desc = event_description(event)
     link = _s(event, "link")
     venue = _s(event, "venue")
     date_disp = _s(event, "date_display")
-    source = _s(event, "source")
 
-    # Build compact info line
-    meta_parts = []
+    # Build the date/time line — prominent, always visible
+    datetime_parts = []
     if date_disp:
-        meta_parts.append(f'<span class="info-pill">📅 {date_disp}</span>')
+        datetime_parts.append(f"📅 {date_disp}")
     if time_str:
-        meta_parts.append(f'<span class="info-pill">🕐 {time_str}</span>')
+        datetime_parts.append(f"🕐 {time_str}")
     if price:
-        is_free = price.lower() == "free"
-        meta_parts.append(f'<span class="info-pill price-pill">{"🆓" if is_free else "🎟"} {price}</span>')
+        datetime_parts.append(f"{'🆓' if price.lower() == 'free' else '🎟'} {price}")
+    datetime_line = " &nbsp;·&nbsp; ".join(datetime_parts)
 
-    # Action links (inline HTML — no separate Streamlit buttons)
+    # Action links
     action_links = []
     if link:
         action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
@@ -1146,10 +1148,8 @@ def _render_event_card(event, st_ctx):
     <div class="event-card">
         <div class="event-title">{_s(event, 'title')}{urg}</div>
         <div class="event-venue">{venue}</div>
+        <div class="event-datetime">{datetime_line}</div>
         <div class="event-desc">{desc}</div>
-        <div class="event-footer">
-            {" ".join(meta_parts)}
-        </div>
         <div style="margin-top:0.4rem">{badges}</div>
         <div class="card-actions">
             {actions_html}
