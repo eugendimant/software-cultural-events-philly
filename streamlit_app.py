@@ -457,7 +457,7 @@ def share_url(event):
     return f"mailto:?{params}"
 
 
-def event_description(event, max_sentences=4):
+def event_description(event, max_sentences=2):
     """Get event description, truncated to max_sentences. Only uses scraped/verified data."""
     desc = _s(event, "description").strip()
 
@@ -646,13 +646,12 @@ div[data-testid="stDecoration"] {display: none;}
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 1.1rem 1.3rem 0.9rem;
-    margin-bottom: 0.3rem;
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem 0.7rem;
+    margin-bottom: 0.25rem;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 .event-card:hover {
     border-color: rgba(124, 106, 255, 0.25);
@@ -670,10 +669,10 @@ div[data-testid="stDecoration"] {display: none;}
 }
 .event-card-past:hover { opacity: 0.8; }
 .event-title {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     font-weight: 600;
     color: #f0f0f8;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
     letter-spacing: -0.01em;
     line-height: 1.3;
 }
@@ -684,20 +683,25 @@ div[data-testid="stDecoration"] {display: none;}
 }
 .event-venue { color: #a78bfa; font-weight: 500; font-size: 0.82rem; }
 .event-datetime {
-    color: #e8e8f0;
-    font-size: 0.82rem;
+    color: #9999b0;
+    font-size: 0.78rem;
     font-weight: 500;
-    margin: 0.35rem 0;
-    padding: 0.3rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    margin: 0.2rem 0;
+    padding: 0;
 }
 .event-desc {
     color: #c0c0d4;
-    font-size: 0.84rem;
-    line-height: 1.6;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-top: 0.35rem;
+    margin-bottom: 0.3rem;
     flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.1em;
 }
 .event-footer {
     display: flex;
@@ -738,23 +742,23 @@ div[data-testid="stDecoration"] {display: none;}
 /* Compact action icons row inside card */
 .card-actions {
     display: flex;
-    gap: 2px;
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
+    gap: 1px;
+    margin-top: 0.4rem;
+    padding-top: 0.35rem;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 .card-actions a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 0.72rem;
+    gap: 3px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.68rem;
     font-weight: 500;
-    color: #8888a0;
+    color: #6e6e88;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.03);
+    background: transparent;
     border: 1px solid transparent;
     transition: all 0.2s ease;
     white-space: nowrap;
@@ -762,7 +766,11 @@ div[data-testid="stDecoration"] {display: none;}
 .card-actions a:hover {
     color: #a78bfa;
     background: rgba(124, 106, 255, 0.08);
-    border-color: rgba(124, 106, 255, 0.15);
+    border-color: rgba(124, 106, 255, 0.12);
+}
+.card-actions a:first-child {
+    color: #a78bfa;
+    font-weight: 600;
 }
 .month-header {
     font-family: 'Playfair Display', serif;
@@ -806,17 +814,39 @@ div[data-testid="stDecoration"] {display: none;}
     background: rgba(18, 18, 26, 0.6);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 14px;
-    padding: 0.8rem 1.1rem;
-    margin-bottom: 0.4rem;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.35rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
 }
 .coming-up:hover {
-    border-color: rgba(124, 106, 255, 0.15);
-    background: rgba(18, 18, 26, 0.8);
+    border-color: rgba(124, 106, 255, 0.2);
+    background: rgba(18, 18, 26, 0.85);
+    transform: translateX(2px);
+}
+.coming-up-title {
+    font-weight: 600;
+    color: #e8e8f0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+.coming-up-meta {
+    color: #8888a0;
+    font-size: 0.78rem;
+    margin-top: 2px;
+}
+.coming-up-date {
+    color: #8888a0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    text-align: right;
+    min-width: fit-content;
 }
 
 /* Category chip used in filter bar */
@@ -830,6 +860,16 @@ div[data-testid="stDecoration"] {display: none;}
     margin-right: 4px;
     margin-bottom: 4px;
 }
+/* Category chip row — horizontal scroll on overflow */
+.chip-row {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.chip-row::-webkit-scrollbar { display: none; }
 
 div[data-testid="stHorizontalBlock"] > div { padding: 0 0.3rem; }
 
@@ -1054,24 +1094,27 @@ def main():
     tonight = [e for e in filtered if is_happening_now(e)]
     if tonight:
         st.markdown("#### 🔴 Happening Now")
-        # Always use 4 columns so tiles don't stretch full-width
-        cols = st.columns(4)
+        num_cols = min(len(tonight), 4)
+        cols = st.columns(num_cols if num_cols >= 2 else 2)
         for i, event in enumerate(tonight[:4]):
-            with cols[i]:
-                badges = "".join(category_badge_html(c) for c in _cats(event))
-                price_html = f' <span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
+            with cols[i % num_cols]:
+                badge = category_badge_html(_cats(event)[0]) if _cats(event) else ""
+                price_html = f' · {_s(event, "price")}' if _s(event, "price") else ""
                 link = _s(event, "link")
-                spot_desc = event_description(event, max_sentences=3)
+                spot_desc = event_description(event, max_sentences=2)
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
                     <div class="spotlight-label">Now Playing</div>
-                    <div class="event-title">{_s(event, 'title')}</div>
-                    <div class="event-meta"><span class="event-venue">{_s(event, 'venue')}</span></div>
-                    <div class="event-meta">{_s(event, 'date_display')}{price_html}</div>
-                    <div class="event-desc" style="margin-top:0.4rem;font-size:0.82rem">{spot_desc}</div>
-                    <div style="margin-top:0.5rem">{badges}</div>
-                    <div style="margin-top:0.6rem;font-size:0.78rem;color:#a78bfa;font-weight:500">🎟 Get Tickets →</div>
+                    <div class="event-title" style="font-size:1rem">{_s(event, 'title')}</div>
+                    <div style="color:#8888a0;font-size:0.78rem;margin:0.2rem 0">
+                        <span class="event-venue">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}{price_html}
+                    </div>
+                    <div class="event-desc" style="font-size:0.8rem;margin-top:0.3rem;-webkit-line-clamp:2;max-height:2.7em">{spot_desc}</div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem">
+                        {badge}
+                        <span style="font-size:0.75rem;color:#a78bfa;font-weight:500">Get Tickets →</span>
+                    </div>
                 </div>
                 </a>
                 """, unsafe_allow_html=True)
@@ -1085,15 +1128,27 @@ def main():
         st.markdown("#### Coming Up Next")
         for event in next_up:
             badge = urgency_badge(event)
+            link = _s(event, "link")
+            time_str = _s(event, "time")
+            price_str = _s(event, "price")
+            meta_parts = [f'<span class="event-venue">{_s(event, "venue")}</span>']
+            if time_str:
+                meta_parts.append(time_str)
+            if price_str:
+                meta_parts.append(price_str)
+            meta_html = " · ".join(meta_parts)
+            wrapper_open = f'<a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">' if link else ''
+            wrapper_close = '</a>' if link else ''
             st.markdown(f"""
+            {wrapper_open}
             <div class="coming-up">
-                <div>
-                    <span style="color:#e8e8f0;font-weight:600">{_s(event, 'title')}</span>
-                    <span style="color:#8888a0;font-size:0.85rem"> at <span class="event-venue">{_s(event, 'venue')}</span></span>
-                    {badge}
+                <div style="flex:1;min-width:0">
+                    <div class="coming-up-title">{_s(event, 'title')} {badge}</div>
+                    <div class="coming-up-meta">{meta_html}</div>
                 </div>
-                <div style="color:#8888a0;font-size:0.85rem;white-space:nowrap">{_s(event, 'date_display')}</div>
+                <div class="coming-up-date">{_s(event, 'date_display')}</div>
             </div>
+            {wrapper_close}
             """, unsafe_allow_html=True)
         st.markdown("")
 
@@ -1249,9 +1304,11 @@ def main():
 
 
 def _render_event_card(event, st_ctx):
-    """Render a single event card with integrated actions."""
+    """Render a single event card — compact, Apple-quality design."""
     eid = _s(event, "id")
-    badges = "".join(category_badge_html(c) for c in _cats(event))
+    cats = _cats(event)
+    # Show only first category badge to save space
+    badge_html = category_badge_html(cats[0]) if cats else ""
     price = _s(event, "price")
     time_str = _s(event, "time")
     urg = urgency_badge(event)
@@ -1260,34 +1317,38 @@ def _render_event_card(event, st_ctx):
     venue = _s(event, "venue")
     date_disp = _s(event, "date_display")
 
-    # Build the date/time line — prominent, always visible
-    datetime_parts = []
+    # Build compact meta line: venue · date · time
+    meta_parts = []
+    if venue:
+        meta_parts.append(f'<span class="event-venue">{venue}</span>')
     if date_disp:
-        datetime_parts.append(f"📅 {date_disp}")
+        meta_parts.append(date_disp)
     if time_str:
-        datetime_parts.append(f"🕐 {time_str}")
-    if price:
-        datetime_parts.append(f"{'🆓' if price.lower() == 'free' else '🎟'} {price}")
-    datetime_line = " &nbsp;·&nbsp; ".join(datetime_parts)
+        meta_parts.append(time_str)
+    meta_line = " · ".join(meta_parts)
 
-    # Action links
+    # Price tag (separate for visual emphasis)
+    price_html = ""
+    if price:
+        price_html = f'<span class="price-tag" style="margin-left:6px">{price}</span>'
+
+    # Action links — compact
     action_links = []
     if link:
-        action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
-    action_links.append(f'<a href="{gcal_url(event)}" target="_blank">📅 Cal</a>')
-    action_links.append(f'<a href="{maps_url(event)}" target="_blank">📍 Map</a>')
-    action_links.append(f'<a href="{share_url(event)}" target="_blank">📤 Share</a>')
+        action_links.append(f'<a href="{link}" target="_blank">Tickets</a>')
+    action_links.append(f'<a href="{gcal_url(event)}" target="_blank">Cal</a>')
+    action_links.append(f'<a href="{maps_url(event)}" target="_blank">Map</a>')
+    action_links.append(f'<a href="{share_url(event)}" target="_blank">Share</a>')
     actions_html = "".join(action_links)
 
     st_ctx.markdown(f"""
     <div class="event-card">
         <div class="event-title">{_s(event, 'title')}{urg}</div>
-        <div class="event-venue">{venue}</div>
-        <div class="event-datetime">{datetime_line}</div>
+        <div class="event-datetime">{meta_line}{price_html}</div>
         <div class="event-desc">{desc}</div>
-        <div style="margin-top:0.4rem">{badges}</div>
-        <div class="card-actions">
-            {actions_html}
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto">
+            <div>{badge_html}</div>
+            <div class="card-actions" style="border:0;margin:0;padding:0">{actions_html}</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
