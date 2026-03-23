@@ -53,9 +53,28 @@
       updateStats(data);
       renderSpotlight();
       renderAnalytics();
+      renderScrapeStatus(data);
     } catch (err) {
       console.error('Error loading events:', err);
       eventsList.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-dim)"><p>Could not load events data.</p><p style="margin-top:0.5rem">The scraper may not have run yet. Events will appear once the GitHub Actions workflow completes.</p></div>';
+    }
+  }
+
+  function renderScrapeStatus(data) {
+    const el = $('#scrapeStatus');
+    if (!el) return;
+    const report = data.scrape_report;
+    if (!report) { el.classList.add('hidden'); return; }
+    const failures = report.failures || [];
+    const warnings = report.warnings || [];
+    if (failures.length === 0 && warnings.length === 0) { el.classList.add('hidden'); return; }
+    // Only show a brief note if there were issues
+    const issues = failures.length + warnings.length;
+    if (allEvents.length > 0 && issues > 0) {
+      el.innerHTML = `<span class="status-dot warning"></span> Some venue sources were unavailable. Showing ${allEvents.length} verified events from available sources.`;
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
     }
   }
 
@@ -566,6 +585,18 @@
 
   function escHtml(s) { const el = document.createElement('span'); el.textContent = s || ''; return el.innerHTML; }
   function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
+
+  // Clear filters button
+  const clearFiltersBtn = $('#clearFiltersBtn');
+  if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', () => {
+    activeCategory = 'all'; activeTimeFilter = 'all'; searchQuery = ''; showFavoritesOnly = false;
+    searchInput.value = '';
+    categoryFilters.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+    categoryFilters.querySelector('[data-category="all"]')?.classList.add('active');
+    if (timeFilters) { timeFilters.querySelectorAll('.chip').forEach(x => x.classList.remove('active')); timeFilters.querySelector('[data-time="all"]')?.classList.add('active'); }
+    if (favToggle) favToggle.classList.remove('active');
+    applyFilters();
+  });
 
   // Init
   loadEvents();

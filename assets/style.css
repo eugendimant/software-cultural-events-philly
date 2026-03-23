@@ -939,6 +939,22 @@ a:focus:not(:focus-visible) { outline: none; }
   transform: translateX(-50%) translateY(0);
 }
 
+/* Scrape status banner */
+.scrape-status {
+  text-align: center; padding: 8px 16px; font-size: 0.8rem; color: var(--text-muted);
+  background: var(--bg-raised); border-bottom: 1px solid var(--border);
+}
+.scrape-status .status-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 6px; }
+.scrape-status .status-dot.warning { background: #f6ad55; }
+.scrape-status .status-dot.ok { background: #68d391; }
+
+/* Clear filters link button */
+.link-btn {
+  background: none; border: none; color: var(--accent); cursor: pointer;
+  font-size: inherit; text-decoration: underline; padding: 0;
+}
+.link-btn:hover { color: var(--accent-hover); }
+
 /* Responsive additions */
 @media (max-width: 768px) {
   .spotlight-cards { grid-template-columns: 1fr; }

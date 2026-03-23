@@ -115,8 +115,11 @@
       <div id="eventsList" class="events-list"></div>
     </div>
     <div id="emptyState" class="empty-state hidden">
-      <div class="empty-icon">🔍</div><h3>No events found</h3><p>No events loaded yet, or try adjusting your filters. Events are scraped from live venue websites daily.</p>
+      <div class="empty-icon">🔍</div>
+      <h3>No events match your filters</h3>
+      <p>Try adjusting your category or date filters, or <button class="link-btn" id="clearFiltersBtn">clear all filters</button>.</p>
     </div>
+    <div id="scrapeStatus" class="scrape-status hidden"></div>
   </main>
 
   <!-- Event Modal -->
@@ -150,7 +153,7 @@
   <!-- Sources Panel -->
   <div id="sourcesOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
     <div class="sources-panel">
-      <div class="sources-header"><h2>Event Sources</h2><p class="sources-subtitle">We aggregate from 14 Philadelphia performing arts organizations</p><button class="modal-close" id="sourcesClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+      <div class="sources-header"><h2>Event Sources</h2><p class="sources-subtitle">We aggregate from 16 Philadelphia performing arts organizations</p><button class="modal-close" id="sourcesClose" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
       <div id="sourcesPanel" class="sources-grid"></div>
     </div>
   </div>
@@ -165,7 +168,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p class="footer-text">PhillyCulture — Aggregating <span id="footerSourceCount">14</span> Philadelphia performing arts sources</p>
+      <p class="footer-text">PhillyCulture — Aggregating <span id="footerSourceCount">16</span> Philadelphia performing arts sources</p>
       <p class="footer-sub">Data refreshed on demand via GitHub Actions. Not affiliated with any venue.</p>
     </div>
   </footer>

@@ -26,8 +26,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r scraper/requirements.txt
 
+      - name: Run tests
+        run: python -m unittest scraper.test_scraper -v
+
       - name: Run scraper
         run: python scraper/scrape_events.py
+        continue-on-error: true
 
       - name: Check results
         id: check
