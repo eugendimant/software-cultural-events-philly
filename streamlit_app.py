@@ -1005,33 +1005,26 @@ def main():
         </div>
         """, unsafe_allow_html=True)
     else:
-        def _event_date_key(ev):
-            return _s(ev, "date_start") or "9999"
-
         current_month = None
-        rendered_dates = set()
+        # Render all events in a consistent 2-column grid
+        col_idx = 0
+        cols = None
         for event in filtered:
             month = get_month_key(_s(event, "date_start"))
-            date_key = _event_date_key(event)
-            group_key = (month, date_key)
-
             if month != current_month:
+                # New month header — force new row
                 current_month = month
+                col_idx = 0
+                cols = None
                 st.markdown(f'<div class="month-header">{month}</div>', unsafe_allow_html=True)
 
-            if group_key in rendered_dates:
-                continue
-            rendered_dates.add(group_key)
+            # Start new 2-column row when needed
+            if col_idx % 2 == 0:
+                cols = st.columns(2)
 
-            # All events sharing this start date
-            same_date = [e for e in filtered if _event_date_key(e) == date_key
-                         and get_month_key(_s(e, "date_start")) == month]
-
-            # Always use 2-column grid for consistent card sizing
-            cols = st.columns(2)
-            for idx, ev in enumerate(same_date):
-                with cols[idx % 2]:
-                    _render_event_card(ev, st)
+            with cols[col_idx % 2]:
+                _render_event_card(event, st)
+            col_idx += 1
 
     # ── Past Events Archive ───────────────────────────────────────────────
     if past_events:
