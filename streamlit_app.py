@@ -103,19 +103,25 @@ def _build_description_lookup():
 _SEED_DESC_LOOKUP = _build_description_lookup()
 
 
-def _build_link_lookup():
-    """Build a title -> link lookup from seed events."""
+def _build_seed_lookup():
+    """Build title -> (description, link, source) lookup from seed events."""
     lookup = {}
     for e in FALLBACK_EVENTS:
+        key = _normalize_title(e.get("title", ""))
+        if not key:
+            continue
+        desc = e.get("description", "")
         link = e.get("link", "")
         source_url = e.get("source_url", "")
-        if link and link != source_url:
-            key = _normalize_title(e.get("title", ""))
-            if key:
-                lookup[key] = link
+        source = e.get("source", "")
+        lookup[key] = {
+            "description": desc if desc and len(desc) > 30 else None,
+            "link": link if link and link != source_url else None,
+            "source": source,
+        }
     return lookup
 
-_SEED_LINK_LOOKUP = _build_link_lookup()
+_SEED_LOOKUP = _build_seed_lookup()
 
 
 def _enrich_descriptions(events):
@@ -128,6 +134,7 @@ def _enrich_descriptions(events):
         desc = (event.get("description") or "").strip()
         link = (event.get("link") or "").strip()
         source_url = (event.get("source_url") or "").strip()
+        ev_source = event.get("source", "")
         link_is_generic = not link or link == source_url
         needs_desc = not desc or len(desc) < 40
 
@@ -135,24 +142,41 @@ def _enrich_descriptions(events):
 
         if needs_desc or link_is_generic:
             # Strategy 1: Exact match against seed data
-            if norm and norm in _SEED_DESC_LOOKUP and needs_desc:
-                event["description"] = _SEED_DESC_LOOKUP[norm]
-                needs_desc = False
-            if norm and norm in _SEED_LINK_LOOKUP and link_is_generic:
-                event["link"] = _SEED_LINK_LOOKUP[norm]
-                link_is_generic = False
+            seed = _SEED_LOOKUP.get(norm)
+            if seed:
+                if needs_desc and seed["description"]:
+                    event["description"] = seed["description"]
+                    needs_desc = False
+                if link_is_generic and seed["link"]:
+                    event["link"] = seed["link"]
+                    link_is_generic = False
 
-            # Strategy 2: Partial match — check if seed title is contained
+            # Strategy 2: Partial match — but ONLY if:
+            #   - The shorter string is at least 60% of the longer string's length
+            #   - The event and seed are from the same source
+            #   This prevents "Trumpet" matching "Trumpeter James McGovern..."
             if needs_desc or link_is_generic:
-                for seed_key in _SEED_DESC_LOOKUP:
-                    if len(seed_key) > 8 and (seed_key in norm or norm in seed_key):
-                        if needs_desc:
-                            event["description"] = _SEED_DESC_LOOKUP[seed_key]
-                            needs_desc = False
-                        if link_is_generic and seed_key in _SEED_LINK_LOOKUP:
-                            event["link"] = _SEED_LINK_LOOKUP[seed_key]
-                            link_is_generic = False
-                        break
+                for seed_key, seed_data in _SEED_LOOKUP.items():
+                    if len(seed_key) < 10 or len(norm) < 10:
+                        continue
+                    # Check substring match
+                    if not (seed_key in norm or norm in seed_key):
+                        continue
+                    # Require similar length (prevent short words matching long titles)
+                    shorter = min(len(norm), len(seed_key))
+                    longer = max(len(norm), len(seed_key))
+                    if shorter < longer * 0.6:
+                        continue
+                    # Require same source to prevent cross-venue contamination
+                    if seed_data["source"] and ev_source and seed_data["source"] != ev_source:
+                        continue
+                    if needs_desc and seed_data["description"]:
+                        event["description"] = seed_data["description"]
+                        needs_desc = False
+                    if link_is_generic and seed_data["link"]:
+                        event["link"] = seed_data["link"]
+                        link_is_generic = False
+                    break
 
         # Strategy 3: For events that STILL have generic links, try
         # to enrich the link from known seed events for the same source
