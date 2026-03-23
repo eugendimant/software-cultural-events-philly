@@ -47,6 +47,41 @@ except Exception:
     FALLBACK_EVENTS = []
 
 
+# ── Event sanitization (last line of defense) ────────────────────────────────
+_JUNK_PHRASES = [
+    "no upcoming events", "no events", "search form", "no results",
+    "sign up for", "subscribe to", "cookie", "privacy policy",
+    "page not found", "404", "coming soon", "start date", "e.g.,",
+    "placeholder", "select date", "filter by", "sort by",
+    "javascript", "enable javascript", "load more", "click here",
+]
+
+def _is_valid_event(event):
+    """Filter out scraper artifacts and junk entries at display time."""
+    if not isinstance(event, dict):
+        return False
+    title = (event.get("title") or "").strip()
+    if not title or len(title) < 3:
+        return False
+    title_low = title.lower()
+    if any(phrase in title_low for phrase in _JUNK_PHRASES):
+        return False
+    # Must have at least a plausible title (some alpha characters)
+    if sum(1 for c in title if c.isalpha()) < 3:
+        return False
+    return True
+
+def _sanitize_event(event):
+    """Clean up event fields: replace None with defaults, strip garbage display text."""
+    if not isinstance(event, dict):
+        return event
+    # Clean garbage date_display
+    dd = (event.get("date_display") or "")
+    if "start date" in dd.lower() or "e.g." in dd.lower():
+        event["date_display"] = ""
+    return event
+
+
 # ── Load events ──────────────────────────────────────────────────────────────
 @st.cache_data(ttl=300)
 def load_events():
@@ -57,14 +92,16 @@ def load_events():
         events = data.get("events", [])
         if len(events) == 0:
             raise ValueError("Empty events")
-        return data
     except Exception:
-        return {
+        data = {
             "last_updated": datetime.utcnow().isoformat() + "Z",
-            "sources": sorted({e["source"] for e in FALLBACK_EVENTS}),
-            "events": FALLBACK_EVENTS,
+            "sources": sorted({e.get("source", "") for e in FALLBACK_EVENTS if e.get("source")}),
+            "events": list(FALLBACK_EVENTS),
             "scrape_report": {"successes": ["Using seed data"], "failures": [], "warnings": []},
         }
+    # Sanitize: filter junk, clean fields
+    data["events"] = [_sanitize_event(e) for e in data.get("events", []) if _is_valid_event(e)]
+    return data
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -238,17 +275,17 @@ def events_to_csv(events):
                       "Price", "Categories", "Description", "Tickets URL", "Source"])
     for e in events:
         writer.writerow([
-            e.get("title", ""),
-            e.get("venue", ""),
-            e.get("date_start", ""),
-            e.get("date_end", ""),
-            e.get("date_display", ""),
-            e.get("time", ""),
-            e.get("price", ""),
+            _s(e, "title"),
+            _s(e, "venue"),
+            _s(e, "date_start"),
+            _s(e, "date_end"),
+            _s(e, "date_display"),
+            _s(e, "time"),
+            _s(e, "price"),
             ", ".join(_cats(e)),
-            e.get("description", ""),
-            e.get("link", ""),
-            e.get("source", ""),
+            _s(e, "description"),
+            _s(e, "link"),
+            _s(e, "source"),
         ])
     return output.getvalue()
 
@@ -685,7 +722,7 @@ def main():
 
     # ── Coming Up Next section ────────────────────────────────────────────
     upcoming = [e for e in current_events if not is_happening_now(e)]
-    upcoming.sort(key=lambda e: e.get("date_start", "9999"))
+    upcoming.sort(key=lambda e: _s(e, "date_start", "9999"))
     next_up = upcoming[:3]
     if next_up:
         st.markdown("#### Coming Up Next")
