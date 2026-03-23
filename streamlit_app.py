@@ -939,63 +939,6 @@ def main():
                 with col:
                     _render_event_card(ev, st)
 
-def _render_event_card(event, st_ctx):
-    """Render a single event card with integrated actions."""
-    eid = _s(event, "id")
-    badges = "".join(category_badge_html(c) for c in _cats(event))
-    price = _s(event, "price")
-    time_str = _s(event, "time")
-    urg = urgency_badge(event)
-    desc = event_description(event)
-    link = _s(event, "link")
-    venue = _s(event, "venue")
-    date_disp = _s(event, "date_display")
-    source = _s(event, "source")
-
-    # Build compact info line
-    meta_parts = []
-    if date_disp:
-        meta_parts.append(f'<span class="info-pill">📅 {date_disp}</span>')
-    if time_str:
-        meta_parts.append(f'<span class="info-pill">🕐 {time_str}</span>')
-    if price:
-        is_free = price.lower() == "free"
-        meta_parts.append(f'<span class="info-pill price-pill">{"🆓" if is_free else "🎟"} {price}</span>')
-
-    # Action links (inline HTML — no separate Streamlit buttons)
-    action_links = []
-    if link:
-        action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
-    action_links.append(f'<a href="{gcal_url(event)}" target="_blank">📅 Cal</a>')
-    action_links.append(f'<a href="{maps_url(event)}" target="_blank">📍 Map</a>')
-    action_links.append(f'<a href="{share_url(event)}" target="_blank">📤 Share</a>')
-    actions_html = "".join(action_links)
-
-    st_ctx.markdown(f"""
-    <div class="event-card">
-        <div class="event-title">{_s(event, 'title')}{urg}</div>
-        <div class="event-venue">{venue}</div>
-        <div class="event-desc">{desc}</div>
-        <div class="event-footer">
-            {" ".join(meta_parts)}
-        </div>
-        <div style="margin-top:0.4rem">{badges}</div>
-        <div class="card-actions">
-            {actions_html}
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Select button (needs Streamlit interactivity)
-    is_selected = eid in st.session_state.selected_ids
-    sel_label = "✅ Selected" if is_selected else "☐ Select"
-    if st_ctx.button(sel_label, key=f"sel_{eid}", use_container_width=True):
-        if is_selected:
-            st.session_state.selected_ids.discard(eid)
-        else:
-            st.session_state.selected_ids.add(eid)
-        st.rerun()
-
     # ── Past Events Archive ───────────────────────────────────────────────
     if past_events:
         st.divider()
@@ -1078,6 +1021,64 @@ def _render_event_card(event, st_ctx):
         Data from verified public event listings. Not affiliated with any venue.
     </div>
     """, unsafe_allow_html=True)
+
+
+def _render_event_card(event, st_ctx):
+    """Render a single event card with integrated actions."""
+    eid = _s(event, "id")
+    badges = "".join(category_badge_html(c) for c in _cats(event))
+    price = _s(event, "price")
+    time_str = _s(event, "time")
+    urg = urgency_badge(event)
+    desc = event_description(event)
+    link = _s(event, "link")
+    venue = _s(event, "venue")
+    date_disp = _s(event, "date_display")
+    source = _s(event, "source")
+
+    # Build compact info line
+    meta_parts = []
+    if date_disp:
+        meta_parts.append(f'<span class="info-pill">📅 {date_disp}</span>')
+    if time_str:
+        meta_parts.append(f'<span class="info-pill">🕐 {time_str}</span>')
+    if price:
+        is_free = price.lower() == "free"
+        meta_parts.append(f'<span class="info-pill price-pill">{"🆓" if is_free else "🎟"} {price}</span>')
+
+    # Action links (inline HTML — no separate Streamlit buttons)
+    action_links = []
+    if link:
+        action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
+    action_links.append(f'<a href="{gcal_url(event)}" target="_blank">📅 Cal</a>')
+    action_links.append(f'<a href="{maps_url(event)}" target="_blank">📍 Map</a>')
+    action_links.append(f'<a href="{share_url(event)}" target="_blank">📤 Share</a>')
+    actions_html = "".join(action_links)
+
+    st_ctx.markdown(f"""
+    <div class="event-card">
+        <div class="event-title">{_s(event, 'title')}{urg}</div>
+        <div class="event-venue">{venue}</div>
+        <div class="event-desc">{desc}</div>
+        <div class="event-footer">
+            {" ".join(meta_parts)}
+        </div>
+        <div style="margin-top:0.4rem">{badges}</div>
+        <div class="card-actions">
+            {actions_html}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Select button (needs Streamlit interactivity)
+    is_selected = eid in st.session_state.selected_ids
+    sel_label = "✅ Selected" if is_selected else "☐ Select"
+    if st_ctx.button(sel_label, key=f"sel_{eid}", use_container_width=True):
+        if is_selected:
+            st.session_state.selected_ids.discard(eid)
+        else:
+            st.session_state.selected_ids.add(eid)
+        st.rerun()
 
 
 if __name__ == "__main__":
