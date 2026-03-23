@@ -729,40 +729,36 @@ def extract_events_generic(soup, url, source_name, venue_default,
     return events
 
 
-def extract_squarespace_events(url, source_name, venue_default,
-                                categories_default=None):
-    """Extract events from Squarespace JSON API (?format=json).
-    Squarespace sites expose a JSON endpoint with full event data including
-    titles, descriptions, dates, URLs, and more. This is the most reliable
-    method for Squarespace-based venues like Chris' Jazz Cafe.
-    Returns list of event dicts, or empty list if not a Squarespace site.
+def _parse_squarespace_timestamp(ts):
+    """Parse a Squarespace timestamp (milliseconds since epoch or ISO string).
+    Returns (date_str, time_str) tuple. Either may be None.
     """
-    json_url = url.rstrip("/") + "?format=json"
+    if isinstance(ts, (int, float)) and ts > 1000000000:
+        if ts > 1e12:
+            ts = ts / 1000
+        try:
+            dt = datetime.fromtimestamp(ts)
+            date_str = dt.strftime("%Y-%m-%d")
+            h, m = dt.hour, dt.minute
+            time_str = None
+            if h != 0 or m != 0:
+                period = "AM" if h < 12 else "PM"
+                dh = h if h <= 12 else h - 12
+                if dh == 0:
+                    dh = 12
+                time_str = f"{dh}:{m:02d} {period}"
+            return date_str, time_str
+        except (ValueError, OSError):
+            pass
+    elif isinstance(ts, str) and len(ts) >= 10:
+        return ts[:10], parse_time_from_iso(ts)
+    return None, None
+
+
+def _parse_squarespace_items(items, url, source_name, venue_default,
+                              categories_default=None):
+    """Convert a list of Squarespace item dicts to event dicts."""
     events = []
-    try:
-        r = SESSION.get(json_url, timeout=15,
-                        headers={**HEADERS, "Accept": "application/json"})
-        if r.status_code != 200:
-            return []
-        data = r.json()
-    except Exception:
-        return []
-
-    # Squarespace returns events under various keys
-    items = []
-    if isinstance(data, dict):
-        # Try known Squarespace response structures
-        items = data.get("items") or data.get("upcoming") or data.get("events") or []
-        # Also check nested "collection" -> "items"
-        if not items and "collection" in data:
-            items = data["collection"].get("items", [])
-        # Some Squarespace sites return past/upcoming split
-        if not items and "past" in data:
-            items = (data.get("upcoming") or []) + (data.get("past") or [])
-    elif isinstance(data, list):
-        items = data
-
-    base_url = url.rsplit("/", 1)[0] if "/" in url else url
     site_root = "/".join(url.split("/")[:3])  # e.g., https://www.chrisjazzcafe.com
 
     for item in items:
@@ -773,67 +769,70 @@ def extract_squarespace_events(url, source_name, venue_default,
         if not title:
             continue
 
-        # Build detail page URL from fullUrl or urlId
+        # Build detail page URL from fullUrl, sourceUrl, or urlId
         full_url = item.get("fullUrl") or item.get("sourceUrl") or ""
+        if not full_url:
+            # Construct from urlId — Squarespace sometimes uses this
+            url_id = item.get("urlId") or ""
+            collection_path = item.get("collectionId") or ""
+            if url_id:
+                # Try to build URL from the base page + urlId
+                full_url = f"{url.rstrip('/')}/{url_id}"
         if full_url and not full_url.startswith("http"):
             full_url = site_root + full_url
         item_url = full_url or url
 
-        # Parse dates (Squarespace uses millisecond timestamps)
-        start_ts = item.get("startDate")
-        end_ts = item.get("endDate")
-        date_start = date_end = event_time = None
-        if isinstance(start_ts, (int, float)) and start_ts > 1000000000:
-            # Millisecond timestamp
-            if start_ts > 1e12:
-                start_ts = start_ts / 1000
-            try:
-                dt = datetime.fromtimestamp(start_ts)
-                date_start = dt.strftime("%Y-%m-%d")
-                h, m = dt.hour, dt.minute
-                if h != 0 or m != 0:
-                    period = "AM" if h < 12 else "PM"
-                    dh = h if h <= 12 else h - 12
-                    if dh == 0:
-                        dh = 12
-                    event_time = f"{dh}:{m:02d} {period}"
-            except (ValueError, OSError):
-                pass
-        elif isinstance(start_ts, str):
-            date_start = start_ts[:10] if len(start_ts) >= 10 else None
-            event_time = parse_time_from_iso(start_ts)
-
-        if isinstance(end_ts, (int, float)) and end_ts > 1000000000:
-            if end_ts > 1e12:
-                end_ts = end_ts / 1000
-            try:
-                date_end = datetime.fromtimestamp(end_ts).strftime("%Y-%m-%d")
-            except (ValueError, OSError):
-                date_end = date_start
-        elif isinstance(end_ts, str):
-            date_end = end_ts[:10] if len(end_ts) >= 10 else date_start
-        else:
+        # Parse dates
+        date_start, event_time = _parse_squarespace_timestamp(item.get("startDate"))
+        date_end, _ = _parse_squarespace_timestamp(item.get("endDate"))
+        if not date_end:
             date_end = date_start
 
-        # Description: prefer excerpt, fall back to body text
+        # Description: try multiple fields
         desc = ""
-        excerpt = item.get("excerpt") or item.get("asExcerpt") or ""
-        body = item.get("body") or ""
-        if excerpt:
-            desc = clean_text(BeautifulSoup(excerpt, "lxml").get_text())[:800]
-        elif body:
-            desc = clean_text(BeautifulSoup(body, "lxml").get_text())[:800]
+        for desc_field in ("excerpt", "asExcerpt", "body"):
+            raw = item.get(desc_field) or ""
+            if raw:
+                try:
+                    desc = clean_text(BeautifulSoup(raw, "html.parser").get_text())[:800]
+                except Exception:
+                    desc = clean_text(raw)[:800]
+                if desc and len(desc) > 20:
+                    break
+                desc = ""
 
-        # Price: try structured data or parse from body/excerpt
+        # Also try structuredContent.eventDescription
+        if not desc:
+            struct = item.get("structuredContent") or {}
+            if isinstance(struct, dict):
+                for k in ("eventDescription", "description", "summary"):
+                    val = struct.get(k, "")
+                    if val and len(val) > 20:
+                        desc = clean_text(val)[:800]
+                        break
+
+        # Price: try structured data, then parse from text
         price = None
         struct = item.get("structuredContent") or {}
         if isinstance(struct, dict):
-            price_val = struct.get("ticketPrice") or struct.get("price")
-            if price_val:
-                price = parse_price(str(price_val))
-        if not price and (desc or body):
-            price_text = desc or clean_text(BeautifulSoup(body, "lxml").get_text())
-            price = parse_price(price_text)
+            for pk in ("ticketPrice", "price", "cost"):
+                pv = struct.get(pk)
+                if pv:
+                    price = parse_price(str(pv))
+                    if price:
+                        break
+            # Also check ticket objects
+            tickets = struct.get("tickets") or struct.get("ticketTypes") or []
+            if isinstance(tickets, list):
+                for tkt in tickets:
+                    if isinstance(tkt, dict):
+                        p = tkt.get("price") or tkt.get("amount")
+                        if p:
+                            price = parse_price(str(p))
+                            if price:
+                                break
+        if not price and desc:
+            price = parse_price(desc)
 
         # Date display
         date_display = ""
@@ -843,7 +842,7 @@ def extract_squarespace_events(url, source_name, venue_default,
             date_display = date_start
 
         ev = {
-            "id": make_id(source_name, title, str(start_ts or "")),
+            "id": make_id(source_name, title, str(item.get("startDate") or "")),
             "title": clean_text(title),
             "date_display": date_display,
             "date_start": date_start,
@@ -860,6 +859,133 @@ def extract_squarespace_events(url, source_name, venue_default,
 
         if validate_event(ev):
             events.append(ev)
+
+    return events
+
+
+def extract_squarespace_events(url, source_name, venue_default,
+                                categories_default=None):
+    """Extract events from Squarespace sites.
+    Tries multiple strategies:
+    1. ?format=json API endpoint (most reliable)
+    2. ?format=json-pretty endpoint
+    3. Embedded JSON in <script> tags within the HTML
+    Returns list of event dicts, or empty list if not a Squarespace site.
+    """
+    site_root = "/".join(url.split("/")[:3])
+
+    # Strategy 1 & 2: Try Squarespace JSON API endpoints
+    for suffix in ["?format=json", "?format=json-pretty"]:
+        json_url = url.rstrip("/") + suffix
+        try:
+            r = SESSION.get(json_url, timeout=15,
+                            headers={**HEADERS, "Accept": "application/json"})
+            if r.status_code != 200:
+                continue
+            data = r.json()
+        except Exception:
+            continue
+
+        items = _extract_squarespace_items_from_json(data)
+        if items:
+            events = _parse_squarespace_items(
+                items, url, source_name, venue_default, categories_default
+            )
+            if events:
+                return events
+
+    # Strategy 3: Also try /shows path if we're on /events (Chris' Jazz Cafe uses both)
+    if "/events" in url:
+        shows_url = url.replace("/events", "/shows")
+        for suffix in ["?format=json", "?format=json-pretty"]:
+            json_url = shows_url.rstrip("/") + suffix
+            try:
+                r = SESSION.get(json_url, timeout=15,
+                                headers={**HEADERS, "Accept": "application/json"})
+                if r.status_code != 200:
+                    continue
+                data = r.json()
+            except Exception:
+                continue
+            items = _extract_squarespace_items_from_json(data)
+            if items:
+                events = _parse_squarespace_items(
+                    items, url, source_name, venue_default, categories_default
+                )
+                if events:
+                    return events
+
+    # Strategy 4: Fetch the HTML and look for embedded Squarespace JSON
+    r = safe_get(url, timeout=15, retries=2)
+    if r:
+        events = _extract_squarespace_from_html(
+            r.text, url, source_name, venue_default, categories_default
+        )
+        if events:
+            return events
+
+    return []
+
+
+def _extract_squarespace_items_from_json(data):
+    """Extract item list from various Squarespace JSON response formats."""
+    if not isinstance(data, dict) and not isinstance(data, list):
+        return []
+    if isinstance(data, list):
+        return data
+
+    # Try known Squarespace response keys (in order of likelihood)
+    for key in ("items", "upcoming", "events"):
+        items = data.get(key)
+        if items and isinstance(items, list):
+            return items
+
+    # Nested collection -> items
+    coll = data.get("collection")
+    if isinstance(coll, dict):
+        items = coll.get("items")
+        if items and isinstance(items, list):
+            return items
+
+    # Upcoming + past combined
+    upcoming = data.get("upcoming") or []
+    past = data.get("past") or []
+    if upcoming or past:
+        return list(upcoming) + list(past)
+
+    return []
+
+
+def _extract_squarespace_from_html(html, url, source_name, venue_default,
+                                     categories_default=None):
+    """Extract Squarespace event data embedded in HTML <script> tags.
+    Squarespace often embeds collection data in a Static.SQUARESPACE_CONTEXT
+    or window.__INITIAL_STATE__ object.
+    """
+    events = []
+
+    # Look for Squarespace's embedded JSON data patterns
+    patterns = [
+        r'Static\.SQUARESPACE_CONTEXT\s*=\s*(\{.*?\});',
+        r'window\.__INITIAL_STATE__\s*=\s*(\{.*?\});',
+        r'"items"\s*:\s*(\[.*?\])\s*[,}]',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, html, re.DOTALL)
+        if match:
+            try:
+                data = json.loads(match.group(1))
+                items = _extract_squarespace_items_from_json(
+                    data if isinstance(data, dict) else {"items": data}
+                )
+                if items:
+                    events = _parse_squarespace_items(
+                        items, url, source_name, venue_default, categories_default
+                    )
+                    if events:
+                        return events
+            except (json.JSONDecodeError, TypeError):
+                continue
 
     return events
 
@@ -1477,14 +1603,28 @@ def main():
             seen[key] = len(unique_events)
             unique_events.append(ev)
         else:
-            # Merge: for each field, prefer the non-empty value
+            # Merge: for each field, prefer the non-empty/richer value
             existing = unique_events[seen[key]]
-            for field in ("description", "price", "time", "link", "source_url",
+            for field in ("description", "price", "time", "source_url",
                           "date_start", "date_end", "date_display", "venue"):
                 new_val = ev.get(field)
                 old_val = existing.get(field)
                 if new_val and (not old_val or len(str(new_val)) > len(str(old_val))):
                     existing[field] = new_val
+            # Special handling for link: prefer specific link over generic one
+            new_link = ev.get("link", "")
+            old_link = existing.get("link", "")
+            old_source_url = existing.get("source_url", "")
+            new_source_url = ev.get("source_url", "")
+            old_is_generic = (not old_link or old_link == old_source_url
+                              or old_link == new_source_url)
+            new_is_generic = (not new_link or new_link == old_source_url
+                              or new_link == new_source_url)
+            if new_link and old_is_generic and not new_is_generic:
+                # New link is specific, old was generic → always prefer new
+                existing["link"] = new_link
+            elif new_link and (not old_link or len(new_link) > len(old_link)):
+                existing["link"] = new_link
             # Merge categories
             old_cats = set(existing.get("categories") or [])
             new_cats = set(ev.get("categories") or [])
