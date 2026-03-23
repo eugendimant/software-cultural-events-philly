@@ -15,6 +15,7 @@ import json
 import re
 import sys
 import hashlib
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin
@@ -37,17 +38,35 @@ SESSION.headers.update(HEADERS)
 REPORT = {"successes": [], "failures": [], "warnings": []}
 
 
-def safe_get(url, timeout=20):
-    """Fetch URL with error handling. Returns Response or None."""
-    try:
-        r = SESSION.get(url, timeout=timeout)
-        r.raise_for_status()
-        return r
-    except Exception as e:
-        msg = f"Failed to fetch {url}: {e}"
-        print(f"  [WARN] {msg}", file=sys.stderr)
-        REPORT["failures"].append(msg)
-        return None
+def safe_get(url, timeout=20, retries=3):
+    """Fetch URL with retry logic and exponential backoff. Returns Response or None."""
+    for attempt in range(retries):
+        try:
+            r = SESSION.get(url, timeout=timeout)
+            r.raise_for_status()
+            return r
+        except requests.exceptions.HTTPError as e:
+            # Don't retry client errors (4xx) except 429 (rate limited)
+            if r.status_code == 429:
+                wait = min(2 ** (attempt + 1), 30)
+                print(f"  [WARN] Rate limited on {url}, retrying in {wait}s...", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            msg = f"Failed to fetch {url}: HTTP {r.status_code}"
+            print(f"  [WARN] {msg}", file=sys.stderr)
+            REPORT["failures"].append(msg)
+            return None
+        except Exception as e:
+            if attempt < retries - 1:
+                wait = 2 ** (attempt + 1)
+                print(f"  [WARN] Attempt {attempt + 1} failed for {url}, retrying in {wait}s...", file=sys.stderr)
+                time.sleep(wait)
+            else:
+                msg = f"Failed to fetch {url} after {retries} attempts: {e}"
+                print(f"  [WARN] {msg}", file=sys.stderr)
+                REPORT["failures"].append(msg)
+                return None
+    return None
 
 
 def make_id(source_key, title, date_str=""):
@@ -197,7 +216,7 @@ def extract_events_generic(soup, url, source_name, venue_default,
     cards = []
     for sel in card_selectors:
         cards = soup.select(sel)
-        if len(cards) >= 2:
+        if len(cards) >= 1:
             break
 
     for card in cards:
@@ -248,11 +267,18 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
         if isinstance(data, dict) and "@graph" in data:
             items = data["@graph"]
 
+        event_types = {"Event", "MusicEvent", "TheaterEvent",
+                       "DanceEvent", "Festival", "ComedyEvent",
+                       "EducationEvent", "SocialEvent"}
         for item in items:
             if not isinstance(item, dict):
                 continue
-            if item.get("@type") not in ("Event", "MusicEvent", "TheaterEvent",
-                                          "DanceEvent", "Festival"):
+            item_type = item.get("@type", "")
+            # Handle @type as string or list
+            if isinstance(item_type, list):
+                if not any(t in event_types for t in item_type):
+                    continue
+            elif item_type not in event_types:
                 continue
 
             title = item.get("name", "")
@@ -312,9 +338,55 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
     return events
 
 
+def extract_events_from_links(soup, url, source_name, venue_default, categories_default=None):
+    """Last-resort fallback: extract events from links that look event-like."""
+    events = []
+    event_url_patterns = re.compile(
+        r'/(event|show|performance|production|concert|program|ticket)s?/',
+        re.IGNORECASE
+    )
+    seen_links = set()
+    for a in soup.select("a[href]"):
+        href = a.get("href", "")
+        full_url = urljoin(url, href) if not href.startswith("http") else href
+        if full_url in seen_links:
+            continue
+        if not event_url_patterns.search(href):
+            continue
+        title = clean_text(a.get_text())
+        if not title or len(title) < 3 or len(title) > 200:
+            continue
+        seen_links.add(full_url)
+
+        # Try to find a date near this link
+        parent = a.parent
+        date_text = find_text(parent, DATE_SELECTORS) if parent else ""
+        date_start, date_end, date_display = parse_date_range(date_text)
+
+        ev = {
+            "id": make_id(source_name, title, date_text),
+            "title": title,
+            "date_display": date_display or date_text,
+            "date_start": date_start,
+            "date_end": date_end,
+            "time": None,
+            "venue": venue_default,
+            "source": source_name,
+            "source_url": url,
+            "link": full_url,
+            "price": None,
+            "categories": categories_default or categorize(title, venue_default),
+            "description": None,
+        }
+        if validate_event(ev):
+            events.append(ev)
+
+    return events
+
+
 def scrape_site(url, source_name, venue_default, card_selectors,
                 categories_default=None):
-    """Scrape a single venue site. Tries JSON-LD first, then HTML."""
+    """Scrape a single venue site. Tries JSON-LD first, then HTML, then links."""
     r = safe_get(url)
     if not r:
         return []
@@ -328,7 +400,7 @@ def scrape_site(url, source_name, venue_default, card_selectors,
         print(f"  {source_name}: {len(events)} events (via JSON-LD)")
         return events
 
-    # Fall back to HTML scraping
+    # Fall back to HTML card scraping
     events = extract_events_generic(
         soup, url, source_name, venue_default,
         card_selectors, categories_default
@@ -336,11 +408,20 @@ def scrape_site(url, source_name, venue_default, card_selectors,
     if events:
         REPORT["successes"].append(f"{source_name}: {len(events)} events (HTML)")
         print(f"  {source_name}: {len(events)} events (via HTML)")
-    else:
-        msg = f"{source_name}: 0 events found at {url}"
-        REPORT["warnings"].append(msg)
-        print(f"  [WARN] {msg}")
+        return events
 
+    # Last resort: extract from event-like links
+    events = extract_events_from_links(
+        soup, url, source_name, venue_default, categories_default
+    )
+    if events:
+        REPORT["successes"].append(f"{source_name}: {len(events)} events (links)")
+        print(f"  {source_name}: {len(events)} events (via link extraction)")
+        return events
+
+    msg = f"{source_name}: 0 events found at {url}"
+    REPORT["warnings"].append(msg)
+    print(f"  [WARN] {msg}")
     return events
 
 
@@ -551,7 +632,7 @@ def main():
     print()
 
     all_events = []
-    for src in SOURCES:
+    for i, src in enumerate(SOURCES):
         print(f"Scraping: {src['name']}")
         try:
             events = scrape_site(
@@ -566,12 +647,16 @@ def main():
             msg = f"{src['name']}: ERROR {e}"
             print(f"  [ERROR] {msg}", file=sys.stderr)
             REPORT["failures"].append(msg)
+        # Brief delay between sources to avoid rate limiting
+        if i < len(SOURCES) - 1:
+            time.sleep(1)
 
-    # Deduplicate by normalized title
+    # Deduplicate by source + normalized title (same show at different venues is kept)
     seen = set()
     unique_events = []
     for ev in all_events:
-        key = re.sub(r'\s+', ' ', ev["title"].lower().strip())
+        norm_title = re.sub(r'\s+', ' ', ev["title"].lower().strip())
+        key = (ev.get("source", ""), norm_title)
         if key not in seen:
             seen.add(key)
             unique_events.append(ev)
@@ -579,23 +664,29 @@ def main():
     # Sort by date
     unique_events.sort(key=lambda e: e.get("date_start") or "9999-99-99")
 
-    # Write events
+    # Write events — preserve previous data if this scrape found nothing
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output = {
-        "last_updated": datetime.utcnow().isoformat() + "Z",
-        "total_events": len(unique_events),
-        "sources": sorted({e["source"] for e in unique_events}),
-        "scrape_report": {
-            "successes": REPORT["successes"],
-            "failures": REPORT["failures"],
-            "warnings": REPORT["warnings"],
-        },
-        "events": unique_events,
-    }
     out_path = OUTPUT_DIR / "events.json"
-    with open(out_path, "w") as f:
-        json.dump(output, f, indent=2)
-    print(f"\nWrote {len(unique_events)} verified events to {out_path}")
+
+    if not unique_events and REPORT["failures"]:
+        # Don't overwrite good data with empty results on failure
+        print(f"\nNo events scraped and {len(REPORT['failures'])} failures — "
+              f"preserving existing {out_path}")
+    else:
+        output = {
+            "last_updated": datetime.utcnow().isoformat() + "Z",
+            "total_events": len(unique_events),
+            "sources": sorted({e["source"] for e in unique_events}),
+            "scrape_report": {
+                "successes": REPORT["successes"],
+                "failures": REPORT["failures"],
+                "warnings": REPORT["warnings"],
+            },
+            "events": unique_events,
+        }
+        with open(out_path, "w") as f:
+            json.dump(output, f, indent=2)
+        print(f"\nWrote {len(unique_events)} verified events to {out_path}")
 
     # Write sources metadata
     sources_meta = {

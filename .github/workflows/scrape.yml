@@ -30,14 +30,17 @@ jobs:
         run: python scraper/scrape_events.py
 
       - name: Check results
+        id: check
         run: |
           EVENT_COUNT=$(python -c "import json; print(json.load(open('data/events.json'))['total_events'])")
           echo "Scraped $EVENT_COUNT events"
+          echo "event_count=$EVENT_COUNT" >> "$GITHUB_OUTPUT"
           if [ "$EVENT_COUNT" -eq 0 ]; then
-            echo "WARNING: No events scraped. Check scraper logs above."
+            echo "::warning::No events scraped. Check scraper logs above."
           fi
 
       - name: Commit updated events
+        if: steps.check.outputs.event_count != '0'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
