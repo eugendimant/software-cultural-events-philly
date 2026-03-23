@@ -658,6 +658,44 @@ SOURCES = [
         "covers": "Contemporary theater, premieres",
         "venues_list": ["The Wilma Theater"],
     },
+    # ── Additional sources (added 2026-03-23) ──
+    {
+        "name": "BalletX",
+        "url": "https://www.balletx.org/season-and-tickets/",
+        "venue": "Various",
+        "cards": ["article", "[class*='event']", "[class*='season']",
+                  "[class*='performance']", ".card", "[class*='show']"],
+        "categories": ["ballet", "dance"],
+        "covers": "Contemporary ballet, dance",
+        "venues_list": ["Various"],
+    },
+    {
+        "name": "Philadelphia Theatre Company",
+        "url": "https://www.philatheatreco.org/",
+        "venue": "Suzanne Roberts Theatre",
+        "cards": ["article", "[class*='show']", "[class*='production']",
+                  "[class*='event']", ".card"],
+        "covers": "Contemporary theater, world premieres",
+        "venues_list": ["Suzanne Roberts Theatre"],
+    },
+    {
+        "name": "Visit Philadelphia Events",
+        "url": "https://www.visitphilly.com/things-to-do/events/",
+        "venue": "Various",
+        "cards": ["article", "[class*='event']", "[class*='card']",
+                  ".views-row", "[class*='listing']", ".card"],
+        "covers": "All Philadelphia events (tourism aggregator)",
+        "venues_list": ["Various"],
+    },
+    {
+        "name": "Philly Fun Guide",
+        "url": "https://phillyfunguide.com/",
+        "venue": "Various",
+        "cards": ["article", "[class*='event']", "[class*='show']",
+                  ".views-row", ".card", "[class*='listing']"],
+        "covers": "All Philadelphia performing arts (TKTS discount aggregator)",
+        "venues_list": ["Various"],
+    },
 ]
 
 
