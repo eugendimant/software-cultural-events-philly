@@ -209,6 +209,58 @@ def _enrich_descriptions(events):
     return events
 
 
+def _fix_cross_venue_contamination(events):
+    """Detect and remove descriptions/links that belong to a different venue.
+    This cleans up bad data from previous scraper runs with buggy partial matching.
+    E.g., a Kimmel Center event titled 'Trumpet' that wrongly got a Chris' Jazz Cafe
+    description about 'Trumpeter James McGovern'.
+    """
+    # Map of venue keywords -> venue identifier
+    venue_markers = {
+        "chris' jazz": "chris_jazz",
+        "chris's jazz": "chris_jazz",
+        "chris jazz": "chris_jazz",
+        "chrisjazzcafe": "chris_jazz",
+        "south jazz kitchen": "south_jazz",
+        "world cafe live": "world_cafe",
+        "kimmel": "kimmel", "marian anderson": "kimmel",
+        "academy of music": "academy", "forrest theatre": "forrest",
+        "arden theatre": "arden", "wilma theater": "wilma",
+        "fringearts": "fringearts", "fringe arts": "fringearts",
+        "penn live": "pennlive", "annenberg": "pennlive",
+    }
+
+    def _venue_id(text):
+        # Normalize apostrophes and lowercase
+        text_lower = (text or "").lower().replace("\u2019", "'")
+        for marker, vid in venue_markers.items():
+            if marker in text_lower:
+                return vid
+        return None
+
+    for event in events:
+        desc = event.get("description") or ""
+        venue = event.get("venue") or ""
+        link = event.get("link") or ""
+        source_url = event.get("source_url") or ""
+
+        ev_venue_id = _venue_id(venue) or _venue_id(event.get("source", ""))
+        if not ev_venue_id:
+            continue
+
+        # Check if description mentions a DIFFERENT venue
+        desc_venue_id = _venue_id(desc)
+        if desc_venue_id and desc_venue_id != ev_venue_id:
+            event["description"] = None  # Strip contaminated description
+
+        # Check if link points to a DIFFERENT venue's website
+        link_venue_id = _venue_id(link)
+        if link_venue_id and link_venue_id != ev_venue_id:
+            event["link"] = source_url or ""  # Reset to source URL
+
+    return events
+
+
 # ── Load events ──────────────────────────────────────────────────────────────
 @st.cache_data(ttl=300)
 def load_events():
@@ -228,6 +280,8 @@ def load_events():
         }
     # Sanitize: filter junk, clean fields
     data["events"] = [_sanitize_event(e) for e in data.get("events", []) if _is_valid_event(e)]
+    # Fix cross-venue contamination (bad data from previous scraper runs)
+    data["events"] = _fix_cross_venue_contamination(data["events"])
     # Enrich: fill missing descriptions from seed data
     data["events"] = _enrich_descriptions(data["events"])
     return data
