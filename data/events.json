@@ -1,9 +1,10 @@
 {
-  "last_updated": "2026-03-23T18:55:16.238473Z",
-  "total_events": 37,
+  "last_updated": "2026-03-23T19:24:10.774426Z",
+  "total_events": 50,
   "sources": [
     "Arden Theatre",
     "BalletX",
+    "Chris' Jazz Cafe",
     "Ensemble Arts Philly",
     "Esperanza Arts Center",
     "FringeArts",
@@ -16,7 +17,7 @@
   ],
   "scrape_report": {
     "successes": [
-      "Seed data: verified events"
+      "Seed data: merged verified events"
     ],
     "failures": [],
     "warnings": []
@@ -179,6 +180,23 @@
       "date_display": "Apr 03 \u2013 Apr 04, 2026"
     },
     {
+      "title": "Drummer Willie Jones III and His Quartet",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/126357",
+      "time": "7:30 PM",
+      "price": "$30",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Willie Jones III is 'one of the world's leading jazz drummers,' honoring influences like Philly Joe Jones, Art Blakey, and Billy Higgins. With Justin Robinson (alto sax), Danton Boller (bass), and Tyler Bullock (piano). Two shows at 7:30 and 9:30.",
+      "id": "bf90a49fc7bb",
+      "date_display": "Apr 03, 2026"
+    },
+    {
       "title": "Peppa Pig: My First Concert",
       "date_start": "2026-04-04",
       "date_end": "2026-04-04",
@@ -196,6 +214,23 @@
       "time": null
     },
     {
+      "title": "Vocalist Jackie Johnson and Her Band",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/128944",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Jazz vocalist Jackie Johnson brings her band to Chris' Jazz Cafe for an evening of standards and original compositions. Two sets at 7:30 and 9:00 PM.",
+      "id": "6ca2c459a0ad",
+      "date_display": "Apr 05, 2026"
+    },
+    {
       "title": "Lang Lang and Yannick",
       "date_start": "2026-04-07",
       "date_end": "2026-04-07",
@@ -210,6 +245,24 @@
       ],
       "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick N\u00e9zet-S\u00e9guin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
       "id": "21e6d1a0a917",
+      "date_display": "Apr 07, 2026"
+    },
+    {
+      "title": "Between the Notes: Sleepers Awake Virtual Lecture",
+      "date_start": "2026-04-07",
+      "date_end": "2026-04-07",
+      "venue": "Zoom",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/between-the-notes-sleepers-awake",
+      "time": "12:00 PM",
+      "price": "Free",
+      "categories": [
+        "classical",
+        "performance"
+      ],
+      "description": "A free virtual lecture exploring the themes and music behind Opera Philadelphia's world premiere Sleepers Awake. Join the conversation with the creative team as they discuss the making of this groundbreaking new work by Gregory Spears.",
+      "id": "9edb3b9b2f0b",
       "date_display": "Apr 07, 2026"
     },
     {
@@ -248,6 +301,23 @@
       "date_display": "Apr 09 \u2013 Apr 12, 2026"
     },
     {
+      "title": "The Oscar Beesley Quartet",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/360150",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Oscar Beesley Quartet performs an evening of original compositions and jazz standards at Chris' Jazz Cafe.",
+      "id": "203c055d5ee8",
+      "date_display": "Apr 09, 2026"
+    },
+    {
       "title": "Wilderness Generation",
       "date_start": "2026-04-10",
       "date_end": "2026-05-03",
@@ -263,6 +333,23 @@
       "time": "7:00 PM",
       "id": "d52cabce3ae6",
       "date_display": "Apr 10 \u2013 May 03, 2026"
+    },
+    {
+      "title": "Saxophonists Victor North and Aidan McKeon Sextet featuring Special Guest Trombonist Conrad Herwig",
+      "date_start": "2026-04-10",
+      "date_end": "2026-04-10",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/355335",
+      "time": "7:30 PM",
+      "price": "$25",
+      "categories": [
+        "jazz"
+      ],
+      "description": "A powerful sextet led by saxophonists Victor North and Aidan McKeon with special guest Conrad Herwig \u2014 a 4-time Grammy-nominated New York jazz trombonist who has recorded 26 albums as a leader. Two shows at 7:30 and 9:30.",
+      "id": "dbc6f975830e",
+      "date_display": "Apr 10, 2026"
     },
     {
       "title": "Ukulele Orchestra of Great Britain",
@@ -282,6 +369,40 @@
       "date_display": "Apr 11, 2026"
     },
     {
+      "title": "James Santangelo's Late Night Jam",
+      "date_start": "2026-04-11",
+      "date_end": "2026-04-11",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/363351",
+      "time": "11:00 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all.",
+      "id": "368d0f84e4d2",
+      "date_display": "Apr 11, 2026"
+    },
+    {
+      "title": "Joe Block and His Trio with Special Guest Georgia Heers",
+      "date_start": "2026-04-12",
+      "date_end": "2026-04-12",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/342181",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Pianist Joe Block leads his trio with a special guest appearance by vocalist Georgia Heers. An intimate evening of jazz at Philadelphia's premier jazz club.",
+      "id": "c0bf0887178f",
+      "date_display": "Apr 12, 2026"
+    },
+    {
       "title": "Shen Yun",
       "date_start": "2026-04-15",
       "date_end": "2026-04-15",
@@ -298,6 +419,23 @@
       "description": "5,000 years of Chinese civilization brought to life through classical Chinese dance and a live orchestra.",
       "id": "9b50086e858f",
       "date_display": "Apr 15, 2026"
+    },
+    {
+      "title": "Jonathan Daddis and His Band",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/346275",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Saxophonist Jonathan Daddis leads his band in an evening of hard bop and modern jazz at Philadelphia's beloved Chris' Jazz Cafe.",
+      "id": "32a25d39a707",
+      "date_display": "Apr 16, 2026"
     },
     {
       "title": "Pablo Batista: Latin Jazz Orchestra",
@@ -352,6 +490,40 @@
       "date_display": "Apr 17 \u2013 Apr 18, 2026"
     },
     {
+      "title": "Saxophonist Christian Ertl and His Quartet",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-17",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132133",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Christian Ertl is an alto saxophonist, bandleader, composer, and arranger originally from Waukee, Iowa, now living and performing in Philadelphia. Dinner & Show available at $70; VIP at $90.",
+      "id": "2995ab62fd77",
+      "date_display": "Apr 17, 2026"
+    },
+    {
+      "title": "Vocalist Martina Barta and the Philly All-Star Quartet",
+      "date_start": "2026-04-19",
+      "date_end": "2026-04-19",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/340902",
+      "time": "7:30 PM",
+      "price": "$25",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Czech-born jazz vocalist Martina Barta teams up with the Philly All-Star Quartet for an intimate evening of jazz vocal artistry at Chris' Jazz Cafe.",
+      "id": "772fd7f9eac9",
+      "date_display": "Apr 19, 2026"
+    },
+    {
       "title": "Christian McBride & Edgar Meyer",
       "date_start": "2026-04-21",
       "date_end": "2026-04-21",
@@ -403,6 +575,23 @@
       "date_display": "Apr 22 \u2013 Apr 26, 2026"
     },
     {
+      "title": "Duane Eubanks Celebrates Lee Morgan",
+      "date_start": "2026-04-22",
+      "date_end": "2026-04-22",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131523",
+      "time": "7:30 PM",
+      "price": "$35",
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Philadelphia Jazz Archive presents a special fundraiser concert headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. All proceeds support the preservation of Philadelphia's rich jazz legacy.",
+      "id": "239afd5ba97d",
+      "date_display": "Apr 22, 2026"
+    },
+    {
       "title": "Bolero and Don Juan",
       "date_start": "2026-04-23",
       "date_end": "2026-04-25",
@@ -435,6 +624,23 @@
       "time": "7:30 PM",
       "id": "4f919f8be978",
       "date_display": "Apr 23, 2026"
+    },
+    {
+      "title": "Oliver Mayman + Jam Session",
+      "date_start": "2026-04-24",
+      "date_end": "2026-04-24",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/363349",
+      "time": "11:00 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows.",
+      "id": "c04a05aac0d0",
+      "date_display": "Apr 24, 2026"
     },
     {
       "title": "Dog Man: The Musical",
@@ -487,6 +693,23 @@
       "time": "8:00 PM",
       "id": "b960e665bd64",
       "date_display": "Apr 30 \u2013 May 02, 2026"
+    },
+    {
+      "title": "Trumpeter James McGovern and His Quintet",
+      "date_start": "2026-04-30",
+      "date_end": "2026-04-30",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/363632",
+      "time": "10:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Trumpeter James McGovern leads his quintet at Chris' Jazz Cafe. McGovern is a rising talent from Temple University's jazz program, bringing fresh energy to the Philadelphia jazz scene.",
+      "id": "2a3a868ae95d",
+      "date_display": "Apr 30, 2026"
     },
     {
       "title": "Family Concert: Hip-Hop Orchestra",
