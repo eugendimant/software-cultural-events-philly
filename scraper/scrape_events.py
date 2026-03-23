@@ -97,6 +97,56 @@ def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+def parse_time_from_iso(iso_str):
+    """Extract a human-readable time from an ISO datetime string like '2026-03-24T20:00:00'.
+    Returns e.g. '8:00 PM' or None."""
+    if not iso_str or 'T' not in iso_str:
+        return None
+    try:
+        # Handle various ISO formats: 2026-03-24T20:00:00, 2026-03-24T20:00:00-05:00, etc.
+        time_part = iso_str.split('T')[1]
+        # Strip timezone info
+        time_part = re.sub(r'[Z+-]\d{0,2}:?\d{0,2}$', '', time_part)
+        # Parse hours and minutes
+        parts = time_part.split(':')
+        hour = int(parts[0])
+        minute = int(parts[1]) if len(parts) > 1 else 0
+        # Skip midnight (00:00) — usually means "no time specified"
+        if hour == 0 and minute == 0:
+            return None
+        # Format as 12-hour time
+        period = "AM" if hour < 12 else "PM"
+        display_hour = hour if hour <= 12 else hour - 12
+        if display_hour == 0:
+            display_hour = 12
+        if minute == 0:
+            return f"{display_hour}:00 {period}"
+        return f"{display_hour}:{minute:02d} {period}"
+    except (ValueError, IndexError):
+        return None
+
+
+def parse_time_from_text(text):
+    """Extract a time string from free text like '8:00 PM', '7:30pm', 'Doors at 7 PM', etc.
+    Returns e.g. '8:00 PM' or None."""
+    if not text:
+        return None
+    # Match patterns like "8:00 PM", "7:30pm", "8 PM", "8:00 p.m."
+    m = re.search(
+        r'(\d{1,2}):(\d{2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)',
+        text
+    )
+    if m:
+        hour, minute, period = m.group(1), m.group(2), m.group(3).upper().replace('.', '')
+        return f"{int(hour)}:{minute} {period}"
+    # Match "8 PM" or "8pm" (no minutes)
+    m = re.search(r'(\d{1,2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)', text)
+    if m:
+        hour, period = m.group(1), m.group(2).upper().replace('.', '')
+        return f"{int(hour)}:00 {period}"
+    return None
+
+
 def find_text(el, selectors):
     """Try multiple CSS selectors, return first match's text or empty string."""
     if not el:
@@ -238,6 +288,9 @@ TITLE_SELECTORS = ["h2", "h3", "h4", "h5", ".title", "[class*='title']", "[class
 DATE_SELECTORS = ["time", "[datetime]", ".date", "[class*='date']", "[class*='Date']",
                   ".event-date", "[class*='when']", "[class*='When']", "[class*='schedule']",
                   "[itemprop='startDate']", "[class*='time']", "span.meta"]
+TIME_SELECTORS = ["[class*='time']", "[class*='Time']", ".event-time",
+                  "[class*='showtime']", "[class*='start-time']", "[class*='doors']",
+                  "time", "[datetime]", "[itemprop='startDate']"]
 VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
                    "[class*='location']", "[class*='Location']", ".place",
                    "[itemprop='location']", "[class*='where']"]
@@ -274,7 +327,22 @@ def extract_events_generic(soup, url, source_name, venue_default,
 
         date_start, date_end, date_display = parse_date_range(date_text)
 
-        # Clean up description: cap at 300 chars, skip if it's just the title repeated
+        # Extract time: try dedicated time selectors, then parse from date text
+        time_text = find_text(card, TIME_SELECTORS)
+        event_time = parse_time_from_text(time_text)
+        if not event_time:
+            event_time = parse_time_from_text(date_text)
+        if not event_time:
+            # Check for datetime attributes on time elements
+            for sel in ["time[datetime]", "[datetime]", "[itemprop='startDate']"]:
+                el = card.select_one(sel)
+                if el:
+                    dt_attr = el.get("datetime") or el.get("content") or ""
+                    event_time = parse_time_from_iso(dt_attr)
+                    if event_time:
+                        break
+
+        # Clean up description: cap at 500 chars, skip if it's just the title repeated
         desc = None
         if desc_text and desc_text.strip().lower() != title.strip().lower() and len(desc_text) > 10:
             desc = clean_text(desc_text)[:500]
@@ -285,7 +353,7 @@ def extract_events_generic(soup, url, source_name, venue_default,
             "date_display": date_display or date_text,
             "date_start": date_start,
             "date_end": date_end,
-            "time": None,
+            "time": event_time,
             "venue": venue,
             "source": source_name,
             "source_url": url,
@@ -360,9 +428,10 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
             if isinstance(image, dict):
                 image = image.get("url")
 
-            # Parse dates
+            # Parse dates and times from ISO datetimes
             date_start = start[:10] if start and len(start) >= 10 else None
             date_end = end[:10] if end and len(end) >= 10 else None
+            event_time = parse_time_from_iso(start)
 
             ev = {
                 "id": make_id(source_name, title, start),
@@ -370,7 +439,7 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
                 "date_display": f"{start[:10]} – {end[:10]}" if date_start and date_end and date_start != date_end else (date_start or ""),
                 "date_start": date_start,
                 "date_end": date_end,
-                "time": None,
+                "time": event_time,
                 "venue": clean_text(venue),
                 "source": source_name,
                 "source_url": url,
@@ -424,6 +493,7 @@ def extract_microdata_events(soup, url, source_name, venue_default):
 
         date_start = start_date[:10] if start_date and len(start_date) >= 10 else None
         date_end = end_date[:10] if end_date and len(end_date) >= 10 else None
+        event_time = parse_time_from_iso(start_date) or parse_time_from_text(start_date)
 
         ev = {
             "id": make_id(source_name, title, start_date),
@@ -431,7 +501,7 @@ def extract_microdata_events(soup, url, source_name, venue_default):
             "date_display": f"{date_start} – {date_end}" if date_start and date_end and date_start != date_end else (date_start or ""),
             "date_start": date_start,
             "date_end": date_end,
-            "time": None,
+            "time": event_time,
             "venue": venue,
             "source": source_name,
             "source_url": url,
