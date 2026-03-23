@@ -80,7 +80,9 @@ def today_str():
 
 
 def is_past(event):
-    end = event.get("date_end") or event.get("date_start", "")
+    end = event.get("date_end") or event.get("date_start") or ""
+    if not end:
+        return False
     return end < today_str()
 
 
