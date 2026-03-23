@@ -124,20 +124,50 @@ def find_link(el, base_url):
 
 
 def validate_event(ev):
-    """Return True only if event has required fields. No guessing."""
-    if not ev.get("title") or len(ev["title"]) < 2:
+    """Return True only if event has required fields and looks like a real event."""
+    title = (ev.get("title") or "").strip()
+    if not title or len(title) < 3:
         return False
     if not ev.get("source"):
         return False
-    # Filter out navigation items, headers, etc.
-    skip_words = ["subscribe", "sign up", "newsletter", "donate", "login",
+    if len(title) > 200:
+        return False
+
+    title_low = title.lower()
+
+    # Exact-match junk titles
+    skip_exact = {"subscribe", "sign up", "newsletter", "donate", "login",
                   "menu", "search", "home", "about", "contact", "gallery",
-                  "facebook", "twitter", "instagram", "youtube"]
-    title_low = ev["title"].lower()
-    if any(w == title_low for w in skip_words):
+                  "facebook", "twitter", "instagram", "youtube",
+                  "search form", "no results", "loading", "error"}
+    if title_low in skip_exact:
         return False
-    if len(ev["title"]) > 200:
+
+    # Substring-match: reject titles containing these phrases (UI artifacts)
+    skip_phrases = [
+        "no upcoming events", "no events", "no results found",
+        "search form", "sign up for", "subscribe to", "cookie",
+        "privacy policy", "terms of service", "page not found",
+        "404", "coming soon", "stay tuned", "under construction",
+        "javascript", "enable javascript", "browser",
+        "start date", "end date", "e.g.,", "placeholder",
+        "select date", "filter by", "sort by", "show all",
+        "load more", "view all", "see more", "read more",
+        "click here", "learn more", "buy now",
+    ]
+    if any(phrase in title_low for phrase in skip_phrases):
         return False
+
+    # Reject titles that are mostly non-alpha (form labels, codes, etc.)
+    alpha_chars = sum(1 for c in title if c.isalpha())
+    if alpha_chars < 3:
+        return False
+
+    # Reject if date_display looks like a form label / placeholder
+    date_disp = (ev.get("date_display") or "").lower()
+    if "start date" in date_disp or "e.g." in date_disp or "placeholder" in date_disp:
+        ev["date_display"] = ""  # clear garbage display text
+
     return True
 
 
