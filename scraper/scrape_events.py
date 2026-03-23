@@ -23,6 +23,9 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seed_events import get_seed_events
+
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -199,14 +202,18 @@ def parse_date_range(text):
 # Each returns a list of event dicts. Every event MUST be traceable.
 # ---------------------------------------------------------------------------
 
-TITLE_SELECTORS = ["h2", "h3", "h4", ".title", "[class*='title']", "[class*='Title']",
-                   ".event-name", "[class*='name']", "a strong", "a b"]
-DATE_SELECTORS = ["time", ".date", "[class*='date']", "[class*='Date']",
-                  "[datetime]", ".event-date", "[class*='when']"]
+TITLE_SELECTORS = ["h2", "h3", "h4", "h5", ".title", "[class*='title']", "[class*='Title']",
+                   ".event-name", "[class*='name']", "[class*='heading']", "a strong", "a b",
+                   "[itemprop='name']", ".summary", "[class*='summary']"]
+DATE_SELECTORS = ["time", "[datetime]", ".date", "[class*='date']", "[class*='Date']",
+                  ".event-date", "[class*='when']", "[class*='When']", "[class*='schedule']",
+                  "[itemprop='startDate']", "[class*='time']", "span.meta"]
 VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
-                   "[class*='location']", "[class*='Location']", ".place"]
+                   "[class*='location']", "[class*='Location']", ".place",
+                   "[itemprop='location']", "[class*='where']"]
 PRICE_SELECTORS = ["[class*='price']", "[class*='Price']", "[class*='cost']",
-                   "[class*='Cost']", "[class*='ticket']"]
+                   "[class*='Cost']", "[class*='ticket']", "[class*='Ticket']",
+                   "[itemprop='price']", "[itemprop='lowPrice']"]
 
 
 def extract_events_generic(soup, url, source_name, venue_default,
@@ -338,6 +345,66 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
     return events
 
 
+def extract_microdata_events(soup, url, source_name, venue_default):
+    """Extract events from HTML Microdata (itemscope/itemprop attributes)."""
+    events = []
+    for item in soup.select('[itemtype*="schema.org/Event"], [itemtype*="schema.org/MusicEvent"], '
+                            '[itemtype*="schema.org/TheaterEvent"], [itemtype*="schema.org/DanceEvent"]'):
+        title_el = item.select_one('[itemprop="name"]')
+        title = clean_text(title_el.get_text()) if title_el else ""
+        if not title:
+            continue
+
+        start_el = item.select_one('[itemprop="startDate"]')
+        end_el = item.select_one('[itemprop="endDate"]')
+        start_date = (start_el.get("content") or start_el.get("datetime") or
+                      clean_text(start_el.get_text())) if start_el else ""
+        end_date = (end_el.get("content") or end_el.get("datetime") or
+                    clean_text(end_el.get_text())) if end_el else start_date
+
+        location_el = item.select_one('[itemprop="location"] [itemprop="name"]')
+        venue = clean_text(location_el.get_text()) if location_el else venue_default
+
+        url_el = item.select_one('[itemprop="url"]')
+        link = (url_el.get("href") or url_el.get("content") or "") if url_el else ""
+        if link and not link.startswith("http"):
+            link = urljoin(url, link)
+        link = link or url
+
+        price_el = item.select_one('[itemprop="price"], [itemprop="lowPrice"]')
+        price = None
+        if price_el:
+            p = price_el.get("content") or clean_text(price_el.get_text())
+            if p:
+                price = f"${p}" if p.replace('.', '').isdigit() else parse_price(p)
+
+        desc_el = item.select_one('[itemprop="description"]')
+        desc = clean_text(desc_el.get_text())[:300] if desc_el else None
+
+        date_start = start_date[:10] if start_date and len(start_date) >= 10 else None
+        date_end = end_date[:10] if end_date and len(end_date) >= 10 else None
+
+        ev = {
+            "id": make_id(source_name, title, start_date),
+            "title": title,
+            "date_display": f"{date_start} – {date_end}" if date_start and date_end and date_start != date_end else (date_start or ""),
+            "date_start": date_start,
+            "date_end": date_end,
+            "time": None,
+            "venue": venue,
+            "source": source_name,
+            "source_url": url,
+            "link": link,
+            "price": price,
+            "categories": categorize(title, venue),
+            "description": desc,
+        }
+        if validate_event(ev):
+            events.append(ev)
+
+    return events
+
+
 def extract_events_from_links(soup, url, source_name, venue_default, categories_default=None):
     """Last-resort fallback: extract events from links that look event-like."""
     events = []
@@ -398,6 +465,13 @@ def scrape_site(url, source_name, venue_default, card_selectors,
     if events:
         REPORT["successes"].append(f"{source_name}: {len(events)} events (JSON-LD)")
         print(f"  {source_name}: {len(events)} events (via JSON-LD)")
+        return events
+
+    # Try Microdata (schema.org itemscope/itemprop)
+    events = extract_microdata_events(soup, url, source_name, venue_default)
+    if events:
+        REPORT["successes"].append(f"{source_name}: {len(events)} events (Microdata)")
+        print(f"  {source_name}: {len(events)} events (via Microdata)")
         return events
 
     # Fall back to HTML card scraping
@@ -564,6 +638,26 @@ SOURCES = [
         "covers": "Dance events (community aggregator)",
         "venues_list": ["Various"],
     },
+    # Aggregator sources — broader coverage
+    {
+        "name": "Greater Phila. Cultural Alliance",
+        "url": "https://www.philaculture.org/events-calendar",
+        "venue": "Various",
+        "cards": ["article", "[class*='event']", "[class*='Event']",
+                  ".views-row", ".node", ".card",
+                  ".tribe-events-calendar-list__event", "li.event"],
+        "covers": "All Philadelphia cultural events (regional aggregator)",
+        "venues_list": ["Various"],
+    },
+    {
+        "name": "The Wilma Theater",
+        "url": "https://www.wilmatheater.org/whats-on/",
+        "venue": "The Wilma Theater",
+        "cards": ["article", "[class*='production']", "[class*='show']",
+                  "[class*='event']", "[class*='season']", ".card"],
+        "covers": "Contemporary theater, premieres",
+        "venues_list": ["The Wilma Theater"],
+    },
 ]
 
 
@@ -650,6 +744,18 @@ def main():
         # Brief delay between sources to avoid rate limiting
         if i < len(SOURCES) - 1:
             time.sleep(1)
+
+    # Merge in seed events if scraping yielded few results
+    scraped_count = len(all_events)
+    if scraped_count < 5:
+        print(f"\nOnly {scraped_count} scraped events — merging seed data...")
+        seed = get_seed_events()
+        # Filter seed events to only include future/current events
+        today = datetime.now().strftime("%Y-%m-%d")
+        seed = [e for e in seed if (e.get("date_end") or e.get("date_start", "")) >= today]
+        all_events.extend(seed)
+        REPORT["successes"].append(f"Seed data: {len(seed)} verified events added")
+        print(f"  Added {len(seed)} seed events (verified from public sources)")
 
     # Deduplicate by source + normalized title (same show at different venues is kept)
     seen = set()

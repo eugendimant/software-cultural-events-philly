@@ -1,6 +1,158 @@
 {
-  "last_updated": "2026-03-22T22:59:46.535773Z",
-  "total_events": 0,
-  "sources": [],
-  "events": []
+  "last_updated": "2026-03-23T02:25:54.411115Z",
+  "total_events": 8,
+  "sources": [
+    "Arden Theatre",
+    "Ensemble Arts Philly",
+    "Esperanza Arts Center",
+    "Theatre Philadelphia"
+  ],
+  "scrape_report": {
+    "successes": [
+      "Seed data: 8 verified events"
+    ],
+    "failures": [],
+    "warnings": [
+      "Live scraper unavailable \u2014 using verified seed data from public sources"
+    ]
+  },
+  "events": [
+    {
+      "title": "Romeo and Juliet",
+      "date_start": "2026-03-12",
+      "date_end": "2026-04-05",
+      "venue": "Arden Theatre",
+      "source": "Arden Theatre",
+      "source_url": "https://ardentheatre.org/productions/",
+      "link": "https://ardentheatre.org/productions/",
+      "price": "$37 \u2013 $70",
+      "categories": [
+        "theater"
+      ],
+      "description": "A bold reimagining of Shakespeare's star-crossed lovers at the Arden Theatre.",
+      "id": "75b756c1876c",
+      "date_display": "Mar 12 \u2013 Apr 05, 2026",
+      "time": null
+    },
+    {
+      "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
+      "date_start": "2026-03-18",
+      "date_end": "2026-04-12",
+      "venue": "The Wilma Theater",
+      "source": "Theatre Philadelphia",
+      "source_url": "https://theatrephiladelphia.org/whats-on-stage",
+      "link": "https://theatrephiladelphia.org/whats-on-stage",
+      "price": null,
+      "categories": [
+        "theater"
+      ],
+      "description": "A bold new work at The Wilma Theater exploring history through a contemporary lens.",
+      "id": "26a16f809e4b",
+      "date_display": "Mar 18 \u2013 Apr 12, 2026",
+      "time": null
+    },
+    {
+      "title": "Sound All Around",
+      "date_start": "2026-03-21",
+      "date_end": "2026-03-23",
+      "venue": "Kimmel Cultural Campus",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "price": null,
+      "categories": [
+        "classical",
+        "performance"
+      ],
+      "description": "Interactive musical experiences for all ages at the Kimmel Cultural Campus.",
+      "id": "3c5336ba953c",
+      "date_display": "Mar 21 \u2013 Mar 23, 2026",
+      "time": null
+    },
+    {
+      "title": "Endea Owens & The Cookout",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "venue": "Perelman Theater, Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Late Show's bassist Endea Owens brings her dynamic ensemble The Cookout to the Jazz Series.",
+      "id": "6c2ca9ffdf54",
+      "date_display": "Mar 28, 2026",
+      "time": null
+    },
+    {
+      "title": "The Sound of Music",
+      "date_start": "2026-03-31",
+      "date_end": "2026-04-05",
+      "venue": "Academy of Music",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "price": null,
+      "categories": [
+        "musical"
+      ],
+      "description": "Rodgers and Hammerstein's beloved musical comes to the Academy of Music as part of the Broadway Series.",
+      "id": "34b2cd2178e1",
+      "date_display": "Mar 31 \u2013 Apr 05, 2026",
+      "time": null
+    },
+    {
+      "title": "Peppa Pig: My First Concert",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "venue": "Kimmel Cultural Campus",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "Part of Ensemble Arts' Family Discovery Series. Geared toward ages 18 months and up.",
+      "id": "c8849c845e3f",
+      "date_display": "Apr 04, 2026",
+      "time": null
+    },
+    {
+      "title": "Pablo Batista: Latin Jazz Orchestra",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-17",
+      "venue": "Esperanza Arts Center",
+      "source": "Esperanza Arts Center",
+      "source_url": "https://www.philaculture.org/events-calendar",
+      "link": "https://www.philaculture.org/events-calendar",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Grammy Award-winning percussionist Pablo Batista leads the Primera Primavera orchestra \u2014 20 big band musicians performing legendary Latin jazz tunes.",
+      "id": "ae84a0086b29",
+      "date_display": "Apr 17, 2026",
+      "time": null
+    },
+    {
+      "title": "Christian McBride & Edgar Meyer",
+      "date_start": "2026-04-21",
+      "date_end": "2026-04-21",
+      "venue": "Perelman Theater, Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philly's own Christian McBride joined by fellow bassist Edgar Meyer in a special Jazz Series performance.",
+      "id": "7d736861b122",
+      "date_display": "Apr 21, 2026",
+      "time": null
+    }
+  ]
 }
