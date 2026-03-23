@@ -250,33 +250,50 @@ def share_url(event):
 
 
 def event_description(event, max_sentences=4):
-    """Get event description, truncated to max_sentences. Generate fallback if empty."""
+    """Get event description, truncated to max_sentences. Generate rich fallback if empty."""
+    import re as _re
     desc = _s(event, "description").strip()
+
     if not desc:
-        # Build a useful fallback from available fields
+        # Fallback: only use verified fields from the event data itself
         title = _s(event, "title")
         venue = _s(event, "venue")
         cats = _cats(event)
-        cat_label = " and ".join(c.capitalize() for c in cats[:2]) if cats else "performing arts"
-        date_disp = _s(event, "date_display")
         price = _s(event, "price")
+        source = _s(event, "source")
+        time = _s(event, "time")
+        date_disp = _s(event, "date_display")
+
+        # Category-aware opener (factual, no embellishment)
+        cat_labels = {
+            "jazz": "Jazz", "classical": "Classical music",
+            "musical": "Musical theater", "theater": "Theater",
+            "ballet": "Ballet", "dance": "Dance",
+            "opera": "Opera", "concert": "Concert",
+            "performance": "Performance",
+        }
+        primary_cat = cats[0] if cats else ""
+        cat_label = cat_labels.get(primary_cat, "Performing arts")
 
         parts = []
         if venue:
-            parts.append(f"{cat_label} event at {venue}.")
+            parts.append(f"{cat_label} at {venue}.")
         else:
             parts.append(f"{cat_label} event in Philadelphia.")
         if date_disp:
-            parts.append(f"Showing {date_disp}.")
-        if price and price.lower() != "free":
-            parts.append(f"Tickets from {price}.")
-        elif price and price.lower() == "free":
+            parts.append(f"{date_disp}.")
+        if time:
+            parts.append(f"Showtime {time}.")
+        if price and price.lower() == "free":
             parts.append("Free admission.")
+        elif price:
+            parts.append(f"Tickets {price}.")
+        if source:
+            parts.append(f"Source: {source}.")
         desc = " ".join(parts)
 
     # Truncate to max_sentences
-    import re
-    sentences = re.split(r'(?<=[.!?])\s+', desc)
+    sentences = _re.split(r'(?<=[.!?])\s+', desc)
     if len(sentences) > max_sentences:
         desc = " ".join(sentences[:max_sentences])
         if not desc.endswith((".", "!", "?")):
@@ -433,10 +450,12 @@ div[data-testid="stDecoration"] {display: none;}
 }
 .event-venue { color: #a78bfa; font-weight: 500; }
 .event-desc {
-    color: #aaaabc;
-    font-size: 0.86rem;
-    line-height: 1.6;
-    margin-top: 0.4rem;
+    color: #c0c0d4;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    max-width: 90ch;
 }
 .price-tag {
     background: rgba(104, 211, 145, 0.12);
@@ -446,6 +465,25 @@ div[data-testid="stDecoration"] {display: none;}
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+}
+
+/* Info pills — compact metadata tags inside event cards */
+.info-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #9999b0;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.price-pill {
+    background: rgba(104, 211, 145, 0.08);
+    border-color: rgba(104, 211, 145, 0.15);
+    color: #68d391;
 }
 .month-header {
     font-family: 'Playfair Display', serif;
@@ -835,27 +873,47 @@ def main():
 
             eid = _s(event, "id")
             badges = "".join(category_badge_html(c) for c in _cats(event))
-            price_html = f'<span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
-            time_html = f' · {_s(event, "time")}' if _s(event, "time") else ""
+            price = _s(event, "price")
+            price_html = f'<span class="price-tag">{price}</span>' if price else ""
+            time_str = _s(event, "time")
             urg = urgency_badge(event)
-
             desc = event_description(event)
+            link = _s(event, "link")
+            venue = _s(event, "venue")
+            date_disp = _s(event, "date_display")
+            source = _s(event, "source")
+
+            # Build info pills row
+            info_pills = []
+            if date_disp:
+                info_pills.append(f'<span class="info-pill">📅 {date_disp}</span>')
+            if time_str:
+                info_pills.append(f'<span class="info-pill">🕐 {time_str}</span>')
+            if price:
+                info_pills.append(f'<span class="info-pill price-pill">{"🆓" if price.lower() == "free" else "🎟"} {price}</span>')
+            if source:
+                info_pills.append(f'<span class="info-pill">via {source}</span>')
+            info_html = " ".join(info_pills)
 
             st.markdown(f"""
             <div class="event-card">
-                <div class="event-title">{_s(event, 'title')}{urg}</div>
-                <div class="event-meta">
-                    <span class="event-venue">{_s(event, 'venue')}</span>{time_html}
-                </div>
-                <div class="event-meta">
-                    {_s(event, 'date_display')}{' · ' if _s(event, 'price') else ''}{price_html}
+                <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                    <div style="flex:1">
+                        <div class="event-title">{_s(event, 'title')}{urg}</div>
+                        <div class="event-meta" style="margin-bottom:0.5rem">
+                            <span class="event-venue">{venue}</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="event-desc">{desc}</div>
+                <div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+                    {info_html}
+                </div>
                 <div style="margin-top:0.6rem">{badges}</div>
             </div>
             """, unsafe_allow_html=True)
 
-            # Action buttons integrated under the card
+            # Compact action row
             btn_cols = st.columns([1, 1, 1, 1, 1])
             with btn_cols[0]:
                 is_selected = eid in st.session_state.selected_ids
@@ -867,8 +925,8 @@ def main():
                         st.session_state.selected_ids.add(eid)
                     st.rerun()
             with btn_cols[1]:
-                if _s(event, "link"):
-                    st.link_button("🎟 Tickets", _s(event, "link"), use_container_width=True)
+                if link:
+                    st.link_button("🎟 Tickets", link, use_container_width=True)
             with btn_cols[2]:
                 st.link_button("📅 Calendar", gcal_url(event), use_container_width=True)
             with btn_cols[3]:
