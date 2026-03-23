@@ -531,16 +531,11 @@ def main():
 
     st.divider()
 
-    # ── Filters ──────────────────────────────────────────────────────────
-    col_cat, col_venue, col_time, col_search, col_sort = st.columns([2, 2, 2, 2, 1])
+    # ── Search bar (full width, prominent) ──────────────────────────────
+    search = st.text_input("Search", placeholder="🔍  Search events, venues, artists...", label_visibility="collapsed")
 
-    with col_cat:
-        category = st.selectbox(
-            "Category",
-            CATEGORIES,
-            format_func=lambda x: (CAT_ICONS.get(x, "🎯") + " " + x.capitalize()) if x != "all" else "🎯 All Categories",
-            label_visibility="collapsed",
-        )
+    # ── Compact filter row: venue, when, sort ────────────────────────────
+    col_venue, col_time, col_sort = st.columns([2, 2, 1])
 
     with col_venue:
         all_venues = sorted({e.get("venue", "") for e in current_events if e.get("venue")})
@@ -565,26 +560,42 @@ def main():
             label_visibility="collapsed",
         )
 
-    with col_search:
-        search = st.text_input("Search", placeholder="Search events, venues, artists...", label_visibility="collapsed")
-
     with col_sort:
         sort_by = st.selectbox(
             "Sort",
             ["date", "name", "venue"],
-            format_func=lambda x: {"date": "By Date", "name": "By Name", "venue": "By Venue"}.get(x, x),
+            format_func=lambda x: {"date": "↕ Date", "name": "↕ Name", "venue": "↕ Venue"}.get(x, x),
             label_visibility="collapsed",
         )
+
+    # ── Category chips (the primary way to filter by category) ────────
+    all_cats = []
+    for e in current_events:
+        all_cats.extend(e.get("categories", []))
+    cat_counts = Counter(all_cats)
+    if cat_counts:
+        visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
+        all_chips = ["all"] + visible_cats
+        chip_cols = st.columns(len(all_chips))
+        for i, cat in enumerate(all_chips):
+            with chip_cols[i]:
+                if cat == "all":
+                    label = "All"
+                else:
+                    icon = CAT_ICONS.get(cat, "")
+                    count = cat_counts[cat]
+                    label = f"{icon} {cat.capitalize()} {count}"
+                btn_type = "primary" if st.session_state.active_category == cat else "secondary"
+                if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
+                    st.session_state.active_category = cat
+                    st.rerun()
 
     # ── Apply filters (only to current/future events) ─────────────────────
     filtered = list(current_events)
 
-    # Apply category from either the selectbox or the chip bar
     active_cat = st.session_state.active_category
     if active_cat != "all":
         filtered = [e for e in filtered if active_cat in e.get("categories", [])]
-    elif category != "all":
-        filtered = [e for e in filtered if category in e.get("categories", [])]
 
     if venue_filter != "all":
         filtered = [e for e in filtered if e.get("venue") == venue_filter]
@@ -617,28 +628,6 @@ def main():
         filtered.sort(key=lambda e: e.get("venue", "").lower())
     else:
         filtered.sort(key=lambda e: e.get("date_start", "9999"))
-
-    # ── Category chip filters (clickable) ───────────────────────────────
-    all_cats = []
-    for e in current_events:
-        all_cats.extend(e.get("categories", []))
-    cat_counts = Counter(all_cats)
-    if cat_counts:
-        visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
-        all_chips = ["all"] + visible_cats
-        chip_cols = st.columns(len(all_chips))
-        for i, cat in enumerate(all_chips):
-            with chip_cols[i]:
-                if cat == "all":
-                    label = "All"
-                else:
-                    icon = CAT_ICONS.get(cat, "")
-                    count = cat_counts[cat]
-                    label = f"{icon} {cat.capitalize()} {count}"
-                btn_type = "primary" if st.session_state.active_category == cat else "secondary"
-                if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
-                    st.session_state.active_category = cat
-                    st.rerun()
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in current_events if is_happening_now(e)]
