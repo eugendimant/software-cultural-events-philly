@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -22,9 +22,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Validate events.json exists and has events
+        run: |
+          echo "=== Checking data/events.json ==="
+          if [ ! -f data/events.json ]; then
+            echo "ERROR: data/events.json not found!"
+            exit 1
+          fi
+          EVENT_COUNT=$(python3 -c "import json; d=json.load(open('data/events.json')); print(len(d.get('events',[])))")
+          echo "Events in data/events.json: $EVENT_COUNT"
+          if [ "$EVENT_COUNT" -eq 0 ]; then
+            echo "WARNING: events.json has 0 events — fallback in app.js will be used"
+          fi
+          echo "=== Checking index.html ==="
+          test -f index.html && echo "OK: index.html exists" || exit 1
+          echo "=== Checking assets ==="
+          test -f assets/app.js && echo "OK: assets/app.js exists" || exit 1
+          test -f assets/style.css && echo "OK: assets/style.css exists" || exit 1
+
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp manifest.json _site/ 2>/dev/null || true
+          cp -r assets _site/
+          cp -r data _site/
+          echo "=== Deploy directory contents ==="
+          find _site -type f | head -20
+
       - uses: actions/configure-pages@v4
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
+
       - id: deployment
         uses: actions/deploy-pages@v4

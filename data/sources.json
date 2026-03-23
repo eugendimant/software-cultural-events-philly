@@ -115,6 +115,22 @@
       "venues": [
         "Various"
       ]
+    },
+    {
+      "name": "Greater Phila. Cultural Alliance",
+      "url": "https://www.philaculture.org/events-calendar",
+      "covers": "All Philadelphia cultural events (regional aggregator)",
+      "venues": [
+        "Various"
+      ]
+    },
+    {
+      "name": "The Wilma Theater",
+      "url": "https://www.wilmatheater.org/whats-on/",
+      "covers": "Contemporary theater, premieres",
+      "venues": [
+        "The Wilma Theater"
+      ]
     }
   ]
 }
