@@ -221,8 +221,9 @@ DETAIL_DESC_SELECTORS = [
 ]
 
 DETAIL_TIME_SELECTORS = [
-    # Squarespace event detail selectors
-    ".eventitem-meta-time", ".eventitem-meta-date",
+    # Squarespace event detail selectors (confirmed structure)
+    "li.eventitem-meta-time", ".eventitem-meta-time",
+    ".event-time-localized", ".eventitem-meta-date",
     "[class*='showtime']", "[class*='show-time']",
     "[class*='event-time']", "[class*='performance-time']",
     "[class*='start-time']", "[class*='curtain']",
@@ -242,6 +243,10 @@ DETAIL_PRICE_SELECTORS = [
 ]
 
 DETAIL_TICKET_SELECTORS = [
+    # Squarespace button block (confirmed structure)
+    "a.sqs-block-button-element", ".sqs-block-button-container a",
+    "a.eventlist-button",
+    # Generic ticket link selectors
     "a[href*='ticket']", "a[href*='buy']", "a[href*='purchase']",
     "a[href*='checkout']", "a[href*='order']",
     "a[class*='ticket']", "a[class*='buy']",
@@ -784,8 +789,9 @@ def parse_date_range(text):
 # ---------------------------------------------------------------------------
 
 TITLE_SELECTORS = [
-    # Squarespace event title selectors
-    ".eventlist-title a", ".eventlist-title", ".eventitem-title",
+    # Squarespace event title selectors (confirmed structure)
+    "a.eventlist-title-link", ".eventlist-title a", "h1.eventlist-title a",
+    ".eventlist-title", ".eventitem-title",
     # Generic selectors
     "h1 a", "h2 a", "h3 a",
     "h2", "h3", "h4", "h5", ".title", "[class*='title']", "[class*='Title']",
@@ -793,27 +799,38 @@ TITLE_SELECTORS = [
     "[itemprop='name']", ".summary", "[class*='summary']",
 ]
 DATE_SELECTORS = [
-    # Squarespace event date selectors
-    ".eventlist-meta-date", "time.event-date",
+    # Squarespace event date selectors (confirmed structure)
+    "li.eventlist-meta-date", ".eventlist-meta-date", "time.event-date",
+    ".eventlist-datetag",
     # Generic selectors
     "time", "[datetime]", ".date", "[class*='date']", "[class*='Date']",
     ".event-date", "[class*='when']", "[class*='When']", "[class*='schedule']",
     "[itemprop='startDate']", "[class*='time']", "span.meta",
 ]
-TIME_SELECTORS = ["[class*='time']", "[class*='Time']", ".event-time",
-                  "[class*='showtime']", "[class*='start-time']", "[class*='doors']",
-                  "time", "[datetime]", "[itemprop='startDate']"]
+TIME_SELECTORS = [
+    # Squarespace time selectors (confirmed structure)
+    "li.eventlist-meta-time", ".event-time-localized", ".eventlist-meta-time",
+    # Generic selectors
+    "[class*='time']", "[class*='Time']", ".event-time",
+    "[class*='showtime']", "[class*='start-time']", "[class*='doors']",
+    "time", "[datetime]", "[itemprop='startDate']",
+]
 VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
                    "[class*='location']", "[class*='Location']", ".place",
                    "[itemprop='location']", "[class*='where']"]
 PRICE_SELECTORS = ["[class*='price']", "[class*='Price']", "[class*='cost']",
                    "[class*='Cost']", "[class*='ticket']", "[class*='Ticket']",
                    "[itemprop='price']", "[itemprop='lowPrice']"]
-DESC_SELECTORS = ["[class*='description']", "[class*='Description']", "[class*='desc']",
-                  "[class*='synopsis']", "[class*='Synopsis']", "[class*='summary']",
-                  "[class*='Summary']", "[class*='excerpt']", "[class*='Excerpt']",
-                  "[class*='body']", "[class*='teaser']", "[class*='detail']",
-                  "[itemprop='description']", "p"]
+DESC_SELECTORS = [
+    # Squarespace listing page description (confirmed structure)
+    ".eventlist-description", ".eventlist-excerpt",
+    # Generic selectors
+    "[class*='description']", "[class*='Description']", "[class*='desc']",
+    "[class*='synopsis']", "[class*='Synopsis']", "[class*='summary']",
+    "[class*='Summary']", "[class*='excerpt']", "[class*='Excerpt']",
+    "[class*='body']", "[class*='teaser']", "[class*='detail']",
+    "[itemprop='description']", "p",
+]
 
 
 def extract_events_generic(soup, url, source_name, venue_default,
