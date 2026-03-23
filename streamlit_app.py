@@ -178,7 +178,7 @@ def share_url(event):
     params = urllib.parse.urlencode({
         "subject": f"Check out: {title} in Philly!",
         "body": body,
-    })
+    }, quote_via=urllib.parse.quote)
     return f"mailto:?{params}"
 
 
@@ -228,7 +228,7 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-.stApp { font-family: 'Inter', sans-serif; }
+.stApp { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 
 /* Hide default Streamlit elements for cleaner look */
 #MainMenu {visibility: hidden;}
@@ -238,133 +238,165 @@ div[data-testid="stDecoration"] {display: none;}
 
 .main-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin-bottom: -0.3rem;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
-.main-title .highlight { color: #7c6aff; }
+.main-title .highlight {
+    background: linear-gradient(135deg, #7c6aff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .subtitle {
     color: #8888a0;
-    font-size: 0.82rem;
-    letter-spacing: 2.5px;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
-/* Stats */
+/* Stats — glassmorphism */
 .stat-box {
-    background: #16161f;
-    border: 1px solid #23233080;
-    border-radius: 12px;
-    padding: 0.8rem 1rem;
+    background: rgba(22, 22, 31, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(124, 106, 255, 0.12);
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
     text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stat-box:hover {
+    border-color: rgba(124, 106, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(124, 106, 255, 0.1);
 }
 .stat-value {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    color: #7c6aff;
+    background: linear-gradient(135deg, #7c6aff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1.2;
 }
 .stat-label {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: #8888a0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
 }
 
-/* Event cards */
+/* Event cards — glassmorphism */
 .event-card {
-    background: #16161f;
-    border: 1px solid #23233080;
-    border-radius: 12px;
-    padding: 1.2rem 1.5rem;
+    background: rgba(22, 22, 31, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.3rem 1.5rem;
     margin-bottom: 0.4rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .event-card:hover {
-    border-color: #7c6aff55;
-    box-shadow: 0 4px 20px rgba(124, 106, 255, 0.08);
+    border-color: rgba(124, 106, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(124, 106, 255, 0.08);
+    transform: translateY(-2px);
 }
 .event-card-past {
-    background: #12121a;
-    border: 1px solid #1a1a2580;
-    border-radius: 12px;
+    background: rgba(18, 18, 26, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
     padding: 0.8rem 1.2rem;
     margin-bottom: 0.3rem;
-    opacity: 0.65;
+    opacity: 0.6;
+    transition: opacity 0.2s;
 }
+.event-card-past:hover { opacity: 0.8; }
 .event-title {
     font-size: 1.15rem;
     font-weight: 600;
-    color: #e8e8f0;
-    margin-bottom: 0.25rem;
+    color: #f0f0f8;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
 }
 .event-meta {
     color: #8888a0;
     font-size: 0.86rem;
     margin-bottom: 0.3rem;
 }
-.event-venue { color: #7c6aff; font-weight: 500; }
+.event-venue { color: #a78bfa; font-weight: 500; }
 .event-desc {
     color: #aaaabc;
-    font-size: 0.88rem;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    line-height: 1.6;
     margin-top: 0.4rem;
 }
 .price-tag {
-    background: #68d39122;
+    background: rgba(104, 211, 145, 0.12);
     color: #68d391;
-    padding: 2px 10px;
-    border-radius: 12px;
-    font-size: 0.78rem;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.76rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
 }
 .month-header {
     font-family: 'Playfair Display', serif;
-    font-size: 1.35rem;
-    color: #e8e8f0;
-    margin-top: 1.5rem;
-    margin-bottom: 0.6rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid #23233080;
+    font-size: 1.4rem;
+    color: #f0f0f8;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    letter-spacing: -0.01em;
 }
 
-/* Spotlight */
+/* Spotlight — gradient glass */
 .spotlight-card {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    border: 1px solid #7c6aff44;
-    border-radius: 14px;
-    padding: 1.1rem 1.3rem;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.8));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(124, 106, 255, 0.2);
+    border-radius: 18px;
+    padding: 1.2rem 1.4rem;
     height: 100%;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.spotlight-card:hover {
+    border-color: rgba(124, 106, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(124, 106, 255, 0.12);
+    transform: translateY(-2px);
 }
 .spotlight-label {
-    color: #7c6aff;
-    font-size: 0.7rem;
+    color: #a78bfa;
+    font-size: 0.68rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.4rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.5rem;
 }
 
 /* Coming up next */
 .coming-up {
-    background: #12121a;
-    border: 1px solid #23233080;
-    border-radius: 10px;
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.3rem;
+    background: rgba(18, 18, 26, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 0.8rem 1.1rem;
+    margin-bottom: 0.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.2s ease;
 }
-
-/* Analytics bar */
-.analytics-bar {
-    background: #16161f;
-    border: 1px solid #23233080;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    margin-bottom: 0.8rem;
+.coming-up:hover {
+    border-color: rgba(124, 106, 255, 0.15);
+    background: rgba(18, 18, 26, 0.8);
 }
 
 /* Category chip used in filter bar */
@@ -381,10 +413,42 @@ div[data-testid="stDecoration"] {display: none;}
 
 div[data-testid="stHorizontalBlock"] > div { padding: 0 0.3rem; }
 
-/* Make link buttons smaller */
+/* Streamlit button styling — Apple-like */
+.stButton > button {
+    border-radius: 12px !important;
+    font-weight: 500 !important;
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.8rem !important;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    letter-spacing: 0.01em !important;
+}
+.stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px rgba(124, 106, 255, 0.15) !important;
+}
+
+/* Make link buttons match */
 .stLinkButton > a {
     font-size: 0.82rem !important;
-    padding: 0.3rem 0.6rem !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 12px !important;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.stLinkButton > a:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px rgba(124, 106, 255, 0.12) !important;
+}
+
+/* Selectbox styling */
+.stSelectbox > div > div {
+    border-radius: 12px !important;
+}
+
+/* Text input */
+.stTextInput > div > div > input {
+    border-radius: 12px !important;
 }
 
 /* Past events section */
@@ -398,11 +462,21 @@ div[data-testid="stHorizontalBlock"] > div { padding: 0 0.3rem; }
 
 /* Export section */
 .export-section {
-    background: #16161f;
-    border: 1px solid #23233080;
-    border-radius: 12px;
+    background: rgba(22, 22, 31, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
     padding: 1rem 1.3rem;
     margin-bottom: 1rem;
+}
+
+/* Download button */
+.stDownloadButton > button {
+    border-radius: 12px !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    border-radius: 14px !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -420,9 +494,13 @@ def main():
     past_events = [e for e in all_events if is_past(e)]
     past_events.sort(key=lambda e: e.get("date_start", ""), reverse=True)
 
-    # ── Initialize session state for selected events ──────────────────────
+    # ── Initialize session state ────────────────────────────────────────
     if "selected_ids" not in st.session_state:
         st.session_state.selected_ids = set()
+    if "last_refresh" not in st.session_state:
+        st.session_state.last_refresh = datetime.now()
+    if "active_category" not in st.session_state:
+        st.session_state.active_category = "all"
 
     # ── Header ───────────────────────────────────────────────────────────
     col_title, col_spacer, col_s1, col_s2, col_s3, col_refresh = st.columns([4, 0.5, 1, 1, 1, 1])
@@ -439,15 +517,12 @@ def main():
     with col_refresh:
         if st.button("🔄 Refresh", use_container_width=True):
             st.cache_data.clear()
+            st.session_state.last_refresh = datetime.now()
             st.rerun()
 
-    # ── Last updated line ────────────────────────────────────────────────
-    try:
-        dt = datetime.fromisoformat(last_updated.replace("Z", "+00:00"))
-        updated_str = dt.strftime("%b %d, %Y at %I:%M %p")
-    except Exception:
-        updated_str = "—"
-    st.caption(f"Data updated: {updated_str}")
+    # ── Last refreshed line ──────────────────────────────────────────────
+    refresh_str = st.session_state.last_refresh.strftime("%b %d, %Y at %I:%M %p")
+    st.caption(f"Last refreshed: {refresh_str}")
 
     st.divider()
 
@@ -499,7 +574,11 @@ def main():
     # ── Apply filters (only to current/future events) ─────────────────────
     filtered = list(current_events)
 
-    if category != "all":
+    # Apply category from either the selectbox or the chip bar
+    active_cat = st.session_state.active_category
+    if active_cat != "all":
+        filtered = [e for e in filtered if active_cat in e.get("categories", [])]
+    elif category != "all":
         filtered = [e for e in filtered if category in e.get("categories", [])]
 
     if venue_filter != "all":
@@ -534,21 +613,28 @@ def main():
     else:
         filtered.sort(key=lambda e: e.get("date_start", "9999"))
 
-    # ── Category overview bar ─────────────────────────────────────────────
+    # ── Category chip filters (clickable) ───────────────────────────────
     all_cats = []
     for e in current_events:
         all_cats.extend(e.get("categories", []))
     cat_counts = Counter(all_cats)
     if cat_counts:
-        chips_html = ""
-        for cat in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"]:
-            count = cat_counts.get(cat, 0)
-            if count > 0:
-                color = CAT_COLORS.get(cat, "#a0aec0")
+        visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
+        chip_cols = st.columns([1] * (len(visible_cats) + 1))
+        with chip_cols[0]:
+            if st.button("🎯 All", use_container_width=True,
+                         type="primary" if st.session_state.active_category == "all" else "secondary"):
+                st.session_state.active_category = "all"
+                st.rerun()
+        for i, cat in enumerate(visible_cats):
+            with chip_cols[i + 1]:
                 icon = CAT_ICONS.get(cat, "")
-                chips_html += f'<span class="cat-chip" style="background:{color}18;color:{color};border:1px solid {color}44">{icon} {cat.capitalize()} <strong>{count}</strong></span>'
-        if chips_html:
-            st.markdown(f'<div style="margin-bottom:1rem">{chips_html}</div>', unsafe_allow_html=True)
+                count = cat_counts[cat]
+                label = f"{icon} {cat.capitalize()} ({count})"
+                btn_type = "primary" if st.session_state.active_category == cat else "secondary"
+                if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
+                    st.session_state.active_category = cat
+                    st.rerun()
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in current_events if is_happening_now(e)]
@@ -663,13 +749,17 @@ def main():
             </div>
             """, unsafe_allow_html=True)
 
-            btn_cols = st.columns([0.5, 1, 1, 1, 1, 4])
+            # Action buttons integrated under the card
+            btn_cols = st.columns([1, 1, 1, 1, 1])
             with btn_cols[0]:
                 is_selected = eid in st.session_state.selected_ids
-                if st.checkbox("", value=is_selected, key=f"sel_{eid}", label_visibility="collapsed"):
-                    st.session_state.selected_ids.add(eid)
-                else:
-                    st.session_state.selected_ids.discard(eid)
+                sel_label = "✅ Selected" if is_selected else "☐ Select"
+                if st.button(sel_label, key=f"sel_{eid}", use_container_width=True):
+                    if is_selected:
+                        st.session_state.selected_ids.discard(eid)
+                    else:
+                        st.session_state.selected_ids.add(eid)
+                    st.rerun()
             with btn_cols[1]:
                 if event.get("link"):
                     st.link_button("🎟 Tickets", event["link"], use_container_width=True)
