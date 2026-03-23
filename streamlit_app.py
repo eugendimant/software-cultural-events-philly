@@ -56,6 +56,28 @@ _JUNK_PHRASES = [
     "javascript", "enable javascript", "load more", "click here",
 ]
 
+# Single-word titles that are instruments, genres, nav elements — NOT real events.
+# Scrapers sometimes extract these from page headers, nav menus, or section labels.
+_JUNK_EXACT_TITLES = {
+    # Instruments
+    "trumpet", "piano", "guitar", "drums", "bass", "violin",
+    "saxophone", "flute", "cello", "clarinet", "trombone",
+    "percussion", "vocals", "voice", "organ", "harp",
+    # Genres / generic music words
+    "jazz", "classical", "orchestra", "choir", "ensemble",
+    "concert", "recital", "performance", "show", "event",
+    # UI / navigation
+    "view event", "buy tickets", "read more", "list view",
+    "calendar view", "all events", "upcoming events", "past events",
+    "description", "biography", "bio", "details", "info",
+    "tickets", "pricing", "schedule", "dates", "times",
+    "venue", "location", "directions", "parking",
+    "food & drink", "food and drink", "merch", "merchandise",
+    "online streaming", "pro studio services",
+    "subscribe", "sign up", "newsletter", "donate", "login",
+    "menu", "search", "home", "about", "contact", "gallery",
+}
+
 def _is_valid_event(event):
     """Filter out scraper artifacts and junk entries at display time."""
     if not isinstance(event, dict):
@@ -63,7 +85,10 @@ def _is_valid_event(event):
     title = (event.get("title") or "").strip()
     if not title or len(title) < 3:
         return False
-    title_low = title.lower()
+    title_low = title.lower().strip()
+    # Reject exact-match junk titles (instruments, nav items, etc.)
+    if title_low in _JUNK_EXACT_TITLES:
+        return False
     if any(phrase in title_low for phrase in _JUNK_PHRASES):
         return False
     # Must have at least a plausible title (some alpha characters)

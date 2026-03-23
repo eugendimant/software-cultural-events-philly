@@ -691,12 +691,31 @@ def validate_event(ev):
 
     title_low = title.lower()
 
-    # Exact-match junk titles
-    skip_exact = {"subscribe", "sign up", "newsletter", "donate", "login",
-                  "menu", "search", "home", "about", "contact", "gallery",
-                  "facebook", "twitter", "instagram", "youtube",
-                  "search form", "no results", "loading", "error"}
-    if title_low in skip_exact:
+    # Exact-match junk titles — includes instrument names, UI elements,
+    # navigation words, and single generic words that aren't real event names
+    skip_exact = {
+        # UI/navigation
+        "subscribe", "sign up", "newsletter", "donate", "login",
+        "menu", "search", "home", "about", "contact", "gallery",
+        "facebook", "twitter", "instagram", "youtube",
+        "search form", "no results", "loading", "error",
+        "view event", "buy tickets", "read more", "list view",
+        "calendar view", "all events", "back to events",
+        "upcoming events", "past events", "featured events",
+        # Instrument/genre names (not real event titles)
+        "trumpet", "piano", "guitar", "drums", "bass", "violin",
+        "saxophone", "flute", "cello", "clarinet", "trombone",
+        "percussion", "vocals", "voice", "organ", "harp",
+        "jazz", "classical", "orchestra", "choir", "ensemble",
+        "concert", "recital", "performance", "show", "event",
+        # Generic section headers
+        "description", "biography", "bio", "details", "info",
+        "tickets", "pricing", "schedule", "dates", "times",
+        "venue", "location", "directions", "parking",
+        "food & drink", "food and drink", "merch", "merchandise",
+        "online streaming", "pro studio services",
+    }
+    if title_low.strip() in skip_exact:
         return False
 
     # Substring-match: reject titles containing these phrases (UI artifacts)
