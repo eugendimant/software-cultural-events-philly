@@ -170,16 +170,31 @@ def find_text(el, selectors):
 
 
 def find_link(el, base_url):
-    """Find first <a> link in element, resolve relative URLs."""
+    """Find best event detail link in element, resolve relative URLs.
+    Prefers links that look like event detail pages (contain /event or /show + ID).
+    """
     if not el:
         return ""
-    a = el.select_one("a[href]")
-    if a and a.get("href"):
-        href = a["href"]
-        if href.startswith("http"):
-            return href
-        return urljoin(base_url, href)
-    return ""
+    # Collect all links in the element
+    candidates = []
+    for a in el.select("a[href]"):
+        href = a.get("href", "")
+        if not href or href.startswith("#") or href.startswith("javascript"):
+            continue
+        full = urljoin(base_url, href) if not href.startswith("http") else href
+        # Skip links back to the same listing page
+        if full.rstrip("/") == base_url.rstrip("/"):
+            continue
+        candidates.append((href, full))
+    if not candidates:
+        return ""
+    # Prefer links that look like event detail pages
+    event_pattern = re.compile(r'/(event|show|performance|concert|program)s?/\S+', re.I)
+    for href, full in candidates:
+        if event_pattern.search(href):
+            return full
+    # Fall back to the first non-listing link
+    return candidates[0][1]
 
 
 # ---------------------------------------------------------------------------
@@ -191,6 +206,10 @@ def find_link(el, base_url):
 # CSS selectors for detail page content
 DETAIL_DESC_SELECTORS = [
     "[itemprop='description']",
+    # Squarespace event detail page selectors
+    ".eventitem-column-content", ".eventitem-description",
+    ".eventitem-backbutton + div",
+    # Generic event description selectors
     "[class*='event-description']", "[class*='event-detail']",
     "[class*='production-description']", "[class*='show-description']",
     "[class*='about']", "[class*='About']",
@@ -202,6 +221,9 @@ DETAIL_DESC_SELECTORS = [
 ]
 
 DETAIL_TIME_SELECTORS = [
+    # Squarespace event detail selectors (confirmed structure)
+    "li.eventitem-meta-time", ".eventitem-meta-time",
+    ".event-time-localized", ".eventitem-meta-date",
     "[class*='showtime']", "[class*='show-time']",
     "[class*='event-time']", "[class*='performance-time']",
     "[class*='start-time']", "[class*='curtain']",
@@ -221,6 +243,10 @@ DETAIL_PRICE_SELECTORS = [
 ]
 
 DETAIL_TICKET_SELECTORS = [
+    # Squarespace button block (confirmed structure)
+    "a.sqs-block-button-element", ".sqs-block-button-container a",
+    "a.eventlist-button",
+    # Generic ticket link selectors
     "a[href*='ticket']", "a[href*='buy']", "a[href*='purchase']",
     "a[href*='checkout']", "a[href*='order']",
     "a[class*='ticket']", "a[class*='buy']",
@@ -229,9 +255,109 @@ DETAIL_TICKET_SELECTORS = [
 ]
 
 
+def _extract_squarespace_detail(soup, result):
+    """Extract event details from a Squarespace event detail page.
+    Squarespace event pages have a predictable structure with:
+    - .eventitem-title: event title
+    - .eventitem-column-content: main content area with description
+    - .eventitem-meta-time: show times (7:30 PM, 9:00 PM)
+    - .eventitem-meta-date: date
+    - Content sections for Event Description, Biography, etc.
+    """
+    # Skip patterns: boilerplate, pricing details, and very short lines
+    skip_phrases = [
+        "cookie", "privacy", "subscribe", "newsletter",
+        "join our youtube", "all-in price", "server gratuity",
+        "beverages not included", "check out inclusive",
+    ]
+
+    # Collect ALL paragraphs from the page, categorized by quality
+    bio_paragraphs = []   # Biography/about text (highest priority)
+    desc_paragraphs = []  # Event description text
+    body_paragraphs = []  # General body text (lowest priority)
+
+    # Scan all content blocks on the page
+    all_blocks = soup.select(".sqs-block-content, .eventitem-column-content, "
+                             ".eventitem-body, article .sqs-layout")
+    for block in all_blocks:
+        block_text = (block.get_text() or "").lower()
+
+        # Determine if this block is a biography section
+        is_bio = any(kw in block_text[:100] for kw in
+                     ["biography", "about the artist", "about the performer", "bio"])
+        # Determine if this is an event description section
+        is_event_desc = "event description" in block_text[:100]
+
+        for p in block.select("p"):
+            text = clean_text(p.get_text())
+            if not text or len(text) < 25:
+                continue
+            if any(skip in text.lower() for skip in skip_phrases):
+                continue
+            # Skip pricing lines (contain $ and words like "admission", "dinner")
+            if "$" in text and any(w in text.lower() for w in
+                                    ["admission", "dinner", "vip", "a la carte"]):
+                continue
+
+            if is_bio:
+                bio_paragraphs.append(text)
+            elif is_event_desc:
+                desc_paragraphs.append(text)
+            else:
+                body_paragraphs.append(text)
+
+    # Build description: prefer biography > event description > body
+    # Combine the best available content
+    best_parts = []
+    if bio_paragraphs:
+        best_parts.extend(bio_paragraphs[:2])  # First 2 bio paragraphs
+    if desc_paragraphs:
+        best_parts.extend(desc_paragraphs[:2])
+    if not best_parts and body_paragraphs:
+        # Filter body paragraphs: prefer longer ones (more informative)
+        good_body = [p for p in body_paragraphs if len(p) > 40]
+        best_parts.extend(good_body[:2])
+
+    if best_parts:
+        result["description"] = " ".join(best_parts)[:800]
+
+    # Time: try Squarespace time selectors
+    if not result["time"]:
+        time_el = soup.select_one(".eventitem-meta-time")
+        if time_el:
+            result["time"] = parse_time_from_text(time_el.get_text())
+        if not result["time"]:
+            # Look for time in the content text
+            page_text = soup.get_text()[:3000]
+            # Pattern: "Set times 7:30pm & 9:00pm" or "7:30 PM"
+            result["time"] = parse_time_from_text(page_text)
+
+    # Price: look for admission/pricing text
+    if not result["price"]:
+        page_text = soup.get_text()
+        # Look for "General Admission" price pattern common on Chris' Jazz Cafe
+        price_patterns = [
+            r'General\s+Admission[^$]*\$(\d+)',
+            r'Admission[^$]*\$(\d+)',
+            r'(?:Starting\s+(?:at|from)|From|Tickets?\s*:?\s*(?:from)?)\s*\$[\d,.]+',
+        ]
+        for pattern in price_patterns:
+            m = re.search(pattern, page_text, re.IGNORECASE)
+            if m:
+                if m.lastindex and m.lastindex >= 1:
+                    result["price"] = f"${m.group(1)}"
+                else:
+                    result["price"] = parse_price(m.group(0))
+                if result["price"]:
+                    break
+        if not result["price"]:
+            result["price"] = parse_price(page_text[:3000])
+
+
 def scrape_detail_page(url):
     """Fetch an event detail page and extract rich content.
     Returns dict with keys: description, time, price, ticket_url (all may be None).
+    Handles both generic event pages and Squarespace-specific event detail pages.
     """
     result = {"description": None, "time": None, "price": None, "ticket_url": None}
 
@@ -239,7 +365,20 @@ def scrape_detail_page(url):
     if not r:
         return result
 
-    soup = BeautifulSoup(r.text, "lxml")
+    try:
+        soup = BeautifulSoup(r.text, "lxml")
+    except Exception:
+        soup = BeautifulSoup(r.text, "html.parser")
+
+    # Check if this is a Squarespace event detail page
+    is_squarespace = bool(
+        soup.select_one(".eventitem-column-content, .eventitem-title, "
+                        "[class*='eventitem'], .sqs-block-content")
+    )
+    if is_squarespace:
+        _extract_squarespace_detail(soup, result)
+        if result["description"]:
+            return result  # Got good data from Squarespace-specific extraction
 
     # 1. Try JSON-LD first — most reliable source
     for script in soup.select("script[type='application/ld+json']"):
@@ -377,9 +516,9 @@ def scrape_detail_page(url):
     return result
 
 
-def enrich_events(events, max_detail_fetches=40):
-    """Enrich events by fetching their detail pages for missing data.
-    Only fetches detail pages for events that need enrichment and have a usable link.
+def enrich_events(events, max_detail_fetches=60):
+    """Enrich events by fetching their detail pages for descriptions, times, prices.
+    Fetches detail pages for ALL events that have a specific link and are missing data.
     """
     enriched = 0
     for ev in events:
@@ -389,23 +528,26 @@ def enrich_events(events, max_detail_fetches=40):
 
         link = ev.get("link", "")
         source_url = ev.get("source_url", "")
+        link_is_generic = not link or link == source_url
 
-        # Skip if link is same as source_url (generic listing page) — nothing new to learn
-        # unless we can guess a better URL
-        needs_enrichment = (
-            not ev.get("description")
-            or not ev.get("time")
-            or not ev.get("price")
-            or link == source_url  # link points to generic listing page
-        )
+        # Determine what data is missing
+        missing_desc = not ev.get("description")
+        missing_time = not ev.get("time")
+        missing_price = not ev.get("price")
+        needs_enrichment = missing_desc or missing_time or missing_price
 
         if not needs_enrichment:
             continue
 
-        # If link is the same as source_url, try to discover the detail page URL
-        detail_url = link if link != source_url else None
-        if not detail_url:
+        # Find the best URL to fetch for enrichment
+        detail_url = None
+        if not link_is_generic:
+            # Already have a specific link — use it
+            detail_url = link
+        else:
+            # Try to guess a detail URL from venue patterns
             detail_url = guess_detail_url(ev)
+
         if not detail_url:
             continue
 
@@ -413,19 +555,23 @@ def enrich_events(events, max_detail_fetches=40):
         detail = scrape_detail_page(detail_url)
         enriched += 1
 
-        # Merge enrichment data — only fill in missing fields
-        if detail["description"] and not ev.get("description"):
-            ev["description"] = detail["description"]
-        elif detail["description"] and ev.get("description") and len(detail["description"]) > len(ev["description"]) * 1.5:
-            # Use detail page description if it's substantially longer
-            ev["description"] = detail["description"]
+        # Merge enrichment data
+        if detail["description"]:
+            if not ev.get("description"):
+                ev["description"] = detail["description"]
+            elif len(detail["description"]) > len(ev.get("description", "")) * 1.3:
+                # Use detail page description if substantially richer
+                ev["description"] = detail["description"]
         if detail["time"] and not ev.get("time"):
             ev["time"] = detail["time"]
         if detail["price"] and not ev.get("price"):
             ev["price"] = detail["price"]
-        # Update the event link to point to the actual detail page (not the listing)
-        if link == source_url and detail_url:
+        # If we had a generic link but guessed a detail URL, update the link
+        if link_is_generic and detail_url:
             ev["link"] = detail_url
+        # If detail page found a ticket URL, use it
+        if detail.get("ticket_url") and link_is_generic:
+            ev["link"] = detail["ticket_url"]
 
         # Small delay to be polite
         time.sleep(0.5)
@@ -642,26 +788,49 @@ def parse_date_range(text):
 # Each returns a list of event dicts. Every event MUST be traceable.
 # ---------------------------------------------------------------------------
 
-TITLE_SELECTORS = ["h2", "h3", "h4", "h5", ".title", "[class*='title']", "[class*='Title']",
-                   ".event-name", "[class*='name']", "[class*='heading']", "a strong", "a b",
-                   "[itemprop='name']", ".summary", "[class*='summary']"]
-DATE_SELECTORS = ["time", "[datetime]", ".date", "[class*='date']", "[class*='Date']",
-                  ".event-date", "[class*='when']", "[class*='When']", "[class*='schedule']",
-                  "[itemprop='startDate']", "[class*='time']", "span.meta"]
-TIME_SELECTORS = ["[class*='time']", "[class*='Time']", ".event-time",
-                  "[class*='showtime']", "[class*='start-time']", "[class*='doors']",
-                  "time", "[datetime]", "[itemprop='startDate']"]
+TITLE_SELECTORS = [
+    # Squarespace event title selectors (confirmed structure)
+    "a.eventlist-title-link", ".eventlist-title a", "h1.eventlist-title a",
+    ".eventlist-title", ".eventitem-title",
+    # Generic selectors
+    "h1 a", "h2 a", "h3 a",
+    "h2", "h3", "h4", "h5", ".title", "[class*='title']", "[class*='Title']",
+    ".event-name", "[class*='name']", "[class*='heading']", "a strong", "a b",
+    "[itemprop='name']", ".summary", "[class*='summary']",
+]
+DATE_SELECTORS = [
+    # Squarespace event date selectors (confirmed structure)
+    "li.eventlist-meta-date", ".eventlist-meta-date", "time.event-date",
+    ".eventlist-datetag",
+    # Generic selectors
+    "time", "[datetime]", ".date", "[class*='date']", "[class*='Date']",
+    ".event-date", "[class*='when']", "[class*='When']", "[class*='schedule']",
+    "[itemprop='startDate']", "[class*='time']", "span.meta",
+]
+TIME_SELECTORS = [
+    # Squarespace time selectors (confirmed structure)
+    "li.eventlist-meta-time", ".event-time-localized", ".eventlist-meta-time",
+    # Generic selectors
+    "[class*='time']", "[class*='Time']", ".event-time",
+    "[class*='showtime']", "[class*='start-time']", "[class*='doors']",
+    "time", "[datetime]", "[itemprop='startDate']",
+]
 VENUE_SELECTORS = [".venue", "[class*='venue']", "[class*='Venue']",
                    "[class*='location']", "[class*='Location']", ".place",
                    "[itemprop='location']", "[class*='where']"]
 PRICE_SELECTORS = ["[class*='price']", "[class*='Price']", "[class*='cost']",
                    "[class*='Cost']", "[class*='ticket']", "[class*='Ticket']",
                    "[itemprop='price']", "[itemprop='lowPrice']"]
-DESC_SELECTORS = ["[class*='description']", "[class*='Description']", "[class*='desc']",
-                  "[class*='synopsis']", "[class*='Synopsis']", "[class*='summary']",
-                  "[class*='Summary']", "[class*='excerpt']", "[class*='Excerpt']",
-                  "[class*='body']", "[class*='teaser']", "[class*='detail']",
-                  "[itemprop='description']", "p"]
+DESC_SELECTORS = [
+    # Squarespace listing page description (confirmed structure)
+    ".eventlist-description", ".eventlist-excerpt",
+    # Generic selectors
+    "[class*='description']", "[class*='Description']", "[class*='desc']",
+    "[class*='synopsis']", "[class*='Synopsis']", "[class*='summary']",
+    "[class*='Summary']", "[class*='excerpt']", "[class*='Excerpt']",
+    "[class*='body']", "[class*='teaser']", "[class*='detail']",
+    "[itemprop='description']", "p",
+]
 
 
 def extract_events_generic(soup, url, source_name, venue_default,
@@ -1389,8 +1558,14 @@ SOURCES = [
         "name": "Chris' Jazz Cafe",
         "url": "https://www.chrisjazzcafe.com/events",
         "venue": "Chris' Jazz Cafe",
-        "cards": ["article", "[class*='event']", "[class*='Event']",
-                  ".sqs-block", ".summary-item", ".eventlist-event"],
+        "cards": [
+            # Squarespace event list classes (most specific first)
+            ".eventlist-event--upcoming", ".eventlist-event--past",
+            "[class*='eventlist-event']",
+            "article.eventlist-event", "article",
+            "[class*='event']", "[class*='Event']",
+            ".sqs-block", ".summary-item",
+        ],
         "categories": ["jazz"],
         "covers": "Jazz concerts",
         "venues_list": ["Chris' Jazz Cafe"],

@@ -1168,14 +1168,9 @@ def _render_event_card(event, st_ctx):
     datetime_line = " &nbsp;·&nbsp; ".join(datetime_parts)
 
     # Action links
-    source_url = _s(event, "source_url")
     action_links = []
     if link:
-        # Use appropriate label: "Tickets" for specific event pages, "Events" for listing pages
-        ticket_label = "🎟 Tickets"
-        if link == source_url:
-            ticket_label = "🎟 Events"
-        action_links.append(f'<a href="{link}" target="_blank">{ticket_label}</a>')
+        action_links.append(f'<a href="{link}" target="_blank">🎟 Tickets</a>')
     action_links.append(f'<a href="{gcal_url(event)}" target="_blank">📅 Cal</a>')
     action_links.append(f'<a href="{maps_url(event)}" target="_blank">📍 Map</a>')
     action_links.append(f'<a href="{share_url(event)}" target="_blank">📤 Share</a>')
