@@ -445,8 +445,11 @@ def days_until(event):
 
 
 def gcal_url(event):
-    start_str = _s(event, "date_start").replace("-", "")
-    end_raw = _s(event, "date_end") or _s(event, "date_start")
+    start_raw = _s(event, "date_start")
+    if not start_raw:
+        return "#"
+    start_str = start_raw.replace("-", "")
+    end_raw = _s(event, "date_end") or start_raw
     try:
         end_dt = datetime.strptime(end_raw, "%Y-%m-%d") + timedelta(days=1)
         end_str = end_dt.strftime("%Y%m%d")
@@ -1089,11 +1092,13 @@ def main():
     cat_counts = Counter(all_cats)
     if cat_counts:
         visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "exhibition", "lecture", "science", "performance"] if cat_counts.get(c, 0) > 0]
-        # Cap at 9 categories + "All" = 10 chips max to prevent overflow
-        visible_cats = visible_cats[:9]
         all_chips = ["all"] + visible_cats
-        chip_cols = st.columns(len(all_chips))
-        for i, cat in enumerate(all_chips):
+        # Use two rows if more than 8 chips to prevent overflow
+        row_size = max(6, (len(all_chips) + 1) // 2) if len(all_chips) > 8 else len(all_chips)
+        row1 = all_chips[:row_size]
+        row2 = all_chips[row_size:]
+        chip_cols = st.columns(len(row1))
+        for i, cat in enumerate(row1):
             with chip_cols[i]:
                 if cat == "all":
                     label = "All"
@@ -1105,6 +1110,17 @@ def main():
                 if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
                     st.session_state.active_category = cat
                     st.rerun()
+        if row2:
+            chip_cols2 = st.columns(len(row2))
+            for i, cat in enumerate(row2):
+                with chip_cols2[i]:
+                    icon = CAT_ICONS.get(cat, "")
+                    count = cat_counts[cat]
+                    label = f"{icon} {cat.capitalize()} {count}"
+                    btn_type = "primary" if st.session_state.active_category == cat else "secondary"
+                    if st.button(label, use_container_width=True, type=btn_type, key=f"chip_{cat}"):
+                        st.session_state.active_category = cat
+                        st.rerun()
 
     # ── Apply filters (only to current/future events) ─────────────────────
     filtered = list(current_events)
@@ -1155,7 +1171,7 @@ def main():
             with cols[i % num_cols]:
                 badge = category_badge_html(_cats(event)[0]) if _cats(event) else ""
                 price_html = f' · {_s(event, "price")}' if _s(event, "price") else ""
-                link = _s(event, "link")
+                link = _s(event, "link") or _s(event, "source_url") or "#"
                 spot_desc = event_description(event, max_sentences=2)
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
@@ -1372,7 +1388,7 @@ def _render_event_card(event, st_ctx):
     time_str = _s(event, "time")
     urg = urgency_badge(event)
     desc = event_description(event)
-    link = _s(event, "link")
+    link = _s(event, "link") or _s(event, "source_url")
     venue = _s(event, "venue")
     date_disp = _s(event, "date_display")
 

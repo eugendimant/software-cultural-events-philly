@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-24T13:19:10.130381Z",
-  "total_events": 69,
+  "last_updated": "2026-03-24T13:28:59.446546Z",
+  "total_events": 73,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -17,7 +17,9 @@
     "Philadelphia Museum of Art",
     "Philadelphia Orchestra",
     "Philadelphia Theatre Company",
+    "Profs and Pints",
     "Science on Tap",
+    "Sofar Sounds Philadelphia",
     "The Franklin Institute",
     "The Wilma Theater",
     "Walnut Street Theatre"
@@ -152,24 +154,6 @@
       "date_display": "Mar 17 \u2013 Apr 05, 2026"
     },
     {
-      "title": "Sound All Around",
-      "date_start": "2026-03-21",
-      "date_end": "2026-03-23",
-      "venue": "Kimmel Cultural Campus",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/sound-all-around",
-      "price": null,
-      "categories": [
-        "classical",
-        "performance"
-      ],
-      "description": "A free weekend of interactive musical experiences for all ages at the Kimmel Cultural Campus. Explore instruments, meet musicians, enjoy mini-performances, and discover the world of orchestral music up close.",
-      "id": "3c5336ba953c",
-      "date_display": "Mar 21 \u2013 Mar 23, 2026",
-      "time": null
-    },
-    {
       "title": "BalletX Spring Series 2026",
       "date_start": "2026-03-27",
       "date_end": "2026-03-29",
@@ -257,6 +241,23 @@
       "date_display": "Mar 31 \u2013 Apr 05, 2026"
     },
     {
+      "title": "The Rise and Fall of the Mob in Philadelphia",
+      "date_start": "2026-04-02",
+      "date_end": "2026-04-02",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-rise-fall-mob",
+      "price": "$13.50",
+      "categories": [
+        "lecture"
+      ],
+      "description": "A lively talk over drinks about the dramatic history of organized crime in Philadelphia \u2014 from Prohibition-era bootlegging to modern-day prosecutions. Presented by a university professor at a neighborhood bar.",
+      "time": "6:00 PM",
+      "id": "95d0c1dfc857",
+      "date_display": "Apr 02, 2026"
+    },
+    {
       "title": "Dance Theatre of Harlem",
       "date_start": "2026-04-03",
       "date_end": "2026-04-04",
@@ -341,6 +342,24 @@
       "id": "6d4f6efa58ac",
       "date_display": "Apr 05, 2026",
       "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-april"
+    },
+    {
+      "title": "Sofar Sounds Philadelphia: Secret Concert",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "venue": "Secret Venue (Sofar Sounds)",
+      "source": "Sofar Sounds Philadelphia",
+      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
+      "link": "https://www.sofarsounds.com/cities/philadelphia",
+      "price": "$25",
+      "categories": [
+        "concert",
+        "performance"
+      ],
+      "description": "Intimate live music in a secret Philadelphia location, revealed 24 hours before the show. Three emerging artists perform acoustic sets in an unplugged, phone-free environment. Sofar reimagines the live music experience.",
+      "time": "7:30 PM",
+      "id": "e4558e2d7119",
+      "date_display": "Apr 05, 2026"
     },
     {
       "title": "Lang Lang and Yannick",
@@ -636,6 +655,24 @@
       "date_display": "Apr 16, 2026"
     },
     {
+      "title": "The Science of Happiness",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-science-happiness",
+      "price": "$13.50",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "What does research say about what truly makes us happy? A psychology professor breaks down the latest findings on well-being, gratitude, and the pursuit of the good life \u2014 all over a pint.",
+      "time": "6:00 PM",
+      "id": "79833874c684",
+      "date_display": "Apr 16, 2026"
+    },
+    {
       "title": "Pablo Batista: Latin Jazz Orchestra",
       "date_start": "2026-04-17",
       "date_end": "2026-04-17",
@@ -719,6 +756,24 @@
       ],
       "description": "Czech-born jazz vocalist Martina Barta teams up with the Philly All-Star Quartet for an intimate evening of jazz vocal artistry at Chris' Jazz Cafe.",
       "id": "772fd7f9eac9",
+      "date_display": "Apr 19, 2026"
+    },
+    {
+      "title": "Sofar Sounds Philadelphia: April Session",
+      "date_start": "2026-04-19",
+      "date_end": "2026-04-19",
+      "venue": "Secret Venue (Sofar Sounds)",
+      "source": "Sofar Sounds Philadelphia",
+      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
+      "link": "https://www.sofarsounds.com/cities/philadelphia",
+      "price": "$25",
+      "categories": [
+        "concert",
+        "performance"
+      ],
+      "description": "Live music in an unexpected Philadelphia space \u2014 venue revealed the day before. Enjoy three handpicked artists performing stripped-back sets in an intimate, phone-free atmosphere.",
+      "time": "7:30 PM",
+      "id": "e26226cffdf5",
       "date_display": "Apr 19, 2026"
     },
     {
@@ -941,6 +996,24 @@
       ],
       "description": "Trumpeter James McGovern leads his quintet at Chris' Jazz Cafe. McGovern is a rising talent from Temple University's jazz program, bringing fresh energy to the Philadelphia jazz scene.",
       "id": "2a3a868ae95d",
+      "date_display": "Apr 30, 2026"
+    },
+    {
+      "title": "AI and the Future of Work",
+      "date_start": "2026-04-30",
+      "date_end": "2026-04-30",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-ai-future-work",
+      "price": "$13.50",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "How will artificial intelligence reshape the job market? A technology researcher explores the economic and social implications of AI automation, and what it means for workers today.",
+      "time": "6:00 PM",
+      "id": "fb701e821bdc",
       "date_display": "Apr 30, 2026"
     },
     {
