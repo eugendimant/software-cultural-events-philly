@@ -475,7 +475,7 @@ def days_until(event):
     delta = (start - today).days
     if delta < 0:
         if end >= today:
-            return "Now"
+            return "Today"
         return "Past"
     elif delta == 0:
         return "Today"
