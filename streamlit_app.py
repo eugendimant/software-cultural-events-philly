@@ -9,7 +9,7 @@ from collections import Counter
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="PhillyCulture — Philadelphia Performing Arts",
+    page_title="PhillyCulture — Philadelphia Arts & Culture",
     page_icon="🎭",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -25,16 +25,20 @@ CAT_COLORS = {
     "classical": "#d6a0ff",
     "opera": "#fc8181",
     "concert": "#68d391",
+    "exhibition": "#f6ad55",
+    "lecture": "#76e4f7",
+    "science": "#9ae6b4",
     "performance": "#a0aec0",
 }
 
 CAT_ICONS = {
     "musical": "🎵", "theater": "🎭", "dance": "💃", "ballet": "🩰",
     "jazz": "🎷", "classical": "🎻", "opera": "🎤", "concert": "🎶",
+    "exhibition": "🖼️", "lecture": "🎓", "science": "🔬",
     "performance": "🎪",
 }
 
-CATEGORIES = ["all", "musical", "theater", "dance", "ballet", "jazz", "classical", "opera", "concert", "performance"]
+CATEGORIES = ["all", "musical", "theater", "dance", "ballet", "jazz", "classical", "opera", "concert", "exhibition", "lecture", "science", "performance"]
 
 
 # ── Load seed events as fallback ─────────────────────────────────────────────
@@ -76,6 +80,10 @@ _JUNK_EXACT_TITLES = {
     "online streaming", "pro studio services",
     "subscribe", "sign up", "newsletter", "donate", "login",
     "menu", "search", "home", "about", "contact", "gallery",
+    # Museum nav/section labels that scrapers might extract
+    "exhibitions", "exhibits", "exhibit", "exhibition",
+    "programs", "events", "calendar", "on view", "plan your visit",
+    "membership", "support", "education", "collections",
 }
 
 def _is_valid_event(event):
@@ -483,6 +491,8 @@ def event_description(event, max_sentences=2):
             "musical": "Musical theater", "theater": "Live theater",
             "ballet": "Ballet", "dance": "Dance performance",
             "opera": "Opera", "concert": "Live concert",
+            "exhibition": "Exhibition", "lecture": "Lecture",
+            "science": "Science event",
             "performance": "Live performance",
         }
         cat_label = cat_labels.get(primary_cat, "Live performance")
@@ -511,6 +521,24 @@ def event_description(event, max_sentences=2):
                 desc = f"{performer} performs at the Kimmel Cultural Campus."
         elif "academy of music" in venue_lower:
             desc = f"{cat_label} at the historic Academy of Music."
+        elif "philadelphia museum of art" in venue_lower or "philamuseum" in venue_lower:
+            desc = f"{title} at the Philadelphia Museum of Art."
+        elif "barnes" in venue_lower:
+            desc = f"{title} at the Barnes Foundation — home to one of the world's greatest collections of Impressionist and Post-Impressionist art."
+        elif "franklin institute" in venue_lower:
+            desc = f"{title} at The Franklin Institute — Philadelphia's premier science museum."
+        elif "penn museum" in venue_lower:
+            desc = f"{title} at the Penn Museum — world-renowned archaeology and anthropology collections."
+        elif "academy of natural" in venue_lower or "ansp" in venue_lower:
+            desc = f"{title} at the Academy of Natural Sciences — America's oldest natural history museum."
+        elif "mutter" in venue_lower or "mütter" in venue_lower:
+            desc = f"{title} at the Mütter Museum — Philadelphia's museum of medical history."
+        elif "science history" in venue_lower:
+            desc = f"{title} at the Science History Institute — exploring the history of science and its impact."
+        elif "national mechanics" in venue_lower:
+            desc = f"{title} at National Mechanics bar in Old City."
+        elif "sofar" in venue_lower:
+            desc = f"{title} — an intimate Sofar Sounds concert at a secret Philadelphia venue, revealed the day before the show."
         else:
             desc = f"{cat_label} at {venue}." if venue else f"{cat_label} in Philadelphia."
             if time_str:
@@ -980,7 +1008,7 @@ def main():
     col_title, col_spacer, col_s1, col_s2, col_s3, col_refresh = st.columns([4, 0.5, 1, 1, 1, 1])
     with col_title:
         st.markdown('<div class="main-title">Philly<span class="highlight">Culture</span></div>', unsafe_allow_html=True)
-        st.markdown('<div class="subtitle">Your guide to Philadelphia\'s performing arts</div>', unsafe_allow_html=True)
+        st.markdown('<div class="subtitle">Your guide to Philadelphia\'s arts &amp; culture</div>', unsafe_allow_html=True)
     with col_s1:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(current_events)}</div><div class="stat-label">Events</div></div>', unsafe_allow_html=True)
     with col_s2:
@@ -1043,9 +1071,9 @@ def main():
         all_cats.extend(_cats(e))
     cat_counts = Counter(all_cats)
     if cat_counts:
-        visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "performance"] if cat_counts.get(c, 0) > 0]
-        # Cap at 7 categories + "All" = 8 chips max to prevent overflow
-        visible_cats = visible_cats[:7]
+        visible_cats = [c for c in ["theater", "musical", "jazz", "classical", "ballet", "dance", "opera", "concert", "exhibition", "lecture", "science", "performance"] if cat_counts.get(c, 0) > 0]
+        # Cap at 9 categories + "All" = 10 chips max to prevent overflow
+        visible_cats = visible_cats[:9]
         all_chips = ["all"] + visible_cats
         chip_cols = st.columns(len(all_chips))
         for i, cat in enumerate(all_chips):

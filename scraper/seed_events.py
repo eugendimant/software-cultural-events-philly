@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-Seed Events — verified Philadelphia performing arts events from public sources.
+Seed Events — verified Philadelphia arts & culture events from public sources.
 
 These are real, verified events from Visit Philadelphia, Ensemble Arts Philly,
-Theatre Philadelphia, Penn Live Arts, Opera Philadelphia, and other public listings.
+Theatre Philadelphia, Penn Live Arts, Opera Philadelphia, Philadelphia Museum of Art,
+Barnes Foundation, Franklin Institute, Penn Museum, Academy of Natural Sciences,
+Mütter Museum, Science on Tap, Profs and Pints, and other public listings.
 They serve as baseline data when the live scraper cannot reach venue websites.
 
-Last verified: 2026-03-23 via visitphilly.com, ensembleartsphilly.org,
+Last verified: 2026-03-24 via visitphilly.com, ensembleartsphilly.org,
 theatrephiladelphia.org, pennlivearts.org, operaphila.org, walnutstreettheatre.org,
-philadelphiaballet.org, balletx.org
+philadelphiaballet.org, balletx.org, philamuseum.org, barnesfoundation.org,
+fi.edu, penn.museum, ansp.org, muttermuseum.org, scienceontapphilly.com
 """
 
 import hashlib
@@ -80,6 +83,36 @@ def _auto_link(ev):
 
     if source == "BalletX":
         return f"https://www.balletx.org/seasons/{slug}/"
+
+    if source == "Philadelphia Museum of Art":
+        return f"https://philamuseum.org/exhibitions/{slug}"
+
+    if source == "Barnes Foundation":
+        return f"https://www.barnesfoundation.org/whats-on/{slug}"
+
+    if source == "The Franklin Institute":
+        return f"https://fi.edu/en/exhibits-and-experiences/{slug}"
+
+    if source == "Penn Museum":
+        return f"https://www.penn.museum/on-view/{slug}"
+
+    if source == "Academy of Natural Sciences":
+        return f"https://ansp.org/exhibits/{slug}/"
+
+    if source == "Mütter Museum":
+        return f"https://muttermuseum.org/events/{slug}/"
+
+    if source == "Science on Tap":
+        return "https://www.scienceontapphilly.com/events"
+
+    if source == "Profs and Pints":
+        return "https://www.profsandpints.com/philadelphia"
+
+    if source == "Science History Institute":
+        return f"https://www.sciencehistory.org/visit/events/{slug}"
+
+    if source == "Sofar Sounds Philadelphia":
+        return "https://www.sofarsounds.com/cities/philadelphia"
 
     # Fallback to source URL
     return ev.get("source_url", "")
@@ -923,6 +956,243 @@ def get_seed_events():
             "price": "Free",
             "categories": ["classical", "performance"],
             "description": "A free virtual lecture exploring the themes and music behind Opera Philadelphia's world premiere Sleepers Awake. Join the conversation with the creative team as they discuss the making of this groundbreaking new work by Gregory Spears.",
+        },
+        # ═══════════════════════════════════════════════════════════════════
+        # EXHIBITIONS — ART
+        # ═══════════════════════════════════════════════════════════════════
+        {
+            "title": "Noah Davis",
+            "date_start": "2026-01-24",
+            "date_end": "2026-04-26",
+            "venue": "Philadelphia Museum of Art",
+            "source": "Philadelphia Museum of Art",
+            "source_url": "https://philamuseum.org/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "A landmark survey bringing together over 60 works charting Noah Davis's (1983-2015) practice. Davis's luminous paintings blend figuration and abstraction, drawing on art history and personal memory.",
+            "time": None,
+        },
+        {
+            "title": "A Nation of Artists",
+            "date_start": "2026-04-12",
+            "date_end": "2027-07-05",
+            "venue": "Philadelphia Museum of Art",
+            "source": "Philadelphia Museum of Art",
+            "source_url": "https://philamuseum.org/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "The most expansive presentation of American art ever mounted in Philadelphia. Featuring more than 1,000 works across PMA and PAFA, celebrating the museum's 150th anniversary and the nation's 250th.",
+            "time": None,
+        },
+        {
+            "title": "Rising Up: Rocky and the Making of Monuments",
+            "date_start": "2026-04-25",
+            "date_end": "2026-08-02",
+            "venue": "Philadelphia Museum of Art",
+            "source": "Philadelphia Museum of Art",
+            "source_url": "https://philamuseum.org/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "Timed to the 50th anniversary of the Rocky franchise, this major exhibition explores the creation, context, and significance of monuments through the lens of Philadelphia's most iconic statue.",
+            "time": None,
+        },
+        {
+            "title": "Workshop of the World: Arts and Crafts in Philadelphia",
+            "date_start": "2026-07-05",
+            "date_end": "2026-10-18",
+            "venue": "Philadelphia Museum of Art",
+            "source": "Philadelphia Museum of Art",
+            "source_url": "https://philamuseum.org/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "An exploration of Philadelphia's rich tradition in the arts and crafts movement, showcasing decorative arts, furniture, textiles, and metalwork from the city's workshops.",
+            "time": None,
+        },
+        {
+            "title": "Marcel Duchamp",
+            "date_start": "2026-10-10",
+            "date_end": "2027-01-31",
+            "venue": "Philadelphia Museum of Art",
+            "source": "Philadelphia Museum of Art",
+            "source_url": "https://philamuseum.org/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "The first North American retrospective of Marcel Duchamp's work in over 50 years. Spanning painting, sculpture, film, photography, drawings, and printed matter across six decades of the artist's multifaceted career.",
+            "time": None,
+        },
+        {
+            "title": "Henri Matisse at the Barnes",
+            "date_start": "2026-04-12",
+            "date_end": "2026-08-09",
+            "venue": "Barnes Foundation",
+            "source": "Barnes Foundation",
+            "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "A tour of the Barnes's renowned collection of paintings by Henri Matisse, exploring how a visit to the Barnes collection was a pivotal moment in the artist's career and transformed his approach to color and form.",
+            "time": None,
+        },
+        {
+            "title": "PECO Free First Sunday: April",
+            "date_start": "2026-04-05",
+            "date_end": "2026-04-05",
+            "venue": "Barnes Foundation",
+            "source": "Barnes Foundation",
+            "source_url": "https://www.barnesfoundation.org/whats-on",
+            "price": "Free",
+            "categories": ["exhibition"],
+            "description": "Free admission on the first Sunday with family art activities, performances by Equinox from the Philadelphia High School for Creative and Performing Arts, storytime, and free gallery access. April is Philly Jazz Month.",
+            "time": "10:00 AM",
+        },
+        {
+            "title": "PECO Free First Sunday: May",
+            "date_start": "2026-05-03",
+            "date_end": "2026-05-03",
+            "venue": "Barnes Foundation",
+            "source": "Barnes Foundation",
+            "source_url": "https://www.barnesfoundation.org/whats-on",
+            "price": "Free",
+            "categories": ["exhibition"],
+            "description": "Free admission and family-friendly activities celebrating the 10th annual Art of Math challenge, where students design and build 3D scale models of paintings from the collection as a STEAM-based challenge.",
+            "time": "10:00 AM",
+        },
+        # ═══════════════════════════════════════════════════════════════════
+        # EXHIBITIONS & EVENTS — SCIENCE
+        # ═══════════════════════════════════════════════════════════════════
+        {
+            "title": "Universal Theme Parks: The Exhibition",
+            "date_start": "2026-02-14",
+            "date_end": "2026-09-07",
+            "venue": "The Franklin Institute",
+            "source": "The Franklin Institute",
+            "source_url": "https://fi.edu/en/exhibits-experiences",
+            "price": "$47",
+            "categories": ["exhibition", "science"],
+            "description": "World premiere spanning 18,000 square feet with eight themed galleries, 25 interactive experiences, and over 100 original artifacts from Universal's iconic theme parks. Extended evening hours Thu-Sat.",
+            "time": None,
+        },
+        {
+            "title": "Science After Hours: Rhythm & Booms",
+            "date_start": "2026-04-10",
+            "date_end": "2026-04-10",
+            "venue": "The Franklin Institute",
+            "source": "The Franklin Institute",
+            "source_url": "https://fi.edu/en/events-calendar",
+            "price": None,
+            "categories": ["science"],
+            "description": "Dance your way through exhibits, sip drinks, and dive into activities inspired by music and sound, then experience explosive live science demonstrations. Ages 21+ only.",
+            "time": "7:30 PM",
+        },
+        {
+            "title": "Astronomy Day 2026",
+            "date_start": "2026-04-25",
+            "date_end": "2026-04-25",
+            "venue": "The Franklin Institute",
+            "source": "The Franklin Institute",
+            "source_url": "https://fi.edu/en/events-calendar",
+            "price": None,
+            "categories": ["science"],
+            "description": "Celebrate International Astronomy Day across four floors including the Wondrous Space exhibit, Fels Planetarium, and the Holt & Miller Observatory. Special activities and expert talks throughout the day.",
+            "time": "11:00 AM",
+        },
+        {
+            "title": "Ancient Egypt in Watercolors: Paintings and Artifacts from Dra Abu el-Naga",
+            "date_start": "2026-02-28",
+            "date_end": "2026-11-30",
+            "venue": "Penn Museum",
+            "source": "Penn Museum",
+            "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+            "price": None,
+            "categories": ["exhibition"],
+            "description": "Century-old watercolors by Egyptian artist Ahmed Yousef capturing New Kingdom tomb chapels from Dra Abu el-Naga, Thebes. First rotation through June; second rotation from July through November ahead of the Egypt Galleries grand reopening.",
+            "time": None,
+        },
+        {
+            "title": "Botany of Nations",
+            "date_start": "2026-03-28",
+            "date_end": "2026-09-13",
+            "venue": "Academy of Natural Sciences",
+            "source": "Academy of Natural Sciences",
+            "source_url": "https://ansp.org/exhibits/exhibits/",
+            "price": None,
+            "categories": ["exhibition", "science"],
+            "description": "The Lewis and Clark expedition retold through an Indigenous lens. Plants act as portals to under-shared stories, cultures, and sciences of the Indigenous peoples encountered on the journey. Created in collaboration with Indigenous-led nonprofit Local Contexts.",
+            "time": None,
+        },
+        {
+            "title": "Revolutionary Botany",
+            "date_start": "2026-01-01",
+            "date_end": "2026-12-31",
+            "venue": "Mütter Museum",
+            "source": "Mütter Museum",
+            "source_url": "https://muttermuseum.org/events/",
+            "price": None,
+            "categories": ["exhibition", "science"],
+            "description": "Tracing the evolution of medicine in America from medicinal plants to the modern pharmacy. Part of the Mütter Museum's 2026 programming celebrating medical milestones throughout the past 250 years.",
+            "time": None,
+        },
+        {
+            "title": "Legionnaires' Disease: The Philadelphia Outbreak",
+            "date_start": "2026-05-01",
+            "date_end": "2026-12-31",
+            "venue": "Mütter Museum",
+            "source": "Mütter Museum",
+            "source_url": "https://muttermuseum.org/events/",
+            "price": None,
+            "categories": ["exhibition", "science"],
+            "description": "Examining Philadelphia's headline-grabbing 1976 outbreak of Legionnaires' Disease during the Bicentennial — the mysterious illness that baffled scientists and changed public health forever.",
+            "time": None,
+        },
+        {
+            "title": "Creating a City of Medicine",
+            "date_start": "2026-06-01",
+            "date_end": "2026-12-31",
+            "venue": "Mütter Museum",
+            "source": "Mütter Museum",
+            "source_url": "https://muttermuseum.org/events/",
+            "price": None,
+            "categories": ["exhibition", "science"],
+            "description": "Philadelphia's role in the evolution of American medicine and medical schooling, from the nation's first hospital and medical school to groundbreaking surgical innovations.",
+            "time": None,
+        },
+        # ═══════════════════════════════════════════════════════════════════
+        # LECTURES & TALKS
+        # ═══════════════════════════════════════════════════════════════════
+        {
+            "title": "Science on Tap: Monthly Talk",
+            "date_start": "2026-04-13",
+            "date_end": "2026-04-13",
+            "venue": "National Mechanics",
+            "source": "Science on Tap",
+            "source_url": "https://www.scienceontapphilly.com/events",
+            "price": "Free",
+            "categories": ["lecture", "science"],
+            "description": "Monthly science talk at National Mechanics bar. Organized by a consortium of six Philadelphia science museums including the Academy of Natural Sciences, Penn Museum, Mütter Museum, and Science History Institute. Second Monday of every month since 2009.",
+            "time": "6:00 PM",
+        },
+        {
+            "title": "Science on Tap: May",
+            "date_start": "2026-05-11",
+            "date_end": "2026-05-11",
+            "venue": "National Mechanics",
+            "source": "Science on Tap",
+            "source_url": "https://www.scienceontapphilly.com/events",
+            "price": "Free",
+            "categories": ["lecture", "science"],
+            "description": "Monthly science talk at National Mechanics bar, presented by a consortium of six Philadelphia science museums. Free and open to the public.",
+            "time": "6:00 PM",
+        },
+        {
+            "title": "Past, Peril, and Preservation in Syria",
+            "date_start": "2026-04-09",
+            "date_end": "2026-04-30",
+            "venue": "Penn Museum",
+            "source": "Penn Museum",
+            "source_url": "https://www.penn.museum/",
+            "price": None,
+            "categories": ["lecture"],
+            "description": "A 4-Thursday online series with Dr. Michael Danti exploring the intersection of cultural heritage, conflict, and preservation efforts in Syria. Join virtually for in-depth discussion of archaeological sites under threat.",
+            "time": "6:00 PM",
         },
     ]
 
