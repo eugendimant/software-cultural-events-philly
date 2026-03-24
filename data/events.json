@@ -490,6 +490,23 @@
       "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "title": "The Rise and Fall of the Mob in Philadelphia",
+      "date_start": "2026-04-02",
+      "date_end": "2026-04-02",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-rise-fall-mob",
+      "price": "$13.50",
+      "categories": [
+        "lecture"
+      ],
+      "description": "A lively talk over drinks about the dramatic history of organized crime in Philadelphia \u2014 from Prohibition-era bootlegging to modern-day prosecutions. Presented by a university professor at a neighborhood bar.",
+      "time": "6:00 PM",
+      "id": "95d0c1dfc857",
+      "date_display": "Apr 02, 2026"
+    },
+    {
       "title": "Dance Theatre of Harlem",
       "date_start": "2026-04-03",
       "date_end": "2026-04-04",
@@ -626,6 +643,24 @@
         "jazz"
       ],
       "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.Set times 7:30pm & 9:00pm General Admission ~"
+    },
+    {
+      "title": "Sofar Sounds Philadelphia: Secret Concert",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "venue": "Secret Venue (Sofar Sounds)",
+      "source": "Sofar Sounds Philadelphia",
+      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
+      "link": "https://www.sofarsounds.com/cities/philadelphia",
+      "price": "$25",
+      "categories": [
+        "concert",
+        "performance"
+      ],
+      "description": "Intimate live music in a secret Philadelphia location, revealed 24 hours before the show. Three emerging artists perform acoustic sets in an unplugged, phone-free environment. Sofar reimagines the live music experience.",
+      "time": "7:30 PM",
+      "id": "e4558e2d7119",
+      "date_display": "Apr 05, 2026"
     },
     {
       "title": "Lang Lang and Yannick",
@@ -1509,6 +1544,24 @@
         "jazz"
       ],
       "description": "Orin Evans \u2014 PianoSanti Debriano \u2014 BassGeorge Coleman Jr \u2014 Drums Show times 7:30 & 9:30 General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "title": "AI and the Future of Work",
+      "date_start": "2026-04-30",
+      "date_end": "2026-04-30",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-ai-future-work",
+      "price": "$13.50",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "How will artificial intelligence reshape the job market? A technology researcher explores the economic and social implications of AI automation, and what it means for workers today.",
+      "time": "6:00 PM",
+      "id": "fb701e821bdc",
+      "date_display": "Apr 30, 2026"
     },
     {
       "title": "Legionnaires' Disease: The Philadelphia Outbreak",
