@@ -1,12 +1,13 @@
 {
-  "last_updated": "2026-03-24T13:28:59.446546Z",
-  "total_events": 73,
+  "last_updated": "2026-03-24T12:52:48.147657Z",
+  "total_events": 168,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
     "BalletX",
     "Barnes Foundation",
     "Chris' Jazz Cafe",
+    "City Winery",
     "Ensemble Arts Philly",
     "Esperanza Arts Center",
     "FringeArts",
@@ -17,19 +18,41 @@
     "Philadelphia Museum of Art",
     "Philadelphia Orchestra",
     "Philadelphia Theatre Company",
-    "Profs and Pints",
-    "Science on Tap",
-    "Sofar Sounds Philadelphia",
-    "The Franklin Institute",
+    "Philly Fun Guide",
+    "South Jazz Kitchen",
     "The Wilma Theater",
+    "Visit Philadelphia Events",
     "Walnut Street Theatre"
   ],
   "scrape_report": {
     "successes": [
-      "Seed merged"
+      "Ensemble Arts Philly: 24 events (HTML)",
+      "Philadelphia Orchestra: 1 events (HTML)",
+      "Penn Live Arts: 31 events (links)",
+      "Opera Philadelphia: 13 events (HTML)",
+      "Walnut Street Theatre: 16 events (links)",
+      "FringeArts: 7 events (HTML)",
+      "Arden Theatre: 3 events (HTML)",
+      "Chris' Jazz Cafe: 67 events (HTML)",
+      "South Jazz Kitchen: 1 events (HTML)",
+      "City Winery: 1 events (HTML)",
+      "BalletX: 4 events (HTML)",
+      "Philadelphia Theatre Company: 1 events (HTML)",
+      "Visit Philadelphia Events: 2 events (HTML)",
+      "Philly Fun Guide: 1 events (HTML)",
+      "Seed data: 49 verified events merged"
     ],
-    "failures": [],
-    "warnings": []
+    "failures": [
+      "Failed to fetch https://theatrephiladelphia.org/whats-on-stage: HTTP 403",
+      "Failed to fetch https://philadelphiaballet.org/performances/: HTTP 404",
+      "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
+      "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 403",
+      "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
+      "Failed to fetch https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/eventtitle: HTTP 404"
+    ],
+    "warnings": [
+      "Greater Phila. Cultural Alliance: 0 events found at https://www.philaculture.org/events-calendar"
+    ]
   },
   "events": [
     {
@@ -120,9 +143,12 @@
       "date_display": "Mar 04 \u2013 Mar 29, 2026"
     },
     {
+      "id": "0d9ff90743b9",
       "title": "Romeo and Juliet",
+      "date_display": "Mar 12 \u2013 Apr 05, 2026",
       "date_start": "2026-03-12",
       "date_end": "2026-04-05",
+      "time": "7:00 PM",
       "venue": "Arden Theatre",
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
@@ -131,10 +157,7 @@
       "categories": [
         "theater"
       ],
-      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core \u2014 passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City.",
-      "time": "7:00 PM",
-      "id": "75b756c1876c",
-      "date_display": "Mar 12 \u2013 Apr 05, 2026"
+      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core \u2014 passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City."
     },
     {
       "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
@@ -152,6 +175,126 @@
       "time": "7:30 PM",
       "id": "68dc3fe25e51",
       "date_display": "Mar 17 \u2013 Apr 05, 2026"
+    },
+    {
+      "id": "5513d774fbc9",
+      "title": "Scratch Nights",
+      "date_display": "March 23 - April 20, 2026",
+      "date_start": "2026-03-23",
+      "date_end": "2026-04-20",
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/scratch-nights-2026/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": "140 N. Columbus Blvd. (at Race St.) Philadelphia, PA 19106 Directions"
+    },
+    {
+      "id": "f9579df6cce4",
+      "title": "Digba Ogunbiyi Quartet",
+      "date_display": "March 24",
+      "date_start": "2026-03-24",
+      "date_end": "2026-03-24",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/126750",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Digba OgunbiyiZach WalgrenAdam AronestyEmmanuel Chidiebere Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "74a531fb8da6",
+      "title": "Saxophonist Christian Ertl and His Quartet",
+      "date_display": "Apr 17, 2026",
+      "date_start": "2026-03-25",
+      "date_end": "2026-03-25",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132133",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "4890fa38c7bc",
+      "title": "Logan Bogdan Septet",
+      "date_display": "March 26",
+      "date_start": "2026-03-26",
+      "date_end": "2026-03-26",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130300",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Logan Bogdan - Drums Jeremy Leon - Flute, Saxophones Matt Kahn - Guitar Peter Rushing - Piano Jacob Hurlock - Keyboard Kai Gibson - Bass Don Solomon - Percussion Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube "
+    },
+    {
+      "id": "b5accf9a5826",
+      "title": "The Oscar Beesley Quartet",
+      "date_display": "Apr 09, 2026",
+      "date_start": "2026-03-26",
+      "date_end": "2026-03-26",
+      "time": "10:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132057",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Oscar Beesley \u2014 DrumsBen Deloach \u2014 SaxJames Newcombe \u2014 PianoJames White \u2014 Bass Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
+    },
+    {
+      "id": "c59d16da7ff4",
+      "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
+      "date_display": "March 27 - March 28",
+      "date_start": "2026-03-27",
+      "date_end": "2026-03-28",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/127246",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Pizzarelli \u2013 Guitar & Vocals Isaiah J Thompson \u2013 Piano Mike Karn \u2013 Bass Show times 7:30 & 9:30Friday $45 / Saturday $50 General Admission ~ a la carte menu: $45 / $50Dinner & Show ~ Includes 3-course dinner: $115 / $120VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees."
+    },
+    {
+      "id": "4816d1e6e155",
+      "title": "Oliver Mayman + Jam Session",
+      "date_display": "Apr 24, 2026",
+      "date_start": "2026-03-27",
+      "date_end": "2026-03-27",
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131282",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
     },
     {
       "title": "BalletX Spring Series 2026",
@@ -172,21 +315,76 @@
       "time": null
     },
     {
+      "id": "fbcd6baabe17",
       "title": "Endea Owens & The Cookout",
+      "date_display": "Mar 28, 2026",
       "date_start": "2026-03-28",
       "date_end": "2026-03-28",
+      "time": "7:30 PM",
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/endea-owens-the-cookout",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/endea-owens-and-the-cookout",
+      "price": null,
+      "categories": [
+        "performance",
+        "jazz"
+      ],
+      "description": "Grammy, Emmy, and Peabody Award winner, Endea Owens is hailed as one of jazz's most vibrant and versatile artists. The Detroit-raised recording artist, bassist, and composer has been mentored by jazz icons like Marcus Belgrave, Rodney Whitaker, and Ron Carter."
+    },
+    {
+      "id": "aacb76d28d90",
+      "title": "James Santangelo's Late Night Jam",
+      "date_display": "Apr 11, 2026",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131361",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all."
+    },
+    {
+      "id": "e925e1008d4a",
+      "title": "The Sound of Music",
+      "date_display": "Mar 31 \u2013 Apr 05, 2026",
+      "date_start": "2026-03-31",
+      "date_end": "2026-04-05",
+      "time": "7:30 PM",
+      "venue": "Academy Of Music",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
+      "price": null,
+      "categories": [
+        "opera",
+        "ballet",
+        "classical",
+        "musical"
+      ],
+      "description": "For 65 years, THE SOUND OF MUSIC has been one of our \u201cfavorite things. \u201d With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn\u2019t just meant to be enjoyed - it\u2019s meant to be shared."
+    },
+    {
+      "id": "fdb7eaf5edf2",
+      "title": "Connor MacLeod Quintet",
+      "date_display": "March 31",
+      "date_start": "2026-03-31",
+      "date_end": "2026-03-31",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132846",
       "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "You've seen her holding down the bass on The Late Show with Stephen Colbert \u2014 now Endea Owens brings her powerhouse ensemble The Cookout to Philadelphia. A joyful, genre-bending night of jazz, R&B, gospel, and funk.",
-      "time": "7:30 PM",
-      "id": "6c2ca9ffdf54",
-      "date_display": "Mar 28, 2026"
+      "description": "Connor MacLeod- Tenor Saxophone Mason Millard- TrumpetIsaac Byrd- PianoAhmed McLemore- BassKarl Seyer- Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Botany of Nations",
@@ -224,21 +422,72 @@
       "date_display": "Mar 31, 2026"
     },
     {
-      "title": "The Sound of Music",
-      "date_start": "2026-03-31",
-      "date_end": "2026-04-05",
-      "venue": "Academy of Music",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
+      "id": "1c7254d76b12",
+      "title": "Trumpeter Rockwell Valentine and His Band",
+      "date_display": "April 01",
+      "date_start": "2026-04-01",
+      "date_end": "2026-04-01",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132675",
       "price": null,
       "categories": [
-        "musical"
+        "jazz"
       ],
-      "description": "Rodgers & Hammerstein's beloved classic at the Academy of Music. Directed by three-time Tony winner Jack O'Brien. Broadway Series.",
+      "description": "Josh Klamka - PianoEmily Rota - Bass Jacquee Paul - Vocals Evan Wood - Drums Rockwell Valentine - Trumpet Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "2c1f9a8ef36a",
+      "title": "Gabriel Meyer Tentet",
+      "date_display": "April 02",
+      "date_start": "2026-04-02",
+      "date_end": "2026-04-02",
       "time": "7:30 PM",
-      "id": "34b2cd2178e1",
-      "date_display": "Mar 31 \u2013 Apr 05, 2026"
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132676",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Gabriel Meyer - TromboneLiz Johnson - TrumpetConner Dieck - TrumpetGabe Preston - Alto Saxophone, OboeThomas McCloskey - Tenor Sax, ClarinetAkash Singh - Bari sax, bass clarinetJake Miller - GuitarJosh Klamka - KeysEli Pace - BassGreg Masters - Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclus"
+    },
+    {
+      "id": "6c4c0ad8a852",
+      "title": "Trumpeter James McGovern and His Quintet",
+      "date_display": "Apr 30, 2026",
+      "date_start": "2026-04-02",
+      "date_end": "2026-04-02",
+      "time": "10:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133470",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Trumpeter James McGovern leads his quintet at Chris' Jazz Cafe. McGovern is a rising talent from Temple University's jazz program, bringing fresh energy to the Philadelphia jazz scene."
+    },
+    {
+      "id": "6dcf086ed626",
+      "title": "Webb Thomas and His Super Band",
+      "date_display": "April 03",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131271",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "The Rise and Fall of the Mob in Philadelphia",
@@ -293,21 +542,38 @@
       "date_display": "Apr 03, 2026"
     },
     {
+      "id": "e06177352a58",
       "title": "Peppa Pig: My First Concert",
+      "date_display": "April 4, 2026",
       "date_start": "2026-04-04",
       "date_end": "2026-04-04",
+      "time": "4:00 PM",
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/peppa-pig-my-first-concert",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/peppa-pig-my-first-concert",
       "price": "From $63",
       "categories": [
         "performance"
       ],
-      "description": "Peppa Pig comes to life in this interactive concert designed for the youngest music lovers. Sing along, dance, and explore instruments with Peppa and friends. Shows at 1:00 PM and 4:00 PM. Ages 18 months and up.",
-      "id": "c8849c845e3f",
-      "date_display": "Apr 04, 2026",
-      "time": null
+      "description": "Peppa Pig, along with Mummy Pig, Daddy Pig and George, visit Philly for Peppa Pig: My First Concert, a fun, interactive introduction to a live orchestra for ages 18 months and older! Peppa and George learn all about the different sounds that instruments make together, and enjoy some of their favorite\u2026"
+    },
+    {
+      "id": "6dfccdf4149e",
+      "title": "Pianist Jordon Williams and His Quintet",
+      "date_display": "April 04",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130625",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Wallace Roney Jr \u2014 TrumpetNat Reeves \u2014 BassJeff \u201cTain\u201d Watts \u2014 DrumsImani Grace-Cooper \u2014 Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Vocalist Jackie Johnson and Her Band",
@@ -327,21 +593,56 @@
       "date_display": "Apr 05, 2026"
     },
     {
-      "title": "PECO Free First Sunday: April",
-      "date_start": "2026-04-05",
-      "date_end": "2026-04-05",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "price": "Free",
+      "id": "ac40433f66e2",
+      "title": "Lang Lang and Yannick",
+      "date_display": "Apr 7, 2026",
+      "date_start": "2026-04-07",
+      "date_end": "2026-04-07",
+      "time": "7:30 PM",
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/lang-lang-and-yannick",
+      "price": null,
       "categories": [
-        "exhibition"
+        "performance"
       ],
-      "description": "Free admission on the first Sunday with family art activities, performances by Equinox from the Philadelphia High School for Creative and Performing Arts, storytime, and free gallery access. April is Philly Jazz Month.",
-      "time": "10:00 AM",
-      "id": "6d4f6efa58ac",
-      "date_display": "Apr 05, 2026",
-      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-april"
+      "description": "There are artists who seize the public imagination, and perhaps none has done so as spectacularly as Lang Lang. Whether he\u2019s performing for billions, as at the 2008 Olympics Opening Ceremony, or for a small group of school children, his artistry and passion is on full display."
+    },
+    {
+      "id": "b57f8c8a3c32",
+      "title": "Between the Notes: Sleepers Awake Virtual Lecture",
+      "date_display": "Apr 07",
+      "date_start": "2026-04-07",
+      "date_end": "2026-04-07",
+      "time": null,
+      "venue": "12:00 p.m. | Zoom",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/between-the-notes-sleepers-awake-virtual-lecture/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Between the Notes: Sleepers Awake Virtual Lecture 12:00 p.m. | Zoom Available to Opera Philadelphia Subscribers and Contributor level donors ($100) and above"
+    },
+    {
+      "id": "430046594f02",
+      "title": "We Get Requests",
+      "date_display": "September 08",
+      "date_start": "2026-04-07",
+      "date_end": "2026-04-07",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133443",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.Set times 7:30pm & 9:00pm General Admission ~"
     },
     {
       "title": "Sofar Sounds Philadelphia: Secret Concert",
@@ -397,22 +698,91 @@
       "date_display": "Apr 07, 2026"
     },
     {
+      "id": "384037ca2acf",
       "title": "The Stinky Cheese Man and Other Fairly Stupid Tales",
+      "date_display": "Apr 08 \u2013 May 31, 2026",
       "date_start": "2026-04-08",
       "date_end": "2026-05-31",
+      "time": null,
       "venue": "Arden Theatre",
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
       "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
-        "theater",
-        "performance"
+        "performance",
+        "theater"
       ],
-      "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family.",
-      "id": "0fbd1bf9075c",
-      "date_display": "Apr 08 \u2013 May 31, 2026",
-      "time": null
+      "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family."
+    },
+    {
+      "id": "00f8c1f8f12a",
+      "title": "Closed for Private Event",
+      "date_display": "April 08",
+      "date_start": "2026-04-08",
+      "date_end": "2026-04-08",
+      "time": "8:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130294",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "afeb1f33c276",
+      "title": "Mozart\u2019s Requiem",
+      "date_display": "Apr 9 - Apr 12, 2026",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-12",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/mozart-great-and-glorious",
+      "price": null,
+      "categories": [
+        "classical"
+      ],
+      "description": "A masterwork from a prodigiously gifted composer who shaped the music of his lifetime and centuries thereafter. In his Requiem, Mozart summoned all the fire and brimstone hell could hold, making ominously real the awful majesty of death and the miracle of redemption."
+    },
+    {
+      "id": "267538e0e0f6",
+      "title": "Between the Notes: Sleepers Awake In-person Lecture",
+      "date_display": "Apr 09",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": null,
+      "venue": "12:00 p.m. | Comcast Circle",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/between-the-notes-sleepers-awake-in-person-lecture/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Between the Notes: Sleepers Awake In-person Lecture 12:00 p.m. | Comcast Circle Available to Opera Philadelphia Subscribers and Contributor level donors ($100) and above"
+    },
+    {
+      "id": "c209168bd088",
+      "title": "Saxophonist Chris Farr and His Quartet",
+      "date_display": "April 09",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132677",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Anthony Aldissi \u2014 pianoJustin Bowden \u2014 drumsManos Vourourakis \u2014 bass Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Mozart's Requiem",
@@ -432,38 +802,21 @@
       "date_display": "Apr 09 \u2013 Apr 12, 2026"
     },
     {
-      "title": "The Oscar Beesley Quartet",
-      "date_start": "2026-04-09",
-      "date_end": "2026-04-09",
+      "id": "6e74baf9dec4",
+      "title": "Saxophonists Victor North and Aidan McKeon Sextet featuring Special Guest Trombonist Conrad Herwig",
+      "date_display": "Apr 10, 2026",
+      "date_start": "2026-04-10",
+      "date_end": "2026-04-10",
+      "time": "7:30 PM",
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/360150",
-      "time": "7:30 PM",
-      "price": "$15",
+      "link": "https://www.chrisjazzcafe.com/events/129959",
+      "price": "$25",
       "categories": [
         "jazz"
       ],
-      "description": "The Oscar Beesley Quartet performs an evening of original compositions and jazz standards at Chris' Jazz Cafe.",
-      "id": "203c055d5ee8",
-      "date_display": "Apr 09, 2026"
-    },
-    {
-      "title": "Past, Peril, and Preservation in Syria",
-      "date_start": "2026-04-09",
-      "date_end": "2026-04-30",
-      "venue": "Penn Museum",
-      "source": "Penn Museum",
-      "source_url": "https://www.penn.museum/",
-      "price": null,
-      "categories": [
-        "lecture"
-      ],
-      "description": "A 4-Thursday online series with Dr. Michael Danti exploring the intersection of cultural heritage, conflict, and preservation efforts in Syria. Join virtually for in-depth discussion of archaeological sites under threat.",
-      "time": "6:00 PM",
-      "id": "8420bad13f9d",
-      "date_display": "Apr 09 \u2013 Apr 30, 2026",
-      "link": "https://www.penn.museum/on-view/past-peril-and-preservation-in-syria"
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Wilderness Generation",
@@ -483,72 +836,75 @@
       "date_display": "Apr 10 \u2013 May 03, 2026"
     },
     {
-      "title": "Saxophonists Victor North and Aidan McKeon Sextet featuring Special Guest Trombonist Conrad Herwig",
-      "date_start": "2026-04-10",
-      "date_end": "2026-04-10",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/355335",
-      "time": "7:30 PM",
-      "price": "$25",
-      "categories": [
-        "jazz"
-      ],
-      "description": "A powerful sextet led by saxophonists Victor North and Aidan McKeon with special guest Conrad Herwig \u2014 a 4-time Grammy-nominated New York jazz trombonist who has recorded 26 albums as a leader. Two shows at 7:30 and 9:30.",
-      "id": "dbc6f975830e",
-      "date_display": "Apr 10, 2026"
-    },
-    {
-      "title": "Science After Hours: Rhythm & Booms",
-      "date_start": "2026-04-10",
-      "date_end": "2026-04-10",
-      "venue": "The Franklin Institute",
-      "source": "The Franklin Institute",
-      "source_url": "https://fi.edu/en/events-calendar",
-      "price": null,
-      "categories": [
-        "science"
-      ],
-      "description": "Dance your way through exhibits, sip drinks, and dive into activities inspired by music and sound, then experience explosive live science demonstrations. Ages 21+ only.",
-      "time": "7:30 PM",
-      "id": "bf9684d00c64",
-      "date_display": "Apr 10, 2026",
-      "link": "https://fi.edu/en/exhibits-and-experiences/science-after-hours-rhythm-booms"
-    },
-    {
+      "id": "78168c6c93e2",
       "title": "Ukulele Orchestra of Great Britain",
+      "date_display": "Apr 11, 2026",
       "date_start": "2026-04-11",
       "date_end": "2026-04-11",
+      "time": "7:30 PM",
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
       "link": "https://pennlivearts.org/event/ukulele-orchestra-of-great-britain",
       "price": null,
       "categories": [
-        "concert"
+        "classical",
+        "concert",
+        "dance"
       ],
-      "description": "'The best musical entertainment in the country' \u2014 from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles.",
-      "time": "8:00 PM",
-      "id": "96648d5f3e14",
-      "date_display": "Apr 11, 2026"
+      "description": "'The best musical entertainment in the country' \u2014 from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles."
     },
     {
-      "title": "James Santangelo's Late Night Jam",
+      "id": "adcfdadd8992",
+      "title": "Awaken New Perspectives on a Classic Tale",
+      "date_display": "Apr 11",
       "date_start": "2026-04-11",
       "date_end": "2026-04-11",
+      "time": null,
+      "venue": "6:00 p.m. | Philadelphia Ethical Society",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/awaken-new-perspectives-on-a-classic-tale/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Awaken New Perspectives on a Classic Tale 6:00 p.m. | Philadelphia Ethical Society A panel discussion inspired by Sleepers Awake"
+    },
+    {
+      "id": "5aa4136c33a3",
+      "title": "2026 Bistro Award Winner for Outstanding Jazz Vocalist Anais Reno with Tim Brey/Aidan McKeon Quartet",
+      "date_display": "April 11",
+      "date_start": "2026-04-11",
+      "date_end": "2026-04-11",
+      "time": "7:30 PM",
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/363351",
-      "time": "11:00 PM",
-      "price": "$15",
+      "link": "https://www.chrisjazzcafe.com/events/131273",
+      "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all.",
-      "id": "368d0f84e4d2",
-      "date_display": "Apr 11, 2026"
+      "description": "2026 American Traditions vocal Competition Silver Winner 2026 Bistro Award Winner for Outstanding Jazz Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $35Dinner & Show ~ Includes 3-course dinner: $105VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "1c89f448012b",
+      "title": "LENA DUNHAM: THE FAMESICK TOUR",
+      "date_display": "Apr 12, 2026",
+      "date_start": "2026-04-12",
+      "date_end": "2026-04-12",
+      "time": "3:00 PM",
+      "venue": "Miller Theater",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/lena-dunham",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "To celebrate the release of her first book in over a decade, Lena Dunham returns to the stage for a night of fearless storytelling and no holds barred conversation."
     },
     {
       "title": "Joe Block and His Trio with Special Guest Georgia Heers",
@@ -568,56 +924,38 @@
       "date_display": "Apr 12, 2026"
     },
     {
-      "title": "A Nation of Artists",
-      "date_start": "2026-04-12",
-      "date_end": "2027-07-05",
-      "venue": "Philadelphia Museum of Art",
-      "source": "Philadelphia Museum of Art",
-      "source_url": "https://philamuseum.org/exhibitions",
+      "id": "fdc7c1d9bbec",
+      "title": "The Heart of Jazz Presents the New Philly Sound",
+      "date_display": "April 14",
+      "date_start": "2026-04-14",
+      "date_end": "2026-04-14",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/129407",
       "price": null,
       "categories": [
-        "exhibition"
+        "jazz"
       ],
-      "description": "The most expansive presentation of American art ever mounted in Philadelphia. Featuring more than 1,000 works across PMA and PAFA, celebrating the museum's 150th anniversary and the nation's 250th.",
-      "time": null,
-      "id": "80f6728466a6",
-      "date_display": "Apr 12 \u2013 Jul 05, 2027",
-      "link": "https://philamuseum.org/exhibitions/a-nation-of-artists"
+      "description": "Aidan McKeon, saxAce Yuji Williams, trumpetJustin Griggs, keysRy Miller, bassJustin Bowden, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
-      "title": "Henri Matisse at the Barnes",
-      "date_start": "2026-04-12",
-      "date_end": "2026-08-09",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "id": "3ba499730fa6",
+      "title": "Jazz Bridge Fundraiser Featuring Saxophonist Dylan Band and His Quartet",
+      "date_display": "April 15",
+      "date_start": "2026-04-15",
+      "date_end": "2026-04-15",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132838",
       "price": null,
       "categories": [
-        "exhibition"
+        "jazz"
       ],
-      "description": "A tour of the Barnes's renowned collection of paintings by Henri Matisse, exploring how a visit to the Barnes collection was a pivotal moment in the artist's career and transformed his approach to color and form.",
-      "time": null,
-      "id": "7acf35edd83f",
-      "date_display": "Apr 12 \u2013 Aug 09, 2026",
-      "link": "https://www.barnesfoundation.org/whats-on/henri-matisse-at-the-barnes"
-    },
-    {
-      "title": "Science on Tap: Monthly Talk",
-      "date_start": "2026-04-13",
-      "date_end": "2026-04-13",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "price": "Free",
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Monthly science talk at National Mechanics bar. Organized by a consortium of six Philadelphia science museums including the Academy of Natural Sciences, Penn Museum, M\u00fctter Museum, and Science History Institute. Second Monday of every month since 2009.",
-      "time": "6:00 PM",
-      "id": "d41705383f4b",
-      "date_display": "Apr 13, 2026",
-      "link": "https://www.scienceontapphilly.com/events"
+      "description": "Join us and Dylan Band as we host this fundraiser for Jazz Bridge. Jazz Bridge assists Jazz and Blues musicians living in the Greater Philadelphia Metro area who face financial, health, housing and similar crises. Now more than ever, this is needed. Dylan Band - Tenor SaxNeil Podgurski- pianoSam Harris - bassNazir Ebo - drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stag"
     },
     {
       "title": "Shen Yun",
@@ -638,6 +976,40 @@
       "date_display": "Apr 15, 2026"
     },
     {
+      "id": "82f77391e64a",
+      "title": "Susie Meissner Sextet, Featuring Harry Allen & John Swana",
+      "date_display": "April 16",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130840",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Harry Allen: Tenor SaxJohn Swana: Trombone & EVILee Smith: BassJohn Shaddy: PianoByron Landham: DrumsSusie Meissner: VocalsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "74703fbc75a1",
+      "title": "Sean Butkovich and His Trio",
+      "date_display": "April 16",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "time": "10:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133471",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
+    },
+    {
       "title": "Jonathan Daddis and His Band",
       "date_start": "2026-04-16",
       "date_end": "2026-04-16",
@@ -655,22 +1027,39 @@
       "date_display": "Apr 16, 2026"
     },
     {
-      "title": "The Science of Happiness",
-      "date_start": "2026-04-16",
-      "date_end": "2026-04-16",
-      "venue": "Urban Saloon",
-      "source": "Profs and Pints",
-      "source_url": "https://www.profsandpints.com/philadelphia",
-      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-science-happiness",
-      "price": "$13.50",
+      "id": "003396bc24e5",
+      "title": "Paul Taylor Dance Company",
+      "date_display": "Apr 17 \u2013 Apr 18, 2026",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-18",
+      "time": "7:30 PM",
+      "venue": "Annenberg Center, Penn Live Arts",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/event/PTDC2026",
+      "link": "https://pennlivearts.org/event/paul-taylor-dance-company",
+      "price": null,
       "categories": [
-        "lecture",
-        "science"
+        "concert",
+        "dance"
       ],
-      "description": "What does research say about what truly makes us happy? A psychology professor breaks down the latest findings on well-being, gratitude, and the pursuit of the good life \u2014 all over a pint.",
-      "time": "6:00 PM",
-      "id": "79833874c684",
-      "date_display": "Apr 16, 2026"
+      "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season."
+    },
+    {
+      "id": "d23b92305b5f",
+      "title": "Orrin Evans Aries Birthday Hang!",
+      "date_display": "April 17 - April 18",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-18",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/127714",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "A celebration so big it needs a full weekend! - FRIDAY 7:30 SHOW SOLD OUT!! Friday Warren Wolf Tim GreenLuques CurtisAri Hoenig Saturday Warren Wolf Caleb CurtisVinnie SperazzaNoah Garbedian Show times 7:30 & 9:30Friday $30 / Saturday $35General Admission ~ a la carte menu: $30 / $35Dinner & Show ~ Includes 3-course dinner: $100 / $105VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120 / $125(Beverages not included) All-In Price at check out inclusive of taxes & fees"
     },
     {
       "title": "Pablo Batista: Latin Jazz Orchestra",
@@ -708,38 +1097,22 @@
       "date_display": "Apr 17 \u2013 Apr 19, 2026"
     },
     {
-      "title": "Paul Taylor Dance Company",
-      "date_start": "2026-04-17",
+      "id": "41d5fbb9e48e",
+      "title": "Inside the Music: Sleepers Awake",
+      "date_display": "Apr 18",
+      "date_start": "2026-04-18",
       "date_end": "2026-04-18",
-      "venue": "Annenberg Center, Penn Live Arts",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/event/PTDC2026",
-      "link": "https://pennlivearts.org/event/paul-taylor-dance-company",
+      "time": null,
+      "venue": "1:00 p.m. | Athenaeum of Philadelphia",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/inside-the-music-sleepers-awake/",
       "price": null,
       "categories": [
-        "dance"
+        "opera",
+        "classical"
       ],
-      "description": "Founded by the legendary Paul Taylor, this company continues to define modern American dance. Expect athletic, emotionally charged choreography that ranges from exuberant to deeply contemplative. A cornerstone of Penn Live Arts' dance season.",
-      "time": "8:00 PM",
-      "id": "1b2b04d87d0e",
-      "date_display": "Apr 17 \u2013 Apr 18, 2026"
-    },
-    {
-      "title": "Saxophonist Christian Ertl and His Quartet",
-      "date_start": "2026-04-17",
-      "date_end": "2026-04-17",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/132133",
-      "time": "7:30 PM",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Christian Ertl is an alto saxophonist, bandleader, composer, and arranger originally from Waukee, Iowa, now living and performing in Philadelphia. Dinner & Show available at $70; VIP at $90.",
-      "id": "2995ab62fd77",
-      "date_display": "Apr 17, 2026"
+      "description": "Inside the Music: Sleepers Awake 1:00 p.m. | Athenaeum of Philadelphia A talk related to the World Premiere of Sleepers Awake"
     },
     {
       "title": "Vocalist Martina Barta and the Philly All-Star Quartet",
@@ -759,56 +1132,110 @@
       "date_display": "Apr 19, 2026"
     },
     {
-      "title": "Sofar Sounds Philadelphia: April Session",
-      "date_start": "2026-04-19",
-      "date_end": "2026-04-19",
-      "venue": "Secret Venue (Sofar Sounds)",
-      "source": "Sofar Sounds Philadelphia",
-      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
-      "link": "https://www.sofarsounds.com/cities/philadelphia",
-      "price": "$25",
-      "categories": [
-        "concert",
-        "performance"
-      ],
-      "description": "Live music in an unexpected Philadelphia space \u2014 venue revealed the day before. Enjoy three handpicked artists performing stripped-back sets in an intimate, phone-free atmosphere.",
-      "time": "7:30 PM",
-      "id": "e26226cffdf5",
-      "date_display": "Apr 19, 2026"
-    },
-    {
-      "title": "Christian McBride & Edgar Meyer",
-      "date_start": "2026-04-21",
-      "date_end": "2026-04-21",
-      "venue": "Perelman Theater, Kimmel Center",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/christian-mcbride-edgar-meyer",
+      "id": "20de11a9644e",
+      "title": "Final Dress Rehearsal: Sleepers Awake",
+      "date_display": "Apr 20",
+      "date_start": "2026-04-20",
+      "date_end": "2026-04-20",
+      "time": null,
+      "venue": "2:00 p.m. | Academy of Music",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/final-dress-rehearsal-sleepers-awake/",
       "price": null,
       "categories": [
-        "jazz"
+        "opera",
+        "classical"
       ],
-      "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation.",
-      "time": "7:30 PM",
-      "id": "7d736861b122",
-      "date_display": "Apr 21, 2026"
+      "description": "Final Dress Rehearsal: Sleepers Awake 2:00 p.m. | Academy of Music Available to Opera Philadelphia Sustianer level donors ($500) and above"
     },
     {
+      "id": "802256820cf1",
       "title": "Shucked",
+      "date_display": "Apr 21 \u2013 May 03, 2026",
       "date_start": "2026-04-21",
       "date_end": "2026-05-03",
+      "time": "7:30 PM",
       "venue": "Forrest Theatre",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/shucked",
       "price": null,
       "categories": [
+        "performance",
         "musical"
       ],
-      "description": "The hilarious Tony-nominated Broadway musical. A small-town comedy with heart, corn, and unforgettable laughs.",
+      "description": "SHUCKED is the Tony Award\u00ae\u2013winning musical comedy The Wall Street Journal calls \u201cflat out hilarious!\u201d And nobody knows funny like economists."
+    },
+    {
+      "id": "8d198ca5e877",
+      "title": "Christian McBride & Edgar Meyer",
+      "date_display": "Apr 21, 2026",
+      "date_start": "2026-04-21",
+      "date_end": "2026-04-21",
+      "time": "7:00 PM",
+      "venue": "Perelman Theater, Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/christian-mcbride-and-edgar-meyer",
+      "price": null,
+      "categories": [
+        "performance",
+        "jazz"
+      ],
+      "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
+    },
+    {
+      "id": "efea33f5e68e",
+      "title": "Elaine Dame and Her Band",
+      "date_display": "April 21",
+      "date_start": "2026-04-21",
+      "date_end": "2026-04-21",
       "time": "7:30 PM",
-      "id": "1e8f51060f81",
-      "date_display": "Apr 21 \u2013 May 03, 2026"
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132183",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Elaine Dame, voiceTom Vaitsas, pianoTom Hilliker, bassEdilson Sabogal, drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "2cbaf6688c2e",
+      "title": "Sleepers Awake",
+      "date_display": "Apr 22",
+      "date_start": "2026-04-22",
+      "date_end": "2026-04-22",
+      "time": null,
+      "venue": "2:00 p.m. | Academy of MusicCheck Back for Availability",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/2526-season/sleepers-awake/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Sleepers Awake 2:00 p.m. | Academy of MusicCheck Back for Availability"
+    },
+    {
+      "id": "2418fd045a50",
+      "title": "Duane Eubanks Celebrates Lee Morgan",
+      "date_display": "Apr 22, 2026",
+      "date_start": "2026-04-22",
+      "date_end": "2026-04-22",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131523",
+      "price": "$35",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Join us on April 22 for a powerful evening of jazz history in motion! The Philadelphia Jazz Archive presents a special fundraiser concert at Chris' Jazz Cafe headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. Experience the spirit, swing, and soul of one of Philadelphia\u2019s greatest jazz legends brought to life by one of today\u2019s finest. All proceeds support the preservation of Philadelphia\u2019s rich jazz legacy. Tickets: $35/one show \u2014 celeb"
     },
     {
       "title": "Sleepers Awake (World Premiere)",
@@ -828,21 +1255,38 @@
       "date_display": "Apr 22 \u2013 Apr 26, 2026"
     },
     {
-      "title": "Duane Eubanks Celebrates Lee Morgan",
-      "date_start": "2026-04-22",
-      "date_end": "2026-04-22",
+      "id": "10a805fe182d",
+      "title": "Bolero and Don Juan",
+      "date_display": "Apr 23 - Apr 25, 2026",
+      "date_start": "2026-04-23",
+      "date_end": "2026-04-25",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/bolero-and-don-juan",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "Seduction is the subtext in this program that pairs Richard Strauss\u2019s portrait of the famous fictional philanderer and Ravel\u2019s Bolero, whose relentless pulse mirrors the beat of desire."
+    },
+    {
+      "id": "9e083939f4f7",
+      "title": "Saxophonist Jeremy Alie Leon and His Quintet",
+      "date_display": "April 23",
+      "date_start": "2026-04-23",
+      "date_end": "2026-04-23",
+      "time": "7:30 PM",
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/131523",
-      "time": "7:30 PM",
-      "price": "$35",
+      "link": "https://www.chrisjazzcafe.com/events/132842",
+      "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "The Philadelphia Jazz Archive presents a special fundraiser concert headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. All proceeds support the preservation of Philadelphia's rich jazz legacy.",
-      "id": "239afd5ba97d",
-      "date_display": "Apr 22, 2026"
+      "description": "Caleb Heinze -- Electric GuitarJacob Hurlock -- PianoKai Gibson -- Upright BassLogan Bogdan \u2014 Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Bolero and Don Juan",
@@ -879,39 +1323,74 @@
       "date_display": "Apr 23, 2026"
     },
     {
-      "title": "Oliver Mayman + Jam Session",
+      "id": "6565dea51f70",
+      "title": "VIVACE Night at Sleepers Awake",
+      "date_display": "Apr 24",
       "date_start": "2026-04-24",
       "date_end": "2026-04-24",
+      "time": null,
+      "venue": "8:00 p.m. | Academy of Music",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/other/2026/vivace-night-at-sleepers-awake/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "VIVACE Night at Sleepers Awake 8:00 p.m. | Academy of Music Opera Philadelphia's community for young friends experiences this world premiere opera"
+    },
+    {
+      "id": "7e973843dcc4",
+      "title": "Pianist Lafayette Gilchrist and His Sextet",
+      "date_display": "April 24",
+      "date_start": "2026-04-24",
+      "date_end": "2026-04-24",
+      "time": "7:30 PM",
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/363349",
-      "time": "11:00 PM",
-      "price": "$15",
+      "link": "https://www.chrisjazzcafe.com/events/129961",
+      "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows.",
-      "id": "c04a05aac0d0",
-      "date_display": "Apr 24, 2026"
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "59e96356310e",
       "title": "Dog Man: The Musical",
+      "date_display": "Apr 25 - Apr 26, 2026",
       "date_start": "2026-04-25",
       "date_end": "2026-04-26",
+      "time": "5:00 PM",
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/dog-man-the-musical",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/dog-man-the-musical",
       "price": null,
       "categories": [
-        "musical",
-        "performance"
+        "performance",
+        "musical"
       ],
-      "description": "The hero who is part dog, part police officer leaps off the page and onto the stage in this action-packed musical based on Dav Pilkey's mega-bestselling series. Fun for the whole family. Sensory Friendly Performance available on Sunday, April 26.",
-      "id": "b93378b09cc3",
-      "date_display": "Apr 25 \u2013 Apr 26, 2026",
-      "time": null
+      "description": "Based on the worldwide bestselling hit series by Dav Pilkey, TheaterWorksUSA's Dog Man: The Musical is a hilarious and heartwarming production following the chronicles of Dog Man, who with the head of a dog and the body of a policeman, loves to fight crime and chew on the furniture."
+    },
+    {
+      "id": "d08de0444129",
+      "title": "Saxophonists Grant Stewart & Dylan Band with the Neil Podgurski Trio",
+      "date_display": "April 25",
+      "date_start": "2026-04-25",
+      "date_end": "2026-04-25",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132959",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Rising Up: Rocky and the Making of Monuments",
@@ -965,6 +1444,74 @@
       "date_display": "Apr 26, 2026"
     },
     {
+      "id": "d7e973a00ed6",
+      "title": "Mzantsi Jazz Collective",
+      "date_display": "April 28",
+      "date_start": "2026-04-28",
+      "date_end": "2026-04-28",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130325",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Sisonke Xonti, saxophoneMcCoy Mrubata, saxophoneKeenan Ahrends, guitarTim Norton, bassJerome Jennings, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "db74fe79b595",
+      "title": "Vocalist Olivia Perrin and Her Quintet",
+      "date_display": "April 29",
+      "date_start": "2026-04-29",
+      "date_end": "2026-04-29",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132844",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Dimase \u2014 trumpet/vocalsEli Pace \u2014 bassGreg Masters \u2014 bassSean Butkovich \u2014 piano Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "e61b3974ac97",
+      "title": "Copland\u2019s American Inspiration",
+      "date_display": "Apr 30 - May 2, 2026",
+      "date_start": "2026-04-30",
+      "date_end": "2026-05-02",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/coplands-american-inspiration",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "Copland captured the American spirit in his music, so evocative of windswept prairies, mountain hollows, and the optimism and resilience idealistically attributed to the inheritors of the new world."
+    },
+    {
+      "id": "6ea742f29f14",
+      "title": "The Philadelphia Youth Jazz Orchestra",
+      "date_display": "April 30",
+      "date_start": "2026-04-30",
+      "date_end": "2026-04-30",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133360",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Set times 7:30pm & 9:30pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
       "title": "Copland's American Inspiration",
       "date_start": "2026-04-30",
       "date_end": "2026-05-02",
@@ -982,21 +1529,21 @@
       "date_display": "Apr 30 \u2013 May 02, 2026"
     },
     {
-      "title": "Trumpeter James McGovern and His Quintet",
-      "date_start": "2026-04-30",
-      "date_end": "2026-04-30",
+      "id": "d6760f784e67",
+      "title": "Saxophonist T.K. Blue & His Quartet for a Centennial Tribute to NEA Jazz Master Randy Weston",
+      "date_display": "May 02",
+      "date_start": "2026-05-02",
+      "date_end": "2026-05-02",
+      "time": "7:30 PM",
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/363632",
-      "time": "10:30 PM",
-      "price": "$15",
+      "link": "https://www.chrisjazzcafe.com/events/130628",
+      "price": null,
       "categories": [
         "jazz"
       ],
-      "description": "Trumpeter James McGovern leads his quintet at Chris' Jazz Cafe. McGovern is a rising talent from Temple University's jazz program, bringing fresh energy to the Philadelphia jazz scene.",
-      "id": "2a3a868ae95d",
-      "date_display": "Apr 30, 2026"
+      "description": "Orin Evans \u2014 PianoSanti Debriano \u2014 BassGeorge Coleman Jr \u2014 Drums Show times 7:30 & 9:30 General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "AI and the Future of Work",
@@ -1070,56 +1617,196 @@
       "time": null
     },
     {
-      "title": "PECO Free First Sunday: May",
-      "date_start": "2026-05-03",
-      "date_end": "2026-05-03",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "price": "Free",
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Free admission and family-friendly activities celebrating the 10th annual Art of Math challenge, where students design and build 3D scale models of paintings from the collection as a STEAM-based challenge.",
-      "time": "10:00 AM",
-      "id": "e335ba076188",
-      "date_display": "May 03, 2026",
-      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-may"
-    },
-    {
-      "title": "1776 The Musical",
+      "id": "b0aecbce729b",
+      "title": "WXPN Welcomes Rhiannon Giddens",
+      "date_display": "May 5, 2026",
       "date_start": "2026-05-05",
-      "date_end": "2026-06-07",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/",
-      "link": "https://www.walnutstreettheatre.org/season/1776-the-musical",
+      "date_end": "2026-05-05",
+      "time": "7:30 PM",
+      "venue": "Miller Theater",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/rhiannon-giddens",
       "price": null,
       "categories": [
-        "musical"
+        "performance"
       ],
-      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence \u2014 in the city where it happened.",
-      "id": "445270b9c2be",
-      "date_display": "May 05 \u2013 Jun 07, 2026",
-      "time": null
+      "description": "Rhiannon Giddens has made a singular, iconic career out of stretching her brand of music, with its miles-deep historical roots and contemporary sensibilities, into just about every field imaginable."
     },
     {
-      "title": "Girl Dolls: The American Musical",
+      "id": "f5b5f4b786b0",
+      "title": "1776 The Musical",
+      "date_display": "May 05 \u2013 Jun 07, 2026",
+      "date_start": "2026-05-05",
+      "date_end": "2026-06-07",
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/1776-the-musical",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence \u2014 in the city where it happened."
+    },
+    {
+      "id": "b67dd75e8bb9",
+      "title": "Musicians\u2019 Choice",
+      "date_display": "May 7 - May 9, 2026",
+      "date_start": "2026-05-07",
+      "date_end": "2026-05-09",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season/bach-and-mozart-piano-classics",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "The program features new discoveries from the repertoire, works adored by Orchestra musicians, and varied scores that bring out the best of the signature \u201cPhiladelphia Sound. \u201d Musicians will speak from stage to share more about the fascinating backstories of the music."
+    },
+    {
+      "id": "0b76379f4426",
+      "title": "Edgardo Cintron & His Inca Band",
+      "date_display": "May 08",
+      "date_start": "2026-05-08",
+      "date_end": "2026-05-08",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132960",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Celebrating the Music of Santana featuring the Jazz Side of Carlos SantanaShow times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "bbe7943a8f9c",
+      "title": "Inside the Music: The Black Clown",
+      "date_display": "May 09",
+      "date_start": "2026-05-09",
+      "date_end": "2026-05-09",
+      "time": null,
+      "venue": "1:00 p.m. | Athenaeum of Philadelphia",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/inside-the-music-black-clown/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Inside the Music: The Black Clown 1:00 p.m. | Athenaeum of Philadelphia A talk related to the spring production of The Black Clown"
+    },
+    {
+      "id": "3bd4888bb6cf",
+      "title": "GIRL DOLLS: The American Musical",
+      "date_display": "May 09 \u2013 May 17, 2026",
       "date_start": "2026-05-09",
       "date_end": "2026-05-17",
+      "time": null,
       "venue": "FringeArts",
       "source": "FringeArts",
       "source_url": "https://fringearts.com/programs/",
       "link": "https://fringearts.com/event/girl-dolls-the-american-musical/",
       "price": null,
       "categories": [
-        "theater",
-        "musical"
+        "dance",
+        "musical",
+        "theater"
       ],
-      "description": "BYO your favorite doll \u2014 The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity.",
-      "id": "394410b6c45a",
-      "date_display": "May 09 \u2013 May 17, 2026",
-      "time": null
+      "description": "BYO your favorite doll \u2014 The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity."
+    },
+    {
+      "id": "c920f8e324b5",
+      "title": "Darryl Yokley's Sound Reformation",
+      "date_display": "May 09",
+      "date_start": "2026-05-09",
+      "date_end": "2026-05-09",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132961",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "c8e36d9dc1dc",
+      "title": "Chicago",
+      "date_display": "May 12 - May 17, 2026",
+      "date_start": "2026-05-12",
+      "date_end": "2026-05-17",
+      "time": null,
+      "venue": "Forrest Theatre",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/chicago",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "CHICAGO is still the one musical with everything that makes Broadway shimmy-shake: a universal tale of fame, fortune, and all that jazz, with one showstopping song after another and the most astonishing dancing you\u2019ve ever seen."
+    },
+    {
+      "id": "8001da629d4c",
+      "title": "Digba Ogunbiyi Quartet ~ Album Release Show",
+      "date_display": "May 12",
+      "date_start": "2026-05-12",
+      "date_end": "2026-05-12",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/126751",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Come join us for the awaited album release for Digba Ogunbiyi! Digba OgunbiyiZach WalgrenAdam AronestyEmmanuel Chidiebere Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "fa28a833f42c",
+      "title": "Postcards from Spain",
+      "date_display": "May 14, 2026",
+      "date_start": "2026-05-14",
+      "date_end": "2026-05-14",
+      "time": "6:30 PM",
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/postcards-from-spain",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "Lose yourself in the magic of Spain. Let the sizzling sounds of Bizet, Ravel, and Falla sweep you away to sunlit plazas, flamenco rhythms, and late-night fiestas."
+    },
+    {
+      "id": "40f9bb9b42cd",
+      "title": "The Black Clown",
+      "date_display": "May 14",
+      "date_start": "2026-05-14",
+      "date_end": "2026-05-14",
+      "time": null,
+      "venue": "7:00 p.m. | Miller TheaterBest Availability",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/2526-season/the-black-clown/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "The Black Clown 7:00 p.m. | Miller TheaterBest Availability"
     },
     {
       "title": "Science on Tap: May",
@@ -1175,6 +1862,23 @@
       "date_display": "May 14 \u2013 May 17, 2026"
     },
     {
+      "id": "9de60562f6d5",
+      "title": "Betz\u2013Gillece Quartet",
+      "date_display": "May 15",
+      "date_start": "2026-05-15",
+      "date_end": "2026-05-15",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133365",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Betz\u2013Gillece Quartet brings together two of the region\u2019s most distinctive jazz voices\u2014guitarist Brian Betz and vibraphonist Behn Gillece\u2014for an evening of original compositions and fresh arrangements. Known for their long-standing musical partnership, Betz and Gillece blend lyrical melodies, modern harmony, and dynamic interplay, supported by an exceptional rhythm section featuring bassist Charles Ford and drummer Dan Monaghan. The group\u2019s sound reflects a balance of swing, groove, and conte"
+    },
+    {
       "title": "Yannick N\u00e9zet-S\u00e9guin: Mahler & Sorey",
       "date_start": "2026-05-15",
       "date_end": "2026-05-16",
@@ -1192,21 +1896,93 @@
       "date_display": "May 15 \u2013 May 16, 2026"
     },
     {
+      "id": "af33bcabbcbc",
+      "title": "Trumpeter Wallace Roney Jr. & His Quartet",
+      "date_display": "May 16",
+      "date_start": "2026-05-16",
+      "date_end": "2026-05-16",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132962",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "3006108b7de3",
+      "title": "Matt Kahn Quartet",
+      "date_display": "May 19",
+      "date_start": "2026-05-19",
+      "date_end": "2026-05-19",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130326",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Swana - EVIMicah Jones - BassErik Johnson - Drums Matt Kahn - Guitar Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "b62d607cc4c8",
+      "title": "Saxophonist John David Simon & HIs Quartet",
+      "date_display": "May 22",
+      "date_start": "2026-05-22",
+      "date_end": "2026-05-22",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132963",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "d3771fd9d263",
       "title": "The Outsiders",
+      "date_display": "May 26 \u2013 Jun 07, 2026",
       "date_start": "2026-05-26",
       "date_end": "2026-06-07",
-      "venue": "Academy of Music",
+      "time": "7:30 PM",
+      "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-outsiders",
       "price": null,
       "categories": [
+        "opera",
+        "ballet",
+        "classical",
         "musical"
       ],
-      "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic.",
-      "time": "7:30 PM",
-      "id": "d65264a06703",
-      "date_display": "May 26 \u2013 Jun 07, 2026"
+      "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic."
+    },
+    {
+      "id": "e8d0a56e66a0",
+      "title": "Jazz at Lincoln Center Orchestra",
+      "date_display": "May 26, 2026",
+      "date_start": "2026-05-26",
+      "date_end": "2026-05-26",
+      "time": "7:00 PM",
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/jazz-at-lincoln-center-orchestra-with-wynton-marsalis-2",
+      "price": null,
+      "categories": [
+        "classical",
+        "jazz"
+      ],
+      "description": "Experience the world's premier big band, Jazz at Lincoln Center Orchestra led by artistic director, trumpeter extraordinaire, and nine-time Grammy Award\u00ae-winner Wynton Marsalis, in a swinging celebration of the genius of Duke Ellington."
     },
     {
       "title": "Beethoven & Marsalis",
@@ -1227,73 +2003,1211 @@
       "date_display": "May 28 \u2013 May 30, 2026"
     },
     {
+      "id": "46295c48252f",
       "title": "Martha Graham Dance Company",
+      "date_display": "May 29 \u2013 May 30, 2026",
       "date_start": "2026-05-29",
       "date_end": "2026-05-30",
+      "time": "8:00 PM",
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/event/MGDC2026",
       "link": "https://pennlivearts.org/event/martha-graham-dance-company",
       "price": null,
       "categories": [
+        "concert",
         "dance"
       ],
-      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' \u2014 co-commissioned with ArtPhilly.",
+      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' \u2014 co-commissioned with ArtPhilly."
+    },
+    {
+      "id": "c96b591037fb",
+      "title": "Laura Orzehoski & Her Quartet",
+      "date_display": "May 29",
+      "date_start": "2026-05-29",
+      "date_end": "2026-05-29",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132964",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "8d3e39d29709",
+      "title": "Bassist Ben Allison & His Trio",
+      "date_display": "May 30",
+      "date_start": "2026-05-30",
+      "date_end": "2026-05-30",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132991",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Featuring Ted Nash and Steve CardenasShow times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "7190203ed07b",
+      "title": "Drag Me to BINGO",
+      "date_display": "Jun 5, 2026",
+      "date_start": "2026-06-05",
+      "date_end": "2026-06-05",
+      "time": "7:30 PM",
+      "venue": "Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/drag-me-to-bingo",
+      "price": null,
+      "categories": [
+        "classical",
+        "concert"
+      ],
+      "description": "Drag Me to Bingo is a high-energy, interactive drag event that throws out everything you think you know about bingo. Hosted by RuPaul\u2019s Drag Race stars Mrs."
+    },
+    {
+      "id": "4ea94181e3a5",
+      "title": "Pianist/Vocalist Danny Sinoff and His Trio Performing the American Songbook",
+      "date_display": "June 05",
+      "date_start": "2026-06-05",
+      "date_end": "2026-06-05",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133367",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "74912ef3cb0d",
+      "title": "2021 Ella Fitzgerald Award Winner Lucy Wijnands & Her Quartet featuring Special Guest Guitarist Pasquale Grasso",
+      "date_display": "June 06",
+      "date_start": "2026-06-06",
+      "date_end": "2026-06-06",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132988",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "50609de31318",
+      "title": "A Conversation with Jill Biden",
+      "date_display": "Jun 9, 2026",
+      "date_start": "2026-06-09",
+      "date_end": "2026-06-09",
+      "time": "10:00 AM",
+      "venue": "Miller Theater",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/a-conversation-with-jill-biden",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "In View from the East Wing, Dr. Biden tells her story in her own words\u2014the story of an ordinary woman living an extraordinary life, and what it truly means to serve as wife, mother, grandmother, teacher, and First Lady all at once."
+    },
+    {
+      "id": "cf1c08b83e7e",
+      "title": "John Vanore & Abstract Truth",
+      "date_display": "June 12",
+      "date_start": "2026-06-12",
+      "date_end": "2026-06-12",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132986",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "7aa9d72b9f19",
+      "title": "Pianist Tyler Henderson and His Quartet",
+      "date_display": "June 13",
+      "date_start": "2026-06-13",
+      "date_end": "2026-06-13",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133368",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "aff6d8c199f4",
+      "title": "Ari Hoenig Trio featuring Gadi Lehavi & Ben Tiberio",
+      "date_display": "June 19 - June 20",
+      "date_start": "2026-06-19",
+      "date_end": "2026-06-20",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132987",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Admission: Friday - $25, Saturday - $30Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25 / $30Dinner & Show package ~ includes 3-course dinner: $95 / $100VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115 / $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "11349460684f",
+      "title": "Bluey's Big Play",
+      "date_display": "Jun 20 - Jun 21, 2026",
+      "date_start": "2026-06-20",
+      "date_end": "2026-06-21",
+      "time": "1:00 PM",
+      "venue": "Miller Theater",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/blueys-big-play",
+      "price": null,
+      "categories": [
+        "theater"
+      ],
+      "description": "Join the Heelers in their first live theatre show made just for you, featuring brilliantly created puppets. This is Bluey as you\u2019ve never seen it before, brought to real life."
+    },
+    {
+      "id": "aae270f3559e",
+      "title": "GROUP 4",
+      "date_display": "June 23",
+      "date_start": "2026-06-23",
+      "date_end": "2026-06-23",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130514",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Norman David, saxophoneTom Lawton, pianoJason Fraticelli, bassDan Monaghan, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "6e7721fa8cab",
+      "title": "2023 Ella Fitzgerald Award Winner Vocalist April Varner with The Tim Brey Trio",
+      "date_display": "June 27",
+      "date_start": "2026-06-27",
+      "date_end": "2026-06-27",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132989",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "eb822459e8ea",
+      "title": "Bokani Dyer Trio",
+      "date_display": "June 30",
+      "date_start": "2026-06-30",
+      "date_end": "2026-06-30",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/129379",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Bokani Dyer, pianoTimothy Norton, bassLumanyano Mzi, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "176f1ddbd711",
+      "title": "The Notebook",
+      "date_display": "Jul 21 - Aug 2, 2026",
+      "date_start": "2026-07-21",
+      "date_end": "2026-08-02",
+      "time": null,
+      "venue": "Academy Of Music",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/the-notebook",
+      "price": null,
+      "categories": [
+        "ballet",
+        "classical",
+        "opera"
+      ],
+      "description": "Based on the best-selling novel that inspired the iconic film, THE NOTEBOOK tells the story of Allie and Noah, both from different worlds, who share a lifetime of love despite the forces that threaten to pull them apart."
+    },
+    {
+      "id": "ca17db6a5610",
+      "title": "The Ben Singer Band",
+      "date_display": "July 28",
+      "date_start": "2026-07-28",
+      "date_end": "2026-07-28",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132185",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "a44e002fad4d",
+      "title": "Herbie Hancock",
+      "date_display": "Jul 29, 2026",
+      "date_start": "2026-07-29",
+      "date_end": "2026-07-29",
+      "time": "7:30 PM",
+      "venue": "Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/herbie-hancock",
+      "price": null,
+      "categories": [
+        "classical",
+        "concert"
+      ],
+      "description": "Now in the seventh decade of his professional life, Herbie Hancock remains where he has always been: at the forefront of world culture, technology, business and music. Herbie Hancock has been an integral part of every popular music movement since the 1960's."
+    },
+    {
+      "id": "e7627e5d49cf",
+      "title": "Undertale: The Determination Symphony",
+      "date_display": "Sep 20, 2026",
+      "date_start": "2026-09-20",
+      "date_end": "2026-09-20",
       "time": "8:00 PM",
-      "id": "94a522c7b0bc",
-      "date_display": "May 29 \u2013 May 30, 2026"
-    },
-    {
-      "title": "Creating a City of Medicine",
-      "date_start": "2026-06-01",
-      "date_end": "2026-12-31",
-      "venue": "M\u00fctter Museum",
-      "source": "M\u00fctter Museum",
-      "source_url": "https://muttermuseum.org/events/",
+      "venue": "Kimmel Center",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/undertale-the-determination-symphony",
       "price": null,
       "categories": [
-        "exhibition",
-        "science"
+        "classical",
+        "concert"
       ],
-      "description": "Philadelphia's role in the evolution of American medicine and medical schooling, from the nation's first hospital and medical school to groundbreaking surgical innovations.",
-      "time": null,
-      "id": "901ae92301d1",
-      "date_display": "Jun 01 \u2013 Dec 31, 2026",
-      "link": "https://muttermuseum.org/events/creating-a-city-of-medicine/"
+      "description": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra."
     },
     {
-      "title": "Workshop of the World: Arts and Crafts in Philadelphia",
-      "date_start": "2026-07-05",
-      "date_end": "2026-10-18",
-      "venue": "Philadelphia Museum of Art",
-      "source": "Philadelphia Museum of Art",
-      "source_url": "https://philamuseum.org/exhibitions",
+      "id": "f41d1251d6c7",
+      "title": "{{event.Title}}",
+      "date_display": "{{event.DateDescription}}",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "{{event.Venue.Title}}",
+      "source": "Philadelphia Orchestra",
+      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/eventtitle",
       "price": null,
       "categories": [
-        "exhibition"
+        "classical"
       ],
-      "description": "An exploration of Philadelphia's rich tradition in the arts and crafts movement, showcasing decorative arts, furniture, textiles, and metalwork from the city's workshops.",
-      "time": null,
-      "id": "f7e128aa43aa",
-      "date_display": "Jul 05 \u2013 Oct 18, 2026",
-      "link": "https://philamuseum.org/exhibitions/workshop-of-the-world-arts-and-crafts-in-philadelphia"
+      "description": "{{event.Prefix}} {{event.Title}} {{event.Suffix}} {{event.DateDescription}} {{event.Venue.Title}}"
     },
     {
-      "title": "Marcel Duchamp",
-      "date_start": "2026-10-10",
-      "date_end": "2027-01-31",
-      "venue": "Philadelphia Museum of Art",
-      "source": "Philadelphia Museum of Art",
-      "source_url": "https://philamuseum.org/exhibitions",
+      "id": "bee487de6a17",
+      "title": "Events",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/25-26season.php",
       "price": null,
       "categories": [
-        "exhibition"
+        "concert",
+        "dance"
       ],
-      "description": "The first North American retrospective of Marcel Duchamp's work in over 50 years. Spanning painting, sculpture, film, photography, drawings, and printed matter across six decades of the artist's multifaceted career.",
+      "description": null
+    },
+    {
+      "id": "bb5d89202ad6",
+      "title": "25/26 Season",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
       "time": null,
-      "id": "6d9d3e96c4a4",
-      "date_display": "Oct 10 \u2013 Jan 31, 2027",
-      "link": "https://philamuseum.org/exhibitions/marcel-duchamp"
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/25-26season.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9052f4d1dca1",
+      "title": "Season Calendar",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/calendar.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9881385eb255",
+      "title": "Programs",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/programs.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "79c13c1ecad5",
+      "title": "Subscriptions",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/subscriptions.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "adec580c0b1b",
+      "title": "Ticket Information",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/ticket-info.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "ba59fc58bab8",
+      "title": "Seat Maps",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/seating.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "c69c84f3fb3c",
+      "title": "Wharton Dance Studio",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/whartondance2026",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "017f05094358",
+      "title": "Incognito",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/penn-players-incognito",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "27f6adc62473",
+      "title": "Upstage A Cappella",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "b449778abcb0",
+      "title": "Anne of Green Gables",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/stimulus-anne-of-green-gables",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "d9f93976916f",
+      "title": "Masterclass: Paul Taylor Dance Company",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "9:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/masterclass-PaulTaylorDance",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "b92e81bf128a",
+      "title": "Tiburtina Ensemble",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/Tiburtina",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "7b5f92f28f11",
+      "title": "Delbert Anderson Quartet",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/DelbertAnderson",
+      "price": null,
+      "categories": [
+        "classical",
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "2072a863603e",
+      "title": "I Dread to Think",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/ninachanelabney",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "ed04f2de1b85",
+      "title": "Bill Blagg",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/blagg-sciencemagic",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "94ba6867a5d1",
+      "title": "Tim Kubart and the Space Cadets",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "3:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/timkubart",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "bb7de035800d",
+      "title": "The Magic School Bus",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "4:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/The-Magic-School-Bus",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "bf0574bc7589",
+      "title": "Th\u00e9\u00e2tre Motus",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "4:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/baobab",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "12ce94ac42be",
+      "title": "Literature to Life",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/mexicandaughter",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "8135c7d376c9",
+      "title": "Hangin' with the Giants",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/jazzreach",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "73a3cf57247e",
+      "title": "Arturo O\u2019Farrill",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/ArturoOFarrill",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "c5c79c430729",
+      "title": "The Lady Hoofers Tap Ensemble",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/lady-hoofers-spring26",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "cc540238b2d0",
+      "title": "The Listening Cabinet",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/listeningcabinet",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9f0e64a6ed7e",
+      "title": "Toll the Bell",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/TTB2026",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "3db455d55231",
+      "title": "in case of fire, speak",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/in-case-of-fire-speak",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "41e99d86a909",
+      "title": "INSIGHTS",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/insights.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9063b74331ac",
+      "title": "Edward Albee's A DELICATE BALANCE",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/edward-albees-a-delicate-balance-2025",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "1234ee884219",
+      "title": "THE ADDAMS FAMILY: The Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/addams-family",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "2dea3f64e012",
+      "title": "Disney's FROZEN The Broadway Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/disneys-frozen-the-broadway-musical",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "503e8c846594",
+      "title": "David Mamet's GLENGARRY GLEN ROSS",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/david-mamets-glengarry-glen-ross",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "7b8fb39b3dfa",
+      "title": "No\u00ebl Coward's PRESENT LAUGHTER",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/noel-cowards-present-laughter",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "62e75885316b",
+      "title": "COME FROM AWAY The Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/come-from-away-the-musical",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "aea7da71d823",
+      "title": "Disney\u2019s NEWSIES JR.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/disneys-newsies-jr-2025",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "e7a0812faf40",
+      "title": "Show Info",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/sherlock-holmes-the-great-detective",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "1a0c980642d7",
+      "title": "Get Tickets",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/edward-albees-a-delicate-balance-2025#calendar",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "127b62129eac",
+      "title": "Night of 1000 Dolls",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/night-of-1000-dolls/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "dd7cee3d3314",
+      "title": "YoungArts Philadelphia: Artist Gathering",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/youngarts-philadelphia-artist-gathering/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "f46564a85ae2",
+      "title": "Scratch Night: Open Rehearsal",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/scratch-night-open-rehearsal-april/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "ef675039c8fb",
+      "title": "Dear Evan Hansen",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Arden Theatre",
+      "source": "Arden Theatre",
+      "source_url": "https://ardentheatre.org/productions/",
+      "link": "https://ardentheatre.org/production/dearevanhansen/",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": "Winner of six Tony Awards, Dear Evan Hansen is a deeply personal and profoundly contemporary musical for anyone who\u2019s ever felt alone in a crowded room."
+    },
+    {
+      "id": "34f2f98fb77c",
+      "title": "THE BEST LIVE JAZZ IN PHILADELPHIA",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "600 N Broad St, Philadelphia, PA 19130",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/charlene-holloway-thurs-mar-26-630pm-900pm-presented-by-unscripted-jazz/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Jazz Club at SOUTH is an intimate space with under 75 seats. It is the place to see your favorite Jazz artists up close and personal."
+    },
+    {
+      "id": "57789e198f29",
+      "title": "Stage",
+      "date_display": "Date",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "City Winery Philadelphia",
+      "source": "City Winery",
+      "source_url": "https://citywinery.com/pages/events/philadelphia",
+      "link": "https://citywinery.com/pages/genre/philadelphia-americana",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
+    },
+    {
+      "id": "7db0b33c2bb1",
+      "title": "The Four Seasons Reimagined",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/event/the-four-seasons-reimagined/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "30796b3e2e6f",
+      "title": "Backstage",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/backstage/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "7e0b4f8cc859",
+      "title": "Dance eXchange",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/dance-exchange/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "22c2042b5a7d",
+      "title": "Support",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/ways-to-support/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "a71a44e9cac5",
+      "title": "Tickets & Events Wilderness Generation Groups Gift Certificates",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Suzanne Roberts Theatre",
+      "source": "Philadelphia Theatre Company",
+      "source_url": "https://www.philatheatreco.org/",
+      "link": "https://philadelphiatheatrecompany.org/",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
+    },
+    {
+      "id": "fe7f8586708f",
+      "title": "Top Picks for Events in Philadelphia",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/the-mummers-parade/",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": "On July 4, 1777, the new Americans in Philadelphia commemorated the first anniversary of the Declaration of Independence by hosting a giant party filled with fireworks, bonfires, lights, decorations, music and joy \u2014 and the city has not stopped celebrating major events, culture fests, holidays, food, music and plain ol\u2019 good times ever since. Today, Philadelphia is one of the best places in the nation to celebrate \u2026 well, just about anything with a great event to attend. Pick any week on the cal"
+    },
+    {
+      "id": "c83182968d8c",
+      "title": "<none>",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "Philly Fun Guide",
+      "source_url": "https://phillyfunguide.com/",
+      "link": "https://phillyfunguide.com/why-arts-culture",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
     }
   ]
 }
