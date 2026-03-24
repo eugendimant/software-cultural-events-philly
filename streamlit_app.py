@@ -311,6 +311,23 @@ def load_events():
             "events": list(FALLBACK_EVENTS),
             "scrape_report": {"successes": ["Using seed data"], "failures": [], "warnings": []},
         }
+    # Always merge seed events so curated exhibition/lecture/science data appears
+    # even if the scraper hasn't been re-run yet
+    if FALLBACK_EVENTS:
+        existing_keys = set()
+        for e in data.get("events", []):
+            norm = _re.sub(r'\s+', ' ', e.get("title", "").lower().strip())
+            existing_keys.add((e.get("source", ""), norm))
+        today = datetime.now().strftime("%Y-%m-%d")
+        for seed_ev in FALLBACK_EVENTS:
+            norm = _re.sub(r'\s+', ' ', seed_ev.get("title", "").lower().strip())
+            key = (seed_ev.get("source", ""), norm)
+            end = seed_ev.get("date_end") or seed_ev.get("date_start", "")
+            if key not in existing_keys and end >= today:
+                data["events"].append(seed_ev)
+                existing_keys.add(key)
+        # Update sources list
+        data["sources"] = sorted({e.get("source", "") for e in data["events"] if e.get("source")})
     # Sanitize: filter junk, clean fields
     data["events"] = [_sanitize_event(e) for e in data.get("events", []) if _is_valid_event(e)]
     # Fix cross-venue contamination (bad data from previous scraper runs)
