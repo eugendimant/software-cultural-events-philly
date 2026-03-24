@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import urllib.parse
 from collections import Counter
+import html as _html
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -344,6 +345,11 @@ def _s(event, key, default=""):
     return val if val is not None else default
 
 
+def _h(text):
+    """HTML-escape text for safe embedding in unsafe_allow_html markup."""
+    return _html.escape(str(text)) if text else ""
+
+
 def _cats(event):
     """Safely get categories list from an event, never returning None."""
     val = event.get("categories")
@@ -372,6 +378,25 @@ def get_month_key(iso_str):
         return "Unknown"
     try:
         return datetime.strptime(iso_str, "%Y-%m-%d").strftime("%B %Y")
+    except Exception:
+        return "Unknown"
+
+
+def effective_month_key(event):
+    """For month grouping: ongoing events (start in the past) group under current month."""
+    start_str = _s(event, "date_start")
+    if not start_str:
+        return "Unknown"
+    try:
+        start_dt = datetime.strptime(start_str, "%Y-%m-%d").date()
+        today = datetime.now().date()
+        if start_dt < today.replace(day=1):
+            # Event started before this month — check if it's still ongoing
+            end_str = _s(event, "date_end") or start_str
+            end_dt = datetime.strptime(end_str, "%Y-%m-%d").date()
+            if end_dt >= today:
+                return today.strftime("%B %Y")
+        return start_dt.strftime("%B %Y")
     except Exception:
         return "Unknown"
 
@@ -405,8 +430,11 @@ def is_this_weekend(event):
     if start is None:
         return False
     today = datetime.now().date()
-    days_to_fri = (4 - today.weekday()) % 7
-    friday = today + timedelta(days=days_to_fri)
+    weekday = today.weekday()
+    if weekday <= 4:  # Mon-Fri: look ahead to this Friday
+        friday = today + timedelta(days=(4 - weekday))
+    else:  # Sat-Sun: look back to this Friday
+        friday = today - timedelta(days=(weekday - 4))
     sunday = friday + timedelta(days=2)
     return start <= sunday and end >= friday
 
@@ -419,9 +447,24 @@ def is_happening_now(event):
     return start <= today <= end
 
 
+def _is_this_month(event):
+    """Check if event overlaps with the current calendar month."""
+    start, end = _event_dates(event)
+    if start is None:
+        return False
+    today = datetime.now().date()
+    month_start = today.replace(day=1)
+    # Last day of month
+    if today.month == 12:
+        month_end = today.replace(year=today.year + 1, month=1, day=1) - timedelta(days=1)
+    else:
+        month_end = today.replace(month=today.month + 1, day=1) - timedelta(days=1)
+    return start <= month_end and end >= month_start
+
+
 def is_free(event):
     price = _s(event, "price").lower().strip()
-    return price in ("free", "$0", "0")
+    return price in ("free", "$0", "0", "$0.00") or price.startswith("free")
 
 
 def days_until(event):
@@ -467,6 +510,8 @@ def gcal_url(event):
 
 def maps_url(event):
     venue = _s(event, "venue")
+    if not venue:
+        return "#"
     return f"https://www.google.com/maps/search/{urllib.parse.quote(venue + ' Philadelphia PA')}"
 
 
@@ -1066,9 +1111,10 @@ def main():
     with col_time:
         time_filter = st.selectbox(
             "Time",
-            ["all", "this_week", "this_weekend", "this_month", "free"],
+            ["all", "today", "this_week", "this_weekend", "this_month", "free"],
             format_func=lambda x: {
                 "all": "📅 All Dates",
+                "today": "📌 Today",
                 "this_week": "📅 This Week",
                 "this_weekend": "🎉 This Weekend",
                 "this_month": "📅 This Month",
@@ -1132,14 +1178,14 @@ def main():
     if venue_filter != "all":
         filtered = [e for e in filtered if _s(e, "venue") == venue_filter]
 
-    if time_filter == "this_week":
+    if time_filter == "today":
+        filtered = [e for e in filtered if is_happening_now(e)]
+    elif time_filter == "this_week":
         filtered = [e for e in filtered if is_this_week(e)]
     elif time_filter == "this_weekend":
         filtered = [e for e in filtered if is_this_weekend(e)]
     elif time_filter == "this_month":
-        this_month = datetime.now().strftime("%Y-%m")
-        filtered = [e for e in filtered if _s(e, "date_start").startswith(this_month)
-                     or _s(e, "date_end").startswith(this_month)]
+        filtered = [e for e in filtered if _is_this_month(e)]
     elif time_filter == "free":
         filtered = [e for e in filtered if is_free(e)]
 
@@ -1159,7 +1205,15 @@ def main():
     elif sort_by == "venue":
         filtered.sort(key=lambda e: _s(e, "venue").lower())
     else:
-        filtered.sort(key=lambda e: _s(e, "date_start", "9999"))
+        def _sort_date(e):
+            """Ongoing events (start in past, end in future) sort by today's date, tiebreak by end date."""
+            s = _s(e, "date_start", "9999")
+            today = today_str()
+            end = _s(e, "date_end") or s
+            if s < today and end >= today:
+                return (today, end)  # ongoing — sort with today's events, earlier end first
+            return (s, end)
+        filtered.sort(key=_sort_date)
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in filtered if is_happening_now(e)]
@@ -1169,17 +1223,19 @@ def main():
         cols = st.columns(num_cols if num_cols >= 2 else 2)
         for i, event in enumerate(tonight[:4]):
             with cols[i % num_cols]:
-                badge = category_badge_html(_cats(event)[0]) if _cats(event) else ""
-                price_html = f' · {_s(event, "price")}' if _s(event, "price") else ""
+                cats = _cats(event)
+                badge = category_badge_html(cats[0]) if cats else ""
+                price_html = f' · {_h(_s(event, "price"))}' if _s(event, "price") else ""
                 link = _s(event, "link") or _s(event, "source_url") or "#"
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 spot_desc = event_description(event, max_sentences=2)
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
                     <div class="spotlight-label">Now Playing</div>
-                    <div class="event-title" style="font-size:1rem">{_s(event, 'title')}</div>
+                    <div class="event-title" style="font-size:1rem">{_h(_s(event, 'title'))}</div>
                     <div style="color:#8888a0;font-size:0.78rem;margin:0.2rem 0">
-                        <span class="event-venue">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}{price_html}
+                        <span class="event-venue">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}{price_html}
                     </div>
                     <div class="event-desc" style="font-size:0.8rem;margin-top:0.3rem;-webkit-line-clamp:2;max-height:2.7em">{spot_desc}</div>
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem">
@@ -1201,26 +1257,26 @@ def main():
         for i, event in enumerate(next_up):
             with cols[i]:
                 urg = urgency_badge(event)
-                link = _s(event, "link")
+                link = _s(event, "link") or _s(event, "source_url")
                 time_str = _s(event, "time")
                 price_str = _s(event, "price")
-                date_disp = _s(event, "date_display")
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 venue = _s(event, "venue")
                 # Bottom meta line
                 meta_parts = []
                 if time_str:
-                    meta_parts.append(time_str)
+                    meta_parts.append(_h(time_str))
                 if price_str:
-                    meta_parts.append(price_str)
+                    meta_parts.append(_h(price_str))
                 meta_html = " · ".join(meta_parts) if meta_parts else ""
                 wrapper_open = f'<a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">' if link else ''
                 wrapper_close = '</a>' if link else ''
                 st.markdown(f"""
                 {wrapper_open}
                 <div class="coming-up-card">
-                    <div class="coming-up-date-badge">{date_disp} {urg}</div>
-                    <div class="coming-up-title">{_s(event, 'title')}</div>
-                    <div class="coming-up-venue">{venue}</div>
+                    <div class="coming-up-date-badge">{_h(date_disp)} {urg}</div>
+                    <div class="coming-up-title">{_h(_s(event, 'title'))}</div>
+                    <div class="coming-up-venue">{_h(venue)}</div>
                     {'<div class="coming-up-meta">' + meta_html + '</div>' if meta_html else ''}
                 </div>
                 {wrapper_close}
@@ -1265,20 +1321,37 @@ def main():
 
     # ── Event listing grouped by month ───────────────────────────────────
     if not filtered:
-        st.markdown("""
+        # Build a summary of active filters for the empty state message
+        active_filters = []
+        if active_cat != "all":
+            active_filters.append(f"category <strong>{_h(active_cat)}</strong>")
+        if venue_filter != "all":
+            active_filters.append(f"venue <strong>{_h(venue_filter)}</strong>")
+        if time_filter != "all":
+            time_labels = {"today": "Today", "this_week": "This Week", "this_weekend": "This Weekend", "this_month": "This Month", "free": "Free"}
+            active_filters.append(f"<strong>{time_labels.get(time_filter, time_filter)}</strong>")
+        if search:
+            active_filters.append(f'search "<strong>{_h(search)}</strong>"')
+        filter_summary = " + ".join(active_filters) if active_filters else "your current filters"
+        st.markdown(f"""
         <div style="text-align:center;padding:3rem;color:#8888a0">
             <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
             <h3 style="color:#e8e8f0;margin-bottom:0.5rem">No events match your filters</h3>
-            <p>Try adjusting your category, venue, date range, or search query.</p>
+            <p>No results for {filter_summary}.</p>
+            <p style="font-size:0.85rem">There are <strong>{len(current_events)}</strong> upcoming events total — try broadening your filters.</p>
         </div>
         """, unsafe_allow_html=True)
+        if active_cat != "all" or venue_filter != "all" or time_filter != "all" or search:
+            if st.button("Clear All Filters", type="primary"):
+                st.session_state.active_category = "all"
+                st.rerun()
     else:
         current_month = None
         # Render all events in a consistent 2-column grid
         col_idx = 0
         cols = None
         for event in filtered:
-            month = get_month_key(_s(event, "date_start"))
+            month = effective_month_key(event)
             if month != current_month:
                 # New month header — force new row
                 current_month = month
@@ -1301,12 +1374,13 @@ def main():
             st.caption("These events have already ended. Kept for reference.")
             for event in past_events:
                 badges = "".join(category_badge_html(c) for c in _cats(event))
-                price_html = f'<span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
+                price_html = f'<span class="price-tag">{_h(_s(event, "price"))}</span>' if _s(event, "price") else ""
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 st.markdown(f"""
                 <div class="event-card-past">
-                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{_s(event, 'title')}</div>
+                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{_h(_s(event, 'title'))}</div>
                     <div class="event-meta">
-                        <span style="color:#6a6a8a">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}
+                        <span style="color:#6a6a8a">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}
                         {' · ' + price_html if _s(event, 'price') else ''}
                     </div>
                     <div style="margin-top:0.3rem">{badges}</div>
@@ -1390,22 +1464,22 @@ def _render_event_card(event, st_ctx):
     desc = event_description(event)
     link = _s(event, "link") or _s(event, "source_url")
     venue = _s(event, "venue")
-    date_disp = _s(event, "date_display")
+    date_disp = _s(event, "date_display") or _s(event, "date_start", "")
 
     # Build compact meta line: venue · date · time
     meta_parts = []
     if venue:
-        meta_parts.append(f'<span class="event-venue">{venue}</span>')
+        meta_parts.append(f'<span class="event-venue">{_h(venue)}</span>')
     if date_disp:
-        meta_parts.append(date_disp)
+        meta_parts.append(_h(date_disp))
     if time_str:
-        meta_parts.append(time_str)
+        meta_parts.append(_h(time_str))
     meta_line = " · ".join(meta_parts)
 
     # Price tag (separate for visual emphasis)
     price_html = ""
     if price:
-        price_html = f'<span class="price-tag" style="margin-left:6px">{price}</span>'
+        price_html = f'<span class="price-tag" style="margin-left:6px">{_h(price)}</span>'
 
     # Action links — compact
     action_links = []
@@ -1418,9 +1492,9 @@ def _render_event_card(event, st_ctx):
 
     st_ctx.markdown(f"""
     <div class="event-card">
-        <div class="event-title">{_s(event, 'title')}{urg}</div>
+        <div class="event-title">{_h(_s(event, 'title'))}{urg}</div>
         <div class="event-datetime">{meta_line}{price_html}</div>
-        <div class="event-desc">{desc}</div>
+        <div class="event-desc">{_h(desc)}</div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto">
             <div>{badge_html}</div>
             <div class="card-actions" style="border:0;margin:0;padding:0">{actions_html}</div>
