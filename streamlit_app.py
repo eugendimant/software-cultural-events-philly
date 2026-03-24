@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import urllib.parse
 from collections import Counter
+import html as _html
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -344,6 +345,11 @@ def _s(event, key, default=""):
     return val if val is not None else default
 
 
+def _h(text):
+    """HTML-escape text for safe embedding in unsafe_allow_html markup."""
+    return _html.escape(str(text)) if text else ""
+
+
 def _cats(event):
     """Safely get categories list from an event, never returning None."""
     val = event.get("categories")
@@ -424,8 +430,11 @@ def is_this_weekend(event):
     if start is None:
         return False
     today = datetime.now().date()
-    days_to_fri = (4 - today.weekday()) % 7
-    friday = today + timedelta(days=days_to_fri)
+    weekday = today.weekday()
+    if weekday <= 4:  # Mon-Fri: look ahead to this Friday
+        friday = today + timedelta(days=(4 - weekday))
+    else:  # Sat-Sun: look back to this Friday
+        friday = today - timedelta(days=(weekday - 4))
     sunday = friday + timedelta(days=2)
     return start <= sunday and end >= friday
 
@@ -455,7 +464,7 @@ def _is_this_month(event):
 
 def is_free(event):
     price = _s(event, "price").lower().strip()
-    return price in ("free", "$0", "0")
+    return price in ("free", "$0", "0", "$0.00") or price.startswith("free")
 
 
 def days_until(event):
@@ -501,6 +510,8 @@ def gcal_url(event):
 
 def maps_url(event):
     venue = _s(event, "venue")
+    if not venue:
+        return "#"
     return f"https://www.google.com/maps/search/{urllib.parse.quote(venue + ' Philadelphia PA')}"
 
 
@@ -1192,14 +1203,13 @@ def main():
         filtered.sort(key=lambda e: _s(e, "venue").lower())
     else:
         def _sort_date(e):
-            """Ongoing events (start in past, end in future) sort by today's date."""
+            """Ongoing events (start in past, end in future) sort by today's date, tiebreak by end date."""
             s = _s(e, "date_start", "9999")
             today = today_str()
-            if s < today:
-                end = _s(e, "date_end") or s
-                if end >= today:
-                    return today  # ongoing — sort with today's events
-            return s
+            end = _s(e, "date_end") or s
+            if s < today and end >= today:
+                return (today, end)  # ongoing — sort with today's events, earlier end first
+            return (s, end)
         filtered.sort(key=_sort_date)
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
@@ -1210,17 +1220,19 @@ def main():
         cols = st.columns(num_cols if num_cols >= 2 else 2)
         for i, event in enumerate(tonight[:4]):
             with cols[i % num_cols]:
-                badge = category_badge_html(_cats(event)[0]) if _cats(event) else ""
-                price_html = f' · {_s(event, "price")}' if _s(event, "price") else ""
+                cats = _cats(event)
+                badge = category_badge_html(cats[0]) if cats else ""
+                price_html = f' · {_h(_s(event, "price"))}' if _s(event, "price") else ""
                 link = _s(event, "link") or _s(event, "source_url") or "#"
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 spot_desc = event_description(event, max_sentences=2)
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
                     <div class="spotlight-label">Now Playing</div>
-                    <div class="event-title" style="font-size:1rem">{_s(event, 'title')}</div>
+                    <div class="event-title" style="font-size:1rem">{_h(_s(event, 'title'))}</div>
                     <div style="color:#8888a0;font-size:0.78rem;margin:0.2rem 0">
-                        <span class="event-venue">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}{price_html}
+                        <span class="event-venue">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}{price_html}
                     </div>
                     <div class="event-desc" style="font-size:0.8rem;margin-top:0.3rem;-webkit-line-clamp:2;max-height:2.7em">{spot_desc}</div>
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem">
@@ -1242,26 +1254,26 @@ def main():
         for i, event in enumerate(next_up):
             with cols[i]:
                 urg = urgency_badge(event)
-                link = _s(event, "link")
+                link = _s(event, "link") or _s(event, "source_url")
                 time_str = _s(event, "time")
                 price_str = _s(event, "price")
-                date_disp = _s(event, "date_display")
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 venue = _s(event, "venue")
                 # Bottom meta line
                 meta_parts = []
                 if time_str:
-                    meta_parts.append(time_str)
+                    meta_parts.append(_h(time_str))
                 if price_str:
-                    meta_parts.append(price_str)
+                    meta_parts.append(_h(price_str))
                 meta_html = " · ".join(meta_parts) if meta_parts else ""
                 wrapper_open = f'<a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">' if link else ''
                 wrapper_close = '</a>' if link else ''
                 st.markdown(f"""
                 {wrapper_open}
                 <div class="coming-up-card">
-                    <div class="coming-up-date-badge">{date_disp} {urg}</div>
-                    <div class="coming-up-title">{_s(event, 'title')}</div>
-                    <div class="coming-up-venue">{venue}</div>
+                    <div class="coming-up-date-badge">{_h(date_disp)} {urg}</div>
+                    <div class="coming-up-title">{_h(_s(event, 'title'))}</div>
+                    <div class="coming-up-venue">{_h(venue)}</div>
                     {'<div class="coming-up-meta">' + meta_html + '</div>' if meta_html else ''}
                 </div>
                 {wrapper_close}
@@ -1342,12 +1354,13 @@ def main():
             st.caption("These events have already ended. Kept for reference.")
             for event in past_events:
                 badges = "".join(category_badge_html(c) for c in _cats(event))
-                price_html = f'<span class="price-tag">{_s(event, "price")}</span>' if _s(event, "price") else ""
+                price_html = f'<span class="price-tag">{_h(_s(event, "price"))}</span>' if _s(event, "price") else ""
+                date_disp = _s(event, "date_display") or _s(event, "date_start", "")
                 st.markdown(f"""
                 <div class="event-card-past">
-                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{_s(event, 'title')}</div>
+                    <div style="font-size:1rem;font-weight:600;color:#8888a0">{_h(_s(event, 'title'))}</div>
                     <div class="event-meta">
-                        <span style="color:#6a6a8a">{_s(event, 'venue')}</span> · {_s(event, 'date_display')}
+                        <span style="color:#6a6a8a">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}
                         {' · ' + price_html if _s(event, 'price') else ''}
                     </div>
                     <div style="margin-top:0.3rem">{badges}</div>
@@ -1431,22 +1444,22 @@ def _render_event_card(event, st_ctx):
     desc = event_description(event)
     link = _s(event, "link") or _s(event, "source_url")
     venue = _s(event, "venue")
-    date_disp = _s(event, "date_display")
+    date_disp = _s(event, "date_display") or _s(event, "date_start", "")
 
     # Build compact meta line: venue · date · time
     meta_parts = []
     if venue:
-        meta_parts.append(f'<span class="event-venue">{venue}</span>')
+        meta_parts.append(f'<span class="event-venue">{_h(venue)}</span>')
     if date_disp:
-        meta_parts.append(date_disp)
+        meta_parts.append(_h(date_disp))
     if time_str:
-        meta_parts.append(time_str)
+        meta_parts.append(_h(time_str))
     meta_line = " · ".join(meta_parts)
 
     # Price tag (separate for visual emphasis)
     price_html = ""
     if price:
-        price_html = f'<span class="price-tag" style="margin-left:6px">{price}</span>'
+        price_html = f'<span class="price-tag" style="margin-left:6px">{_h(price)}</span>'
 
     # Action links — compact
     action_links = []
@@ -1459,9 +1472,9 @@ def _render_event_card(event, st_ctx):
 
     st_ctx.markdown(f"""
     <div class="event-card">
-        <div class="event-title">{_s(event, 'title')}{urg}</div>
+        <div class="event-title">{_h(_s(event, 'title'))}{urg}</div>
         <div class="event-datetime">{meta_line}{price_html}</div>
-        <div class="event-desc">{desc}</div>
+        <div class="event-desc">{_h(desc)}</div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto">
             <div>{badge_html}</div>
             <div class="card-actions" style="border:0;margin:0;padding:0">{actions_html}</div>
