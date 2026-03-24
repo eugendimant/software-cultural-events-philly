@@ -1111,9 +1111,10 @@ def main():
     with col_time:
         time_filter = st.selectbox(
             "Time",
-            ["all", "this_week", "this_weekend", "this_month", "free"],
+            ["all", "today", "this_week", "this_weekend", "this_month", "free"],
             format_func=lambda x: {
                 "all": "📅 All Dates",
+                "today": "📌 Today",
                 "this_week": "📅 This Week",
                 "this_weekend": "🎉 This Weekend",
                 "this_month": "📅 This Month",
@@ -1177,7 +1178,9 @@ def main():
     if venue_filter != "all":
         filtered = [e for e in filtered if _s(e, "venue") == venue_filter]
 
-    if time_filter == "this_week":
+    if time_filter == "today":
+        filtered = [e for e in filtered if is_happening_now(e)]
+    elif time_filter == "this_week":
         filtered = [e for e in filtered if is_this_week(e)]
     elif time_filter == "this_weekend":
         filtered = [e for e in filtered if is_this_weekend(e)]
@@ -1318,13 +1321,30 @@ def main():
 
     # ── Event listing grouped by month ───────────────────────────────────
     if not filtered:
-        st.markdown("""
+        # Build a summary of active filters for the empty state message
+        active_filters = []
+        if active_cat != "all":
+            active_filters.append(f"category <strong>{_h(active_cat)}</strong>")
+        if venue_filter != "all":
+            active_filters.append(f"venue <strong>{_h(venue_filter)}</strong>")
+        if time_filter != "all":
+            time_labels = {"today": "Today", "this_week": "This Week", "this_weekend": "This Weekend", "this_month": "This Month", "free": "Free"}
+            active_filters.append(f"<strong>{time_labels.get(time_filter, time_filter)}</strong>")
+        if search:
+            active_filters.append(f'search "<strong>{_h(search)}</strong>"')
+        filter_summary = " + ".join(active_filters) if active_filters else "your current filters"
+        st.markdown(f"""
         <div style="text-align:center;padding:3rem;color:#8888a0">
             <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
             <h3 style="color:#e8e8f0;margin-bottom:0.5rem">No events match your filters</h3>
-            <p>Try adjusting your category, venue, date range, or search query.</p>
+            <p>No results for {filter_summary}.</p>
+            <p style="font-size:0.85rem">There are <strong>{len(current_events)}</strong> upcoming events total — try broadening your filters.</p>
         </div>
         """, unsafe_allow_html=True)
+        if active_cat != "all" or venue_filter != "all" or time_filter != "all" or search:
+            if st.button("Clear All Filters", type="primary"):
+                st.session_state.active_category = "all"
+                st.rerun()
     else:
         current_month = None
         # Render all events in a consistent 2-column grid
