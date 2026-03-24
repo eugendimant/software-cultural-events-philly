@@ -376,6 +376,25 @@ def get_month_key(iso_str):
         return "Unknown"
 
 
+def effective_month_key(event):
+    """For month grouping: ongoing events (start in the past) group under current month."""
+    start_str = _s(event, "date_start")
+    if not start_str:
+        return "Unknown"
+    try:
+        start_dt = datetime.strptime(start_str, "%Y-%m-%d").date()
+        today = datetime.now().date()
+        if start_dt < today.replace(day=1):
+            # Event started before this month — check if it's still ongoing
+            end_str = _s(event, "date_end") or start_str
+            end_dt = datetime.strptime(end_str, "%Y-%m-%d").date()
+            if end_dt >= today:
+                return today.strftime("%B %Y")
+        return start_dt.strftime("%B %Y")
+    except Exception:
+        return "Unknown"
+
+
 def today_str():
     return datetime.now().strftime("%Y-%m-%d")
 
@@ -417,6 +436,21 @@ def is_happening_now(event):
         return False
     today = datetime.now().date()
     return start <= today <= end
+
+
+def _is_this_month(event):
+    """Check if event overlaps with the current calendar month."""
+    start, end = _event_dates(event)
+    if start is None:
+        return False
+    today = datetime.now().date()
+    month_start = today.replace(day=1)
+    # Last day of month
+    if today.month == 12:
+        month_end = today.replace(year=today.year + 1, month=1, day=1) - timedelta(days=1)
+    else:
+        month_end = today.replace(month=today.month + 1, day=1) - timedelta(days=1)
+    return start <= month_end and end >= month_start
 
 
 def is_free(event):
@@ -1137,9 +1171,7 @@ def main():
     elif time_filter == "this_weekend":
         filtered = [e for e in filtered if is_this_weekend(e)]
     elif time_filter == "this_month":
-        this_month = datetime.now().strftime("%Y-%m")
-        filtered = [e for e in filtered if _s(e, "date_start").startswith(this_month)
-                     or _s(e, "date_end").startswith(this_month)]
+        filtered = [e for e in filtered if _is_this_month(e)]
     elif time_filter == "free":
         filtered = [e for e in filtered if is_free(e)]
 
@@ -1159,7 +1191,16 @@ def main():
     elif sort_by == "venue":
         filtered.sort(key=lambda e: _s(e, "venue").lower())
     else:
-        filtered.sort(key=lambda e: _s(e, "date_start", "9999"))
+        def _sort_date(e):
+            """Ongoing events (start in past, end in future) sort by today's date."""
+            s = _s(e, "date_start", "9999")
+            today = today_str()
+            if s < today:
+                end = _s(e, "date_end") or s
+                if end >= today:
+                    return today  # ongoing — sort with today's events
+            return s
+        filtered.sort(key=_sort_date)
 
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in filtered if is_happening_now(e)]
@@ -1278,7 +1319,7 @@ def main():
         col_idx = 0
         cols = None
         for event in filtered:
-            month = get_month_key(_s(event, "date_start"))
+            month = effective_month_key(event)
             if month != current_month:
                 # New month header — force new row
                 current_month = month
