@@ -163,6 +163,118 @@
       "venues": [
         "Various"
       ]
+    },
+    {
+      "name": "Philadelphia Museum of Art",
+      "url": "https://philamuseum.org/calendar",
+      "covers": "Art exhibitions, gallery talks, lectures, tours, family programs",
+      "venues": [
+        "Philadelphia Museum of Art"
+      ]
+    },
+    {
+      "name": "Philadelphia Museum of Art Exhibitions",
+      "url": "https://philamuseum.org/exhibitions",
+      "covers": "Current and upcoming art exhibitions",
+      "venues": [
+        "Philadelphia Museum of Art"
+      ]
+    },
+    {
+      "name": "Barnes Foundation",
+      "url": "https://www.barnesfoundation.org/whats-on",
+      "covers": "Art exhibitions, gallery events, lectures, family programs",
+      "venues": [
+        "Barnes Foundation"
+      ]
+    },
+    {
+      "name": "Barnes Foundation Exhibitions",
+      "url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "covers": "Art exhibitions at the Barnes",
+      "venues": [
+        "Barnes Foundation"
+      ]
+    },
+    {
+      "name": "The Franklin Institute",
+      "url": "https://fi.edu/en/events-calendar",
+      "covers": "Science exhibitions, family events, lectures, Science After Hours",
+      "venues": [
+        "The Franklin Institute"
+      ]
+    },
+    {
+      "name": "Franklin Institute Exhibits",
+      "url": "https://fi.edu/en/exhibits-experiences",
+      "covers": "Science exhibitions and interactive experiences",
+      "venues": [
+        "The Franklin Institute"
+      ]
+    },
+    {
+      "name": "Penn Museum",
+      "url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "covers": "Archaeology & anthropology exhibitions",
+      "venues": [
+        "Penn Museum"
+      ]
+    },
+    {
+      "name": "Academy of Natural Sciences",
+      "url": "https://ansp.org/programs-and-events/events/",
+      "covers": "Natural science events, exhibitions, lectures, family programs",
+      "venues": [
+        "Academy of Natural Sciences"
+      ]
+    },
+    {
+      "name": "Academy of Natural Sciences Exhibits",
+      "url": "https://ansp.org/exhibits/exhibits/",
+      "covers": "Natural history exhibitions",
+      "venues": [
+        "Academy of Natural Sciences"
+      ]
+    },
+    {
+      "name": "M\u00fctter Museum",
+      "url": "https://muttermuseum.org/events/",
+      "covers": "Medical history exhibitions, lectures, events",
+      "venues": [
+        "M\u00fctter Museum"
+      ]
+    },
+    {
+      "name": "Profs and Pints",
+      "url": "https://www.profsandpints.com/philadelphia",
+      "covers": "Academic lectures in bars \u2014 history, science, culture, philosophy",
+      "venues": [
+        "National Mechanics"
+      ]
+    },
+    {
+      "name": "Science on Tap",
+      "url": "https://www.scienceontapphilly.com/events",
+      "covers": "Monthly science talks at National Mechanics bar",
+      "venues": [
+        "National Mechanics"
+      ]
+    },
+    {
+      "name": "Science History Institute",
+      "url": "https://www.sciencehistory.org/visit/events",
+      "covers": "Science history lectures, exhibitions, public talks",
+      "venues": [
+        "Science History Institute"
+      ]
+    },
+    {
+      "name": "Sofar Sounds Philadelphia",
+      "url": "https://www.sofarsounds.com/cities/philadelphia",
+      "covers": "Intimate secret concerts in unique Philadelphia spaces",
+      "venues": [
+        "Various (revealed day-of)"
+      ]
     }
   ]
 }
