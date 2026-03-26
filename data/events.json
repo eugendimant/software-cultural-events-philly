@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-25T12:48:55.993285Z",
-  "total_events": 283,
+  "last_updated": "2026-03-26T12:56:25.389274Z",
+  "total_events": 286,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -41,7 +41,7 @@
       "Walnut Street Theatre: 16 events (links)",
       "FringeArts: 7 events (HTML)",
       "Arden Theatre: 3 events (HTML)",
-      "Chris' Jazz Cafe: 67 events (HTML)",
+      "Chris' Jazz Cafe: 66 events (HTML)",
       "South Jazz Kitchen: 1 events (HTML)",
       "City Winery: 1 events (HTML)",
       "BalletX: 3 events (HTML)",
@@ -50,7 +50,7 @@
       "Philly Fun Guide: 1 events (HTML)",
       "Philadelphia Museum of Art: 5 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 5 events (HTML)",
-      "Barnes Foundation: 54 events (HTML)",
+      "Barnes Foundation: 60 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 16 events (HTML)",
@@ -319,76 +319,6 @@
       "description": "140 N. Columbus Blvd. (at Race St.) Philadelphia, PA 19106 Directions"
     },
     {
-      "id": "74a531fb8da6",
-      "title": "Saxophonist Christian Ertl and His Quartet",
-      "date_display": "Apr 17, 2026",
-      "date_start": "2026-03-25",
-      "date_end": "2026-03-25",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/132133",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "id": "7ef0eee6982e",
-      "title": "ARTZ @ The Museum",
-      "date_display": "Wednesday, March 25, 1:30 \u2013 2:30pm",
-      "date_start": "2026-03-25",
-      "date_end": "2026-03-25",
-      "time": "2:30 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/artz-the-museum",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "This program provides free access to the Barnes for people living with dementia and their care partners."
-    },
-    {
-      "id": "06c3def2a7c2",
-      "title": "First Friday: Our Plastic Planet",
-      "date_display": "Mar 25 Wed 12pm-12:45pm",
-      "date_start": "2026-03-25",
-      "date_end": "2026-03-25",
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/first-friday-our-plastic-planet/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Friday, April 3, 2026 | 5pm-7pm EDT"
-    },
-    {
-      "id": "2183ea3dbe06",
-      "title": "Othmer Library Tour",
-      "date_display": "Mar 25 Wed 12pm-12:45pm",
-      "date_start": "2026-03-25",
-      "date_end": "2026-03-25",
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20260325/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
       "id": "4890fa38c7bc",
       "title": "Logan Bogdan Septet",
       "date_display": "March 26",
@@ -487,8 +417,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/endea-owens-and-the-cookout",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Grammy, Emmy, and Peabody Award winner, Endea Owens is hailed as one of jazz's most vibrant and versatile artists. The Detroit-raised recording artist, bassist, and composer has been mentored by jazz icons like Marcus Belgrave, Rodney Whitaker, and Ron Carter."
     },
@@ -542,6 +472,24 @@
         "science"
       ],
       "description": "Fun weekly science story time with Academy educators featuring family-friendly tales and hands\u2011on crafts for young natural history fans."
+    },
+    {
+      "id": "38b6434ee78f",
+      "title": "First Friday: Our Plastic Planet",
+      "date_display": "Mar 28 Sat 10am-5pm",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/first-friday-our-plastic-planet/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Friday, April 3, 2026 | 5pm-7pm EDT"
     },
     {
       "id": "c460e6da8d7b",
@@ -627,10 +575,10 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
       "price": null,
       "categories": [
-        "ballet",
-        "classical",
+        "musical",
         "opera",
-        "musical"
+        "ballet",
+        "classical"
       ],
       "description": "For 65 years, THE SOUND OF MUSIC has been one of our \u201cfavorite things. \u201d With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn\u2019t just meant to be enjoyed - it\u2019s meant to be shared."
     },
@@ -803,6 +751,24 @@
         "science"
       ],
       "description": "Spring Break at the Academy: explore fossils, live shows, hands\u2011on fun, and be among the first to experience the new Botany of Nations exhibit."
+    },
+    {
+      "id": "5fbc3e473bd2",
+      "title": "Othmer Library Tour",
+      "date_display": "Apr 08 Wed 12pm-12:45pm",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20260403/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "title": "Dance Theatre of Harlem",
@@ -1130,8 +1096,8 @@
       "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
-        "performance",
-        "theater"
+        "theater",
+        "performance"
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family."
     },
@@ -1237,6 +1203,23 @@
         "exhibition"
       ],
       "description": "As a member, see our latest exhibition before the public opening."
+    },
+    {
+      "id": "a00ff8a67bc4",
+      "title": "Member Introduction: Sky Hopinka: Red Metal Dust",
+      "date_display": "Thursday, April 9, 10:15 \u2013 10:45am",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": "10:45 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/member-introduction-sky-hopinka-red-metal-dust-april",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Learn more about the new installation of artwork in the Annenberg Court with a docent-led discussion."
     },
     {
       "id": "b26eda71d309",
@@ -1413,6 +1396,23 @@
       "description": "2026 American Traditions vocal Competition Silver Winner 2026 Bistro Award Winner for Outstanding Jazz Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $35Dinner & Show ~ Includes 3-course dinner: $105VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "9fe5ff9c7ed2",
+      "title": "Slow Art Day 2026",
+      "date_display": "Saturday, April 11, 11am \u2013 1:30pm",
+      "date_start": "2026-04-11",
+      "date_end": "2026-04-11",
+      "time": "1:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/slow-art-day-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Discover the joy of looking at art. Spend an hour examining works in the galleries, then join a discussion about your experience."
+    },
+    {
       "id": "1c89f448012b",
       "title": "LENA DUNHAM: THE FAMESICK TOUR",
       "date_display": "Apr 12, 2026",
@@ -1428,6 +1428,23 @@
         "performance"
       ],
       "description": "To celebrate the release of her first book in over a decade, Lena Dunham returns to the stage for a night of fearless storytelling and no holds barred conversation."
+    },
+    {
+      "id": "467dd7c87bf6",
+      "title": "Curators in Conversation: Freedom Dreams",
+      "date_display": "Sunday, April 12, 1 \u2013 2pm",
+      "date_start": "2026-04-12",
+      "date_end": "2026-04-12",
+      "time": "2:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/curators-in-conversation-freedom-dreams",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Join us for an engaging conversation with the co-curators of our newest exhibition on opening day."
     },
     {
       "id": "91cca7ae6e3a",
@@ -1846,6 +1863,23 @@
       "date_display": "Apr 17 \u2013 Apr 19, 2026"
     },
     {
+      "title": "Saxophonist Christian Ertl and His Quartet",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-17",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132133",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Christian Ertl is an alto saxophonist, bandleader, composer, and arranger originally from Waukee, Iowa, now living and performing in Philadelphia. Dinner & Show available at $70; VIP at $90.",
+      "id": "2995ab62fd77",
+      "date_display": "Apr 17, 2026"
+    },
+    {
       "id": "41d5fbb9e48e",
       "title": "Inside the Music: Sleepers Awake",
       "date_display": "Apr 18",
@@ -1874,6 +1908,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/women-in-chemistry-tour-202604/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "61cc874720ac",
+      "title": "Maker Faire Philadelphia",
+      "date_display": "Apr 19 Sun 10am-4pm",
+      "date_start": "2026-04-19",
+      "date_end": "2026-04-19",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/?types=museum-programs-activities",
       "price": null,
       "categories": [
         "lecture",
@@ -1947,8 +1999,8 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/shucked",
       "price": null,
       "categories": [
-        "performance",
-        "musical"
+        "musical",
+        "performance"
       ],
       "description": "SHUCKED is the Tony Award\u00ae\u2013winning musical comedy The Wall Street Journal calls \u201cflat out hilarious!\u201d And nobody knows funny like economists."
     },
@@ -1965,8 +2017,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/christian-mcbride-and-edgar-meyer",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
     },
@@ -2191,8 +2243,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/dog-man-the-musical",
       "price": null,
       "categories": [
-        "performance",
-        "musical"
+        "musical",
+        "performance"
       ],
       "description": "Based on the worldwide bestselling hit series by Dav Pilkey, TheaterWorksUSA's Dog Man: The Musical is a hilarious and heartwarming production following the chronicles of Dog Man, who with the head of a dog and the body of a policeman, loves to fight crime and chew on the furniture."
     },
@@ -2887,10 +2939,10 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-outsiders",
       "price": null,
       "categories": [
-        "ballet",
-        "classical",
+        "musical",
         "opera",
-        "musical"
+        "ballet",
+        "classical"
       ],
       "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic."
     },
@@ -4065,42 +4117,6 @@
       "description": null
     },
     {
-      "id": "7db0b33c2bb1",
-      "title": "The Four Seasons Reimagined",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Various",
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/event/the-four-seasons-reimagined/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "30796b3e2e6f",
-      "title": "Backstage",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Various",
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/backstage/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
       "id": "7e0b4f8cc859",
       "title": "Dance eXchange",
       "date_display": "",
@@ -4111,6 +4127,42 @@
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
       "link": "https://www.balletx.org/dance-exchange/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "da74d3abdc28",
+      "title": "For Artists",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/for-artists/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "4f348e654a28",
+      "title": "Ways to Support",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/ways-to-support/",
       "price": null,
       "categories": [
         "ballet",
@@ -4235,7 +4287,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "9652dc19331b",
@@ -4391,23 +4443,6 @@
       "description": "Every day, our gallery specialists offer talks about the Barnes collection. Learn more about our history, founder, and collection."
     },
     {
-      "id": "65093ab63b54",
-      "title": "March Spotlight Tour: Matisse, Dr. Barnes, and The Dance",
-      "date_display": "Thursday\u2013Monday, 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-march-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Tour our collection of paintings by Henri Matisse and learn how a visit to the Barnes collection was a pivotal moment in the artist's career."
-    },
-    {
       "id": "dea81cf1dbcb",
       "title": "April Spotlight Tour: Matisse, Dr. Barnes, and The Dance",
       "date_display": "Thursday\u2013Monday, 1pm",
@@ -4418,6 +4453,23 @@
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
       "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-april-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Tour our collection of paintings by Henri Matisse and learn how a visit to the Barnes collection was a pivotal moment in the artist's career."
+    },
+    {
+      "id": "65093ab63b54",
+      "title": "March Spotlight Tour: Matisse, Dr. Barnes, and The Dance",
+      "date_display": "Thursday\u2013Monday, 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-march-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4966,7 +5018,7 @@
         "exhibition",
         "science"
       ],
-      "description": null
+      "description": "Section Event"
     },
     {
       "id": "d89e4993473e",
@@ -5002,7 +5054,7 @@
         "exhibition",
         "science"
       ],
-      "description": null
+      "description": "Section Event"
     },
     {
       "id": "6b0a383e4945",
