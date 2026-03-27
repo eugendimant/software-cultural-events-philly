@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-26T12:56:25.389274Z",
-  "total_events": 286,
+  "last_updated": "2026-03-27T12:44:58.574658Z",
+  "total_events": 285,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -36,12 +36,12 @@
     "successes": [
       "Ensemble Arts Philly: 24 events (HTML)",
       "Philadelphia Orchestra: 1 events (HTML)",
-      "Penn Live Arts: 29 events (links)",
+      "Penn Live Arts: 28 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 16 events (links)",
       "FringeArts: 7 events (HTML)",
       "Arden Theatre: 3 events (HTML)",
-      "Chris' Jazz Cafe: 66 events (HTML)",
+      "Chris' Jazz Cafe: 65 events (HTML)",
       "South Jazz Kitchen: 1 events (HTML)",
       "City Winery: 1 events (HTML)",
       "BalletX: 3 events (HTML)",
@@ -319,40 +319,6 @@
       "description": "140 N. Columbus Blvd. (at Race St.) Philadelphia, PA 19106 Directions"
     },
     {
-      "id": "4890fa38c7bc",
-      "title": "Logan Bogdan Septet",
-      "date_display": "March 26",
-      "date_start": "2026-03-26",
-      "date_end": "2026-03-26",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/130300",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "Logan Bogdan - Drums Jeremy Leon - Flute, Saxophones Matt Kahn - Guitar Peter Rushing - Piano Jacob Hurlock - Keyboard Kai Gibson - Bass Don Solomon - Percussion Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube "
-    },
-    {
-      "id": "b5accf9a5826",
-      "title": "The Oscar Beesley Quartet",
-      "date_display": "Apr 09, 2026",
-      "date_start": "2026-03-26",
-      "date_end": "2026-03-26",
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/132057",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Oscar Beesley \u2014 DrumsBen Deloach \u2014 SaxJames Newcombe \u2014 PianoJames White \u2014 Bass Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
-    },
-    {
       "id": "c59d16da7ff4",
       "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
       "date_display": "March 27 - March 28",
@@ -417,8 +383,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/endea-owens-and-the-cookout",
       "price": null,
       "categories": [
-        "jazz",
-        "performance"
+        "performance",
+        "jazz"
       ],
       "description": "Grammy, Emmy, and Peabody Award winner, Endea Owens is hailed as one of jazz's most vibrant and versatile artists. The Detroit-raised recording artist, bassist, and composer has been mentored by jazz icons like Marcus Belgrave, Rodney Whitaker, and Ron Carter."
     },
@@ -575,9 +541,9 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
       "price": null,
       "categories": [
+        "ballet",
         "musical",
         "opera",
-        "ballet",
         "classical"
       ],
       "description": "For 65 years, THE SOUND OF MUSIC has been one of our \u201cfavorite things. \u201d With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn\u2019t just meant to be enjoyed - it\u2019s meant to be shared."
@@ -1096,8 +1062,8 @@
       "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
-        "theater",
-        "performance"
+        "performance",
+        "theater"
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family."
     },
@@ -1117,6 +1083,23 @@
         "jazz"
       ],
       "description": null
+    },
+    {
+      "id": "79e93c825f7b",
+      "title": "ARTZ @ The Museum",
+      "date_display": "Wednesday, April 8, 1:30 \u2013 2:30pm",
+      "date_start": "2026-04-08",
+      "date_end": "2026-04-08",
+      "time": "2:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/artz-the-museum",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "This program provides free access to the Barnes for people living with dementia and their care partners."
     },
     {
       "id": "aceb386de595",
@@ -1254,6 +1237,23 @@
       "time": "8:00 PM",
       "id": "a323707db356",
       "date_display": "Apr 09 \u2013 Apr 12, 2026"
+    },
+    {
+      "title": "The Oscar Beesley Quartet",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/360150",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Oscar Beesley Quartet performs an evening of original compositions and jazz standards at Chris' Jazz Cafe.",
+      "id": "203c055d5ee8",
+      "date_display": "Apr 09, 2026"
     },
     {
       "title": "Past, Peril, and Preservation in Syria",
@@ -1428,23 +1428,6 @@
         "performance"
       ],
       "description": "To celebrate the release of her first book in over a decade, Lena Dunham returns to the stage for a night of fearless storytelling and no holds barred conversation."
-    },
-    {
-      "id": "467dd7c87bf6",
-      "title": "Curators in Conversation: Freedom Dreams",
-      "date_display": "Sunday, April 12, 1 \u2013 2pm",
-      "date_start": "2026-04-12",
-      "date_end": "2026-04-12",
-      "time": "2:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/curators-in-conversation-freedom-dreams",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Join us for an engaging conversation with the co-curators of our newest exhibition on opening day."
     },
     {
       "id": "91cca7ae6e3a",
@@ -2017,8 +2000,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/christian-mcbride-and-edgar-meyer",
       "price": null,
       "categories": [
-        "jazz",
-        "performance"
+        "performance",
+        "jazz"
       ],
       "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
     },
@@ -2382,7 +2365,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:30pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Copland's American Inspiration",
@@ -2939,9 +2922,9 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-outsiders",
       "price": null,
       "categories": [
+        "ballet",
         "musical",
         "opera",
-        "ballet",
         "classical"
       ],
       "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic."
@@ -3241,6 +3224,23 @@
       "description": "Bokani Dyer, pianoTimothy Norton, bassLumanyano Mzi, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "f65548a11a22",
+      "title": "Susie Meissner Sextet featuring John Swana",
+      "date_display": "July 02",
+      "date_start": "2026-07-02",
+      "date_end": "2026-07-02",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/134264",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Swana: Trombone & EVIGreg Riley: SaxJohn Shaddy: PianoLee Smith: BassByron Landham: DrumsSusie Meissner: VocalsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
       "title": "Workshop of the World: Arts and Crafts in Philadelphia",
       "date_start": "2026-07-05",
       "date_end": "2026-10-18",
@@ -3488,16 +3488,16 @@
       "description": null
     },
     {
-      "id": "c69c84f3fb3c",
-      "title": "Wharton Dance Studio",
+      "id": "27f6adc62473",
+      "title": "Upstage A Cappella",
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "8:00 PM",
+      "time": "6:00 PM",
       "venue": "Annenberg Center",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/whartondance2026",
+      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
       "price": null,
       "categories": [
         "concert",
@@ -3516,24 +3516,6 @@
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
       "link": "https://pennlivearts.org/event/penn-players-incognito",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "27f6adc62473",
-      "title": "Upstage A Cappella",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
       "price": null,
       "categories": [
         "concert",
@@ -4092,7 +4074,7 @@
       "venue": "600 N Broad St, Philadelphia, PA 19130",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/charlene-holloway-thurs-mar-26-630pm-900pm-presented-by-unscripted-jazz/",
+      "link": "https://www.southjazzkitchen.com/event/emily-braden-fri-sat-sun-mar-27-28-29/",
       "price": null,
       "categories": [
         "jazz"
@@ -4355,7 +4337,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "827ee7494b07",
