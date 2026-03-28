@@ -1074,6 +1074,7 @@ def main():
     with col_title:
         st.markdown('<div class="main-title">Philly<span class="highlight">Culture</span></div>', unsafe_allow_html=True)
         st.markdown('<div class="subtitle">Your guide to Philadelphia\'s arts &amp; culture</div>', unsafe_allow_html=True)
+        st.markdown('<div style="font-size:0.85rem;color:#a0aec0;margin-top:2px">Created by <a href="https://eugendimant.github.io/" target="_blank" style="color:#4fd1c5;text-decoration:none">Dr. Eugen Dimant</a></div>', unsafe_allow_html=True)
     with col_s1:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(current_events)}</div><div class="stat-label">Events</div></div>', unsafe_allow_html=True)
     with col_s2:
