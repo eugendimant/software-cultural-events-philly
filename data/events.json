@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-27T12:44:58.574658Z",
-  "total_events": 285,
+  "last_updated": "2026-03-28T12:37:05.237136Z",
+  "total_events": 286,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -36,12 +36,12 @@
     "successes": [
       "Ensemble Arts Philly: 24 events (HTML)",
       "Philadelphia Orchestra: 1 events (HTML)",
-      "Penn Live Arts: 28 events (links)",
+      "Penn Live Arts: 27 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 16 events (links)",
       "FringeArts: 7 events (HTML)",
       "Arden Theatre: 3 events (HTML)",
-      "Chris' Jazz Cafe: 65 events (HTML)",
+      "Chris' Jazz Cafe: 64 events (HTML)",
       "South Jazz Kitchen: 1 events (HTML)",
       "City Winery: 1 events (HTML)",
       "BalletX: 3 events (HTML)",
@@ -52,8 +52,8 @@
       "Philadelphia Museum of Art Exhibitions: 5 events (HTML)",
       "Barnes Foundation: 60 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
-      "The Franklin Institute: 1 events (HTML)",
-      "Franklin Institute Exhibits: 16 events (HTML)",
+      "The Franklin Institute: 2 events (HTML)",
+      "Franklin Institute Exhibits: 17 events (HTML)",
       "Penn Museum: 28 events (HTML)",
       "Academy of Natural Sciences: 8 events (HTML)",
       "M\u00fctter Museum: 7 events (HTML)",
@@ -319,40 +319,6 @@
       "description": "140 N. Columbus Blvd. (at Race St.) Philadelphia, PA 19106 Directions"
     },
     {
-      "id": "c59d16da7ff4",
-      "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
-      "date_display": "March 27 - March 28",
-      "date_start": "2026-03-27",
-      "date_end": "2026-03-28",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/127246",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "John Pizzarelli \u2013 Guitar & Vocals Isaiah J Thompson \u2013 Piano Mike Karn \u2013 Bass Show times 7:30 & 9:30Friday $45 / Saturday $50 General Admission ~ a la carte menu: $45 / $50Dinner & Show ~ Includes 3-course dinner: $115 / $120VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees."
-    },
-    {
-      "id": "4816d1e6e155",
-      "title": "Oliver Mayman + Jam Session",
-      "date_display": "Apr 24, 2026",
-      "date_start": "2026-03-27",
-      "date_end": "2026-03-27",
-      "time": "11:00 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/131282",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
-    },
-    {
       "title": "BalletX Spring Series 2026",
       "date_start": "2026-03-27",
       "date_end": "2026-03-29",
@@ -383,10 +349,27 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/endea-owens-and-the-cookout",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Grammy, Emmy, and Peabody Award winner, Endea Owens is hailed as one of jazz's most vibrant and versatile artists. The Detroit-raised recording artist, bassist, and composer has been mentored by jazz icons like Marcus Belgrave, Rodney Whitaker, and Ron Carter."
+    },
+    {
+      "id": "3026500c18be",
+      "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
+      "date_display": "March 28",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/127246",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Pizzarelli \u2013 Guitar & Vocals Isaiah J Thompson \u2013 Piano Mike Karn \u2013 Bass Show times 7:30 & 9:30Friday $45 / Saturday $50 General Admission ~ a la carte menu: $45 / $50Dinner & Show ~ Includes 3-course dinner: $115 / $120VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. THIS SHOW WILL NOT BE STREAMED"
     },
     {
       "id": "aacb76d28d90",
@@ -543,8 +526,8 @@
       "categories": [
         "ballet",
         "musical",
-        "opera",
-        "classical"
+        "classical",
+        "opera"
       ],
       "description": "For 65 years, THE SOUND OF MUSIC has been one of our \u201cfavorite things. \u201d With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn\u2019t just meant to be enjoyed - it\u2019s meant to be shared."
     },
@@ -683,6 +666,23 @@
         "jazz"
       ],
       "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "273642c610cb",
+      "title": "Oliver Mayman + Jam Session",
+      "date_display": "Apr 24, 2026",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133347",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
     },
     {
       "id": "16277c04a8db",
@@ -1062,8 +1062,8 @@
       "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
-        "performance",
-        "theater"
+        "theater",
+        "performance"
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family."
     },
@@ -1617,7 +1617,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Aidan McKeon, saxAce Yuji Williams, trumpetJustin Griggs, keysRy Miller, bassJustin Bowden, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Aidan McKeon, saxAce Yuji Williams, trumpetJustin Griggs, keysRy Miller, bassJustin Bowden, drumsSponsored by The Heart of Jazz, The New Philly Sound is a fresh, ever-evolving collective of rising musicians deeply rooted in Philly\u2019s rich jazz tradition while helping shape its bold, vibrant future. This ensemble brings together some of the city\u2019s most exciting young artists, each steeped in Philadelphia\u2019s dynamic music community. This performance supports The Heart of Jazz mission to keep the mus"
     },
     {
       "id": "fc41bfe236d0",
@@ -2000,8 +2000,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/christian-mcbride-and-edgar-meyer",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
     },
@@ -2029,7 +2029,7 @@
       "date_start": "2026-04-22",
       "date_end": "2026-04-22",
       "time": null,
-      "venue": "8:00 p.m. | Academy of MusicBest Availability",
+      "venue": "2:00 p.m. | Academy of MusicCheck Back for Availability",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/2526-season/sleepers-awake/",
@@ -2038,7 +2038,7 @@
         "opera",
         "classical"
       ],
-      "description": "Sleepers Awake 8:00 p.m. | Academy of MusicBest Availability"
+      "description": "Sleepers Awake 2:00 p.m. | Academy of MusicCheck Back for Availability"
     },
     {
       "id": "2418fd045a50",
@@ -2924,8 +2924,8 @@
       "categories": [
         "ballet",
         "musical",
-        "opera",
-        "classical"
+        "classical",
+        "opera"
       ],
       "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic."
     },
@@ -3327,7 +3327,7 @@
         "classical",
         "concert"
       ],
-      "description": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra."
+      "description": "Ensemble Arts Presents in association with Mammoth Live Undertale: The Determination Symphony Sep 20, 2026 Kimmel Center"
     },
     {
       "title": "Marcel Duchamp",
@@ -3488,24 +3488,6 @@
       "description": null
     },
     {
-      "id": "27f6adc62473",
-      "title": "Upstage A Cappella",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
       "id": "017f05094358",
       "title": "Incognito",
       "date_display": "",
@@ -3516,6 +3498,24 @@
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
       "link": "https://pennlivearts.org/event/penn-players-incognito",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "27f6adc62473",
+      "title": "Upstage A Cappella",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
       "price": null,
       "categories": [
         "concert",
@@ -3591,24 +3591,6 @@
       "price": null,
       "categories": [
         "classical",
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "2072a863603e",
-      "title": "I Dread to Think",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/ninachanelabney",
-      "price": null,
-      "categories": [
         "concert",
         "dance"
       ],
@@ -3782,7 +3764,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "12:15 PM",
       "venue": "Annenberg Center",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
@@ -4269,7 +4251,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "9652dc19331b",
@@ -4337,7 +4319,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "827ee7494b07",
@@ -4474,6 +4456,41 @@
         "exhibition"
       ],
       "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
+    },
+    {
+      "id": "390c35834512",
+      "title": "The Franklin Institute is open Saturday, March 28. Road closures in Philadelphia may impact travel to the museum, please plan your route and allow for extra travel time.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://www.phila.gov/2026-03-24-city-announces-road-closures-parking-restrictions-and-other-details-for-no-kings-3-march-and-rally/",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "7dc4ba156712",
+      "title": "The Franklin Institute is open Saturday, March 28. Road closures in Philadelphia may impact travel to the museum, please plan your route and allow for extra travel time.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://www.phila.gov/2026-03-24-city-announces-road-closures-parking-restrictions-and-other-details-for-no-kings-3-march-and-rally/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
     },
     {
       "id": "c942040ee91c",
