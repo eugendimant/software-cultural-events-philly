@@ -384,6 +384,18 @@ def _final_quality_gate(events):
             else:
                 continue
 
+        # Normalize venue names — consistent formatting
+        _venue_normalize = {
+            "Marian Anderson Hall": "Marian Anderson Hall, Kimmel Center",
+            "Miller Theater": "Miller Theater, Kimmel Center",
+            "Perelman Theater, Kimmel Cente": "Perelman Theater, Kimmel Center",
+            "Annenberg Center, Penn Live Ar": "Annenberg Center, Penn Live Arts",
+            "Academy Of Music": "Academy of Music",
+            "Kimmel Center": "Kimmel Center",
+        }
+        venue = _venue_normalize.get(venue, venue)
+        event["venue"] = venue
+
         # If venue is missing, show source name as venue context
         if not venue:
             source = (event.get("source") or "").strip()
@@ -398,7 +410,30 @@ def _final_quality_gate(events):
 
         result.append(event)
 
-    return result
+    # Cross-source deduplication: same event listed by multiple sources
+    # (e.g., "Lang Lang and Yannick" from both Ensemble Arts and Phila Orchestra)
+    # Keep the version with the most complete data.
+    final = []
+    seen_titles = {}
+    for event in result:
+        norm_title = _re.sub(r'[^a-z0-9 ]', '', (event.get("title") or "").lower()).strip()
+        ds = event.get("date_start", "")
+        key = (norm_title, ds)
+        if key in seen_titles:
+            existing = seen_titles[key]
+            # Keep whichever has more fields filled
+            e_score = sum(1 for f in ("description", "price", "time", "link", "venue") if event.get(f))
+            x_score = sum(1 for f in ("description", "price", "time", "link", "venue") if existing.get(f))
+            if e_score > x_score:
+                final.remove(existing)
+                final.append(event)
+                seen_titles[key] = event
+            # else keep existing
+        else:
+            seen_titles[key] = event
+            final.append(event)
+
+    return final
 
 
 def _sanitize_links(events):
@@ -1718,7 +1753,7 @@ def main():
                 return datetime.max
         for month in sorted(month_counts.keys(), key=_month_sort_key):
             count = month_counts[month]
-            bar_w = count / max(month_counts.values(), 1) * 100
+            bar_w = count / max(max(month_counts.values()), 1) * 100
             st.markdown(
                 f'<div style="margin-bottom:4px">'
                 f'<span style="color:#e8e8f0;font-size:0.85rem">{month}</span> '

@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-03-24T12:52:48.147657Z",
-  "total_events": 128,
+  "total_events": 122,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -534,7 +534,7 @@
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "price": "From $63",
+      "price": "$63",
       "categories": [
         "performance"
       ],
@@ -581,7 +581,7 @@
       "date_start": "2026-04-07",
       "date_end": "2026-04-07",
       "time": "7:30 PM",
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -645,41 +645,6 @@
       "date_display": "Apr 05, 2026"
     },
     {
-      "title": "Lang Lang and Yannick",
-      "date_start": "2026-04-07",
-      "date_end": "2026-04-07",
-      "venue": "Marian Anderson Hall, Kimmel Center",
-      "source": "Philadelphia Orchestra",
-      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/lang-lang-and-yannick",
-      "time": "7:30 PM",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick Nézet-Séguin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
-      "id": "21e6d1a0a917",
-      "date_display": "Apr 07, 2026"
-    },
-    {
-      "title": "Between the Notes: Sleepers Awake Virtual Lecture",
-      "date_start": "2026-04-07",
-      "date_end": "2026-04-07",
-      "venue": "Zoom",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/between-the-notes-sleepers-awake",
-      "time": "12:00 PM",
-      "price": "Free",
-      "categories": [
-        "classical",
-        "performance"
-      ],
-      "description": "A free virtual lecture exploring the themes and music behind Opera Philadelphia's world premiere Sleepers Awake. Join the conversation with the creative team as they discuss the making of this groundbreaking new work by Gregory Spears.",
-      "id": "9edb3b9b2f0b",
-      "date_display": "Apr 07, 2026"
-    },
-    {
       "id": "384037ca2acf",
       "title": "The Stinky Cheese Man and Other Fairly Stupid Tales",
       "date_display": "Apr 08 – May 31, 2026",
@@ -704,7 +669,7 @@
       "date_start": "2026-04-09",
       "date_end": "2026-04-12",
       "time": null,
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/mozart-great-and-glorious",
@@ -748,23 +713,6 @@
         "jazz"
       ],
       "description": "Anthony Aldissi — pianoJustin Bowden — drumsManos Vourourakis — bass Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "title": "Mozart's Requiem",
-      "date_start": "2026-04-09",
-      "date_end": "2026-04-12",
-      "venue": "Marian Anderson Hall, Kimmel Center",
-      "source": "Philadelphia Orchestra",
-      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/mozarts-requiem",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
-      "time": "8:00 PM",
-      "id": "a323707db356",
-      "date_display": "Apr 09 – Apr 12, 2026"
     },
     {
       "id": "6e74baf9dec4",
@@ -861,7 +809,7 @@
       "date_start": "2026-04-12",
       "date_end": "2026-04-12",
       "time": "3:00 PM",
-      "venue": "Miller Theater",
+      "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/lena-dunham",
@@ -931,7 +879,7 @@
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "time": "7:30 PM",
-      "price": "From $132",
+      "price": "$132",
       "categories": [
         "dance",
         "performance"
@@ -1226,7 +1174,7 @@
       "date_start": "2026-04-23",
       "date_end": "2026-04-25",
       "time": null,
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -1252,23 +1200,6 @@
         "jazz"
       ],
       "description": "Caleb Heinze -- Electric GuitarJacob Hurlock -- PianoKai Gibson -- Upright BassLogan Bogdan — Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "title": "Bolero and Don Juan",
-      "date_start": "2026-04-23",
-      "date_end": "2026-04-25",
-      "venue": "Marian Anderson Hall, Kimmel Center",
-      "source": "Philadelphia Orchestra",
-      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/bolero-and-don-juan",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
-      "time": "8:00 PM",
-      "id": "bba3e110c5f1",
-      "date_display": "Apr 23 – Apr 25, 2026"
     },
     {
       "title": "Tiburtina Ensemble: Celestial Harmony",
@@ -1449,7 +1380,7 @@
       "date_start": "2026-04-30",
       "date_end": "2026-05-02",
       "time": null,
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/coplands-american-inspiration",
@@ -1475,23 +1406,6 @@
         "jazz"
       ],
       "description": "Set times 7:30pm & 9:30pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "title": "Copland's American Inspiration",
-      "date_start": "2026-04-30",
-      "date_end": "2026-05-02",
-      "venue": "Marian Anderson Hall, Kimmel Center",
-      "source": "Philadelphia Orchestra",
-      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/coplands-american-inspiration",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
-      "time": "8:00 PM",
-      "id": "b960e665bd64",
-      "date_display": "Apr 30 – May 02, 2026"
     },
     {
       "id": "d6760f784e67",
@@ -1588,7 +1502,7 @@
       "date_start": "2026-05-05",
       "date_end": "2026-05-05",
       "time": "7:30 PM",
-      "venue": "Miller Theater",
+      "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/rhiannon-giddens",
@@ -1623,7 +1537,7 @@
       "date_start": "2026-05-07",
       "date_end": "2026-05-09",
       "time": null,
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season/bach-and-mozart-piano-classics",
@@ -1745,7 +1659,7 @@
       "date_start": "2026-05-14",
       "date_end": "2026-05-14",
       "time": "6:30 PM",
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -1762,7 +1676,7 @@
       "date_start": "2026-05-14",
       "date_end": "2026-05-14",
       "time": "7:00 PM",
-      "venue": "Miller Theater",
+      "venue": "Miller Theater, Kimmel Center",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/events/",
@@ -1938,7 +1852,7 @@
       "date_start": "2026-05-26",
       "date_end": "2026-05-26",
       "time": "7:00 PM",
-      "venue": "Marian Anderson Hall",
+      "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/jazz-at-lincoln-center-orchestra-with-wynton-marsalis-2",
@@ -2078,7 +1992,7 @@
       "date_start": "2026-06-09",
       "date_end": "2026-06-09",
       "time": "10:00 AM",
-      "venue": "Miller Theater",
+      "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -2146,7 +2060,7 @@
       "date_start": "2026-06-20",
       "date_end": "2026-06-21",
       "time": "1:00 PM",
-      "venue": "Miller Theater",
+      "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/blueys-big-play",
