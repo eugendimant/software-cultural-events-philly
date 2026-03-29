@@ -653,6 +653,12 @@ def validate_event(ev):
     if title_low.startswith('tickets'):
         return False
 
+    # Reject private/closed events
+    if "closed" in title_low and ("private" in title_low or "event" in title_low):
+        return False
+    if "cancelled" in title_low or "canceled" in title_low:
+        return False
+
     skip_exact = {
         # UI/navigation
         "subscribe", "sign up", "newsletter", "donate", "login",
