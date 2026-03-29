@@ -507,24 +507,6 @@
       "date_display": "Apr 02, 2026"
     },
     {
-      "title": "Dance Theatre of Harlem",
-      "date_start": "2026-04-03",
-      "date_end": "2026-04-04",
-      "venue": "Annenberg Center, Penn Live Arts",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/event/DTH2026",
-      "link": "https://pennlivearts.org/event/dance-theatre-of-harlem",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
-      "time": "8:00 PM",
-      "id": "8718f37312c9",
-      "date_display": "Apr 03 – Apr 04, 2026"
-    },
-    {
       "title": "Drummer Willie Jones III and His Quartet",
       "date_start": "2026-04-03",
       "date_end": "2026-04-03",
@@ -1620,8 +1602,8 @@
       "id": "f5b5f4b786b0",
       "title": "1776 The Musical",
       "date_display": "May 05 – Jun 07, 2026",
-      "date_start": "2026-05-05",
-      "date_end": "2026-06-07",
+      "date_start": "2026-04-14",
+      "date_end": "2026-05-31",
       "time": null,
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
@@ -1970,7 +1952,7 @@
     {
       "title": "Beethoven & Marsalis",
       "date_start": "2026-05-28",
-      "date_end": "2026-05-30",
+      "date_end": "2026-05-31",
       "venue": "Marian Anderson Hall, Kimmel Center",
       "source": "Philadelphia Orchestra",
       "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/2025-26-season",
