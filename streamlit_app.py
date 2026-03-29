@@ -88,13 +88,29 @@ _JUNK_EXACT_TITLES = {
 }
 
 def _is_valid_event(event):
-    """Filter out scraper artifacts and junk entries at display time."""
+    """Filter out scraper artifacts and junk entries at display time.
+
+    This is the LAST LINE OF DEFENSE. If an event doesn't have the minimum
+    required data to display correctly, it gets rejected here.
+    """
     if not isinstance(event, dict):
         return False
     title = (event.get("title") or "").strip()
     if not title or len(title) < 3:
         return False
     title_low = title.lower().strip()
+
+    # ── REQUIRED DATA: must have a date to be shown ──
+    # Events without dates look broken and confuse users.
+    if not event.get("date_start"):
+        return False
+
+    # ── PRIVATE/CLOSED events should never appear ──
+    if "closed" in title_low and ("private" in title_low or "event" in title_low):
+        return False
+    if "cancelled" in title_low or "canceled" in title_low:
+        return False
+
     # Reject exact-match junk titles (instruments, nav items, etc.)
     if title_low in _JUNK_EXACT_TITLES:
         return False
@@ -290,6 +306,49 @@ def _enrich_descriptions(events):
         # Guessing URLs from title slugs produced broken/wrong links.
 
     return events
+
+
+def _final_quality_gate(events):
+    """LAST LINE OF DEFENSE: reject any event that would look broken on the site.
+
+    This runs after ALL other processing. An event that reaches here must have
+    at minimum: a title, a date, and a venue. If any of these are missing,
+    the event is dropped — it's better to show fewer events than broken ones.
+    """
+    result = []
+    for event in events:
+        title = (event.get("title") or "").strip()
+        venue = (event.get("venue") or "").strip()
+        ds = event.get("date_start")
+        link = (event.get("link") or "").strip()
+
+        # Must have title + date
+        if not title or not ds:
+            continue
+
+        # Must have a link (at minimum the source listing page)
+        if not link:
+            source_url = (event.get("source_url") or "").strip()
+            if source_url:
+                event["link"] = source_url
+            else:
+                continue
+
+        # If venue is missing, show source name as venue context
+        if not venue:
+            source = (event.get("source") or "").strip()
+            if source:
+                event["venue"] = source
+            else:
+                event["venue"] = "Philadelphia"
+
+        # Ensure date_display is populated
+        if not event.get("date_display"):
+            event["date_display"] = ds
+
+        result.append(event)
+
+    return result
 
 
 def _sanitize_links(events):
@@ -548,6 +607,8 @@ def load_events():
     data["events"] = _enrich_descriptions(data["events"])
     # Sanitize links: catch malformed URLs and fall back gracefully
     data["events"] = _sanitize_links(data["events"])
+    # FINAL QUALITY GATE: last line of defense — catch anything that slipped through
+    data["events"] = _final_quality_gate(data["events"])
     return data
 
 
