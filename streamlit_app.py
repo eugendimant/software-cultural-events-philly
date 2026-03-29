@@ -105,14 +105,93 @@ def _is_valid_event(event):
         return False
     return True
 
+def _deduplicate_events(events):
+    """Remove duplicate events from the same source.
+
+    When two events from the same source have very similar titles (one is a
+    substring of the other), keep the one with more complete data (dates, venue).
+    """
+    kept = {}  # (source, normalized_title) -> event
+    result = []
+
+    def _norm(title):
+        t = _re.sub(r'[^a-z0-9 ]', '', (title or '').lower()).strip()
+        return _re.sub(r'\s+', ' ', t)
+
+    def _completeness(e):
+        """Score how complete an event's data is."""
+        score = 0
+        if e.get("date_start"):
+            score += 3
+        if e.get("venue"):
+            score += 2
+        if e.get("description"):
+            score += 1
+        if e.get("price"):
+            score += 1
+        return score
+
+    for event in events:
+        source = event.get("source", "")
+        norm = _norm(event.get("title", ""))
+        if not norm:
+            result.append(event)
+            continue
+
+        # Check for substring matches against already-kept events
+        is_dupe = False
+        for (ks, kn), kept_ev in list(kept.items()):
+            if ks != source:
+                continue
+            if len(kn) < 8 or len(norm) < 8:
+                continue
+            if kn in norm or norm in kn:
+                # Duplicate — keep the more complete one
+                if _completeness(event) > _completeness(kept_ev):
+                    # Replace the existing one
+                    result.remove(kept_ev)
+                    result.append(event)
+                    kept[(ks, kn)] = event
+                    # Also index under the new norm
+                    kept[(source, norm)] = event
+                is_dupe = True
+                break
+
+        if not is_dupe:
+            result.append(event)
+            kept[(source, norm)] = event
+
+    return result
+
+
 def _sanitize_event(event):
-    """Clean up event fields: replace None with defaults, strip garbage display text."""
+    """Clean up event fields: replace None with defaults, strip garbage display text.
+    Also rebuilds date_display from date_start/date_end to ensure consistency."""
     if not isinstance(event, dict):
         return event
     # Clean garbage date_display
     dd = (event.get("date_display") or "")
-    if "start date" in dd.lower() or "e.g." in dd.lower():
+    if "start date" in dd.lower() or "e.g." in dd.lower() or "{{" in dd:
         event["date_display"] = ""
+
+    # Rebuild date_display from date_start/date_end to ensure consistency.
+    # This prevents stale date_display text from contradicting the actual dates.
+    ds = event.get("date_start")
+    de = event.get("date_end")
+    if ds:
+        try:
+            from datetime import datetime as _dt
+            start = _dt.strptime(ds, "%Y-%m-%d")
+            fmt_s = start.strftime("%b %d, %Y") if not de or ds == de else start.strftime("%b %d")
+            if de and de != ds:
+                end = _dt.strptime(de, "%Y-%m-%d")
+                fmt_e = end.strftime("%b %d, %Y")
+                event["date_display"] = f"{fmt_s} – {fmt_e}"
+            else:
+                event["date_display"] = start.strftime("%b %d, %Y")
+        except (ValueError, TypeError):
+            pass  # Keep existing date_display if parsing fails
+
     return event
 
 
@@ -252,6 +331,97 @@ def _sanitize_links(events):
     return events
 
 
+def _validate_dates(events):
+    """Check event dates for obvious errors and clear bad data.
+
+    Catches:
+      - date_end before date_start
+      - Dates more than 2 years in the future (likely parsing errors)
+      - date_start in the far past for events that aren't exhibitions
+    """
+    from datetime import datetime as _dt, timedelta
+    today = _dt.now().date()
+    max_future = today + timedelta(days=730)  # 2 years
+
+    for event in events:
+        ds = event.get("date_start")
+        de = event.get("date_end")
+        if not ds:
+            continue
+        try:
+            start = _dt.strptime(ds, "%Y-%m-%d").date()
+        except (ValueError, TypeError):
+            event["date_start"] = None
+            event["date_end"] = None
+            event["date_display"] = ""
+            continue
+
+        end = None
+        if de:
+            try:
+                end = _dt.strptime(de, "%Y-%m-%d").date()
+            except (ValueError, TypeError):
+                event["date_end"] = ds  # default to start
+
+        # End before start — clearly wrong
+        if end and end < start:
+            event["date_end"] = ds
+
+        # Dates more than 2 years in the future — likely parsing error
+        if start > max_future:
+            event["date_start"] = None
+            event["date_end"] = None
+            event["date_display"] = ""
+
+    return events
+
+
+def _validate_venue_source_consistency(events):
+    """Check that event venues are plausible for their source.
+
+    Some sources perform at specific known venues. If an event's venue
+    doesn't match any known venue for that source, set it to None (N/A)
+    rather than showing wrong information.
+    """
+    # Map of source -> set of known venue substrings (lowercase)
+    _source_venues = {
+        "Chris' Jazz Cafe": {"chris", "jazz cafe"},
+        "South Jazz Kitchen": {"south jazz"},
+        "Walnut Street Theatre": {"walnut"},
+        "Arden Theatre": {"arden"},
+        "The Wilma Theater": {"wilma"},
+        "FringeArts": {"fringe"},
+        "Philadelphia Museum of Art": {"museum of art", "philamuseum"},
+        "The Franklin Institute": {"franklin"},
+        "Penn Museum": {"penn museum"},
+        "Academy of Natural Sciences": {"natural sciences", "ansp"},
+        "Mütter Museum": {"mütter", "mutter"},
+    }
+    # These sources perform at VARIOUS venues — don't validate venue
+    _multi_venue_sources = {
+        "Ensemble Arts Philly", "Philadelphia Orchestra", "Opera Philadelphia",
+        "Penn Live Arts", "Philadelphia Ballet", "BalletX",
+        "Theatre Philadelphia", "PhiladelphiaDANCE.org",
+        "Greater Phila. Cultural Alliance", "Visit Philadelphia Events",
+        "Profs and Pints", "Science on Tap", "Sofar Sounds Philadelphia",
+        "City Winery", "World Cafe Live", "Philly Fun Guide",
+    }
+
+    for event in events:
+        source = event.get("source", "")
+        venue = (event.get("venue") or "").strip()
+        if not venue or source in _multi_venue_sources:
+            continue
+        known = _source_venues.get(source)
+        if known:
+            venue_low = venue.lower()
+            if not any(k in venue_low for k in known):
+                # Venue doesn't match source — likely wrong data
+                event["venue"] = None  # Will display as N/A
+
+    return events
+
+
 def _fix_cross_venue_contamination(events):
     """Detect and remove descriptions/links that belong to a different venue.
     This cleans up bad data from previous scraper runs with buggy partial matching.
@@ -321,27 +491,42 @@ def load_events():
             "events": list(FALLBACK_EVENTS),
             "scrape_report": {"successes": ["Using seed data"], "failures": [], "warnings": []},
         }
-    # Always merge seed events so curated exhibition/lecture/science data appears
-    # even if the scraper hasn't been re-run yet
+    # Merge seed events: only add events not already scraped.
+    # IMPORTANT: scraped data takes priority over seed data for dates/venues.
+    # Seed events only fill gaps — they never override scraped data.
     if FALLBACK_EVENTS:
-        existing_keys = set()
+        existing = {}  # (source, norm_title) -> event
         for e in data.get("events", []):
             norm = _re.sub(r'\s+', ' ', e.get("title", "").lower().strip())
-            existing_keys.add((e.get("source", ""), norm))
+            existing[(e.get("source", ""), norm)] = e
         today = datetime.now().strftime("%Y-%m-%d")
         for seed_ev in FALLBACK_EVENTS:
             norm = _re.sub(r'\s+', ' ', seed_ev.get("title", "").lower().strip())
             key = (seed_ev.get("source", ""), norm)
             end = seed_ev.get("date_end") or seed_ev.get("date_start", "")
-            if key not in existing_keys and end >= today:
+            if key not in existing and end >= today:
                 data["events"].append(seed_ev)
-                existing_keys.add(key)
+                existing[key] = seed_ev
+            elif key in existing:
+                # Scraped event exists — only fill in missing fields from seed,
+                # NEVER override scraped dates, venues, or links
+                scraped = existing[key]
+                if not scraped.get("description") and seed_ev.get("description"):
+                    scraped["description"] = seed_ev["description"]
+                if not scraped.get("price") and seed_ev.get("price"):
+                    scraped["price"] = seed_ev["price"]
         # Update sources list
         data["sources"] = sorted({e.get("source", "") for e in data["events"] if e.get("source")})
     # Sanitize: filter junk, clean fields
     data["events"] = [_sanitize_event(e) for e in data.get("events", []) if _is_valid_event(e)]
+    # Deduplicate: remove variant titles from same source, prefer dated versions
+    data["events"] = _deduplicate_events(data["events"])
+    # Validate dates: catch obviously wrong dates
+    data["events"] = _validate_dates(data["events"])
     # Fix cross-venue contamination (bad data from previous scraper runs)
     data["events"] = _fix_cross_venue_contamination(data["events"])
+    # Validate venue-source consistency (catch wrong venue assignments)
+    data["events"] = _validate_venue_source_consistency(data["events"])
     # Enrich: fill missing descriptions from seed data
     data["events"] = _enrich_descriptions(data["events"])
     # Sanitize links: catch malformed URLs and fall back gracefully
