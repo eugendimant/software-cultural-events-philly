@@ -8,10 +8,14 @@ Barnes Foundation, Franklin Institute, Penn Museum, Academy of Natural Sciences,
 Mütter Museum, Science on Tap, Profs and Pints, and other public listings.
 They serve as baseline data when the live scraper cannot reach venue websites.
 
-Last verified: 2026-03-24 via visitphilly.com, ensembleartsphilly.org,
-theatrephiladelphia.org, pennlivearts.org, operaphila.org, walnutstreettheatre.org,
-philadelphiaballet.org, balletx.org, philamuseum.org, barnesfoundation.org,
-fi.edu, penn.museum, ansp.org, muttermuseum.org, scienceontapphilly.com
+Last verified: 2026-03-29 — every event web-verified against official venue sites.
+Verification sources: ensembleartsphilly.org, operaphila.org, pennlivearts.org,
+walnutstreettheatre.org, ardentheatre.org, wilmatheater.org, fringearts.com,
+balletx.org, philamuseum.org, barnesfoundation.org, fi.edu, penn.museum,
+ansp.org, muttermuseum.org, chrisjazzcafe.com, scienceontapphilly.com
+
+IMPORTANT: Run `python scraper/verify_events.py` after any seed data changes
+to verify all dates against official source websites.
 """
 
 import hashlib
