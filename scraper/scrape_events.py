@@ -2127,6 +2127,30 @@ def main():
             if new_cats - old_cats:
                 existing["categories"] = list(old_cats | new_cats)
 
+    # Override scraped data with verified seed data.
+    # Seed events have been manually verified — when a seed event has
+    # dates, venue, or price, those are authoritative and override
+    # whatever the scraper extracted (which is often wrong).
+    seed_lookup = {}
+    for s in get_seed_events():
+        norm = re.sub(r'\s+', ' ', s.get("title", "").lower().strip())
+        seed_lookup[(s.get("source", ""), norm)] = s
+
+    overrides = 0
+    for ev in unique_events:
+        norm = re.sub(r'\s+', ' ', ev.get("title", "").lower().strip())
+        key = (ev.get("source", ""), norm)
+        seed = seed_lookup.get(key)
+        if seed:
+            for field in ("date_start", "date_end", "venue", "description",
+                          "price", "time", "link"):
+                if seed.get(field):
+                    if ev.get(field) != seed[field]:
+                        overrides += 1
+                    ev[field] = seed[field]
+    if overrides:
+        print(f"  Seed data overrode {overrides} scraped fields")
+
     # Sort by date
     unique_events.sort(key=lambda e: e.get("date_start") or "9999-99-99")
 

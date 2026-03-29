@@ -617,9 +617,12 @@ def load_events():
             "events": list(FALLBACK_EVENTS),
             "scrape_report": {"successes": ["Using seed data"], "failures": [], "warnings": []},
         }
-    # Merge seed events: only add events not already scraped.
-    # IMPORTANT: scraped data takes priority over seed data for dates/venues.
-    # Seed events only fill gaps — they never override scraped data.
+    # Merge seed events with scraped data.
+    # CRITICAL: Seed data has been manually verified and is authoritative.
+    # When both scraped and seed data exist for the same event, seed data
+    # OVERRIDES scraped data for dates, venues, and prices — because the
+    # scraper frequently produces garbage (wrong venues, wrong dates,
+    # time-embedded-in-venue, etc.) while seed data is hand-verified.
     if FALLBACK_EVENTS:
         existing = {}  # (source, norm_title) -> event
         for e in data.get("events", []):
@@ -631,16 +634,27 @@ def load_events():
             key = (seed_ev.get("source", ""), norm)
             end = seed_ev.get("date_end") or seed_ev.get("date_start", "")
             if key not in existing and end >= today:
+                # New event from seed — add it
                 data["events"].append(seed_ev)
                 existing[key] = seed_ev
             elif key in existing:
-                # Scraped event exists — only fill in missing fields from seed,
-                # NEVER override scraped dates, venues, or links
+                # Event exists in both scraped and seed data.
+                # Seed data is authoritative — override scraped data.
                 scraped = existing[key]
-                if not scraped.get("description") and seed_ev.get("description"):
+                if seed_ev.get("date_start"):
+                    scraped["date_start"] = seed_ev["date_start"]
+                if seed_ev.get("date_end"):
+                    scraped["date_end"] = seed_ev["date_end"]
+                if seed_ev.get("venue"):
+                    scraped["venue"] = seed_ev["venue"]
+                if seed_ev.get("description"):
                     scraped["description"] = seed_ev["description"]
-                if not scraped.get("price") and seed_ev.get("price"):
+                if seed_ev.get("price"):
                     scraped["price"] = seed_ev["price"]
+                if seed_ev.get("time"):
+                    scraped["time"] = seed_ev["time"]
+                if seed_ev.get("link"):
+                    scraped["link"] = seed_ev["link"]
         # Update sources list
         data["sources"] = sorted({e.get("source", "") for e in data["events"] if e.get("source")})
     # Sanitize: filter junk, clean fields
