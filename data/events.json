@@ -13,7 +13,7 @@
     "Esperanza Arts Center",
     "Franklin Institute Exhibits",
     "FringeArts",
-    "M\u00fctter Museum",
+    "Mütter Museum",
     "Opera Philadelphia",
     "Penn Live Arts",
     "Penn Museum",
@@ -183,18 +183,18 @@
       "title": "Revolutionary Botany",
       "date_start": "2026-01-01",
       "date_end": "2026-12-31",
-      "venue": "M\u00fctter Museum",
-      "source": "M\u00fctter Museum",
+      "venue": "Mütter Museum",
+      "source": "Mütter Museum",
       "source_url": "https://muttermuseum.org/events/",
       "price": null,
       "categories": [
         "exhibition",
         "science"
       ],
-      "description": "Tracing the evolution of medicine in America from medicinal plants to the modern pharmacy. Part of the M\u00fctter Museum's 2026 programming celebrating medical milestones throughout the past 250 years.",
+      "description": "Tracing the evolution of medicine in America from medicinal plants to the modern pharmacy. Part of the Mütter Museum's 2026 programming celebrating medical milestones throughout the past 250 years.",
       "time": null,
       "id": "8ab3094f972c",
-      "date_display": "Jan 01 \u2013 Dec 31, 2026",
+      "date_display": "Jan 01 – Dec 31, 2026",
       "link": "https://muttermuseum.org/events/revolutionary-botany/"
     },
     {
@@ -211,7 +211,7 @@
       "description": "A landmark survey bringing together over 60 works charting Noah Davis's (1983-2015) practice. Davis's luminous paintings blend figuration and abstraction, drawing on art history and personal memory.",
       "time": null,
       "id": "d96398371bf8",
-      "date_display": "Jan 24 \u2013 Apr 26, 2026",
+      "date_display": "Jan 24 – Apr 26, 2026",
       "link": "https://philamuseum.org/exhibitions/noah-davis"
     },
     {
@@ -229,7 +229,7 @@
       "description": "World premiere spanning 18,000 square feet with eight themed galleries, 25 interactive experiences, and over 100 original artifacts from Universal's iconic theme parks. Extended evening hours Thu-Sat.",
       "time": null,
       "id": "f706c2839320",
-      "date_display": "Feb 14 \u2013 Sep 07, 2026",
+      "date_display": "Feb 14 – Sep 07, 2026",
       "link": "https://fi.edu/en/exhibits-and-experiences/universal-theme-parks-the-exhibition"
     },
     {
@@ -246,7 +246,7 @@
       "description": "Century-old watercolors by Egyptian artist Ahmed Yousef capturing New Kingdom tomb chapels from Dra Abu el-Naga, Thebes. First rotation through June; second rotation from July through November ahead of the Egypt Galleries grand reopening.",
       "time": null,
       "id": "9d52db4ab910",
-      "date_display": "Feb 28 \u2013 Nov 30, 2026",
+      "date_display": "Feb 28 – Nov 30, 2026",
       "link": "https://www.penn.museum/on-view/ancient-egypt-in-watercolors-paintings-and-artifacts-from-dra-abu-el-naga"
     },
     {
@@ -256,20 +256,20 @@
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/",
-      "link": "https://www.walnutstreettheatre.org/season/a-delicate-balance",
-      "price": "$33 \u2013 $247",
+      "link": "https://www.walnutstreettheatre.org/season/show/a-delicate-balance",
+      "price": "$33 – $247",
       "categories": [
         "theater"
       ],
-      "description": "Edward Albee's Pulitzer Prize-winning play \u2014 an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
+      "description": "Edward Albee's Pulitzer Prize-winning play — an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
       "time": "8:00 PM",
       "id": "add290357161",
-      "date_display": "Mar 04 \u2013 Mar 29, 2026"
+      "date_display": "Mar 04 – Mar 29, 2026"
     },
     {
       "id": "0d9ff90743b9",
       "title": "Romeo and Juliet",
-      "date_display": "Mar 12 \u2013 Apr 05, 2026",
+      "date_display": "Mar 12 – Apr 05, 2026",
       "date_start": "2026-03-12",
       "date_end": "2026-04-05",
       "time": "7:00 PM",
@@ -277,11 +277,11 @@
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
       "link": "https://ardentheatre.org/productions/romeo-and-juliet/",
-      "price": "$37 \u2013 $70",
+      "price": "$37 – $70",
       "categories": [
         "theater"
       ],
-      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core \u2014 passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City."
+      "description": "A bold, contemporary reimagining of Shakespeare's most famous love story. The Arden Theatre strips the tragedy down to its raw emotional core — passion, family loyalty, and the devastating cost of hatred. Intimate staging in Old City."
     },
     {
       "title": "The Most Spectacularly Lamentable Trial of Miz Martha Washington",
@@ -295,10 +295,10 @@
       "categories": [
         "theater"
       ],
-      "description": "From Pulitzer Prize winner James Ijames \u2014 First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
+      "description": "From Pulitzer Prize winner James Ijames — First Lady Martha Washington faces the enslaved people who will be freed upon her death. HotHouse Acting Company.",
       "time": "7:30 PM",
       "id": "68dc3fe25e51",
-      "date_display": "Mar 17 \u2013 Apr 05, 2026"
+      "date_display": "Mar 17 – Apr 05, 2026"
     },
     {
       "id": "5513d774fbc9",
@@ -514,7 +514,7 @@
     {
       "id": "e925e1008d4a",
       "title": "The Sound of Music",
-      "date_display": "Mar 31 \u2013 Apr 05, 2026",
+      "date_display": "Mar 31 – Apr 05, 2026",
       "date_start": "2026-03-31",
       "date_end": "2026-04-05",
       "time": "7:30 PM",
@@ -529,7 +529,7 @@
         "classical",
         "opera"
       ],
-      "description": "For 65 years, THE SOUND OF MUSIC has been one of our \u201cfavorite things. \u201d With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn\u2019t just meant to be enjoyed - it\u2019s meant to be shared."
+      "description": "For 65 years, THE SOUND OF MUSIC has been one of our “favorite things. ” With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn’t just meant to be enjoyed - it’s meant to be shared."
     },
     {
       "id": "fdb7eaf5edf2",
@@ -645,7 +645,7 @@
       "categories": [
         "lecture"
       ],
-      "description": "A lively talk over drinks about the dramatic history of organized crime in Philadelphia \u2014 from Prohibition-era bootlegging to modern-day prosecutions. Presented by a university professor at a neighborhood bar.",
+      "description": "A lively talk over drinks about the dramatic history of organized crime in Philadelphia — from Prohibition-era bootlegging to modern-day prosecutions. Presented by a university professor at a neighborhood bar.",
       "time": "6:00 PM",
       "id": "95d0c1dfc857",
       "date_display": "Apr 02, 2026"
@@ -752,7 +752,7 @@
       "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
       "time": "8:00 PM",
       "id": "8718f37312c9",
-      "date_display": "Apr 03 \u2013 Apr 04, 2026"
+      "date_display": "Apr 03 – Apr 04, 2026"
     },
     {
       "title": "Drummer Willie Jones III and His Quartet",
@@ -786,7 +786,7 @@
       "categories": [
         "performance"
       ],
-      "description": "Peppa Pig, along with Mummy Pig, Daddy Pig and George, visit Philly for Peppa Pig: My First Concert, a fun, interactive introduction to a live orchestra for ages 18 months and older! Peppa and George learn all about the different sounds that instruments make together, and enjoy some of their favorite\u2026"
+      "description": "Peppa Pig, along with Mummy Pig, Daddy Pig and George, visit Philly for Peppa Pig: My First Concert, a fun, interactive introduction to a live orchestra for ages 18 months and older! Peppa and George learn all about the different sounds that instruments make together, and enjoy some of their favorite…"
     },
     {
       "id": "6dfccdf4149e",
@@ -803,7 +803,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Wallace Roney Jr \u2014 TrumpetNat Reeves \u2014 BassJeff \u201cTain\u201d Watts \u2014 DrumsImani Grace-Cooper \u2014 Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Wallace Roney Jr — TrumpetNat Reeves — BassJeff “Tain” Watts — DrumsImani Grace-Cooper — Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "2b0532a2e157",
@@ -976,7 +976,7 @@
       "categories": [
         "performance"
       ],
-      "description": "There are artists who seize the public imagination, and perhaps none has done so as spectacularly as Lang Lang. Whether he\u2019s performing for billions, as at the 2008 Olympics Opening Ceremony, or for a small group of school children, his artistry and passion is on full display."
+      "description": "There are artists who seize the public imagination, and perhaps none has done so as spectacularly as Lang Lang. Whether he’s performing for billions, as at the 2008 Olympics Opening Ceremony, or for a small group of school children, his artistry and passion is on full display."
     },
     {
       "id": "b57f8c8a3c32",
@@ -1011,7 +1011,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.Set times 7:30pm & 9:00pm General Admission ~"
+      "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia’s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.Set times 7:30pm & 9:00pm General Admission ~"
     },
     {
       "title": "Lang Lang and Yannick",
@@ -1026,7 +1026,7 @@
       "categories": [
         "classical"
       ],
-      "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick N\u00e9zet-S\u00e9guin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
+      "description": "A Benefit Concert for the Musicians' Retirement Fund. The celebrated pianist Lang Lang joins Yannick Nézet-Séguin and the Orchestra in Beethoven's lyrical Piano Concerto No. 4. A one-night-only engagement.",
       "id": "21e6d1a0a917",
       "date_display": "Apr 07, 2026"
     },
@@ -1052,7 +1052,7 @@
     {
       "id": "384037ca2acf",
       "title": "The Stinky Cheese Man and Other Fairly Stupid Tales",
-      "date_display": "Apr 08 \u2013 May 31, 2026",
+      "date_display": "Apr 08 – May 31, 2026",
       "date_start": "2026-04-08",
       "date_end": "2026-05-31",
       "time": null,
@@ -1120,7 +1120,7 @@
     },
     {
       "id": "afeb1f33c276",
-      "title": "Mozart\u2019s Requiem",
+      "title": "Mozart’s Requiem",
       "date_display": "Apr 9 - Apr 12, 2026",
       "date_start": "2026-04-09",
       "date_end": "2026-04-12",
@@ -1168,7 +1168,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Anthony Aldissi \u2014 pianoJustin Bowden \u2014 drumsManos Vourourakis \u2014 bass Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Anthony Aldissi — pianoJustin Bowden — drumsManos Vourourakis — bass Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "2f73d90192e6",
@@ -1233,10 +1233,10 @@
       "categories": [
         "classical"
       ],
-      "description": "Yannick N\u00e9zet-S\u00e9guin conducts Mozart's final masterwork \u2014 the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
+      "description": "Yannick Nézet-Séguin conducts Mozart's final masterwork — the hauntingly beautiful Requiem in D minor, K. 626. Featuring world-class soloists and the Philadelphia Symphonic Choir in a performance that explores the boundary between life and eternity.",
       "time": "8:00 PM",
       "id": "a323707db356",
-      "date_display": "Apr 09 \u2013 Apr 12, 2026"
+      "date_display": "Apr 09 – Apr 12, 2026"
     },
     {
       "title": "The Oscar Beesley Quartet",
@@ -1322,7 +1322,7 @@
       "description": "World premiere by James Ijames at Philadelphia Theatre Company. A compelling new work exploring identity and belonging.",
       "time": "7:00 PM",
       "id": "d52cabce3ae6",
-      "date_display": "Apr 10 \u2013 May 03, 2026"
+      "date_display": "Apr 10 – May 03, 2026"
     },
     {
       "title": "Science After Hours: Rhythm & Booms",
@@ -1358,7 +1358,7 @@
         "concert",
         "dance"
       ],
-      "description": "'The best musical entertainment in the country' \u2014 from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles."
+      "description": "'The best musical entertainment in the country' — from ABBA to Tchaikovsky, Nirvana to Broadway, all on ukuleles."
     },
     {
       "id": "adcfdadd8992",
@@ -1778,7 +1778,7 @@
     {
       "id": "003396bc24e5",
       "title": "Paul Taylor Dance Company",
-      "date_display": "Apr 17 \u2013 Apr 18, 2026",
+      "date_display": "Apr 17 – Apr 18, 2026",
       "date_start": "2026-04-17",
       "date_end": "2026-04-18",
       "time": "7:30 PM",
@@ -1843,7 +1843,7 @@
       "description": "Philadelphia Ballet's Spring Residency showcases bold new choreography from emerging and established creators. An intimate showcase at the Perelman Theater where you'll see tomorrow's masterworks taking shape today.",
       "time": "7:30 PM",
       "id": "38b52970ec99",
-      "date_display": "Apr 17 \u2013 Apr 19, 2026"
+      "date_display": "Apr 17 – Apr 19, 2026"
     },
     {
       "title": "Saxophonist Christian Ertl and His Quartet",
@@ -1972,7 +1972,7 @@
     {
       "id": "802256820cf1",
       "title": "Shucked",
-      "date_display": "Apr 21 \u2013 May 03, 2026",
+      "date_display": "Apr 21 – May 03, 2026",
       "date_start": "2026-04-21",
       "date_end": "2026-05-03",
       "time": "7:30 PM",
@@ -1985,7 +1985,7 @@
         "musical",
         "performance"
       ],
-      "description": "SHUCKED is the Tony Award\u00ae\u2013winning musical comedy The Wall Street Journal calls \u201cflat out hilarious!\u201d And nobody knows funny like economists."
+      "description": "SHUCKED is the Tony Award®–winning musical comedy The Wall Street Journal calls “flat out hilarious!” And nobody knows funny like economists."
     },
     {
       "id": "8d198ca5e877",
@@ -2003,7 +2003,7 @@
         "jazz",
         "performance"
       ],
-      "description": "Philadelphia's own Christian McBride \u2014 eight-time Grammy winner and jazz legend \u2014 teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
+      "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
     },
     {
       "id": "efea33f5e68e",
@@ -2055,7 +2055,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Join us on April 22 for a powerful evening of jazz history in motion! The Philadelphia Jazz Archive presents a special fundraiser concert at Chris' Jazz Cafe headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. Experience the spirit, swing, and soul of one of Philadelphia\u2019s greatest jazz legends brought to life by one of today\u2019s finest. All proceeds support the preservation of Philadelphia\u2019s rich jazz legacy. Tickets: $35/one show \u2014 celeb"
+      "description": "Join us on April 22 for a powerful evening of jazz history in motion! The Philadelphia Jazz Archive presents a special fundraiser concert at Chris' Jazz Cafe headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. Experience the spirit, swing, and soul of one of Philadelphia’s greatest jazz legends brought to life by one of today’s finest. All proceeds support the preservation of Philadelphia’s rich jazz legacy. Tickets: $35/one show — celeb"
     },
     {
       "id": "79e907cf9e35",
@@ -2100,15 +2100,15 @@
       "venue": "Academy of Music",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/sleepers-awake-world-premiere/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera"
       ],
-      "description": "World premiere by composer Gregory Spears \u2014 inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
+      "description": "World premiere by composer Gregory Spears — inspired by the absurdist retelling of Sleeping Beauty by Robert Walser. Directed by Jenny Koons.",
       "time": "8:00 PM",
       "id": "bba414d078f3",
-      "date_display": "Apr 22 \u2013 Apr 26, 2026"
+      "date_display": "Apr 22 – Apr 26, 2026"
     },
     {
       "id": "10a805fe182d",
@@ -2125,7 +2125,7 @@
       "categories": [
         "performance"
       ],
-      "description": "Seduction is the subtext in this program that pairs Richard Strauss\u2019s portrait of the famous fictional philanderer and Ravel\u2019s Bolero, whose relentless pulse mirrors the beat of desire."
+      "description": "Seduction is the subtext in this program that pairs Richard Strauss’s portrait of the famous fictional philanderer and Ravel’s Bolero, whose relentless pulse mirrors the beat of desire."
     },
     {
       "id": "9e083939f4f7",
@@ -2142,7 +2142,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Caleb Heinze -- Electric GuitarJacob Hurlock -- PianoKai Gibson -- Upright BassLogan Bogdan \u2014 Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Caleb Heinze -- Electric GuitarJacob Hurlock -- PianoKai Gibson -- Upright BassLogan Bogdan — Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Bolero and Don Juan",
@@ -2156,10 +2156,10 @@
       "categories": [
         "classical"
       ],
-      "description": "Two orchestral showstoppers in one program \u2014 Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
+      "description": "Two orchestral showstoppers in one program — Ravel's hypnotic, ever-building Bolero and Strauss's virtuosic tone poem Don Juan. A thrilling display of orchestral color, power, and the Philadelphia Orchestra's legendary sound.",
       "time": "8:00 PM",
       "id": "bba3e110c5f1",
-      "date_display": "Apr 23 \u2013 Apr 25, 2026"
+      "date_display": "Apr 23 – Apr 25, 2026"
     },
     {
       "title": "Tiburtina Ensemble: Celestial Harmony",
@@ -2173,7 +2173,7 @@
       "categories": [
         "classical"
       ],
-      "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen \u2014 the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
+      "description": "Prague's Tiburtina Ensemble performs sacred works by Hildegard of Bingen — the 12th-century mystic, composer, and polymath. Ethereal, otherworldly vocal music that has mesmerized audiences for nearly a millennium. A rare and luminous evening.",
       "time": "7:30 PM",
       "id": "4f919f8be978",
       "date_display": "Apr 23, 2026"
@@ -2262,7 +2262,7 @@
       "description": "Timed to the 50th anniversary of the Rocky franchise, this major exhibition explores the creation, context, and significance of monuments through the lens of Philadelphia's most iconic statue.",
       "time": null,
       "id": "d225aa6ecc47",
-      "date_display": "Apr 25 \u2013 Aug 02, 2026",
+      "date_display": "Apr 25 – Aug 02, 2026",
       "link": "https://philamuseum.org/exhibitions/rising-up-rocky-and-the-making-of-monuments"
     },
     {
@@ -2294,7 +2294,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "A world premiere \u2014 Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
+      "description": "A world premiere — Navajo trumpeter Delbert Anderson's three-part reflection on the relationship between the Navajo Nation and America.",
       "time": "8:00 PM",
       "id": "90631a6e061b",
       "date_display": "Apr 26, 2026"
@@ -2331,11 +2331,11 @@
       "categories": [
         "jazz"
       ],
-      "description": "John Dimase \u2014 trumpet/vocalsEli Pace \u2014 bassGreg Masters \u2014 bassSean Butkovich \u2014 piano Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "John Dimase — trumpet/vocalsEli Pace — bassGreg Masters — bassSean Butkovich — piano Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "e61b3974ac97",
-      "title": "Copland\u2019s American Inspiration",
+      "title": "Copland’s American Inspiration",
       "date_display": "Apr 30 - May 2, 2026",
       "date_start": "2026-04-30",
       "date_end": "2026-05-02",
@@ -2379,10 +2379,10 @@
       "categories": [
         "classical"
       ],
-      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works \u2014 from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
+      "description": "Matthias Pintscher leads the Philadelphia Orchestra through Copland's most iconic American works — from the wide-open optimism of Appalachian Spring to the rhythmic energy of Rodeo. A celebration of the American musical spirit.",
       "time": "8:00 PM",
       "id": "b960e665bd64",
-      "date_display": "Apr 30 \u2013 May 02, 2026"
+      "date_display": "Apr 30 – May 02, 2026"
     },
     {
       "title": "AI and the Future of Work",
@@ -2424,18 +2424,18 @@
       "title": "Legionnaires' Disease: The Philadelphia Outbreak",
       "date_start": "2026-05-01",
       "date_end": "2026-12-31",
-      "venue": "M\u00fctter Museum",
-      "source": "M\u00fctter Museum",
+      "venue": "Mütter Museum",
+      "source": "Mütter Museum",
       "source_url": "https://muttermuseum.org/events/",
       "price": null,
       "categories": [
         "exhibition",
         "science"
       ],
-      "description": "Examining Philadelphia's headline-grabbing 1976 outbreak of Legionnaires' Disease during the Bicentennial \u2014 the mysterious illness that baffled scientists and changed public health forever.",
+      "description": "Examining Philadelphia's headline-grabbing 1976 outbreak of Legionnaires' Disease during the Bicentennial — the mysterious illness that baffled scientists and changed public health forever.",
       "time": null,
       "id": "9c655798feee",
-      "date_display": "May 01 \u2013 Dec 31, 2026",
+      "date_display": "May 01 – Dec 31, 2026",
       "link": "https://muttermuseum.org/events/legionnaires-disease-the-philadelphia-outbreak/"
     },
     {
@@ -2505,7 +2505,7 @@
       ],
       "description": "Family-friendly performances, hands-on activities, and outdoor PLAYground. Includes The Magic School Bus, Bill Blagg Magic, and more.",
       "id": "140ef0c71762",
-      "date_display": "May 03 \u2013 May 05, 2026",
+      "date_display": "May 03 – May 05, 2026",
       "time": null
     },
     {
@@ -2545,7 +2545,7 @@
     {
       "id": "f5b5f4b786b0",
       "title": "1776 The Musical",
-      "date_display": "May 05 \u2013 Jun 07, 2026",
+      "date_display": "May 05 – Jun 07, 2026",
       "date_start": "2026-05-05",
       "date_end": "2026-06-07",
       "time": null,
@@ -2558,11 +2558,11 @@
         "musical",
         "theater"
       ],
-      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence \u2014 in the city where it happened."
+      "description": "The Tony Award-winning musical about the signing of the Declaration of Independence — in the city where it happened."
     },
     {
       "id": "b67dd75e8bb9",
-      "title": "Musicians\u2019 Choice",
+      "title": "Musicians’ Choice",
       "date_display": "May 7 - May 9, 2026",
       "date_start": "2026-05-07",
       "date_end": "2026-05-09",
@@ -2575,7 +2575,7 @@
       "categories": [
         "performance"
       ],
-      "description": "The program features new discoveries from the repertoire, works adored by Orchestra musicians, and varied scores that bring out the best of the signature \u201cPhiladelphia Sound. \u201d Musicians will speak from stage to share more about the fascinating backstories of the music."
+      "description": "The program features new discoveries from the repertoire, works adored by Orchestra musicians, and varied scores that bring out the best of the signature “Philadelphia Sound. ” Musicians will speak from stage to share more about the fascinating backstories of the music."
     },
     {
       "id": "0b76379f4426",
@@ -2615,7 +2615,7 @@
     {
       "id": "3bd4888bb6cf",
       "title": "GIRL DOLLS: The American Musical",
-      "date_display": "May 09 \u2013 May 17, 2026",
+      "date_display": "May 09 – May 17, 2026",
       "date_start": "2026-05-09",
       "date_end": "2026-05-17",
       "time": null,
@@ -2629,7 +2629,7 @@
         "musical",
         "theater"
       ],
-      "description": "BYO your favorite doll \u2014 The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity."
+      "description": "BYO your favorite doll — The Bearded Ladies Cabaret explores America's obsession with dolls, childhood, and identity."
     },
     {
       "id": "c920f8e324b5",
@@ -2699,7 +2699,7 @@
       "categories": [
         "performance"
       ],
-      "description": "CHICAGO is still the one musical with everything that makes Broadway shimmy-shake: a universal tale of fame, fortune, and all that jazz, with one showstopping song after another and the most astonishing dancing you\u2019ve ever seen."
+      "description": "CHICAGO is still the one musical with everything that makes Broadway shimmy-shake: a universal tale of fame, fortune, and all that jazz, with one showstopping song after another and the most astonishing dancing you’ve ever seen."
     },
     {
       "id": "8001da629d4c",
@@ -2777,20 +2777,20 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/the-black-clown-philadelphia-premiere/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
         "musical"
       ],
-      "description": "Philadelphia premiere \u2014 a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
+      "description": "Philadelphia premiere — a genre-shattering work based on Langston Hughes' searing 1931 poem. Fuses vaudeville, gospel, opera, jazz, and spirituals to tell the story of Black joy and perseverance against impossible odds. A visceral theatrical experience.",
       "time": "8:00 PM",
       "id": "b390aef23dce",
-      "date_display": "May 14 \u2013 May 17, 2026"
+      "date_display": "May 14 – May 17, 2026"
     },
     {
       "id": "9de60562f6d5",
-      "title": "Betz\u2013Gillece Quartet",
+      "title": "Betz–Gillece Quartet",
       "date_display": "May 15",
       "date_start": "2026-05-15",
       "date_end": "2026-05-15",
@@ -2803,10 +2803,10 @@
       "categories": [
         "jazz"
       ],
-      "description": "The Betz\u2013Gillece Quartet brings together two of the region\u2019s most distinctive jazz voices\u2014guitarist Brian Betz and vibraphonist Behn Gillece\u2014for an evening of original compositions and fresh arrangements. Known for their long-standing musical partnership, Betz and Gillece blend lyrical melodies, modern harmony, and dynamic interplay, supported by an exceptional rhythm section featuring bassist Charles Ford and drummer Dan Monaghan. The group\u2019s sound reflects a balance of swing, groove, and conte"
+      "description": "The Betz–Gillece Quartet brings together two of the region’s most distinctive jazz voices—guitarist Brian Betz and vibraphonist Behn Gillece—for an evening of original compositions and fresh arrangements. Known for their long-standing musical partnership, Betz and Gillece blend lyrical melodies, modern harmony, and dynamic interplay, supported by an exceptional rhythm section featuring bassist Charles Ford and drummer Dan Monaghan. The group’s sound reflects a balance of swing, groove, and conte"
     },
     {
-      "title": "Yannick N\u00e9zet-S\u00e9guin: Mahler & Sorey",
+      "title": "Yannick Nézet-Séguin: Mahler & Sorey",
       "date_start": "2026-05-15",
       "date_end": "2026-05-16",
       "venue": "Marian Anderson Hall, Kimmel Center",
@@ -2817,10 +2817,10 @@
       "categories": [
         "classical"
       ],
-      "description": "Music Director Yannick N\u00e9zet-S\u00e9guin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey \u2014 one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
+      "description": "Music Director Yannick Nézet-Séguin pairs Mahler's deeply emotional symphonic world with a new work by MacArthur Fellow Tyshawn Sorey — one of the most visionary composers working today. A program that bridges centuries of musical ambition.",
       "time": "8:00 PM",
       "id": "d90ef2a8fb40",
-      "date_display": "May 15 \u2013 May 16, 2026"
+      "date_display": "May 15 – May 16, 2026"
     },
     {
       "id": "af33bcabbcbc",
@@ -2912,7 +2912,7 @@
     {
       "id": "d3771fd9d263",
       "title": "The Outsiders",
-      "date_display": "May 26 \u2013 Jun 07, 2026",
+      "date_display": "May 26 – Jun 07, 2026",
       "date_start": "2026-05-26",
       "date_end": "2026-06-07",
       "time": "7:30 PM",
@@ -2945,7 +2945,7 @@
         "classical",
         "jazz"
       ],
-      "description": "Experience the world's premier big band, Jazz at Lincoln Center Orchestra led by artistic director, trumpeter extraordinaire, and nine-time Grammy Award\u00ae-winner Wynton Marsalis, in a swinging celebration of the genius of Duke Ellington."
+      "description": "Experience the world's premier big band, Jazz at Lincoln Center Orchestra led by artistic director, trumpeter extraordinaire, and nine-time Grammy Award®-winner Wynton Marsalis, in a swinging celebration of the genius of Duke Ellington."
     },
     {
       "title": "Beethoven & Marsalis",
@@ -2963,12 +2963,12 @@
       "description": "The Philadelphia Orchestra teams up with Jazz at Lincoln Center Orchestra to honor Beethoven and Wynton Marsalis.",
       "time": "8:00 PM",
       "id": "83317acc4391",
-      "date_display": "May 28 \u2013 May 30, 2026"
+      "date_display": "May 28 – May 30, 2026"
     },
     {
       "id": "46295c48252f",
       "title": "Martha Graham Dance Company",
-      "date_display": "May 29 \u2013 May 30, 2026",
+      "date_display": "May 29 – May 30, 2026",
       "date_start": "2026-05-29",
       "date_end": "2026-05-30",
       "time": "7:30 PM",
@@ -2981,7 +2981,7 @@
         "concert",
         "dance"
       ],
-      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' \u2014 co-commissioned with ArtPhilly."
+      "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' — co-commissioned with ArtPhilly."
     },
     {
       "id": "c96b591037fb",
@@ -3051,7 +3051,7 @@
         "classical",
         "concert"
       ],
-      "description": "Drag Me to Bingo is a high-energy, interactive drag event that throws out everything you think you know about bingo. Hosted by RuPaul\u2019s Drag Race stars Mrs."
+      "description": "Drag Me to Bingo is a high-energy, interactive drag event that throws out everything you think you know about bingo. Hosted by RuPaul’s Drag Race stars Mrs."
     },
     {
       "id": "4ea94181e3a5",
@@ -3102,7 +3102,7 @@
       "categories": [
         "lecture"
       ],
-      "description": "In View from the East Wing, Dr. Biden tells her story in her own words\u2014the story of an ordinary woman living an extraordinary life, and what it truly means to serve as wife, mother, grandmother, teacher, and First Lady all at once."
+      "description": "In View from the East Wing, Dr. Biden tells her story in her own words—the story of an ordinary woman living an extraordinary life, and what it truly means to serve as wife, mother, grandmother, teacher, and First Lady all at once."
     },
     {
       "id": "cf1c08b83e7e",
@@ -3170,7 +3170,7 @@
       "categories": [
         "theater"
       ],
-      "description": "Join the Heelers in their first live theatre show made just for you, featuring brilliantly created puppets. This is Bluey as you\u2019ve never seen it before, brought to real life."
+      "description": "Join the Heelers in their first live theatre show made just for you, featuring brilliantly created puppets. This is Bluey as you’ve never seen it before, brought to real life."
     },
     {
       "id": "aae270f3559e",
@@ -3652,7 +3652,7 @@
     },
     {
       "id": "bf0574bc7589",
-      "title": "Th\u00e9\u00e2tre Motus",
+      "title": "Théâtre Motus",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3706,7 +3706,7 @@
     },
     {
       "id": "73a3cf57247e",
-      "title": "Arturo O\u2019Farrill",
+      "title": "Arturo O’Farrill",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3886,7 +3886,7 @@
     },
     {
       "id": "7b8fb39b3dfa",
-      "title": "No\u00ebl Coward's PRESENT LAUGHTER",
+      "title": "Noël Coward's PRESENT LAUGHTER",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3922,7 +3922,7 @@
     },
     {
       "id": "aea7da71d823",
-      "title": "Disney\u2019s NEWSIES JR.",
+      "title": "Disney’s NEWSIES JR.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -4038,13 +4038,13 @@
       "venue": "Arden Theatre",
       "source": "Arden Theatre",
       "source_url": "https://ardentheatre.org/productions/",
-      "link": "https://ardentheatre.org/production/dearevanhansen/",
+      "link": "https://ardentheatre.org/productions/dearevanhansen/",
       "price": null,
       "categories": [
         "musical",
         "theater"
       ],
-      "description": "Winner of six Tony Awards, Dear Evan Hansen is a deeply personal and profoundly contemporary musical for anyone who\u2019s ever felt alone in a crowded room."
+      "description": "Winner of six Tony Awards, Dear Evan Hansen is a deeply personal and profoundly contemporary musical for anyone who’s ever felt alone in a crowded room."
     },
     {
       "id": "34f2f98fb77c",
@@ -4166,7 +4166,7 @@
       "categories": [
         "performance"
       ],
-      "description": "On July 4, 1777, the new Americans in Philadelphia commemorated the first anniversary of the Declaration of Independence by hosting a giant party filled with fireworks, bonfires, lights, decorations, music and joy \u2014 and the city has not stopped celebrating major events, culture fests, holidays, food, music and plain ol\u2019 good times ever since. Today, Philadelphia is one of the best places in the nation to celebrate \u2026 well, just about anything with a great event to attend. Pick any week on the cal"
+      "description": "On July 4, 1777, the new Americans in Philadelphia commemorated the first anniversary of the Declaration of Independence by hosting a giant party filled with fireworks, bonfires, lights, decorations, music and joy — and the city has not stopped celebrating major events, culture fests, holidays, food, music and plain ol’ good times ever since. Today, Philadelphia is one of the best places in the nation to celebrate … well, just about anything with a great event to attend. Pick any week on the cal"
     },
     {
       "id": "c83182968d8c",

@@ -67,13 +67,15 @@ def _auto_link(ev):
         return f"https://www.wilmatheater.org/whats-on/{slug}/"
 
     if source == "Opera Philadelphia":
-        return f"https://www.operaphila.org/whats-on/events/{slug}/"
+        # Opera Philly URLs have complex subcategory paths (/lectures/, /for-donors/, etc.)
+        # that can't be guessed from the title alone. Fall back to season page.
+        return ev.get("source_url") or "https://www.operaphila.org/whats-on/"
 
     if source == "FringeArts":
         return f"https://fringearts.com/event/{slug}/"
 
     if source == "Walnut Street Theatre":
-        return f"https://www.walnutstreettheatre.org/season/{slug}"
+        return f"https://www.walnutstreettheatre.org/season/show/{slug}"
 
     if source == "Philadelphia Theatre Company":
         return f"https://www.philatheatreco.org/{slug}"
