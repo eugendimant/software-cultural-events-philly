@@ -314,6 +314,8 @@ def _final_quality_gate(events):
     This runs after ALL other processing. An event that reaches here must have
     at minimum: a title, a date, and a venue. If any of these are missing,
     the event is dropped — it's better to show fewer events than broken ones.
+
+    Also sanitizes venue names, titles, and catches remaining data corruption.
     """
     result = []
     for event in events:
@@ -325,6 +327,34 @@ def _final_quality_gate(events):
         # Must have title + date
         if not title or not ds:
             continue
+
+        # ── Venue sanitization ──
+        # Fix "12:00 p.m. | Academy of Music" -> extract time, keep venue
+        m = _re.match(r'^(\d{1,2}:\d{2}\s*[ap]\.?m\.?)\s*\|\s*(.+)$', venue, _re.IGNORECASE)
+        if m:
+            time_raw = m.group(1).strip()
+            venue = m.group(2).strip()
+            if not event.get("time"):
+                event["time"] = _re.sub(r'\.', '', time_raw).upper().strip()
+        # Remove "Check Back for Availability", "Best Availability", etc.
+        venue = _re.sub(r'(Check Back for Availability|Best Availability|Limited Availability|Sold Out).*', '', venue).strip()
+        event["venue"] = venue
+
+        # ── Title sanitization ──
+        # Fix ALL-CAPS titles
+        if title == title.upper() and len(title) > 10:
+            title = title.title()
+            # Fix common small words
+            for old, new in [(' The ', ' the '), (' And ', ' and '), (' For ', ' for '),
+                             (' Of ', ' of '), (' In ', ' in '), (' At ', ' at ')]:
+                title = title.replace(old, new)
+            # But capitalize first word
+            title = title[0].upper() + title[1:]
+            event["title"] = title
+
+        # Truncate very long titles at 80 chars
+        if len(title) > 80:
+            event["title"] = title[:77].rsplit(' ', 1)[0] + '...'
 
         # Must have a link (at minimum the source listing page)
         if not link:

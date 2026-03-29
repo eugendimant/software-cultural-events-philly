@@ -723,10 +723,26 @@ def validate_event(ev):
     if "start date" in date_disp or "e.g." in date_disp or "placeholder" in date_disp:
         ev["date_display"] = ""  # clear garbage display text
 
+    # Fix venue corruption: time embedded in venue field
+    venue = (ev.get("venue") or "").strip()
+    m = re.match(r'^(\d{1,2}:\d{2}\s*[ap]\.?m\.?)\s*\|\s*(.+)$', venue, re.IGNORECASE)
+    if m:
+        time_raw = m.group(1).strip()
+        venue = m.group(2).strip()
+        if not ev.get("time"):
+            ev["time"] = re.sub(r'\.', '', time_raw).upper().strip()
+    # Remove "Check Back for Availability" etc concatenated with venue
+    venue = re.sub(r'(Check Back for Availability|Best Availability|Limited Availability|Sold Out).*', '', venue).strip()
+    ev["venue"] = venue if venue else None
+
     # Mark missing venue as None (will display as N/A) — never guess
     venue = (ev.get("venue") or "").strip()
     if not venue or venue in ("Various", "Various Theaters"):
         ev["venue"] = None
+
+    # Reject titles that are short acronyms like "GROUP 4"
+    if re.match(r'^GROUP\s+\d', title, re.IGNORECASE):
+        return False
 
     # If link equals source_url (generic listing page), keep it but
     # don't pretend it's a specific event page

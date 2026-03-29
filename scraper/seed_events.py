@@ -691,7 +691,7 @@ def get_seed_events():
         # Source: chrisjazzcafe.com (Squarespace, uses numeric IDs in URLs)
         # ═══════════════════════════════════════════════════════════════════
         {
-            "title": "Saxophonists Victor North and Aidan McKeon Sextet featuring Special Guest Trombonist Conrad Herwig",
+            "title": "Saxophonists Victor North and Aidan McKeon Sextet",
             "date_start": "2026-04-10",
             "date_end": "2026-04-10",
             "venue": "Chris' Jazz Cafe",
