@@ -1,25 +1,33 @@
 {
-  "last_updated": "2026-03-24T12:52:48.147657Z",
-  "total_events": 128,
+  "last_updated": "2026-03-28T12:37:05.237136Z",
+  "total_events": 286,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
     "BalletX",
     "Barnes Foundation",
+    "Barnes Foundation Exhibitions",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
     "Esperanza Arts Center",
+    "Franklin Institute Exhibits",
     "FringeArts",
     "Mütter Museum",
     "Opera Philadelphia",
     "Penn Live Arts",
     "Penn Museum",
     "Philadelphia Museum of Art",
+    "Philadelphia Museum of Art Exhibitions",
     "Philadelphia Orchestra",
     "Philadelphia Theatre Company",
     "Philly Fun Guide",
+    "Profs and Pints",
+    "Science History Institute",
+    "Science on Tap",
+    "Sofar Sounds Philadelphia",
     "South Jazz Kitchen",
+    "The Franklin Institute",
     "The Wilma Theater",
     "Visit Philadelphia Events",
     "Walnut Street Theatre"
@@ -28,19 +36,30 @@
     "successes": [
       "Ensemble Arts Philly: 24 events (HTML)",
       "Philadelphia Orchestra: 1 events (HTML)",
-      "Penn Live Arts: 31 events (links)",
+      "Penn Live Arts: 27 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 16 events (links)",
       "FringeArts: 7 events (HTML)",
       "Arden Theatre: 3 events (HTML)",
-      "Chris' Jazz Cafe: 67 events (HTML)",
+      "Chris' Jazz Cafe: 64 events (HTML)",
       "South Jazz Kitchen: 1 events (HTML)",
       "City Winery: 1 events (HTML)",
-      "BalletX: 4 events (HTML)",
+      "BalletX: 3 events (HTML)",
       "Philadelphia Theatre Company: 1 events (HTML)",
       "Visit Philadelphia Events: 2 events (HTML)",
       "Philly Fun Guide: 1 events (HTML)",
-      "Seed data: 49 verified events merged"
+      "Philadelphia Museum of Art: 5 events (HTML)",
+      "Philadelphia Museum of Art Exhibitions: 5 events (HTML)",
+      "Barnes Foundation: 60 events (HTML)",
+      "Barnes Foundation Exhibitions: 36 events (HTML)",
+      "The Franklin Institute: 2 events (HTML)",
+      "Franklin Institute Exhibits: 17 events (HTML)",
+      "Penn Museum: 28 events (HTML)",
+      "Academy of Natural Sciences: 8 events (HTML)",
+      "M\u00fctter Museum: 7 events (HTML)",
+      "Science on Tap: 1 events (Squarespace JSON)",
+      "Science History Institute: 58 events (HTML)",
+      "Seed data: 73 verified events merged"
     ],
     "failures": [
       "Failed to fetch https://theatrephiladelphia.org/whats-on-stage: HTTP 403",
@@ -48,13 +67,118 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 403",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
+      "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404",
       "Failed to fetch https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/eventtitle: HTTP 404"
     ],
     "warnings": [
-      "Greater Phila. Cultural Alliance: 0 events found at https://www.philaculture.org/events-calendar"
+      "Greater Phila. Cultural Alliance: 0 events found at https://www.philaculture.org/events-calendar",
+      "Profs and Pints: 0 events found at https://www.profsandpints.com/philadelphia",
+      "Sofar Sounds Philadelphia: 0 events found at https://www.sofarsounds.com/cities/philadelphia"
     ]
   },
   "events": [
+    {
+      "id": "05d0eba25ff9",
+      "title": "Mickalene Thomas:All About Love",
+      "date_display": "October 20, 2024 \u2013 January 12, 2025",
+      "date_start": "2024-10-20",
+      "date_end": "2024-10-20",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/mickalene-thomas",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "The first major international tour on Thomas\u2019s pioneering work."
+    },
+    {
+      "id": "7cce9dfe78ac",
+      "title": "Cecily Brown: Themes and Variations",
+      "date_display": "March 9 \u2013 May 25, 2025",
+      "date_start": "2025-03-09",
+      "date_end": "2025-05-25",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/cecily-brown",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Surveying three decades of the British painter\u2019s career."
+    },
+    {
+      "id": "85644b00e00f",
+      "title": "From Paris to Provence: French Painting at the Barnes",
+      "date_display": "June 29 \u2013 August 31, 2025",
+      "date_start": "2025-06-29",
+      "date_end": "2025-08-31",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/from-paris-to-provence",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Travel through France with Monet, Van Gogh, C\u00e9zanne, and other trailblazing painters."
+    },
+    {
+      "id": "5598335e2800",
+      "title": "Where I\u2019m From",
+      "date_display": "July 5 \u2013 August 25, 2025",
+      "date_start": "2025-07-05",
+      "date_end": "2025-08-25",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/where-im-from",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Works created by artists from Mural Arts Philadelphia\u2019s Rec Crew and SCI Phoenix."
+    },
+    {
+      "id": "2f0b3adfeb7c",
+      "title": "The Battle of the Bathers",
+      "date_display": "July 6 \u2013 September 15, 2025",
+      "date_start": "2025-07-06",
+      "date_end": "2025-09-15",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/battle-of-the-bathers",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Learn about the controversy between Dr. Barnes and the Philadelphia Museum of Art around works by Paul C\u00e9zanne."
+    },
+    {
+      "id": "cdb46b620cd8",
+      "title": "Henri Rousseau: A Painter\u2019s Secrets",
+      "date_display": "October 19, 2025 \u2013 February 22, 2026",
+      "date_start": "2025-10-19",
+      "date_end": "2025-10-19",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/henri-rousseau-a-painters-secrets",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "See the inventive works of Henri Rousseau in a new light."
+    },
     {
       "title": "Revolutionary Botany",
       "date_start": "2026-01-01",
@@ -195,123 +319,21 @@
       "description": "140 N. Columbus Blvd. (at Race St.) Philadelphia, PA 19106 Directions"
     },
     {
-      "id": "f9579df6cce4",
-      "title": "Digba Ogunbiyi Quartet",
-      "date_display": "Mar 24, 2026",
-      "date_start": "2026-03-24",
-      "date_end": "2026-03-24",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/126750",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "Digba OgunbiyiZach WalgrenAdam AronestyEmmanuel Chidiebere Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "id": "74a531fb8da6",
-      "title": "Saxophonist Christian Ertl and His Quartet",
-      "date_display": "Mar 25, 2026",
-      "date_start": "2026-03-25",
-      "date_end": "2026-03-25",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/132133",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "id": "4890fa38c7bc",
-      "title": "Logan Bogdan Septet",
-      "date_display": "Mar 26, 2026",
-      "date_start": "2026-03-26",
-      "date_end": "2026-03-26",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/130300",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "Logan Bogdan - Drums Jeremy Leon - Flute, Saxophones Matt Kahn - Guitar Peter Rushing - Piano Jacob Hurlock - Keyboard Kai Gibson - Bass Don Solomon - Percussion Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube "
-    },
-    {
-      "id": "b5accf9a5826",
-      "title": "The Oscar Beesley Quartet",
-      "date_display": "Mar 26, 2026",
-      "date_start": "2026-03-26",
-      "date_end": "2026-03-26",
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/132057",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Oscar Beesley — DrumsBen Deloach — SaxJames Newcombe — PianoJames White — Bass Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
-    },
-    {
-      "id": "c59d16da7ff4",
-      "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
-      "date_display": "Mar 27 – Mar 28, 2026",
-      "date_start": "2026-03-27",
-      "date_end": "2026-03-28",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/127246",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "John Pizzarelli – Guitar & Vocals Isaiah J Thompson – Piano Mike Karn – Bass Show times 7:30 & 9:30Friday $45 / Saturday $50 General Admission ~ a la carte menu: $45 / $50Dinner & Show ~ Includes 3-course dinner: $115 / $120VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees."
-    },
-    {
-      "id": "4816d1e6e155",
-      "title": "Oliver Mayman + Jam Session",
-      "date_display": "Mar 27, 2026",
-      "date_start": "2026-03-27",
-      "date_end": "2026-03-27",
-      "time": "11:00 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/131282",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman — originally from Ann Arbor, MI — has become a distinguished voice on the instrument. Late-night jam session follows."
-    },
-    {
       "title": "BalletX Spring Series 2026",
-      "date_start": "2026-03-18",
-      "date_end": "2026-03-22",
-      "venue": "Suzanne Roberts Theatre",
+      "date_start": "2026-03-27",
+      "date_end": "2026-03-29",
+      "venue": "Wilma Theater",
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
       "link": "https://www.balletx.org/seasons/spring-series-2026/",
-      "price": "$55 – $90",
+      "price": null,
       "categories": [
         "ballet",
         "dance"
       ],
-      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan — Show Me, Broke Apart, and more.",
+      "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan \u2014 Show Me, Broke Apart, and more.",
       "id": "7cfc9fdbaabc",
-      "date_display": "Mar 18 – Mar 22, 2026",
+      "date_display": "Mar 27 \u2013 Mar 29, 2026",
       "time": null
     },
     {
@@ -327,15 +349,32 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/endea-owens-and-the-cookout",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Grammy, Emmy, and Peabody Award winner, Endea Owens is hailed as one of jazz's most vibrant and versatile artists. The Detroit-raised recording artist, bassist, and composer has been mentored by jazz icons like Marcus Belgrave, Rodney Whitaker, and Ron Carter."
     },
     {
+      "id": "3026500c18be",
+      "title": "John Pizzarelli Presents \"Dear Mr. Bennett\"",
+      "date_display": "March 28",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/127246",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Pizzarelli \u2013 Guitar & Vocals Isaiah J Thompson \u2013 Piano Mike Karn \u2013 Bass Show times 7:30 & 9:30Friday $45 / Saturday $50 General Admission ~ a la carte menu: $45 / $50Dinner & Show ~ Includes 3-course dinner: $115 / $120VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. THIS SHOW WILL NOT BE STREAMED"
+    },
+    {
       "id": "aacb76d28d90",
       "title": "James Santangelo's Late Night Jam",
-      "date_display": "Mar 28, 2026",
+      "date_display": "Apr 11, 2026",
       "date_start": "2026-03-28",
       "date_end": "2026-03-28",
       "time": "11:00 PM",
@@ -350,6 +389,129 @@
       "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all."
     },
     {
+      "id": "ad215a6b47ac",
+      "title": "FREE WITH ADMISSION",
+      "date_display": "Mar 28 - Apr 10 2026",
+      "date_start": "2026-03-28",
+      "date_end": "2026-04-10",
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar/20260328/spring-break-tfi",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Spring into discovery at The Franklin Institute this break! Dive into a world of scientific wonders and hands-on exploration with even more evening hours for Universal Theme Parks: The Exhibition."
+    },
+    {
+      "id": "47f85037296e",
+      "title": "March 28",
+      "date_display": "Saturday, March 28",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/science-story-time",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Fun weekly science story time with Academy educators featuring family-friendly tales and hands\u2011on crafts for young natural history fans."
+    },
+    {
+      "id": "38b6434ee78f",
+      "title": "First Friday: Our Plastic Planet",
+      "date_display": "Mar 28 Sat 10am-5pm",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/first-friday-our-plastic-planet/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Friday, April 3, 2026 | 5pm-7pm EDT"
+    },
+    {
+      "id": "c460e6da8d7b",
+      "title": "Stories of Science: Celebrating Women\u2019s History",
+      "date_display": "Mar 28 Sat 10am-5pm",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-celebrating-womens-history-20260328/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "fd5b27b049cb",
+      "title": "Drink the Delaware",
+      "date_display": "Mar 28 Sat 4pm-9pm",
+      "date_start": "2026-03-28",
+      "date_end": "2026-03-28",
+      "time": "4:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/?types=museum-programs-activities",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "title": "Botany of Nations",
+      "date_start": "2026-03-28",
+      "date_end": "2026-09-13",
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/exhibits/exhibits/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "The Lewis and Clark expedition retold through an Indigenous lens. Plants act as portals to under-shared stories, cultures, and sciences of the Indigenous peoples encountered on the journey. Created in collaboration with Indigenous-led nonprofit Local Contexts.",
+      "time": null,
+      "id": "cd41a0dac3ce",
+      "date_display": "Mar 28 \u2013 Sep 13, 2026",
+      "link": "https://ansp.org/exhibits/botany-of-nations/"
+    },
+    {
+      "id": "dd3ac6470d93",
+      "title": "March 29",
+      "date_display": "Sunday, March 29",
+      "date_start": "2026-03-29",
+      "date_end": "2026-03-29",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/science-story-time",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Fun weekly science story time with Academy educators featuring family-friendly tales and hands\u2011on crafts for young natural history fans."
+    },
+    {
       "id": "e925e1008d4a",
       "title": "The Sound of Music",
       "date_display": "Mar 31 – Apr 05, 2026",
@@ -362,10 +524,10 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
-        "opera",
         "ballet",
+        "musical",
         "classical",
-        "musical"
+        "opera"
       ],
       "description": "For 65 years, THE SOUND OF MUSIC has been one of our “favorite things. ” With its timeless story and irresistibly charming score, this Rodgers & Hammerstein classic isn’t just meant to be enjoyed - it’s meant to be shared."
     },
@@ -385,24 +547,6 @@
         "jazz"
       ],
       "description": "Connor MacLeod- Tenor Saxophone Mason Millard- TrumpetIsaac Byrd- PianoAhmed McLemore- BassKarl Seyer- Drums Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "title": "Botany of Nations",
-      "date_start": "2026-03-28",
-      "date_end": "2027-02-14",
-      "venue": "Academy of Natural Sciences",
-      "source": "Academy of Natural Sciences",
-      "source_url": "https://ansp.org/exhibits/exhibits/",
-      "price": null,
-      "categories": [
-        "exhibition",
-        "science"
-      ],
-      "description": "The Lewis and Clark expedition retold through an Indigenous lens. Plants act as portals to under-shared stories, cultures, and sciences of the Indigenous peoples encountered on the journey. Created in collaboration with Indigenous-led nonprofit Local Contexts.",
-      "time": null,
-      "id": "cd41a0dac3ce",
-      "date_display": "Mar 28, 2026 – Feb 14, 2027",
-      "link": "https://ansp.org/experience/exhibits/botany-of-nations"
     },
     {
       "title": "ECCO with Anthony McGill & Tai Murray",
@@ -473,21 +617,21 @@
       "description": "Trumpeter James McGovern leads his quintet at Chris' Jazz Cafe. McGovern is a rising talent from Temple University's jazz program, bringing fresh energy to the Philadelphia jazz scene."
     },
     {
-      "id": "6dcf086ed626",
-      "title": "Webb Thomas and His Super Band",
-      "date_display": "Apr 03, 2026",
-      "date_start": "2026-04-03",
-      "date_end": "2026-04-03",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/131271",
+      "id": "bc4755d84209",
+      "title": "April 2",
+      "date_display": "Thursday, April 2",
+      "date_start": "2026-04-02",
+      "date_end": "2026-04-02",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/nature-at-noon",
       "price": null,
       "categories": [
-        "jazz"
+        "science"
       ],
-      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Inclusive, curiosity-driven lunchtime nature walks exploring biodiversity with accessible, welcoming programming for all abilities."
     },
     {
       "title": "The Rise and Fall of the Mob in Philadelphia",
@@ -505,6 +649,92 @@
       "time": "6:00 PM",
       "id": "95d0c1dfc857",
       "date_display": "Apr 02, 2026"
+    },
+    {
+      "id": "6dcf086ed626",
+      "title": "Webb Thomas and His Super Band",
+      "date_display": "April 03",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/131271",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "273642c610cb",
+      "title": "Oliver Mayman + Jam Session",
+      "date_display": "Apr 24, 2026",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/133347",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
+    },
+    {
+      "id": "16277c04a8db",
+      "title": "First Friday: Black Pearl Chamber Orchestra",
+      "date_display": "Friday, April 3, 6 \u2013 9pm",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "9:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/first-friday-april-2026-black-pearl-chamber-orchestra",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Tonight\u2019s performance celebrates Black artists in classical music and features a Q&A with composers, performers, and conductors."
+    },
+    {
+      "id": "4256dd69b141",
+      "title": "April 3",
+      "date_display": "Friday, April 3",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/spring-break",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Spring Break at the Academy: explore fossils, live shows, hands\u2011on fun, and be among the first to experience the new Botany of Nations exhibit."
+    },
+    {
+      "id": "5fbc3e473bd2",
+      "title": "Othmer Library Tour",
+      "date_display": "Apr 08 Wed 12pm-12:45pm",
+      "date_start": "2026-04-03",
+      "date_end": "2026-04-03",
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20260403/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "title": "Dance Theatre of Harlem",
@@ -576,6 +806,110 @@
       "description": "Wallace Roney Jr — TrumpetNat Reeves — BassJeff “Tain” Watts — DrumsImani Grace-Cooper — Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "2b0532a2e157",
+      "title": "Barnes Create & Connect",
+      "date_display": "Saturday, April 4, 10am \u2013 noon",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "time": "10:00 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/free/barnes-create-and-connect-april-4",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Join us for an art-making experience designed for individuals living with Parkinson\u2019s disease and their care partners."
+    },
+    {
+      "id": "0055975de824",
+      "title": "April 4",
+      "date_display": "Saturday, April 4",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/drop-in-workshops",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Explore rare specimens, hands\u2011on science activities, and seasonal workshops for families who love nature, led by Academy educators."
+    },
+    {
+      "id": "79a7e7fd91b8",
+      "title": "Stories of Science: April Showers",
+      "date_display": "Apr 04 Sat 10am-5pm",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-april-showers-20260404/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "8ce7f556f9bc",
+      "title": "Science & Activism Tour",
+      "date_display": "Apr 04 Sat 2pm",
+      "date_start": "2026-04-04",
+      "date_end": "2026-04-04",
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/science-activism-tour-202604/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "2571231c483f",
+      "title": "PECO Free First Sunday Family Day: Philly Jazz Month",
+      "date_display": "Sunday, April 5, 10am \u2013 4pm",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "time": "10:00 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-family-day-april-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "See special performances by talented Philadelphia youth musicians and enjoy family art activities, storytime, and free access to our galleries."
+    },
+    {
+      "id": "0bad245616bf",
+      "title": "April 5",
+      "date_display": "Sunday, April 5",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/spring-break",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Spring Break at the Academy: explore fossils, live shows, hands\u2011on fun, and be among the first to experience the new Botany of Nations exhibit."
+    },
+    {
       "title": "Vocalist Jackie Johnson and Her Band",
       "date_start": "2026-04-05",
       "date_end": "2026-04-05",
@@ -590,6 +924,41 @@
       ],
       "description": "Jazz vocalist Jackie Johnson brings her band to Chris' Jazz Cafe for an evening of standards and original compositions. Two sets at 7:30 and 9:00 PM.",
       "id": "6ca2c459a0ad",
+      "date_display": "Apr 05, 2026"
+    },
+    {
+      "title": "PECO Free First Sunday: April",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "price": "Free",
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Free admission on the first Sunday with family art activities, performances by Equinox from the Philadelphia High School for Creative and Performing Arts, storytime, and free gallery access. April is Philly Jazz Month.",
+      "time": "10:00 AM",
+      "id": "6d4f6efa58ac",
+      "date_display": "Apr 05, 2026",
+      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-april"
+    },
+    {
+      "title": "Sofar Sounds Philadelphia: Secret Concert",
+      "date_start": "2026-04-05",
+      "date_end": "2026-04-05",
+      "venue": "Secret Venue (Sofar Sounds)",
+      "source": "Sofar Sounds Philadelphia",
+      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
+      "link": "https://www.sofarsounds.com/cities/philadelphia",
+      "price": "$25",
+      "categories": [
+        "concert",
+        "performance"
+      ],
+      "description": "Intimate live music in a secret Philadelphia location, revealed 24 hours before the show. Three emerging artists perform acoustic sets in an unplugged, phone-free environment. Sofar reimagines the live music experience.",
+      "time": "7:30 PM",
+      "id": "e4558e2d7119",
       "date_display": "Apr 05, 2026"
     },
     {
@@ -645,24 +1014,6 @@
       "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia’s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.Set times 7:30pm & 9:00pm General Admission ~"
     },
     {
-      "title": "Sofar Sounds Philadelphia: Secret Concert",
-      "date_start": "2026-04-05",
-      "date_end": "2026-04-05",
-      "venue": "Secret Venue (Sofar Sounds)",
-      "source": "Sofar Sounds Philadelphia",
-      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
-      "link": "https://www.sofarsounds.com/cities/philadelphia",
-      "price": "$25",
-      "categories": [
-        "concert",
-        "performance"
-      ],
-      "description": "Intimate live music in a secret Philadelphia location, revealed 24 hours before the show. Three emerging artists perform acoustic sets in an unplugged, phone-free environment. Sofar reimagines the live music experience.",
-      "time": "7:30 PM",
-      "id": "e4558e2d7119",
-      "date_display": "Apr 05, 2026"
-    },
-    {
       "title": "Lang Lang and Yannick",
       "date_start": "2026-04-07",
       "date_end": "2026-04-07",
@@ -691,7 +1042,8 @@
       "price": "Free",
       "categories": [
         "classical",
-        "performance"
+        "performance",
+        "lecture"
       ],
       "description": "A free virtual lecture exploring the themes and music behind Opera Philadelphia's world premiere Sleepers Awake. Join the conversation with the creative team as they discuss the making of this groundbreaking new work by Gregory Spears.",
       "id": "9edb3b9b2f0b",
@@ -710,10 +1062,61 @@
       "link": "https://ardentheatre.org/productions/the-stinky-cheese-man-and-other-fairly-stupid-tales/",
       "price": null,
       "categories": [
-        "performance",
-        "theater"
+        "theater",
+        "performance"
       ],
       "description": "Arden Children's Theatre presents the beloved tales in a zany, irreverent show for the whole family."
+    },
+    {
+      "id": "00f8c1f8f12a",
+      "title": "Closed for Private Event",
+      "date_display": "Apr 08, 2026",
+      "date_start": "2026-04-08",
+      "date_end": "2026-04-08",
+      "time": "8:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130294",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "79e93c825f7b",
+      "title": "ARTZ @ The Museum",
+      "date_display": "Wednesday, April 8, 1:30 \u2013 2:30pm",
+      "date_start": "2026-04-08",
+      "date_end": "2026-04-08",
+      "time": "2:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/artz-the-museum",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "This program provides free access to the Barnes for people living with dementia and their care partners."
+    },
+    {
+      "id": "aceb386de595",
+      "title": "Members-Only Online Tour: Matisse, Dr. Barnes, and The Dance",
+      "date_display": "Wednesday, April 8, 2 \u2013 3pm",
+      "date_start": "2026-04-08",
+      "date_end": "2026-04-08",
+      "time": "3:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members/online-tour-matisse-drbarnes-and-the-dance-april",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Members are invited to attend this exclusive tour about Matisse at the Barnes."
     },
     {
       "id": "afeb1f33c276",
@@ -768,6 +1171,57 @@
       "description": "Anthony Aldissi — pianoJustin Bowden — drumsManos Vourourakis — bass Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "2f73d90192e6",
+      "title": "Member Previews: Freedom Dreams",
+      "date_display": "Thursday, April 9 \u2013 Saturday, April 11",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members/previews-freedom-dreams",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "As a member, see our latest exhibition before the public opening."
+    },
+    {
+      "id": "a00ff8a67bc4",
+      "title": "Member Introduction: Sky Hopinka: Red Metal Dust",
+      "date_display": "Thursday, April 9, 10:15 \u2013 10:45am",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": "10:45 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/member-introduction-sky-hopinka-red-metal-dust-april",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Learn more about the new installation of artwork in the Annenberg Court with a docent-led discussion."
+    },
+    {
+      "id": "b26eda71d309",
+      "title": "April 9",
+      "date_display": "Thursday, April 9",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "time": null,
+      "venue": "Academy of Natural Sciences",
+      "source": "Academy of Natural Sciences",
+      "source_url": "https://ansp.org/programs-and-events/events/",
+      "link": "https://ansp.org/experience/events/nature-at-noon",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Inclusive, curiosity-driven lunchtime nature walks exploring biodiversity with accessible, welcoming programming for all abilities."
+    },
+    {
       "title": "Mozart's Requiem",
       "date_start": "2026-04-09",
       "date_end": "2026-04-12",
@@ -783,6 +1237,40 @@
       "time": "8:00 PM",
       "id": "a323707db356",
       "date_display": "Apr 09 – Apr 12, 2026"
+    },
+    {
+      "title": "The Oscar Beesley Quartet",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-09",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/360150",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Oscar Beesley Quartet performs an evening of original compositions and jazz standards at Chris' Jazz Cafe.",
+      "id": "203c055d5ee8",
+      "date_display": "Apr 09, 2026"
+    },
+    {
+      "title": "Past, Peril, and Preservation in Syria",
+      "date_start": "2026-04-09",
+      "date_end": "2026-04-30",
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/",
+      "price": null,
+      "categories": [
+        "lecture"
+      ],
+      "description": "A 4-Thursday online series with Dr. Michael Danti exploring the intersection of cultural heritage, conflict, and preservation efforts in Syria. Join virtually for in-depth discussion of archaeological sites under threat.",
+      "time": "6:00 PM",
+      "id": "8420bad13f9d",
+      "date_display": "Apr 09 \u2013 Apr 30, 2026",
+      "link": "https://www.penn.museum/on-view/past-peril-and-preservation-in-syria"
     },
     {
       "id": "6e74baf9dec4",
@@ -802,6 +1290,24 @@
       "description": "Show times 7:30 & 9:30 General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $95VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $115(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "4cbf75b1d3a9",
+      "title": "SOLD OUT: Launch Party! A History of Fireworks Opening Celebration",
+      "date_display": "Apr 10 Fri 5pm-8pm",
+      "date_start": "2026-04-10",
+      "date_end": "2026-04-10",
+      "time": "5:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/exhibition-opening-fireworks/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "title": "Wilderness Generation",
       "date_start": "2026-04-10",
       "date_end": "2026-05-03",
@@ -817,6 +1323,23 @@
       "time": "7:00 PM",
       "id": "d52cabce3ae6",
       "date_display": "Apr 10 – May 03, 2026"
+    },
+    {
+      "title": "Science After Hours: Rhythm & Booms",
+      "date_start": "2026-04-10",
+      "date_end": "2026-04-10",
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Dance your way through exhibits, sip drinks, and dive into activities inspired by music and sound, then experience explosive live science demonstrations. Ages 21+ only.",
+      "time": "7:30 PM",
+      "id": "bf9684d00c64",
+      "date_display": "Apr 10, 2026",
+      "link": "https://fi.edu/en/exhibits-and-experiences/science-after-hours-rhythm-booms"
     },
     {
       "id": "78168c6c93e2",
@@ -873,6 +1396,23 @@
       "description": "2026 American Traditions vocal Competition Silver Winner 2026 Bistro Award Winner for Outstanding Jazz Vocalist Show times 7:30 & 9:30General Admission ~ a la carte menu: $35Dinner & Show ~ Includes 3-course dinner: $105VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "9fe5ff9c7ed2",
+      "title": "Slow Art Day 2026",
+      "date_display": "Saturday, April 11, 11am \u2013 1:30pm",
+      "date_start": "2026-04-11",
+      "date_end": "2026-04-11",
+      "time": "1:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/slow-art-day-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Discover the joy of looking at art. Spend an hour examining works in the galleries, then join a discussion about your experience."
+    },
+    {
       "id": "1c89f448012b",
       "title": "Lena Dunham: the Famesick Tour",
       "date_display": "Apr 12, 2026",
@@ -888,6 +1428,40 @@
         "performance"
       ],
       "description": "To celebrate the release of her first book in over a decade, Lena Dunham returns to the stage for a night of fearless storytelling and no holds barred conversation."
+    },
+    {
+      "id": "91cca7ae6e3a",
+      "title": "Freedom Dreams",
+      "date_display": "April 12 \u2013 August 9, 2026",
+      "date_start": "2026-04-12",
+      "date_end": "2026-08-09",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/freedom-dreams",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "A meditation on the memories, dreams, and histories of America, featuring powerful works by contemporary moving-image artists Arthur Jafa, David Hartt, Garrett Bradley, Ja\u2019Tovia Gary, and Tourmaline."
+    },
+    {
+      "id": "d748c4055ddb",
+      "title": "Freedom Dreams",
+      "date_display": "April 12 \u2013 August 9, 2026",
+      "date_start": "2026-04-12",
+      "date_end": "2026-08-09",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/freedom-dreams",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "A meditation on the memories, dreams, and histories of America, featuring powerful works by contemporary moving-image artists Arthur Jafa, David Hartt, Garrett Bradley, Ja\u2019Tovia Gary, and Tourmaline."
     },
     {
       "title": "Joe Block and His Trio with Special Guest Georgia Heers",
@@ -907,6 +1481,128 @@
       "date_display": "Apr 12, 2026"
     },
     {
+      "title": "A Nation of Artists",
+      "date_start": "2026-04-12",
+      "date_end": "2027-07-05",
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "The most expansive presentation of American art ever mounted in Philadelphia. Featuring more than 1,000 works across PMA and PAFA, celebrating the museum's 150th anniversary and the nation's 250th.",
+      "time": null,
+      "id": "80f6728466a6",
+      "date_display": "Apr 12 \u2013 Jul 05, 2027",
+      "link": "https://philamuseum.org/exhibitions/a-nation-of-artists"
+    },
+    {
+      "title": "Henri Matisse at the Barnes",
+      "date_start": "2026-04-12",
+      "date_end": "2026-08-09",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "A tour of the Barnes's renowned collection of paintings by Henri Matisse, exploring how a visit to the Barnes collection was a pivotal moment in the artist's career and transformed his approach to color and form.",
+      "time": null,
+      "id": "7acf35edd83f",
+      "date_display": "Apr 12 \u2013 Aug 09, 2026",
+      "link": "https://www.barnesfoundation.org/whats-on/henri-matisse-at-the-barnes"
+    },
+    {
+      "id": "2cbc879b007e",
+      "title": "The Doctor and the Douanier: How Dr. Barnes Built His Collection of Rousseaus",
+      "date_display": "Until April 13, 2026",
+      "date_start": "2026-04-13",
+      "date_end": "2026-04-13",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/the-doctor-and-the-douanier",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "The story behind the world\u2019s largest collection of Rousseaus."
+    },
+    {
+      "id": "27811a272894",
+      "title": "The Doctor and the Douanier: How Dr. Barnes Built His Collection of Rousseaus",
+      "date_display": "Until April 13, 2026",
+      "date_start": "2026-04-13",
+      "date_end": "2026-04-13",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/the-doctor-and-the-douanier",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "The story behind the world\u2019s largest collection of Rousseaus."
+    },
+    {
+      "id": "fae78212acef",
+      "title": "Transforming the Dead: Art, Ritual, and Science of Egyptian Embalming",
+      "date_display": "2026-04-13",
+      "date_start": "2026-04-13",
+      "date_end": "2026-04-13",
+      "time": "10:00 PM",
+      "venue": "National Mechanics",
+      "source": "Science on Tap",
+      "source_url": "https://www.scienceontapphilly.com/events",
+      "link": "https://www.scienceontapphilly.com/events/transforming-the-dead-art-ritual-and-science-of-egyptian-embalming",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Before the new Egyptian galleries open at the Penn Museum at the end of this year, join Jennifer Wegner, Ph.D. as she explores how ancient embalmers worked to transform the dead for life after death and offers a look at the art and science behind this intriguing practice."
+    },
+    {
+      "id": "723f49c51b70",
+      "title": "Transforming the Dead: The Art, Ritual, and Science of Egyptian Embalming",
+      "date_display": "Apr 13 Mon 6pm-7pm",
+      "date_start": "2026-04-13",
+      "date_end": "2026-04-13",
+      "time": "6:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/transforming-the-dead-the-art-ritual-and-science-of-egyptian-embalming/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "title": "Science on Tap: Monthly Talk",
+      "date_start": "2026-04-13",
+      "date_end": "2026-04-13",
+      "venue": "National Mechanics",
+      "source": "Science on Tap",
+      "source_url": "https://www.scienceontapphilly.com/events",
+      "price": "Free",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Monthly science talk at National Mechanics bar. Organized by a consortium of six Philadelphia science museums including the Academy of Natural Sciences, Penn Museum, M\u00fctter Museum, and Science History Institute. Second Monday of every month since 2009.",
+      "time": "6:00 PM",
+      "id": "d41705383f4b",
+      "date_display": "Apr 13, 2026",
+      "link": "https://www.scienceontapphilly.com/events"
+    },
+    {
       "id": "fdc7c1d9bbec",
       "title": "The Heart of Jazz Presents the New Philly Sound",
       "date_display": "Apr 14, 2026",
@@ -921,7 +1617,25 @@
       "categories": [
         "jazz"
       ],
-      "description": "Aidan McKeon, saxAce Yuji Williams, trumpetJustin Griggs, keysRy Miller, bassJustin Bowden, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Aidan McKeon, saxAce Yuji Williams, trumpetJustin Griggs, keysRy Miller, bassJustin Bowden, drumsSponsored by The Heart of Jazz, The New Philly Sound is a fresh, ever-evolving collective of rising musicians deeply rooted in Philly\u2019s rich jazz tradition while helping shape its bold, vibrant future. This ensemble brings together some of the city\u2019s most exciting young artists, each steeped in Philadelphia\u2019s dynamic music community. This performance supports The Heart of Jazz mission to keep the mus"
+    },
+    {
+      "id": "fc41bfe236d0",
+      "title": "From Nature to Nylons: A Touch-Based History of Textiles",
+      "date_display": "Apr 14 Tue 10:30am-12pm",
+      "date_start": "2026-04-14",
+      "date_end": "2026-04-14",
+      "time": "10:30 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/from-nature-to-nylons-a-touch-based-history-of-textiles-202604/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "id": "3ba499730fa6",
@@ -993,6 +1707,40 @@
       "description": "Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
     },
     {
+      "id": "924b35fbb1e8",
+      "title": "Education & Empowerment: Scholarship Recipients at the Barnes Foundation, Vol. Two: 1927\u20131952",
+      "date_display": "April 16, 2026 \u2013 January 25, 2027",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore the experiences of a diverse group of scholars whose education was supported by the Barnes."
+    },
+    {
+      "id": "3deed83b5f74",
+      "title": "Education & Empowerment: Scholarship Recipients at the Barnes Foundation, Vol. Two: 1927\u20131952",
+      "date_display": "April 16, 2026 \u2013 January 25, 2027",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore the experiences of a diverse group of scholars whose education was supported by the Barnes."
+    },
+    {
       "title": "Jonathan Daddis and His Band",
       "date_start": "2026-04-16",
       "date_end": "2026-04-16",
@@ -1007,6 +1755,24 @@
       ],
       "description": "Saxophonist Jonathan Daddis leads his band in an evening of hard bop and modern jazz at Philadelphia's beloved Chris' Jazz Cafe.",
       "id": "32a25d39a707",
+      "date_display": "Apr 16, 2026"
+    },
+    {
+      "title": "The Science of Happiness",
+      "date_start": "2026-04-16",
+      "date_end": "2026-04-16",
+      "venue": "Urban Saloon",
+      "source": "Profs and Pints",
+      "source_url": "https://www.profsandpints.com/philadelphia",
+      "link": "https://www.ticketleap.events/tickets/profsandpints/profs-and-pints-philadelphia-science-happiness",
+      "price": "$13.50",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "What does research say about what truly makes us happy? A psychology professor breaks down the latest findings on well-being, gratitude, and the pursuit of the good life \u2014 all over a pint.",
+      "time": "6:00 PM",
+      "id": "79833874c684",
       "date_display": "Apr 16, 2026"
     },
     {
@@ -1080,6 +1846,23 @@
       "date_display": "Apr 17 – Apr 19, 2026"
     },
     {
+      "title": "Saxophonist Christian Ertl and His Quartet",
+      "date_start": "2026-04-17",
+      "date_end": "2026-04-17",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/132133",
+      "time": "7:30 PM",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Christian Ertl is an alto saxophonist, bandleader, composer, and arranger originally from Waukee, Iowa, now living and performing in Philadelphia. Dinner & Show available at $70; VIP at $90.",
+      "id": "2995ab62fd77",
+      "date_display": "Apr 17, 2026"
+    },
+    {
       "id": "41d5fbb9e48e",
       "title": "Inside the Music: Sleepers Awake",
       "date_display": "Apr 18, 2026",
@@ -1098,6 +1881,42 @@
       "description": "Inside the Music: Sleepers Awake 1:00 p.m. | Athenaeum of Philadelphia A talk related to the World Premiere of Sleepers Awake"
     },
     {
+      "id": "2715f9e4d435",
+      "title": "Women in Chemistry Tour",
+      "date_display": "Apr 18 Sat 2pm",
+      "date_start": "2026-04-18",
+      "date_end": "2026-04-18",
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/women-in-chemistry-tour-202604/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "61cc874720ac",
+      "title": "Maker Faire Philadelphia",
+      "date_display": "Apr 19 Sun 10am-4pm",
+      "date_start": "2026-04-19",
+      "date_end": "2026-04-19",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/?types=museum-programs-activities",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "title": "Vocalist Martina Barta and the Philly All-Star Quartet",
       "date_start": "2026-04-19",
       "date_end": "2026-04-19",
@@ -1112,6 +1931,24 @@
       ],
       "description": "Czech-born jazz vocalist Martina Barta teams up with the Philly All-Star Quartet for an intimate evening of jazz vocal artistry at Chris' Jazz Cafe.",
       "id": "772fd7f9eac9",
+      "date_display": "Apr 19, 2026"
+    },
+    {
+      "title": "Sofar Sounds Philadelphia: April Session",
+      "date_start": "2026-04-19",
+      "date_end": "2026-04-19",
+      "venue": "Secret Venue (Sofar Sounds)",
+      "source": "Sofar Sounds Philadelphia",
+      "source_url": "https://www.sofarsounds.com/cities/philadelphia",
+      "link": "https://www.sofarsounds.com/cities/philadelphia",
+      "price": "$25",
+      "categories": [
+        "concert",
+        "performance"
+      ],
+      "description": "Live music in an unexpected Philadelphia space \u2014 venue revealed the day before. Enjoy three handpicked artists performing stripped-back sets in an intimate, phone-free atmosphere.",
+      "time": "7:30 PM",
+      "id": "e26226cffdf5",
       "date_display": "Apr 19, 2026"
     },
     {
@@ -1145,8 +1982,8 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
-        "performance",
-        "musical"
+        "musical",
+        "performance"
       ],
       "description": "SHUCKED is the Tony Award®–winning musical comedy The Wall Street Journal calls “flat out hilarious!” And nobody knows funny like economists."
     },
@@ -1163,8 +2000,8 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/christian-mcbride-and-edgar-meyer",
       "price": null,
       "categories": [
-        "performance",
-        "jazz"
+        "jazz",
+        "performance"
       ],
       "description": "Philadelphia's own Christian McBride — eight-time Grammy winner and jazz legend — teams up with the genre-defying bassist Edgar Meyer for an extraordinary double-bass summit. Two virtuosos, one unforgettable night of improvisation."
     },
@@ -1219,6 +2056,42 @@
         "jazz"
       ],
       "description": "Join us on April 22 for a powerful evening of jazz history in motion! The Philadelphia Jazz Archive presents a special fundraiser concert at Chris' Jazz Cafe headlined by acclaimed trumpeter Duane Eubanks and his band, performing an electrifying tribute to Lee Morgan. Experience the spirit, swing, and soul of one of Philadelphia’s greatest jazz legends brought to life by one of today’s finest. All proceeds support the preservation of Philadelphia’s rich jazz legacy. Tickets: $35/one show — celeb"
+    },
+    {
+      "id": "79e907cf9e35",
+      "title": "Greening the Urban Landscape",
+      "date_display": "Apr 22 Wed 1pm-2pm",
+      "date_start": "2026-04-22",
+      "date_end": "2026-04-22",
+      "time": "1:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/greening-the-urban-landscape/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "5f7c0397e773",
+      "title": "Othmer Library After Hours",
+      "date_display": "Apr 22 Wed 6pm-8pm",
+      "date_start": "2026-04-22",
+      "date_end": "2026-04-22",
+      "time": "6:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-after-hours-2026/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "title": "Sleepers Awake (World Premiere)",
@@ -1353,8 +2226,8 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
-        "performance",
-        "musical"
+        "musical",
+        "performance"
       ],
       "description": "Based on the worldwide bestselling hit series by Dav Pilkey, TheaterWorksUSA's Dog Man: The Musical is a hilarious and heartwarming production following the chronicles of Dog Man, who with the head of a dog and the body of a policeman, loves to fight crime and chew on the furniture."
     },
@@ -1492,7 +2365,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:30pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $75VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "Copland's American Inspiration",
@@ -1510,23 +2383,6 @@
       "time": "8:00 PM",
       "id": "b960e665bd64",
       "date_display": "Apr 30 – May 02, 2026"
-    },
-    {
-      "id": "d6760f784e67",
-      "title": "Saxophonist T.K. Blue & His Quartet",
-      "date_display": "May 02, 2026",
-      "date_start": "2026-05-02",
-      "date_end": "2026-05-02",
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/130628",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "Orin Evans — PianoSanti Debriano — BassGeorge Coleman Jr — Drums Show times 7:30 & 9:30 General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "title": "AI and the Future of Work",
@@ -1547,6 +2403,24 @@
       "date_display": "Apr 30, 2026"
     },
     {
+      "id": "8cf3c920ca5b",
+      "title": "First Friday: May Flowers",
+      "date_display": "May 01 Fri 5pm-7pm",
+      "date_start": "2026-05-01",
+      "date_end": "2026-05-01",
+      "time": "5:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/first-friday-may-flowers/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "title": "Legionnaires' Disease: The Philadelphia Outbreak",
       "date_start": "2026-05-01",
       "date_end": "2026-12-31",
@@ -1563,6 +2437,41 @@
       "id": "9c655798feee",
       "date_display": "May 01 – Dec 31, 2026",
       "link": "https://muttermuseum.org/events/legionnaires-disease-the-philadelphia-outbreak/"
+    },
+    {
+      "id": "d6760f784e67",
+      "title": "Saxophonist T.K. Blue & His Quartet for a Centennial Tribute to NEA Jazz Master Randy Weston",
+      "date_display": "May 02",
+      "date_start": "2026-05-02",
+      "date_end": "2026-05-02",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/130628",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Orin Evans \u2014 PianoSanti Debriano \u2014 BassGeorge Coleman Jr \u2014 Drums Show times 7:30 & 9:30 General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "f9d132c7fecd",
+      "title": "Stories of Science: Chemistry of Common Things",
+      "date_display": "May 02 Sat 10am-5pm",
+      "date_start": "2026-05-02",
+      "date_end": "2026-05-02",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-chemistry-of-common-things-20260502/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "title": "Family Concert: Hip-Hop Orchestra",
@@ -1598,6 +2507,23 @@
       "id": "140ef0c71762",
       "date_display": "May 03 – May 05, 2026",
       "time": null
+    },
+    {
+      "title": "PECO Free First Sunday: May",
+      "date_start": "2026-05-03",
+      "date_end": "2026-05-03",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "price": "Free",
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Free admission and family-friendly activities celebrating the 10th annual Art of Math challenge, where students design and build 3D scale models of paintings from the collection as a STEAM-based challenge.",
+      "time": "10:00 AM",
+      "id": "e335ba076188",
+      "date_display": "May 03, 2026",
+      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-may"
     },
     {
       "id": "b0aecbce729b",
@@ -1723,6 +2649,42 @@
       "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "ff0e734bd548",
+      "title": "Stories of Science: Fireworks!",
+      "date_display": "May 09 Sat 10am-5pm",
+      "date_start": "2026-05-09",
+      "date_end": "2026-05-09",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-fireworks-20260509/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "title": "Science on Tap: May",
+      "date_start": "2026-05-11",
+      "date_end": "2026-05-11",
+      "venue": "National Mechanics",
+      "source": "Science on Tap",
+      "source_url": "https://www.scienceontapphilly.com/events",
+      "price": "Free",
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Monthly science talk at National Mechanics bar, presented by a consortium of six Philadelphia science museums. Free and open to the public.",
+      "time": "6:00 PM",
+      "id": "1b45619523f4",
+      "date_display": "May 11, 2026",
+      "link": "https://www.scienceontapphilly.com/events"
+    },
+    {
       "id": "c8e36d9dc1dc",
       "title": "Chicago",
       "date_display": "May 12 – May 17, 2026",
@@ -1790,24 +2752,6 @@
         "classical"
       ],
       "description": "The Black Clown 7:00 p.m. | Miller TheaterBest Availability"
-    },
-    {
-      "title": "Science on Tap: May",
-      "date_start": "2026-05-11",
-      "date_end": "2026-05-11",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "price": "Free",
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Monthly science talk at National Mechanics bar, presented by a consortium of six Philadelphia science museums. Free and open to the public.",
-      "time": "6:00 PM",
-      "id": "1b45619523f4",
-      "date_display": "May 11, 2026",
-      "link": "https://www.scienceontapphilly.com/events"
     },
     {
       "title": "Orchestra After 5: Postcards from Spain",
@@ -1896,6 +2840,24 @@
       "description": "Show times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "ee820e4d48a1",
+      "title": "Oral History Training Institute",
+      "date_display": "May 18 Mon May 21 Thu 10am-1pm",
+      "date_start": "2026-05-18",
+      "date_end": "2026-05-18",
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/oral-history-training-institute-202605/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "id": "3006108b7de3",
       "title": "Matt Kahn Quartet",
       "date_display": "May 19, 2026",
@@ -1911,6 +2873,24 @@
         "jazz"
       ],
       "description": "John Swana - EVIMicah Jones - BassErik Johnson - Drums Matt Kahn - Guitar Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "51f829c1dd59",
+      "title": "After Hours in the Museum",
+      "date_display": "May 20 Wed 5pm-7pm",
+      "date_start": "2026-05-20",
+      "date_end": "2026-05-20",
+      "time": "5:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/after-hours-in-the-museum/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
     },
     {
       "id": "b62d607cc4c8",
@@ -1942,10 +2922,10 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
-        "opera",
         "ballet",
+        "musical",
         "classical",
-        "musical"
+        "opera"
       ],
       "description": "The Tony Award-winning Broadway adaptation of S.E. Hinton's classic novel about rival gangs, brotherhood, and staying gold. Features a stunning original score and the raw emotional intensity that made the story an American classic."
     },
@@ -1991,7 +2971,7 @@
       "date_display": "May 29 – May 30, 2026",
       "date_start": "2026-05-29",
       "date_end": "2026-05-30",
-      "time": "8:00 PM",
+      "time": "7:30 PM",
       "venue": "Annenberg Center, Penn Live Arts",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/event/MGDC2026",
@@ -2036,6 +3016,24 @@
         "jazz"
       ],
       "description": "Featuring Ted Nash and Steve CardenasShow times 7:30 & 9:30General Admission ~ a la carte menu: $30Dinner & Show ~ Includes 3-course dinner: $100VIP Dinner & Show ~ Includes dinner above and upgraded stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($14) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "title": "Creating a City of Medicine",
+      "date_start": "2026-06-01",
+      "date_end": "2026-12-31",
+      "venue": "M\u00fctter Museum",
+      "source": "M\u00fctter Museum",
+      "source_url": "https://muttermuseum.org/events/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Philadelphia's role in the evolution of American medicine and medical schooling, from the nation's first hospital and medical school to groundbreaking surgical innovations.",
+      "time": null,
+      "id": "901ae92301d1",
+      "date_display": "Jun 01 \u2013 Dec 31, 2026",
+      "link": "https://muttermuseum.org/events/creating-a-city-of-medicine/"
     },
     {
       "id": "7190203ed07b",
@@ -2102,7 +3100,7 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
-        "performance"
+        "lecture"
       ],
       "description": "In View from the East Wing, Dr. Biden tells her story in her own words—the story of an ordinary woman living an extraordinary life, and what it truly means to serve as wife, mother, grandmother, teacher, and First Lady all at once."
     },
@@ -2209,6 +3207,40 @@
       "description": "Bokani Dyer, pianoTimothy Norton, bassLumanyano Mzi, drumsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
+      "id": "f65548a11a22",
+      "title": "Susie Meissner Sextet featuring John Swana",
+      "date_display": "July 02",
+      "date_start": "2026-07-02",
+      "date_end": "2026-07-02",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/134264",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "John Swana: Trombone & EVIGreg Riley: SaxJohn Shaddy: PianoLee Smith: BassByron Landham: DrumsSusie Meissner: VocalsSet times 7:30pm & 9:00pm General Admission ~ a la carte menu: $15Dinner & Show ~ includes 3-course dinner: $70VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $90(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($11) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "title": "Workshop of the World: Arts and Crafts in Philadelphia",
+      "date_start": "2026-07-05",
+      "date_end": "2026-10-18",
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "An exploration of Philadelphia's rich tradition in the arts and crafts movement, showcasing decorative arts, furniture, textiles, and metalwork from the city's workshops.",
+      "time": null,
+      "id": "f7e128aa43aa",
+      "date_display": "Jul 05 \u2013 Oct 18, 2026",
+      "link": "https://philamuseum.org/exhibitions/workshop-of-the-world-arts-and-crafts-in-philadelphia"
+    },
+    {
       "id": "176f1ddbd711",
       "title": "The Notebook",
       "date_display": "Jul 21 – Aug 02, 2026",
@@ -2278,7 +3310,1662 @@
         "classical",
         "concert"
       ],
-      "description": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra."
+      "description": "Ensemble Arts Presents in association with Mammoth Live Undertale: The Determination Symphony Sep 20, 2026 Kimmel Center"
+    },
+    {
+      "title": "Marcel Duchamp",
+      "date_start": "2026-10-10",
+      "date_end": "2027-01-31",
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "The first North American retrospective of Marcel Duchamp's work in over 50 years. Spanning painting, sculpture, film, photography, drawings, and printed matter across six decades of the artist's multifaceted career.",
+      "time": null,
+      "id": "6d9d3e96c4a4",
+      "date_display": "Oct 10 \u2013 Jan 31, 2027",
+      "link": "https://philamuseum.org/exhibitions/marcel-duchamp"
+    },
+    {
+      "id": "06dacae0061e",
+      "title": "Sky Hopinka: Red Metal Dust",
+      "date_display": "Until January 18, 2027",
+      "date_start": "2027-01-18",
+      "date_end": "2027-01-18",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "An installation of 11 new works by the American artist."
+    },
+    {
+      "id": "dd465bd3ba80",
+      "title": "Sky Hopinka: Red Metal Dust",
+      "date_display": "Until January 18, 2027",
+      "date_start": "2027-01-18",
+      "date_end": "2027-01-18",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "An installation of 11 new works by the American artist."
+    },
+    {
+      "id": "f41d1251d6c7",
+      "title": "{{event.Title}}",
+      "date_display": "{{event.DateDescription}}",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "{{event.Venue.Title}}",
+      "source": "Philadelphia Orchestra",
+      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/eventtitle",
+      "price": null,
+      "categories": [
+        "classical"
+      ],
+      "description": "{{event.Prefix}} {{event.Title}} {{event.Suffix}} {{event.DateDescription}} {{event.Venue.Title}}"
+    },
+    {
+      "id": "bb5d89202ad6",
+      "title": "25/26 Season",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/25-26season.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9052f4d1dca1",
+      "title": "Season Calendar",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/calendar.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "79c13c1ecad5",
+      "title": "Subscriptions",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/subscriptions.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "adec580c0b1b",
+      "title": "Ticket Information",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/ticket-info.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "ba59fc58bab8",
+      "title": "Seat Maps",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/events/seating.php",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "017f05094358",
+      "title": "Incognito",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/penn-players-incognito",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "27f6adc62473",
+      "title": "Upstage A Cappella",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/upstage-bet-on-it",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "b449778abcb0",
+      "title": "Anne of Green Gables",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/stimulus-anne-of-green-gables",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "d9f93976916f",
+      "title": "Masterclass: Paul Taylor Dance Company",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "9:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/masterclass-PaulTaylorDance",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "b92e81bf128a",
+      "title": "Tiburtina Ensemble",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/Tiburtina",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "7b5f92f28f11",
+      "title": "Delbert Anderson Quartet",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/DelbertAnderson",
+      "price": null,
+      "categories": [
+        "classical",
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "ed04f2de1b85",
+      "title": "Bill Blagg",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/blagg-sciencemagic",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "94ba6867a5d1",
+      "title": "Tim Kubart and the Space Cadets",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "3:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/timkubart",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "bb7de035800d",
+      "title": "The Magic School Bus",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "4:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/The-Magic-School-Bus",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "bf0574bc7589",
+      "title": "Théâtre Motus",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "4:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/baobab",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "12ce94ac42be",
+      "title": "Literature to Life",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/mexicandaughter",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "8135c7d376c9",
+      "title": "Hangin' with the Giants",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/jazzreach",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "73a3cf57247e",
+      "title": "Arturo O’Farrill",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/ArturoOFarrill",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "c5c79c430729",
+      "title": "The Lady Hoofers Tap Ensemble",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/lady-hoofers-spring26",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "cc540238b2d0",
+      "title": "The Listening Cabinet",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/listeningcabinet",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "9f0e64a6ed7e",
+      "title": "Toll the Bell",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:15 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/TTB2026",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "3db455d55231",
+      "title": "in case of fire, speak",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/in-case-of-fire-speak",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "1234ee884219",
+      "title": "THE ADDAMS FAMILY: The Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/addams-family",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "2dea3f64e012",
+      "title": "Disney's FROZEN The Broadway Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/disneys-frozen-the-broadway-musical",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "503e8c846594",
+      "title": "David Mamet's GLENGARRY GLEN ROSS",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/david-mamets-glengarry-glen-ross",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "7b8fb39b3dfa",
+      "title": "Noël Coward's PRESENT LAUGHTER",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/noel-cowards-present-laughter",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "62e75885316b",
+      "title": "COME FROM AWAY The Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/come-from-away-the-musical",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "aea7da71d823",
+      "title": "Disney’s NEWSIES JR.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/disneys-newsies-jr-2025",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "127b62129eac",
+      "title": "Night of 1000 Dolls",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/night-of-1000-dolls/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "dd7cee3d3314",
+      "title": "YoungArts Philadelphia: Artist Gathering",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/youngarts-philadelphia-artist-gathering/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "f46564a85ae2",
+      "title": "Scratch Night: Open Rehearsal",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/scratch-night-open-rehearsal-april/",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": null
+    },
+    {
+      "id": "ef675039c8fb",
+      "title": "Dear Evan Hansen",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Arden Theatre",
+      "source": "Arden Theatre",
+      "source_url": "https://ardentheatre.org/productions/",
+      "link": "https://ardentheatre.org/productions/dearevanhansen/",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": "Winner of six Tony Awards, Dear Evan Hansen is a deeply personal and profoundly contemporary musical for anyone who’s ever felt alone in a crowded room."
+    },
+    {
+      "id": "34f2f98fb77c",
+      "title": "THE BEST LIVE JAZZ IN PHILADELPHIA",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "600 N Broad St, Philadelphia, PA 19130",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/emily-braden-fri-sat-sun-mar-27-28-29/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "The Jazz Club at SOUTH is an intimate space with under 75 seats. It is the place to see your favorite Jazz artists up close and personal."
+    },
+    {
+      "id": "57789e198f29",
+      "title": "Stage",
+      "date_display": "Date",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "City Winery Philadelphia",
+      "source": "City Winery",
+      "source_url": "https://citywinery.com/pages/events/philadelphia",
+      "link": "https://citywinery.com/pages/genre/philadelphia-americana",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
+    },
+    {
+      "id": "7e0b4f8cc859",
+      "title": "Dance eXchange",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/dance-exchange/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "da74d3abdc28",
+      "title": "For Artists",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Various",
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/for-artists/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "4f348e654a28",
+      "title": "Ways to Support",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/ways-to-support/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "a71a44e9cac5",
+      "title": "Tickets & Events Wilderness Generation Groups Gift Certificates",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Suzanne Roberts Theatre",
+      "source": "Philadelphia Theatre Company",
+      "source_url": "https://www.philatheatreco.org/",
+      "link": "https://philadelphiatheatrecompany.org/",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
+    },
+    {
+      "id": "c83182968d8c",
+      "title": "<none>",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Philly Fun Guide",
+      "source_url": "https://phillyfunguide.com/",
+      "link": "https://phillyfunguide.com/why-arts-culture",
+      "price": null,
+      "categories": [
+        "performance"
+      ],
+      "description": null
+    },
+    {
+      "id": "f41e663f8317",
+      "title": "RISING UP",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/calendar",
+      "link": "https://philamuseum.org/events/highlights-museum-tour",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Due to required maintenance, some galleries and artwork may be off view. Learn more."
+    },
+    {
+      "id": "640dd3333a6b",
+      "title": "Highlights of the Museum",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/calendar",
+      "link": "https://philamuseum.org/events/highlights-museum-tour",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "a41c3cba7106",
+      "title": "Support the Philadelphia Museum of Art",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/calendar",
+      "link": "https://philamuseum.org/donate",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "fc2d9c7825ca",
+      "title": "Visit",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art",
+      "source_url": "https://philamuseum.org/calendar",
+      "link": "https://philamuseum.org/search",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Open today: 10am-8:45pm"
+    },
+    {
+      "id": "9652dc19331b",
+      "title": "RISING UP",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art Exhibitions",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "link": "https://philamuseum.org/events/highlights-museum-tour",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Due to required maintenance, some galleries and artwork may be off view. Learn more."
+    },
+    {
+      "id": "08d8ed5f5440",
+      "title": "Highlights of the Museum",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art Exhibitions",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "link": "https://philamuseum.org/events/highlights-museum-tour",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "f4dc9cd75850",
+      "title": "Support the Philadelphia Museum of Art",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art Exhibitions",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "link": "https://philamuseum.org/donate",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "63f6a7483dd7",
+      "title": "Visit",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Philadelphia Museum of Art",
+      "source": "Philadelphia Museum of Art Exhibitions",
+      "source_url": "https://philamuseum.org/exhibitions",
+      "link": "https://philamuseum.org/search",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Open today: 10am-8:45pm"
+    },
+    {
+      "id": "827ee7494b07",
+      "title": "The Barnes Collection",
+      "date_display": "Ongoing",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/collection",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
+    },
+    {
+      "id": "4bbdf8fbab33",
+      "title": "Highlights Tour",
+      "date_display": "Thursday\u2013Monday, 11:30am & 1:30pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "11:30 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/barnes-highlights-tour",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "This one-hour tour is perfect for first-time visitors. Explore highlights of the collection and learn the history of the Barnes."
+    },
+    {
+      "id": "044136f73ac3",
+      "title": "Private Collection Tour",
+      "date_display": "Thursday\u2013Monday",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/private-collection-tours",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore highlights of the collection and learn the history of the Barnes. This tour is a private one-hour experience for you and up to nine guests."
+    },
+    {
+      "id": "f06bf78da730",
+      "title": "Private Collection Tour: Favorite Artists",
+      "date_display": "Thursday\u2013Monday, 10am",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/private-tour-favorite-artists",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Choose your favorite artists in the collection for a private one-hour experience for up to ten guests."
+    },
+    {
+      "id": "34ae0e3d0823",
+      "title": "Daily Gallery Talks",
+      "date_display": "Thursday\u2013Monday",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/daily-gallery-talks",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Every day, our gallery specialists offer talks about the Barnes collection. Learn more about our history, founder, and collection."
+    },
+    {
+      "id": "dea81cf1dbcb",
+      "title": "April Spotlight Tour: Matisse, Dr. Barnes, and The Dance",
+      "date_display": "Thursday\u2013Monday, 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-april-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Tour our collection of paintings by Henri Matisse and learn how a visit to the Barnes collection was a pivotal moment in the artist's career."
+    },
+    {
+      "id": "65093ab63b54",
+      "title": "March Spotlight Tour: Matisse, Dr. Barnes, and The Dance",
+      "date_display": "Thursday\u2013Monday, 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-march-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Tour our collection of paintings by Henri Matisse and learn how a visit to the Barnes collection was a pivotal moment in the artist's career."
+    },
+    {
+      "id": "8d34d6910875",
+      "title": "The Barnes Collection",
+      "date_display": "Ongoing",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/collection",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
+    },
+    {
+      "id": "390c35834512",
+      "title": "The Franklin Institute is open Saturday, March 28. Road closures in Philadelphia may impact travel to the museum, please plan your route and allow for extra travel time.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://www.phila.gov/2026-03-24-city-announces-road-closures-parking-restrictions-and-other-details-for-no-kings-3-march-and-rally/",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "7dc4ba156712",
+      "title": "The Franklin Institute is open Saturday, March 28. Road closures in Philadelphia may impact travel to the museum, please plan your route and allow for extra travel time.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://www.phila.gov/2026-03-24-city-announces-road-closures-parking-restrictions-and-other-details-for-no-kings-3-march-and-rally/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "c942040ee91c",
+      "title": "Exhibits & Experiences",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/universal-theme-parks-exhibition",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Play your way through eight themed galleries, where 100 original artifacts bring each experience to life. From authentic costumes and iconic props to early concept models, experience the creativity, artistry, and innovation behind Universal\u2019s most epic attractions."
+    },
+    {
+      "id": "e04b478566a9",
+      "title": "Universal Theme Parks: The Exhibition",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/universal-theme-parks-exhibition",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Play your way through eight themed galleries, where 100 original artifacts bring each experience to life. From authentic costumes and iconic props to early concept models, experience the creativity, artistry, and innovation behind Universal\u2019s most epic attractions."
+    },
+    {
+      "id": "41ba2777cd5d",
+      "title": "Wondrous Space",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/wondrous-space",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Journey through the cosmos as you explore this immersive, multisensory, two-story exhibit designed to inspire an excitement for space science."
+    },
+    {
+      "id": "a913d55aaf5f",
+      "title": "Body Odyssey",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/body-odyssey",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Curiosity meets discovery in a new exhibit surrounding the iconic Giant Heart. A journey through the human body in a quest to achieve balance in life and well-being."
+    },
+    {
+      "id": "d573efcb7642",
+      "title": "Hamilton Collections Gallery",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/hamilton-collections-gallery",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Surrounding the Baldwin 60000, guests will discover a treasure trove of rare artifacts meticulously curated from The Franklin Institute's collections."
+    },
+    {
+      "id": "2e6240251955",
+      "title": "Your Brain",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/your-brain",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Think about how you think when you explore Your Brain. What is the brain? How does it work?"
+    },
+    {
+      "id": "97f7158ce8a9",
+      "title": "SportsZone",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/sportszone",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Hit the turf and experience how sports connect the science of the human body, laws of motion, and technical innovation."
+    },
+    {
+      "id": "076d891ddf0b",
+      "title": "Sir Isaac's Loft",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/sir-isaacs-loft",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Enter the playground of experimentation and discover falling objects, chain reactions, and optical illusions that bring Newton's laws to life."
+    },
+    {
+      "id": "86cfdba56b1d",
+      "title": "Amazing Machine",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/amazing-machine",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Explore the amazing world of machines! You\u2019ll be amazed at the similarities between the machines from our collection and the ones you use every day."
+    },
+    {
+      "id": "1f55c2f9c7be",
+      "title": "Brick Play Space Pop-Up",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/brick-play-space-popup",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Click, snap, and stack LEGO bricks at three interactive stations! Create LEGO graffiti, build a race car, and follow fun blueprints."
+    },
+    {
+      "id": "af9e6518a120",
+      "title": "Benjamin Franklin Memorial",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/benjamin-franklin-memorial",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "The Benjamin Franklin National Memorial features a dramatic 20-foot-high marble statue of Benjamin Franklin sculpted by James Earle Fraser."
+    },
+    {
+      "id": "e33f148990bd",
+      "title": "The Holt & Miller Observatory",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/holt-miller-observatory",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "The Holt & Miller Observatory houses the 10\u201d Carl Zeiss Refracting Telescope, one of the largest historical artifacts in the museum's collection."
+    },
+    {
+      "id": "52789577a527",
+      "title": "Daily Live Science Demonstrations",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-experiences",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Experience the thrill of live science as our science performers bring scientific concepts to life through captivating demonstrations and interactive experiments."
+    },
+    {
+      "id": "53207ca3aec7",
+      "title": "Fels Planetarium",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/fels-planetarium",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Explore the night sky with cutting-edge astronomical presentations in the awe-inspiring Fels Planetarium, presented by PNC Bank."
+    },
+    {
+      "id": "9a11924c1a85",
+      "title": "Seasonal Events",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/seasonal-events/sciencepark",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Step into a world of discovery at The Franklin Institute, where every season brings new adventures for the whole family!"
+    },
+    {
+      "id": "c554f9e97676",
+      "title": "Science After Hours",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-experiences",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Science After Hours is an evening event series exclusively for adults ages 21+, featuring experiments, demonstrations, games, and engaging science curated in collaboration with cultural organizations across the city."
+    },
+    {
+      "id": "aa54a3004229",
+      "title": "Africa",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/africa-galleries",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Africa Connect with the great kingdoms and rich material culture of Africa through 300 objects from 21 countries."
+    },
+    {
+      "id": "4338f4761062",
+      "title": "Ancient Egypt & Nubia",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/egypt-galleries",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Ancient Egypt & Nubia Explore one of the largest collections of Egyptian artifacts in the United States."
+    },
+    {
+      "id": "a100b6d8a565",
+      "title": "Asia",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/asia-galleries",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Asia Marvel at one of the finest collections of monumental Asian art showcased in the architecturally stunning 90-foot tall Rotunda."
+    },
+    {
+      "id": "b68af3f35497",
+      "title": "Eastern Mediterranean",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/eastern-mediterranean-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Eastern Mediterranean Unearth an ancient crossroads of diverse cultures whose innovations shaped our world today."
+    },
+    {
+      "id": "ace7cea9a627",
+      "title": "Etruscan Italy",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/etruscan-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Etruscan Italy Learn about the Etruscan people, the first great rulers of central Italy from around 800 to 100 BCE, through the gems, statues, weaponry, jewelry, and terracotta vessels they left behind."
+    },
+    {
+      "id": "23fb4e3a07b9",
+      "title": "Greece",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/greece-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Greece Explore the far reaches of Alexander the Great\u2019s vast empire through coins, pottery, and statues."
+    },
+    {
+      "id": "273c46790a86",
+      "title": "Mexico & Central America",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/mexico-central-america-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Mexico & Central America Experience the vibrant heritage and diverse cultures of the ancient Americas."
+    },
+    {
+      "id": "39da64702c30",
+      "title": "Middle East",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/middle-east-galleries",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Middle East Trace the story of how ancient Mesopotamian societies gave rise to the world's first cities"
+    },
+    {
+      "id": "b9d7a7587eed",
+      "title": "Native North America",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/native-north-america-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Native North America Gain compelling first-person perspectives through this gallery, which draws together archaeological, ethnographic, and contemporary works of technology and art to highlight cultural continuity, creativity, and resilience through time."
+    },
+    {
+      "id": "1bacf6c14e38",
+      "title": "Rome",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/rome-gallery",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Rome Come face to face with the people of the ancient Roman empire through artifacts ranging from miniature glass vessels to large marble reliefs."
+    },
+    {
+      "id": "50e36cabea84",
+      "title": "Ancient Egypt",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/ancient-egypt",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "8c9aad8764ca",
+      "title": "Ancient Egypt in Watercolors",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/ancient-egypt-in-watercolors",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "16574aff91ce",
+      "title": "Preserving Assyria",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "Penn Museum",
+      "source": "Penn Museum",
+      "source_url": "https://www.penn.museum/on-view/galleries-exhibitions",
+      "link": "https://www.penn.museum/on-view/galleries-exhibitions/preserving-assyria",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "2d61d0ad2892",
+      "title": "Event Filters",
+      "date_display": "DATE March2026April2026JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember1926192719281929193019311932193319341935193619371938193919401941194219431944194519461947194819491950195119521953195419551956195719581959196019611962196319641965196619671968196919701971197219731974197519761977197819791980198119821983198419851986198719881989199019911992199319941995199619971998199920002001200220032004200520062007200820092010201120122013201420152016201720182019202020212022202320242025202620272028202920302031203220332034203520362037203820392040204120422043204420452046204720482049205020512052205320542055205620572058205920602061206220632064206520662067206820692070207120722073207420752076SMTWTFS12345678910111213141516171819202122232425262728293031123456789101112131415161718192021222324252627282930",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "M\u00fctter Museum",
+      "source": "M\u00fctter Museum",
+      "source_url": "https://muttermuseum.org/events/",
+      "link": "https://muttermuseum.org/events/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Section Event"
+    },
+    {
+      "id": "d89e4993473e",
+      "title": "DATE",
+      "date_display": "DATE March2026April2026JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember1926192719281929193019311932193319341935193619371938193919401941194219431944194519461947194819491950195119521953195419551956195719581959196019611962196319641965196619671968196919701971197219731974197519761977197819791980198119821983198419851986198719881989199019911992199319941995199619971998199920002001200220032004200520062007200820092010201120122013201420152016201720182019202020212022202320242025202620272028202920302031203220332034203520362037203820392040204120422043204420452046204720482049205020512052205320542055205620572058205920602061206220632064206520662067206820692070207120722073207420752076SMTWTFS12345678910111213141516171819202122232425262728293031123456789101112131415161718192021222324252627282930",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "M\u00fctter Museum",
+      "source": "M\u00fctter Museum",
+      "source_url": "https://muttermuseum.org/events/",
+      "link": "https://muttermuseum.org/events/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "7ac9ae18023c",
+      "title": "Event Types",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "M\u00fctter Museum",
+      "source": "M\u00fctter Museum",
+      "source_url": "https://muttermuseum.org/events/",
+      "link": "https://muttermuseum.org/events/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": "Section Event"
+    },
+    {
+      "id": "6b0a383e4945",
+      "title": "Event Results",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "M\u00fctter Museum",
+      "source": "M\u00fctter Museum",
+      "source_url": "https://muttermuseum.org/events/",
+      "link": "https://muttermuseum.org/events/",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
     }
   ]
 }
