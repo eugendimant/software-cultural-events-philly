@@ -350,8 +350,8 @@ def _extract_squarespace_detail(soup, result):
                     result["price"] = parse_price(m.group(0))
                 if result["price"]:
                     break
-        if not result["price"]:
-            result["price"] = parse_price(page_text[:3000])
+        # Do NOT extract prices from raw page text — too unreliable.
+        # Only use prices found in structured selectors above.
 
 
 def scrape_detail_page(url):
@@ -882,7 +882,7 @@ def _parse_squarespace_timestamp(ts):
         if ts > 1e12:
             ts = ts / 1000
         try:
-            dt = datetime.fromtimestamp(ts)
+            dt = datetime.utcfromtimestamp(ts)
             date_str = dt.strftime("%Y-%m-%d")
             h, m = dt.hour, dt.minute
             time_str = None
@@ -930,8 +930,12 @@ def _parse_squarespace_items(items, url, source_name, venue_default,
         # Parse dates
         date_start, event_time = _parse_squarespace_timestamp(item.get("startDate"))
         date_end, _ = _parse_squarespace_timestamp(item.get("endDate"))
-        if not date_end:
+        # Only set date_end = date_start if endDate was explicitly provided
+        # but couldn't be parsed. If endDate is missing entirely, leave as None.
+        if not date_end and item.get("endDate"):
             date_end = date_start
+        elif not date_end:
+            date_end = date_start  # Single-event — same day is safe
 
         # Description: try multiple fields
         desc = ""
@@ -976,8 +980,8 @@ def _parse_squarespace_items(items, url, source_name, venue_default,
                             price = parse_price(str(p))
                             if price:
                                 break
-        if not price and desc:
-            price = parse_price(desc)
+        # Do NOT extract prices from description text — too unreliable.
+        # Only use prices from structured data (ticket objects, structured fields).
 
         # Date display
         date_display = ""
@@ -1897,7 +1901,8 @@ def categorize(text, venue=""):
     for venue_name, venue_cats in VENUE_CATEGORIES.items():
         if venue_name in venue_lower:
             cats.update(venue_cats)
-    return sorted(cats) if cats else ["performance"]
+    # Don't guess a default category — return empty if nothing matches
+    return sorted(cats) if cats else []
 
 
 # ---------------------------------------------------------------------------
