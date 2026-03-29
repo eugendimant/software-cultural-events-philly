@@ -314,6 +314,8 @@ def _final_quality_gate(events):
     This runs after ALL other processing. An event that reaches here must have
     at minimum: a title, a date, and a venue. If any of these are missing,
     the event is dropped — it's better to show fewer events than broken ones.
+
+    Also sanitizes venue names, titles, and catches remaining data corruption.
     """
     result = []
     for event in events:
@@ -325,6 +327,54 @@ def _final_quality_gate(events):
         # Must have title + date
         if not title or not ds:
             continue
+
+        # ── Venue sanitization ──
+        # Fix "12:00 p.m. | Academy of Music" -> extract time, keep venue
+        m = _re.match(r'^(\d{1,2}:\d{2}\s*[ap]\.?m\.?)\s*\|\s*(.+)$', venue, _re.IGNORECASE)
+        if m:
+            time_raw = m.group(1).strip()
+            venue = m.group(2).strip()
+            if not event.get("time"):
+                event["time"] = _re.sub(r'\.', '', time_raw).upper().strip()
+        # Also catch "8:00 p.m. Academy of Music" (without pipe separator)
+        m2 = _re.match(r'^(\d{1,2}:\d{2}\s*[ap]\.?m\.?)\s+([A-Z].+)$', venue, _re.IGNORECASE)
+        if m2 and not m:
+            time_raw = m2.group(1).strip()
+            venue = m2.group(2).strip()
+            if not event.get("time"):
+                event["time"] = _re.sub(r'\.', '', time_raw).upper().strip()
+        # Remove junk text concatenated with venue names
+        venue = _re.sub(r'(Check Back for Availability|Best Availability|Limited Availability|Sold Out|Buy Tickets|Get Tickets|On Sale).*', '', venue, flags=_re.IGNORECASE).strip()
+        # If venue still starts with a time, it's corrupt — clear it
+        if _re.match(r'^\d{1,2}:\d{2}', venue):
+            venue = ""
+        # Fix common capitalization inconsistencies
+        _venue_fixes = {
+            "Academy Of Music": "Academy of Music",
+        }
+        venue = _venue_fixes.get(venue, venue)
+        # Fix truncated venue names (Kimmel Cente -> Kimmel Center)
+        for trunc, full in [("Cente", "Center"), (", Kimmel C", ", Kimmel Center"),
+                             ("Penn Live Ar", "Penn Live Arts")]:
+            if venue.endswith(trunc):
+                venue = venue[:-len(trunc)] + full
+        event["venue"] = venue
+
+        # ── Title sanitization ──
+        # Fix ALL-CAPS titles
+        if title == title.upper() and len(title) > 10:
+            title = title.title()
+            # Fix common small words
+            for old, new in [(' The ', ' the '), (' And ', ' and '), (' For ', ' for '),
+                             (' Of ', ' of '), (' In ', ' in '), (' At ', ' at ')]:
+                title = title.replace(old, new)
+            # But capitalize first word
+            title = title[0].upper() + title[1:]
+            event["title"] = title
+
+        # Truncate very long titles at 80 chars
+        if len(title) > 80:
+            event["title"] = title[:77].rsplit(' ', 1)[0] + '...'
 
         # Must have a link (at minimum the source listing page)
         if not link:
@@ -1305,7 +1355,23 @@ def main():
     col_venue, col_time, col_sort = st.columns([2, 2, 1])
 
     with col_venue:
-        all_venues = sorted({_s(e, "venue") for e in current_events if _s(e, "venue")})
+        # Build venue list — sanitize to ensure no corrupted entries
+        all_venues = set()
+        for e in current_events:
+            v = _s(e, "venue").strip()
+            if not v:
+                continue
+            # Skip venues that look corrupted (time embedded, junk text)
+            if _re.match(r'^\d{1,2}:\d{2}', v):
+                continue  # Time-as-venue corruption
+            if 'p.m.' in v.lower() or 'a.m.' in v.lower():
+                continue
+            if 'check back' in v.lower() or 'availability' in v.lower():
+                continue
+            if len(v) < 3:
+                continue
+            all_venues.add(v)
+        all_venues = sorted(all_venues)
         venue_filter = st.selectbox(
             "Venue",
             ["all"] + all_venues,
@@ -1623,7 +1689,10 @@ def main():
         st.markdown("**Top Venues**")
         venue_counts = Counter(_s(e, "venue", "Unknown") for e in current_events)
         for venue, count in venue_counts.most_common(8):
-            st.markdown(f'<div style="color:#e8e8f0;font-size:0.9rem">{venue} <span style="color:#7c6aff;font-weight:600">({count})</span></div>', unsafe_allow_html=True)
+            # Skip corrupted venue entries in sidebar too
+            if _re.match(r'^\d{1,2}:\d{2}', venue) or 'p.m.' in venue.lower():
+                continue
+            st.markdown(f'<div style="color:#e8e8f0;font-size:0.9rem">{_h(venue)} <span style="color:#7c6aff;font-weight:600">({count})</span></div>', unsafe_allow_html=True)
 
         st.markdown("")
         st.markdown("**Monthly Distribution**")
@@ -1650,7 +1719,7 @@ def main():
         st.markdown("**Data Sources**")
         for source in sorted(sources):
             src_count = sum(1 for e in current_events if _s(e, "source") == source)
-            st.markdown(f'<div style="color:#8888a0;font-size:0.85rem">• {source} <span style="color:#7c6aff">({src_count})</span></div>', unsafe_allow_html=True)
+            st.markdown(f'<div style="color:#8888a0;font-size:0.85rem">• {_h(source)} <span style="color:#7c6aff">({src_count})</span></div>', unsafe_allow_html=True)
 
     # ── Footer ───────────────────────────────────────────────────────────
     st.divider()
