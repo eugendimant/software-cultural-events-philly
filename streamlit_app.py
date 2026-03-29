@@ -110,6 +110,16 @@ def _is_valid_event(event):
         return False
     if _re.match(r'^\d+$', title):
         return False
+    # Reject titles that are just a day of the week (sometimes scraped from calendars)
+    if title_low in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday',
+                     'saturday', 'sunday', 'today', 'tomorrow', 'date', 'time'):
+        return False
+    # Reject very short titles that are likely page artifacts
+    if len(title) < 5 and not any(c.isupper() for c in title):
+        return False
+    # Reject titles starting with "Tickets" (nav artifacts)
+    if title_low.startswith('tickets'):
+        return False
     return True
 
 def _deduplicate_events(events):
@@ -1210,7 +1220,8 @@ def main():
     with col_s1:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(current_events)}</div><div class="stat-label">Events</div></div>', unsafe_allow_html=True)
     with col_s2:
-        now_playing = sum(1 for e in current_events if is_happening_now(e))
+        now_playing = sum(1 for e in current_events if is_happening_now(e)
+                         and (e.get("venue") or "").strip())
         st.markdown(f'<div class="stat-box"><div class="stat-value">{now_playing}</div><div class="stat-label">Happening Today</div></div>', unsafe_allow_html=True)
     with col_s3:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(sources)}</div><div class="stat-label">Sources</div></div>', unsafe_allow_html=True)
@@ -1348,8 +1359,11 @@ def main():
             return (s, end)
         filtered.sort(key=_sort_date)
 
-    # ── Spotlight: What's Happening Now ───────────────────────────────────
-    tonight = [e for e in filtered if is_happening_now(e)]
+    # ── Spotlight: What's Happening Today ──────────────────────────────────
+    # Only show events with a real description and venue — no half-baked cards
+    tonight = [e for e in filtered if is_happening_now(e)
+               and (e.get("description") or "").strip()
+               and (e.get("venue") or "").strip()]
     if tonight:
         st.markdown("#### 🔴 Happening Today")
         num_cols = min(len(tonight), 4)
@@ -1381,7 +1395,9 @@ def main():
         st.markdown("")
 
     # ── Coming Up Next section ────────────────────────────────────────────
-    upcoming = [e for e in filtered if not is_happening_now(e)]
+    # Only show events with dates and venue for the "coming up" feature
+    upcoming = [e for e in filtered if not is_happening_now(e)
+                and e.get("date_start") and (e.get("venue") or "").strip()]
     upcoming.sort(key=lambda e: _s(e, "date_start", "9999"))
     next_up = upcoming[:3]
     if next_up:

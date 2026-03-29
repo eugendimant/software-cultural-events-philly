@@ -645,6 +645,13 @@ def validate_event(ev):
     # Reject pure-number titles
     if re.match(r'^\d+$', title):
         return False
+    # Reject day-of-week titles scraped from calendars
+    if title_low in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday',
+                     'saturday', 'sunday', 'today', 'tomorrow', 'date', 'time'):
+        return False
+    # Reject titles starting with "Tickets" (nav artifacts)
+    if title_low.startswith('tickets'):
+        return False
 
     skip_exact = {
         # UI/navigation
