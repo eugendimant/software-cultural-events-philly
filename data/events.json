@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-03-24T12:52:48.147657Z",
-  "total_events": 172,
+  "total_events": 157,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -127,7 +127,7 @@
     },
     {
       "title": "A Delicate Balance",
-      "date_start": "2026-03-04",
+      "date_start": "2026-02-24",
       "date_end": "2026-03-29",
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
@@ -140,13 +140,13 @@
       "description": "Edward Albee's Pulitzer Prize-winning play — an absorbing look at the everyday hopes, fears, and secrets we all delicately balance. America's oldest theater.",
       "time": "8:00 PM",
       "id": "add290357161",
-      "date_display": "Mar 04 – Mar 29, 2026"
+      "date_display": "Feb 24 – Mar 29, 2026"
     },
     {
       "id": "0d9ff90743b9",
       "title": "Romeo and Juliet",
-      "date_display": "Mar 12 – Apr 05, 2026",
-      "date_start": "2026-03-12",
+      "date_display": "Mar 05 – Apr 05, 2026",
+      "date_start": "2026-03-05",
       "date_end": "2026-04-05",
       "time": "7:00 PM",
       "venue": "Arden Theatre",
@@ -298,20 +298,20 @@
     },
     {
       "title": "BalletX Spring Series 2026",
-      "date_start": "2026-03-27",
-      "date_end": "2026-03-29",
-      "venue": "Wilma Theater",
+      "date_start": "2026-03-18",
+      "date_end": "2026-03-22",
+      "venue": "Suzanne Roberts Theatre",
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
       "link": "https://www.balletx.org/seasons/spring-series-2026/",
-      "price": null,
+      "price": "$55 – $90",
       "categories": [
         "ballet",
         "dance"
       ],
       "description": "BalletX celebrates its 20th anniversary with three works by Matthew Neenan — Show Me, Broke Apart, and more.",
       "id": "7cfc9fdbaabc",
-      "date_display": "Mar 27 – Mar 29, 2026",
+      "date_display": "Mar 18 – Mar 22, 2026",
       "time": null
     },
     {
@@ -2315,78 +2315,6 @@
       "description": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra."
     },
     {
-      "id": "79c13c1ecad5",
-      "title": "Subscriptions",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/subscriptions.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "adec580c0b1b",
-      "title": "Ticket Information",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/ticket-info.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "ba59fc58bab8",
-      "title": "Seat Maps",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/seating.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "c69c84f3fb3c",
-      "title": "Wharton Dance Studio",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/whartondance2026",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
       "id": "017f05094358",
       "title": "Incognito",
       "date_display": "",
@@ -2435,61 +2363,6 @@
       "link": "https://pennlivearts.org/event/stimulus-anne-of-green-gables",
       "price": null,
       "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "d9f93976916f",
-      "title": "Masterclass: Paul Taylor Dance Company",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "9:00 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-PaulTaylorDance",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "b92e81bf128a",
-      "title": "Tiburtina Ensemble",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Tiburtina",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "7b5f92f28f11",
-      "title": "Delbert Anderson Quartet",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/DelbertAnderson",
-      "price": null,
-      "categories": [
-        "classical",
         "concert",
         "dance"
       ],
@@ -2712,42 +2585,6 @@
       "description": null
     },
     {
-      "id": "41e99d86a909",
-      "title": "INSIGHTS",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/insights.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "9063b74331ac",
-      "title": "Edward Albee's A DELICATE BALANCE",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/edward-albees-a-delicate-balance-2025",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": null
-    },
-    {
       "id": "1234ee884219",
       "title": "THE ADDAMS FAMILY: The Musical",
       "date_display": "",
@@ -2856,42 +2693,6 @@
       "description": null
     },
     {
-      "id": "e7a0812faf40",
-      "title": "Show Info",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/sherlock-holmes-the-great-detective",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": null
-    },
-    {
-      "id": "1a0c980642d7",
-      "title": "Get Tickets",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/edward-albees-a-delicate-balance-2025#calendar",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": null
-    },
-    {
       "id": "127b62129eac",
       "title": "Night of 1000 Dolls",
       "date_display": "",
@@ -2964,40 +2765,6 @@
       "description": "Winner of six Tony Awards, Dear Evan Hansen is a deeply personal and profoundly contemporary musical for anyone who’s ever felt alone in a crowded room."
     },
     {
-      "id": "34f2f98fb77c",
-      "title": "THE BEST LIVE JAZZ IN PHILADELPHIA",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "600 N Broad St, Philadelphia, PA 19130",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/charlene-holloway-thurs-mar-26-630pm-900pm-presented-by-unscripted-jazz/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "The Jazz Club at SOUTH is an intimate space with under 75 seats. It is the place to see your favorite Jazz artists up close and personal."
-    },
-    {
-      "id": "57789e198f29",
-      "title": "Stage",
-      "date_display": "Date",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "City Winery Philadelphia",
-      "source": "City Winery",
-      "source_url": "https://citywinery.com/pages/events/philadelphia",
-      "link": "https://citywinery.com/pages/genre/philadelphia-americana",
-      "price": null,
-      "categories": [
-        "performance"
-      ],
-      "description": null
-    },
-    {
       "id": "7db0b33c2bb1",
       "title": "The Four Seasons Reimagined",
       "date_display": "",
@@ -3030,40 +2797,6 @@
       "categories": [
         "ballet",
         "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "a71a44e9cac5",
-      "title": "Tickets & Events Wilderness Generation Groups Gift Certificates",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Suzanne Roberts Theatre",
-      "source": "Philadelphia Theatre Company",
-      "source_url": "https://www.philatheatreco.org/",
-      "link": "https://philadelphiatheatrecompany.org/",
-      "price": null,
-      "categories": [
-        "performance"
-      ],
-      "description": null
-    },
-    {
-      "id": "c83182968d8c",
-      "title": "<none>",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Philly Fun Guide",
-      "source_url": "https://phillyfunguide.com/",
-      "link": "https://phillyfunguide.com/why-arts-culture",
-      "price": null,
-      "categories": [
-        "performance"
       ],
       "description": null
     }

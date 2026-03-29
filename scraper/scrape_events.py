@@ -609,9 +609,12 @@ def validate_event(ev):
         "facebook", "twitter", "instagram", "youtube",
         "search form", "no results", "loading", "error",
         # Section headers scraped as events
-        "events", "season calendar", "programs", "season",
+        "events", "season calendar", "programs", "season", "stage",
         "calendar", "shows", "performances", "support", "backstage",
         "25/26 season", "24/25 season",
+        "subscriptions", "ticket information", "seat maps",
+        "show info", "get tickets", "insights", "wharton dance studio",
+        "top picks for events in philadelphia",
         "view event", "buy tickets", "read more", "list view",
         "calendar view", "all events", "back to events",
         "upcoming events", "past events", "featured events",
@@ -647,6 +650,8 @@ def validate_event(ev):
         "select date", "filter by", "sort by", "show all",
         "load more", "view all", "see more", "read more",
         "click here", "learn more", "buy now",
+        "tickets & events", "gift certificates", "groups gift",
+        "the best live jazz in", "top picks for events",
     ]
     if any(phrase in title_low for phrase in skip_phrases):
         return False
