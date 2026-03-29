@@ -15,109 +15,12 @@ fi.edu, penn.museum, ansp.org, muttermuseum.org, scienceontapphilly.com
 """
 
 import hashlib
-import re
 from datetime import datetime
 
 
 def make_id(source, title, date_str=""):
     raw = f"{source}|{title}|{date_str}".lower().strip()
     return hashlib.md5(raw.encode()).hexdigest()[:12]
-
-
-def _slugify(text):
-    """Convert text to URL slug: 'Lang Lang and Yannick' -> 'lang-lang-and-yannick'."""
-    text = (text or "").lower().strip()
-    text = re.sub(r'[^a-z0-9\s-]', '', text)
-    text = re.sub(r'[\s]+', '-', text)
-    text = re.sub(r'-+', '-', text).strip('-')
-    return text
-
-
-def _auto_link(ev):
-    """Generate a direct event page link based on source and title.
-    Falls back to the source_url if no pattern matches.
-    """
-    source = ev.get("source", "")
-    title = ev.get("title", "")
-    slug = _slugify(title)
-    if not slug:
-        return ev.get("source_url", "")
-
-    venue = (ev.get("venue") or "").lower()
-    cats = ev.get("categories", [])
-
-    if source in ("Ensemble Arts Philly", "Philadelphia Orchestra"):
-        # Ensemble Arts URLs: /tickets-and-events/<org>/<season>/<slug>
-        if "orchestra" in source.lower() or "orchestra" in venue:
-            return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}"
-        if "musical" in cats and ("academy" in venue or "forrest" in venue):
-            return f"https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/{slug}"
-        if "jazz" in cats:
-            return f"https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/{slug}"
-        # General Ensemble Arts events
-        return f"https://www.ensembleartsphilly.org/tickets-and-events/events/{slug}"
-
-    if source == "Penn Live Arts":
-        return f"https://pennlivearts.org/event/{slug}"
-
-    if source == "Arden Theatre":
-        return f"https://ardentheatre.org/productions/{slug}/"
-
-    if source == "The Wilma Theater":
-        return f"https://www.wilmatheater.org/whats-on/{slug}/"
-
-    if source == "Opera Philadelphia":
-        # Opera Philly URLs have complex subcategory paths (/lectures/, /for-donors/, etc.)
-        # that can't be guessed from the title alone. Fall back to season page.
-        return ev.get("source_url") or "https://www.operaphila.org/whats-on/"
-
-    if source == "FringeArts":
-        return f"https://fringearts.com/event/{slug}/"
-
-    if source == "Walnut Street Theatre":
-        return f"https://www.walnutstreettheatre.org/season/show/{slug}"
-
-    if source == "Philadelphia Theatre Company":
-        return f"https://www.philatheatreco.org/{slug}"
-
-    if source == "Philadelphia Ballet":
-        return f"https://philadelphiaballet.org/performances/{slug}/"
-
-    if source == "BalletX":
-        return f"https://www.balletx.org/seasons/{slug}/"
-
-    if source == "Philadelphia Museum of Art":
-        return f"https://philamuseum.org/exhibitions/{slug}"
-
-    if source == "Barnes Foundation":
-        return f"https://www.barnesfoundation.org/whats-on/{slug}"
-
-    if source == "The Franklin Institute":
-        return f"https://fi.edu/en/exhibits-and-experiences/{slug}"
-
-    if source == "Penn Museum":
-        return f"https://www.penn.museum/on-view/{slug}"
-
-    if source == "Academy of Natural Sciences":
-        return f"https://ansp.org/exhibits/{slug}/"
-
-    if source == "Mütter Museum":
-        return f"https://muttermuseum.org/events/{slug}/"
-
-    if source == "Science on Tap":
-        return "https://www.scienceontapphilly.com/events"
-
-    if source == "Profs and Pints":
-        return "https://www.profsandpints.com/philadelphia"
-
-    if source == "Science History Institute":
-        return f"https://www.sciencehistory.org/visit/events/{slug}"
-
-    if source == "Sofar Sounds Philadelphia":
-        return "https://www.sofarsounds.com/cities/philadelphia"
-
-    # Fallback to source URL
-    return ev.get("source_url", "")
 
 
 def get_seed_events():
@@ -1292,11 +1195,11 @@ def get_seed_events():
         ev.setdefault("time", None)
         ev.setdefault("description", None)
 
-        # Auto-generate direct event page links (replaces generic listing page URLs)
+        # NO URL GUESSING: if a seed event doesn't have a verified link,
+        # use the source listing page URL. Never fabricate URLs from title slugs.
         current_link = ev.get("link") or ""
         source_url = ev.get("source_url", "")
-        # If link is missing, None, or same as source_url (generic listing page), generate a better one
-        if not current_link or current_link == source_url:
-            ev["link"] = _auto_link(ev)
+        if not current_link:
+            ev["link"] = source_url
 
     return events

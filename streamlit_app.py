@@ -185,58 +185,13 @@ def _enrich_descriptions(events):
                     event["link"] = seed["link"]
                     link_is_generic = False
 
-            # Strategy 2: Partial match — but ONLY if:
-            #   - The shorter string is at least 60% of the longer string's length
-            #   - The event and seed are from the same source
-            #   This prevents "Trumpet" matching "Trumpeter James McGovern..."
-            if needs_desc or link_is_generic:
-                for seed_key, seed_data in _SEED_LOOKUP.items():
-                    if len(seed_key) < 10 or len(norm) < 10:
-                        continue
-                    # Check substring match
-                    if not (seed_key in norm or norm in seed_key):
-                        continue
-                    # Require similar length (prevent short words matching long titles)
-                    shorter = min(len(norm), len(seed_key))
-                    longer = max(len(norm), len(seed_key))
-                    if shorter < longer * 0.6:
-                        continue
-                    # Require same source to prevent cross-venue contamination
-                    if seed_data["source"] and ev_source and seed_data["source"] != ev_source:
-                        continue
-                    if needs_desc and seed_data["description"]:
-                        event["description"] = seed_data["description"]
-                        needs_desc = False
-                    if link_is_generic and seed_data["link"]:
-                        event["link"] = seed_data["link"]
-                        link_is_generic = False
-                    break
+            # NO fuzzy/partial matching — only exact title matches are safe.
+            # Fuzzy matching caused wrong descriptions and links to be assigned
+            # to the wrong events (e.g., "Symphony No. 5" matching a different concert).
 
-        # Strategy 3: For events that STILL have generic links, try
-        # to construct a direct link from the title slug.
-        # ONLY for venues with simple, reliable URL patterns.
-        # Venues with complex/unpredictable paths (Opera Philadelphia,
-        # Ensemble Arts series) fall back to source_url instead of guessing.
-        if link_is_generic:
-            source = event.get("source", "")
-            title_slug = _re.sub(r'[^a-z0-9]+', '-', (event.get("title") or "").lower()).strip('-')
-            if title_slug and source == "Philadelphia Orchestra":
-                event["link"] = f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{title_slug}"
-            elif title_slug and source == "Penn Live Arts":
-                event["link"] = f"https://pennlivearts.org/event/{title_slug}"
-            elif title_slug and source == "Arden Theatre":
-                event["link"] = f"https://ardentheatre.org/productions/{title_slug}/"
-            elif title_slug and source == "The Wilma Theater":
-                event["link"] = f"https://www.wilmatheater.org/whats-on/{title_slug}/"
-            elif title_slug and source == "FringeArts":
-                event["link"] = f"https://fringearts.com/event/{title_slug}/"
-            elif title_slug and source == "Walnut Street Theatre":
-                event["link"] = f"https://www.walnutstreettheatre.org/season/show/{title_slug}"
-            # Venues where slug-based guessing is unreliable — use source_url:
-            # - Opera Philadelphia: URLs have subcategory paths (/lectures/, /for-donors/, etc.)
-            # - Ensemble Arts Philly: URLs vary (/events/, /series-and-subscriptions/, /ensemble-arts-philly-presents/)
-            # - Philadelphia Theatre Company: inconsistent URL patterns
-            # - Chris' Jazz Cafe: uses numeric IDs, not title slugs
+        # NO URL GUESSING: if we don't have a verified link from the
+        # scraper or seed data, keep the source listing page URL.
+        # Guessing URLs from title slugs produced broken/wrong links.
 
     return events
 
@@ -591,85 +546,14 @@ def event_description(event, max_sentences=2):
     desc = _s(event, "description").strip()
 
     if not desc or len(desc) < 20:
-        # No description was scraped — build a richer fallback from event metadata
+        # No verified description available — do NOT fabricate one.
+        # Show a minimal factual stub using only verified metadata.
         title = _s(event, "title")
         venue = _s(event, "venue")
-        source = _s(event, "source")
-        cats = _cats(event)
-        price = _s(event, "price")
-        time_str = _s(event, "time")
-        primary_cat = cats[0] if cats else ""
-
-        # Try to extract performer info from the title
-        # Common patterns: "Artist Name and His/Her Quintet", "Pianist Name Trio"
-        performer = ""
-        title_parts = title.split(":")
-        if len(title_parts) > 1:
-            performer = title_parts[0].strip()
-
-        cat_labels = {
-            "jazz": "Live jazz", "classical": "Classical music",
-            "musical": "Musical theater", "theater": "Live theater",
-            "ballet": "Ballet", "dance": "Dance performance",
-            "opera": "Opera", "concert": "Live concert",
-            "exhibition": "Exhibition", "lecture": "Lecture",
-            "science": "Science event",
-            "performance": "Live performance",
-        }
-        cat_label = cat_labels.get(primary_cat, "Live performance")
-
-        # Build a richer description based on venue context
-        venue_lower = venue.lower()
-        if "chris" in venue_lower and "jazz" in venue_lower:
-            desc = f"{title} — live jazz at Chris' Jazz Cafe, Philadelphia's premier jazz club at 1421 Sansom Street."
-            if time_str:
-                desc += f" Show at {time_str}."
-            if price:
-                desc += f" {'Free admission' if price.lower() == 'free' else f'Tickets from {price}'}."
-        elif "south jazz" in venue_lower:
-            desc = f"{title} — live jazz and dinner at South Jazz Kitchen."
-            if time_str:
-                desc += f" Show at {time_str}."
-        elif "world cafe" in venue_lower:
-            desc = f"{title} at World Cafe Live — Philadelphia's eclectic live music venue."
-            if time_str:
-                desc += f" Doors at {time_str}."
-        elif "city winery" in venue_lower:
-            desc = f"{title} at City Winery Philadelphia — intimate live music with wine and dining."
-        elif "kimmel" in venue_lower or "marian anderson" in venue_lower:
-            desc = f"{cat_label} at the Kimmel Cultural Campus."
-            if performer:
-                desc = f"{performer} performs at the Kimmel Cultural Campus."
-        elif "academy of music" in venue_lower:
-            desc = f"{cat_label} at the historic Academy of Music."
-        elif "philadelphia museum of art" in venue_lower or "philamuseum" in venue_lower:
-            desc = f"{title} at the Philadelphia Museum of Art."
-        elif "barnes" in venue_lower:
-            desc = f"{title} at the Barnes Foundation — home to one of the world's greatest collections of Impressionist and Post-Impressionist art."
-        elif "franklin institute" in venue_lower:
-            desc = f"{title} at The Franklin Institute — Philadelphia's premier science museum."
-        elif "penn museum" in venue_lower:
-            desc = f"{title} at the Penn Museum — world-renowned archaeology and anthropology collections."
-        elif "academy of natural" in venue_lower or "ansp" in venue_lower:
-            desc = f"{title} at the Academy of Natural Sciences — America's oldest natural history museum."
-        elif "mutter" in venue_lower or "mütter" in venue_lower:
-            desc = f"{title} at the Mütter Museum — Philadelphia's museum of medical history."
-        elif "science history" in venue_lower:
-            desc = f"{title} at the Science History Institute — exploring the history of science and its impact."
-        elif "national mechanics" in venue_lower:
-            desc = f"{title} at National Mechanics bar in Old City."
-        elif "sofar" in venue_lower:
-            desc = f"{title} — an intimate Sofar Sounds concert at a secret Philadelphia venue, revealed the day before the show."
+        if venue:
+            desc = f"{title} at {venue}."
         else:
-            desc = f"{cat_label} at {venue}." if venue else f"{cat_label} in Philadelphia."
-            if time_str:
-                desc += f" Show at {time_str}."
-
-        if price and "ticket" not in desc.lower():
-            if price.lower() == "free":
-                desc += " Free admission."
-            else:
-                desc += f" Tickets from {price}."
+            desc = title
 
     # Truncate to max_sentences
     sentences = _re.split(r'(?<=[.!?])\s+', desc)
@@ -1292,7 +1176,7 @@ def main():
                     <div class="spotlight-label">Now Playing</div>
                     <div class="event-title" style="font-size:1rem">{_h(_s(event, 'title'))}</div>
                     <div style="color:#8888a0;font-size:0.78rem;margin:0.2rem 0">
-                        <span class="event-venue">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}{price_html}
+                        <span class="event-venue">{_h(_s(event, 'venue')) or 'N/A'}</span> · {_h(date_disp) or 'N/A'}{price_html}
                     </div>
                     <div class="event-desc" style="font-size:0.8rem;margin-top:0.3rem;-webkit-line-clamp:2;max-height:2.7em">{spot_desc}</div>
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem">
@@ -1331,9 +1215,9 @@ def main():
                 st.markdown(f"""
                 {wrapper_open}
                 <div class="coming-up-card">
-                    <div class="coming-up-date-badge">{_h(date_disp)} {urg}</div>
+                    <div class="coming-up-date-badge">{_h(date_disp) or 'N/A'} {urg}</div>
                     <div class="coming-up-title">{_h(_s(event, 'title'))}</div>
-                    <div class="coming-up-venue">{_h(venue)}</div>
+                    <div class="coming-up-venue">{_h(venue) if venue else 'N/A'}</div>
                     {'<div class="coming-up-meta">' + meta_html + '</div>' if meta_html else ''}
                 </div>
                 {wrapper_close}
@@ -1437,7 +1321,7 @@ def main():
                 <div class="event-card-past">
                     <div style="font-size:1rem;font-weight:600;color:#8888a0">{_h(_s(event, 'title'))}</div>
                     <div class="event-meta">
-                        <span style="color:#6a6a8a">{_h(_s(event, 'venue'))}</span> · {_h(date_disp)}
+                        <span style="color:#6a6a8a">{_h(_s(event, 'venue')) or 'N/A'}</span> · {_h(date_disp) or 'N/A'}
                         {' · ' + price_html if _s(event, 'price') else ''}
                     </div>
                     <div style="margin-top:0.3rem">{badges}</div>
@@ -1524,9 +1408,9 @@ def _render_event_card(event, st_ctx):
     date_disp = _s(event, "date_display") or _s(event, "date_start", "")
 
     # Build compact meta line: venue · date · time
+    # Show "N/A" for missing venue/date — never leave blank or guess
     meta_parts = []
-    if venue:
-        meta_parts.append(f'<span class="event-venue">{_h(venue)}</span>')
+    meta_parts.append(f'<span class="event-venue">{_h(venue) if venue else "N/A"}</span>')
     if date_disp:
         meta_parts.append(_h(date_disp))
     if time_str:
