@@ -103,6 +103,13 @@ def _is_valid_event(event):
     # Must have at least a plausible title (some alpha characters)
     if sum(1 for c in title if c.isalpha()) < 3:
         return False
+    # Reject date-like titles (e.g., "March 29", "April 5, 2026")
+    if _re.match(r'^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(,?\s*\d{4})?$', title, _re.IGNORECASE):
+        return False
+    if _re.match(r'^\d{1,2}/\d{1,2}(/\d{2,4})?$', title):
+        return False
+    if _re.match(r'^\d+$', title):
+        return False
     return True
 
 def _deduplicate_events(events):
@@ -1204,7 +1211,7 @@ def main():
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(current_events)}</div><div class="stat-label">Events</div></div>', unsafe_allow_html=True)
     with col_s2:
         now_playing = sum(1 for e in current_events if is_happening_now(e))
-        st.markdown(f'<div class="stat-box"><div class="stat-value">{now_playing}</div><div class="stat-label">Now Playing</div></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="stat-box"><div class="stat-value">{now_playing}</div><div class="stat-label">Happening Today</div></div>', unsafe_allow_html=True)
     with col_s3:
         st.markdown(f'<div class="stat-box"><div class="stat-value">{len(sources)}</div><div class="stat-label">Sources</div></div>', unsafe_allow_html=True)
     with col_refresh:
@@ -1344,7 +1351,7 @@ def main():
     # ── Spotlight: What's Happening Now ───────────────────────────────────
     tonight = [e for e in filtered if is_happening_now(e)]
     if tonight:
-        st.markdown("#### 🔴 Happening Now")
+        st.markdown("#### 🔴 Happening Today")
         num_cols = min(len(tonight), 4)
         cols = st.columns(num_cols if num_cols >= 2 else 2)
         for i, event in enumerate(tonight[:4]):
@@ -1358,7 +1365,7 @@ def main():
                 st.markdown(f"""
                 <a href="{link}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
                 <div class="spotlight-card">
-                    <div class="spotlight-label">Now Playing</div>
+                    <div class="spotlight-label">Happening Today</div>
                     <div class="event-title" style="font-size:1rem">{_h(_s(event, 'title'))}</div>
                     <div style="color:#8888a0;font-size:0.78rem;margin:0.2rem 0">
                         <span class="event-venue">{_h(_s(event, 'venue')) or 'N/A'}</span> · {_h(date_disp) or 'N/A'}{price_html}

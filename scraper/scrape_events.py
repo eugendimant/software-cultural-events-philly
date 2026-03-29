@@ -99,8 +99,14 @@ def clean_text(text):
 
 def parse_time_from_iso(iso_str):
     """Extract a human-readable time from an ISO datetime string like '2026-03-24T20:00:00'.
+    Also handles '2026-03-24 20:00:00' (space separator).
     Returns e.g. '8:00 PM' or None."""
-    if not iso_str or 'T' not in iso_str:
+    if not iso_str:
+        return None
+    # Handle both T and space separator
+    if 'T' not in iso_str and ' ' in iso_str and re.search(r'\d{4}-\d{2}-\d{2} \d{2}:', iso_str):
+        iso_str = iso_str.replace(' ', 'T', 1)
+    if 'T' not in iso_str:
         return None
     try:
         # Handle various ISO formats: 2026-03-24T20:00:00, 2026-03-24T20:00:00-05:00, etc.
@@ -127,11 +133,12 @@ def parse_time_from_iso(iso_str):
 
 
 def parse_time_from_text(text):
-    """Extract a time string from free text like '8:00 PM', '7:30pm', 'Doors at 7 PM', etc.
-    Returns e.g. '8:00 PM' or None."""
+    """Extract a time string from free text like '8:00 PM', '7:30pm', 'Doors at 7 PM',
+    '19:00', '7.30 PM', etc. Returns e.g. '8:00 PM' or None."""
     if not text:
         return None
-    # Match patterns like "8:00 PM", "7:30pm", "8 PM", "8:00 p.m."
+
+    # 1. Match "8:00 PM", "7:30pm", "8:00 p.m."
     m = re.search(
         r'(\d{1,2}):(\d{2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)',
         text
@@ -139,11 +146,39 @@ def parse_time_from_text(text):
     if m:
         hour, minute, period = m.group(1), m.group(2), m.group(3).upper().replace('.', '')
         return f"{int(hour)}:{minute} {period}"
-    # Match "8 PM" or "8pm" (no minutes)
-    m = re.search(r'(\d{1,2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)', text)
+
+    # 2. Match "8 PM" or "8pm" (no minutes)
+    m = re.search(r'(?<!\d)(\d{1,2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)', text)
     if m:
         hour, period = m.group(1), m.group(2).upper().replace('.', '')
         return f"{int(hour)}:00 {period}"
+
+    # 3. Match "7.30 PM" (period instead of colon)
+    m = re.search(r'(\d{1,2})\.(\d{2})\s*(AM|PM|am|pm|a\.m\.|p\.m\.)', text)
+    if m:
+        hour, minute, period = m.group(1), m.group(2), m.group(3).upper().replace('.', '')
+        return f"{int(hour)}:{minute} {period}"
+
+    # 4. Match 24-hour format "19:00", "20:30" — only if hour >= 12 or clearly a time
+    #    context (near "at", "doors", "show", "start", "curtain", or standalone)
+    m = re.search(r'(?:at|doors|show|start|begins?|curtain|time)\s*:?\s*(\d{1,2}):(\d{2})(?!\d)', text, re.IGNORECASE)
+    if m:
+        hour, minute = int(m.group(1)), m.group(2)
+        if 0 <= hour <= 23:
+            period = "AM" if hour < 12 else "PM"
+            dh = hour if hour <= 12 else hour - 12
+            if dh == 0:
+                dh = 12
+            return f"{dh}:{minute} {period}"
+
+    # 5. Standalone 24-hour time >= 13:00 (unambiguously a time)
+    m = re.search(r'(?<!\d)(\d{2}):(\d{2})(?!\d)', text)
+    if m:
+        hour, minute = int(m.group(1)), m.group(2)
+        if 13 <= hour <= 23:
+            dh = hour - 12
+            return f"{dh}:{minute} PM"
+
     return None
 
 
@@ -516,7 +551,7 @@ def scrape_detail_page(url):
     return result
 
 
-def enrich_events(events, max_detail_fetches=60):
+def enrich_events(events, max_detail_fetches=150):
     """Enrich events by fetching their detail pages for descriptions, times, prices.
     Fetches detail pages for ALL events that have a specific link and are missing data.
     """
@@ -600,6 +635,15 @@ def validate_event(ev):
     # navigation words, and single generic words that aren't real event names
     # Reject template placeholders
     if "{{" in title or "}}" in title:
+        return False
+
+    # Reject date-like titles (e.g., "March 29", "April 5, 2026", "3/25")
+    if re.match(r'^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(,?\s*\d{4})?$', title, re.IGNORECASE):
+        return False
+    if re.match(r'^\d{1,2}/\d{1,2}(/\d{2,4})?$', title):
+        return False
+    # Reject pure-number titles
+    if re.match(r'^\d+$', title):
         return False
 
     skip_exact = {
@@ -745,6 +789,55 @@ def parse_date_range(text):
     iso = re.search(r'(\d{4}-\d{2}-\d{2})', text)
     if iso:
         return iso.group(1), iso.group(1), display
+
+    # Slash format: "3/25/2026" or "03/25/2026"
+    slash = re.search(r'(\d{1,2})/(\d{1,2})/(\d{4})', text)
+    if slash:
+        try:
+            dt = datetime(int(slash.group(3)), int(slash.group(1)), int(slash.group(2)))
+            ds = dt.strftime("%Y-%m-%d")
+            return ds, ds, display
+        except ValueError:
+            pass
+
+    # Slash range: "3/25/2026 - 4/5/2026"
+    slash_range = re.search(
+        r'(\d{1,2})/(\d{1,2})/(\d{4})\s*[-–—]\s*(\d{1,2})/(\d{1,2})/(\d{4})', text
+    )
+    if slash_range:
+        try:
+            start = datetime(int(slash_range.group(3)), int(slash_range.group(1)), int(slash_range.group(2)))
+            end = datetime(int(slash_range.group(6)), int(slash_range.group(4)), int(slash_range.group(5)))
+            return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
+        except ValueError:
+            pass
+
+    # Day-first format: "25 March 2026"
+    day_first = re.search(r'(\d{1,2})\s+(\w+),?\s+(\d{4})', text)
+    if day_first:
+        y = int(day_first.group(3))
+        for fmt in ("%d %B %Y", "%d %b %Y"):
+            try:
+                dt = datetime.strptime(f"{day_first.group(1)} {day_first.group(2)} {y}", fmt)
+                ds = dt.strftime("%Y-%m-%d")
+                return ds, ds, display
+            except ValueError:
+                continue
+
+    # "Month Day through/to Month Day, Year"
+    through = re.search(
+        r'(\w+)\s+(\d{1,2})\s+(?:through|to|thru)\s+(\w+)\s+(\d{1,2}),?\s*(\d{4})',
+        text, re.IGNORECASE
+    )
+    if through:
+        y = int(through.group(5))
+        for fmt in ("%B %d %Y", "%b %d %Y"):
+            try:
+                start = datetime.strptime(f"{through.group(1)} {through.group(2)} {y}", fmt)
+                end = datetime.strptime(f"{through.group(3)} {through.group(4)} {y}", fmt)
+                return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
+            except ValueError:
+                continue
 
     # NO year found — do NOT guess. Return None dates with the raw display text.
     return None, None, display
@@ -1259,8 +1352,14 @@ def extract_microdata_events(soup, url, source_name, venue_default):
         end_date = (end_el.get("content") or end_el.get("datetime") or
                     clean_text(end_el.get_text())) if end_el else start_date
 
+        # Try nested location structure first, then flat location element
         location_el = item.select_one('[itemprop="location"] [itemprop="name"]')
+        if not location_el:
+            location_el = item.select_one('[itemprop="location"]')
         venue = clean_text(location_el.get_text()) if location_el else None
+        # If venue text is too long (whole address block), truncate to first line
+        if venue and len(venue) > 60:
+            venue = venue.split('\n')[0].split(',')[0].strip()
         # Only fall back to venue_default for single-venue sources
         if not venue and venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
             venue = venue_default
@@ -1326,14 +1425,26 @@ def extract_events_from_links(soup, url, source_name, venue_default, categories_
             continue
         seen_links.add(full_url)
 
-        # Try to find a date near this link
+        # Try to find date, time, and venue near this link
         parent = a.parent
-        date_text = find_text(parent, DATE_SELECTORS) if parent else ""
+        # Walk up to grandparent for more context
+        context = parent
+        if context and context.parent:
+            context = context.parent
+        date_text = find_text(context, DATE_SELECTORS) if context else ""
         date_start, date_end, date_display = parse_date_range(date_text)
 
-        # Only use venue_default for single-venue sources
-        lr_venue = None
-        if venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
+        # Extract time from nearby context
+        time_text = find_text(context, TIME_SELECTORS) if context else ""
+        event_time = parse_time_from_text(time_text)
+        if not event_time:
+            event_time = parse_time_from_text(date_text)
+
+        # Try to extract venue from nearby context
+        venue_text = find_text(context, VENUE_SELECTORS) if context else ""
+        lr_venue = clean_text(venue_text) if venue_text else None
+        # Fall back to venue_default for single-venue sources
+        if not lr_venue and venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
             lr_venue = venue_default
 
         ev = {
@@ -1342,7 +1453,7 @@ def extract_events_from_links(soup, url, source_name, venue_default, categories_
             "date_display": date_display or date_text,
             "date_start": date_start,
             "date_end": date_end,
-            "time": None,
+            "time": event_time,
             "venue": lr_venue,
             "source": source_name,
             "source_url": url,
@@ -1947,7 +2058,7 @@ def main():
 
     # Enrich events by fetching detail pages for missing descriptions/times/prices
     print("\n  Enriching events from detail pages...")
-    all_events = enrich_events(all_events, max_detail_fetches=50)
+    all_events = enrich_events(all_events, max_detail_fetches=150)
 
     # Deduplicate by source + normalized title — keep event with richest data
     seen = {}  # key -> index in unique_events
