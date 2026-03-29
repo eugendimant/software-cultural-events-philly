@@ -2069,6 +2069,28 @@ def main():
               file=sys.stderr)
         sys.exit(1)
 
+    # Validate links — self-correcting pass to catch broken ticket URLs
+    if unique_events:
+        print(f"\n{'=' * 50}")
+        print("LINK VALIDATION (3 iterations)")
+        print(f"{'=' * 50}")
+        try:
+            from validate_links import validate_and_fix
+            for iteration in range(1, 4):
+                stats = validate_and_fix(output["events"])
+                print(f"  Pass {iteration}: {stats['checked']} checked, "
+                      f"{stats['ok']} ok, {stats['fixed']} fixed, "
+                      f"{stats['ambiguous']} ambiguous")
+                if stats["fixed"] == 0:
+                    print("  No fixes needed — stopping early.")
+                    break
+            # Re-save with fixed links
+            with open(out_path, "w") as f:
+                json.dump(output, f, indent=2)
+            print(f"  Saved validated events to {out_path}")
+        except Exception as e:
+            print(f"  Warning: link validation skipped ({e})")
+
 
 if __name__ == "__main__":
     main()

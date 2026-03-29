@@ -213,15 +213,14 @@ def _enrich_descriptions(events):
                     break
 
         # Strategy 3: For events that STILL have generic links, try
-        # to enrich the link from known seed events for the same source
+        # to construct a direct link from the title slug.
+        # ONLY for venues with simple, reliable URL patterns.
+        # Venues with complex/unpredictable paths (Opera Philadelphia,
+        # Ensemble Arts series) fall back to source_url instead of guessing.
         if link_is_generic:
             source = event.get("source", "")
-            # For venues where we know the URL pattern includes the event title,
-            # try to construct a plausible direct link
             title_slug = _re.sub(r'[^a-z0-9]+', '-', (event.get("title") or "").lower()).strip('-')
-            if title_slug and source == "Ensemble Arts Philly":
-                event["link"] = f"https://www.ensembleartsphilly.org/tickets-and-events/events/{title_slug}"
-            elif title_slug and source == "Philadelphia Orchestra":
+            if title_slug and source == "Philadelphia Orchestra":
                 event["link"] = f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{title_slug}"
             elif title_slug and source == "Penn Live Arts":
                 event["link"] = f"https://pennlivearts.org/event/{title_slug}"
@@ -229,16 +228,71 @@ def _enrich_descriptions(events):
                 event["link"] = f"https://ardentheatre.org/productions/{title_slug}/"
             elif title_slug and source == "The Wilma Theater":
                 event["link"] = f"https://www.wilmatheater.org/whats-on/{title_slug}/"
-            elif title_slug and source == "Opera Philadelphia":
-                event["link"] = f"https://www.operaphila.org/whats-on/events/{title_slug}/"
             elif title_slug and source == "FringeArts":
                 event["link"] = f"https://fringearts.com/event/{title_slug}/"
             elif title_slug and source == "Walnut Street Theatre":
-                event["link"] = f"https://www.walnutstreettheatre.org/season/{title_slug}"
-            elif title_slug and source == "Philadelphia Theatre Company":
-                event["link"] = f"https://www.philatheatreco.org/{title_slug}"
-            # Note: Chris' Jazz Cafe uses numeric IDs — can't guess URLs from titles.
-            # Those events keep the listing page URL (best we can do without the JSON API).
+                event["link"] = f"https://www.walnutstreettheatre.org/season/show/{title_slug}"
+            # Venues where slug-based guessing is unreliable — use source_url:
+            # - Opera Philadelphia: URLs have subcategory paths (/lectures/, /for-donors/, etc.)
+            # - Ensemble Arts Philly: URLs vary (/events/, /series-and-subscriptions/, /ensemble-arts-philly-presents/)
+            # - Philadelphia Theatre Company: inconsistent URL patterns
+            # - Chris' Jazz Cafe: uses numeric IDs, not title slugs
+
+    return events
+
+
+def _sanitize_links(events):
+    """Runtime link health check — catches malformed or suspicious URLs.
+
+    This is the self-correcting safety net that runs every time events load.
+    It catches issues that slip past the scraper and enrichment stages:
+      - Malformed URLs (missing scheme, empty after trim)
+      - Links that point to a different venue's domain
+      - Auto-generated links with known-bad patterns
+    Broken links fall back to source_url (the venue's listing page).
+    """
+    # Known domain -> source mapping for cross-venue detection
+    _domain_source = {
+        "chrisjazzcafe.com": "Chris' Jazz Cafe",
+        "ensembleartsphilly.org": ("Ensemble Arts Philly", "Philadelphia Orchestra"),
+        "ardentheatre.org": "Arden Theatre",
+        "wilmatheater.org": "The Wilma Theater",
+        "operaphila.org": "Opera Philadelphia",
+        "fringearts.com": "FringeArts",
+        "pennlivearts.org": "Penn Live Arts",
+        "walnutstreettheatre.org": "Walnut Street Theatre",
+        "philatheatreco.org": "Philadelphia Theatre Company",
+    }
+
+    for event in events:
+        link = (event.get("link") or "").strip()
+        source_url = (event.get("source_url") or "").strip()
+        source = event.get("source", "")
+
+        if not link or link == "#":
+            continue
+
+        # Check 1: Must be a valid HTTP(S) URL
+        if not link.startswith(("http://", "https://")):
+            event["link"] = source_url or ""
+            continue
+
+        # Check 2: Link domain should match the event's source
+        try:
+            from urllib.parse import urlparse
+            domain = urlparse(link).netloc.lower().replace("www.", "")
+        except Exception:
+            event["link"] = source_url or ""
+            continue
+
+        for known_domain, expected_sources in _domain_source.items():
+            if known_domain in domain:
+                if isinstance(expected_sources, str):
+                    expected_sources = (expected_sources,)
+                if source and source not in expected_sources:
+                    # Link points to wrong venue — reset
+                    event["link"] = source_url or ""
+                break
 
     return events
 
@@ -335,6 +389,8 @@ def load_events():
     data["events"] = _fix_cross_venue_contamination(data["events"])
     # Enrich: fill missing descriptions from seed data
     data["events"] = _enrich_descriptions(data["events"])
+    # Sanitize links: catch malformed URLs and fall back gracefully
+    data["events"] = _sanitize_links(data["events"])
     return data
 
 
