@@ -535,19 +535,8 @@ def get_seed_events():
             "description": "The legendary Martha Graham Dance Company. Includes Tommie-Waheed Evans' 'in case of fire, speak' — co-commissioned with ArtPhilly.",
             "time": "8:00 PM",
         },
-        {
-            "title": "Dance Theatre of Harlem",
-            "date_start": "2026-04-03",
-            "date_end": "2026-04-04",
-            "venue": "Annenberg Center, Penn Live Arts",
-            "source": "Penn Live Arts",
-            "source_url": "https://pennlivearts.org/event/DTH2026",
-            "link": "https://pennlivearts.org/event/DTH2026",
-            "price": None,
-            "categories": ["ballet", "dance"],
-            "description": "Dance Theatre of Harlem brings its celebrated repertoire blending classical and contemporary ballet.",
-            "time": "8:00 PM",
-        },
+        # Dance Theatre of Harlem removed — event was Jan 16-18, 2026 (already past).
+        # Seed had wrong dates (Apr 3-4). Verified via pennlivearts.org.
 
         # ═══════════════════════════════════════════════════════════════════
         # OPERA
