@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-03-24T12:52:48.147657Z",
-  "total_events": 168,
+  "total_events": 172,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -359,7 +359,7 @@
       "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-sound-of-music",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "opera",
@@ -411,7 +411,7 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/ecco-with-anthony-mcgill-tai-murray",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "time": "7:30 PM",
       "price": null,
       "categories": [
@@ -551,7 +551,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/peppa-pig-my-first-concert",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": "From $63",
       "categories": [
         "performance"
@@ -602,7 +602,7 @@
       "venue": "Marian Anderson Hall",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/lang-lang-and-yannick",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance"
@@ -619,7 +619,7 @@
       "venue": "12:00 p.m. | Zoom",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/between-the-notes-sleepers-awake-virtual-lecture/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -759,7 +759,7 @@
       "venue": "12:00 p.m. | Comcast Circle",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/between-the-notes-sleepers-awake-in-person-lecture/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -825,7 +825,7 @@
       "venue": "Suzanne Roberts Theatre",
       "source": "Philadelphia Theatre Company",
       "source_url": "https://www.philatheatreco.org/",
-      "link": "https://www.philatheatreco.org/wilderness-generation",
+      "link": "https://www.philatheatreco.org/",
       "price": null,
       "categories": [
         "theater"
@@ -864,7 +864,7 @@
       "venue": "6:00 p.m. | Philadelphia Ethical Society",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/awaken-new-perspectives-on-a-classic-tale/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -964,7 +964,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/shen-yun",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "time": "7:30 PM",
       "price": "From $132",
       "categories": [
@@ -1085,7 +1085,7 @@
       "venue": "Perelman Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/events/explosive-bold-new-works-on-the-rise",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "dance",
@@ -1106,7 +1106,7 @@
       "venue": "1:00 p.m. | Athenaeum of Philadelphia",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/inside-the-music-sleepers-awake/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -1141,7 +1141,7 @@
       "venue": "2:00 p.m. | Academy of Music",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/for-donors/2025-2026/final-dress-rehearsal-sleepers-awake/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -1159,7 +1159,7 @@
       "venue": "Forrest Theatre",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/shucked",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance",
@@ -1212,7 +1212,7 @@
       "venue": "2:00 p.m. | Academy of MusicCheck Back for Availability",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/2526-season/sleepers-awake/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -1264,7 +1264,7 @@
       "venue": "Marian Anderson Hall",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/bolero-and-don-juan",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance"
@@ -1332,7 +1332,7 @@
       "venue": "8:00 p.m. | Academy of Music",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/other/2026/vivace-night-at-sleepers-awake/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -1367,7 +1367,7 @@
       "venue": "Miller Theater, Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/dog-man-the-musical",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance",
@@ -1749,7 +1749,7 @@
       "venue": "Forrest Theatre",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/chicago",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance"
@@ -1783,7 +1783,7 @@
       "venue": "Marian Anderson Hall",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/postcards-from-spain",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance"
@@ -1800,7 +1800,7 @@
       "venue": "7:00 p.m. | Miller TheaterBest Availability",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/2526-season/the-black-clown/",
+      "link": "https://www.operaphila.org/whats-on/events/",
       "price": null,
       "categories": [
         "opera",
@@ -1956,7 +1956,7 @@
       "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/the-outsiders",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "opera",
@@ -2064,7 +2064,7 @@
       "venue": "Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/drag-me-to-bingo",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "classical",
@@ -2116,7 +2116,7 @@
       "venue": "Miller Theater",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/a-conversation-with-jill-biden",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "performance"
@@ -2252,7 +2252,7 @@
       "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/the-notebook",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "ballet",
@@ -2288,7 +2288,7 @@
       "venue": "Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/herbie-hancock",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "classical",
@@ -2306,102 +2306,13 @@
       "venue": "Kimmel Center",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/undertale-the-determination-symphony",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events",
       "price": null,
       "categories": [
         "classical",
         "concert"
       ],
       "description": "UNDERTALE: The Determination Symphony is an unforgettable concert experience featuring the most memorable themes from the hit indie game, newly arranged and performed live by a 25-piece orchestra."
-    },
-    {
-      "id": "f41d1251d6c7",
-      "title": "{{event.Title}}",
-      "date_display": "{{event.DateDescription}}",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "{{event.Venue.Title}}",
-      "source": "Philadelphia Orchestra",
-      "source_url": "https://philorch.ensembleartsphilly.org/tickets-and-events/events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/eventtitle",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "{{event.Prefix}} {{event.Title}} {{event.Suffix}} {{event.DateDescription}} {{event.Venue.Title}}"
-    },
-    {
-      "id": "bee487de6a17",
-      "title": "Events",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/25-26season.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "bb5d89202ad6",
-      "title": "25/26 Season",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/25-26season.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "9052f4d1dca1",
-      "title": "Season Calendar",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/calendar.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "9881385eb255",
-      "title": "Programs",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/programs.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
     },
     {
       "id": "79c13c1ecad5",
@@ -3093,28 +3004,10 @@
       "date_start": null,
       "date_end": null,
       "time": null,
-      "venue": "Various",
+      "venue": null,
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
       "link": "https://www.balletx.org/event/the-four-seasons-reimagined/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "30796b3e2e6f",
-      "title": "Backstage",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Various",
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/backstage/",
       "price": null,
       "categories": [
         "ballet",
@@ -3129,28 +3022,10 @@
       "date_start": null,
       "date_end": null,
       "time": null,
-      "venue": "Various",
+      "venue": null,
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
       "link": "https://www.balletx.org/dance-exchange/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "22c2042b5a7d",
-      "title": "Support",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Various",
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/ways-to-support/",
       "price": null,
       "categories": [
         "ballet",
@@ -3176,30 +3051,13 @@
       "description": null
     },
     {
-      "id": "fe7f8586708f",
-      "title": "Top Picks for Events in Philadelphia",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Various",
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/the-mummers-parade/",
-      "price": null,
-      "categories": [
-        "performance"
-      ],
-      "description": "On July 4, 1777, the new Americans in Philadelphia commemorated the first anniversary of the Declaration of Independence by hosting a giant party filled with fireworks, bonfires, lights, decorations, music and joy — and the city has not stopped celebrating major events, culture fests, holidays, food, music and plain ol’ good times ever since. Today, Philadelphia is one of the best places in the nation to celebrate … well, just about anything with a great event to attend. Pick any week on the cal"
-    },
-    {
       "id": "c83182968d8c",
       "title": "<none>",
       "date_display": "",
       "date_start": null,
       "date_end": null,
       "time": null,
-      "venue": "Various",
+      "venue": null,
       "source": "Philly Fun Guide",
       "source_url": "https://phillyfunguide.com/",
       "link": "https://phillyfunguide.com/why-arts-culture",

@@ -555,7 +555,7 @@ def enrich_events(events, max_detail_fetches=60):
         detail = scrape_detail_page(detail_url)
         enriched += 1
 
-        # Merge enrichment data
+        # Merge enrichment data — ONLY from the event's own scraped link
         if detail["description"]:
             if not ev.get("description"):
                 ev["description"] = detail["description"]
@@ -566,10 +566,7 @@ def enrich_events(events, max_detail_fetches=60):
             ev["time"] = detail["time"]
         if detail["price"] and not ev.get("price"):
             ev["price"] = detail["price"]
-        # If we had a generic link but guessed a detail URL, update the link
-        if link_is_generic and detail_url:
-            ev["link"] = detail_url
-        # If detail page found a ticket URL, use it
+        # If detail page found a specific ticket URL, use it
         if detail.get("ticket_url") and link_is_generic:
             ev["link"] = detail["ticket_url"]
 
@@ -580,102 +577,10 @@ def enrich_events(events, max_detail_fetches=60):
     return events
 
 
-# ---------------------------------------------------------------------------
-# VENUE-SPECIFIC URL PATTERNS — used to guess detail page URLs
-# ---------------------------------------------------------------------------
-
-# Maps source name -> function that generates a detail page URL from event data
-def _ensemble_arts_url(ev):
-    """Guess Ensemble Arts Philly detail page URL from event title and venue."""
-    slug = slugify(ev.get("title", ""))
-    if not slug:
-        return None
-    venue = (ev.get("venue") or "").lower()
-    # Determine the organization path
-    if "orchestra" in (ev.get("source") or "").lower() or "orchestra" in venue:
-        return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}"
-    # Broadway/musical at Academy or Forrest
-    cats = ev.get("categories", [])
-    if "musical" in cats and ("academy" in venue or "forrest" in venue):
-        return f"https://www.ensembleartsphilly.org/tickets-and-events/broadway/2025-26-season/{slug}"
-    # Jazz events at Perelman
-    if "jazz" in cats or "perelman" in venue:
-        return f"https://www.ensembleartsphilly.org/tickets-and-events/jazz/2025-26-season/{slug}"
-    # Default: try the main events path
-    return f"https://www.ensembleartsphilly.org/tickets-and-events/events/{slug}"
-
-
-def _phila_orchestra_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2025-26-season/{slug}" if slug else None
-
-
-def _penn_live_arts_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://pennlivearts.org/event/{slug}" if slug else None
-
-
-def _arden_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://ardentheatre.org/productions/{slug}/" if slug else None
-
-
-def _wilma_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.wilmatheater.org/whats-on/{slug}/" if slug else None
-
-
-def _opera_phila_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.operaphila.org/whats-on/events/{slug}/" if slug else None
-
-
-def _fringearts_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://fringearts.com/event/{slug}/" if slug else None
-
-
-def _walnut_street_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.walnutstreettheatre.org/season/{slug}" if slug else None
-
-
-def _phila_theatre_co_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.philatheatreco.org/{slug}" if slug else None
-
-
-def _phila_ballet_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://philadelphiaballet.org/performances/{slug}/" if slug else None
-
-
-def _balletx_url(ev):
-    slug = slugify(ev.get("title", ""))
-    return f"https://www.balletx.org/seasons/{slug}/" if slug else None
-
-
-_VENUE_URL_GUESSERS = {
-    "Ensemble Arts Philly": _ensemble_arts_url,
-    "Philadelphia Orchestra": _phila_orchestra_url,
-    "Penn Live Arts": _penn_live_arts_url,
-    "Arden Theatre": _arden_url,
-    "The Wilma Theater": _wilma_url,
-    "Opera Philadelphia": _opera_phila_url,
-    "FringeArts": _fringearts_url,
-    "Walnut Street Theatre": _walnut_street_url,
-    "Philadelphia Theatre Company": _phila_theatre_co_url,
-    "Philadelphia Ballet": _phila_ballet_url,
-    "BalletX": _balletx_url,
-}
-
-
 def guess_detail_url(ev):
-    """Try to construct a detail page URL for this event based on venue URL patterns."""
-    source = ev.get("source", "")
-    guesser = _VENUE_URL_GUESSERS.get(source)
-    if guesser:
-        return guesser(ev)
+    """No longer guesses URLs. Returns None — only scraped links are used.
+    URL guessing from title slugs produced broken/wrong links.
+    Enrichment only happens when the scraper already has a real, scraped link."""
     return None
 
 
@@ -693,12 +598,20 @@ def validate_event(ev):
 
     # Exact-match junk titles — includes instrument names, UI elements,
     # navigation words, and single generic words that aren't real event names
+    # Reject template placeholders
+    if "{{" in title or "}}" in title:
+        return False
+
     skip_exact = {
         # UI/navigation
         "subscribe", "sign up", "newsletter", "donate", "login",
         "menu", "search", "home", "about", "contact", "gallery",
         "facebook", "twitter", "instagram", "youtube",
         "search form", "no results", "loading", "error",
+        # Section headers scraped as events
+        "events", "season calendar", "programs", "season",
+        "calendar", "shows", "performances", "support", "backstage",
+        "25/26 season", "24/25 season",
         "view event", "buy tickets", "read more", "list view",
         "calendar view", "all events", "back to events",
         "upcoming events", "past events", "featured events",
@@ -748,62 +661,87 @@ def validate_event(ev):
     if "start date" in date_disp or "e.g." in date_disp or "placeholder" in date_disp:
         ev["date_display"] = ""  # clear garbage display text
 
+    # Mark missing venue as None (will display as N/A) — never guess
+    venue = (ev.get("venue") or "").strip()
+    if not venue or venue in ("Various", "Various Theaters"):
+        ev["venue"] = None
+
+    # If link equals source_url (generic listing page), keep it but
+    # don't pretend it's a specific event page
+    link = (ev.get("link") or "").strip()
+    source_url = (ev.get("source_url") or "").strip()
+    if not link:
+        ev["link"] = source_url  # at least link to the listing page
+
     return True
 
 
 def parse_date_range(text):
-    """Try to extract start/end dates from display text. Returns (start, end, display)."""
+    """Try to extract start/end dates from display text. Returns (start, end, display).
+
+    STRICT: Only parses dates that include an explicit year.
+    Dates without a year are NOT guessed — they return (None, None, display)
+    so the event can still be shown with its raw display text but without
+    being assigned to a potentially wrong year.
+    """
     if not text:
         return None, None, ""
 
     display = clean_text(text)
-    today = datetime.now()
-    year = today.year
 
-    # Try patterns like "Mar 25 – Apr 6, 2026" or "March 25 - April 6"
+    # Try patterns like "Mar 25 – Apr 6, 2026" — REQUIRES explicit year
     range_pattern = re.compile(
-        r'(\w+)\s+(\d{1,2})\s*[-–—]\s*(\w+)\s+(\d{1,2}),?\s*(\d{4})?',
+        r'(\w+)\s+(\d{1,2})\s*[-–—]\s*(\w+)\s+(\d{1,2}),?\s*(\d{4})',
         re.IGNORECASE
     )
     m = range_pattern.search(text)
     if m:
-        try:
-            y = int(m.group(5)) if m.group(5) else year
-            start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%B %d %Y")
-            end = datetime.strptime(f"{m.group(3)} {m.group(4)} {y}", "%B %d %Y")
-            return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
-        except ValueError:
+        y = int(m.group(5))
+        for fmt in ("%B %d %Y", "%b %d %Y"):
             try:
-                start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%b %d %Y")
-                end = datetime.strptime(f"{m.group(3)} {m.group(4)} {y}", "%b %d %Y")
+                start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", fmt)
+                end = datetime.strptime(f"{m.group(3)} {m.group(4)} {y}", fmt)
                 return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
             except ValueError:
-                pass
+                continue
 
-    # Try single date like "March 25, 2026" or "Mar 25"
+    # Try "Month Day – Day, Year" (same month range like "March 6 – 8, 2026")
+    same_month_pattern = re.compile(
+        r'(\w+)\s+(\d{1,2})\s*[-–—]\s*(\d{1,2}),?\s*(\d{4})',
+        re.IGNORECASE
+    )
+    m = same_month_pattern.search(text)
+    if m:
+        y = int(m.group(4))
+        for fmt in ("%B %d %Y", "%b %d %Y"):
+            try:
+                start = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", fmt)
+                end = datetime.strptime(f"{m.group(1)} {m.group(3)} {y}", fmt)
+                return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), display
+            except ValueError:
+                continue
+
+    # Try single date like "March 25, 2026" — REQUIRES explicit year
     single_pattern = re.compile(
-        r'(\w+)\s+(\d{1,2}),?\s*(\d{4})?', re.IGNORECASE
+        r'(\w+)\s+(\d{1,2}),?\s+(\d{4})', re.IGNORECASE
     )
     m = single_pattern.search(text)
     if m:
-        try:
-            y = int(m.group(3)) if m.group(3) else year
-            dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%B %d %Y")
-            ds = dt.strftime("%Y-%m-%d")
-            return ds, ds, display
-        except ValueError:
+        y = int(m.group(3))
+        for fmt in ("%B %d %Y", "%b %d %Y"):
             try:
-                dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", "%b %d %Y")
+                dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {y}", fmt)
                 ds = dt.strftime("%Y-%m-%d")
                 return ds, ds, display
             except ValueError:
-                pass
+                continue
 
-    # ISO date
+    # ISO date (always has year)
     iso = re.search(r'(\d{4}-\d{2}-\d{2})', text)
     if iso:
         return iso.group(1), iso.group(1), display
 
+    # NO year found — do NOT guess. Return None dates with the raw display text.
     return None, None, display
 
 
@@ -873,7 +811,16 @@ def extract_events_generic(soup, url, source_name, venue_default,
             continue
 
         date_text = find_text(card, DATE_SELECTORS)
-        venue = find_text(card, VENUE_SELECTORS) or venue_default
+        # Only use scraped venue. If not found, check if this source has a
+        # single known venue (e.g., Chris' Jazz Cafe). Multi-venue sources
+        # get "N/A" — never guess the wrong location.
+        venue = find_text(card, VENUE_SELECTORS)
+        if not venue:
+            venues_list = []  # Will be set by caller if available
+            if venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
+                venue = venue_default  # Single-venue source — safe to use
+            else:
+                venue = None  # Will be shown as N/A
         price_text = find_text(card, PRICE_SELECTORS)
         desc_text = find_text(card, DESC_SELECTORS)
         link = find_link(card, url) or url
@@ -1034,6 +981,21 @@ def _parse_squarespace_items(items, url, source_name, venue_default,
         elif date_start:
             date_display = date_start
 
+        # Try to extract venue from structured content (Squarespace events)
+        sq_venue = None
+        if isinstance(struct, dict):
+            loc = struct.get("location") or struct.get("venue") or {}
+            if isinstance(loc, dict):
+                sq_venue = (loc.get("addressTitle") or loc.get("name") or "").strip()
+            elif isinstance(loc, str) and loc.strip():
+                sq_venue = loc.strip()
+        # Only use venue_default for single-venue sources; otherwise N/A
+        if not sq_venue:
+            if venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
+                sq_venue = venue_default
+            else:
+                sq_venue = None
+
         ev = {
             "id": make_id(source_name, title, str(item.get("startDate") or "")),
             "title": clean_text(title),
@@ -1041,12 +1003,12 @@ def _parse_squarespace_items(items, url, source_name, venue_default,
             "date_start": date_start,
             "date_end": date_end,
             "time": event_time,
-            "venue": venue_default,
+            "venue": sq_venue,
             "source": source_name,
             "source_url": url,
             "link": item_url,
             "price": price,
-            "categories": categories_default or categorize(title, venue_default),
+            "categories": categories_default or categorize(title, sq_venue or ""),
             "description": desc if desc and len(desc) > 20 else None,
         }
 
@@ -1218,9 +1180,11 @@ def extract_json_ld_events(soup, url, source_name, venue_default):
             start = item.get("startDate", "")
             end = item.get("endDate", start)
             location = item.get("location", {})
+            venue = None
             if isinstance(location, dict):
-                venue = location.get("name", venue_default)
-            else:
+                venue = location.get("name") or None
+            # Only fall back to venue_default for single-venue sources
+            if not venue and venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
                 venue = venue_default
 
             link = item.get("url", url)
@@ -1287,7 +1251,10 @@ def extract_microdata_events(soup, url, source_name, venue_default):
                     clean_text(end_el.get_text())) if end_el else start_date
 
         location_el = item.select_one('[itemprop="location"] [itemprop="name"]')
-        venue = clean_text(location_el.get_text()) if location_el else venue_default
+        venue = clean_text(location_el.get_text()) if location_el else None
+        # Only fall back to venue_default for single-venue sources
+        if not venue and venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
+            venue = venue_default
 
         url_el = item.select_one('[itemprop="url"]')
         link = (url_el.get("href") or url_el.get("content") or "") if url_el else ""
@@ -1355,6 +1322,11 @@ def extract_events_from_links(soup, url, source_name, venue_default, categories_
         date_text = find_text(parent, DATE_SELECTORS) if parent else ""
         date_start, date_end, date_display = parse_date_range(date_text)
 
+        # Only use venue_default for single-venue sources
+        lr_venue = None
+        if venue_default and venue_default not in ("Various", "Various Theaters", "N/A"):
+            lr_venue = venue_default
+
         ev = {
             "id": make_id(source_name, title, date_text),
             "title": title,
@@ -1362,12 +1334,12 @@ def extract_events_from_links(soup, url, source_name, venue_default, categories_
             "date_start": date_start,
             "date_end": date_end,
             "time": None,
-            "venue": venue_default,
+            "venue": lr_venue,
             "source": source_name,
             "source_url": url,
             "link": full_url,
             "price": None,
-            "categories": categories_default or categorize(title, venue_default),
+            "categories": categories_default or categorize(title, lr_venue or ""),
             "description": None,
         }
         if validate_event(ev):
@@ -1495,7 +1467,7 @@ SOURCES = [
     {
         "name": "Ensemble Arts Philly",
         "url": "https://www.ensembleartsphilly.org/tickets-and-events",
-        "venue": "Kimmel Cultural Campus",
+        "venue": "N/A",
         "cards": ["article", ".event-card", ".event-item",
                   "[class*='event']", "[class*='Event']", ".card"],
         "covers": "Classical, jazz, ballet, Broadway, theater, dance",
@@ -1515,7 +1487,7 @@ SOURCES = [
     {
         "name": "Theatre Philadelphia",
         "url": "https://theatrephiladelphia.org/whats-on-stage",
-        "venue": "Various Theaters",
+        "venue": "N/A",
         "cards": ["article", ".show-card", ".show-item", "[class*='show']",
                   ".views-row", ".node--type-show", "[class*='event']"],
         "covers": "All theater across Greater Philadelphia (aggregator)",
@@ -1625,7 +1597,7 @@ SOURCES = [
     {
         "name": "PhiladelphiaDANCE.org",
         "url": "https://philadelphiadance.org/calendar/",
-        "venue": "Various",
+        "venue": "N/A",
         "cards": ["article", "[class*='event']",
                   ".tribe-events-calendar-list__event",
                   ".type-tribe_events", ".card"],
@@ -1637,7 +1609,7 @@ SOURCES = [
     {
         "name": "Greater Phila. Cultural Alliance",
         "url": "https://www.philaculture.org/events-calendar",
-        "venue": "Various",
+        "venue": "N/A",
         "cards": ["article", "[class*='event']", "[class*='Event']",
                   ".views-row", ".node", ".card",
                   ".tribe-events-calendar-list__event", "li.event"],
@@ -1657,7 +1629,7 @@ SOURCES = [
     {
         "name": "BalletX",
         "url": "https://www.balletx.org/season-and-tickets/",
-        "venue": "Various",
+        "venue": "N/A",
         "cards": ["article", "[class*='event']", "[class*='season']",
                   "[class*='performance']", ".card", "[class*='show']"],
         "categories": ["ballet", "dance"],
@@ -1676,7 +1648,7 @@ SOURCES = [
     {
         "name": "Visit Philadelphia Events",
         "url": "https://www.visitphilly.com/things-to-do/events/",
-        "venue": "Various",
+        "venue": "N/A",
         "cards": ["article", "[class*='event']", "[class*='card']",
                   ".views-row", "[class*='listing']", ".card"],
         "covers": "All Philadelphia events (tourism aggregator)",
@@ -1685,7 +1657,7 @@ SOURCES = [
     {
         "name": "Philly Fun Guide",
         "url": "https://phillyfunguide.com/",
-        "venue": "Various",
+        "venue": "N/A",
         "cards": ["article", "[class*='event']", "[class*='show']",
                   ".views-row", ".card", "[class*='listing']"],
         "covers": "All Philadelphia performing arts (TKTS discount aggregator)",
