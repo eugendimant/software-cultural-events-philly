@@ -2237,6 +2237,32 @@ def main():
         except Exception as e:
             print(f"  Warning: link validation skipped ({e})")
 
+    # Event verification — check scraped data against source pages
+    if unique_events:
+        print(f"\n{'=' * 50}")
+        print("EVENT VERIFICATION")
+        print(f"{'=' * 50}")
+        try:
+            from verify_events import verify_event
+            verified = 0
+            mismatches = 0
+            for ev in output["events"][:30]:  # Check first 30 to stay within time limits
+                report = verify_event(ev)
+                if report["status"] == "verified":
+                    verified += 1
+                elif report["status"] in ("dates_mismatch", "venue_mismatch"):
+                    mismatches += 1
+                    print(f"  !! {report['status'].upper()}: [{ev.get('source','')}] "
+                          f"{ev.get('title','')[:40]}")
+                    if report.get("page_dates"):
+                        page_ds, page_de = report["page_dates"]
+                        print(f"     Page says: {page_ds} – {page_de}")
+                        print(f"     Our data:  {ev.get('date_start')} – {ev.get('date_end')}")
+                time.sleep(0.3)
+            print(f"  Verified: {verified}, Mismatches: {mismatches}")
+        except Exception as e:
+            print(f"  Warning: event verification skipped ({e})")
+
 
 if __name__ == "__main__":
     main()
