@@ -1003,10 +1003,11 @@ def get_seed_events():
         {
             "title": "Botany of Nations",
             "date_start": "2026-03-28",
-            "date_end": "2026-09-13",
+            "date_end": "2027-02-14",
             "venue": "Academy of Natural Sciences",
             "source": "Academy of Natural Sciences",
             "source_url": "https://ansp.org/exhibits/exhibits/",
+            "link": "https://ansp.org/experience/exhibits/botany-of-nations",
             "price": None,
             "categories": ["exhibition", "science"],
             "description": "The Lewis and Clark expedition retold through an Indigenous lens. Plants act as portals to under-shared stories, cultures, and sciences of the Indigenous peoples encountered on the journey. Created in collaboration with Indigenous-led nonprofit Local Contexts.",
