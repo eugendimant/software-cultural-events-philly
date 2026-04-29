@@ -1637,9 +1637,31 @@ SOURCES = [
         "name": "Theatre Philadelphia",
         "url": "https://theatrephiladelphia.org/whats-on-stage",
         "venue": "N/A",
-        "cards": ["article", ".show-card", ".show-item", "[class*='show']",
-                  ".views-row", ".node--type-show", "[class*='event']"],
+        "cards": [
+            # WordPress + The Events Calendar / Drupal Views selectors
+            ".views-row", ".node--type-show", ".show-card", ".show-item",
+            "[class*='show']", "article",
+            # The Events Calendar (WordPress plugin) selectors
+            ".tribe-events-calendar-list__event", ".tribe_events",
+            ".type-tribe_events",
+            # Generic fallbacks
+            "[class*='event']", ".card", ".listing-item",
+            ".field-content", ".views-field",
+        ],
         "covers": "All theater across Greater Philadelphia (aggregator)",
+        "venues_list": ["Various"],
+    },
+    # Also try the WordPress Events Calendar API (may return JSON)
+    {
+        "name": "Theatre Philadelphia",
+        "url": "https://theatrephiladelphia.org/calendar",
+        "venue": "N/A",
+        "cards": [
+            ".tribe-events-calendar-list__event", ".tribe_events",
+            ".type-tribe_events", "article", ".views-row",
+            "[class*='event']", "[class*='show']",
+        ],
+        "covers": "All theater across Greater Philadelphia (calendar view)",
         "venues_list": ["Various"],
     },
     {
@@ -2027,6 +2049,12 @@ VENUE_CATEGORIES = {
     "science history institute": ["science", "lecture"],
     "national mechanics": ["lecture"],
     "sofar sounds": ["concert"],
+    "interact theatre": ["theater"],
+    "lantern theater": ["theater"],
+    "quintessence theatre": ["theater"],
+    "theatre philadelphia": ["theater"],
+    "wilma theater": ["theater"],
+    "suzanne roberts": ["theater"],
 }
 
 
