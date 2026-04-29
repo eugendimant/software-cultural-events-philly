@@ -1127,6 +1127,62 @@ def get_seed_events():
             "description": "Live music in an unexpected Philadelphia space — venue revealed the day before. Enjoy three handpicked artists performing stripped-back sets in an intimate, phone-free atmosphere.",
             "time": "7:30 PM",
         },
+        # ═══════════════════════════════════════════════════════════════════
+        # THEATRE PHILADELPHIA (aggregator — verified shows Apr-Jun 2026)
+        # Source: theatrephiladelphia.org/whats-on-stage, broadstreetreview.com
+        # ═══════════════════════════════════════════════════════════════════
+        {
+            "title": "The Contrast",
+            "date_start": "2026-04-09",
+            "date_end": "2026-04-26",
+            "venue": "Quintessence Theatre Group",
+            "source": "Theatre Philadelphia",
+            "source_url": "https://theatrephiladelphia.org/whats-on-stage",
+            "link": "https://theatrephiladelphia.org/whats-on-stage/the-contrast",
+            "price": None,
+            "categories": ["theater"],
+            "description": "Royall Tyler's 1787 comedy of manners — the first play written by an American citizen to be professionally produced. A witty look at the tension between American sincerity and European sophistication.",
+            "time": None,
+        },
+        {
+            "title": "Philly Theatre Week 2026",
+            "date_start": "2026-04-23",
+            "date_end": "2026-05-03",
+            "venue": "Various Philadelphia Theaters",
+            "source": "Theatre Philadelphia",
+            "source_url": "https://theatrephiladelphia.org/whats-on-stage",
+            "link": "https://theatrephiladelphia.org/whats-on-stage/2026-philly-theatre-week",
+            "price": "Pay What You Can",
+            "categories": ["theater"],
+            "description": "The 9th annual Philly Theatre Week — nearly 50 events across Greater Philadelphia with pay-what-you-can pricing. A celebration of the vibrancy and diversity of the regional theatre community.",
+            "time": None,
+        },
+        {
+            "title": "InterAct Theatre: Safe House",
+            "date_start": "2026-04-17",
+            "date_end": "2026-05-10",
+            "venue": "InterAct Theatre Company",
+            "source": "Theatre Philadelphia",
+            "source_url": "https://theatrephiladelphia.org/whats-on-stage",
+            "link": "https://theatrephiladelphia.org/whats-on-stage/theatre-companies/interact-theatre-company",
+            "price": None,
+            "categories": ["theater"],
+            "description": "InterAct Theatre Company presents a new production exploring themes of home, refuge, and belonging in contemporary Philadelphia.",
+            "time": None,
+        },
+        {
+            "title": "Lantern Theater: The Voysey Inheritance",
+            "date_start": "2026-05-07",
+            "date_end": "2026-06-07",
+            "venue": "Lantern Theater Company",
+            "source": "Theatre Philadelphia",
+            "source_url": "https://theatrephiladelphia.org/whats-on-stage",
+            "link": "https://theatrephiladelphia.org/whats-on-stage/theatre-companies/lantern-theater-company",
+            "price": None,
+            "categories": ["theater"],
+            "description": "Lantern Theater Company presents Harley Granville-Barker's masterpiece about a family's reckoning with inherited wealth and moral compromise.",
+            "time": None,
+        },
     ]
 
     # Add computed fields

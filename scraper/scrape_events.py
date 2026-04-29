@@ -1637,8 +1637,14 @@ SOURCES = [
         "name": "Theatre Philadelphia",
         "url": "https://theatrephiladelphia.org/whats-on-stage",
         "venue": "N/A",
-        "cards": ["article", ".show-card", ".show-item", "[class*='show']",
-                  ".views-row", ".node--type-show", "[class*='event']"],
+        "cards": [
+            # Drupal Views selectors (Theatre Philadelphia uses Drupal)
+            ".views-row", ".node--type-show", ".show-card", ".show-item",
+            "[class*='show']", "article",
+            # Generic fallbacks
+            "[class*='event']", ".card", ".listing-item",
+            ".field-content", ".views-field",
+        ],
         "covers": "All theater across Greater Philadelphia (aggregator)",
         "venues_list": ["Various"],
     },
@@ -2027,6 +2033,12 @@ VENUE_CATEGORIES = {
     "science history institute": ["science", "lecture"],
     "national mechanics": ["lecture"],
     "sofar sounds": ["concert"],
+    "interact theatre": ["theater"],
+    "lantern theater": ["theater"],
+    "quintessence theatre": ["theater"],
+    "theatre philadelphia": ["theater"],
+    "wilma theater": ["theater"],
+    "suzanne roberts": ["theater"],
 }
 
 
