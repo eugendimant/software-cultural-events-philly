@@ -116,8 +116,9 @@ class TestCategorize(unittest.TestCase):
         self.assertIn("jazz", cats)
 
     def test_default(self):
+        # No keyword match -> no category (never guess a default)
         cats = categorize("Unknown Event")
-        self.assertEqual(cats, ["performance"])
+        self.assertEqual(cats, [])
 
 
 class TestMakeId(unittest.TestCase):
