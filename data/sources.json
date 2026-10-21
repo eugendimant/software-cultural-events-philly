@@ -27,6 +27,14 @@
       ]
     },
     {
+      "name": "Theatre Philadelphia",
+      "url": "https://theatrephiladelphia.org/calendar",
+      "covers": "All theater across Greater Philadelphia (calendar view)",
+      "venues": [
+        "Various"
+      ]
+    },
+    {
       "name": "Penn Live Arts",
       "url": "https://pennlivearts.org/events/",
       "covers": "Dance, music, jazz, classical, world, theater",
