@@ -55,6 +55,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/sources.json
           git diff --staged --quiet || git commit -m "data: update event listings $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # main may have moved since checkout (merged PRs) — rebase before pushing
+          git pull --rebase -X theirs origin main
           git push
 
   deploy:
