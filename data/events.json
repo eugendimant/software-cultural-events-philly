@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-21T16:26:29.552591Z",
-  "total_events": 313,
+  "last_updated": "2026-10-22T16:24:16.718535Z",
+  "total_events": 318,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -34,7 +34,7 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 4 events (HTML)",
       "Arden Theatre: 5 events (HTML)",
-      "Chris' Jazz Cafe: 61 events (HTML)",
+      "Chris' Jazz Cafe: 62 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -42,7 +42,7 @@
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 66 events (HTML)",
+      "Barnes Foundation: 78 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 15 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77838bcff200>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7ac022d89e80>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -2739,23 +2739,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "71d5d136dc9f",
-      "title": "Trumpeter Rockwell Valentine & His Band",
-      "date_display": "October 21",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/142610",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
       "id": "4b1c5570fbda",
       "title": "Trombonist Caleb Eckstein & His Boptet",
       "date_display": "October 22",
@@ -2821,7 +2804,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> Daniel Finn<br />Wilfried Williams<br />Mekhi Boone </p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "895082697258",
@@ -3110,7 +3093,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Clafy - Bass<br />Charles Goold - Drums </p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
+      "description": "<p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Clafy - Bass<br />Charles Goold - Drums </p><p>Sinatra with Style: Hits and Rare Gems performed by Richard Cortez and an all-star band.</p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "2fced8ed3efb",
@@ -3196,6 +3179,23 @@
         "jazz"
       ],
       "description": "<p> Tony Miceli - Vibraphone<br />Chris Farr - Saxophone<br />John Swana - Trumpet<br />Madison Rast - Bass<br />Dan Monaghan - Drums<br />Tim Armacost - Saxophone </p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "0d778c30eb2b",
+      "title": "Bianca Love and her Band",
+      "date_display": "November 24",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146017",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "2b07279bfdbf",
@@ -3638,6 +3638,23 @@
         "jazz"
       ],
       "description": "Ring in 2027 with your choice of shows! Come early or late and get the best that Chris' has to offer as we say goodbye to 2026 and welcome a new year in 2027. Choose your celebration time ~ 7pm, 9pm or 11pm General Admission ~ includes a la carte menu: $50Dinner & Show package ~ includes 3-course dinner: $150VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $170(Beverages not included) All-in price for Dinner & Show include $20 per person server gratuity"
+    },
+    {
+      "id": "798903b008dc",
+      "title": "Eric McGarry Group",
+      "date_display": "January 12",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146016",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "848219098e1f",
@@ -4238,7 +4255,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -4272,7 +4289,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -4289,7 +4306,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -4323,7 +4340,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "827ee7494b07",
@@ -4613,6 +4630,74 @@
         "exhibition"
       ],
       "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
+    },
+    {
+      "id": "0b1428e4df34",
+      "title": "New Member Reception",
+      "date_display": "Monday, November 2, 5:30 \u2013 8pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members/new-member-reception-november-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore Noguchi to Asawa: Designing Postwar America and the collection at this special evening reception for new members."
+    },
+    {
+      "id": "732698b06f62",
+      "title": "Members-Only Online Tour: Noguchi to Asawa: Designing Postwar America",
+      "date_display": "Wednesday, November 4, 2 \u2013 3pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "3:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members-only-online-tour-noguchi-to-asawa-november",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Members are invited to an exclusive virtual tour of our newest exhibition."
+    },
+    {
+      "id": "b2384f15036d",
+      "title": "First Friday: Miki Yamanaka Trio & PAAFF",
+      "date_display": "Friday, November 6, 6 \u2013 9pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "9:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/first-friday-november-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Tonight\u2019s performance features jazz pianist Miki Yamanaka."
+    },
+    {
+      "id": "5dfb3437ea1e",
+      "title": "Lecture: Duchamp\u2019s Fountain: A Second Opinion",
+      "date_display": "Saturday, November 7, 12 \u2013 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/duchamps-fountain",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore the controversial work and its impact on American modernism in 1920 letters between William Carlos Williams and Albert Barnes."
     },
     {
       "id": "8d34d6910875",
@@ -5177,12 +5262,12 @@
       "description": null
     },
     {
-      "id": "ffc9511ce32e",
+      "id": "8ee144d3e270",
       "title": "Study Hall x Distillations: American Vice",
-      "date_display": "Oct 21 Wed 12pm-12:45pm",
+      "date_display": "Oct 24 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
-      "time": "12:45 PM",
+      "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -5193,42 +5278,6 @@
         "science"
       ],
       "description": "Thursday, October 29, 2026 | 6pm-8pm EDT"
-    },
-    {
-      "id": "54d1c42db872",
-      "title": "Othmer Library Tour",
-      "date_display": "Oct 21 Wed 12pm-12:45pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261021/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "6a5bd18c2c6d",
-      "title": "Artefacts XXXI: Trust and Objects",
-      "date_display": "Oct 19 Mon Oct 21 Wed",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/artefacts-xxxi-trust-and-objects/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "3205859b1ce3",
@@ -5313,6 +5362,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/stuff-from-your-house-highlights-tour-20261031/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "1712fb94b50f",
+      "title": "Othmer Library Tour",
+      "date_display": "Nov 04 Wed 12pm-12:45pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261104/",
       "price": null,
       "categories": [
         "lecture",
@@ -5457,6 +5524,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/forensics-highlights-tour-20261121/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "7a27003f5941",
+      "title": "First Friday: Start Talking Science",
+      "date_display": "Dec 04 Fri 5pm-7pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "5:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/first-friday-start-talking-science-2026/",
       "price": null,
       "categories": [
         "lecture",
