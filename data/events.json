@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-22T16:24:16.718535Z",
-  "total_events": 318,
+  "last_updated": "2026-10-23T16:14:04.859881Z",
+  "total_events": 315,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -28,13 +28,13 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 28 events (HTML)",
-      "Penn Live Arts: 51 events (links)",
+      "Ensemble Arts Philly: 27 events (HTML)",
+      "Penn Live Arts: 52 events (links)",
       "Opera Philadelphia: 10 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
-      "FringeArts: 4 events (HTML)",
+      "FringeArts: 3 events (HTML)",
       "Arden Theatre: 5 events (HTML)",
-      "Chris' Jazz Cafe: 62 events (HTML)",
+      "Chris' Jazz Cafe: 61 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -42,7 +42,7 @@
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 78 events (HTML)",
+      "Barnes Foundation: 72 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 15 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7ac022d89e80>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7b4ada2b9730>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -853,25 +853,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "5979b36666a6",
-      "title": "From Mindful to Ecstatic: A three-day movement workshop",
-      "date_display": "October 19-21, 2026",
-      "date_start": "2026-10-19",
-      "date_end": "2026-10-21",
-      "time": "8:30 PM",
-      "venue": "FringeArts",
-      "source": "FringeArts",
-      "source_url": "https://fringearts.com/programs/",
-      "link": "https://fringearts.com/event/from-mindful-to-ecstatic-a-three-day-movement-intensive/",
-      "price": null,
-      "categories": [
-        "dance",
-        "lecture",
-        "theater"
-      ],
-      "description": "Throughout the year, FringeArts curates and presents a series of performances and events by local, national, and international contemporary artists. We also host workshops, works-in-progress, and community events. Click here to learn more about FringeArts."
-    },
-    {
       "id": "61e82f54b339",
       "title": "The Great Gatsby",
       "date_display": "Oct 20 - Nov 1, 2026",
@@ -906,21 +887,6 @@
       "description": "If ever there was music meant to mimic the rush of blood through the veins of youth, this is it: Lusty love songs, drinking anthems, pagan celebrations, and odes to the moon, mined from medieval texts, have made this choral thriller a favorite since its creation nearly a century ago."
     },
     {
-      "id": "abf127c8ff92",
-      "title": "Lakecia Benjamin",
-      "date_display": "Oct 22, 2026",
-      "date_start": "2026-10-22",
-      "date_end": "2026-10-22",
-      "time": "7:30 PM",
-      "venue": "Perelman Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/lakecia-benjamin",
-      "price": null,
-      "categories": [],
-      "description": "To witness a live performance by alto saxophonist, MC, and bandleader Lakecia Benjamin is to never forget it. The success of her most recent releases, 2023's Phoenix and 2020's Pursuance: The Coltranes, positioned Benjamin among jazz's most celebrated recording artists."
-    },
-    {
       "id": "099920602d6e",
       "title": "The 8-Bit Big Band",
       "date_display": "Oct 24, 2026",
@@ -953,6 +919,24 @@
         "science"
       ],
       "description": "Celebrate Spooktacular Science Day at The Franklin Institute in Philadelphia on October 24 with trick-or-treating, live science shows, costumes, slime, and family Halloween fun."
+    },
+    {
+      "id": "e0f9cca28cf6",
+      "title": "FEASTIVAL 2026",
+      "date_display": "October 28, 2026",
+      "date_start": "2026-10-28",
+      "date_end": "2026-10-28",
+      "time": "6:00 PM",
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com/event/feastival-2026/",
+      "price": "$200",
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": "Throughout the year, FringeArts curates and presents a series of performances and events by local, national, and international contemporary artists. We also host workshops, works-in-progress, and community events. Click here to learn more about FringeArts."
     },
     {
       "id": "9ca867f99f98",
@@ -1529,6 +1513,25 @@
         "jazz"
       ],
       "description": "Led by a member of the company, this masterclass offers participants the opportunity to learn excerpts from Ballets Jazz Montr\u00e9al's current repertoire. The workshop is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable dance attire. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
+    },
+    {
+      "id": "3a0aefd9257a",
+      "title": "Penn Players",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/the-prom",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance",
+        "theater"
+      ],
+      "description": "Emma and Alyssa are young, in love, and want nothing more than to go to prom as a couple. The only problem? They live in Edgewater, Indiana, a community that would rather cancel the whole event than let them go together. But when a group of narcissistic Broadway actors arrive to support an inclusive prom (and give their failing careers a boost of good press), the town is turned upside down. This musical comedy balances heart and hilarity, satirizing ignorance in all its forms while exploring how to stand up for what is right, lead with love, and the unexpected ways people can learn from one another."
     },
     {
       "id": "1ec02939f908",
@@ -2384,12 +2387,12 @@
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
     },
     {
-      "id": "f258d4f2f5c2",
+      "id": "8563d1bfc3ba",
       "title": "Opera Overtures: Suddenly Last Summer",
-      "date_display": "Oct 22",
+      "date_display": "Oct 23",
       "date_start": null,
       "date_end": null,
-      "time": "6:00 PM",
+      "time": "7:00 PM",
       "venue": "Forrest Theatre",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
@@ -2399,15 +2402,15 @@
         "opera",
         "classical"
       ],
-      "description": "Opera Overtures: Suddenly Last Summer 6:00 p.m. | Forrest Theatre Warm up for Suddenly Last Summer with a pre-show talk"
+      "description": "Opera Overtures: Suddenly Last Summer 7:00 p.m. | Forrest Theatre Warm up for Suddenly Last Summer with a pre-show talk"
     },
     {
-      "id": "17d35dea3b8d",
+      "id": "2776d100b1d7",
       "title": "Suddenly Last Summer",
-      "date_display": "Oct 22",
+      "date_display": "Oct 23",
       "date_start": null,
       "date_end": null,
-      "time": "7:00 PM",
+      "time": "8:00 PM",
       "venue": "Forrest Theatre",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
@@ -2454,6 +2457,24 @@
         "classical"
       ],
       "description": "An American president loses reelection, decides to overthrow the new government, and then redesigns the White House. This is the story of George and Ira Gershwin\u2019s 1933 musical that aims its barbs at everything from totalitarianism to fashion shows."
+    },
+    {
+      "id": "67cddcbfdcf3",
+      "title": "VIVACE Party: Let 'Em Eat Cake",
+      "date_display": "Jan 30",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:30 PM",
+      "venue": "Venue to be announced",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/other/2027/vivace-party-let-em-eat-cake/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "VIVACE Party: Let 'Em Eat Cake 10:30 p.m. | Venue to be announced A post-performance party with Opera Philadelphia's community for young friends"
     },
     {
       "id": "1234ee884219",
@@ -2636,24 +2657,6 @@
       "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
     },
     {
-      "id": "e0f9cca28cf6",
-      "title": "FEASTIVAL 2026",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "FringeArts",
-      "source": "FringeArts",
-      "source_url": "https://fringearts.com/programs/",
-      "link": "https://fringearts.com/event/feastival-2026/",
-      "price": "$200",
-      "categories": [
-        "dance",
-        "theater"
-      ],
-      "description": null
-    },
-    {
       "id": "896b1dc55d59",
       "title": "Girl from the North Country",
       "date_display": "",
@@ -2737,40 +2740,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "4b1c5570fbda",
-      "title": "Trombonist Caleb Eckstein & His Boptet",
-      "date_display": "October 22",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/142611",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
-      "id": "f428c5493064",
-      "title": "Oscar Beesley Quartet & Temple University Jam Session",
-      "date_display": "October 22",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/387722",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><b><u>Starting at 10:30pm</u></b></p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "510023b185e9",
@@ -3365,7 +3334,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Caleb Curtis, Anwar Marshall, Adam Faulk, Madison Rast Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $100VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><strong></strong>Caleb Curtis, Anwar Marshall, Adam Faulk, Madison Rast</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "6393dfd77431",
@@ -3382,7 +3351,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "98b6ab7ef998",
@@ -3399,7 +3368,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "f85f303b2a1b",
@@ -3655,6 +3624,23 @@
         "jazz"
       ],
       "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "b6e0f1e6b339",
+      "title": "Pianist George Colligan & His Quintet featuring Saxophonists Nicole Glover & Jaleel Shaw",
+      "date_display": "January 15",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146091",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "848219098e1f",
@@ -4255,7 +4241,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "a41c3cba7106",
@@ -4289,7 +4275,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -4306,7 +4292,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -4340,7 +4326,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "827ee7494b07",
@@ -4494,40 +4480,6 @@
         "exhibition"
       ],
       "description": "Revisit the critically panned show that pitted Dr. Barnes against Philadelphia\u2019s elite, and see which works remain in the collection."
-    },
-    {
-      "id": "9e617ce5c649",
-      "title": "Lecture: Eiffel Tower Confidential",
-      "date_display": "Thursday, October 22, 12 \u2013 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/eiffel-tower-confidential",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Learn the Eiffel Tower\u2019s hidden history, including its connections to the French Empire and surveillance, with art historian Hollis Clayson."
-    },
-    {
-      "id": "ea8b7f52d621",
-      "title": "Online Member Orientation",
-      "date_display": "Friday, October 23, 10:30 \u2013 11:30am",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:30 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members/online-member-orientation-october-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "New members are invited to join Barnes staff online for a chat about membership and benefits, followed by a docent-led virtual tour of the collection."
     },
     {
       "id": "16a17dae54d7",
