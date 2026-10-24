@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23T16:14:04.859881Z",
-  "total_events": 315,
+  "last_updated": "2026-10-24T15:09:37.081073Z",
+  "total_events": 316,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -34,7 +34,7 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 3 events (HTML)",
       "Arden Theatre: 5 events (HTML)",
-      "Chris' Jazz Cafe: 61 events (HTML)",
+      "Chris' Jazz Cafe: 59 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7b4ada2b9730>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x763ed25dfb30>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -711,9 +711,9 @@
       "description": "Before the new Egyptian galleries open at the Penn Museum at the end of this year, join Jennifer Wegner, Ph.D. as she explores how ancient embalmers worked to transform the dead for life after death and offers a look at the art and science behind this intriguing practice."
     },
     {
-      "id": "86f02e11b161",
+      "id": "189cc47cd919",
       "title": "Oliver Mayman + Jam Session",
-      "date_display": "October 23",
+      "date_display": "October 30",
       "date_start": "2026-04-24",
       "date_end": "2026-04-24",
       "time": "11:00 PM",
@@ -1475,26 +1475,6 @@
       "description": null
     },
     {
-      "id": "d06e3e3e2726",
-      "title": "Ballets Jazz Montr\u00e9al",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/BJM2026",
-      "price": null,
-      "categories": [
-        "ballet",
-        "concert",
-        "dance",
-        "jazz"
-      ],
-      "description": "A beloved hit with our audiences back in 2019, Ballets Jazz Montr\u00e9al returns in the final tour of Dance Me, a riveting homage to famed poet and singer/songwriter Leonard Cohen. With \u201cvirtuoso dancing and an unbeatable soundtrack\u201d (Broad Street Review) of Cohen's iconic songs, choreographers Annabelle Lopez Ochoa, Andonis Foniadakis and Ihsan Rustem evoke the cycles of human existence explored in his deeply insightful music and poems. \u201cLeonard Cohen\u2019s art and soul shine on in this stirring tribute\u201d (The Telegraph), using beautiful choreography and scenic design to reveal new meaning in favorites like \"Hallelujah\" and \"Suzanne.\u201d Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
       "id": "f1a1d5622a62",
       "title": "Masterclass: Ballets Jazz Montr\u00e9al",
       "date_display": "",
@@ -1513,6 +1493,26 @@
         "jazz"
       ],
       "description": "Led by a member of the company, this masterclass offers participants the opportunity to learn excerpts from Ballets Jazz Montr\u00e9al's current repertoire. The workshop is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable dance attire. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
+    },
+    {
+      "id": "d06e3e3e2726",
+      "title": "Ballets Jazz Montr\u00e9al",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/BJM2026",
+      "price": null,
+      "categories": [
+        "ballet",
+        "concert",
+        "dance",
+        "jazz"
+      ],
+      "description": "A beloved hit with our audiences back in 2019, Ballets Jazz Montr\u00e9al returns in the final tour of Dance Me, a riveting homage to famed poet and singer/songwriter Leonard Cohen. With \u201cvirtuoso dancing and an unbeatable soundtrack\u201d (Broad Street Review) of Cohen's iconic songs, choreographers Annabelle Lopez Ochoa, Andonis Foniadakis and Ihsan Rustem evoke the cycles of human existence explored in his deeply insightful music and poems. \u201cLeonard Cohen\u2019s art and soul shine on in this stirring tribute\u201d (The Telegraph), using beautiful choreography and scenic design to reveal new meaning in favorites like \"Hallelujah\" and \"Suzanne.\u201d Save up to 35% by including this performance in a subscription! \u00bb Learn more"
     },
     {
       "id": "3a0aefd9257a",
@@ -2387,12 +2387,12 @@
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
     },
     {
-      "id": "8563d1bfc3ba",
+      "id": "913acf604ff6",
       "title": "Opera Overtures: Suddenly Last Summer",
-      "date_display": "Oct 23",
+      "date_display": "Oct 25",
       "date_start": null,
       "date_end": null,
-      "time": "7:00 PM",
+      "time": "1:00 PM",
       "venue": "Forrest Theatre",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
@@ -2402,15 +2402,15 @@
         "opera",
         "classical"
       ],
-      "description": "Opera Overtures: Suddenly Last Summer 7:00 p.m. | Forrest Theatre Warm up for Suddenly Last Summer with a pre-show talk"
+      "description": "Opera Overtures: Suddenly Last Summer 1:00 p.m. | Forrest Theatre Warm up for Suddenly Last Summer with a pre-show talk"
     },
     {
-      "id": "2776d100b1d7",
+      "id": "6ead0a6c87f7",
       "title": "Suddenly Last Summer",
-      "date_display": "Oct 23",
+      "date_display": "Oct 25",
       "date_start": null,
       "date_end": null,
-      "time": "8:00 PM",
+      "time": "2:00 PM",
       "venue": "Forrest Theatre",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
@@ -2475,6 +2475,42 @@
         "classical"
       ],
       "description": "VIVACE Party: Let 'Em Eat Cake 10:30 p.m. | Venue to be announced A post-performance party with Opera Philadelphia's community for young friends"
+    },
+    {
+      "id": "43d6c39e2527",
+      "title": "Inside the Music: Aida",
+      "date_display": "Apr 03",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Athenaeum of Philadelphia",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-aida/",
+      "price": "$5.",
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Explore the music of Verdi's monumental masterwork Aida, coming to the Academy of Music April 17-25, at this engaging talk with Opera Philadelphia's Scholar-in-Residence Dr. Lily Kass."
+    },
+    {
+      "id": "72259dcd6181",
+      "title": "Aida",
+      "date_display": "Apr 17",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:00 PM",
+      "venue": "Academy of Music",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/2627-season/aida/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Explore Opera Philadelphia's 26/27 Season. Subscriptions and Opera Pass are on sale now."
     },
     {
       "id": "1234ee884219",
@@ -2740,23 +2776,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "510023b185e9",
-      "title": "Guitarist Aaron Matson Quintet",
-      "date_display": "October 23",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/140386",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Aaron Matson - Guitar<br />Chris McCarthy - Piano<br />Chris Bittner - Saxophone<br />Ilya Osachuk - Bass<br />Quinton Cain - Drums </p> <p> <b><u>Set Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $25<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $100<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $120<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "04ff0c63810a",
@@ -3385,7 +3404,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "A full weekend of shows!Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p>A full weekend of shows!</p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "570860a5943b",
@@ -4152,8 +4171,8 @@
       "description": null
     },
     {
-      "id": "53c1eea2a831",
-      "title": "Rocky Season 2026: A New, Eight-Week Celebration in Philly Rocky Season 2026: A New, Eight-Week... Rocky Season 2026: A New, Eight-Week Celebration in Philly Event",
+      "id": "261d904d5025",
+      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Rocky Season 2026: Inside Philly's New,... Rocky Season 2026: Inside Philly's New, Eight-Week... Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
