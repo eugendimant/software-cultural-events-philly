@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T15:09:37.081073Z",
-  "total_events": 316,
+  "last_updated": "2026-10-25T15:22:02.499703Z",
+  "total_events": 311,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -28,13 +28,13 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 27 events (HTML)",
-      "Penn Live Arts: 52 events (links)",
+      "Ensemble Arts Philly: 26 events (HTML)",
+      "Penn Live Arts: 50 events (links)",
       "Opera Philadelphia: 10 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 3 events (HTML)",
       "Arden Theatre: 5 events (HTML)",
-      "Chris' Jazz Cafe: 59 events (HTML)",
+      "Chris' Jazz Cafe: 57 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -42,7 +42,7 @@
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 72 events (HTML)",
+      "Barnes Foundation: 69 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 15 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x763ed25dfb30>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7fe35076a9c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -625,9 +625,9 @@
       "date_display": "Mar 28 \u2013 Feb 14, 2027"
     },
     {
-      "id": "abae0aeb5434",
+      "id": "1ae7a480c4f1",
       "title": "James Santangelo's Late Night Jam",
-      "date_display": "October 24",
+      "date_display": "October 31",
       "date_start": "2026-04-11",
       "date_end": "2026-04-11",
       "time": "11:00 PM",
@@ -885,23 +885,6 @@
       "price": null,
       "categories": [],
       "description": "If ever there was music meant to mimic the rush of blood through the veins of youth, this is it: Lusty love songs, drinking anthems, pagan celebrations, and odes to the moon, mined from medieval texts, have made this choral thriller a favorite since its creation nearly a century ago."
-    },
-    {
-      "id": "099920602d6e",
-      "title": "The 8-Bit Big Band",
-      "date_display": "Oct 24, 2026",
-      "date_start": "2026-10-24",
-      "date_end": "2026-10-24",
-      "time": "8:00 PM",
-      "venue": "Miller Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/the-8-bit-big-band",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "The 8-Bit Big Band is a multi-GRAMMY Award-winning contemporary symphonic jazz orchestra created to celebrate and reimagine video game music's most beloved hits, rearranged in exciting and inventive ways that push the boundaries of how these legendary soundtracks are experienced as a standalone body of work."
     },
     {
       "id": "4ee178436747",
@@ -1473,46 +1456,6 @@
         "dance"
       ],
       "description": null
-    },
-    {
-      "id": "f1a1d5622a62",
-      "title": "Masterclass: Ballets Jazz Montr\u00e9al",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-BJM2026",
-      "price": null,
-      "categories": [
-        "ballet",
-        "concert",
-        "dance",
-        "jazz"
-      ],
-      "description": "Led by a member of the company, this masterclass offers participants the opportunity to learn excerpts from Ballets Jazz Montr\u00e9al's current repertoire. The workshop is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable dance attire. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
-    },
-    {
-      "id": "d06e3e3e2726",
-      "title": "Ballets Jazz Montr\u00e9al",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/BJM2026",
-      "price": null,
-      "categories": [
-        "ballet",
-        "concert",
-        "dance",
-        "jazz"
-      ],
-      "description": "A beloved hit with our audiences back in 2019, Ballets Jazz Montr\u00e9al returns in the final tour of Dance Me, a riveting homage to famed poet and singer/songwriter Leonard Cohen. With \u201cvirtuoso dancing and an unbeatable soundtrack\u201d (Broad Street Review) of Cohen's iconic songs, choreographers Annabelle Lopez Ochoa, Andonis Foniadakis and Ihsan Rustem evoke the cycles of human existence explored in his deeply insightful music and poems. \u201cLeonard Cohen\u2019s art and soul shine on in this stirring tribute\u201d (The Telegraph), using beautiful choreography and scenic design to reveal new meaning in favorites like \"Hallelujah\" and \"Suzanne.\u201d Save up to 35% by including this performance in a subscription! \u00bb Learn more"
     },
     {
       "id": "3a0aefd9257a",
@@ -2778,23 +2721,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "04ff0c63810a",
-      "title": "2023 Sarah Vaughan Jazz Vocalist Winner Tyreek McDole & His Quintet",
-      "date_display": "October 24",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/138261",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Daniel Finn<br />Wilfried Williams<br />Mekhi Boone </p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
-    },
-    {
       "id": "895082697258",
       "title": "Dan Wilkins Quartet",
       "date_display": "October 27",
@@ -3421,7 +3347,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Wille Morris III, Mekhi Boone, Neil Podgursky, Micah Jones Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $100VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p dir=\"ltr\">Wille Morris III, Mekhi Boone, Neil Podgursky, Micah Jones</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "3193cca8e5ea",
@@ -3438,7 +3364,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "5eab224d090c",
@@ -3455,7 +3381,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $25Dinner & Show ~ includes 3-course dinner: $85VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $105(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "15edd0001049",
@@ -3472,7 +3398,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Starting at 10:30pm $15 General Admission Join our YouTube Channel to watch the show live: Chris' Jazz Cafe - YouTube"
+      "description": "<p><b><u>Starting at 10:30pm</u></b></p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "94f7bb8f5f15",
@@ -3489,7 +3415,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p><p></p>"
     },
     {
       "id": "8ec2283ac391",
@@ -3662,23 +3588,6 @@
       "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
-      "id": "848219098e1f",
-      "title": "Alex Bugnon | Thursday Oct 22 through Saturday October 24 | Showtimes Vary by Day | presented by Unscripted Jazz",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/alex-bugnon-thursday-oct-22-through-saturday-october-24-showtimes-vary-by-day-presented-by-unscripted-jazz/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
-    },
-    {
       "id": "7958a6f25b89",
       "title": "\"Obsiidyn Is Jazz! Music You Can Feel\u201d | Sunday October 25 | 6:00PM & 8:30PM",
       "date_display": "",
@@ -3825,6 +3734,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/jeff-bradshaw-fri-sat-sun-nov-20-21-22-showtimes-vary-by-day-tickets-on-sale-soon/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "387ba1a5fcb7",
+      "title": "NICOLE HENRY | FRI, SAT & SUN NOV 27, 28 & 29 | SHOWTIMES VARY BY DAY",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/nicole-henry-fri-sat-sun-nov-27-28-29-showtimes-vary-by-day-tickets-on-sale-soon/",
       "price": null,
       "categories": [
         "jazz"
@@ -4260,7 +4186,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -4294,7 +4220,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -4311,7 +4237,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -4345,7 +4271,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "827ee7494b07",
@@ -4652,23 +4578,6 @@
         "exhibition"
       ],
       "description": "Tonight\u2019s performance features jazz pianist Miki Yamanaka."
-    },
-    {
-      "id": "5dfb3437ea1e",
-      "title": "Lecture: Duchamp\u2019s Fountain: A Second Opinion",
-      "date_display": "Saturday, November 7, 12 \u2013 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/duchamps-fountain",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore the controversial work and its impact on American modernism in 1920 letters between William Carlos Williams and Albert Barnes."
     },
     {
       "id": "8d34d6910875",
@@ -5233,12 +5142,12 @@
       "description": null
     },
     {
-      "id": "8ee144d3e270",
+      "id": "b0f2ebeb89fb",
       "title": "Study Hall x Distillations: American Vice",
-      "date_display": "Oct 24 Sat 10am-5pm",
+      "date_display": "Oct 29 Thu 6pm-8pm",
       "date_start": null,
       "date_end": null,
-      "time": "10:00 AM",
+      "time": "6:00 PM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -5251,52 +5160,34 @@
       "description": "Thursday, October 29, 2026 | 6pm-8pm EDT"
     },
     {
-      "id": "3205859b1ce3",
+      "id": "b551d76931c3",
+      "title": "Art of Alchemy Self-Guided Visit",
+      "date_display": "Oct 29 Thu 1pm-2pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261029/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "a8b8c8d04f87",
       "title": "Stories of Science: Craft-tober",
-      "date_display": "Oct 24 Sat 10am-5pm",
+      "date_display": "Oct 31 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
       "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/stories-of-sciencebr-craft-tober-20261024/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "a6a665dd6f2b",
-      "title": "Unwell Waters Highlights Tour",
-      "date_display": "Oct 24 Sat 11:30am",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:30 AM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/unwell-waters-highlights-tour-202610/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "fc86ed43adc0",
-      "title": "Art of Alchemy Self-Guided Visit",
-      "date_display": "Oct 24 Sat 2pm-3pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261024/",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-sciencebr-craft-tober-20261031/",
       "price": null,
       "categories": [
         "lecture",
@@ -5513,6 +5404,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/first-friday-start-talking-science-2026/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "c6e416bba0f2",
+      "title": "Stories of Science: Cuppa Chemistry",
+      "date_display": "Dec 05 Sat 10am-5pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-cuppa-chemistry-20261205/",
       "price": null,
       "categories": [
         "lecture",
