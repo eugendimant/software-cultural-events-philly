@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-25T15:22:02.499703Z",
-  "total_events": 311,
+  "last_updated": "2026-10-26T18:02:17.335693Z",
+  "total_events": 307,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -28,12 +28,12 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 26 events (HTML)",
+      "Ensemble Arts Philly: 25 events (HTML)",
       "Penn Live Arts: 50 events (links)",
-      "Opera Philadelphia: 10 events (HTML)",
+      "Opera Philadelphia: 9 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 3 events (HTML)",
-      "Arden Theatre: 5 events (HTML)",
+      "Arden Theatre: 4 events (HTML)",
       "Chris' Jazz Cafe: 57 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
@@ -42,7 +42,7 @@
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 69 events (HTML)",
+      "Barnes Foundation: 66 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 15 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7fe35076a9c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77430ce32b40>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -872,38 +872,6 @@
       "description": "THE GREAT GATSBY is a \u201cBroadway extravaganza that explodes with life and energy\u201d (Entertainment Weekly). Based on the classic American novel by F. Scott Fitzgerald, the Tony Award\u00ae-winning new musical is an unforgettable journey of love, wealth and tragedy that brings the Roaring Twenties to life on stage."
     },
     {
-      "id": "ecd25e88531a",
-      "title": "Carmina burana",
-      "date_display": "Oct 22 - Oct 25, 2026",
-      "date_start": "2026-10-22",
-      "date_end": "2026-10-25",
-      "time": null,
-      "venue": "Marian Anderson Hall",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://philorch.ensembleartsphilly.org/tickets-and-events/2026-27-season/carmina-burana",
-      "price": null,
-      "categories": [],
-      "description": "If ever there was music meant to mimic the rush of blood through the veins of youth, this is it: Lusty love songs, drinking anthems, pagan celebrations, and odes to the moon, mined from medieval texts, have made this choral thriller a favorite since its creation nearly a century ago."
-    },
-    {
-      "id": "4ee178436747",
-      "title": "FREE WITH ADMISSION",
-      "date_display": "Oct 24 2026 | 11am - 3pm",
-      "date_start": "2026-10-24",
-      "date_end": "2026-10-24",
-      "time": "11:00 AM",
-      "venue": "The Franklin Institute",
-      "source": "The Franklin Institute",
-      "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/events-calendar/20261024/spooktacular-science-day",
-      "price": null,
-      "categories": [
-        "science"
-      ],
-      "description": "Celebrate Spooktacular Science Day at The Franklin Institute in Philadelphia on October 24 with trick-or-treating, live science shows, costumes, slime, and family Halloween fun."
-    },
-    {
       "id": "e0f9cca28cf6",
       "title": "FEASTIVAL 2026",
       "date_display": "October 28, 2026",
@@ -952,6 +920,23 @@
       "price": null,
       "categories": [],
       "description": "Come prepared to dance in the aisles! This legendary band and its leader Juan de Marcos have done more than perhaps any other artistic entity to both preserve and expand the music of Cuba, showcasing its most venerable players and newest stars and earning four GRAMMY nominations along the way."
+    },
+    {
+      "id": "c4621e954fdb",
+      "title": "FAMILY FUNDRAISER",
+      "date_display": "Nov 13 2026 | 4:30 - 8pm",
+      "date_start": "2026-11-13",
+      "date_end": "2026-11-13",
+      "time": "8:00 PM",
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Calling all curious kiddos, playful parents, and thrill-seeking families! FunFest: A Night at the Museum is your golden ticket to an after-hours adventure where the museum turns into your playground."
     },
     {
       "id": "960c73609def",
@@ -1231,6 +1216,25 @@
       "description": "Yohay Sponder is an Israeli bilingual standup comedian turned international sensation. With over 20 years of experience, Sponder brings his optimistic outlook on life to the stage."
     },
     {
+      "id": "23c60646c6c3",
+      "title": "PAW Patrol Live! \"A Mighty Adventure\"",
+      "date_display": "Feb 20 - Feb 21, 2027",
+      "date_start": "2027-02-20",
+      "date_end": "2027-02-21",
+      "time": "10:00 AM",
+      "venue": "Academy Of Music",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/family-discovery-series/paw-patrol-live",
+      "price": null,
+      "categories": [
+        "ballet",
+        "classical",
+        "opera"
+      ],
+      "description": "Ensemble Arts Presents in association with VStar Entertainment Group PAW Patrol Live! \"A Mighty Adventure\" Feb 20 - Feb 21, 2027 Academy Of Music"
+    },
+    {
       "id": "0f45a723d24e",
       "title": "Peter and the Wolf",
       "date_display": "Feb 20, 2027",
@@ -1374,21 +1378,6 @@
       "price": null,
       "categories": [],
       "description": "Oh, Mary! is a dark comedy about a miserable, suffocated Mary Todd Lincoln in the weeks leading up to Abraham Lincoln\u2019s assassination. Unrequited yearning, alcoholism, and suppressed desires abound in this 80-minute one-act play that finally examines the forgotten life and dreams of Mrs."
-    },
-    {
-      "id": "06cb58bb6f02",
-      "title": "An Evening with David Sedaris",
-      "date_display": "Apr 5, 2027",
-      "date_start": "2027-04-05",
-      "date_end": "2027-04-05",
-      "time": "7:30 PM",
-      "venue": "Miller Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/david-sedaris",
-      "price": null,
-      "categories": [],
-      "description": "David Sedaris, America's best-selling humorist and social satirist, returns following the publication of his most recent book, The Land And Its People. In his customary sartorial and humorous manner, David will make you laugh and think in equal measures, with all new, unpublished stories and commentary."
     },
     {
       "id": "7c7c9214bae2",
@@ -2330,42 +2319,6 @@
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
     },
     {
-      "id": "913acf604ff6",
-      "title": "Opera Overtures: Suddenly Last Summer",
-      "date_display": "Oct 25",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Forrest Theatre",
-      "source": "Opera Philadelphia",
-      "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/lectures/2026/opera-overtures-suddenly-last-summer/",
-      "price": null,
-      "categories": [
-        "opera",
-        "classical"
-      ],
-      "description": "Opera Overtures: Suddenly Last Summer 1:00 p.m. | Forrest Theatre Warm up for Suddenly Last Summer with a pre-show talk"
-    },
-    {
-      "id": "6ead0a6c87f7",
-      "title": "Suddenly Last Summer",
-      "date_display": "Oct 25",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Forrest Theatre",
-      "source": "Opera Philadelphia",
-      "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/2627-season/suddenly-last-summer/",
-      "price": null,
-      "categories": [
-        "opera",
-        "classical"
-      ],
-      "description": "What is madness and what is truth? Must truth bend to power? Tennessee Williams\u2019s feverish one-act play is the basis for this new opera from composer Courtney Bryan and director Daniel Fish."
-    },
-    {
       "id": "1efde8f87961",
       "title": "Inside the Music: Let 'Em Eat Cake",
       "date_display": "Jan 09",
@@ -2454,6 +2407,24 @@
         "classical"
       ],
       "description": "Explore Opera Philadelphia's 26/27 Season. Subscriptions and Opera Pass are on sale now."
+    },
+    {
+      "id": "7b6596722248",
+      "title": "VIVACE Party: Aida",
+      "date_display": "Apr 20",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 PM",
+      "venue": "Venue to be announced",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/other/2027/vivace-party-aida/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "VIVACE Party: Aida 10:00 p.m. | Venue to be announced A post-performance party with Opera Philadelphia's community for young friends"
     },
     {
       "id": "1234ee884219",
@@ -2634,23 +2605,6 @@
         "theater"
       ],
       "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "896b1dc55d59",
-      "title": "Girl from the North Country",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Arden Theatre",
-      "source": "Arden Theatre",
-      "source_url": "https://ardentheatre.org/productions/",
-      "link": "https://ardentheatre.org/production/girlfromthenorthcountry/",
-      "price": null,
-      "categories": [
-        "theater"
-      ],
-      "description": "In a run-down boarding house in Duluth, Minnesota, strangers cross paths through love and loss during the Great Depression. Filled with hope and soul, this Tony Award-winning musical weaves Bob Dylan songs like \u201cForever Young,\u201d \u201cHurricane,\u201d and \u201cLike a Rolling Stone\u201d into a powerful American story about resilience in uncertain times."
     },
     {
       "id": "09f73bb206db",
@@ -3007,7 +2961,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Clafy - Bass<br />Charles Goold - Drums </p><p>Sinatra with Style: Hits and Rare Gems performed by Richard Cortez and an all-star band.</p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
+      "description": "<p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Safy - Bass<br />Charles Goold - Drums </p> <p>Sinatra with Style: Hits and Rare Gems performed by Richard Cortez and an all-star band.</p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "2fced8ed3efb",
@@ -3432,7 +3386,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Maria Marmarou, Luke O\u201dReilly, Madison Rast Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $100VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $95(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><strong></strong>Maria Marmarou, Luke O\u201dReilly, Madison Rast<br /></p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "3c2733503241",
@@ -3449,7 +3403,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $25Dinner & Show ~ includes 3-course dinner: $85VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $105(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "9104e292f339",
@@ -3466,7 +3420,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $25Dinner & Show ~ includes 3-course dinner: $85VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $105(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "1fae52f47e8f",
@@ -3586,23 +3540,6 @@
         "jazz"
       ],
       "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "id": "7958a6f25b89",
-      "title": "\"Obsiidyn Is Jazz! Music You Can Feel\u201d | Sunday October 25 | 6:00PM & 8:30PM",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/the-artist-formally-known-as-stephan-burse-presentsobsiidyn-is-jazz-music-you-can-feel-sunday-october-25-600pm-830pm/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "55fe9d614ee5",
@@ -3751,6 +3688,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/nicole-henry-fri-sat-sun-nov-27-28-29-showtimes-vary-by-day-tickets-on-sale-soon/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "bf4b6fc936ca",
+      "title": "JJ Sansaverino Christmas Concert presented by Unscripted Jazz",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/jj-sansaverino-christmas-concert-presented-by-unscripted-jazz/",
       "price": null,
       "categories": [
         "jazz"
@@ -4127,21 +4081,6 @@
       "description": null
     },
     {
-      "id": "865e81b27688",
-      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "edec4ac02c01",
       "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
@@ -4167,6 +4106,21 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/events/fall-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "865e81b27688",
+      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
       "price": null,
       "categories": [],
       "description": null
@@ -4425,23 +4379,6 @@
         "exhibition"
       ],
       "description": "Revisit the critically panned show that pitted Dr. Barnes against Philadelphia\u2019s elite, and see which works remain in the collection."
-    },
-    {
-      "id": "16a17dae54d7",
-      "title": "Book Talk: Philadelphia in Color: 1950\u20131990 with Hidden City Philadelphia",
-      "date_display": "Sunday, October 25, 1 \u2013 2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/book-talk-philadelphia-in-color",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Join us for a conversation with the editors of Hidden City\u2019s newest book, a dynamic photographic history of Philadelphia."
     },
     {
       "id": "15308ae395a3",
@@ -5196,24 +5133,6 @@
       "description": null
     },
     {
-      "id": "cd26b8e7a91d",
-      "title": "Fireworks Tour",
-      "date_display": "Oct 31 Sat 2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/fireworks-tour-20261031/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
       "id": "09dcf0bd8d5b",
       "title": "Stuff from Your House Highlights Tour",
       "date_display": "Oct 31 Sat 11:30am",
@@ -5224,6 +5143,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/stuff-from-your-house-highlights-tour-20261031/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "cd26b8e7a91d",
+      "title": "Fireworks Tour",
+      "date_display": "Oct 31 Sat 2pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/fireworks-tour-20261031/",
       "price": null,
       "categories": [
         "lecture",
