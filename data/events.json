@@ -1,11 +1,12 @@
 {
-  "last_updated": "2026-10-27T17:08:45.547303Z",
-  "total_events": 299,
+  "last_updated": "2026-10-28T17:45:02.596212Z",
+  "total_events": 277,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
     "BalletX",
     "Barnes Foundation",
+    "Barnes Foundation Exhibitions",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -33,7 +34,7 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 3 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 57 events (HTML)",
+      "Chris' Jazz Cafe: 56 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -41,12 +42,13 @@
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 72 events (HTML)",
+      "Barnes Foundation: 63 events (HTML)",
+      "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 1 events (HTML)",
       "Franklin Institute Exhibits: 15 events (HTML)",
       "Penn Museum: 28 events (HTML)",
       "M\u00fctter Museum: 6 events (HTML)",
-      "Science on Tap: 30 events (Squarespace JSON)",
+      "Science on Tap: 1 events (Squarespace JSON)",
       "Science History Institute: 58 events (HTML)",
       "Seed data: 6 verified events merged"
     ],
@@ -55,8 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7377668c3830>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
-      "Failed to fetch https://www.barnesfoundation.org/whats-on/exhibitions: HTTP 503",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x73ee3f069130>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -71,400 +72,72 @@
   },
   "events": [
     {
-      "id": "d1d401d3e16d",
-      "title": "Evidence of Presence: Using eDNA to better understand aquatic biodiversity",
-      "date_display": "2023-08-14",
-      "date_start": "2023-08-14",
-      "date_end": "2023-08-14",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/evidence-of-presence-using-edna-to-better-understand-aquatic-biodiversity-tanya-dapkey-ms",
+      "id": "5598335e2800",
+      "title": "Where I\u2019m From",
+      "date_display": "July 5 \u2013 August 25, 2025",
+      "date_start": "2025-07-05",
+      "date_end": "2025-08-25",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/where-im-from",
       "price": null,
       "categories": [
-        "lecture",
-        "science"
+        "exhibition"
       ],
-      "description": "Tanya Dapkey will introduce us to eDNA and its applications, discuss what the future looks like for environmental genetics and share how scientists at the Academy of Natural Sciences are using these tools to discover biodiversity in the Delaware River Watershed."
+      "description": "Works created by artists from Mural Arts Philadelphia\u2019s Rec Crew and SCI Phoenix."
     },
     {
-      "id": "319da30ae4f8",
-      "title": "Dr. Gerty T. Cori, Dr. Carl F. Cori, and the Emergence of their Marital Scientific Research Collaboration, 1922\u20131931",
-      "date_display": "2023-09-11",
-      "date_start": "2023-09-11",
-      "date_end": "2023-09-11",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/dr-gerty-t-cori-dr-carl-f-cori-and-the-emergence-of-their-marital-scientific-research-collaboration-19221931",
+      "id": "2f0b3adfeb7c",
+      "title": "The Battle of the Bathers",
+      "date_display": "July 6 \u2013 September 15, 2025",
+      "date_start": "2025-07-06",
+      "date_end": "2025-09-15",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/battle-of-the-bathers",
       "price": null,
       "categories": [
-        "lecture",
-        "science"
+        "exhibition"
       ],
-      "description": "TALK BLURB: This talk examines the gendered dynamics of the joint research program that developed between Prague-born, Nobel Prize-winning biochemist Dr. Gerty T. Cori and her husband Dr. Carl F. Cori during their first ten years in the United States."
+      "description": "Learn about the controversy between Dr. Barnes and the Philadelphia Museum of Art around works by Paul C\u00e9zanne."
     },
     {
-      "id": "15f2471c19f9",
-      "title": "BOLD: Color from Test Tube to Textiles",
-      "date_display": "2023-11-13 \u2013 2023-11-14",
-      "date_start": "2023-11-13",
-      "date_end": "2023-11-14",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/bold-color-from-test-tube-to-textiles",
+      "id": "cdb46b620cd8",
+      "title": "Henri Rousseau: A Painter\u2019s Secrets",
+      "date_display": "October 19, 2025 \u2013 February 22, 2026",
+      "date_start": "2025-10-19",
+      "date_end": "2025-10-19",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/henri-rousseau-a-painters-secrets",
       "price": null,
       "categories": [
-        "lecture",
-        "science"
+        "exhibition"
       ],
-      "description": "Join the Science History Institute\u2019s curator, Elisabeth Berry Drago, and learn how the BOLD exhibition came together. You\u2019ll learn how fashionable 19th-century buyers caught the \u201cmauve measles,\u201d dig into the strange history of Day-Glo, and be inspired by current trends towards sustainability and \u201cgreen\u201d dye processes."
+      "description": "See the inventive works of Henri Rousseau in a new light."
     },
     {
-      "id": "73d902baee17",
-      "title": "Stacking Stones: Installing an Egyptian Palace at the Penn Museum",
-      "date_display": "2023-12-11 \u2013 2023-12-12",
-      "date_start": "2023-12-11",
-      "date_end": "2023-12-12",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/stacking-stones-installing-an-egyptian-palace-at-the-penn-museum",
+      "id": "019d4eea115c",
+      "title": "The Doctor and the Douanier: How Dr. Barnes Built His Collection of Rousseaus",
+      "date_display": "October 31, 2025 \u2013 April 13, 2026",
+      "date_start": "2025-10-31",
+      "date_end": "2025-10-31",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/the-doctor-and-the-douanier",
       "price": null,
       "categories": [
-        "lecture",
-        "science"
+        "exhibition"
       ],
-      "description": "This talk explores the conservation of stone sculptures and architectural materials, many of which have not been closely examined since the 1920s. We will look at the new methods and materials that have been developed for this project and reflect on how art conservation and museum practices are changing over time."
-    },
-    {
-      "id": "1bd03050bbf3",
-      "title": "Understanding the Ocean\u2019s Role in the Climate System",
-      "date_display": "2024-02-12 \u2013 2024-02-13",
-      "date_start": "2024-02-12",
-      "date_end": "2024-02-13",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/understanding-the-oceans-role-in-the-climate-system",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Temple professor Becki Beadling will discuss the role of the ocean in a changing climate and how we can use both climate models and observations to improve our understanding and reduce our uncertainty in projected climate change."
-    },
-    {
-      "id": "8b041266270c",
-      "title": "Books on Medical Astrology",
-      "date_display": "2024-03-11",
-      "date_start": "2024-03-11",
-      "date_end": "2024-03-11",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/books-on-medical-astrology",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "This talk will dive into an unexpected discipline of medicine \u2013 medical astrology - by examining some of the numerous publications on the topic housed within the Historical Medical Library of the College of Physicians of Philadelphia, many from the 14th, 15th, and 16th centuries during the height of the curious discipline's popularity."
-    },
-    {
-      "id": "bc133081768f",
-      "title": "Exploring the Freshwaters of Equatorial Guinea: Land of Many Fishes (and the Worst Cocktail Ever)",
-      "date_display": "2024-04-08",
-      "date_start": "2024-04-08",
-      "date_end": "2024-04-08",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/exploring-the-freshwaters-of-equatorial-guinea-land-of-many-fishes-and-the-worst-cocktail-ever",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Mark Sabaj (sa-BAY), Curator of Ichthyology, Academy of Natural Sciences. With funding from Academy benefactors Daniel and Patricia Fromm, a team of Academy naturalists (Mark Sabaj, Cecile Gama, Anwar Abdul-Qawi, Daouda Njie and David Montgomery) conducted a two-week expedition to collect fishes from the African country of Equatorial Guinea."
-    },
-    {
-      "id": "6df1f06f01c3",
-      "title": "Community Archaeology in the West Philadelphia Neighborhood of Black Bottom",
-      "date_display": "2024-05-13",
-      "date_start": "2024-05-13",
-      "date_end": "2024-05-13",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/community-archaeology-in-the-west-philadelphia-neighborhood-of-black-bottom",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "For four months in 2023, community members and students worked alongside professional archaeologists to excavate artifacts and features that highlight the love, community, and humanity of the Black Bottom neighborhood and recognize the violence of its destruction under the guise of urban renewal. Co-project directors Dr. Sarah Linn and Dr. Megan Kassabaum will discuss the early stages of project planning, the 2023 excavation season, collaborative lab work undertaken in 2024, and current efforts to share the recovered stories widely."
-    },
-    {
-      "id": "bfafc5a1b6f6",
-      "title": "Sketching Splendor: American Natural History, 1750-1850",
-      "date_display": "2024-06-10",
-      "date_start": "2024-06-10",
-      "date_end": "2024-06-10",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/sketching-splendor-american-natural-history-1750-1850",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Sketching Splendor, an exhibition at the American Philosophical Society Museum, explores the work of William Bartram, Titian Ramsay Peale, and John James Audubon, three American naturalists who sought to illuminate nature\u2019s complexity. But there were many others who also contributed to early American science, including many Native Americans, people of African descent both enslaved and free, and women whose names are less known. In this talk the exhibition\u2019s curator, Dr. Anna Majeski, will focus on some of their stories as highlighted in the new exhibit."
-    },
-    {
-      "id": "ea68f8bda088",
-      "title": "Science on Tap: Untapped | Legendary Science",
-      "date_display": "2024-08-12 \u2013 2024-08-13",
-      "date_start": "2024-08-12",
-      "date_end": "2024-08-13",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/science-on-tap-untapped-legendary-science",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Science On Tap: Untapped returns as we celebrate 15 years of science programming! At this special edition of our science cafe, we explore the myths, legends, and science behind some of our favorite mythical creatures."
-    },
-    {
-      "id": "205d4d43719d",
-      "title": "Walking with Dragons: How Bearded Dragon Elbows Inform Us of Ancestral Forelimb Posture and Mobility in Dinosaurs and Mammals",
-      "date_display": "2024-09-09",
-      "date_start": "2024-09-09",
-      "date_end": "2024-09-09",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/walking-with-dragons-how-bearded-dragon-elbows-inform-us-of-ancestral-forelimb-posture-and-mobility-in-dinosaurs-and-mammals",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Dr. Bonnan\u2019s research focuses on understanding the role of forelimbs, particularly in sauropods\u2014the largest animals to ever walk the earth, in locomotion, posture, and support. Together with previous studies on lizards and other sprawling tetrapods, evidence shows that complex elbow movements are an ancient mechanism for efficient overground locomotion."
-    },
-    {
-      "id": "2850e024a30c",
-      "title": "Science Shop: Community-based Research for Climate Resilience",
-      "date_display": "2024-11-11 \u2013 2024-11-12",
-      "date_start": "2024-11-11",
-      "date_end": "2024-11-12",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/science-shop-community-based-research-for-climate-resilience",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Akilah Chatman (they/them) is an environmental justice & resilience, community-based participatory action researcher working to connect people to their environment in ways that are culturally responsible. Come dive into their work as they talk you through co-developing this novel type of research and learn about the various communities they work with."
-    },
-    {
-      "id": "fbedf4eae08c",
-      "title": "Visualizing Women in Science: How to Uncover Women Scientists Hidden in the Archive",
-      "date_display": "2024-12-09 \u2013 2024-12-10",
-      "date_start": "2024-12-09",
-      "date_end": "2024-12-10",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/visualizing-women-in-science-how-to-uncover-women-scientists-hidden-in-the-archive",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "As women entered the academic workforce in the late 19th and early 20th century, they undertook formal and informal efforts at networking and elevating each other\u2019s work, with mixed levels of success. This talk will consider the digital project Visualizing Women in Science, a multi-year effort at the American Philosophical Society to find evidence of forgotten women scientists in their holdings."
-    },
-    {
-      "id": "33effb6ff942",
-      "title": "Animals in Historic Philadelphia: Food, Labor, and Industry",
-      "date_display": "2025-02-10 \u2013 2025-02-11",
-      "date_start": "2025-02-10",
-      "date_end": "2025-02-11",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/animals-in-historic-philadelphia-food-labor-and-industry",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Philadelphia's history as an industrial powerhouse is more than factories and railroads. Join zooarchaeologist Dr. Katherine Moore, for a unique perspective on Philadelphia\u2019s past, as she reveals what animal bones, historical records, and urban landscapes tell us about the connections between animals, industry, and daily life."
-    },
-    {
-      "id": "186ba74c1afd",
-      "title": "Who Grows Your Clothes?",
-      "date_display": "2025-03-10",
-      "date_start": "2025-03-10",
-      "date_end": "2025-03-10",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/who-grows-your-clothes",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Explore the environmental and social impacts of the fashion industry, including the connection between our wardrobes, soil health, and the value of local, regenerative fiber systems."
-    },
-    {
-      "id": "064b3222893a",
-      "title": "Samplers and Samplermakers: Girl's Education in the Early 19th Century",
-      "date_display": "2025-04-14",
-      "date_start": "2025-04-14",
-      "date_end": "2025-04-14",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/samplers-and-samplermakers-girls-education-in-the-early-19th-century",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Samplers stitched by schoolgirls give us a unique window into women's education. Researcher Lydia Wood will discuss how these charming objects are more than proof of skilled stitching and literacy, they are part of global networks of trade and ideas in the early 19th century."
-    },
-    {
-      "id": "7ede416ddacd",
-      "title": "What Shapes Sleep: Biology, Culture, or Both?",
-      "date_display": "2025-05-12",
-      "date_start": "2025-05-12",
-      "date_end": "2025-05-12",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/what-shapes-sleep-biology-culture-or-both",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "How much of our sleep is hardwired\u2014and how much is shaped by the world around us? Join internationally recognized pediatric sleep expert Dr. Jodi Mindell for a fascinating talk that explores this question through a global lens."
-    },
-    {
-      "id": "490530e1d167",
-      "title": "Grasshoppers, Crickets, and Katydids, Oh My!: Studying Acoustic Insects at the Academy of Natural Sciences Entomology Collection",
-      "date_display": "2025-06-09",
-      "date_start": "2025-06-09",
-      "date_end": "2025-06-09",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/grasshoppers-crickets-and-katydids-oh-my-studying-acoustic-insects-at-the-academy-of-natural-sciences-entomology-collection",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Experience the acoustic recording collection of Curator Emeritus Dan Otte, Ph.D. which spans over 30 years and documents species across the globe, both known and unknown to science. Learn about how the current generation of Academy researchers and Drexel students are combing through these recordings for the secrets they hold and are working to make them publicly accessible."
-    },
-    {
-      "id": "dfc820e0b27d",
-      "title": "America\u2019s Scientific Revolutionaries",
-      "date_display": "2025-07-14",
-      "date_start": "2025-07-14",
-      "date_end": "2025-07-14",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/americas-scientific-revolutionaries",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "In \u201cAmerica\u2019s Scientific Revolutionaries,\u201d a multiyear project funded by the Richard Lounsbery Foundation in the lead up to the 250th anniversary of the Declaration of Independence, the American Philosophical Society will illuminate that overshadowed scientific revolution that ran between 1763 and 1804."
-    },
-    {
-      "id": "9aaeb45d082f",
-      "title": "What can we learn from a closer look at scientific biographers?",
-      "date_display": "2025-09-08",
-      "date_start": "2025-09-08",
-      "date_end": "2025-09-08",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/what-can-we-learn-from-a-closer-look-at-scientific-biographers",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "What motivates a scientific biographer? How do those motivations relate to the public understanding of science? Join Judy Kaplan, Public Historian of Science at the Science History Institute, as she dives into biography, one of the oldest and most popular genres of science communication."
-    },
-    {
-      "id": "f30b841f27ce",
-      "title": "Liberty City Arts Presents The Anatomy of Opera: Larynx, Lungs, Legato &amp; Beyond!",
-      "date_display": "2025-11-10 \u2013 2025-11-11",
-      "date_start": "2025-11-10",
-      "date_end": "2025-11-11",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/liberty-city-arts-presents-the-anatomy-of-opera-larynx-lungs-legato-amp-beyond",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Learn about anatomical phenomena that contribute to the incredible opera voices that have been captivating audiences for centuries\u2026presented by three Philadelphia-based opera singers who promise to showcase what you\u2019ve learned with live performances!"
-    },
-    {
-      "id": "20c1e3fe5352",
-      "title": "Rebel with a Rulebook: What to Do with the 300-Year-Old Rules for Biological Names",
-      "date_display": "2025-12-08 \u2013 2025-12-09",
-      "date_start": "2025-12-08",
-      "date_end": "2025-12-09",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/rebel-with-a-rulebook-what-to-do-with-the-300-year-old-rules-for-biological-names",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "What happens when the traditional rules that govern taxonomy, the practice of naming species and higher categories of life, predate evolutionary thinking? Do you break the rules to accommodate new discoveries? Join Jason Downs, a consummate rule follower, as he argues that rules should be followed until they no longer work\u2014then they should be rewritten."
+      "description": "The story behind the world\u2019s largest collection of Rousseaus."
     },
     {
       "title": "Revolutionary Botany",
@@ -485,24 +158,6 @@
       "link": "https://muttermuseum.org/events/"
     },
     {
-      "id": "e31f6b761991",
-      "title": "From Cabinets to the Cloud: Unlocking the Research Potential of Natural History Collections",
-      "date_display": "2026-02-09 \u2013 2026-02-10",
-      "date_start": "2026-02-09",
-      "date_end": "2026-02-10",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/from-cabinets-to-the-cloud-unlocking-the-research-potential-of-natural-history-collections",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Did you know that behind the scenes of many natural history museums are millions of specimens representing life on earth, from fossils to insects to plants? Museums worldwide, including the Academy of Natural Sciences, are now moving specimens from cabinets to the cloud, digitizing them and sharing the data through global online platforms. By unlocking this data and making it more accessible to researchers worldwide, museums are transforming specimens into powerful tools for research, discovery, and solutions to some of the world\u2019s most urgent problems."
-    },
-    {
       "title": "Ancient Egypt in Watercolors: Paintings and Artifacts from Dra Abu el-Naga",
       "date_start": "2026-02-28",
       "date_end": "2026-11-30",
@@ -518,24 +173,6 @@
       "id": "9d52db4ab910",
       "date_display": "Feb 28 \u2013 Nov 30, 2026",
       "link": "https://www.penn.museum/on-view/galleries-exhibitions"
-    },
-    {
-      "id": "c8b6450a2db0",
-      "title": "What Frogs and Octopuses Know (That ChatGPT Doesn't)",
-      "date_display": "2026-03-09",
-      "date_start": "2026-03-09",
-      "date_end": "2026-03-09",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/what-frogs-and-octopuses-know-that-chatgpt-doesnt",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Join us as Won Jeon shows how AI produces convincing language while lacking the situational awareness that powers the communication of living organisms."
     },
     {
       "title": "Botany of Nations",
@@ -573,6 +210,40 @@
       "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all."
     },
     {
+      "id": "f9b37e1db6be",
+      "title": "Just Us",
+      "date_display": "April 12 \u2013 October 12, 2026",
+      "date_start": "2026-04-12",
+      "date_end": "2026-10-12",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/just-us",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Original works by artists at SCI Phoenix and justice-impacted artists from Mural Arts Philadelphia\u2019s Rec Crew."
+    },
+    {
+      "id": "d748c4055ddb",
+      "title": "Freedom Dreams",
+      "date_display": "April 12 \u2013 August 9, 2026",
+      "date_start": "2026-04-12",
+      "date_end": "2026-08-09",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/freedom-dreams",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "A meditation on the memories, dreams, and histories of America, featuring powerful works by contemporary moving-image artists Arthur Jafa, David Hartt, Garrett Bradley, Ja\u2019Tovia Gary, and Tourmaline."
+    },
+    {
       "title": "A Nation of Artists",
       "date_start": "2026-04-12",
       "date_end": "2027-07-05",
@@ -588,24 +259,6 @@
       "id": "80f6728466a6",
       "date_display": "Apr 12 \u2013 Jul 05, 2027",
       "link": "https://www.philamuseum.org/exhibitions"
-    },
-    {
-      "id": "fae78212acef",
-      "title": "Transforming the Dead: Art, Ritual, and Science of Egyptian Embalming",
-      "date_display": "2026-04-13",
-      "date_start": "2026-04-13",
-      "date_end": "2026-04-13",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/transforming-the-dead-art-ritual-and-science-of-egyptian-embalming",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Before the new Egyptian galleries open at the Penn Museum at the end of this year, join Jennifer Wegner, Ph.D. as she explores how ancient embalmers worked to transform the dead for life after death and offers a look at the art and science behind this intriguing practice."
     },
     {
       "id": "189cc47cd919",
@@ -641,96 +294,6 @@
       "id": "9c655798feee",
       "date_display": "May 01 \u2013 Dec 31, 2026",
       "link": "https://muttermuseum.org/events/"
-    },
-    {
-      "id": "f2617fbc1203",
-      "title": "Explosive History: Telling the Story of Fireworks at the U.S. 250th&nbsp;",
-      "date_display": "2026-05-11",
-      "date_start": "2026-05-11",
-      "date_end": "2026-05-11",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/explosive-history-telling-the-story-of-fireworks-at-the-us-250thnbsp",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "How do you bring something dangerous, something explosive, something ephemeral, into a physical museum? Join us as Jesse Smith shares a behind-the-scenes look at the process of developing a museum exhibition when you can't display the actual subject of the exhibition."
-    },
-    {
-      "id": "90a01d21a214",
-      "title": "The Gal\u00e1pagos Islands: Evolutionary Insights",
-      "date_display": "2026-06-08",
-      "date_start": "2026-06-08",
-      "date_end": "2026-06-08",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/the-galpagos-islands-evolutionary-insights",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Travel to the Gal\u00e1pagos Islands with science educator Matt Downing, who spent a year navigating the archipelago as a certified naturalist guide in 1978. Drawing on firsthand experience, Downing will explore why the Gal\u00e1pagos became one of the world\u2019s greatest natural laboratories for the study of evolution."
-    },
-    {
-      "id": "7a0fa58fe735",
-      "title": "Bram Stoker and the American Vampire",
-      "date_display": "2026-07-13",
-      "date_start": "2026-07-13",
-      "date_end": "2026-07-13",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/bram-stoker-and-the-american-vampire",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Join us as M\u00fctter Museum Educator Jo D\u2019Avella explores Bram Stoker\u2018s Dracula, medical anxieties, body decomposition, and the American Vampire Panic."
-    },
-    {
-      "id": "f0bc0cc56ef0",
-      "title": "Science on Tap: Untapped | Scientific Revolutions",
-      "date_display": "2026-08-10 \u2013 2026-08-11",
-      "date_start": "2026-08-10",
-      "date_end": "2026-08-11",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/science-on-tap-untapped-scientific-revolutions",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Celebrate the 250th in the Revolutionary City with Science on Tap! Join us and learn more about revolutionary moments in scientific advancements, from the study of diatoms to our understanding of dinosaurs."
-    },
-    {
-      "id": "1b0dbfd321af",
-      "title": "AI and Crowdsourcing for Archival Journal Transcription&nbsp;",
-      "date_display": "2026-09-14",
-      "date_start": "2026-09-14",
-      "date_end": "2026-09-14",
-      "time": "10:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/ai-and-crowdsourcing-for-archival-journal-transcriptionnbsp",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "Learn more about the use of artificial intelligence and crowdsourcing to extract text from field journals in the archives at the Academy of Natural Sciences. Join us as Briana Giasullo, the Cataloging and Digital Resources Librarian, discusses the process."
     },
     {
       "title": "Marcel Duchamp",
@@ -817,6 +380,24 @@
       "price": null,
       "categories": [],
       "description": "Come prepared to dance in the aisles! This legendary band and its leader Juan de Marcos have done more than perhaps any other artistic entity to both preserve and expand the music of Cuba, showcasing its most venerable players and newest stars and earning four GRAMMY nominations along the way."
+    },
+    {
+      "id": "656eeb12004c",
+      "title": "Prohibition: Then and Now",
+      "date_display": "2026-11-09 \u2013 2026-11-10",
+      "date_start": "2026-11-09",
+      "date_end": "2026-11-10",
+      "time": "11:00 PM",
+      "venue": "National Mechanics",
+      "source": "Science on Tap",
+      "source_url": "https://www.scienceontapphilly.com/events",
+      "link": "https://www.scienceontapphilly.com/events/prohibition-then-and-now",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "How did alcohol prohibition come into law and what are the connections to present day drug policy? Join us as Kelsey Leon, harm reductionist, anthropologist, and clinical research coordinator, discusses the impact of prohibition on the drug economy and on people who use criminalized substances."
     },
     {
       "id": "c4621e954fdb",
@@ -1005,7 +586,24 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/exhibitions/noguchi-to-asawa-designing-postwar-america",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Iconic sculpture and design by two generations of Japanese American artists."
+    },
+    {
+      "id": "a3178a50ddb5",
+      "title": "Noguchi to Asawa: Designing Postwar America",
+      "date_display": "Until January 10, 2027",
+      "date_start": "2027-01-10",
+      "date_end": "2027-01-10",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/exhibitions/noguchi-to-asawa-designing-postwar-america",
       "price": null,
       "categories": [
         "exhibition"
@@ -1022,7 +620,24 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "An installation of 11 new works by the American artist."
+    },
+    {
+      "id": "dd465bd3ba80",
+      "title": "Sky Hopinka: Red Metal Dust",
+      "date_display": "Until January 18, 2027",
+      "date_start": "2027-01-18",
+      "date_end": "2027-01-18",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
       "price": null,
       "categories": [
         "exhibition"
@@ -1122,7 +737,24 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/rochelle-feinstein-the-today-show",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "More than 30 mixed-media works examining abstraction, culture, and public life."
+    },
+    {
+      "id": "311f4fef2766",
+      "title": "Rochelle Feinstein: The Today Show",
+      "date_display": "February 21 \u2013 May 9, 2027",
+      "date_start": "2027-02-21",
+      "date_end": "2027-05-09",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/rochelle-feinstein-the-today-show",
       "price": null,
       "categories": [
         "exhibition"
@@ -1139,7 +771,24 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore the experiences of a diverse group of scholars whose education was supported by the Barnes."
+    },
+    {
+      "id": "0d55e8554a49",
+      "title": "Education & Empowerment: Scholarship Recipients at the Barnes Foundation, Vol. Two: 1927\u20131952",
+      "date_display": "Until February 22, 2027",
+      "date_start": "2027-02-22",
+      "date_end": "2027-02-22",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
       "price": null,
       "categories": [
         "exhibition"
@@ -2502,23 +2151,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "895082697258",
-      "title": "Dan Wilkins Quartet",
-      "date_display": "October 27",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/144818",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Dan Wilkins, saxophones<br />Jon Ballantyne, piano<br />Madison Rast, bass<br />Dan Monaghan, drums </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "8aca57863330",
@@ -3969,7 +3601,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "a41c3cba7106",
@@ -4003,7 +3635,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "08d8ed5f5440",
@@ -4020,7 +3652,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "f4dc9cd75850",
@@ -4054,7 +3686,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "827ee7494b07",
@@ -4066,7 +3698,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/collection",
       "price": null,
       "categories": [
         "exhibition"
@@ -4083,7 +3715,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/barnes-highlights-tour",
       "price": null,
       "categories": [
         "exhibition"
@@ -4100,7 +3732,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/private-collection-tours",
       "price": null,
       "categories": [
         "exhibition"
@@ -4117,7 +3749,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/private-tour-favorite-artists",
       "price": null,
       "categories": [
         "exhibition"
@@ -4134,7 +3766,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/daily-gallery-talks",
       "price": null,
       "categories": [
         "exhibition"
@@ -4151,7 +3783,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members-only-tour-noguchi-to-asawa",
       "price": null,
       "categories": [
         "exhibition"
@@ -4168,7 +3800,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/exhibition-tour-noguchi-to-asawa",
       "price": null,
       "categories": [
         "exhibition"
@@ -4185,7 +3817,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/private-tour-noguchi-to-asawa",
       "price": null,
       "categories": [
         "exhibition"
@@ -4202,46 +3834,12 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-october-2026",
       "price": null,
       "categories": [
         "exhibition"
       ],
       "description": "Revisit the critically panned show that pitted Dr. Barnes against Philadelphia\u2019s elite, and see which works remain in the collection."
-    },
-    {
-      "id": "16a17dae54d7",
-      "title": "Book Talk: Philadelphia in Color: 1950\u20131990 with Hidden City Philadelphia",
-      "date_display": "Sunday, October 25, 1 \u2013 2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Join us for a conversation with the editors of Hidden City\u2019s newest book, a dynamic photographic history of Philadelphia."
-    },
-    {
-      "id": "15308ae395a3",
-      "title": "Members-Only Evening Tour: Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Monday, October 26, 5:30 \u2013 6:30pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:30 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore works by two generations of artists affected by forced relocation and incarceration during World War II in this exclusive after-hours tour."
     },
     {
       "id": "ec6e8c75c27f",
@@ -4253,7 +3851,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members-only-online-tour-october-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4270,7 +3868,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/free/barnes-create-and-connect-october-24",
       "price": null,
       "categories": [
         "exhibition"
@@ -4287,7 +3885,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-family-day-november-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4304,7 +3902,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-november-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4321,7 +3919,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members/new-member-reception-november-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4338,7 +3936,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members-only-online-tour-noguchi-to-asawa-november",
       "price": null,
       "categories": [
         "exhibition"
@@ -4355,7 +3953,7 @@
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/first-friday-november-2026",
       "price": null,
       "categories": [
         "exhibition"
@@ -4363,21 +3961,21 @@
       "description": "Tonight\u2019s performance features jazz pianist Miki Yamanaka."
     },
     {
-      "id": "5dfb3437ea1e",
-      "title": "Lecture: Duchamp\u2019s Fountain: A Second Opinion",
-      "date_display": "Saturday, November 7, 12 \u2013 1pm",
+      "id": "8d34d6910875",
+      "title": "The Barnes Collection",
+      "date_display": "Ongoing",
       "date_start": null,
       "date_end": null,
-      "time": "1:00 PM",
+      "time": null,
       "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/collection",
       "price": null,
       "categories": [
         "exhibition"
       ],
-      "description": "Explore the controversial work and its impact on American modernism in 1920 letters between William Carlos Williams and Albert Barnes."
+      "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
     },
     {
       "id": "c942040ee91c",
