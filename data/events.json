@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-28T17:45:02.596212Z",
-  "total_events": 277,
+  "last_updated": "2026-10-29T17:52:39.296464Z",
+  "total_events": 288,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -29,7 +29,7 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 25 events (HTML)",
-      "Penn Live Arts: 50 events (links)",
+      "Penn Live Arts: 51 events (links)",
       "Opera Philadelphia: 9 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 3 events (HTML)",
@@ -39,13 +39,13 @@
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 20 events (links)",
+      "Visit Philadelphia Events: 22 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 63 events (HTML)",
+      "Barnes Foundation: 81 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
-      "The Franklin Institute: 1 events (HTML)",
-      "Franklin Institute Exhibits: 15 events (HTML)",
+      "The Franklin Institute: 2 events (HTML)",
+      "Franklin Institute Exhibits: 16 events (HTML)",
       "Penn Museum: 28 events (HTML)",
       "M\u00fctter Museum: 6 events (HTML)",
       "Science on Tap: 1 events (Squarespace JSON)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x73ee3f069130>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77fc4c178ce0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -210,23 +210,6 @@
       "description": "James Santangelo 'is a force to be reckoned with on piano' and is a committed musician on the Philadelphia jazz scene. A late-night jam session open to all."
     },
     {
-      "id": "f9b37e1db6be",
-      "title": "Just Us",
-      "date_display": "April 12 \u2013 October 12, 2026",
-      "date_start": "2026-04-12",
-      "date_end": "2026-10-12",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/just-us",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Original works by artists at SCI Phoenix and justice-impacted artists from Mural Arts Philadelphia\u2019s Rec Crew."
-    },
-    {
       "id": "d748c4055ddb",
       "title": "Freedom Dreams",
       "date_display": "April 12 \u2013 August 9, 2026",
@@ -294,6 +277,23 @@
       "id": "9c655798feee",
       "date_display": "May 01 \u2013 Dec 31, 2026",
       "link": "https://muttermuseum.org/events/"
+    },
+    {
+      "id": "e67c7fb5642f",
+      "title": "Just Us",
+      "date_display": "June 26 \u2013 October 12, 2026",
+      "date_start": "2026-06-26",
+      "date_end": "2026-10-12",
+      "time": null,
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation Exhibitions",
+      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
+      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/just-us",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Original works by artists at SCI Phoenix and justice-impacted artists from Mural Arts Philadelphia\u2019s Rec Crew."
     },
     {
       "title": "Marcel Duchamp",
@@ -1143,6 +1143,24 @@
       "description": "The fearless and powerful Compagnie Herv\u00e9 Koubi returns to Philadelphia for the first time in over a decade with the mesmerizingly kinetic Sol Invictus. A fusion of contemporary dance, hip hop, capoeira and martial arts, this new work champions love as the guarantor of peace\u2014affirming that, despite conflict, unity will triumph as humanity\u2019s saving grace. Super-charged in both meaning and movement, the piece is set to a driving score by Mikael Karlsson, Steve Reich and Maxime Bodson. Sol Invictus takes its name from the \u201cinvincible sun\u201d deity and Koubi\u2019s dancers \u201ccould be mistaken for gods\u201d (The New Yorker): fierce, weightless and seemingly a step beyond human. Don\u2019t miss this company\u2019s Penn Live Arts debut\u2014\u201cthey change how you see the amazing\u201d (The New York Times). \u201cThe dancers\u2019 extraordin"
     },
     {
+      "id": "7595f0096bc6",
+      "title": "Masterclass: Compagnie Herv\u00e9 Koubi",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "9:00 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/masterclass-HerveKoubi",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "This introductory masterclass will be an exploration of Herv\u00e9 Koubi\u2019s work. The workshop is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable clothing for movement. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
+    },
+    {
       "id": "259fb8523c6e",
       "title": "Hot Peas 'N Butter",
       "date_display": "",
@@ -1248,7 +1266,7 @@
         "concert",
         "dance"
       ],
-      "description": "It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle)."
+      "description": "It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle). \"Late Nite Catechism is a theatrical phenomenon!\u201d (On Boston Stages)"
     },
     {
       "id": "9c7d16aad3a0",
@@ -2153,23 +2171,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "8aca57863330",
-      "title": "Baby Blue Sound Collective / Fundraiser for Music Therapy at CHOP",
-      "date_display": "October 28",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/141291",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Baby Blue Sound Collective will make its debut appearance at Chris\u2019 Jazz Caf\u00e9 in a special benefit performance supporting Music Therapy at Children\u2019s Hospital of Philadelphia. Join us for an unforgettable evening celebrating music, medicine, friendship, and hope \u2014 all in support of Music Therapy at Children\u2019s Hospital of Philadelphia.</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a>"
-    },
-    {
       "id": "dc1a9adcbfd5",
       "title": "Saxophonist Katie Neary & Her Band",
       "date_display": "October 29",
@@ -2476,8 +2477,8 @@
       "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
-      "id": "a2ff7d660c05",
-      "title": "Saxophonist Griffin Ross & His Quartet With Vocalist Katie Oberholtzer",
+      "id": "56ac7395eaa6",
+      "title": "Vocalist Katie Oberholtzer and Pianist Tim Brey and His Quartet",
       "date_display": "November 20",
       "date_start": null,
       "date_end": null,
@@ -2508,6 +2509,23 @@
         "jazz"
       ],
       "description": "<p> Tony Miceli - Vibraphone<br />Chris Farr - Saxophone<br />John Swana - Trumpet<br />Madison Rast - Bass<br />Dan Monaghan - Drums<br />Tim Armacost - Saxophone </p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "48d3b9f811a4",
+      "title": "Private Party",
+      "date_display": "November 21",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/393709",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "CLOSED FOR PRIVATE PARTY!"
     },
     {
       "id": "0d778c30eb2b",
@@ -3542,8 +3560,8 @@
       "description": null
     },
     {
-      "id": "edec4ac02c01",
-      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
+      "id": "865e81b27688",
+      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3551,7 +3569,37 @@
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/winter-events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "a8d88db32fd6",
+      "title": "LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/luminature-philadelphia-zoo/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "d9cb56ee52e5",
+      "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
       "price": null,
       "categories": [],
       "description": null
@@ -3572,8 +3620,8 @@
       "description": null
     },
     {
-      "id": "865e81b27688",
-      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
+      "id": "edec4ac02c01",
+      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3581,7 +3629,7 @@
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
+      "link": "https://www.visitphilly.com/events/winter-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -3601,7 +3649,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3635,7 +3683,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3652,7 +3700,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3686,7 +3734,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "827ee7494b07",
@@ -3825,6 +3873,23 @@
       "description": "This docent-led tour of Noguchi to Asawa: Designing Postwar America is a private one-hour experience for you and up to nine guests."
     },
     {
+      "id": "321d76af2690",
+      "title": "November Spotlight Tour: Decoding the Barnes Ensembles",
+      "date_display": "Thursday\u2013Monday, 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-november-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
+    },
+    {
       "id": "c3e0456cb002",
       "title": "October Spotlight Tour: Firestorm! Outrage! Dr. Barnes\u2019s Scandalous 1923 Philadelphia Exhibition",
       "date_display": "Thursday\u2013Monday, 1pm",
@@ -3840,23 +3905,6 @@
         "exhibition"
       ],
       "description": "Revisit the critically panned show that pitted Dr. Barnes against Philadelphia\u2019s elite, and see which works remain in the collection."
-    },
-    {
-      "id": "ec6e8c75c27f",
-      "title": "Members-Only Online Tour: Firestorm! Outrage! Dr. Barnes\u2019s Scandalous 1923 Philadelphia Exhibition",
-      "date_display": "Wednesday, October 28, 2 \u2013 3pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members-only-online-tour-october-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Philadelphia critics once panned Dr. Barnes\u2019s collection. Discover the press feud and learn which works remain in the collection today."
     },
     {
       "id": "b47a0a118e20",
@@ -3891,23 +3939,6 @@
         "exhibition"
       ],
       "description": "Enjoy hands-on art activities, free access to the collection, and special performances of Cambodian classical and folk dances."
-    },
-    {
-      "id": "321d76af2690",
-      "title": "November Spotlight Tour: Decoding the Barnes Ensembles",
-      "date_display": "Thursday\u2013Monday, 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
     },
     {
       "id": "0b1428e4df34",
@@ -3961,6 +3992,125 @@
       "description": "Tonight\u2019s performance features jazz pianist Miki Yamanaka."
     },
     {
+      "id": "5dfb3437ea1e",
+      "title": "Lecture: Duchamp\u2019s Fountain: A Second Opinion",
+      "date_display": "Saturday, November 7, 12 \u2013 1pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/duchamps-fountain",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Explore the controversial work and its impact on American modernism in 1920 letters between William Carlos Williams and Albert Barnes."
+    },
+    {
+      "id": "f2feb80d5c18",
+      "title": "Barnes Cinema: Powwow People by Sky Hopinka",
+      "date_display": "Sunday, November 8, 1 \u2013 4pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "4:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/film/barnes-cinema-powwow-people-by-sky-hopinka",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "This screening of Hopinka\u2019s v\u00e9rit\u00e9-style documentary is followed by a discussion and audience Q&A with the filmmaker."
+    },
+    {
+      "id": "11ee3c5967e9",
+      "title": "ARTZ @ The Museum",
+      "date_display": "Wednesday, November 11, 1:30 \u2013 2:30pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/artz-the-museum",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "This program provides free access to the Barnes for people living with dementia and their care partners."
+    },
+    {
+      "id": "d947394a7ecd",
+      "title": "On Practice: Pew Fellows in Conversation",
+      "date_display": "Wednesday, November 11, 6 \u2013 7:15pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:15 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/on-practice-pew-fellows-in-conversation-november-11",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "Join us for an intimate look at how the artists shaping Philadelphia\u2019s cultural scene experiment, discover, and create."
+    },
+    {
+      "id": "b2bd640bb3c6",
+      "title": "Member Orientation",
+      "date_display": "Friday, November 13, 10 \u2013 11:30am",
+      "date_start": null,
+      "date_end": null,
+      "time": "11:30 AM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/members/member-orientation-november-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "New members are invited to join us to learn more about the perks of membership at the Barnes."
+    },
+    {
+      "id": "20ff6c4bc824",
+      "title": "Deep Dive: \u201cThomas Paine on the value of freedom\u201d Ad by S. Neil Fujita",
+      "date_display": "Friday, November 13, 12 \u2013 12:30pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:30 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/talks/deep-dive-november-2026",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "An in-depth discussion about Fujita\u2019s design for the \u201cGreat Ideas of Western Man\u201d advertising campaign. Free with admission; Roberts Gallery"
+    },
+    {
+      "id": "554b3a61ea70",
+      "title": "Young Professionals Night: Spark",
+      "date_display": "Friday, November 13, 7 \u2013 11pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "11:00 PM",
+      "venue": "Barnes Foundation",
+      "source": "Barnes Foundation",
+      "source_url": "https://www.barnesfoundation.org/whats-on",
+      "link": "https://www.barnesfoundation.org/whats-on/ypn-spark",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": "After-hours art, style, and music await Philadelphia\u2019s young leaders and Barnes Contemporaries members."
+    },
+    {
       "id": "8d34d6910875",
       "title": "The Barnes Collection",
       "date_display": "Ongoing",
@@ -3976,6 +4126,41 @@
         "exhibition"
       ],
       "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
+    },
+    {
+      "id": "6b00391caca3",
+      "title": "STAR WARS\u2122: The Experience presale is happening now. Sign up to receive access code here.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/exhibits-and-experiences/star-wars-experience",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "9a71de8fe1d7",
+      "title": "STAR WARS\u2122: The Experience presale is happening now. Sign up to receive access code here.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-and-experiences/star-wars-experience",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
     },
     {
       "id": "c942040ee91c",
@@ -4523,6 +4708,24 @@
       "description": null
     },
     {
+      "id": "a86897e725f2",
+      "title": "Ullyot Lecture and Award: Ben Feringa",
+      "date_display": "Oct 29 Thu 6pm-8pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/ullyot-lecture-and-award-ben-feringa/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Friday, November 13, 2026 | 6pm-8pm EST"
+    },
+    {
       "id": "b0f2ebeb89fb",
       "title": "Study Hall x Distillations: American Vice",
       "date_display": "Oct 29 Thu 6pm-8pm",
@@ -4538,7 +4741,7 @@
         "lecture",
         "science"
       ],
-      "description": "Thursday, October 29, 2026 | 6pm-8pm EDT"
+      "description": null
     },
     {
       "id": "b551d76931c3",
@@ -4713,24 +4916,6 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/from-nature-to-nylons-a-touch-based-history-of-textiles-202611/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "25050bf9d0c0",
-      "title": "Ullyot Lecture and Award: Ben Feringa",
-      "date_display": "Nov 13 Fri 6pm-8pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/ullyot-lecture-and-award-ben-feringa/",
       "price": null,
       "categories": [
         "lecture",
