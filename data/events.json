@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-29T17:52:39.296464Z",
-  "total_events": 288,
+  "last_updated": "2026-10-30T17:33:43.313107Z",
+  "total_events": 290,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -29,12 +29,12 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 25 events (HTML)",
-      "Penn Live Arts: 51 events (links)",
-      "Opera Philadelphia: 9 events (HTML)",
+      "Penn Live Arts: 52 events (links)",
+      "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
-      "FringeArts: 3 events (HTML)",
+      "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 56 events (HTML)",
+      "Chris' Jazz Cafe: 57 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77fc4c178ce0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x72bc019cf350>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -330,24 +330,6 @@
         "opera"
       ],
       "description": "THE GREAT GATSBY is a \u201cBroadway extravaganza that explodes with life and energy\u201d (Entertainment Weekly). Based on the classic American novel by F. Scott Fitzgerald, the Tony Award\u00ae-winning new musical is an unforgettable journey of love, wealth and tragedy that brings the Roaring Twenties to life on stage."
-    },
-    {
-      "id": "e0f9cca28cf6",
-      "title": "FEASTIVAL 2026",
-      "date_display": "October 28, 2026",
-      "date_start": "2026-10-28",
-      "date_end": "2026-10-28",
-      "time": "6:00 PM",
-      "venue": "FringeArts",
-      "source": "FringeArts",
-      "source_url": "https://fringearts.com/programs/",
-      "link": "https://fringearts.com/event/feastival-2026/",
-      "price": "$200",
-      "categories": [
-        "dance",
-        "theater"
-      ],
-      "description": "Throughout the year, FringeArts curates and presents a series of performances and events by local, national, and international contemporary artists. We also host workshops, works-in-progress, and community events. Click here to learn more about FringeArts."
     },
     {
       "id": "9ca867f99f98",
@@ -925,25 +907,6 @@
       "description": null
     },
     {
-      "id": "3a0aefd9257a",
-      "title": "Penn Players",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/the-prom",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "Emma and Alyssa are young, in love, and want nothing more than to go to prom as a couple. The only problem? They live in Edgewater, Indiana, a community that would rather cancel the whole event than let them go together. But when a group of narcissistic Broadway actors arrive to support an inclusive prom (and give their failing careers a boost of good press), the town is turned upside down. This musical comedy balances heart and hilarity, satirizing ignorance in all its forms while exploring how to stand up for what is right, lead with love, and the unexpected ways people can learn from one another."
-    },
-    {
       "id": "1ec02939f908",
       "title": "Arun Ramamurthy Trio & Rudresh Mahanthappa Hero Trio",
       "date_display": "",
@@ -997,6 +960,25 @@
         "dance"
       ],
       "description": "Join Penn\u2019s premier Christian a cappella group this fall. FM seeks to serve its community as an outward ministry, sharing hope and love through music."
+    },
+    {
+      "id": "3a0aefd9257a",
+      "title": "Penn Players",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/the-prom",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance",
+        "theater"
+      ],
+      "description": "Emma and Alyssa are young, in love, and want nothing more than to go to prom as a couple. The only problem? They live in Edgewater, Indiana, a community that would rather cancel the whole event than let them go together. But when a group of narcissistic Broadway actors arrive to support an inclusive prom (and give their failing careers a boost of good press), the town is turned upside down. This musical comedy balances heart and hilarity, satirizing ignorance in all its forms while exploring how to stand up for what is right, lead with love, and the unexpected ways people can learn from one another."
     },
     {
       "id": "01fdad69e3a8",
@@ -1069,6 +1051,24 @@
         "dance"
       ],
       "description": "Part of the Arts of India Festival Nrityagram, the renowned and \u201cmost exciting Indian classical dance ensemble\" (Fjord Review), returns to our stage with the Philadelphia premiere of KHANKHAN\u0100: the sound of dancing feet. Featuring live music and vibrant tradition, KHANKHAN\u0100 journeys through three decades of acclaimed works by artistic director and Odissi choreographer Surupa Sen, showcasing her unique sensibility of thought and movement. Don\u2019t miss this thrilling retrospective as \u201cthese are among the world\u2019s greatest dancers\u201d who frequently offer \u201cone of the most extraordinary dance events of the year\u201d (The New York Times). \u201cUniquely mysterious, eternal, and beautiful\u201d (The Times Colonist) About Odissi Originally a sacred ritual dedicated to the gods, Odissi is one of the oldest dance trad"
+    },
+    {
+      "id": "c7d78f2cc194",
+      "title": "Soundworks Tap Factory",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/Soundworks-25-Years",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "Join the University of Pennsylvania's one and only strictly tap dancing group for a night celebrating 25 years of dance excellence."
     },
     {
       "id": "1d924d0282e3",
@@ -1923,6 +1923,24 @@
       "description": "VIVACE Party: Aida 10:00 p.m. | Venue to be announced A post-performance party with Opera Philadelphia's community for young friends"
     },
     {
+      "id": "16b9fd1e45c1",
+      "title": "Voices for Peace",
+      "date_display": "Apr 24",
+      "date_start": null,
+      "date_end": null,
+      "time": "5:00 PM",
+      "venue": "Academy of Music",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/celebrations/voices-for-peace/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Voices for Peace 5:00 p.m. | Academy of Music A Gala Celebration"
+    },
+    {
       "id": "1234ee884219",
       "title": "THE ADDAMS FAMILY: The Musical",
       "date_display": "",
@@ -2103,6 +2121,24 @@
       "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
     },
     {
+      "id": "3245bf4e2ee5",
+      "title": "This calendar features events presented by FringeArts!",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "FringeArts",
+      "source": "FringeArts",
+      "source_url": "https://fringearts.com/programs/",
+      "link": "https://fringearts.com",
+      "price": null,
+      "categories": [
+        "dance",
+        "theater"
+      ],
+      "description": "Throughout the year, FringeArts curates and presents a series of performances and events by local, national, and international contemporary artists. We also host workshops, works-in-progress, and community events. Click here to learn more about FringeArts."
+    },
+    {
       "id": "09f73bb206db",
       "title": "Topdog/Underdog",
       "date_display": "",
@@ -2169,40 +2205,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "dc1a9adcbfd5",
-      "title": "Saxophonist Katie Neary & Her Band",
-      "date_display": "October 29",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/142612",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
-      "id": "6bb95a9e17f0",
-      "title": "Saxophonist Nate Hook & His Quartet",
-      "date_display": "October 29",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/389186",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><b><u>Starting at 10:30pm</u></b></p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "77aafeb66a23",
@@ -2899,7 +2901,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $25Dinner & Show ~ includes 3-course dinner: $85VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $105(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "1fae52f47e8f",
@@ -3018,24 +3020,58 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "George Colligan, Nicole Glover and Jaleel ShawShow Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
-      "id": "55fe9d614ee5",
-      "title": "Karen Briggs | Thursday October 29 | 6:30PM & 9:00PM | presented by Unscripted Jazz",
-      "date_display": "",
+      "id": "bdc7e89fc50b",
+      "title": "George Colligan\u2019s All Star Sextet featuring Saxophonists Jaleel Shaw & Aidan McKeon + Trumpeter Anthony",
+      "date_display": "January 16",
       "date_start": null,
       "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/karen-briggs-thursday-october-29-630pm-900pm-presented-by-unscripted-jazz/",
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146419",
       "price": null,
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "2d640c6300d0",
+      "title": "Kurt Rosenwinkel's Riptet",
+      "date_display": "January 22 - January 23",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146420",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "37994cb385ff",
+      "title": "Vocalist Georgia Heers & Her Band",
+      "date_display": "February 26 - February 27",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146421",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "5a42b0d3a970",
@@ -3184,6 +3220,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/jj-sansaverino-christmas-concert-presented-by-unscripted-jazz/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "c2b9018e2dce",
+      "title": "Tammy McCann: Merry Christmas Baby | December 4, 5 & 6 | Showtimes Vary by Day",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/tammy-mccann-merry-christmas-baby-december-4-5-6-showtimes-vary-by-day/",
       "price": null,
       "categories": [
         "jazz"
@@ -3545,8 +3598,8 @@
       "description": null
     },
     {
-      "id": "94f5484d3488",
-      "title": "Unrivaled Returns to Philly This Winter \u2014 Here\u2019s Everything You Need to Know Event",
+      "id": "a96c71a7a101",
+      "title": "Unrivaled Returns to Philly This Winter \u2014 Here\u2019s Everything You Need to Know Unrivaled Returns to Philly This Winter \u2014... Unrivaled Returns to Philly This Winter \u2014 Here\u2019s... Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3590,6 +3643,21 @@
       "description": null
     },
     {
+      "id": "edec4ac02c01",
+      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/winter-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
       "id": "d9cb56ee52e5",
       "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
       "date_display": "",
@@ -3620,21 +3688,6 @@
       "description": null
     },
     {
-      "id": "edec4ac02c01",
-      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/winter-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -3649,7 +3702,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3683,7 +3736,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3700,7 +3753,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3734,7 +3787,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "827ee7494b07",
@@ -4708,12 +4761,12 @@
       "description": null
     },
     {
-      "id": "a86897e725f2",
+      "id": "8ef2ce6a5453",
       "title": "Ullyot Lecture and Award: Ben Feringa",
-      "date_display": "Oct 29 Thu 6pm-8pm",
+      "date_display": "Oct 31 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
-      "time": "6:00 PM",
+      "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -4724,42 +4777,6 @@
         "science"
       ],
       "description": "Friday, November 13, 2026 | 6pm-8pm EST"
-    },
-    {
-      "id": "b0f2ebeb89fb",
-      "title": "Study Hall x Distillations: American Vice",
-      "date_display": "Oct 29 Thu 6pm-8pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/study-hall-x-distillations-american-vice/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "b551d76931c3",
-      "title": "Art of Alchemy Self-Guided Visit",
-      "date_display": "Oct 29 Thu 1pm-2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261029/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "a8b8c8d04f87",
@@ -4880,6 +4897,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/from-nature-to-nylons-highlights-tour-20261107/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "d5ecc22e0a52",
+      "title": "Art of Alchemy Self-Guided Visit",
+      "date_display": "Nov 07 Sat 2pm-3pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261107/",
       "price": null,
       "categories": [
         "lecture",
