@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-30T17:33:43.313107Z",
-  "total_events": 290,
+  "last_updated": "2026-10-31T16:39:53.318077Z",
+  "total_events": 226,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -15,7 +15,6 @@
     "Greater Phila. Cultural Alliance",
     "M\u00fctter Museum",
     "Opera Philadelphia",
-    "Penn Live Arts",
     "Penn Museum",
     "Philadelphia Museum of Art",
     "Philadelphia Museum of Art Exhibitions",
@@ -23,26 +22,23 @@
     "Science on Tap",
     "South Jazz Kitchen",
     "The Franklin Institute",
-    "Visit Philadelphia Events",
-    "Walnut Street Theatre"
+    "Visit Philadelphia Events"
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 25 events (HTML)",
-      "Penn Live Arts: 52 events (links)",
+      "Ensemble Arts Philly: 24 events (HTML)",
       "Opera Philadelphia: 13 events (HTML)",
-      "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 57 events (HTML)",
+      "Chris' Jazz Cafe: 55 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 22 events (links)",
+      "Visit Philadelphia Events: 23 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 81 events (HTML)",
+      "Barnes Foundation: 78 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
       "Franklin Institute Exhibits: 16 events (HTML)",
@@ -53,11 +49,13 @@
       "Seed data: 6 verified events merged"
     ],
     "failures": [
+      "Failed to fetch https://pennlivearts.org/events/ after 3 attempts: HTTPSConnectionPool(host='pennlivearts.org', port=443): Max retries exceeded with url: /events/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='pennlivearts.org', port=443) at 0x7ce944277170>, 'Connection to pennlivearts.org timed out. (connect timeout=20)'))",
+      "Failed to fetch https://www.walnutstreettheatre.org/season/mainstage.php after 3 attempts: HTTPSConnectionPool(host='www.walnutstreettheatre.org', port=443): Max retries exceeded with url: /season/mainstage.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.walnutstreettheatre.org', port=443) at 0x7ce944359af0>, 'Connection to www.walnutstreettheatre.org timed out. (connect timeout=20)'))",
       "Failed to fetch https://philadelphiaballet.org/performances/: HTTP 404",
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x72bc019cf350>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7ce94452d5e0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -244,23 +242,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "189cc47cd919",
-      "title": "Oliver Mayman + Jam Session",
-      "date_display": "October 30",
-      "date_start": "2026-04-24",
-      "date_end": "2026-04-24",
-      "time": "11:00 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
-      "price": "$15",
-      "categories": [
-        "jazz"
-      ],
-      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
-    },
-    {
       "title": "Legionnaires' Disease: The Philadelphia Outbreak",
       "date_start": "2026-05-01",
       "date_end": "2026-12-31",
@@ -347,21 +328,6 @@
         "theater"
       ],
       "description": "\u201cSuperlatives cluster around Yunchan Lim,\u201d The Guardian writes of the dazzling star who returns to thrill us again. He will perform Rachmaninoff\u2019s blazing Third Piano Concerto, the work that spurred his win as the youngest pianist ever to win the coveted Van Cliburn Competition Gold Medal."
-    },
-    {
-      "id": "1dc5eb2e1157",
-      "title": "Afro-Cuban All Stars",
-      "date_display": "Oct 30, 2026",
-      "date_start": "2026-10-30",
-      "date_end": "2026-10-30",
-      "time": "7:30 PM",
-      "venue": "Miller Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/afro-cuban-all-stars",
-      "price": null,
-      "categories": [],
-      "description": "Come prepared to dance in the aisles! This legendary band and its leader Juan de Marcos have done more than perhaps any other artistic entity to both preserve and expand the music of Cuba, showcasing its most venerable players and newest stars and earning four GRAMMY nominations along the way."
     },
     {
       "id": "656eeb12004c",
@@ -603,11 +569,11 @@
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
       "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
-      "price": null,
+      "price": "Free",
       "categories": [
         "exhibition"
       ],
-      "description": "An installation of 11 new works by the American artist."
+      "description": "Explore a new installation by artist Sky Hopinka, on view March 2026\u2013January 2027, at the Barnes Foundation. Free and open to the public."
     },
     {
       "id": "dd465bd3ba80",
@@ -749,7 +715,7 @@
       "date_display": "Until February 22, 2027",
       "date_start": "2027-02-22",
       "date_end": "2027-02-22",
-      "time": null,
+      "time": "11:00 AM",
       "venue": "Barnes Foundation",
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
@@ -889,932 +855,6 @@
       "description": "\"By the pricking of my thumbs, something wicked [tipsy] this way comes. \" An entirely serious production of William Shakespeare's Macbeth with an entirely sh!t-faced cast member. Shakespeare's tale of murder, ambition, bloodlust, and supernatural."
     },
     {
-      "id": "7824901f4961",
-      "title": "26/27 Season",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/events/26-27season.php",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "1ec02939f908",
-      "title": "Arun Ramamurthy Trio & Rudresh Mahanthappa Hero Trio",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/RamamurthyMahanthappa",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival A special double bill of Penn Live Arts debuts! Violinist Arun Ramamurthy and his trio offer \u201ca beautiful, exotic, ear-opening listening experience\u201d with its fusion of jazz and South Indian Carnatic traditions. Performing music from his latest album, New Moon, as well as other originals and reimagined Carnatic repertoire, Ramamurthy\u2019s set will be followed by the Rudresh Mahanthappa Hero Trio, known for \u201cexceptional vitality and an unmistakable chemistry.\u201d Mahanthappa is one of the era\u2019s definitive alto saxophonists, topping DownBeat\u2019s critics\u2019 polls for nine years with bold reinterpretations of jazz classics and an eclectic mix of songs from across the musical landscape. (All About Jazz) VIOLIN Arun Ramamurthy ELECTRIC BASS Damon Banks PERCUSSION Sameer G"
-    },
-    {
-      "id": "f8be60507b45",
-      "title": "West Philly Swingers",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "5:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/swing-o-ween",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "jazz"
-      ],
-      "description": "Join West Philly Swingers for a haunted evening of Lindy Hop and West Coast Swing as the group dances through the spooky world of Swing-O-Ween! Experience high-energy performances that combine dynamic choreography with beloved Halloween archetypes, bringing the mystery and adventure to life on the dance floor in an epic tribute."
-    },
-    {
-      "id": "d845eebea6ee",
-      "title": "Full Measure A Cappella",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "5:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/full-measure-constant",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Join Penn\u2019s premier Christian a cappella group this fall. FM seeks to serve its community as an outward ministry, sharing hope and love through music."
-    },
-    {
-      "id": "3a0aefd9257a",
-      "title": "Penn Players",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/the-prom",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "Emma and Alyssa are young, in love, and want nothing more than to go to prom as a couple. The only problem? They live in Edgewater, Indiana, a community that would rather cancel the whole event than let them go together. But when a group of narcissistic Broadway actors arrive to support an inclusive prom (and give their failing careers a boost of good press), the town is turned upside down. This musical comedy balances heart and hilarity, satirizing ignorance in all its forms while exploring how to stand up for what is right, lead with love, and the unexpected ways people can learn from one another."
-    },
-    {
-      "id": "01fdad69e3a8",
-      "title": "Arts of India Festival Community Day",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/ArtsIndiaCommunity",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival A joyful celebration of Indian dance, music, crafts and food, our Arts of India Festival Community Day features performances by Nardhana Academy of Dance, Penn Sargam, and percussionists Pitchumani Sivakumar, Ravi Kyer, and Swetha Narasimhan. Join us to enjoy activities and this sampling of the talented artistry at Penn and across the Philadelphia region. This event is free but registration is requested. REGISTER NOW EVENT SCHEDULE 1:30 PM | Prince Theatre Nardhana Academy of Dance Nritya Rang Featuring: BHARATHANATYAM Rathi Ramesh Sandilya and Rasya Ramesh NATTUVANGAN Ramaa Ramesh VOCALS Vignesh Ravichandran MRIDANGAM Murali Balachandran FLUTE Visweshwar Nagarajan VIOLIN Swetha Narasimhan 2:30 PM | Feintuch Family Lobby Penn Sargam 3 PM | Feintuch Lobby "
-    },
-    {
-      "id": "f3297389bde6",
-      "title": "Niladri Kumaar",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/NiladriKumaar",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival Sitar maestro Niladri Kumaar is a maverick musician and acclaimed ambassador for Indian music. A frequent collaborator with tabla icon Zakir Hussain, Kumaar makes his Penn Live Arts debut in the Philadelphia premiere of The Space Between the Notes, a musical concert journey weaving centuries-old tradition with creative innovation, all based on the documentary film recording of the duo\u2019s last performance together. With an ensemble of Indian and American musicians, don\u2019t miss this heartfelt tribute to Hussain and the special bond these two masters shared. \u201cIn India, Niladri is considered one of the masters of today.\u201d - Zakir Hussain SITAR Niladri Kumaar KEYS Agnelo Fernandes DRUMS Sambit Chatterjee TABLA Satyajit Talwalkar Save up to 35% by including this p"
-    },
-    {
-      "id": "230987a45186",
-      "title": "Masterclass: Nrityagram Dance Ensemble",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-Nrityagram2026",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "This masterclass introduces participants to the fundamental movements and body-training techniques of Odissi as evolved and practiced at Nrityagram. The session begins with a short warm-up, followed by an introduction to the Odissi classical dance tradition and its distinctive movement vocabulary. Participants will explore the foundational elements of Odissi technique, including Ch\u0101r\u012bs (movements across space), Utplavanas (jumps) and Bhramaris (spins). The class will also introduce the two characteristic postures of Odissi: Chauka, a strong square stance, and Tribhangi, the three-bend posture that gives Odissi its distinctive sculptural quality. The class will be led by Pavithra Reddy, assisted by Anoushka Rahman, Namaha Mazoomdar and Daquil Miriyala, with live music by members of the Nrit"
-    },
-    {
-      "id": "2f131f109045",
-      "title": "Nrityagram Dance Ensemble",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Nrityagram2026",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival Nrityagram, the renowned and \u201cmost exciting Indian classical dance ensemble\" (Fjord Review), returns to our stage with the Philadelphia premiere of KHANKHAN\u0100: the sound of dancing feet. Featuring live music and vibrant tradition, KHANKHAN\u0100 journeys through three decades of acclaimed works by artistic director and Odissi choreographer Surupa Sen, showcasing her unique sensibility of thought and movement. Don\u2019t miss this thrilling retrospective as \u201cthese are among the world\u2019s greatest dancers\u201d who frequently offer \u201cone of the most extraordinary dance events of the year\u201d (The New York Times). \u201cUniquely mysterious, eternal, and beautiful\u201d (The Times Colonist) About Odissi Originally a sacred ritual dedicated to the gods, Odissi is one of the oldest dance trad"
-    },
-    {
-      "id": "c7d78f2cc194",
-      "title": "Soundworks Tap Factory",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Soundworks-25-Years",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Join the University of Pennsylvania's one and only strictly tap dancing group for a night celebrating 25 years of dance excellence."
-    },
-    {
-      "id": "1d924d0282e3",
-      "title": "Illuminating Arts of India",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/illuminating-artsindia",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival 10:30 am: Musical Brunch 11:00 am: Panel Discussion with Indian Alumni Working in the Arts *Program will include performances by Penn student performing arts groups. Join fellow Penn alumni, students, and friends for a program celebrating the vibrant cultural heritage of India through the arts. Hear from prominent Penn alumni who are forging careers in the performing arts and entertainment industry, and discover how their experiences at Penn helped shape their creative journeys. Enjoy special performances by current Penn student groups who are carrying forward\u2014and reimagining\u2014traditional Indian art forms for a new generation. Come celebrate the creativity, talent, and rich culture that make the Indian community at Penn so vibrant. Kindly RSVP by Nadiah Gr"
-    },
-    {
-      "id": "5f7df3e2654e",
-      "title": "B\u00e9la Fleck",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/BelaFleck",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "B\u00e9la Fleck is the world\u2019s premier banjo virtuoso, renowned for his staggeringly bold musicality. With 18 Grammy\u00ae Awards across nine different genres, Fleck is a celebrated musical adventurer who returns to his roots with My Bluegrass Heart. For this homecoming in sound, Fleck, our 26/27 season artist-in-residence, brings together bluegrass legends alongside some of the best newer talent, creating a vivid amalgamation of generations, ideas and styles. Featuring Michael Cleveland, Dominick Leslie, Jeff Partin, Mark Schatz and Jake Stargel, these musical greats draw on a long and joyful history, infusing tradition with fresh energy, masterful musicianship and the boundless spirit of bluegrass. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "59b93311c06d",
-      "title": "Handel at Home",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/HandelatHome",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Event Location: Powel House, 244 South 3rd Street Both performances of Handel at Home have sold out. Please email or call the Box Office at 215.898.3900 to be added to the wait list should more tickets become available. Step into the musical world of the early American republic, when private gatherings for music, poetry and conversation were central to social and cultural life. Mezzo-soprano and Penn artist-in-residence Meg Bragle leads Handel at Home, a program inspired by the talent, curiosity and hospitality of the 18th-century women who were at the heart of these flourishing artistic circles. Joined by soprano Mary Wilson and harpsichordist Hanbyeol Lee, and set in the historic Powel House, this intimate performance offers a taste of Philadelphia\u2019s lively colonial salons through opera,"
-    },
-    {
-      "id": "d4764ec59cda",
-      "title": "Compagnie Herv\u00e9 Koubi",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/HerveKoubi",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "The fearless and powerful Compagnie Herv\u00e9 Koubi returns to Philadelphia for the first time in over a decade with the mesmerizingly kinetic Sol Invictus. A fusion of contemporary dance, hip hop, capoeira and martial arts, this new work champions love as the guarantor of peace\u2014affirming that, despite conflict, unity will triumph as humanity\u2019s saving grace. Super-charged in both meaning and movement, the piece is set to a driving score by Mikael Karlsson, Steve Reich and Maxime Bodson. Sol Invictus takes its name from the \u201cinvincible sun\u201d deity and Koubi\u2019s dancers \u201ccould be mistaken for gods\u201d (The New Yorker): fierce, weightless and seemingly a step beyond human. Don\u2019t miss this company\u2019s Penn Live Arts debut\u2014\u201cthey change how you see the amazing\u201d (The New York Times). \u201cThe dancers\u2019 extraordin"
-    },
-    {
-      "id": "7595f0096bc6",
-      "title": "Masterclass: Compagnie Herv\u00e9 Koubi",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "9:00 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-HerveKoubi",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "This introductory masterclass will be an exploration of Herv\u00e9 Koubi\u2019s work. The workshop is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable clothing for movement. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
-    },
-    {
-      "id": "259fb8523c6e",
-      "title": "Hot Peas 'N Butter",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/HotPeas",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Come sing and dance with Hot Peas 'n Butter, the award-winning family band that celebrates music from every corner of the globe. With fan-favorite albums and catchy music videos, these beloved performers are frequently heard on Nick Jr. and Sesame Street, delighting kids and grownups alike with their \u201chot and mellow multicultural groove\u201d (Los Angeles Times). Sung in languages ranging from English, Spanish and French to Korean and Hebrew, this concert features songs from the group\u2019s latest album, Back to the Land, honoring our connections to one another and our planet, alongside hits from across the years. Get ready to jam along at a joyful, interactive party where music unites us all. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "0b711372c460",
-      "title": "Louis Cato",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/LouisCato",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "\u201cThere is something special about Louis Cato's ability to captivate an audience.\u201d Radiant with charisma and a sound shaped by jazz, funk, blues and soul, this Grammy\u00ae Award-nominated multi-instrumentalist is best known as the final bandleader for The Late Show with Stephen Colbert. He has an innate talent for crafting rich sonic landscapes into timeless gems, from original compositions to his popular Cato Covers series, where he reimagines an eclectic range of songs. Praised for his \u201cimmense musicality\u201d and \u201chonest, thoughtful, and vulnerable storytelling,\u201d Cato joins his trio for a magnetic Philadelphia debut performance that\u2019s not to be missed. (NPR Music) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "eebe1846d10d",
-      "title": "Masterclass: Isaiah J. Thompson",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-IsaiahJThompson",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Join pianist and composer Isaiah J. Thompson for a masterclass on jazz piano. This workshop is free and open to advanced high school and college musicians. Five pianists will be selected to participate, and five additional seats will be available for student observers. Parents and teachers are welcome to observe in the theatre. There is no audition for this class. Classroom teachers, ensemble leaders and staff members at music education organizations are encouraged to recommend students who would most benefit from this opportunity. To register for yourself or your student, please email Director of Education & Engagement Leah Falk at leahfalk@upenn.edu."
-    },
-    {
-      "id": "6b064b583b1d",
-      "title": "Isaiah J. Thompson",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/IsaiahJThompson",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Isaiah J. Thompson sold out our Prince Theatre! Due to this significant audience demand, we\u2019ve moved the performance to our Zellerbach Theatre instead. Those with tickets for the original venue have been moved and notified, but if you have any questions, please contact the Box Office at PLA-BoxOffice@upenn.edu or 215.898.3900. Award-winning jazz pianist and composer Isaiah J. Thompson makes his Philadelphia headline debut with a nostalgic holiday gift just for you. Paying tribute to the eclectic music of Vince Guaraldi, best known for composing the score for A Charlie Brown Christmas, Thompson\u2019s crisp piano and contemporary creative fire offer a fresh take on these beloved songs. A graduate and now faculty member at Julliard, this rising jazz star promises a heartwarming celebration of an "
-    },
-    {
-      "id": "ad04d55b92ad",
-      "title": "A Very Sw!ng Out Holiday",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/SwingOut2026",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Have yourself a swingin' little Christmas with tap superstar Caleb Teicher, \"one of the brightest lights in tap today\" (The New Yorker), and their jubilant cast of stellar dancers. In this fun holiday twist on the hit show Sw!ng Out, beloved by our audiences back in 2023, Lindy Hop champions take to the stage, dancing to festive classics played live by the Eyal Vilner Big Band. This \u201csweeping ride through contemporary swing dance\u201d (The New York Times) concludes with a jam session, inviting you and your loved ones to join the revelry on stage. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "2eb066abd95e",
-      "title": "Sister's Christmas Catechism",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/ChristmasCatechism",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle). \"Late Nite Catechism is a theatrical phenomenon!\u201d (On Boston Stages)"
-    },
-    {
-      "id": "9c7d16aad3a0",
-      "title": "Chrysalis",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "4:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/chrysalis",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival The Sachs Program for Arts Innovation and Penn Live Arts are pleased to present Chrysalis, an exhibition of paintings by artist Pragya Gupta. The exhibition will be on view in the Annenberg Center for the Performing Arts at the University of Pennsylvania, Oct 15 through Dec 13, 2026. Pragya Gupta\u2019s work is about transformation; her practice is grounded in a sustained inquiry into what it means to become intimate with one\u2019s own life. Her paintings explore the tension between the selves we construct and the more intimate parts of ourselves that can be harder to hear. Chrysalis is centered on a new series of tetraptychs (four-paneled artworks) alongside earlier works that trace the evolution of this inquiry. Across the new works, the four-panel structure, sc"
-    },
-    {
-      "id": "2d27aeb5177f",
-      "title": "Choir! Choir! Choir!",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/CCC2026",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "It\u2019s time to sleigh it with your singing. Back by popular demand after an epic debut on our stage last season, Choir! Choir! Choir! celebrates the holidays by uniting strangers through communal music-making. Directors Daveed Goldman and Nobu Adilman lead this fully interactive, participatory event, turning the audience into the performers as you sing, laugh and dance your way through a festive mix of holiday classics and seasonal pop gems. No experience is necessary and all voices are welcome. So, don\u2019t be a Grinch\u2014grab your nearest and dearest, and get ready to sing it loud for all to hear! Accessibility Note: During this event, the audience will stand and sit. If you need to remain seated throughout the show, please select seats designated as part of the seated-only section to ensure you"
-    },
-    {
-      "id": "a774adc7a576",
-      "title": "Cirque \u00c9loize",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/CirqueEloize",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "\u201cOne of Canada\u2019s national treasures\u201d (Toronto Star), Cirque \u00c9loize has been redefining contemporary circus for more than three decades, earning a reputation as \u201cCirque du Soleil\u2019s hipper, sexier cousin\u201d (The Stage). In this highly anticipated Penn Live Arts debut, the company reinvents its global smash hit, ID, with even more electrifying energy. The city becomes both setting and character in the Philadelphia premiere of ID EVOLUTION, where trampoline, aerial hoop, trial bike, breakdancing and more collide in a striking urban ballet. Every jump, movement and note of music propels a visceral story of identity and encounters, promising an experience as spectacular as it is deeply human. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "7b5f92f28f11",
-      "title": "Delbert Anderson Quartet",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/DelbertAnderson27",
-      "price": null,
-      "categories": [
-        "classical",
-        "concert",
-        "dance"
-      ],
-      "description": "Delbert Anderson, a Din\u00e9 jazz trumpeter and composer, is \u201cat the forefront of a vibrant Native American jazz scene.\u201d (The New York Times) Anderson and his innovative quartet blend traditional Din\u00e9 spinning songs with jazz and funk in a program featuring the world premiere commissioned work Beyond Belief, a multi-part meditation on Navajo history and the tribe\u2019s broken relationship with America. Anderson\u2019s much-anticipated Philadelphia debut \u201cskillfully braids Indigenous melodies and syncopated grooves in a way that can appeal to purists in either camp.\u201d (Grammy.com) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "fcb60a9563fd",
-      "title": "Daym\u00e9 Arocena",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/DaymeArocena",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Afro-Cuban singer Daym\u00e9 Arocena draws on the rhythms of Latin traditions, nimble athleticism of jazz and catchy hooks of pop. Frequently compared to icons like Aretha Franklin, Celia Cruz and Nina Simone, this Grammy\u00ae Award-nominated vocalist \u201cunites cosmopolitan musicianship with deep roots\u201d (The New York Times), bringing a genre-blending creativity to her virtuosity. \u201cA dynamic performer con carisma y fuerza, her ebullient personality and performance shines\u201d (NPR Music) as she returns to our stage for the first time in over nine years. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "837a08fff232",
-      "title": "Branford Marsalis & Dianne Reeves",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/MarsalisReeves",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Two icons share the stage to celebrate the legacy of one of the most illustrious voices in jazz. Recording and performing together for the very first time, saxophonist Branford Marsalis and vocalist Dianne Reeves, both NEA Jazz Masters and multi-Grammy\u00ae Award-winners, perform music from their latest release, Dedicated to You, a tribute to John Coltrane\u2019s groundbreaking 1963 collaboration with Johnny Hartman. Backed by Marsalis\u2019 longtime quartet\u2014pianist Joey Calderazzo, bassist Eric Revis and drummer Justin Faulkner\u2014these legendary artists honor Coltrane\u2019s 100th birthday with an unforgettable evening of jazz. This is a special event, and no discounts will be offered."
-    },
-    {
-      "id": "84fb5a713c81",
-      "title": "Third Coast Percussion & Glenn Kotche",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/ThirdCoastKotche",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "An innovative percussion ensemble and renowned drummer team up to celebrate Philip Glass\u2019 90th birthday. Known for pushing the genre \u201cin new directions, blurring musical boundaries and beguiling new listeners\u201d (NPR Music), Third Coast Percussion makes its Philadelphia debut alongside Glenn Kotche, composer and drummer of Wilco, hailed as one of Rolling Stone\u2019s 100 Greatest Drummers of All Time. A collective Penn Live Arts debut, these Grammy\u00ae Award-winners perform an exhilarating program including Glass\u2019 Aguas da Amazonia and Steve Reich\u2019s Music for Pieces of Wood, arranged for two drum sets, plus original compositions and more that expand the depth and musical possibilities of percussion. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "76bfceb90cb3",
-      "title": "Dallahan",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Dallahan",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Americana Festival: Roots & Reinventions Forged in Scotland and Ireland's traditional music scene, Dallahan is a genre-blending folk ensemble that infuses Celtic melodies with global sounds. The group performs in Philadelphia for the first time, sharing tunes from rousing jigs and reels to evocative, story-driven ballads, all subtly intertwined with folk influences from North America and the Balkans. \u201cLike a world music festival in one group\u201d (LiveIreland), Dallahan\u2019s playful humor and innovative virtuosity promise a lively musical journey across continents. Create your own Americana Festival pass and save! Buy two Festival shows to save 10% or buy all three to save 20%. Simply add the performances to your cart, and the pricing will adjust to reflect the discount."
-    },
-    {
-      "id": "56e2fca75d18",
-      "title": "Martin Hayes Duo",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/MartinHayesDuo",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Americana Festival: Roots & Reinventions \"One of the best fiddlers on the planet\" (NPR), known for his \u201cinsatiable appetite for adventure\u201d (The Irish Times), Martin Hayes returns to our stage after a sold-out performance last season. Joined by guitarist Kyle Sanna and special guest banjo virtuoso B\u00e9la Fleck, our 26/27 season artist-in-residence, these musical masters explore the intercontinental journey of Ireland\u2019s traditional music and its influence on American roots traditions. Fleck will also perform the world premiere of Plain Songs, a Penn Live Arts commission for solo banjo. Don\u2019t miss this one-night-only convergence of extraordinary musical voices. Create your own Americana Festival pass and save! Buy two Festival shows to save 10% or buy all three to save 20%. Simply a"
-    },
-    {
-      "id": "a0a41f69c738",
-      "title": "Open Session with B\u00e9la Fleck & Martin Hayes",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:00 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/OpenSession2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Americana Festival: Roots & Reinventions Banjo virtuoso B\u00e9la Fleck, our 26/27 season artist-in-residence, and Irish fiddle master Martin Hayes invite you to an open session where bluegrass and Irish traditions meet for a high-energy jam. This rare opportunity for intermediate to advanced players offers the chance to sit in with these master musicians, joined by guitarist Kyle Sanna. Bring your string instrument\u2014fiddle, guitar, banjo and more\u2014and take part in an open, shared musical exchange led by some of the tradition\u2019s defining voices. Ticket options include Participant, for intermediate to advanced string players, and Observer, for those wishing to watch as opposed to participating in the jam. Please select the correct ticket option during checkout.Open Session participants "
-    },
-    {
-      "id": "99e1155f9871",
-      "title": "Tall Stories Theatre Company",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Gruffalo",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "On a daring adventure in the deep, dark woods, Mouse encounters the sly Fox, an eccentric old Owl and the high-spirited Snake. Will Mouse\u2019s story of a terrible Gruffalo save him from becoming dinner for these hungry woodland creatures? Brought to life by London\u2019s Tall Stories, this magical, musical adaptation of the award-winning picture book by Julia Donaldson and Axel Scheffler celebrates its 25th anniversary, following sold-out runs on Broadway and in the West End. An \u201cirresistibly charming tale told with refreshing simplicity\u201d (The Times), this much-loved monster of a show is full of songs, laughs and scary fun for littles. But don\u2019t worry, there\u2019s nothing to fear. For don\u2019t you know? There\u2019s no such thing as a Gruffalo\u2026 Save up to 35% by including this performance in a subscription! \u00bb"
-    },
-    {
-      "id": "6fa31948b5f5",
-      "title": "Nora Brown with Stephanie Coleman",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/BrownColeman",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Americana Festival: Roots & Reinventions Banjo prodigy Nora Brown first debuted on our stage in 2022. Now, this \u201cmust-see artist\u201d (The Boston Globe) returns with master fiddler Stephanie Coleman, offering a reverent and spirited approach to Appalachian folk music. Shaped by years of shared musical exploration, the award-winning duo plays \u201cwith consistent flair and an audible mastery of their instruments\u201d (Folk Radio UK), pushing each other creatively while remaining deeply connected to the heart of the tradition. Joined by percussionist James Shipp, they infuse the rich storytelling of old-time music with fresh energy. Create your own Americana Festival pass and save! Buy two Festival shows to save 10% or buy all three to save 20%. Simply add the performances to your cart, and "
-    },
-    {
-      "id": "4237ba6a9e17",
-      "title": "Black Grace",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/BlackGrace2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "\u201cWith innovative flair and theatricality,\u201d New Zealand\u2019s Black Grace returns to our stage for the first time in 12 years, after wowing audiences worldwide with \u201ca carefully constructed form of rigor and sophistication\u201d (The Boston Globe). Masterfully blending contemporary and Samoan dance, the company embodies \u201cincredible speed and stamina, and exhilarating, seemingly inexhaustible energy\u201d (The New York Times). The program features two Philadelphia premieres\u2014abridged versions of If Ever There Was A Time and Paradise Rumour\u2014highly physical works rooted in the rich storytelling traditions of the South Pacific and performed with raw finesse, beauty and power. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "b65773c20f43",
-      "title": "I Fagiolini",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/IFagiolini",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Event Location: Philadelphia Episcopal Cathedral, 19 South 38th Street I Fagiolini, Britain\u2019s renowned early music vocal ensemble, returns to the U.S. for the first time in over 10 years for this special Philadelphia debut performance. The group marks its 40th anniversary with Il divino Claudio, a program centered on the rich variety of Claudio Monteverdi\u2019s secular and sacred works, the very heart of a cappella genius. From madrigals with harmony that twists and bites to intimate yet dramatic trios or duets, I Fagiolini reveals Monteverdi\u2019s remarkable emotional range, delivering \u201cstartlingly intense surround-sound baroque\u201d (The Guardian). Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "1a069e29879b",
-      "title": "Dan Blacksberg's Freilachs Music",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:15 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/DanBlacksberg",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "All ages Klezmer trombone pioneer Dan Blacksberg and his Freilachs Music band take over our Feintuch Family Lobby with the lively sounds of the Eastern European Jewish musical tradition. Seen across the region bringing klezmer to the masses, the group blends centuries-old heritage with new compositions\u2014and has even put its unique spin on the national anthem at recent Phillies games. Check out this free concert and experience the infectious energy of klezmer at its finest! \u00bb See full Children's Festival line-up"
-    },
-    {
-      "id": "cf0e8c7b50ca",
-      "title": "123 Andr\u00e9s",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/123Andres-CF",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Ages 3-10 The Grammy\u00ae Award-winning music duo of 123 Andr\u00e9s needs your help finding a lost friend! Join the search across continents as you explore geography and discover the sights and sounds of the Am\u00e9ricas. Heard on PBS Kids and called \u201ca rockstar for little language learners\u201d by Billboard, this energetic group leads an interactive, bilingual concert journey that invite students to sing, move and learn together. For Tickets: School groups should contact Anne-Marie Mulgrew at 215.462.7720 or amulgrew@upenn.edu. All others should contact the Box Office at 215.898.3900 or PLA-BoxOffice@upenn.edu. \u00bb See full Children's Festival line-up"
-    },
-    {
-      "id": "6ef91fc478ad",
-      "title": "Ladysmith Black Mambazo",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Mambazo2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "With \u201ctruly great singing\u2026and perfectly timed harmony work\u201d (The Guardian), Ladysmith Black Mambazo returns by overwhelming demand after a sold-out performance in 2024. This Grammy\u00ae Award-winning vocal powerhouse radiates joy performing South African classics and gospel favorites. Beloved around the globe as the undisputed kings of South African a cappella, they deliver a resonant message of peace and love\u2014\u201ctheir warm-centered presence and harmonics both soothe and offer hope for a more empathetic world\u201d (The Chicago Tribune). Save up to 35% by including this performance in a subscription! \u00bb Learn more For tickets to the Mar 8 performance: School groups should contact Anne-Marie Mulgrew at 215.462.7720 or amulgrew@upenn.edu. All others should contact the Box Office at 215.898.3900 or PLA-B"
-    },
-    {
-      "id": "a05ca4fa1d60",
-      "title": "Mermaid Theatre of Nova Scotia",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/MermaidTheatre",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "Ages 3-7 Follow a brave raccoon and clever mouse as they weave their way through some of your favorite fairy tales: The Three Little Pigs, Goldilocks and the Three Bears and The Three Billy Goats Gruff. Filled with adventure, humor and heroism, this dynamic duo sets out on a hunt for treasure, only to unknowingly help the goats, bears and pigs stay one step ahead of disaster. Told through beautiful puppetry, engaging narration and an original score, this imaginative retelling seamlessly connects three cherished children\u2019s stories into a heartwarming journey of friendship and courage. For tickets to Mar 8-9 performances: School groups should contact Anne-Marie Mulgrew at 215.462.7720 or amulgrew@upenn.edu. All others should contact the Box Office at 215.898.3900 or PLA-BoxOffice@upenn.edu. "
-    },
-    {
-      "id": "5561ea374d23",
-      "title": "TheaterWorksUSA",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Questioneers",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "Ages 4-9 Be curious and dream big with Rosie Revere, Ada Twist and Iggy Peck as they enliven Ms. Greer\u2019s classroom with their bold, imaginative ideas. In this fun, STEM-filled musical based on Andrea Beaty\u2019s beloved Questioneers book series, we join this inquisitive trio on a field trip gone awry, where they face the ultimate test of their problem-solving skills and teamwork. With curiosity, creativity and collaboration, they soon discover they can tackle even the biggest challenges\u2014and that \u201cthe only true failure can come if you quit.\u201d For Tickets: School groups should contact Anne-Marie Mulgrew at 215.462.7720 or amulgrew@upenn.edu. All others should contact the Box Office at 215.898.3900 or PLA-BoxOffice@upenn.edu. \u00bb See full Children's Festival line-up"
-    },
-    {
-      "id": "c563442cc8c6",
-      "title": "Les Ballets Trockadero de Monte Carlo",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Trocks2027",
-      "price": null,
-      "categories": [
-        "ballet",
-        "concert",
-        "dance"
-      ],
-      "description": "Laugh-out-loud satire meets astonishing pointe work in the gender-bending Les Ballets Trockadero de Monte Carlo. Revered by dance aficionados as well as those who don\u2019t know a pli\u00e9 from a jet\u00e9, the Trocks, as they\u2019re lovingly called, are an all-male troupe that honors ballet classics such as Swan Lake, while also poking fun at every artistic conceit. \u201cEqualizing the space between comedy and serious dancing is a delicate balance, but that\u2019s what makes the Trocks sing,\u201d proving that \u201cparody and virtuosic technique work in glittering tandem\u201d (The New York Times). \u201cThe Trocks may show you how to laugh at ballet, but they also teach you to love it.\u201d (New York Post) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "a9273f217c5e",
-      "title": "Allison Zuckerman",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/AllisonZuckerman",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Allison Zuckerman: Remixed and Reclaimed features vivid, layered compositions, which draw from art history, popular culture and found imagery to create bold new visual worlds. Through collage-like paintings and dynamic reworkings of familiar forms, Zuckerman reclaims and reimagines representation with energy, wit and intensity."
-    },
-    {
-      "id": "4e3aada35615",
-      "title": "Endea Owens & The Cookout",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/EndeaOwens",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Bassist Endea Owens is among the most vibrant emerging artists in jazz. A Juilliard grad known as a member of The Late Show with Stephen Colbert band, Owens is a dynamic force who has already earned Emmy, Grammy\u00ae and George Foster Peabody Awards and collaborated with greats including Wynton Marsalis, Jazzmeia Horn, Jon Batiste and Dee Dee Bridgewater. Making her Penn Live Arts debut, Owens and her high-octane ensemble, The Cookout, serve up a mix of jazz, soul and funk in performances celebrated as \u201cliterally sparkling\u201d with \u201cmasterful playing and exuberant charm\u201d (NPR). Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "0526466df440",
-      "title": "Le Concert de l\u2019Hostel Dieu",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/lHostelDieu",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Event Location: Philadelphia Episcopal Cathedral, 19 South 38th Street Known for reinvigorating early masterpieces, France\u2019s Le Concert de l\u2019Hostel Dieu is joined by charismatic soprano Roberta Mameli for an enchanting revival of forgotten Baroque treasures. The 12th-century Danish legend of Prince Hamlet inspired not only Shakespeare\u2019s tragedy but also several 18th-century Italian operas, all previously considered lost. \u201cA harmonious kinship of intriguing repertoire and felicitous musical expressivity\u201d (Gramophone), this Philadelphia debut performance brings to life the romantic Veremonda (Shakespeare\u2019s Ophelia) and Hamlet's conflicted mother, Gerilda (Gertrude), through newly rediscovered arias by Scarlatti, Gasparini, Carcani and Vignati. Step into the fascinating world of Hamlet and re"
-    },
-    {
-      "id": "e5494c032624",
-      "title": "Masterclass: Sarah Elizabeth Charles",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/masterclass-SarahElizabethCharles",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Join vocalist and composer Sarah Elizabeth Charles for a vocal masterclass. This workshop is free and open to advanced high school and college singers. Five vocalists will be selected to participate, and five additional seats will be available for student observers. Parents and teachers are welcome to observe in the theatre. There is no audition for this class. Classroom teachers, ensemble leaders and staff members at music education organizations are encouraged to recommend students who would most benefit from this opportunity. To register for yourself or your student, please email Director of Education & Engagement Leah Falk at leahfalk@upenn.edu."
-    },
-    {
-      "id": "4b36bfc6a395",
-      "title": "Sarah Elizabeth Charles",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/SarahElizabethCharles",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "With her \u201csoulfully articulate vocal style, a mix of strong projection and subtle detail\u201d (The New York Times), Sarah Elizabeth Charles commands attention. The songstress has demonstrated her \u201cimpeccable technical prowess\u201d and \u201cboldly uninhibited expression\u201d (JazzTimes) across several critically acclaimed albums, charting a singular course through neo-soul and jazz. Experience the magnetic vocals of a rising star in this special Penn Live Arts debut. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "06b1e6b26454",
-      "title": "Gibney Company",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Gibney2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "An acclaimed fixture of the New York dance world finally comes to Philadelphia. The Gibney Company, known for bold commissions, rigorous physicality and expressive storytelling, performs a program of works by resident choreographer Lucinda Childs. Exploring the interplay between music and movement, Three Dances (for prepared piano) John Cage showcases Childs\u2019 signature minimalist precision and reverence for structured repetition. Then, premiering in 2027 in celebration of Philip Glass\u2019 90th birthday, Another Look sets choreography to Another Look at Harmony, Part 4, offering a rare artistic convergence of two defining figures in American minimalism. Don\u2019t miss this company\u2019s thrilling debut with \u201cits strong and versatile dancers, artists who appear to be physically capable of anything\u201d (Th"
-    },
-    {
-      "id": "df1685b01d57",
-      "title": "Philip Glass Ensemble",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/PGE2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "In 1975, filmmaker Godfrey Reggio joined forces with composer Philip Glass to create Koyaanisqatsi, a non-narrative, experimental film that explores the balance between humanity, technology and the environment. This cult classic\u2019s score is a landmark in minimalist music, hailed as one of the most influential film soundtracks of the modern era. In a rare Philadelphia appearance, the acclaimed Philip Glass Ensemble performs this thrillingly enigmatic music live, creating a powerful fusion of concert and cinema. With a message as resonant today as it was at the film\u2019s debut, this immersive experience unfolds as a haunting, unforgettable journey. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "938a48d2e23e",
-      "title": "John Scott Dance",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/JohnScott",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Renowned Irish choreographer John Scott makes his Penn Live Arts debut with Ancestral Movements, a powerful exploration of identity, resilience and belonging. A 26/27 season artist-in-residence, Scott will collaborate with new American citizens and other Philadelphians whose lives have been impacted by migration to co-create this evocative dance-theatre work. Performed by an ensemble of professional dancers and community members, this world premiere weaves personal histories, traditions and everyday movements into a common physical language, a profound reflection on how we carry the past\u2014and imagine a future\u2014together. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "4be1bac018c9",
-      "title": "Dance Theatre of Harlem",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/DTH2027",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance",
-        "theater"
-      ],
-      "description": "Dance Theatre of Harlem is \u201cone of ballet\u2019s most exciting undertakings.\u201d Led by Philadelphia native Robert Garland, this iconic company is a frequent New York Times Critic\u2019s Pick\u2014including as recently as 2025\u2014showcasing \u201cGarland\u2019s many choreographic gifts, from his sparkling musicality to his ability to seamlessly weave classical ballet with influences from modern and social dance.\u201d This beloved troupe returns to our stage with a program highlighting its unparalleled artistry, athleticism and enduring brilliance. (The New York Times) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "1a3439678ff3",
-      "title": "An Evening with Audra McDonald",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/AudraMcDonald",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
-    },
-    {
       "id": "1efde8f87961",
       "title": "Inside the Music: Let 'Em Eat Cake",
       "date_display": "Jan 09",
@@ -1941,186 +981,6 @@
       "description": "Voices for Peace 5:00 p.m. | Academy of Music A Gala Celebration"
     },
     {
-      "id": "1234ee884219",
-      "title": "THE ADDAMS FAMILY: The Musical",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/addams-family",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "2dea3f64e012",
-      "title": "Disney's FROZEN The Broadway Musical",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "77:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/disneys-frozen-the-broadway-musical",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "503e8c846594",
-      "title": "David Mamet's GLENGARRY GLEN ROSS",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "27:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/david-mamets-glengarry-glen-ross",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "7b8fb39b3dfa",
-      "title": "No\u00ebl Coward's PRESENT LAUGHTER",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "37:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/noel-cowards-present-laughter",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "62e75885316b",
-      "title": "COME FROM AWAY The Musical",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "37:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/come-from-away-the-musical",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "905eecdd143c",
-      "title": "HEXEN - An Ancestral Witch Play",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/hexen",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "9a9dbeba1474",
-      "title": "GERTRUDE STEIN AND A COMPANION",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/gertrude-stein-and-a-companion",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "8cd0005bda35",
-      "title": "SAME TIME, NEXT YEAR",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/same-time-next-year",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "a806efba851e",
-      "title": "Charles Dickens\u2019 A CHRISTMAS CAROL",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/a-christmas-carol-2026",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
-      "id": "60131f6c26f1",
-      "title": "Disney\u2019s FINDING NEMO JR",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/disneys-finding-nemo-jr",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
       "id": "3245bf4e2ee5",
       "title": "This calendar features events presented by FringeArts!",
       "date_display": "",
@@ -2205,23 +1065,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "77aafeb66a23",
-      "title": "Saxophonist Rico Jones & His Quintet",
-      "date_display": "October 30",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/138751",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Rico Jones - Saxophone<br />Jerome Gillespie - Drums<br />Anthony Golden - Double Bass<br />Mejedi Owusu - Trumpet<br />William Hill III - Piano </p> <p> <b><u>Set Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $25<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $100<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $120<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "6c32d0f0886b",
@@ -2901,7 +1744,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $25Dinner & Show ~ includes 3-course dinner: $85VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $105(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $25<br />Dinner &amp; Show ~ includes 3-course dinner: $85<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $105<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "1fae52f47e8f",
@@ -2935,7 +1778,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "A special holiday performance.Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p>A special holiday performance.</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "bb89f3d5745d",
@@ -2952,7 +1795,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "We Get Requests is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist Josh Lawrence. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage. Set times 7:30pm & 9:00pm General Admission "
+      "description": "<p><strong>We Get Requests</strong> is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist <strong>Josh Lawrence</strong>. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check ou"
     },
     {
       "id": "379ceee7563d",
@@ -2969,7 +1812,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set Times: 7:30pm & 9:30pm* General Admission ~ a la carte menu: $25Dinner & Show package ~ includes 3-course dinner: $100VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $120(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Set Times: 7:30pm &amp; 9:30pm*</u></b> <br /><b>General Admission</b> ~ a la carte menu: $25<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $100<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $120<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "224fc2440cc8",
@@ -3003,7 +1846,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Set times 7:30pm & 9:00pm General Admission ~ a la carte menu: $20Dinner & Show ~ includes 3-course dinner: $80VIP Dinner & Show ~ includes dinner above and upgrade to stage-front seating: $100(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($12) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "b6e0f1e6b339",
@@ -3020,7 +1863,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "George Colligan, Nicole Glover and Jaleel ShawShow Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p>George Colligan, Nicole Glover and Jaleel Shaw</p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "bdc7e89fc50b",
@@ -3037,7 +1880,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "2d640c6300d0",
@@ -3054,7 +1897,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "37994cb385ff",
@@ -3071,7 +1914,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "5a42b0d3a970",
@@ -3079,7 +1922,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "7:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3088,7 +1931,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Friday &amp; Saturday Showtimes 7:00PM &amp; 9:30PM | Sunday Showtimes 6:00PM &amp; 8:30PMYolanDa Brown: Bob Marley Songbook&nbsp;Everybody loves Bob Marley, so in celebration of his legacy award winning British saxophonist and broadcaster YolanDa Brown has crafted a special Bob Marley themed concert with a difference. This ambitious project reimagines Bob Marley&#39;s iconic catalogue of songs, infusing them with YolanDa&#39;s delicious blend of jazz, reggae, and soul, all through the emotive and captivating sounds of her saxophone.&nbsp;This concert will take the audience on a journey through Marley&#39;s legacy, exploring the depth of his musicality and the enduring impact of his message on love, peace, and unity.&nbsp;Award Winning Saxophonist YolanDa Brown, brings her vibrant energy t"
     },
     {
       "id": "839290dcac0a",
@@ -3096,7 +1939,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "6:30 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3105,7 +1948,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Thursday Showtimes 6:30PM &amp; 9:00PM | Friday &amp; Saturday Showtimes 7:00PM &amp; 9:30PMSaxophonist Kim Waters captivates jazz lovers with his smooth contemporary sound.&nbsp;Gaining fame in the 1990s with albums like &quot;Sax Appeal,&quot; his hit &quot;What I Like&quot; reached No. 3 on the charts in 2018. He honored Marvin Gaye with &quot;I Want You: Love in the Spirit of Marvin&quot; in 2008. After debuting with &quot;Sweet and Saxy&quot; in 1989, Waters showcased his artistry in the 2022 release &quot;That Special Touch,&quot; featuring his daughter, Kayla Waters."
     },
     {
       "id": "30781ba150d5",
@@ -3113,7 +1956,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "6:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3122,7 +1965,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Oakland-born vocalist, songwriter, and three-time Grammy-winning collaborator bringing jazz-level musicianship into soul and alternative R&amp;B. PHER is an Oakland-born vocalist, songwriter, and three-time Grammy-winning collaborator whose voice has appeared on award-winning work by Esperanza Spalding and Jon Batiste. His credits include Prince, Snarky Puppy, Chief Adjuah, Kanye West, Lupe Fiasco, Kris Bowers, Eric Harland, James Francies, and the SFJAZZ Collective. He co-wrote and recorded &ldquo;We Are America&rdquo; with Prince and Esperanza Spalding, and delivered the featured vocal performance on Snarky Puppy&rsquo;s &ldquo;Liquid Love.&rdquo; Longtime listeners first knew him as Chris Turner. Today, he records as PHER, a name given to him by his grandmother and reclaimed as the foun"
     },
     {
       "id": "cdb7481b2adb",
@@ -3130,7 +1973,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3139,7 +1982,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "In a volatile industry where passions wax and wane, the trends of today become the clich&eacute;s of tomorrow,&nbsp;and bands split as quickly as they capture the world&rsquo;s hearts;&nbsp;Spur Of The Moment has, over the past two decades, bucked the odds, transcended the usual ups and downs, and inspired thousands of fans across the world with a vibe that continues to define the word band.The list of artists that have worked with this immensely talented unit grows yearly. Their resume reads like a &quot;who&rsquo;s who&quot; of the R&amp;B and Jazz worlds. From the legendary George Duke to Al Jarreau, Patti Austin, Ledisi, Raheem Devaughn, and Lalah Hathaway."
     },
     {
       "id": "a38974453f16",
@@ -3147,7 +1990,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "7:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3156,7 +1999,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "FRIDAY &amp; SATURDAY SHOWTIMES 7:00PM &amp; 9:30PM&nbsp;SUNDAY SHOWTIMES 6:00PM &amp; 8:30PMFounded by acclaimed bassist and composer Warren Oree, The Arpeggio Jazz Ensemble has established a lasting presence in the world of contemporary jazz through its signature sound known as &ldquo;Undefeated Jazz.&rdquo; For more than four decades, the ensemble has blended original compositions, jazz standards, world rhythms, and improvisational energy into performances that are both artistically sophisticated and deeply engaging.&nbsp;The ensemble&rsquo;s sound moves seamlessly from intimate, reflective melodies to dynamic, rhythm-driven performances. This versatility allows Arpeggio to tailor performances for concert halls, festivals, educational programs, private events, and community celebrations"
     },
     {
       "id": "3bf85ad18fb6",
@@ -3164,7 +2007,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3173,7 +2016,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Christopher J. Davis, fondly known a &quot;Big Dog&quot;, was born in Waterbury, Connecticut to musical parents James Sr. and Mary Davis. When Chris was just four years old he had the ability to hear music in a special way. He began his piano studies at age five gripping the origins of black music at the Refuge Church of Christ in his hometown. By age sixteen, Chris recorded his first forty-five gospel where he began fusing gospel, funk, classical and jazz which he has perfected into an eclectic style all his own today.Chris is a two-time Grammy nominated writer and producer and has 15 Billboard top #1 smooth jazz records since 2008. Chris &lsquo;Big Dog&rsquo; Davis has received a Grammy nomination in 2014 for his work with singer/songwriter &ldquo;Maysa&rdquo; on her Blue Velvet Soul CD."
     },
     {
       "id": "c0aef2f6aeeb",
@@ -3181,7 +2024,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3190,7 +2033,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Step into the world of trombone-powered soul, jazz, hip-hop, and R&amp;B. Jeff Bradshaw&rsquo;s signature sound has echoed through concert halls, festivals, and classic recordings with legends and rising stars alike.&nbsp;Born and raised in North Philadelphia, Jeff Bradshaw&rsquo;s roots run deep in faith and music. Inspired by his father, a gifted musician and vocalist, Jeff was immersed in horn-driven sound from a young age. While his early instruments of choice were the baritone horn and sousaphone, it was the often-overlooked trombone that ultimately spoke to him.In high school, Jeff&rsquo;s curiosity led him to explore this underappreciated instrument. What he found was his voice &mdash; distinctive, soulful, and destined to redefine how the world hears the trombone.A visionary of sou"
     },
     {
       "id": "387ba1a5fcb7",
@@ -3198,7 +2041,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3207,7 +2050,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Nicole Henry&rsquo;s voice is an emotional force, effortlessly blending jazz, soul, and pop influences with a timeless authenticity that resonates deeply with listeners.Miss Henry&rsquo;s versatile and emotionally driven performances have captivated audiences in 20 countries. &nbsp;She has established herself among the jazz world&#39;s most acclaimed performers, possessing a potent combination of dynamic vocal abilities, impeccable phrasing, and powerful emotional resonance. Usually touring the world with her quartet, Henry has also been a special guest of jazz orchestras, pops orchestras, and big bands.Heralded by The New York Times, Wall Street Journal, The Japan Times, El Pais, Jazz Times, Essence, and more, Ms. Henry tells real stories through peerless interpretations of repertoire fro"
     },
     {
       "id": "bf4b6fc936ca",
@@ -3215,7 +2058,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3224,7 +2067,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "With six highly acclaimed albums, more than 50 touring dates per year, a #1 Billboard single, and multiple charting hits, New York guitarist JJ Sansaverino has spent the past thirty-five years reaching millions of fans around the world with his signature &ldquo;Benson meets Santana&rdquo; musical style. An innovative composer and electrifying performer, JJ brings a &ldquo;take no prisoners&rdquo; attitude to the stage night after night, blending Smooth Jazz, Traditional Jazz, Blues, R&amp;B, and Reggae into a vibrant live experience.A graduate and award winner from Berklee College of Music, he has shared the stage with numerous international artists and even performed at Sir Paul McCartney&rsquo;s wedding in 2002. His festival appearances include the Berks Jazz Festival, Rehoboth Jazz Fest"
     },
     {
       "id": "c2b9018e2dce",
@@ -3232,7 +2075,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "7:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -3241,7 +2084,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Friday &amp; Saturday Showtimes 7:00PM &amp; 9:30PM | Sunday Showtimes 6:00PM &amp; 8:30PMNamed the Chicago Tribune&rsquo;s 2020 person of the Year in Jazz, Tammy McCann is an internationally recognized Jazz Vocalist and is currently Artist in Residence for the Music Institute of Chicago. Her powerful, sultry, and emotionally charged voice paints pictures and tells stories by merging Classical vocal technique and Gospel esthetic with Jazz to create a sound that is completely her own.Chicago Tribune&rsquo;s Arts Critic, Howard Reich says McCann has, &ldquo;A voice that soars in all registers, at all tempos, on all occasions... a voice that inspires wonder!&rdquo; Alyce Claerbaut, President of Strayhorn Songs Publishing, Inc. and mentor to McCann says, &ldquo;Tammy is a star with a one-of-a-"
     },
     {
       "id": "1e45108ccf13",
@@ -3284,7 +2127,7 @@
       "source": "Greater Phila. Cultural Alliance",
       "source_url": "https://www.philaculture.org/events-calendar",
       "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
-      "price": null,
+      "price": "$",
       "categories": [],
       "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
     },
@@ -3309,7 +2152,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "10:00 AM",
       "venue": null,
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
@@ -3319,7 +2162,7 @@
         "ballet",
         "dance"
       ],
-      "description": null
+      "description": "Education Dance eXchange About the Program Dance eXchange is BalletX's in-school education program, using dance to build confidence, creativity, discipline, and self-expression in young people. Offered in partnership with six Philadelphia public schools, Dance eXchange serves 3rd and 4th grade students through an engaging curriculum that introduces the fundamentals of\u2026"
     },
     {
       "id": "da74d3abdc28",
@@ -3327,7 +2170,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "10:00 AM",
       "venue": null,
       "source": "BalletX",
       "source_url": "https://www.balletx.org/season-and-tickets/",
@@ -3337,7 +2180,7 @@
         "ballet",
         "dance"
       ],
-      "description": null
+      "description": "For Artists For dancers, choreographers, and presenters, discover opportunities to work, create, and tour with the company, and explore the repertory that defines BalletX as an artistic home for new work. Dance With Us BalletX invites passionate dancers to grow, create, and discover with us through company auditions, our Summer\u2026"
     },
     {
       "id": "4f348e654a28",
@@ -3355,7 +2198,7 @@
         "ballet",
         "dance"
       ],
-      "description": null
+      "description": "Support Ways To Support Why Donate? Your gift powers BalletX\u2019s bold vision, helping create new works, bring dance into schools and neighborhoods, and inspire audiences across our community. Support BalletX today and see the impact of your generosity on stage and beyond. Watch Our Journey Fund The Future Types of\u2026"
     },
     {
       "id": "a1592309ea02",
@@ -3363,14 +2206,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "9:00 AM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/the-mummers-parade/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "An annual tradition, the Mummers Parade features 10,000 men and women dressed in colorful costumes as they strut down Philly's Broad Street."
     },
     {
       "id": "a1b490c67164",
@@ -3378,14 +2221,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "6:00 PM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/new-years-eve-fireworks/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Want to ring in 2026 in Philly? Of course you do. Here's everything you need to know about the New Year\u2019s Eve Fireworks on the Waterfront."
     },
     {
       "id": "1be7a52857cc",
@@ -3393,14 +2236,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:45 PM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/wawa-welcome-america/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Philly celebrates independence \u2014 and America's 250th birthday \u2014 with the 16 days of fireworks, parades, concerts and more."
     },
     {
       "id": "a02bbd11a2c2",
@@ -3415,7 +2258,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/philadelphia-international-auto-show/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Catch a glimpse of the automotive industry\u2019s latest creations at the Pennsylvania Convention Center during the annual Philadelphia Auto Show."
     },
     {
       "id": "fb5a4d275f9a",
@@ -3430,7 +2273,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/philadelphia-international-flower-show/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "The nation\u2019s longest-running horticultural event takes you on a journey with a brand-new theme. Here's what to expect."
     },
     {
       "id": "bcbc727cc7ef",
@@ -3445,7 +2288,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/dine-latino-restaurant-week/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "A week of major meal deals and delicious Latin eats returns to the Greater Philadelphia region this fall."
     },
     {
       "id": "e3d40b59d1f0",
@@ -3460,7 +2303,7 @@
       "link": "https://www.visitphilly.com/events/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Get the details on the latest events, festivals, concerts, food- and drink-related celebrations, sports, and more happening in Philadelphia."
     },
     {
       "id": "21d5edcecc5b",
@@ -3475,7 +2318,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/center-city-restaurant-week/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Center City District Restaurant Week offers meal deals at more than 100 Philly restaurants. Here are our top picks for winter 2026."
     },
     {
       "id": "f01cb827bda5",
@@ -3490,7 +2333,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/penn-relays/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "The Penn Relays is the world\u2019s first and most widely recognized relay meet, where some of the world\u2019s top track athletes and future Olympians compete."
     },
     {
       "id": "042dc60ceca3",
@@ -3505,7 +2348,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/the-roots-picnic/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "The Roots Picnic returns with a weekend of incredible and diverse music hosted by The Roots. Here are five reasons not to miss it."
     },
     {
       "id": "2e41765a204e",
@@ -3513,14 +2356,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "8:30 AM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/philadelphia-thanksgiving-day-parade/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "The longest-running Thanksgiving Day parade in the country soars over the Benjamin Franklin Parkway once again. Here's the route, the floats and other info."
     },
     {
       "id": "17dba5952053",
@@ -3535,7 +2378,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/philadelphia-chinese-lantern-festival-at-franklin-square/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "This illuminated outdoor fest lights up the night at Franklin Square with dozens of larger-than-life lanterns \u2014 and new additions for 2026."
     },
     {
       "id": "0ddf3e7c0f74",
@@ -3550,7 +2393,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/the-cherry-blossom-festival-of-greater-philadelphia/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Soon after spring arrives, the Cherry Blossom Festival celebrates the region's gorgeous blooming cherry blossoms. Here's what's new for 2026."
     },
     {
       "id": "c2492a010e02",
@@ -3558,14 +2401,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "5:30 PM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/philadelphia-ourfest/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "What to expect: a massive parade, a day-long festival and more..."
     },
     {
       "id": "8704d81cfcc2",
@@ -3580,7 +2423,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/philly-black-pride/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Visitors come from far and wide for Philly Black Pride, an annual festival celebrating Philly\u2019s community of LGBTQ+ people of color."
     },
     {
       "id": "261d904d5025",
@@ -3588,14 +2431,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 AM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/rocky-season-philadelphia/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "New for 2026, Rocky Season brings eight weeks of events to Philadelphia celebrating the film's 50th anniversary. Explore dates, tours, runs and more."
     },
     {
       "id": "a96c71a7a101",
@@ -3603,14 +2446,29 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "7:30 PM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/philly-is-unrivaled/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Some of the best players in professional women\u2019s basketball take the court in Philly for the return of Philly Is Unrivaled this winter."
+    },
+    {
+      "id": "64bc054378b8",
+      "title": "Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:15 PM",
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/christmas-in-peddlers-village/",
+      "price": null,
+      "categories": [],
+      "description": "The Bucks County village comes to life with 1 million lights, gingerbread displays, a free festival and parade, visits from Santa, and more."
     },
     {
       "id": "865e81b27688",
@@ -3625,7 +2483,7 @@
       "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "The iconic holiday attraction is on hiatus during renovations at the Wanamaker Building. Here's what to know \u2014 and more ways to celebrate the holidays in Philly."
     },
     {
       "id": "a8d88db32fd6",
@@ -3633,14 +2491,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "9:00 PM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/luminature-philadelphia-zoo/",
-      "price": null,
+      "price": "$27",
       "categories": [],
-      "description": null
+      "description": "Over 1 million lights and dozens of handcrafted illuminated sculptures set the Philadelphia Zoo aglow for LumiNature. Here's what's new and exciting."
     },
     {
       "id": "edec4ac02c01",
@@ -3655,7 +2513,7 @@
       "link": "https://www.visitphilly.com/events/winter-events/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Philly is filled with fun winter activities. Want to embrace winter in the city? Here are our top picks for what to do in winter in Philly."
     },
     {
       "id": "d9cb56ee52e5",
@@ -3663,14 +2521,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "10:00 AM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Winter games, seasonal treats and holiday cheer fill Franklin Square all winter long during this free all-ages holiday fest and light show."
     },
     {
       "id": "50f5eba914d6",
@@ -3685,7 +2543,7 @@
       "link": "https://www.visitphilly.com/events/fall-events/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Come to Philly this fall for harvest festivals, Oktoberfests, fall festivals and food-centric celebrations of apples, mushrooms and pumpkins galore. Click for the complete guide..."
     },
     {
       "id": "640dd3333a6b",
@@ -3693,7 +2551,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "8:45 PM",
       "venue": "Philadelphia Museum of Art",
       "source": "Philadelphia Museum of Art",
       "source_url": "https://philamuseum.org/calendar",
@@ -3702,7 +2560,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Discover the Philadelphia Museum of Art, home to renowned art collections, groundbreaking exhibitions, and a legacy of creativity and innovation."
     },
     {
       "id": "a41c3cba7106",
@@ -3710,7 +2568,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "8:45 PM",
       "venue": "Philadelphia Museum of Art",
       "source": "Philadelphia Museum of Art",
       "source_url": "https://philamuseum.org/calendar",
@@ -3719,7 +2577,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": null
+      "description": "Discover ways to give to the Philadelphia Museum of Art. Make a museum donation and help sustain art, culture, and education in Philadelphia."
     },
     {
       "id": "fc2d9c7825ca",
@@ -3736,7 +2594,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Shop the Special Exhibition capsule to find gifts, books, and merch that boxing enthusiasts and art-lovers will both enjoy."
     },
     {
       "id": "08d8ed5f5440",
@@ -3744,7 +2602,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "8:45 PM",
       "venue": "Philadelphia Museum of Art",
       "source": "Philadelphia Museum of Art Exhibitions",
       "source_url": "https://philamuseum.org/exhibitions",
@@ -3753,7 +2611,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Discover the Philadelphia Museum of Art, home to renowned art collections, groundbreaking exhibitions, and a legacy of creativity and innovation."
     },
     {
       "id": "f4dc9cd75850",
@@ -3761,7 +2619,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "8:45 PM",
       "venue": "Philadelphia Museum of Art",
       "source": "Philadelphia Museum of Art Exhibitions",
       "source_url": "https://philamuseum.org/exhibitions",
@@ -3770,7 +2628,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": null
+      "description": "Discover ways to give to the Philadelphia Museum of Art. Make a museum donation and help sustain art, culture, and education in Philadelphia."
     },
     {
       "id": "63f6a7483dd7",
@@ -3787,7 +2645,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Shop the Special Exhibition capsule to find gifts, books, and merch that boxing enthusiasts and art-lovers will both enjoy."
     },
     {
       "id": "827ee7494b07",
@@ -3800,7 +2658,7 @@
       "source": "Barnes Foundation",
       "source_url": "https://www.barnesfoundation.org/whats-on",
       "link": "https://www.barnesfoundation.org/whats-on/collection",
-      "price": null,
+      "price": "$30",
       "categories": [
         "exhibition"
       ],
@@ -3958,23 +2816,6 @@
         "exhibition"
       ],
       "description": "Revisit the critically panned show that pitted Dr. Barnes against Philadelphia\u2019s elite, and see which works remain in the collection."
-    },
-    {
-      "id": "b47a0a118e20",
-      "title": "Barnes Create & Connect",
-      "date_display": "Saturday, October 31, 10am \u2013 noon",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/free/barnes-create-and-connect-october-24",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Join us for an art-making experience designed for individuals living with Parkinson\u2019s disease and their care partners."
     },
     {
       "id": "4483c89ae170",
