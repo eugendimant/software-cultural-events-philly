@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-01T17:30:10.081185Z",
-  "total_events": 276,
+  "last_updated": "2026-11-02T21:12:05.942374Z",
+  "total_events": 277,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -28,8 +28,8 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 23 events (HTML)",
-      "Penn Live Arts: 48 events (links)",
+      "Ensemble Arts Philly: 24 events (HTML)",
+      "Penn Live Arts: 46 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
@@ -39,10 +39,10 @@
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 23 events (links)",
+      "Visit Philadelphia Events: 26 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 72 events (HTML)",
+      "Barnes Foundation: 69 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
       "Franklin Institute Exhibits: 16 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7b431f28e570>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7249ab8fe9c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -279,25 +279,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "61e82f54b339",
-      "title": "The Great Gatsby",
-      "date_display": "Oct 20 - Nov 1, 2026",
-      "date_start": "2026-10-20",
-      "date_end": "2026-11-01",
-      "time": null,
-      "venue": "Academy Of Music",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/the-great-gatsby",
-      "price": null,
-      "categories": [
-        "ballet",
-        "classical",
-        "opera"
-      ],
-      "description": "THE GREAT GATSBY is a \u201cBroadway extravaganza that explodes with life and energy\u201d (Entertainment Weekly). Based on the classic American novel by F. Scott Fitzgerald, the Tony Award\u00ae-winning new musical is an unforgettable journey of love, wealth and tragedy that brings the Roaring Twenties to life on stage."
-    },
-    {
       "id": "656eeb12004c",
       "title": "Prohibition: Then and Now",
       "date_display": "2026-11-09 \u2013 2026-11-10",
@@ -491,6 +472,36 @@
       "price": null,
       "categories": [],
       "description": "The international percussion sensation has garnered armfuls of awards and rave reviews and has appeared on numerous national television shows. The eight-member troupe uses everything but conventional percussion instruments \u2013 matchboxes, wooden poles, brooms, garbage cans, Zippo lighters, hubcaps \u2013 to fill the stage with magnificent rhythms."
+    },
+    {
+      "id": "2f974089ddb5",
+      "title": "New Year\u2019s Eve Celebration",
+      "date_display": "Dec 31, 2026",
+      "date_start": "2026-12-31",
+      "date_end": "2026-12-31",
+      "time": "7:00 PM",
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2026-27-season/new-years-eve-celebration",
+      "price": null,
+      "categories": [],
+      "description": "Auld lang syne indeed! Dear friend and Principal Guest Conductor Marin Alsop returns to the Orchestra for a dazzling New Year\u2019s Eve Concert! If you\u2019re already a fan of this extraordinarily gifted, history-making conductor, you know you\u2019re in for \u201ca high-voltage, heart-on-sleeve performance, thrillingly played\u201d (The Guardian)."
+    },
+    {
+      "id": "3b6c35c8a6dc",
+      "title": "Wonderful Waltzes",
+      "date_display": "Jan 2, 2027",
+      "date_start": "2027-01-02",
+      "date_end": "2027-01-02",
+      "time": "2:00 PM",
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2026-27-season/wonderful-waltzes",
+      "price": null,
+      "categories": [],
+      "description": "Begin 2027 in grand style with a festive celebration featuring the music of the Strauss family. Inspired by the cherished Viennese tradition that welcomes each new year with music, this sparkling afternoon overflows with elegance, charm, and exuberance."
     },
     {
       "id": "989e8f351e4c",
@@ -839,42 +850,6 @@
         "dance"
       ],
       "description": null
-    },
-    {
-      "id": "01fdad69e3a8",
-      "title": "Arts of India Festival Community Day",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/ArtsIndiaCommunity",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival A joyful celebration of Indian dance, music, crafts and food, our Arts of India Festival Community Day features performances by Nardhana Academy of Dance, Penn Sargam, and percussionists Pitchumani Sivakumar, Ravi Kyer, and Swetha Narasimhan. Join us to enjoy activities and this sampling of the talented artistry at Penn and across the Philadelphia region. This event is free but registration is requested. REGISTER NOW EVENT SCHEDULE 1:30 PM | Prince Theatre Nardhana Academy of Dance Nritya Rang Featuring: BHARATHANATYAM Rathi Ramesh Sandilya and Rasya Ramesh NATTUVANGAN Ramaa Ramesh VOCALS Vignesh Ravichandran MRIDANGAM Murali Balachandran FLUTE Visweshwar Nagarajan VIOLIN Swetha Narasimhan 2:30 PM | Feintuch Family Lobby Penn Sargam 3 PM | Feintuch Lobby "
-    },
-    {
-      "id": "f3297389bde6",
-      "title": "Niladri Kumaar",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/NiladriKumaar",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Part of the Arts of India Festival Sitar maestro Niladri Kumaar is a maverick musician and acclaimed ambassador for Indian music. A frequent collaborator with tabla icon Zakir Hussain, Kumaar makes his Penn Live Arts debut in the Philadelphia premiere of The Space Between the Notes, a musical concert journey weaving centuries-old tradition with creative innovation, all based on the documentary film recording of the duo\u2019s last performance together. With an ensemble of Indian and American musicians, don\u2019t miss this heartfelt tribute to Hussain and the special bond these two masters shared. \u201cIn India, Niladri is considered one of the masters of today.\u201d - Zakir Hussain SITAR Niladri Kumaar KEYS Agnelo Fernandes DRUMS Sambit Chatterjee TABLA Satyajit Talwalkar Save up to 35% by including this p"
     },
     {
       "id": "230987a45186",
@@ -2336,7 +2311,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p> Tony Miceli - Vibraphone<br />Chris Farr - Saxophone<br />John Swana - Trumpet<br />Madison Rast - Bass<br />Dan Monaghan - Drums<br />Tim Armacost - Saxophone </p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> Tony Miceli - Vibraphone<br />Chris Farr - Saxophone<br />John Swana - Trumpet<br />Madison Rast - Bass<br />Dan Monaghan - Drums<br />Tim Armacost - Saxophone </p> <p> <b><u>Show Times: 7:30pm &amp; 9:00pm*</u> PLEASE NOTE SECOND SET AT 9PM</b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "48d3b9f811a4",
@@ -2849,8 +2824,8 @@
       "description": "<p>George Colligan, Nicole Glover and Jaleel Shaw</p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
-      "id": "bdc7e89fc50b",
-      "title": "George Colligan\u2019s All Star Sextet featuring Saxophonists Jaleel Shaw & Aidan McKeon + Trumpeter Anthony",
+      "id": "b50444f37d1b",
+      "title": "George Colligan\u2019s All Star Sextet featuring Saxophonists Jaleel Shaw & Aidan McKeon + Trumpeter Anthony Hervey",
       "date_display": "January 16",
       "date_start": null,
       "date_end": null,
@@ -2880,7 +2855,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "37994cb385ff",
@@ -2898,23 +2873,6 @@
         "jazz"
       ],
       "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
-    },
-    {
-      "id": "5a42b0d3a970",
-      "title": "YolanDa Brown Bob Marley Songbook | Friday October 30 through Sunday November 1 | Showtimes Vary by Day",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/yolanda-brown-bob-marley-songbook-friday-october-30-through-sunday-november-1-showtimes-vary-by-day/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "839290dcac0a",
@@ -3063,6 +3021,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/tammy-mccann-merry-christmas-baby-december-4-5-6-showtimes-vary-by-day/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "990aa473274c",
+      "title": "Jazmin Ghent presented by Unscripted Jazz | December 10 | 6:30PM & 9:00PM",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/jazmin-ghent-presented-by-unscripted-jazz-december-10-630pm-900pm/",
       "price": null,
       "categories": [
         "jazz"
@@ -3409,8 +3384,8 @@
       "description": null
     },
     {
-      "id": "261d904d5025",
-      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Rocky Season 2026: Inside Philly's New,... Rocky Season 2026: Inside Philly's New, Eight-Week... Event",
+      "id": "4271b7e79ed6",
+      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3434,6 +3409,83 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/philly-is-unrivaled/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "819638d52673",
+      "title": "A Nation of Artists: An Inside Look at Philly\u2019s Stunning Dual-Museum Exhibition A Nation of Artists: An Inside Look at... A Nation of Artists: An Inside Look at Philly\u2019s Stunning... Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/a-nation-of-artists/",
+      "price": null,
+      "categories": [
+        "exhibition"
+      ],
+      "description": null
+    },
+    {
+      "id": "edec4ac02c01",
+      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/winter-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "cfc64c2aa577",
+      "title": "Summer Events in Philadelphia Summer Events in Philadelphia Summer Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/summer-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "df9539f3ddfa",
+      "title": "Spring Events in Philadelphia Spring Events in Philadelphia Spring Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/spring-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "50f5eba914d6",
+      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/fall-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -3484,21 +3536,6 @@
       "description": null
     },
     {
-      "id": "edec4ac02c01",
-      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/winter-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "d9cb56ee52e5",
       "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
       "date_display": "",
@@ -3509,21 +3546,6 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "50f5eba914d6",
-      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/fall-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -3782,23 +3804,6 @@
         "exhibition"
       ],
       "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
-    },
-    {
-      "id": "4483c89ae170",
-      "title": "PECO Free First Sunday Family Day: Generational Exchange",
-      "date_display": "Sunday, November 1, 10am \u2013 5pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/peco-free-first-sunday-family-day-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Enjoy hands-on art activities, free access to the collection, and special performances of Cambodian classical and folk dances."
     },
     {
       "id": "0b1428e4df34",
@@ -4497,9 +4502,9 @@
       "description": null
     },
     {
-      "id": "120651ad47b5",
+      "id": "dd3e3d6ce2fc",
       "title": "Event Filters",
-      "date_display": "DATE October2026November2026JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember1926192719281929193019311932193319341935193619371938193919401941194219431944194519461947194819491950195119521953195419551956195719581959196019611962196319641965196619671968196919701971197219731974197519761977197819791980198119821983198419851986198719881989199019911992199319941995199619971998199920002001200220032004200520062007200820092010201120122013201420152016201720182019202020212022202320242025202620272028202920302031203220332034203520362037203820392040204120422043204420452046204720482049205020512052205320542055205620572058205920602061206220632064206520662067206820692070207120722073207420752076SMTWTFS12345678910111213141516171819202122232425262728293031123456789101112131415161718192021222324252627282930",
+      "date_display": "DATE November2026December2026JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember1926192719281929193019311932193319341935193619371938193919401941194219431944194519461947194819491950195119521953195419551956195719581959196019611962196319641965196619671968196919701971197219731974197519761977197819791980198119821983198419851986198719881989199019911992199319941995199619971998199920002001200220032004200520062007200820092010201120122013201420152016201720182019202020212022202320242025202620272028202920302031203220332034203520362037203820392040204120422043204420452046204720482049205020512052205320542055205620572058205920602061206220632064206520662067206820692070207120722073207420752076SMTWTFS12345678910111213141516171819202122232425262728293012345678910111213141516171819202122232425262728293031",
       "date_start": null,
       "date_end": null,
       "time": null,
