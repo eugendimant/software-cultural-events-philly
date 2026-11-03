@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-02T21:12:05.942374Z",
-  "total_events": 277,
+  "last_updated": "2026-11-03T18:55:57.472636Z",
+  "total_events": 275,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -39,10 +39,10 @@
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 26 events (links)",
+      "Visit Philadelphia Events: 25 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 69 events (HTML)",
+      "Barnes Foundation: 66 events (HTML)",
       "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
       "Franklin Institute Exhibits: 16 events (HTML)",
@@ -57,7 +57,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7249ab8fe9c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7e2c30209730>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -3536,21 +3536,6 @@
       "description": null
     },
     {
-      "id": "d9cb56ee52e5",
-      "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -3565,7 +3550,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "a41c3cba7106",
@@ -3599,7 +3584,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "08d8ed5f5440",
@@ -3616,7 +3601,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "f4dc9cd75850",
@@ -3650,7 +3635,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "827ee7494b07",
@@ -3804,23 +3789,6 @@
         "exhibition"
       ],
       "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
-    },
-    {
-      "id": "0b1428e4df34",
-      "title": "New Member Reception",
-      "date_display": "Monday, November 2, 5:30 \u2013 8pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members/new-member-reception-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore Noguchi to Asawa: Designing Postwar America and the collection at this special evening reception for new members."
     },
     {
       "id": "732698b06f62",
