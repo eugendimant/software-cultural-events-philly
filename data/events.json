@@ -1,12 +1,10 @@
 {
-  "last_updated": "2026-11-03T18:55:57.472636Z",
-  "total_events": 275,
+  "last_updated": "2026-11-04T19:12:37.193799Z",
+  "total_events": 241,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
     "BalletX",
-    "Barnes Foundation",
-    "Barnes Foundation Exhibitions",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -34,16 +32,14 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 53 events (HTML)",
+      "Chris' Jazz Cafe: 52 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 25 events (links)",
+      "Visit Philadelphia Events: 24 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "Barnes Foundation: 66 events (HTML)",
-      "Barnes Foundation Exhibitions: 36 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
       "Franklin Institute Exhibits: 16 events (HTML)",
       "Penn Museum: 28 events (HTML)",
@@ -57,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7e2c30209730>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x787bbb410ce0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -65,80 +61,14 @@
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
+      "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
+      "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
       "Academy of Natural Sciences: 0 events found at https://ansp.org/programs-and-events/events/",
       "Profs and Pints: 0 events found at https://www.profsandpints.com/philadelphia",
       "Sofar Sounds Philadelphia: 0 events found at https://www.sofarsounds.com/cities/philadelphia"
     ]
   },
   "events": [
-    {
-      "id": "5598335e2800",
-      "title": "Where I\u2019m From",
-      "date_display": "July 5 \u2013 August 25, 2025",
-      "date_start": "2025-07-05",
-      "date_end": "2025-08-25",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/where-im-from",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Works created by artists from Mural Arts Philadelphia\u2019s Rec Crew and SCI Phoenix."
-    },
-    {
-      "id": "2f0b3adfeb7c",
-      "title": "The Battle of the Bathers",
-      "date_display": "July 6 \u2013 September 15, 2025",
-      "date_start": "2025-07-06",
-      "date_end": "2025-09-15",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/battle-of-the-bathers",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Learn about the controversy between Dr. Barnes and the Philadelphia Museum of Art around works by Paul C\u00e9zanne."
-    },
-    {
-      "id": "cdb46b620cd8",
-      "title": "Henri Rousseau: A Painter\u2019s Secrets",
-      "date_display": "October 19, 2025 \u2013 February 22, 2026",
-      "date_start": "2025-10-19",
-      "date_end": "2025-10-19",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/henri-rousseau-a-painters-secrets",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "See the inventive works of Henri Rousseau in a new light."
-    },
-    {
-      "id": "019d4eea115c",
-      "title": "The Doctor and the Douanier: How Dr. Barnes Built His Collection of Rousseaus",
-      "date_display": "October 31, 2025 \u2013 April 13, 2026",
-      "date_start": "2025-10-31",
-      "date_end": "2025-10-31",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/the-doctor-and-the-douanier",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "The story behind the world\u2019s largest collection of Rousseaus."
-    },
     {
       "title": "Revolutionary Botany",
       "date_start": "2026-01-01",
@@ -193,23 +123,6 @@
       "date_display": "Mar 28 \u2013 Feb 14, 2027"
     },
     {
-      "id": "d748c4055ddb",
-      "title": "Freedom Dreams",
-      "date_display": "April 12 \u2013 August 9, 2026",
-      "date_start": "2026-04-12",
-      "date_end": "2026-08-09",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/freedom-dreams",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "A meditation on the memories, dreams, and histories of America, featuring powerful works by contemporary moving-image artists Arthur Jafa, David Hartt, Garrett Bradley, Ja\u2019Tovia Gary, and Tourmaline."
-    },
-    {
       "title": "A Nation of Artists",
       "date_start": "2026-04-12",
       "date_end": "2027-07-05",
@@ -243,23 +156,6 @@
       "id": "9c655798feee",
       "date_display": "May 01 \u2013 Dec 31, 2026",
       "link": "https://muttermuseum.org/events/"
-    },
-    {
-      "id": "e67c7fb5642f",
-      "title": "Just Us",
-      "date_display": "June 26 \u2013 October 12, 2026",
-      "date_start": "2026-06-26",
-      "date_end": "2026-10-12",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/just-us",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Original works by artists at SCI Phoenix and justice-impacted artists from Mural Arts Philadelphia\u2019s Rec Crew."
     },
     {
       "title": "Marcel Duchamp",
@@ -329,11 +225,11 @@
       "description": "For the past two decades The Bad Plus have played with spirit and adventure, made their own rules and done so with a bold sense of creativity and intent."
     },
     {
-      "id": "9e2f7b316cc3",
+      "id": "e400fcdfa6dd",
       "title": "BOOP!\u00ae The Musical",
-      "date_display": "Nov 17 - Nov 29, 2026",
+      "date_display": "Nov 17 - Nov 22, 2026",
       "date_start": "2026-11-17",
-      "date_end": "2026-11-29",
+      "date_end": "2026-11-22",
       "time": null,
       "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
@@ -346,7 +242,7 @@
         "musical",
         "opera"
       ],
-      "description": "For almost a century, the Betty Boop\u00ae character has won hearts and inspired fans around the world with her trademark looks, voice, and style."
+      "description": "Due to a scheduling change, the second week of BOOP! The Musical will no longer take place. Guests holding tickets for Week 2 will be updated by email regarding the relocation of their seats to a Week 1 performance. If you need assistance, please e-mail Audience Services."
     },
     {
       "id": "9a222e9bf38b",
@@ -504,74 +400,6 @@
       "description": "Begin 2027 in grand style with a festive celebration featuring the music of the Strauss family. Inspired by the cherished Viennese tradition that welcomes each new year with music, this sparkling afternoon overflows with elegance, charm, and exuberance."
     },
     {
-      "id": "989e8f351e4c",
-      "title": "Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Until January 10, 2027",
-      "date_start": "2027-01-10",
-      "date_end": "2027-01-10",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/exhibitions/noguchi-to-asawa-designing-postwar-america",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Iconic sculpture and design by two generations of Japanese American artists."
-    },
-    {
-      "id": "a3178a50ddb5",
-      "title": "Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Until January 10, 2027",
-      "date_start": "2027-01-10",
-      "date_end": "2027-01-10",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/exhibitions/noguchi-to-asawa-designing-postwar-america",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Iconic sculpture and design by two generations of Japanese American artists."
-    },
-    {
-      "id": "06dacae0061e",
-      "title": "Sky Hopinka: Red Metal Dust",
-      "date_display": "Until January 18, 2027",
-      "date_start": "2027-01-18",
-      "date_end": "2027-01-18",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "An installation of 11 new works by the American artist."
-    },
-    {
-      "id": "dd465bd3ba80",
-      "title": "Sky Hopinka: Red Metal Dust",
-      "date_display": "Until January 18, 2027",
-      "date_start": "2027-01-18",
-      "date_end": "2027-01-18",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/sky-hopinka",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "An installation of 11 new works by the American artist."
-    },
-    {
       "id": "11959b613ecc",
       "title": "The Book of Mormon",
       "date_display": "Jan 26 - Jan 31, 2027",
@@ -653,74 +481,6 @@
       "price": null,
       "categories": [],
       "description": "Prokofiev\u2019s Peter and the Wolf returns, introducing audiences to the instruments of the orchestra through a simple, engaging tale of a boy\u2019s adventure in the woods."
-    },
-    {
-      "id": "e4a3303f14f7",
-      "title": "Rochelle Feinstein: The Today Show",
-      "date_display": "February 21 \u2013 May 9, 2027",
-      "date_start": "2027-02-21",
-      "date_end": "2027-05-09",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/rochelle-feinstein-the-today-show",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "More than 30 mixed-media works examining abstraction, culture, and public life."
-    },
-    {
-      "id": "311f4fef2766",
-      "title": "Rochelle Feinstein: The Today Show",
-      "date_display": "February 21 \u2013 May 9, 2027",
-      "date_start": "2027-02-21",
-      "date_end": "2027-05-09",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/rochelle-feinstein-the-today-show",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "More than 30 mixed-media works examining abstraction, culture, and public life."
-    },
-    {
-      "id": "adc2b87104c6",
-      "title": "Education & Empowerment: Scholarship Recipients at the Barnes Foundation, Vol. Two: 1927\u20131952",
-      "date_display": "Until February 22, 2027",
-      "date_start": "2027-02-22",
-      "date_end": "2027-02-22",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore the experiences of a diverse group of scholars whose education was supported by the Barnes."
-    },
-    {
-      "id": "0d55e8554a49",
-      "title": "Education & Empowerment: Scholarship Recipients at the Barnes Foundation, Vol. Two: 1927\u20131952",
-      "date_display": "Until February 22, 2027",
-      "date_start": "2027-02-22",
-      "date_end": "2027-02-22",
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/exhibitions/education-and-empowerment-1927-1952",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore the experiences of a diverse group of scholars whose education was supported by the Barnes."
     },
     {
       "id": "88bc175f5689",
@@ -1776,24 +1536,6 @@
       "description": "Voices for Peace 5:00 p.m. | Academy of Music A Gala Celebration"
     },
     {
-      "id": "1234ee884219",
-      "title": "THE ADDAMS FAMILY: The Musical",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Walnut Street Theatre",
-      "source": "Walnut Street Theatre",
-      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
-      "link": "https://www.walnutstreettheatre.org/season/show/addams-family",
-      "price": null,
-      "categories": [
-        "musical",
-        "theater"
-      ],
-      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
-    },
-    {
       "id": "2dea3f64e012",
       "title": "Disney's FROZEN The Broadway Musical",
       "date_display": "",
@@ -1956,6 +1698,24 @@
       "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
     },
     {
+      "id": "1234ee884219",
+      "title": "THE ADDAMS FAMILY: The Musical",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Walnut Street Theatre",
+      "source": "Walnut Street Theatre",
+      "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
+      "link": "https://www.walnutstreettheatre.org/season/show/addams-family",
+      "price": null,
+      "categories": [
+        "musical",
+        "theater"
+      ],
+      "description": "About Us History Staff & Board Artists Creating Art Opportunities Rentals Virtual Tour News & Media Contact Us"
+    },
+    {
       "id": "3245bf4e2ee5",
       "title": "This calendar features events presented by FringeArts!",
       "date_display": "",
@@ -2040,23 +1800,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "d1b63f16ea33",
-      "title": "Powerpocket",
-      "date_display": "November 03",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/145645",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Powerpocket fuses the spontaneity of jazz with the deep grooves and psychedelic textures of rock, funk and soul. Four of Philadelphia's finest (Chris Oatts on woodwinds, Dave D'Arville on guitar, Chris Simonini on organ and Austin Wagner on percussion) bring brand new original music from every member of the band, reinvented live every night. Catch them while you can and plan on moving all night.<br /><br />Chris Oatts, saxophones, flute &amp; percussion<br />Dave D\u2019Arville, guitar<br />Chris Simonini, organ &amp; keyboards<br />Austin Wagner, drums &amp; percussion</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage"
     },
     {
       "id": "1a245c819c63",
@@ -2872,7 +2615,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "839290dcac0a",
@@ -3521,21 +3264,6 @@
       "description": null
     },
     {
-      "id": "a8d88db32fd6",
-      "title": "LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 LumiNature at the Philadelphia Zoo: 5 Surprises for 2026 Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/luminature-philadelphia-zoo/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -3636,312 +3364,6 @@
         "exhibition"
       ],
       "description": "Closed today"
-    },
-    {
-      "id": "827ee7494b07",
-      "title": "The Barnes Collection",
-      "date_display": "Ongoing",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/collection",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
-    },
-    {
-      "id": "c7ef18b265c3",
-      "title": "Highlights Tour",
-      "date_display": "Thursday\u2013Monday, 11:30am, 12:30pm & 1:30pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:30 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/barnes-highlights-tour",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "This one-hour tour is perfect for first-time visitors. Explore highlights of the collection and learn the history of the Barnes."
-    },
-    {
-      "id": "044136f73ac3",
-      "title": "Private Collection Tour",
-      "date_display": "Thursday\u2013Monday",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/private-collection-tours",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore highlights of the collection and learn the history of the Barnes. This tour is a private one-hour experience for you and up to nine guests."
-    },
-    {
-      "id": "f06bf78da730",
-      "title": "Private Collection Tour: Favorite Artists",
-      "date_display": "Thursday\u2013Monday, 10am",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/private-tour-favorite-artists",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Choose your favorite artists in the collection for a private one-hour experience for up to ten guests."
-    },
-    {
-      "id": "34ae0e3d0823",
-      "title": "Daily Gallery Talks",
-      "date_display": "Thursday\u2013Monday",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/daily-gallery-talks",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Every day, our gallery specialists offer talks about the Barnes collection. Learn more about our history, founder, and collection."
-    },
-    {
-      "id": "89797ffeff22",
-      "title": "Members-Only Tour: Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Mondays & Thursdays, 2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members-only-tour-noguchi-to-asawa",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Members are invited to an exclusive tour of our newest exhibition."
-    },
-    {
-      "id": "8b00c2aa1467",
-      "title": "Exhibition Tour: Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Thursday\u2013Monday, 1pm & 1:30pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:30 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/tours/exhibition-tour-noguchi-to-asawa",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore iconic works by Japanese American artists and designers working in the aftermath of World War II and incarceration."
-    },
-    {
-      "id": "9669786b34a6",
-      "title": "Private Tour: Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Thursday\u2013Monday",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/tours/private-tour-noguchi-to-asawa",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "This docent-led tour of Noguchi to Asawa: Designing Postwar America is a private one-hour experience for you and up to nine guests."
-    },
-    {
-      "id": "321d76af2690",
-      "title": "November Spotlight Tour: Decoding the Barnes Ensembles",
-      "date_display": "Thursday\u2013Monday, 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/tours/spotlight-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Learn about how and why Dr. Barnes arranged his collection in such a unique way in this illuminating collection tour."
-    },
-    {
-      "id": "732698b06f62",
-      "title": "Members-Only Online Tour: Noguchi to Asawa: Designing Postwar America",
-      "date_display": "Wednesday, November 4, 2 \u2013 3pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members-only-online-tour-noguchi-to-asawa-november",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Members are invited to an exclusive virtual tour of our newest exhibition."
-    },
-    {
-      "id": "b2384f15036d",
-      "title": "First Friday: Miki Yamanaka Trio & PAAFF",
-      "date_display": "Friday, November 6, 6 \u2013 9pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "9:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/first-friday-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Tonight\u2019s performance features jazz pianist Miki Yamanaka."
-    },
-    {
-      "id": "5dfb3437ea1e",
-      "title": "Lecture: Duchamp\u2019s Fountain: A Second Opinion",
-      "date_display": "Saturday, November 7, 12 \u2013 1pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/duchamps-fountain",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Explore the controversial work and its impact on American modernism in 1920 letters between William Carlos Williams and Albert Barnes."
-    },
-    {
-      "id": "f2feb80d5c18",
-      "title": "Barnes Cinema: Powwow People by Sky Hopinka",
-      "date_display": "Sunday, November 8, 1 \u2013 4pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "4:00 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/film/barnes-cinema-powwow-people-by-sky-hopinka",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "This screening of Hopinka\u2019s v\u00e9rit\u00e9-style documentary is followed by a discussion and audience Q&A with the filmmaker."
-    },
-    {
-      "id": "11ee3c5967e9",
-      "title": "ARTZ @ The Museum",
-      "date_display": "Wednesday, November 11, 1:30 \u2013 2:30pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:30 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/artz-the-museum",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "This program provides free access to the Barnes for people living with dementia and their care partners."
-    },
-    {
-      "id": "d947394a7ecd",
-      "title": "On Practice: Pew Fellows in Conversation",
-      "date_display": "Wednesday, November 11, 6 \u2013 7:15pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:15 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/on-practice-pew-fellows-in-conversation-november-11",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "Join us for an intimate look at how the artists shaping Philadelphia\u2019s cultural scene experiment, discover, and create."
-    },
-    {
-      "id": "b2bd640bb3c6",
-      "title": "Member Orientation",
-      "date_display": "Friday, November 13, 10 \u2013 11:30am",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:30 AM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/members/member-orientation-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "New members are invited to join us to learn more about the perks of membership at the Barnes."
-    },
-    {
-      "id": "20ff6c4bc824",
-      "title": "Deep Dive: \u201cThomas Paine on the value of freedom\u201d Ad by S. Neil Fujita",
-      "date_display": "Friday, November 13, 12 \u2013 12:30pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:30 PM",
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation",
-      "source_url": "https://www.barnesfoundation.org/whats-on",
-      "link": "https://www.barnesfoundation.org/whats-on/talks/deep-dive-november-2026",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "An in-depth discussion about Fujita\u2019s design for the \u201cGreat Ideas of Western Man\u201d advertising campaign. Free with admission; Roberts Gallery"
-    },
-    {
-      "id": "8d34d6910875",
-      "title": "The Barnes Collection",
-      "date_display": "Ongoing",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "Barnes Foundation",
-      "source": "Barnes Foundation Exhibitions",
-      "source_url": "https://www.barnesfoundation.org/whats-on/exhibitions",
-      "link": "https://www.barnesfoundation.org/whats-on/collection",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
-      "description": "See art differently. Explore paintings by Renoir, C\u00e9zanne, Matisse, Picasso, Modigliani, Van Gogh, and other artists beside African sculpture, metalwork, and decorative arts."
     },
     {
       "id": "6b00391caca3",
