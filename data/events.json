@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-04T19:12:37.193799Z",
+  "last_updated": "2026-11-05T19:19:44.481235Z",
   "total_events": 241,
   "sources": [
     "Academy of Natural Sciences",
@@ -32,7 +32,7 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 52 events (HTML)",
+      "Chris' Jazz Cafe: 51 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -50,10 +50,10 @@
     ],
     "failures": [
       "Failed to fetch https://philadelphiaballet.org/performances/: HTTP 404",
-      "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
+      "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x787bbb410ce0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x744bbbcf7a40>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -1802,23 +1802,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "1a245c819c63",
-      "title": "Vocalist Jackie Johnson & Her Ensemble",
-      "date_display": "November 04",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/143840",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
       "id": "3c40d36c40b2",
       "title": "HFB Ensemble",
       "date_display": "November 05",
@@ -2329,8 +2312,8 @@
       "description": "<p dir=\"ltr\">Wille Morris III, Mekhi Boone, Neil Podgursky, Micah Jones</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
-      "id": "3193cca8e5ea",
-      "title": "Peter Frank Big Band Christmas Show",
+      "id": "122fd83363dd",
+      "title": "Lucas Beltran with the Peter Frank Orchestra",
       "date_display": "December 16",
       "date_start": null,
       "date_end": null,
@@ -2343,7 +2326,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p>Join Lucas Beltran and the Peter Frank Orchestra as they perform their entire holiday album entitled \u201cChristmas Swings Again!\u201d The album is filled with a variety of styles, unique arrangements, and fantastic vocal stylings from Lucas Beltran. The album was recorded in Philadelphia and features some of Philadelphia\u2019s best jazz musicians</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a"
     },
     {
       "id": "5eab224d090c",
@@ -2623,7 +2606,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "6:30 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2632,7 +2615,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Thursday Showtimes 6:30PM &amp; 9:00PM | Friday &amp; Saturday Showtimes 7:00PM &amp; 9:30PMSaxophonist Kim Waters captivates jazz lovers with his smooth contemporary sound.&nbsp;Gaining fame in the 1990s with albums like &quot;Sax Appeal,&quot; his hit &quot;What I Like&quot; reached No. 3 on the charts in 2018. He honored Marvin Gaye with &quot;I Want You: Love in the Spirit of Marvin&quot; in 2008. After debuting with &quot;Sweet and Saxy&quot; in 1989, Waters showcased his artistry in the 2022 release &quot;That Special Touch,&quot; featuring his daughter, Kayla Waters."
     },
     {
       "id": "30781ba150d5",
@@ -3946,12 +3929,12 @@
       "description": null
     },
     {
-      "id": "de035069a29c",
+      "id": "b160e7077900",
       "title": "Ullyot Lecture and Award: Ben Feringa",
-      "date_display": "Nov 04 Wed 12pm-12:45pm",
+      "date_display": "Nov 06 Fri 5pm-7pm",
       "date_start": null,
       "date_end": null,
-      "time": "12:45 PM",
+      "time": "5:00 PM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3964,24 +3947,6 @@
       "description": "Friday, November 13, 2026 | 6pm-8pm EST"
     },
     {
-      "id": "1712fb94b50f",
-      "title": "Othmer Library Tour",
-      "date_display": "Nov 04 Wed 12pm-12:45pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261104/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
       "id": "c59d6d5b0613",
       "title": "First Friday: More Than Meets the Eye",
       "date_display": "Nov 06 Fri 5pm-7pm",
@@ -3992,6 +3957,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/first-friday-more-than-meets-the-eye/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "45d148b9237c",
+      "title": "Othmer Library Tour",
+      "date_display": "Nov 18 Wed 12pm-12:45pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261106/",
       "price": null,
       "categories": [
         "lecture",
@@ -4190,6 +4173,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/stories-of-science-cuppa-chemistry-20261205/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "f55fe9e28528",
+      "title": "Women in Chemistry Tour",
+      "date_display": "Dec 12 Sat 2pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/women-in-chemistry-tour-202612/",
       "price": null,
       "categories": [
         "lecture",
