@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-06T18:46:15.042146Z",
-  "total_events": 239,
+  "last_updated": "2026-11-07T17:17:23.503684Z",
+  "total_events": 246,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -32,12 +32,12 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 49 events (HTML)",
+      "Chris' Jazz Cafe: 58 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 24 events (links)",
+      "Visit Philadelphia Events: 22 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7c830c7e4da0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x794391e98dd0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -138,6 +138,23 @@
       "id": "80f6728466a6",
       "date_display": "Apr 12 \u2013 Jul 05, 2027",
       "link": "https://www.philamuseum.org/exhibitions"
+    },
+    {
+      "id": "7734b314cb57",
+      "title": "Oliver Mayman + Jam Session",
+      "date_display": "November 13",
+      "date_start": "2026-04-24",
+      "date_end": "2026-04-24",
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events",
+      "price": "$15",
+      "categories": [
+        "jazz"
+      ],
+      "description": "Philadelphia-based vibraphonist, composer, and educator Oliver Mayman \u2014 originally from Ann Arbor, MI \u2014 has become a distinguished voice on the instrument. Late-night jam session follows."
     },
     {
       "title": "Legionnaires' Disease: The Philadelphia Outbreak",
@@ -612,24 +629,6 @@
       "description": null
     },
     {
-      "id": "c7d78f2cc194",
-      "title": "Soundworks Tap Factory",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "8:30 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/Soundworks-25-Years",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Join the University of Pennsylvania's one and only strictly tap dancing group for a night celebrating 25 years of dance excellence."
-    },
-    {
       "id": "2f131f109045",
       "title": "Nrityagram Dance Ensemble",
       "date_display": "",
@@ -646,6 +645,24 @@
         "dance"
       ],
       "description": "Part of the Arts of India Festival Nrityagram, the renowned and \u201cmost exciting Indian classical dance ensemble\" (Fjord Review), returns to our stage with the Philadelphia premiere of KHANKHAN\u0100: the sound of dancing feet. Featuring live music and vibrant tradition, KHANKHAN\u0100 journeys through three decades of acclaimed works by artistic director and Odissi choreographer Surupa Sen, showcasing her unique sensibility of thought and movement. Don\u2019t miss this thrilling retrospective as \u201cthese are among the world\u2019s greatest dancers\u201d who frequently offer \u201cone of the most extraordinary dance events of the year\u201d (The New York Times). \u201cUniquely mysterious, eternal, and beautiful\u201d (The Times Colonist) About Odissi Originally a sacred ritual dedicated to the gods, Odissi is one of the oldest dance trad"
+    },
+    {
+      "id": "c7d78f2cc194",
+      "title": "Soundworks Tap Factory",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/Soundworks-25-Years",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "Join the University of Pennsylvania's one and only strictly tap dancing group for a night celebrating 25 years of dance excellence."
     },
     {
       "id": "1d924d0282e3",
@@ -1784,9 +1801,9 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "73848e2dd81c",
+      "id": "68259c10024b",
       "title": "The All Star Septet With Trombonist Conrad Herwig + Saxophonists Victor North & Brandon Suarez",
-      "date_display": "November 06 - November 07",
+      "date_display": "November 07",
       "date_start": null,
       "date_end": null,
       "time": "7:30 PM",
@@ -1799,6 +1816,23 @@
         "jazz"
       ],
       "description": "<p>Featuring Special Guest Pianist ~ Brandon Goldberg</p><p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30 / $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105 / $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125 / $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "29d65b6ec94d",
+      "title": "James Santangelo & The Late Night Jam",
+      "date_display": "November 07",
+      "date_start": null,
+      "date_end": null,
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/394919",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p>Starting at 11pm</p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "a264c54819aa",
@@ -2121,7 +2155,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $15<br />Dinner &amp; Show ~ includes 3-course dinner: $75<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p>The Mujica/Ambrose Sextet</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $15<br />Dinner &amp; Show ~ includes 3-course dinner: $75<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "0884aba3b181",
@@ -2549,6 +2583,74 @@
       "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
+      "id": "4e8e73bdb6b4",
+      "title": "Pianist Brandon Goldberg & His Trio",
+      "date_display": "January 29 - January 30",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146957",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p> Brandon Goldberg - Piano<br />Peter Washington - Bass<br />Aaron Kimmel - Drums </p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u> Friday / Saturday </b><br /><b>General Admission</b> ~ a la carte menu: $25 / $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $100 / $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $120 / $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
+    },
+    {
+      "id": "9f439a23d8b1",
+      "title": "Saxophonist Langston Hughes II & His Quinitet",
+      "date_display": "February 05",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146959",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "0230742a4643",
+      "title": "Show Title: Pianist Pete Malinverni & His Trio + Special Guest Guitarist Pasquale Grasso",
+      "date_display": "February 06",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146960",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "6bb8f7b85051",
+      "title": "Drummer Chris Beck & His Quartet",
+      "date_display": "February 19",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146962",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
       "id": "37994cb385ff",
       "title": "Vocalist Georgia Heers & Her Band",
       "date_display": "February 26 - February 27",
@@ -2563,7 +2665,58 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "6c79cce4590c",
+      "title": "Trumpeter Duane Eubanks Quintet featuring Trombonist Robin Eubanks",
+      "date_display": "March 05 - March 06",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146967",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "12ee9a631001",
+      "title": "Trumpeter Wallace Roney Jr. & His Quartet",
+      "date_display": "March 12",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146969",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+    },
+    {
+      "id": "50d0d6f87f03",
+      "title": "Trumpeter Anthony Hervey & His Sextet",
+      "date_display": "March 13",
+      "date_start": null,
+      "date_end": null,
+      "time": "7:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146970",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "Anthony Hervey - TrumpetLangston Hughes II - Alto SaxophoneAayushi Karnik - GuitarTyler Bullock - PianoJonathan Muir-Cotton - BassTyson Jackson - Drums Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube"
     },
     {
       "id": "839290dcac0a",
@@ -2571,7 +2724,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "6:30 PM",
+      "time": null,
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2580,7 +2733,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Thursday Showtimes 6:30PM &amp; 9:00PM | Friday &amp; Saturday Showtimes 7:00PM &amp; 9:30PMSaxophonist Kim Waters captivates jazz lovers with his smooth contemporary sound.&nbsp;Gaining fame in the 1990s with albums like &quot;Sax Appeal,&quot; his hit &quot;What I Like&quot; reached No. 3 on the charts in 2018. He honored Marvin Gaye with &quot;I Want You: Love in the Spirit of Marvin&quot; in 2008. After debuting with &quot;Sweet and Saxy&quot; in 1989, Waters showcased his artistry in the 2022 release &quot;That Special Touch,&quot; featuring his daughter, Kayla Waters."
+      "description": null
     },
     {
       "id": "30781ba150d5",
@@ -2588,7 +2741,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "6:00 PM",
+      "time": null,
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2597,7 +2750,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Oakland-born vocalist, songwriter, and three-time Grammy-winning collaborator bringing jazz-level musicianship into soul and alternative R&amp;B. PHER is an Oakland-born vocalist, songwriter, and three-time Grammy-winning collaborator whose voice has appeared on award-winning work by Esperanza Spalding and Jon Batiste. His credits include Prince, Snarky Puppy, Chief Adjuah, Kanye West, Lupe Fiasco, Kris Bowers, Eric Harland, James Francies, and the SFJAZZ Collective. He co-wrote and recorded &ldquo;We Are America&rdquo; with Prince and Esperanza Spalding, and delivered the featured vocal performance on Snarky Puppy&rsquo;s &ldquo;Liquid Love.&rdquo; Longtime listeners first knew him as Chris Turner. Today, he records as PHER, a name given to him by his grandmother and reclaimed as the foun"
+      "description": null
     },
     {
       "id": "cdb7481b2adb",
@@ -2605,7 +2758,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "11:00 PM",
+      "time": null,
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2614,7 +2767,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "In a volatile industry where passions wax and wane, the trends of today become the clich&eacute;s of tomorrow,&nbsp;and bands split as quickly as they capture the world&rsquo;s hearts;&nbsp;Spur Of The Moment has, over the past two decades, bucked the odds, transcended the usual ups and downs, and inspired thousands of fans across the world with a vibe that continues to define the word band.The list of artists that have worked with this immensely talented unit grows yearly. Their resume reads like a &quot;who&rsquo;s who&quot; of the R&amp;B and Jazz worlds. From the legendary George Duke to Al Jarreau, Patti Austin, Ledisi, Raheem Devaughn, and Lalah Hathaway."
+      "description": null
     },
     {
       "id": "a38974453f16",
@@ -2622,7 +2775,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "7:00 PM",
+      "time": null,
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2631,7 +2784,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "FRIDAY &amp; SATURDAY SHOWTIMES 7:00PM &amp; 9:30PM&nbsp;SUNDAY SHOWTIMES 6:00PM &amp; 8:30PMFounded by acclaimed bassist and composer Warren Oree, The Arpeggio Jazz Ensemble has established a lasting presence in the world of contemporary jazz through its signature sound known as &ldquo;Undefeated Jazz.&rdquo; For more than four decades, the ensemble has blended original compositions, jazz standards, world rhythms, and improvisational energy into performances that are both artistically sophisticated and deeply engaging.&nbsp;The ensemble&rsquo;s sound moves seamlessly from intimate, reflective melodies to dynamic, rhythm-driven performances. This versatility allows Arpeggio to tailor performances for concert halls, festivals, educational programs, private events, and community celebrations"
+      "description": null
     },
     {
       "id": "3bf85ad18fb6",
@@ -3122,6 +3275,36 @@
       "description": null
     },
     {
+      "id": "865e81b27688",
+      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "d9cb56ee52e5",
+      "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
       "id": "edec4ac02c01",
       "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
@@ -3147,66 +3330,6 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/events/summer-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "df9539f3ddfa",
-      "title": "Spring Events in Philadelphia Spring Events in Philadelphia Spring Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/spring-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "50f5eba914d6",
-      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/fall-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "64bc054378b8",
-      "title": "Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Holidays at Peddler\u2019s Village: Five Magical Experiences for 2026 Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/christmas-in-peddlers-village/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "865e81b27688",
-      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
       "price": null,
       "categories": [],
       "description": null
@@ -3277,7 +3400,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3311,7 +3434,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "6b00391caca3",
@@ -3894,12 +4017,12 @@
       "description": null
     },
     {
-      "id": "b160e7077900",
+      "id": "043d75a3b678",
       "title": "Ullyot Lecture and Award: Ben Feringa",
-      "date_display": "Nov 06 Fri 5pm-7pm",
+      "date_display": "Nov 07 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
-      "time": "5:00 PM",
+      "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3910,42 +4033,6 @@
         "science"
       ],
       "description": "Friday, November 13, 2026 | 6pm-8pm EST"
-    },
-    {
-      "id": "c59d6d5b0613",
-      "title": "First Friday: More Than Meets the Eye",
-      "date_display": "Nov 06 Fri 5pm-7pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "5:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/first-friday-more-than-meets-the-eye/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "45d148b9237c",
-      "title": "Othmer Library Tour",
-      "date_display": "Nov 18 Wed 12pm-12:45pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261106/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "636190b3766e",
@@ -4074,6 +4161,24 @@
       "description": null
     },
     {
+      "id": "e38e4e05fce1",
+      "title": "Othmer Library Tour",
+      "date_display": "Nov 18 Wed 12pm-12:45pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261118/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "id": "7eded1096a41",
       "title": "The Electrical Grid in Flux",
       "date_display": "Nov 19 Thu 1pm-2pm",
@@ -4156,6 +4261,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/women-in-chemistry-tour-202612/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "847ebf4aa56a",
+      "title": "Rukh or Aepyornis: Mythical Birds, Extinction, and the Creation of Knowledge",
+      "date_display": "Dec 14 Mon 6pm-7pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/rukh-or-aepyornis-mythical-birds-extinction-and-the-creation-of-knowledge/",
       "price": null,
       "categories": [
         "lecture",
