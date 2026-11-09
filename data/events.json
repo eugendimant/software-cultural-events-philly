@@ -1,10 +1,9 @@
 {
-  "last_updated": "2026-11-08T17:29:29.013505Z",
-  "total_events": 244,
+  "last_updated": "2026-11-09T21:50:48.439911Z",
+  "total_events": 240,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
-    "BalletX",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -27,7 +26,7 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 24 events (HTML)",
-      "Penn Live Arts: 43 events (links)",
+      "Penn Live Arts: 44 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
@@ -36,8 +35,7 @@
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
-      "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 22 events (links)",
+      "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
@@ -53,13 +51,14 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x783c5a2a2900>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x70f1be7fec60>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
+      "BalletX: 0 events found at https://www.balletx.org/season-and-tickets/",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -699,6 +698,25 @@
         "dance"
       ],
       "description": "The fearless and powerful Compagnie Herv\u00e9 Koubi returns to Philadelphia for the first time in over a decade with the mesmerizingly kinetic Sol Invictus. A fusion of contemporary dance, hip hop, capoeira and martial arts, this new work champions love as the guarantor of peace\u2014affirming that, despite conflict, unity will triumph as humanity\u2019s saving grace. Super-charged in both meaning and movement, the piece is set to a driving score by Mikael Karlsson, Steve Reich and Maxime Bodson. Sol Invictus takes its name from the \u201cinvincible sun\u201d deity and Koubi\u2019s dancers \u201ccould be mistaken for gods\u201d (The New Yorker): fierce, weightless and seemingly a step beyond human. Don\u2019t miss this company\u2019s Penn Live Arts debut\u2014\u201cthey change how you see the amazing\u201d (The New York Times). \u201cThe dancers\u2019 extraordin"
+    },
+    {
+      "id": "d17784f26066",
+      "title": "Penn Singers Light Opera Company",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/singers-sweeny-todd",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance",
+        "opera"
+      ],
+      "description": "Join Penn Singers for their Fall 2026 Production of Sweeney Todd! Follow Sweeney Todd, an exiled barber, and Mrs. Lovett, an eccentric and resourceful pie shop owner, as Todd returns to London to exact revenge on the lecherous Judge Turpin, who wrongfully imprisoned him and took away his young wife and child."
     },
     {
       "id": "7595f0096bc6",
@@ -2578,7 +2596,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "6bb8f7b85051",
@@ -2664,23 +2682,6 @@
         "jazz"
       ],
       "description": "Anthony Hervey - TrumpetLangston Hughes II - Alto SaxophoneAayushi Karnik - GuitarTyler Bullock - PianoJonathan Muir-Cotton - BassTyson Jackson - Drums Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube"
-    },
-    {
-      "id": "30781ba150d5",
-      "title": "PHER | Sun Nov 8 | 6:00PM & 8:30PM",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/pher-sun-nov-8-600pm-830pm/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "cdb7481b2adb",
@@ -2836,6 +2837,23 @@
       "description": null
     },
     {
+      "id": "ed2c72c45e80",
+      "title": "Carol Riddick A Holiday To Remember | Dec 18-20 | Showtimes Vary by Day",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/carol-riddick-a-holiday-to-remember-dec-18-20-showtimes-vary-by-day/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
       "id": "1e45108ccf13",
       "title": "All Shows",
       "date_display": "",
@@ -2894,60 +2912,6 @@
       "price": "Free",
       "categories": [],
       "description": "Network with fellow professionals from the arts, culture and heritage sector! Our quarterly Member Mixer is back, and we are excited to have you join us. Network with peers and enjoy curated cocktails and light fare in an intimate setting. The dress code is business casual."
-    },
-    {
-      "id": "7e0b4f8cc859",
-      "title": "Dance eXchange",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/dance-exchange/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "da74d3abdc28",
-      "title": "For Artists",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/for-artists/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "4f348e654a28",
-      "title": "Ways to Support",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/ways-to-support/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
     },
     {
       "id": "a1592309ea02",
@@ -3175,8 +3139,8 @@
       "description": null
     },
     {
-      "id": "4271b7e79ed6",
-      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Event",
+      "id": "261d904d5025",
+      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Rocky Season 2026: Inside Philly's New,... Rocky Season 2026: Inside Philly's New, Eight-Week... Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3187,38 +3151,6 @@
       "link": "https://www.visitphilly.com/things-to-do/events/rocky-season-philadelphia/",
       "price": null,
       "categories": [],
-      "description": null
-    },
-    {
-      "id": "a96c71a7a101",
-      "title": "Unrivaled Returns to Philly This Winter \u2014 Here\u2019s Everything You Need to Know Unrivaled Returns to Philly This Winter \u2014... Unrivaled Returns to Philly This Winter \u2014 Here\u2019s... Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/philly-is-unrivaled/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "819638d52673",
-      "title": "A Nation of Artists: An Inside Look at Philly\u2019s Stunning Dual-Museum Exhibition A Nation of Artists: An Inside Look at... A Nation of Artists: An Inside Look at Philly\u2019s Stunning... Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/a-nation-of-artists/",
-      "price": null,
-      "categories": [
-        "exhibition"
-      ],
       "description": null
     },
     {
@@ -3252,6 +3184,21 @@
       "description": null
     },
     {
+      "id": "50f5eba914d6",
+      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/fall-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
       "id": "edec4ac02c01",
       "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
@@ -3262,21 +3209,6 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/events/winter-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "cfc64c2aa577",
-      "title": "Summer Events in Philadelphia Summer Events in Philadelphia Summer Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/summer-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -3296,7 +3228,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Come on down! Expect road closures, delays, and detours due to Parkway activities."
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3347,7 +3279,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Come on down! Expect road closures, delays, and detours due to Parkway activities."
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3384,8 +3316,8 @@
       "description": "Open today: 10am-5pm"
     },
     {
-      "id": "6b00391caca3",
-      "title": "STAR WARS\u2122: The Experience presale is happening now. Sign up to receive access code here.",
+      "id": "ecabf850eb8b",
+      "title": "The museum will close at 3:30 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3393,7 +3325,7 @@
       "venue": "The Franklin Institute",
       "source": "The Franklin Institute",
       "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/exhibits-and-experiences/star-wars-experience",
+      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
       "price": null,
       "categories": [
         "science"
@@ -3401,8 +3333,8 @@
       "description": null
     },
     {
-      "id": "9a71de8fe1d7",
-      "title": "STAR WARS\u2122: The Experience presale is happening now. Sign up to receive access code here.",
+      "id": "8401829dd632",
+      "title": "The museum will close at 3:30 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3410,7 +3342,7 @@
       "venue": "The Franklin Institute",
       "source": "Franklin Institute Exhibits",
       "source_url": "https://fi.edu/en/exhibits-experiences",
-      "link": "https://fi.edu/en/exhibits-and-experiences/star-wars-experience",
+      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
       "price": null,
       "categories": [
         "exhibition",
@@ -3964,8 +3896,8 @@
       "description": null
     },
     {
-      "id": "8e5f35aba813",
-      "title": "Ullyot Lecture and Award: Ben Feringa",
+      "id": "c608cb608a9b",
+      "title": "The Electrical Grid in Flux",
       "date_display": "Nov 09 Mon 6pm-7pm",
       "date_start": null,
       "date_end": null,
@@ -3973,13 +3905,13 @@
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/ullyot-lecture-and-award-ben-feringa/",
+      "link": "https://www.sciencehistory.org/visit/events/the-electrical-grid-in-flux/",
       "price": null,
       "categories": [
         "lecture",
         "science"
       ],
-      "description": "Friday, November 13, 2026 | 6pm-8pm EST"
+      "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
     },
     {
       "id": "444c1e44313f",
@@ -4028,6 +3960,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261112/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "25050bf9d0c0",
+      "title": "Ullyot Lecture and Award: Ben Feringa",
+      "date_display": "Nov 13 Fri 6pm-8pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/ullyot-lecture-and-award-ben-feringa/",
       "price": null,
       "categories": [
         "lecture",
@@ -4100,24 +4050,6 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261118/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "7eded1096a41",
-      "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 19 Thu 1pm-2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/the-electrical-grid-in-flux/",
       "price": null,
       "categories": [
         "lecture",
