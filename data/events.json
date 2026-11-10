@@ -1,9 +1,10 @@
 {
-  "last_updated": "2026-11-09T21:50:48.439911Z",
-  "total_events": 240,
+  "last_updated": "2026-11-10T19:09:37.680784Z",
+  "total_events": 243,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
+    "BalletX",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -26,7 +27,7 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 24 events (HTML)",
-      "Penn Live Arts: 44 events (links)",
+      "Penn Live Arts: 45 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
@@ -35,6 +36,7 @@
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
+      "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
@@ -51,14 +53,13 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x70f1be7fec60>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7a844f4a0e60>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
-      "BalletX: 0 events found at https://www.balletx.org/season-and-tickets/",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -191,24 +192,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "656eeb12004c",
-      "title": "Prohibition: Then and Now",
-      "date_display": "2026-11-09 \u2013 2026-11-10",
-      "date_start": "2026-11-09",
-      "date_end": "2026-11-10",
-      "time": "11:00 PM",
-      "venue": "National Mechanics",
-      "source": "Science on Tap",
-      "source_url": "https://www.scienceontapphilly.com/events",
-      "link": "https://www.scienceontapphilly.com/events/prohibition-then-and-now",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": "How did alcohol prohibition come into law and what are the connections to present day drug policy? Join us as Kelsey Leon, harm reductionist, anthropologist, and clinical research coordinator, discusses the impact of prohibition on the drug economy and on people who use criminalized substances."
-    },
-    {
       "id": "c4621e954fdb",
       "title": "FAMILY FUNDRAISER",
       "date_display": "Nov 13 2026 | 4:30 - 8pm",
@@ -319,6 +302,24 @@
       "price": null,
       "categories": [],
       "description": "Thomas Lauderdale's globe-trotting \"little orchestra\" Pink Martini is back with an all-new holiday show that brings triple the joy! Featuring three of the band's favorite singers and long-time collaborators, the Pink Martini All-Stars present: A Season of Stars tour conjures up a mix of old holiday favorites and sweet new treats, glittering\u2026"
+    },
+    {
+      "id": "a185071bf197",
+      "title": "Rukh or Aepyornis: Mythical Birds, Extinction, and the Creation of Knowledge",
+      "date_display": "2026-12-14 \u2013 2026-12-15",
+      "date_start": "2026-12-14",
+      "date_end": "2026-12-15",
+      "time": "11:00 PM",
+      "venue": "National Mechanics",
+      "source": "Science on Tap",
+      "source_url": "https://www.scienceontapphilly.com/events",
+      "link": "https://www.scienceontapphilly.com/events/rukh-or-aepyornis-mythical-birds-extinction-and-the-creation-of-knowledge",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": "Join us as Allington Fellow Jessica Hogbin tells the story of the rukh, a mythical raptor that scientists once endeavored to connect to the extinct elephant bird."
     },
     {
       "id": "ed25a633cd3d",
@@ -700,6 +701,24 @@
       "description": "The fearless and powerful Compagnie Herv\u00e9 Koubi returns to Philadelphia for the first time in over a decade with the mesmerizingly kinetic Sol Invictus. A fusion of contemporary dance, hip hop, capoeira and martial arts, this new work champions love as the guarantor of peace\u2014affirming that, despite conflict, unity will triumph as humanity\u2019s saving grace. Super-charged in both meaning and movement, the piece is set to a driving score by Mikael Karlsson, Steve Reich and Maxime Bodson. Sol Invictus takes its name from the \u201cinvincible sun\u201d deity and Koubi\u2019s dancers \u201ccould be mistaken for gods\u201d (The New Yorker): fierce, weightless and seemingly a step beyond human. Don\u2019t miss this company\u2019s Penn Live Arts debut\u2014\u201cthey change how you see the amazing\u201d (The New York Times). \u201cThe dancers\u2019 extraordin"
     },
     {
+      "id": "27f6adc62473",
+      "title": "Upstage A Cappella",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "5:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/upstage-pitch-please",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "Upstage A Cappella, UPenn's only a cappella group specializing in songs from musicals and tv shows, is proud to present their Fall 2026 show, Pitch Please! Featuring iconic songs from Pitch Perfect, Hamilton, La La Land, Hairspray, and beyond, it's sure to be a pitch-perfect night!"
+    },
+    {
       "id": "d17784f26066",
       "title": "Penn Singers Light Opera Company",
       "date_display": "",
@@ -850,7 +869,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "4:30 PM",
+      "time": null,
       "venue": "Annenberg Center",
       "source": "Penn Live Arts",
       "source_url": "https://pennlivearts.org/events/",
@@ -2579,7 +2598,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "0230742a4643",
@@ -2914,6 +2933,60 @@
       "description": "Network with fellow professionals from the arts, culture and heritage sector! Our quarterly Member Mixer is back, and we are excited to have you join us. Network with peers and enjoy curated cocktails and light fare in an intimate setting. The dress code is business casual."
     },
     {
+      "id": "7e0b4f8cc859",
+      "title": "Dance eXchange",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/dance-exchange/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "da74d3abdc28",
+      "title": "For Artists",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/for-artists/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
+      "id": "4f348e654a28",
+      "title": "Ways to Support",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/ways-to-support/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
       "id": "a1592309ea02",
       "title": "Mummers Parade",
       "date_display": "",
@@ -3228,7 +3301,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "a41c3cba7106",
@@ -3262,7 +3335,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "08d8ed5f5440",
@@ -3279,7 +3352,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "f4dc9cd75850",
@@ -3313,7 +3386,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "ecabf850eb8b",
@@ -3896,12 +3969,12 @@
       "description": null
     },
     {
-      "id": "c608cb608a9b",
+      "id": "cf47a308d316",
       "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 09 Mon 6pm-7pm",
+      "date_display": "Nov 10 Tue 10:30am-12pm",
       "date_start": null,
       "date_end": null,
-      "time": "6:00 PM",
+      "time": "10:30 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3912,24 +3985,6 @@
         "science"
       ],
       "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
-    },
-    {
-      "id": "444c1e44313f",
-      "title": "Prohibition: Then and Now",
-      "date_display": "Nov 09 Mon 6pm-7pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/prohibition-then-and-now/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "a2a12634a4bc",
