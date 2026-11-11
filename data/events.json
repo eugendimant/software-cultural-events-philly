@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-10T19:09:37.680784Z",
+  "last_updated": "2026-11-11T19:06:15.020421Z",
   "total_events": 243,
   "sources": [
     "Academy of Natural Sciences",
@@ -26,13 +26,13 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 24 events (HTML)",
+      "Ensemble Arts Philly: 23 events (HTML)",
       "Penn Live Arts: 45 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 60 events (HTML)",
+      "Chris' Jazz Cafe: 59 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7a844f4a0e60>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7c498cdd9ee0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -340,23 +340,6 @@
       "description": "How did a dead body, a fake love letter, and \u2014 of all people \u2014 Ian Fleming turn the tide of World War II? Olivier Award winner for Best New Musical and a 2025 Tony\u00ae winner, Operation Mincemeat: A New Musical is the best-reviewed show in West End history with\u2026"
     },
     {
-      "id": "4fc2684afc98",
-      "title": "Ben Folds with The Philadelphia Orchestra",
-      "date_display": "Dec 16, 2026",
-      "date_start": "2026-12-16",
-      "date_end": "2026-12-16",
-      "time": null,
-      "venue": "Marian Anderson Hall",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra",
-      "price": null,
-      "categories": [
-        "classical"
-      ],
-      "description": "2026-27 Season Ben Folds with The Philadelphia Orchestra A Benefit Concert for the Musicians\u2019 Retirement Fund Dec 16, 2026 Marian Anderson Hall"
-    },
-    {
       "id": "f3a9b07e0de8",
       "title": "The Glorious Sound of Christmas\u00ae",
       "date_display": "Dec 17 - Dec 20, 2026",
@@ -415,6 +398,23 @@
       "price": null,
       "categories": [],
       "description": "Begin 2027 in grand style with a festive celebration featuring the music of the Strauss family. Inspired by the cherished Viennese tradition that welcomes each new year with music, this sparkling afternoon overflows with elegance, charm, and exuberance."
+    },
+    {
+      "id": "3414ef57b6b3",
+      "title": "Samara Joy with The Philadelphia Orchestra",
+      "date_display": "Jan 5, 2027",
+      "date_start": "2027-01-05",
+      "date_end": "2027-01-05",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra",
+      "price": null,
+      "categories": [
+        "classical"
+      ],
+      "description": "2026-27 Season Samara Joy with The Philadelphia Orchestra Jan 5, 2027 Marian Anderson Hall"
     },
     {
       "id": "11959b613ecc",
@@ -500,21 +500,6 @@
       "description": "Prokofiev\u2019s Peter and the Wolf returns, introducing audiences to the instruments of the orchestra through a simple, engaging tale of a boy\u2019s adventure in the woods."
     },
     {
-      "id": "88bc175f5689",
-      "title": "Gary Gulman's 7th Hour",
-      "date_display": "Feb 26 - Feb 28, 2027",
-      "date_start": "2027-02-26",
-      "date_end": "2027-02-28",
-      "time": null,
-      "venue": "Perelman Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/gary-gulman",
-      "price": null,
-      "categories": [],
-      "description": "Following the success of his critically acclaimed one-man show, Grandiloquent, Gary Gulman returns with his all-new stand-up show 7th Hour. Over 30 years in comedy, Gary Gulman has established himself as an eminent performer and peerless writer."
-    },
-    {
       "id": "6a6af7ce1e33",
       "title": "MARVEL STUDIOS' BLACK PANTHER IN CONCERT",
       "date_display": "Feb 27, 2027",
@@ -592,23 +577,19 @@
       "description": "Do you like Green Eggs and Ham? This orchestral adaptation of Dr. Seuss's beloved children's classic is a feast for the ears! The inimitable Michael Boudewyns as Sam-I-Am serves up a veritable banquet of surprises in Robert Kapilow's culinary cartoon-musical banquet."
     },
     {
-      "id": "6bdb70eb6fb0",
-      "title": "Sh!t-faced Shakespeare\u00ae Macbeth",
-      "date_display": "May 7 - May 8, 2027",
-      "date_start": "2027-05-07",
-      "date_end": "2027-05-08",
-      "time": null,
-      "venue": "Kimmel Center",
+      "id": "5ac940e6b915",
+      "title": "Stewart Copeland Police Deranged",
+      "date_display": "May 2, 2027",
+      "date_start": "2027-05-02",
+      "date_end": "2027-05-02",
+      "time": "10:00 AM",
+      "venue": "Miller Theater",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/sht-faced-shakespeare",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/ensemble-arts-philly-presents/stewart-copeland-police-deranged",
       "price": null,
-      "categories": [
-        "classical",
-        "concert",
-        "theater"
-      ],
-      "description": "\"By the pricking of my thumbs, something wicked [tipsy] this way comes. \" An entirely serious production of William Shakespeare's Macbeth with an entirely sh!t-faced cast member. Shakespeare's tale of murder, ambition, bloodlust, and supernatural."
+      "categories": [],
+      "description": "Rock and Roll Hall of Fame inductee, multi-GRAMMY winner, renowned composer, and founder of The Police, Stewart Copeland brings his Police Deranged for Orchestra World Tour to Philadelphia for one night only."
     },
     {
       "id": "7824901f4961",
@@ -1410,6 +1391,24 @@
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
     },
     {
+      "id": "5c1b173e149d",
+      "title": "Soldier Songs",
+      "date_display": "Nov 11",
+      "date_start": null,
+      "date_end": null,
+      "time": "1:00 PM",
+      "venue": "Streaming on YouTube",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-let-em-eat-cake/",
+      "price": "$5.",
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "In recognition of Veterans Day and the 20th anniversary of David T. Little\u2019s groundbreaking opera Soldier Songs, the acclaimed film adaptation is available to stream on the Opera Philadelphia YouTube Channel."
+    },
+    {
       "id": "1efde8f87961",
       "title": "Inside the Music: Let 'Em Eat Cake",
       "date_display": "Jan 09",
@@ -1802,23 +1801,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "a264c54819aa",
-      "title": "We Get Requests",
-      "date_display": "November 10",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/133449",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><strong>We Get Requests</strong> is an engaging live music night led by Philadelphia trumpeter and GRAMMY-nominated artist <strong>Josh Lawrence</strong>. Each performance features Lawrence and a rotating trio of some of Philadelphia\u2019s most respected musicians, with special guest artists joining the second set. Audience members can submit song requests in person or online between sets, shaping a spontaneous and memorable evening where the band brings those selections to life on stage.</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check ou"
-    },
-    {
       "id": "a18865744314",
       "title": "Cascadence featuring Sara Caswell",
       "date_display": "November 11",
@@ -2122,7 +2104,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><strong></strong>Brent White, Anwar Marshall, Matt Davis, Jason Fraticelli</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> <strong></strong> <br /> Gabrielle Murphy, alto saxophone <br /> Orrin Evans, piano <br /> Sunceray Tabler, drums <br /> Jordan McBride, bass </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "feaedc2b3ddf",
@@ -2224,7 +2206,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><strong></strong>Caleb Curtis, Anwar Marshall, Adam Faulk, Madison Rast</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> Willie Morris, tenor saxophone <br /> Conner Saltzer, drums <br /> Ben O\u2019Neill, guitar <br /> Micah Jones, bass </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "6393dfd77431",
@@ -2292,7 +2274,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p dir=\"ltr\">Wille Morris III, Mekhi Boone, Neil Podgursky, Micah Jones</p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> Itai Kriss, flute <br /> Joao Bueno, piano <br /> Byron Landham, drums <br /> </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "122fd83363dd",
@@ -2377,7 +2359,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><strong></strong>Maria Marmarou, Luke O\u201dReilly, Madison Rast<br /></p> <p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "<p> Deborah Smith, trombone <br /> Luke O\u2019Reilly, piano <br /> Anwar Marshall, drums <br /> Jason Fraticelli, bass </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "3c2733503241",
@@ -2598,7 +2580,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "0230742a4643",
@@ -2615,7 +2597,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "6bb8f7b85051",
@@ -3969,12 +3951,12 @@
       "description": null
     },
     {
-      "id": "cf47a308d316",
+      "id": "2e28a587ac6e",
       "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 10 Tue 10:30am-12pm",
+      "date_display": "Nov 12 Thu 1pm-2pm",
       "date_start": null,
       "date_end": null,
-      "time": "10:30 AM",
+      "time": "1:00 PM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3985,24 +3967,6 @@
         "science"
       ],
       "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
-    },
-    {
-      "id": "a2a12634a4bc",
-      "title": "From Nature to Nylons: A Touch-Based History of Textiles",
-      "date_display": "Nov 10 Tue 10:30am-12pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 AM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/from-nature-to-nylons-a-touch-based-history-of-textiles-202611/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "e5022803b77c",
@@ -4185,6 +4149,24 @@
       "description": null
     },
     {
+      "id": "af400c7cc0c1",
+      "title": "From Nature to Nylons: A Touch-Based History of Textiles",
+      "date_display": "Dec 08 Tue 10:30am-12pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:30 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/from-nature-to-nylons-a-touch-based-history-of-textiles-202612/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
       "id": "f55fe9e28528",
       "title": "Women in Chemistry Tour",
       "date_display": "Dec 12 Sat 2pm",
@@ -4231,6 +4213,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/pain-and-its-killers-what-a-new-class-of-non-opioid-pain-medicine-could-mean-for-society/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "c854fc7afb1d",
+      "title": "Stories of Science: Wondrous Wool",
+      "date_display": "Jan 02 Sat 10am-5pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/stories-of-science-wondrous-wool-20270102/",
       "price": null,
       "categories": [
         "lecture",
