@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-11T19:06:15.020421Z",
-  "total_events": 243,
+  "last_updated": "2026-11-12T19:24:44.313835Z",
+  "total_events": 239,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -32,10 +32,10 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 59 events (HTML)",
+      "Chris' Jazz Cafe: 58 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
-      "Greater Phila. Cultural Alliance: 3 events (HTML)",
+      "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
       "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 20 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7c498cdd9ee0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x731c229f0350>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -244,6 +244,21 @@
       "description": "Due to a scheduling change, the second week of BOOP! The Musical will no longer take place. Guests holding tickets for Week 2 will be updated by email regarding the relocation of their seats to a Week 1 performance. If you need assistance, please e-mail Audience Services."
     },
     {
+      "id": "a42670db35b3",
+      "title": "NoVember 2026 Arts Leaders Call",
+      "date_display": "2026-11-20",
+      "date_start": "2026-11-20",
+      "date_end": "2026-11-20",
+      "time": "10:00 AM",
+      "venue": null,
+      "source": "Greater Phila. Cultural Alliance",
+      "source_url": "https://www.philaculture.org/events-calendar",
+      "link": "https://philaculture.org/event/november-2026-arts-leaders-call/",
+      "price": "$0",
+      "categories": [],
+      "description": "&lt;p&gt;Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia....&lt;/p&gt;\\n"
+    },
+    {
       "id": "9a222e9bf38b",
       "title": "Handel\u2019s Messiah",
       "date_display": "Dec 4 - Dec 5, 2026",
@@ -382,7 +397,7 @@
       "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra/2026-27-season/new-years-eve-celebration",
       "price": null,
       "categories": [],
-      "description": "Auld lang syne indeed! Dear friend and Principal Guest Conductor Marin Alsop returns to the Orchestra for a dazzling New Year\u2019s Eve Concert! If you\u2019re already a fan of this extraordinarily gifted, history-making conductor, you know you\u2019re in for \u201ca high-voltage, heart-on-sleeve performance, thrillingly played\u201d (The Guardian)."
+      "description": "Ring in the New Year with The Philadelphia Orchestra and Principal Guest Conductor Marin Alsop, known for performances that are \u201chigh-voltage, heart-on-sleeve\u201d and \u201cthrillingly played\u201d (The Guardian). Accordion virtuoso Radu R\u0103\u021boi adds his own unexpected flair to this spectacular musical journey."
     },
     {
       "id": "3b6c35c8a6dc",
@@ -1351,7 +1366,7 @@
         "concert",
         "dance"
       ],
-      "description": "Renowned Irish choreographer John Scott makes his Penn Live Arts debut with Ancestral Movements, a powerful exploration of identity, resilience and belonging. A 26/27 season artist-in-residence, Scott will collaborate with new American citizens and other Philadelphians whose lives have been impacted by migration to co-create this evocative dance-theatre work. Performed by an ensemble of professional dancers and community members, this world premiere weaves personal histories, traditions and everyday movements into a common physical language, a profound reflection on how we carry the past\u2014and imagine a future\u2014together. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
+      "description": "Renowned Irish choreographer John Scott makes his Penn Live Arts debut with Ancestral Movements, a powerful exploration of identity, resilience and belonging. A 26/27 season artist-in-residence, Scott will collaborate with new American citizens and other Philadelphians whose lives have been impacted by migration to co-create this evocative dance-theatre work. Performed by an ensemble of professional dancers and community members, this world premiere weaves personal histories, traditions and everyday movements into a common physical language, a profound reflection on how we carry the past\u2014and imagine a future\u2014together. Interested in participating? \u00bb Learn More Save up to 35% by including this performance in a subscription! \u00bb Learn more"
     },
     {
       "id": "4be1bac018c9",
@@ -1389,24 +1404,6 @@
         "dance"
       ],
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
-    },
-    {
-      "id": "5c1b173e149d",
-      "title": "Soldier Songs",
-      "date_display": "Nov 11",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Streaming on YouTube",
-      "source": "Opera Philadelphia",
-      "source_url": "https://www.operaphila.org/whats-on/events/",
-      "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-let-em-eat-cake/",
-      "price": "$5.",
-      "categories": [
-        "opera",
-        "classical"
-      ],
-      "description": "In recognition of Veterans Day and the 20th anniversary of David T. Little\u2019s groundbreaking opera Soldier Songs, the acclaimed film adaptation is available to stream on the Opera Philadelphia YouTube Channel."
     },
     {
       "id": "1efde8f87961",
@@ -1799,23 +1796,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "a18865744314",
-      "title": "Cascadence featuring Sara Caswell",
-      "date_display": "November 11",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/144010",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Sara Caswell - Violin<br />Chris Coyle - Bass<br />Matt Davis - Guitar </p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "7d7e3e4841b6",
@@ -2614,7 +2594,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "37994cb385ff",
@@ -2868,51 +2848,6 @@
       "price": null,
       "categories": [],
       "description": null
-    },
-    {
-      "id": "81eaf46ecc99",
-      "title": "October 2026 Arts Leaders Call",
-      "date_display": "October 16 @ 10:00 am - 11:00 am",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:00 AM",
-      "venue": null,
-      "source": "Greater Phila. Cultural Alliance",
-      "source_url": "https://www.philaculture.org/events-calendar",
-      "link": "https://philaculture.org/event/october-2026-arts-leaders-call/",
-      "price": "Free",
-      "categories": [],
-      "description": "Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia...."
-    },
-    {
-      "id": "b8b30077f443",
-      "title": "2026 Annual Meeting and Arts Party",
-      "date_display": "October 13 @ 6:00 pm - 10:00 pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": null,
-      "source": "Greater Phila. Cultural Alliance",
-      "source_url": "https://www.philaculture.org/events-calendar",
-      "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
-      "price": null,
-      "categories": [],
-      "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
-    },
-    {
-      "id": "e5fdee929a7c",
-      "title": "Summer Member Mixer",
-      "date_display": "June 18 @ 5:00 pm - 7:30 pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "5:00 PM",
-      "venue": "Hamilton Family Arts Center 62 N 2nd St, Philadelphia",
-      "source": "Greater Phila. Cultural Alliance",
-      "source_url": "https://www.philaculture.org/events-calendar",
-      "link": "https://philaculture.org/event/summer-member-mixer/",
-      "price": "Free",
-      "categories": [],
-      "description": "Network with fellow professionals from the arts, culture and heritage sector! Our quarterly Member Mixer is back, and we are excited to have you join us. Network with peers and enjoy curated cocktails and light fare in an intimate setting. The dress code is business casual."
     },
     {
       "id": "7e0b4f8cc859",
@@ -3283,7 +3218,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3317,7 +3252,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3334,7 +3269,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3368,7 +3303,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "ecabf850eb8b",
