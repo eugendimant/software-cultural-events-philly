@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-12T19:24:44.313835Z",
-  "total_events": 239,
+  "last_updated": "2026-11-13T19:02:53.560016Z",
+  "total_events": 238,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -32,7 +32,7 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 58 events (HTML)",
+      "Chris' Jazz Cafe: 56 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 1 events (links)",
       "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x731c229f0350>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x71669bab99d0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -597,7 +597,7 @@
       "date_display": "May 2, 2027",
       "date_start": "2027-05-02",
       "date_end": "2027-05-02",
-      "time": "10:00 AM",
+      "time": "7:30 PM",
       "venue": "Miller Theater",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -658,7 +658,7 @@
         "concert",
         "dance"
       ],
-      "description": "B\u00e9la Fleck is the world\u2019s premier banjo virtuoso, renowned for his staggeringly bold musicality. With 18 Grammy\u00ae Awards across nine different genres, Fleck is a celebrated musical adventurer who returns to his roots with My Bluegrass Heart. For this homecoming in sound, Fleck, our 26/27 season artist-in-residence, brings together bluegrass legends alongside some of the best newer talent, creating a vivid amalgamation of generations, ideas and styles. Featuring Michael Cleveland, Dominick Leslie, Jeff Partin, Mark Schatz and Jake Stargel, these musical greats draw on a long and joyful history, infusing tradition with fresh energy, masterful musicianship and the boundless spirit of bluegrass. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
+      "description": "Tickets are currently sold out online. Please email or call the Box Office at 215.898.3900 to be added to the wait list should more tickets become available. B\u00e9la Fleck is the world\u2019s premier banjo virtuoso, renowned for his staggeringly bold musicality. With 18 Grammy\u00ae Awards across nine different genres, Fleck is a celebrated musical adventurer who returns to his roots with My Bluegrass Heart. For this homecoming in sound, Fleck, our 26/27 season artist-in-residence, brings together bluegrass legends alongside some of the best newer talent, creating a vivid amalgamation of generations, ideas and styles. Featuring Michael Cleveland, Dominick Leslie, Jeff Partin, Mark Schatz and Jake Stargel, these musical greats draw on a long and joyful history, infusing tradition with fresh energy, mast"
     },
     {
       "id": "59b93311c06d",
@@ -1406,6 +1406,24 @@
       "description": "A true icon of stage and screen, Audra McDonald makes her Penn Live Arts debut in an unforgettable evening of song. Winner of a record-breaking six Tonys, along with two Grammy\u00ae Awards and an Emmy, McDonald is unparalleled in the breadth and versatility of her artistry, captivating audiences through beloved roles in Carousel, Porgy and Bess, Ragtime and more. This radiant, Juilliard-trained soprano possesses a remarkable gift for dramatic storytelling, bringing her signature emotional nuance to a mix of Broadway favorites and classics from the Great American Songbook. Don\u2019t miss this intimate performance by one of the most celebrated artists of our time. This is a special event, and no discounts will be offered."
     },
     {
+      "id": "723272fb92cf",
+      "title": "Emerging Artist Recital & Donor Appreciation Reception",
+      "date_display": "Dec 13",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Academy of Vocal Arts",
+      "source": "Opera Philadelphia",
+      "source_url": "https://www.operaphila.org/whats-on/events/",
+      "link": "https://www.operaphila.org/whats-on/events/for-donors/2026-2027/emerging-artist-recital/",
+      "price": null,
+      "categories": [
+        "opera",
+        "classical"
+      ],
+      "description": "Emerging Artist Recital & Donor Appreciation Reception 2:00 p.m. | Academy of Vocal Arts For donors at the Supporter level and above"
+    },
+    {
       "id": "1efde8f87961",
       "title": "Inside the Music: Let 'Em Eat Cake",
       "date_display": "Jan 09",
@@ -1798,40 +1816,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "7d7e3e4841b6",
-      "title": "Vocalist Susie Meissner & Her Sextet",
-      "date_display": "November 12",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/143853",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> John Swana- Trombone &amp; EVI<br />Greg Riley- Sax<br />John Shaddy- Piano<br />Lee Smith- Bass<br />Byron Landham- Drums<br />Susie Meissner - Vocals</p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
-    },
-    {
-      "id": "298726df2e7a",
-      "title": "Gabriel Meyer & His Band",
-      "date_display": "November 12",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/391945",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><b><u>Starting at 10:30pm</u></b></p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
-    },
-    {
       "id": "f2cc4fa7dc32",
       "title": "Saxophonist Don Braden & The Webb Thomas Trio",
       "date_display": "November 13",
@@ -1863,7 +1847,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Safy - Bass<br />Charles Goold - Drums </p> <p>Sinatra with Style: Hits and Rare Gems performed by Richard Cortez and an all-star band.</p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
+      "description": "<p>**This show is <b><u>SELLING OUT</u>!!</b>** Get your tickets now!<b> </b></p><p> Richard Cortez - Vocalist<br />Brandon Goldberg - Piano<br />Alec Safy - Bass<br />Charles Goold - Drums </p> <p>Sinatra with Style: Hits and Rare Gems performed by Richard Cortez and an all-star band.</p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube."
     },
     {
       "id": "2da2f7f09845",
@@ -2611,7 +2595,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "6c79cce4590c",
@@ -2628,7 +2612,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "12ee9a631001",
@@ -2663,23 +2647,6 @@
         "jazz"
       ],
       "description": "Anthony Hervey - TrumpetLangston Hughes II - Alto SaxophoneAayushi Karnik - GuitarTyler Bullock - PianoJonathan Muir-Cotton - BassTyson Jackson - Drums Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube"
-    },
-    {
-      "id": "cdb7481b2adb",
-      "title": "SPUR OF THE MOMENT | THURSDAY NOVEMBER 12 | presented by UNSCRIPTED JAZZ",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/spur-of-the-moment-thursday-november-12-presented-by-unscripted-jazz/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "a38974453f16",
@@ -2828,6 +2795,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/carol-riddick-a-holiday-to-remember-dec-18-20-showtimes-vary-by-day/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "ff18c358aca9",
+      "title": "Maya Belardo & V Shayne Frederick: Home for the Holidays | Dec 24 | 6:30PM & 9:00PM",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/maya-belardo-v-shayne-frederick-home-for-the-holidays-dec-24-630pm-900pm/",
       "price": null,
       "categories": [
         "jazz"
@@ -3218,7 +3202,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3252,7 +3236,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3269,7 +3253,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3303,11 +3287,11 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
-      "id": "ecabf850eb8b",
-      "title": "The museum will close at 3:30 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
+      "id": "a89fee167389",
+      "title": "The museum will close at 3:00 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3323,8 +3307,8 @@
       "description": null
     },
     {
-      "id": "8401829dd632",
-      "title": "The museum will close at 3:30 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
+      "id": "917707351742",
+      "title": "The museum will close at 3:00 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3886,12 +3870,12 @@
       "description": null
     },
     {
-      "id": "2e28a587ac6e",
+      "id": "29ad5cc076d9",
       "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 12 Thu 1pm-2pm",
+      "date_display": "Nov 13 Fri 6pm-8pm",
       "date_start": null,
       "date_end": null,
-      "time": "1:00 PM",
+      "time": "6:00 PM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3902,24 +3886,6 @@
         "science"
       ],
       "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
-    },
-    {
-      "id": "e5022803b77c",
-      "title": "Art of Alchemy Self-Guided Visit",
-      "date_display": "Nov 12 Thu 1pm-2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "1:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261112/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "25050bf9d0c0",
@@ -4022,6 +3988,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/forensics-highlights-tour-20261121/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "a22bea2bbe85",
+      "title": "Art of Alchemy Self-Guided Visit",
+      "date_display": "Nov 21 Sat 2pm-3pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261121/",
       "price": null,
       "categories": [
         "lecture",
