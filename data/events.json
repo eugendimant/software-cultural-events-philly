@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-13T19:02:53.560016Z",
-  "total_events": 238,
+  "last_updated": "2026-11-14T17:33:46.758063Z",
+  "total_events": 237,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -32,9 +32,9 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 56 events (HTML)",
+      "Chris' Jazz Cafe: 60 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
-      "City Winery: 1 events (links)",
+      "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
       "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 20 events (links)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x71669bab99d0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7fec6db0d6d0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -140,9 +140,9 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "7734b314cb57",
+      "id": "e64f7f60a99b",
       "title": "Oliver Mayman + Jam Session",
-      "date_display": "November 13",
+      "date_display": "November 20",
       "date_start": "2026-04-24",
       "date_end": "2026-04-24",
       "time": "11:00 PM",
@@ -192,23 +192,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "c4621e954fdb",
-      "title": "FAMILY FUNDRAISER",
-      "date_display": "Nov 13 2026 | 4:30 - 8pm",
-      "date_start": "2026-11-13",
-      "date_end": "2026-11-13",
-      "time": "8:00 PM",
-      "venue": "The Franklin Institute",
-      "source": "The Franklin Institute",
-      "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
-      "price": null,
-      "categories": [
-        "science"
-      ],
-      "description": "Calling all curious kiddos, playful parents, and thrill-seeking families! FunFest: A Night at the Museum is your golden ticket to an after-hours adventure where the museum turns into your playground."
-    },
-    {
       "id": "960c73609def",
       "title": "The Bad Plus Farewell Tour",
       "date_display": "Nov 14, 2026",
@@ -222,6 +205,23 @@
       "price": null,
       "categories": [],
       "description": "For the past two decades The Bad Plus have played with spirit and adventure, made their own rules and done so with a bold sense of creativity and intent."
+    },
+    {
+      "id": "7894a7ec6141",
+      "title": "FREE WITH ADMISSION",
+      "date_display": "Nov 14 2026 | 11am - 2pm",
+      "date_start": "2026-11-14",
+      "date_end": "2026-11-14",
+      "time": "11:00 AM",
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar/20261114/mind-your-body-day",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Explore the brain, immune system, DNA, movement, and more through hands-on activities and live science demonstrations included with general admission."
     },
     {
       "id": "e400fcdfa6dd",
@@ -1816,23 +1816,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "f2cc4fa7dc32",
-      "title": "Saxophonist Don Braden & The Webb Thomas Trio",
-      "date_display": "November 13",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/141259",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><b><u>Set Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $25<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $100<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $120<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
       "id": "8330177fe00f",
       "title": "Sinatra with Style: Hits + Rare Gems Performed by Richard Cortez & An All-Star Band",
       "date_display": "November 14",
@@ -2561,7 +2544,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "6bb8f7b85051",
@@ -2578,7 +2561,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "37994cb385ff",
@@ -2595,7 +2578,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "6c79cce4590c",
@@ -2612,7 +2595,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "12ee9a631001",
@@ -2816,6 +2799,21 @@
       "categories": [
         "jazz"
       ],
+      "description": null
+    },
+    {
+      "id": "43c5e40c1d0d",
+      "title": "Black Friday",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "City Winery Philadelphia",
+      "source": "City Winery",
+      "source_url": "https://citywinery.com/pages/events/philadelphia",
+      "link": "https://citywinery.com/pages/events/philadelphia-black-friday",
+      "price": null,
+      "categories": [],
       "description": null
     },
     {
@@ -3113,8 +3111,8 @@
       "description": null
     },
     {
-      "id": "261d904d5025",
-      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Rocky Season 2026: Inside Philly's New,... Rocky Season 2026: Inside Philly's New, Eight-Week... Event",
+      "id": "4271b7e79ed6",
+      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3123,6 +3121,36 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/rocky-season-philadelphia/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "edec4ac02c01",
+      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/winter-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "50f5eba914d6",
+      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/fall-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -3158,36 +3186,6 @@
       "description": null
     },
     {
-      "id": "50f5eba914d6",
-      "title": "Fall Events in Philadelphia Fall Events in Philadelphia Fall Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/fall-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "edec4ac02c01",
-      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/winter-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -3202,7 +3200,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3236,7 +3234,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3253,7 +3251,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3287,11 +3285,11 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-8:45pm"
+      "description": "Open today: 10am-5pm"
     },
     {
-      "id": "a89fee167389",
-      "title": "The museum will close at 3:00 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
+      "id": "0365676fdf6f",
+      "title": "The Franklin Institute will be closed December 7-11 for scheduled maintenance. We will reopen Saturday, December 12.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3299,7 +3297,7 @@
       "venue": "The Franklin Institute",
       "source": "The Franklin Institute",
       "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
+      "link": "https://fi.edu/en/events-calendar",
       "price": null,
       "categories": [
         "science"
@@ -3307,8 +3305,8 @@
       "description": null
     },
     {
-      "id": "917707351742",
-      "title": "The museum will close at 3:00 pm on Friday, November 13, for FunFest, our annual family-friendly fundraiser.",
+      "id": "1f303d9cbf92",
+      "title": "The Franklin Institute will be closed December 7-11 for scheduled maintenance. We will reopen Saturday, December 12.",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -3316,7 +3314,7 @@
       "venue": "The Franklin Institute",
       "source": "Franklin Institute Exhibits",
       "source_url": "https://fi.edu/en/exhibits-experiences",
-      "link": "https://fi.edu/en/events-calendar/20261113/2026-funfest-night-museum",
+      "link": "https://fi.edu/en/exhibits-experiences",
       "price": null,
       "categories": [
         "exhibition",
@@ -3870,12 +3868,12 @@
       "description": null
     },
     {
-      "id": "29ad5cc076d9",
+      "id": "523d917746f0",
       "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 13 Fri 6pm-8pm",
+      "date_display": "Nov 14 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
-      "time": "6:00 PM",
+      "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3886,24 +3884,6 @@
         "science"
       ],
       "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
-    },
-    {
-      "id": "25050bf9d0c0",
-      "title": "Ullyot Lecture and Award: Ben Feringa",
-      "date_display": "Nov 13 Fri 6pm-8pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/ullyot-lecture-and-award-ben-feringa/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "c7837e615709",
