@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-15T18:19:10.078184Z",
+  "last_updated": "2026-11-16T03:34:34.910770Z",
   "total_events": 233,
   "sources": [
     "Academy of Natural Sciences",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x736d69af72c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7205f87efd10>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -192,23 +192,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "7894a7ec6141",
-      "title": "FREE WITH ADMISSION",
-      "date_display": "Nov 14 2026 | 11am - 2pm",
-      "date_start": "2026-11-14",
-      "date_end": "2026-11-14",
-      "time": "11:00 AM",
-      "venue": "The Franklin Institute",
-      "source": "The Franklin Institute",
-      "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/events-calendar/20261114/mind-your-body-day",
-      "price": null,
-      "categories": [
-        "science"
-      ],
-      "description": "Explore the brain, immune system, DNA, movement, and more through hands-on activities and live science demonstrations included with general admission."
-    },
-    {
       "id": "e400fcdfa6dd",
       "title": "BOOP!\u00ae The Musical",
       "date_display": "Nov 17 - Nov 22, 2026",
@@ -272,6 +255,23 @@
       "price": null,
       "categories": [],
       "description": "Bring the whole family and enjoy a concert designed for all ages, filled with familiar music and a few fun surprises along the way. And keep an ear out for sleigh bells\u2014you never know who might stop by from the North Pole."
+    },
+    {
+      "id": "80ffdd1a6708",
+      "title": "MEMBERS ONLY",
+      "date_display": "Dec 5 2026 | 10:30am - 2:30pm",
+      "date_start": "2026-12-05",
+      "date_end": "2026-12-05",
+      "time": "10:30 AM",
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar/20261205/member-appreciation-day-franklin-institute",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "This member-exclusive event is free and features live science demonstrations, a special planetarium show, hands-on family activities, and games, a complimentary light lunch, and a special appreciation gift."
     },
     {
       "id": "4e984e553e50",
