@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-16T03:34:34.910770Z",
-  "total_events": 233,
+  "last_updated": "2026-11-16T21:31:23.077148Z",
+  "total_events": 235,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -26,13 +26,13 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 22 events (HTML)",
-      "Penn Live Arts: 43 events (links)",
+      "Ensemble Arts Philly: 23 events (HTML)",
+      "Penn Live Arts: 44 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 58 events (HTML)",
+      "Chris' Jazz Cafe: 59 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7205f87efd10>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x746948b41e80>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -340,6 +340,23 @@
       "description": "How did a dead body, a fake love letter, and \u2014 of all people \u2014 Ian Fleming turn the tide of World War II? Olivier Award winner for Best New Musical and a 2025 Tony\u00ae winner, Operation Mincemeat: A New Musical is the best-reviewed show in West End history with\u2026"
     },
     {
+      "id": "4fc2684afc98",
+      "title": "Ben Folds with The Philadelphia Orchestra",
+      "date_display": "Dec 16, 2026",
+      "date_start": "2026-12-16",
+      "date_end": "2026-12-16",
+      "time": null,
+      "venue": "Marian Anderson Hall",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/tickets-and-events/philadelphia-orchestra",
+      "price": null,
+      "categories": [
+        "classical"
+      ],
+      "description": "2026-27 Season Ben Folds with The Philadelphia Orchestra A Benefit Concert for the Musicians\u2019 Retirement Fund Dec 16, 2026 Marian Anderson Hall"
+    },
+    {
       "id": "f3a9b07e0de8",
       "title": "The Glorious Sound of Christmas\u00ae",
       "date_display": "Dec 17 - Dec 20, 2026",
@@ -610,24 +627,6 @@
       "description": null
     },
     {
-      "id": "59b93311c06d",
-      "title": "Handel at Home",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/HandelatHome",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Event Location: Powel House, 244 South 3rd Street Both performances of Handel at Home have sold out. Please email or call the Box Office at 215.898.3900 to be added to the wait list should more tickets become available. Step into the musical world of the early American republic, when private gatherings for music, poetry and conversation were central to social and cultural life. Mezzo-soprano and Penn artist-in-residence Meg Bragle leads Handel at Home, a program inspired by the talent, curiosity and hospitality of the 18th-century women who were at the heart of these flourishing artistic circles. Joined by soprano Mary Wilson and harpsichordist Hanbyeol Lee, and set in the historic Powel House, this intimate performance offers a taste of Philadelphia\u2019s lively colonial salons through opera,"
-    },
-    {
       "id": "d4764ec59cda",
       "title": "Compagnie Herv\u00e9 Koubi",
       "date_display": "",
@@ -683,6 +682,24 @@
       "description": "Join Penn Singers for their Fall 2026 Production of Sweeney Todd! Follow Sweeney Todd, an exiled barber, and Mrs. Lovett, an eccentric and resourceful pie shop owner, as Todd returns to London to exact revenge on the lecherous Judge Turpin, who wrongfully imprisoned him and took away his young wife and child."
     },
     {
+      "id": "30b45f9626f5",
+      "title": "Sparks Dance Company",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/mission-imsparksable",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "Founded in 1989, Sparks Dance Company (SDC) maintains a high technical level of many styles of dance including ballet, contemporary, jazz, tap, and hip hop. The company performs at two self-choreographed shows, as well as campus events throughout the year such as Student Performing Arts Night, the Emily Sachs Dance Benefit, and the Harnwell Arts House Showcase. SDC members also share their love of dance through community service at various Philadelphia locales, leading warmups and performing showcases at After School Performing Arts at Penn and numerous senior homes."
+    },
+    {
       "id": "7595f0096bc6",
       "title": "Masterclass: Compagnie Herv\u00e9 Koubi",
       "date_display": "",
@@ -735,6 +752,25 @@
         "dance"
       ],
       "description": "\u201cThere is something special about Louis Cato's ability to captivate an audience.\u201d Radiant with charisma and a sound shaped by jazz, funk, blues and soul, this Grammy\u00ae Award-nominated multi-instrumentalist is best known as the final bandleader for The Late Show with Stephen Colbert. He has an innate talent for crafting rich sonic landscapes into timeless gems, from original compositions to his popular Cato Covers series, where he reimagines an eclectic range of songs. Praised for his \u201cimmense musicality\u201d and \u201chonest, thoughtful, and vulnerable storytelling,\u201d Cato joins his trio for a magnetic Philadelphia debut performance that\u2019s not to be missed. (NPR Music) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
+    },
+    {
+      "id": "2de64b2c9b48",
+      "title": "Stimulus Children's Theater",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "8:30 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/the-lightning-thief",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance",
+        "theater"
+      ],
+      "description": "As the demigod son of a Greek god, Percy Jackson has newly-discovered powers he can\u2019t control, a destiny he doesn\u2019t want, and a mythology textbook\u2019s worth of monsters on his trail. When Zeus\u2019s lightning bolt is stolen and Percy becomes the prime suspect, he has to find and return the bolt to prove his innocence and prevent a war between the gods. But to succeed on his quest, Percy will have to do more than catch the thief. He must travel to the Underworld and back, solve the riddle of the Oracle which warns him of betrayal by a friend, and come to terms with the father who abandoned him."
     },
     {
       "id": "eebe1846d10d",
@@ -1918,6 +1954,23 @@
       "description": "<p> Julian Lee - Vibraphone<br />Noah Silver - Piano<br />Kenjiro Matsuki - Bass<br />Dexter Sales - Drums </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
+      "id": "4d0d9d19f1b8",
+      "title": "James Santangelo & The Late Night Jam",
+      "date_display": "November 25",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:30 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/395943",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p>Starting at 10:30pm</p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
+    },
+    {
       "id": "96734f2e031e",
       "title": "Closed for Thanksgiving",
       "date_display": "November 26",
@@ -1950,23 +2003,6 @@
         "jazz"
       ],
       "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30 (<u>Friday</u>) / $35 (<u>Saturday</u>)<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105 / $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125 / $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
-      "id": "a29c1ea0120e",
-      "title": "James Santangelo & The Late Night Jam",
-      "date_display": "November 28",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:00 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/394962",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Starting at 11pm</p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "aa074f4ddac3",
@@ -2510,7 +2546,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "6c79cce4590c",
@@ -2527,7 +2563,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "12ee9a631001",
@@ -2544,7 +2580,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
     },
     {
       "id": "50d0d6f87f03",
@@ -2562,23 +2598,6 @@
         "jazz"
       ],
       "description": "Anthony Hervey - TrumpetLangston Hughes II - Alto SaxophoneAayushi Karnik - GuitarTyler Bullock - PianoJonathan Muir-Cotton - BassTyson Jackson - Drums Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube"
-    },
-    {
-      "id": "a38974453f16",
-      "title": "ARPEGGIO JAZZ ENSEMBLE TRIBUTE TO GIL SCOTT-HERON | FRI, SAT & SUN NOV 13, 14 & 15 | SHOWTIMES VARY BY DAY",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/arpeggio-jazz-ensemble-tribute-to-gil-scott-heron-fri-sat-sun-nov-13-14-15-showtimes-vary-by-day/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "3bf85ad18fb6",
@@ -2727,6 +2746,23 @@
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
       "link": "https://www.southjazzkitchen.com/event/carol-riddick-a-holiday-to-remember-dec-18-20-showtimes-vary-by-day/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
+      "id": "ff18c358aca9",
+      "title": "Maya Belardo & V Shayne Frederick: Home for the Holidays | Dec 24 | 6:30PM & 9:00PM",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/maya-belardo-v-shayne-frederick-home-for-the-holidays-dec-24-630pm-900pm/",
       "price": null,
       "categories": [
         "jazz"
