@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-16T21:31:23.077148Z",
+  "last_updated": "2026-11-17T20:19:24.897413Z",
   "total_events": 235,
   "sources": [
     "Academy of Natural Sciences",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x746948b41e80>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x73b6b90d5d00>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -227,6 +227,23 @@
       "description": "&lt;p&gt;Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia....&lt;/p&gt;\\n"
     },
     {
+      "id": "3c97edc6e753",
+      "title": "DISCOUNT CODE",
+      "date_display": "Nov 27 - Dec 4 2026",
+      "date_start": "2026-11-27",
+      "date_end": "2026-12-04",
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar/20261127/black-friday-2026-save-10-and-two-free-months-franklin-institute-memberships",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": "Save 10% and get two free months on eligible Franklin Institute memberships and gift memberships November 27\u2013December 4, 2026. Use code BLKFRDY26 at checkout."
+    },
+    {
       "id": "9a222e9bf38b",
       "title": "Handel\u2019s Messiah",
       "date_display": "Dec 4 - Dec 5, 2026",
@@ -255,23 +272,6 @@
       "price": null,
       "categories": [],
       "description": "Bring the whole family and enjoy a concert designed for all ages, filled with familiar music and a few fun surprises along the way. And keep an ear out for sleigh bells\u2014you never know who might stop by from the North Pole."
-    },
-    {
-      "id": "80ffdd1a6708",
-      "title": "MEMBERS ONLY",
-      "date_display": "Dec 5 2026 | 10:30am - 2:30pm",
-      "date_start": "2026-12-05",
-      "date_end": "2026-12-05",
-      "time": "10:30 AM",
-      "venue": "The Franklin Institute",
-      "source": "The Franklin Institute",
-      "source_url": "https://fi.edu/en/events-calendar",
-      "link": "https://fi.edu/en/events-calendar/20261205/member-appreciation-day-franklin-institute",
-      "price": null,
-      "categories": [
-        "science"
-      ],
-      "description": "This member-exclusive event is free and features live science demonstrations, a special planetarium show, hands-on family activities, and games, a complimentary light lunch, and a special appreciation gift."
     },
     {
       "id": "4e984e553e50",
