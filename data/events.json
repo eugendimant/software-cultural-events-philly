@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-17T20:19:24.897413Z",
+  "last_updated": "2026-11-18T19:50:44.831696Z",
   "total_events": 235,
   "sources": [
     "Academy of Natural Sciences",
@@ -27,12 +27,12 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 23 events (HTML)",
-      "Penn Live Arts: 44 events (links)",
+      "Penn Live Arts: 45 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 59 events (HTML)",
+      "Chris' Jazz Cafe: 58 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
@@ -49,17 +49,17 @@
       "Seed data: 6 verified events merged"
     ],
     "failures": [
+      "Failed to fetch https://theatrephiladelphia.org/whats-on-stage: HTTP 404",
+      "Failed to fetch https://theatrephiladelphia.org/calendar: HTTP 404",
       "Failed to fetch https://philadelphiaballet.org/performances/: HTTP 404",
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x73b6b90d5d00>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x773798eb5340>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
-      "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
-      "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -488,7 +488,7 @@
       "date_display": "Feb 20 - Feb 21, 2027",
       "date_start": "2027-02-20",
       "date_end": "2027-02-21",
-      "time": "10:00 AM",
+      "time": null,
       "venue": "Academy Of Music",
       "source": "Ensemble Arts Philly",
       "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
@@ -771,6 +771,25 @@
         "theater"
       ],
       "description": "As the demigod son of a Greek god, Percy Jackson has newly-discovered powers he can\u2019t control, a destiny he doesn\u2019t want, and a mythology textbook\u2019s worth of monsters on his trail. When Zeus\u2019s lightning bolt is stolen and Percy becomes the prime suspect, he has to find and return the bolt to prove his innocence and prevent a war between the gods. But to succeed on his quest, Percy will have to do more than catch the thief. He must travel to the Underworld and back, solve the riddle of the Oracle which warns him of betrayal by a friend, and come to terms with the father who abandoned him."
+    },
+    {
+      "id": "bc18d6187890",
+      "title": "Penn Ballet",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/Penn-Ballet-After-Hours",
+      "price": null,
+      "categories": [
+        "ballet",
+        "concert",
+        "dance"
+      ],
+      "description": "Join Penn Ballet after hours for a clandestine night in the tavern, featuring original works of jazz and neoclassical ballet, along with live music set to Duke Ellington, Sting, Sienna Spiro, and more. Entry by ticket only. Meet us there after?"
     },
     {
       "id": "eebe1846d10d",
@@ -1540,7 +1559,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "77:30 PM",
+      "time": "87:30 PM",
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
@@ -1799,23 +1818,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "2fced8ed3efb",
-      "title": "Aaron Rimbui Trio",
-      "date_display": "November 17",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/145647",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Aaron Rimbui, piano<br />Timothy Norton, bass<br />Temitope Idowu, drums</p><p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "5f761d612a66",
@@ -3168,7 +3170,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "a41c3cba7106",
@@ -3202,7 +3204,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "08d8ed5f5440",
@@ -3219,7 +3221,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "f4dc9cd75850",
@@ -3253,7 +3255,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "0365676fdf6f",
@@ -3797,7 +3799,7 @@
         "exhibition",
         "science"
       ],
-      "description": "Section Event"
+      "description": "Partner Event"
     },
     {
       "id": "7ac9ae18023c",
@@ -3815,7 +3817,7 @@
         "exhibition",
         "science"
       ],
-      "description": "Section Event"
+      "description": "Partner Event"
     },
     {
       "id": "6b0a383e4945",
