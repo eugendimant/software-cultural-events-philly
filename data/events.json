@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-18T19:50:44.831696Z",
-  "total_events": 235,
+  "last_updated": "2026-11-19T19:50:12.439118Z",
+  "total_events": 233,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -32,12 +32,12 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 58 events (HTML)",
+      "Chris' Jazz Cafe: 57 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
       "BalletX: 3 events (HTML)",
-      "Visit Philadelphia Events: 20 events (links)",
+      "Visit Philadelphia Events: 19 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
       "The Franklin Institute: 2 events (HTML)",
@@ -49,17 +49,17 @@
       "Seed data: 6 verified events merged"
     ],
     "failures": [
-      "Failed to fetch https://theatrephiladelphia.org/whats-on-stage: HTTP 404",
-      "Failed to fetch https://theatrephiladelphia.org/calendar: HTTP 404",
       "Failed to fetch https://philadelphiaballet.org/performances/: HTTP 404",
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x773798eb5340>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77c1a413ce90>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
+      "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
+      "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -807,7 +807,7 @@
         "concert",
         "dance"
       ],
-      "description": "Join pianist and composer Isaiah J. Thompson for a masterclass on jazz piano. This workshop is free and open to advanced high school and college musicians. Five pianists will be selected to participate, and five additional seats will be available for student observers. Parents and teachers are welcome to observe in the theatre. There is no audition for this class. Classroom teachers, ensemble leaders and staff members at music education organizations are encouraged to recommend students who would most benefit from this opportunity. To register for yourself or your student, please email Director of Education & Engagement Leah Falk at leahfalk@upenn.edu."
+      "description": "Join pianist and composer Isaiah J. Thompson for a masterclass on jazz piano. This workshop is free and open to advanced high school and college musicians. Five pianists will be selected to participate, and five additional seats will be available for student observers. Parents and teachers are welcome to observe in the theatre. \u00bb Register to observe There is no audition for this class. Classroom teachers, ensemble leaders and staff members at music education organizations are encouraged to recommend students who would most benefit from this opportunity. To register for yourself or your student, please email Director of Education & Engagement Leah Falk at leahfalk@upenn.edu."
     },
     {
       "id": "6b064b583b1d",
@@ -1559,7 +1559,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "87:30 PM",
+      "time": "97:30 PM",
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
@@ -1818,23 +1818,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "5f761d612a66",
-      "title": "Pianist Anthony Aldissi & His Sextet",
-      "date_display": "November 18",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/143854",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p> Anthony Aldissi - Piano <br />John Swana - E.V.I<br />Max Cudworth - Alto Saxophone <br />Richard LaRouech - Trombone <br />Graham Kozack - Bass <br />Khary Abdul-Shaheed - Drums <br /> </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a>"
     },
     {
       "id": "d49ce32cc854",
@@ -2548,7 +2531,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Admission: Friday = $40, Saturday = $45 Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $40 / $45Dinner & Show package ~ includes 3-course dinner: $115 / $120VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $135 / $140(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Admission</u></b>: <u>Friday </u>= $40, <u>Saturday </u>= $45</p> <p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $40 / $45<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $115 / $120<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $135 / $140<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "6c79cce4590c",
@@ -3141,21 +3124,6 @@
       "description": null
     },
     {
-      "id": "d9cb56ee52e5",
-      "title": "A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 A Guide to Holidays in Franklin Square for 2026 Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/electrical-spectacle-holiday-light-show-at-franklin-square/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -3170,7 +3138,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "a41c3cba7106",
@@ -3204,7 +3172,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -3221,7 +3189,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3255,7 +3223,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-5pm"
     },
     {
       "id": "0365676fdf6f",
@@ -3838,12 +3806,12 @@
       "description": null
     },
     {
-      "id": "8ae7e69fadb0",
+      "id": "7eded1096a41",
       "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 18 Wed 12pm-12:45pm",
+      "date_display": "Nov 19 Thu 1pm-2pm",
       "date_start": null,
       "date_end": null,
-      "time": "12:45 PM",
+      "time": "1:00 PM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
@@ -3854,24 +3822,6 @@
         "science"
       ],
       "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
-    },
-    {
-      "id": "e38e4e05fce1",
-      "title": "Othmer Library Tour",
-      "date_display": "Nov 18 Wed 12pm-12:45pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "12:45 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261118/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
     },
     {
       "id": "c94b251281f1",
@@ -3920,6 +3870,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/art-of-alchemy-self-guided-visit-20261121/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "710a2d90a349",
+      "title": "Othmer Library Tour",
+      "date_display": "Dec 02 Wed 12pm-12:45pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "12:45 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/othmer-library-tour-20261202/",
       "price": null,
       "categories": [
         "lecture",
