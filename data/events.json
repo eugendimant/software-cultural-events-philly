@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T19:50:12.439118Z",
+  "last_updated": "2026-11-20T19:31:16.218859Z",
   "total_events": 233,
   "sources": [
     "Academy of Natural Sciences",
@@ -32,10 +32,10 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 57 events (HTML)",
+      "Chris' Jazz Cafe: 55 events (HTML)",
       "South Jazz Kitchen: 10 events (links)",
       "City Winery: 2 events (links)",
-      "Greater Phila. Cultural Alliance: 1 events (JSON-LD)",
+      "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 19 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x77c1a413ce90>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x75bf5acaa0c0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -210,21 +210,6 @@
         "opera"
       ],
       "description": "Due to a scheduling change, the second week of BOOP! The Musical will no longer take place. Guests holding tickets for Week 2 will be updated by email regarding the relocation of their seats to a Week 1 performance. If you need assistance, please e-mail Audience Services."
-    },
-    {
-      "id": "a42670db35b3",
-      "title": "NoVember 2026 Arts Leaders Call",
-      "date_display": "2026-11-20",
-      "date_start": "2026-11-20",
-      "date_end": "2026-11-20",
-      "time": "10:00 AM",
-      "venue": null,
-      "source": "Greater Phila. Cultural Alliance",
-      "source_url": "https://www.philaculture.org/events-calendar",
-      "link": "https://philaculture.org/event/november-2026-arts-leaders-call/",
-      "price": "$0",
-      "categories": [],
-      "description": "&lt;p&gt;Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia....&lt;/p&gt;\\n"
     },
     {
       "id": "3c97edc6e753",
@@ -1559,7 +1544,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "97:30 PM",
+      "time": "7:30 PM",
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
@@ -1818,40 +1803,6 @@
         "theater"
       ],
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
-    },
-    {
-      "id": "d49ce32cc854",
-      "title": "Dave Posmontier presents Jazz In 3-D",
-      "date_display": "November 19",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/144011",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
-      "id": "fe6fac38e69b",
-      "title": "Matt Kahn & His Trio",
-      "date_display": "November 19",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/391944",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><b><u>Starting at 10:30pm</u></b></p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "56ac7395eaa6",
@@ -2548,7 +2499,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "12ee9a631001",
@@ -2565,7 +2516,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $30Dinner & Show package ~ includes 3-course dinner: $105VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $125(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube Channel to watch live: Chris' Jazz Cafe"
+      "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
     },
     {
       "id": "50d0d6f87f03",
@@ -2583,23 +2534,6 @@
         "jazz"
       ],
       "description": "Anthony Hervey - TrumpetLangston Hughes II - Alto SaxophoneAayushi Karnik - GuitarTyler Bullock - PianoJonathan Muir-Cotton - BassTyson Jackson - Drums Show Times: 7:30pm & 9:30pmGeneral Admission ~ a la carte menu: $35Dinner & Show package ~ includes 3-course dinner: $110VIP Dinner & Show package ~ includes 3-course dinner and stage-front seating: $130(Beverages not included) All-In Price at check out inclusive of taxes & fees. Server gratuity ($15) added to Dinner & Show fees. Join our YouTube"
-    },
-    {
-      "id": "3bf85ad18fb6",
-      "title": "CHRIS \"BIG DOG\" DAVIS | THURSDAY NOVEMBER 19 | presented by UNSCRIPTED JAZZ",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/chris-big-dog-davis-thursday-november-19-presented-by-unscripted-jazz/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": null
     },
     {
       "id": "c0aef2f6aeeb",
@@ -2755,6 +2689,23 @@
       "description": null
     },
     {
+      "id": "a66cc77057a3",
+      "title": "Nasir Dickerson presents A Kwanzaa Celebration Experience: Bridging the Black Diaspora, Discipline, and Jazz Expression | Dec 26 & 27 | Showtimes Vary by Day",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "South Jazz Kitchen",
+      "source": "South Jazz Kitchen",
+      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
+      "link": "https://www.southjazzkitchen.com/event/nasir-dickerson-presents-a-kwanzaa-celebration-experience-bridging-the-black-diaspora-discipline-and-jazz-expression-dec-26-27-showtimes-vary-by-day/",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": null
+    },
+    {
       "id": "43c5e40c1d0d",
       "title": "Black Friday",
       "date_display": "",
@@ -2783,6 +2734,51 @@
       "price": null,
       "categories": [],
       "description": null
+    },
+    {
+      "id": "4fc7f06c4573",
+      "title": "NoVember 2026 Arts Leaders Call",
+      "date_display": "November 20 @ 10:00 am - 11:00 am",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": null,
+      "source": "Greater Phila. Cultural Alliance",
+      "source_url": "https://www.philaculture.org/events-calendar",
+      "link": "https://philaculture.org/event/november-2026-arts-leaders-call/",
+      "price": "Free",
+      "categories": [],
+      "description": "Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia...."
+    },
+    {
+      "id": "81eaf46ecc99",
+      "title": "October 2026 Arts Leaders Call",
+      "date_display": "October 16 @ 10:00 am - 11:00 am",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": null,
+      "source": "Greater Phila. Cultural Alliance",
+      "source_url": "https://www.philaculture.org/events-calendar",
+      "link": "https://philaculture.org/event/october-2026-arts-leaders-call/",
+      "price": "Free",
+      "categories": [],
+      "description": "Join the Greater Philadelphia Cultural Alliance for our monthly Arts Leaders Call, a virtual gathering designed to keep the region\u2019s cultural community connected, informed, and engaged. Hear timely updates on advocacy, funding, policy, Cultural Alliance initiatives, and other issues affecting the creative sector, while connecting with fellow arts and culture leaders from across Greater Philadelphia...."
+    },
+    {
+      "id": "b8b30077f443",
+      "title": "2026 Annual Meeting and Arts Party",
+      "date_display": "October 13 @ 6:00 pm - 10:00 pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": null,
+      "source": "Greater Phila. Cultural Alliance",
+      "source_url": "https://www.philaculture.org/events-calendar",
+      "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
+      "price": null,
+      "categories": [],
+      "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
     },
     {
       "id": "7e0b4f8cc859",
@@ -3189,7 +3185,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -3223,7 +3219,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "0365676fdf6f",
@@ -3806,22 +3802,22 @@
       "description": null
     },
     {
-      "id": "7eded1096a41",
-      "title": "The Electrical Grid in Flux",
-      "date_display": "Nov 19 Thu 1pm-2pm",
+      "id": "e86fe209e355",
+      "title": "Pain and Its Killers: What a New Class of Non-Opioid Pain Medicine Could Mean for Society",
+      "date_display": "Nov 21 Sat 10am-5pm",
       "date_start": null,
       "date_end": null,
-      "time": "1:00 PM",
+      "time": "10:00 AM",
       "venue": "Science History Institute",
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/the-electrical-grid-in-flux/",
+      "link": "https://www.sciencehistory.org/visit/events/pain-and-its-killers-what-a-new-class-of-non-opioid-pain-medicine-could-mean-for-society/",
       "price": null,
       "categories": [
         "lecture",
         "science"
       ],
-      "description": "Thursday, November 19, 2026 | 1pm-2pm EST"
+      "description": "Wednesday, December 16, 2026 | 6pm-8pm EST"
     },
     {
       "id": "c94b251281f1",
@@ -4022,24 +4018,6 @@
       "description": null
     },
     {
-      "id": "31cc729c5cbc",
-      "title": "Pain and Its Killers: What a New Class of Non-Opioid Pain Medicine Could Mean for Society",
-      "date_display": "Dec 16 Wed 6pm-8pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/pain-and-its-killers-what-a-new-class-of-non-opioid-pain-medicine-could-mean-for-society/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
       "id": "c854fc7afb1d",
       "title": "Stories of Science: Wondrous Wool",
       "date_display": "Jan 02 Sat 10am-5pm",
@@ -4068,6 +4046,24 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/oral-history-training-institute-202701/",
+      "price": null,
+      "categories": [
+        "lecture",
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "bb0e67cb1f00",
+      "title": "Science & Activism Tour",
+      "date_display": "Jan 09 Sat 2pm",
+      "date_start": null,
+      "date_end": null,
+      "time": "2:00 PM",
+      "venue": "Science History Institute",
+      "source": "Science History Institute",
+      "source_url": "https://www.sciencehistory.org/visit/events",
+      "link": "https://www.sciencehistory.org/visit/events/science-activism-tour-202701/",
       "price": null,
       "categories": [
         "lecture",
