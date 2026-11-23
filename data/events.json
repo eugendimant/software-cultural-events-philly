@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-22T18:56:02.157439Z",
-  "total_events": 222,
+  "last_updated": "2026-11-23T23:10:02.861022Z",
+  "total_events": 218,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
@@ -26,14 +26,14 @@
   ],
   "scrape_report": {
     "successes": [
-      "Ensemble Arts Philly: 23 events (HTML)",
-      "Penn Live Arts: 40 events (links)",
+      "Ensemble Arts Philly: 22 events (HTML)",
+      "Penn Live Arts: 38 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
       "Chris' Jazz Cafe: 51 events (HTML)",
-      "South Jazz Kitchen: 10 events (links)",
+      "South Jazz Kitchen: 9 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
       "BalletX: 3 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7ec5749af0b0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7bf005c19190>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -192,26 +192,6 @@
       "link": "https://www.philamuseum.org/exhibitions"
     },
     {
-      "id": "e400fcdfa6dd",
-      "title": "BOOP!\u00ae The Musical",
-      "date_display": "Nov 17 - Nov 22, 2026",
-      "date_start": "2026-11-17",
-      "date_end": "2026-11-22",
-      "time": null,
-      "venue": "Academy Of Music",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/boop-the-musical",
-      "price": null,
-      "categories": [
-        "ballet",
-        "classical",
-        "musical",
-        "opera"
-      ],
-      "description": "Due to a scheduling change, the second week of BOOP! The Musical will no longer take place. Guests holding tickets for Week 2 will be updated by email regarding the relocation of their seats to a Week 1 performance. If you need assistance, please e-mail Audience Services."
-    },
-    {
       "id": "3c97edc6e753",
       "title": "DISCOUNT CODE",
       "date_display": "Nov 27 - Dec 4 2026",
@@ -322,7 +302,7 @@
         "musical",
         "opera"
       ],
-      "description": "How did a dead body, a fake love letter, and \u2014 of all people \u2014 Ian Fleming turn the tide of World War II? Olivier Award winner for Best New Musical and a 2025 Tony\u00ae winner, Operation Mincemeat: A New Musical is the best-reviewed show in West End history with\u2026"
+      "description": "2026-27 Broadway Season Operation Mincemeat: A New Musical Dec 15 - Dec 20, 2026 Forrest Theatre"
     },
     {
       "id": "4fc2684afc98",
@@ -417,6 +397,25 @@
         "classical"
       ],
       "description": "2026-27 Season Samara Joy with The Philadelphia Orchestra Jan 5, 2027 Marian Anderson Hall"
+    },
+    {
+      "id": "e9171fa80af4",
+      "title": "Alicia Keys\u2019 Hell\u2019s Kitchen",
+      "date_display": "Jan 5 - Jan 17, 2027",
+      "date_start": "2027-01-05",
+      "date_end": "2027-01-17",
+      "time": null,
+      "venue": "Academy Of Music",
+      "source": "Ensemble Arts Philly",
+      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
+      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/alicia-keys-hells-kitchen",
+      "price": null,
+      "categories": [
+        "ballet",
+        "classical",
+        "opera"
+      ],
+      "description": "Welcome to HELL\u2019S KITCHEN, the hit musical from 17-time Grammy\u00ae Award winning Alicia Keys\u2014inspired by her life, her music, and her community. Your journey begins with Ali, a 17-year-old girl full of fire, searching for freedom, passion, and her place in the world."
     },
     {
       "id": "11959b613ecc",
@@ -534,21 +533,6 @@
       "description": "Experience the original phenomenon. A thrilling celebration of music and dance, Riverdance returns in a spectacular new production with Grammy Award-winning music, breathtaking choreography, and explosive energy."
     },
     {
-      "id": "f8117dfc034e",
-      "title": "Oh, Mary!",
-      "date_display": "Mar 9 - Mar 14, 2027",
-      "date_start": "2027-03-09",
-      "date_end": "2027-03-14",
-      "time": null,
-      "venue": "Miller Theater",
-      "source": "Ensemble Arts Philly",
-      "source_url": "https://www.ensembleartsphilly.org/tickets-and-events",
-      "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/broadway-series/oh-mary",
-      "price": null,
-      "categories": [],
-      "description": "Oh, Mary! is a dark comedy about a miserable, suffocated Mary Todd Lincoln in the weeks leading up to Abraham Lincoln\u2019s assassination. Unrequited yearning, alcoholism, and suppressed desires abound in this 80-minute one-act play that finally examines the forgotten life and dreams of Mrs."
-    },
-    {
       "id": "7c7c9214bae2",
       "title": "Chlo\u00e9 Arnold's Syncopated Ladies Live!",
       "date_display": "Apr 16, 2027",
@@ -610,42 +594,6 @@
         "dance"
       ],
       "description": null
-    },
-    {
-      "id": "259fb8523c6e",
-      "title": "Hot Peas 'N Butter",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "3:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/HotPeas",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "Come sing and dance with Hot Peas 'n Butter, the award-winning family band that celebrates music from every corner of the globe. With fan-favorite albums and catchy music videos, these beloved performers are frequently heard on Nick Jr. and Sesame Street, delighting kids and grownups alike with their \u201chot and mellow multicultural groove\u201d (Los Angeles Times). Sung in languages ranging from English, Spanish and French to Korean and Hebrew, this concert features songs from the group\u2019s latest album, Back to the Land, honoring our connections to one another and our planet, alongside hits from across the years. Get ready to jam along at a joyful, interactive party where music unites us all. Save up to 35% by including this performance in a subscription! \u00bb Learn more"
-    },
-    {
-      "id": "0b711372c460",
-      "title": "Louis Cato",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:00 PM",
-      "venue": "Annenberg Center",
-      "source": "Penn Live Arts",
-      "source_url": "https://pennlivearts.org/events/",
-      "link": "https://pennlivearts.org/event/LouisCato",
-      "price": null,
-      "categories": [
-        "concert",
-        "dance"
-      ],
-      "description": "\u201cThere is something special about Louis Cato's ability to captivate an audience.\u201d Radiant with charisma and a sound shaped by jazz, funk, blues and soul, this Grammy\u00ae Award-nominated multi-instrumentalist is best known as the final bandleader for The Late Show with Stephen Colbert. He has an innate talent for crafting rich sonic landscapes into timeless gems, from original compositions to his popular Cato Covers series, where he reimagines an eclectic range of songs. Praised for his \u201cimmense musicality\u201d and \u201chonest, thoughtful, and vulnerable storytelling,\u201d Cato joins his trio for a magnetic Philadelphia debut performance that\u2019s not to be missed. (NPR Music) Save up to 35% by including this performance in a subscription! \u00bb Learn more"
     },
     {
       "id": "2de64b2c9b48",
@@ -1332,7 +1280,7 @@
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-let-em-eat-cake/",
-      "price": "$5.",
+      "price": null,
       "categories": [
         "opera",
         "classical"
@@ -1346,7 +1294,7 @@
       "date_start": null,
       "date_end": null,
       "time": "8:00 PM",
-      "venue": "Academy of Music",
+      "venue": "Academy of MusicLimited Tickets",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/2627-season/let-em-eat-cake/",
@@ -1386,7 +1334,7 @@
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-aida/",
-      "price": "$5.",
+      "price": null,
       "categories": [
         "opera",
         "classical"
@@ -1723,7 +1671,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146017",
       "price": null,
       "categories": [
         "jazz"
@@ -1740,7 +1688,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144013",
       "price": null,
       "categories": [
         "jazz"
@@ -1757,7 +1705,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/395943",
       "price": null,
       "categories": [
         "jazz"
@@ -1791,7 +1739,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143326",
       "price": null,
       "categories": [
         "jazz"
@@ -1808,7 +1756,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145761",
       "price": null,
       "categories": [
         "jazz"
@@ -1825,7 +1773,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144016",
       "price": null,
       "categories": [
         "jazz"
@@ -1842,7 +1790,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143850",
       "price": null,
       "categories": [
         "jazz"
@@ -1859,7 +1807,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/391951",
       "price": null,
       "categories": [
         "jazz"
@@ -1876,7 +1824,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143338",
       "price": null,
       "categories": [
         "jazz"
@@ -1893,7 +1841,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/141913",
       "price": null,
       "categories": [
         "jazz"
@@ -1910,7 +1858,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145762",
       "price": null,
       "categories": [
         "jazz"
@@ -1927,7 +1875,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143851",
       "price": null,
       "categories": [
         "jazz"
@@ -1944,7 +1892,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143852",
       "price": null,
       "categories": [
         "jazz"
@@ -1961,7 +1909,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143794",
       "price": null,
       "categories": [
         "jazz"
@@ -1978,7 +1926,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145763",
       "price": null,
       "categories": [
         "jazz"
@@ -1995,7 +1943,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144017",
       "price": null,
       "categories": [
         "jazz"
@@ -2012,7 +1960,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143849",
       "price": null,
       "categories": [
         "jazz"
@@ -2029,7 +1977,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/391953",
       "price": null,
       "categories": [
         "jazz"
@@ -2046,7 +1994,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143798",
       "price": null,
       "categories": [
         "jazz"
@@ -2063,7 +2011,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145764",
       "price": null,
       "categories": [
         "jazz"
@@ -2080,7 +2028,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144018",
       "price": null,
       "categories": [
         "jazz"
@@ -2097,7 +2045,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144019",
       "price": null,
       "categories": [
         "jazz"
@@ -2114,7 +2062,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144020",
       "price": null,
       "categories": [
         "jazz"
@@ -2131,7 +2079,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/143848",
       "price": null,
       "categories": [
         "jazz"
@@ -2148,7 +2096,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145765",
       "price": null,
       "categories": [
         "jazz"
@@ -2165,7 +2113,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/144022",
       "price": null,
       "categories": [
         "jazz"
@@ -2182,7 +2130,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/145630",
       "price": null,
       "categories": [
         "jazz"
@@ -2199,7 +2147,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146016",
       "price": null,
       "categories": [
         "jazz"
@@ -2216,7 +2164,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146091",
       "price": null,
       "categories": [
         "jazz"
@@ -2233,7 +2181,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146419",
       "price": null,
       "categories": [
         "jazz"
@@ -2250,7 +2198,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146420",
       "price": null,
       "categories": [
         "jazz"
@@ -2267,7 +2215,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146957",
       "price": null,
       "categories": [
         "jazz"
@@ -2284,7 +2232,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146959",
       "price": null,
       "categories": [
         "jazz"
@@ -2301,7 +2249,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146960",
       "price": null,
       "categories": [
         "jazz"
@@ -2318,7 +2266,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146962",
       "price": null,
       "categories": [
         "jazz"
@@ -2335,7 +2283,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146421",
       "price": null,
       "categories": [
         "jazz"
@@ -2352,7 +2300,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146967",
       "price": null,
       "categories": [
         "jazz"
@@ -2369,7 +2317,7 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146969",
       "price": null,
       "categories": [
         "jazz"
@@ -2386,29 +2334,12 @@
       "venue": "Chris' Jazz Cafe",
       "source": "Chris' Jazz Cafe",
       "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/events/146970",
       "price": null,
       "categories": [
         "jazz"
       ],
       "description": "<p> Anthony Hervey - Trumpet<br />Langston Hughes II - Alto Saxophone<br />Aayushi Karnik - Guitar<br />Tyler Bullock - Piano<br />Jonathan Muir-Cotton - Bass<br />Tyson Jackson - Drums </p> <p> <b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $35<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $130<br />(<i>Beverages not included</i>) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees. </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
-    },
-    {
-      "id": "c0aef2f6aeeb",
-      "title": "JEFF BRADSHAW | FRI, SAT & SUN NOV 20, 21 & 22 | SHOWTIMES VARY BY DAY",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": "11:00 PM",
-      "venue": "South Jazz Kitchen",
-      "source": "South Jazz Kitchen",
-      "source_url": "https://www.southjazzkitchen.com/jazz-club/",
-      "link": "https://www.southjazzkitchen.com/event/jeff-bradshaw-fri-sat-sun-nov-20-21-22-showtimes-vary-by-day-tickets-on-sale-soon/",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "Step into the world of trombone-powered soul, jazz, hip-hop, and R&amp;B. Jeff Bradshaw&rsquo;s signature sound has echoed through concert halls, festivals, and classic recordings with legends and rising stars alike.&nbsp;Born and raised in North Philadelphia, Jeff Bradshaw&rsquo;s roots run deep in faith and music. Inspired by his father, a gifted musician and vocalist, Jeff was immersed in horn-driven sound from a young age. While his early instruments of choice were the baritone horn and sousaphone, it was the often-overlooked trombone that ultimately spoke to him.In high school, Jeff&rsquo;s curiosity led him to explore this underappreciated instrument. What he found was his voice &mdash; distinctive, soulful, and destined to redefine how the world hears the trombone.A visionary of sou"
     },
     {
       "id": "387ba1a5fcb7",
@@ -2535,7 +2466,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "6:30 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2544,7 +2475,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Maya Belardo, &nbsp;known as &ldquo;The Princess of Jazz&rdquo; in her hometown of Wilmington, DE is passionate about jazz and being a positive example of young womanhood to all princesses. She fell in love with jazz around the age of 12 when she heard a recording of Nat King Cole singing, &ldquo;Nature Boy.&rdquo; She&rsquo;s been inspired by many jazz legends who have paved the way for her to sing this music today.&nbsp;V. Shayne Frederick is &quot;soulful&quot; [DownBeat] &ldquo;one to watch, a shining light,&rdquo; [Philadelphia Inquirer] and &quot;one of the region&#39;s greatest jazz singers.&rdquo; [Metro Philadelphia] &nbsp;He&rsquo;s electrified TEDx, NPR, Philadelphia Orchestra, frequent performances at The Barnes Foundation, Philadelphia Museum of Art, extensive residencies at u"
     },
     {
       "id": "a66cc77057a3",
@@ -2552,7 +2483,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "11:00 PM",
       "venue": "South Jazz Kitchen",
       "source": "South Jazz Kitchen",
       "source_url": "https://www.southjazzkitchen.com/jazz-club/",
@@ -2561,7 +2492,7 @@
       "categories": [
         "jazz"
       ],
-      "description": null
+      "description": "Nasir Dickerson, BA, MA Nasir Dickerson is an Emmy Award-winning music educator, saxophonist, kora player, African flutist, composer, producer, and recording artist. A student of the late greats Charles Bowen, Robert &ldquo;Bootsie&rdquo; Barnes, and Leon Mitchell, and presently Cullen Knight, Nasir is the leader of the jazz sextet The Renaissance Messengers and Life Light Empower, and serves as Artistic/Music Director of The Universal African Dance &amp; Drum Ensemble. Nasir has performed with artists including Lauryn Hill, Dave Chappelle, Erykah Badu, Doechii, Busta Rhymes, Wyclef Jean, Angie Stone, The Legendary Roots Crew, Bilal, Questlove, and Jeff Bradshaw, among many others. He has also opened for jazz legends including Dr. Donald Byrd, Robert &ldquo;Bootsie&rdquo; Barnes, Wallace R"
     },
     {
       "id": "43c5e40c1d0d",
@@ -2576,7 +2507,7 @@
       "link": "https://citywinery.com/pages/events/philadelphia-black-friday",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "Wine and live music in Philadelphia. Vinofile VIP members get 33% off select City Winery shows from Nov 25. Join for tickets 48 hours early, no fees."
     },
     {
       "id": "1e45108ccf13",
@@ -2634,7 +2565,7 @@
       "source": "Greater Phila. Cultural Alliance",
       "source_url": "https://www.philaculture.org/events-calendar",
       "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
-      "price": null,
+      "price": "$",
       "categories": [],
       "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
     },
@@ -2933,6 +2864,21 @@
       "description": null
     },
     {
+      "id": "865e81b27688",
+      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
       "id": "edec4ac02c01",
       "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
@@ -2958,21 +2904,6 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/events/fall-events/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "865e81b27688",
-      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
       "price": null,
       "categories": [],
       "description": null
