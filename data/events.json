@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-23T23:10:02.861022Z",
+  "last_updated": "2026-11-24T21:49:19.023347Z",
   "total_events": 218,
   "sources": [
     "Academy of Natural Sciences",
@@ -27,7 +27,7 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 22 events (HTML)",
-      "Penn Live Arts: 38 events (links)",
+      "Penn Live Arts: 39 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7bf005c19190>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7b0332852780>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -266,7 +266,7 @@
       "link": "https://www.ensembleartsphilly.org/series-and-subscriptions/jazz-series/pink-martini-all-stars",
       "price": null,
       "categories": [],
-      "description": "Thomas Lauderdale's globe-trotting \"little orchestra\" Pink Martini is back with an all-new holiday show that brings triple the joy! Featuring three of the band's favorite singers and long-time collaborators, the Pink Martini All-Stars present: A Season of Stars tour conjures up a mix of old holiday favorites and sweet new treats, glittering\u2026"
+      "description": "Thomas Lauderdale's globe-trotting \"little orchestra\" Pink Martini is back with an all-new holiday show that brings triple the joy!"
     },
     {
       "id": "a185071bf197",
@@ -704,6 +704,24 @@
         "dance"
       ],
       "description": "It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle). \"Late Nite Catechism is a theatrical phenomenon!\u201d (On Boston Stages)"
+    },
+    {
+      "id": "2e0f5465aab7",
+      "title": "Masterclass: Sw!ng Out",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:30 AM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/masterclass-SwingOut2026",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "Join Caleb Teicher, director of A Very Sw!ng Out Holiday, for an intermediate-level vernacular jazz dance class. Focusing on the solo dance vocabulary first appearing on the social dance floors of Harlem in the 1920s, this workshop will focus on style, musicality and how to approach jazz dance with a focus on authenticity and creativity. The class is open to intermediate to advanced high school, university and post-graduate/professional dancers. Please wear comfortable clothing for movement. This masterclass is free, but advance registration is required. REGISTER Your registration is a commitment to attend. If your plans change, please notify ctauser@upenn.edu so that your spot may be released for another student."
     },
     {
       "id": "9c7d16aad3a0",
@@ -1348,7 +1366,7 @@
       "date_start": null,
       "date_end": null,
       "time": "8:00 PM",
-      "venue": "Academy of Music",
+      "venue": "Academy of MusicLimited Tickets",
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/2627-season/aida/",
@@ -2565,7 +2583,7 @@
       "source": "Greater Phila. Cultural Alliance",
       "source_url": "https://www.philaculture.org/events-calendar",
       "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
-      "price": "$",
+      "price": null,
       "categories": [],
       "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
     },
@@ -2864,21 +2882,6 @@
       "description": null
     },
     {
-      "id": "865e81b27688",
-      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
       "id": "edec4ac02c01",
       "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
       "date_display": "",
@@ -2909,6 +2912,21 @@
       "description": null
     },
     {
+      "id": "865e81b27688",
+      "title": "Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Wanamaker Light Show in Philly: Everything You Need to Know Event",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/things-to-do/events/wanamaker-light-show/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
       "id": "640dd3333a6b",
       "title": "Highlights of the Museum",
       "date_display": "",
@@ -2923,7 +2941,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "a41c3cba7106",
@@ -2957,7 +2975,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "08d8ed5f5440",
@@ -2974,7 +2992,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "f4dc9cd75850",
@@ -3008,7 +3026,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Open today: 10am-5pm"
+      "description": "Closed today"
     },
     {
       "id": "c942040ee91c",
@@ -3517,7 +3535,7 @@
         "exhibition",
         "science"
       ],
-      "description": "Partner Event"
+      "description": null
     },
     {
       "id": "7ac9ae18023c",
@@ -3535,7 +3553,7 @@
         "exhibition",
         "science"
       ],
-      "description": "Partner Event"
+      "description": null
     },
     {
       "id": "6b0a383e4945",
@@ -3782,24 +3800,6 @@
       "source": "Science History Institute",
       "source_url": "https://www.sciencehistory.org/visit/events",
       "link": "https://www.sciencehistory.org/visit/events/oral-history-training-institute-202701/",
-      "price": null,
-      "categories": [
-        "lecture",
-        "science"
-      ],
-      "description": null
-    },
-    {
-      "id": "bb0e67cb1f00",
-      "title": "Science & Activism Tour",
-      "date_display": "Jan 09 Sat 2pm",
-      "date_start": null,
-      "date_end": null,
-      "time": "2:00 PM",
-      "venue": "Science History Institute",
-      "source": "Science History Institute",
-      "source_url": "https://www.sciencehistory.org/visit/events",
-      "link": "https://www.sciencehistory.org/visit/events/science-activism-tour-202701/",
       "price": null,
       "categories": [
         "lecture",
