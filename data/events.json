@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-24T21:49:19.023347Z",
+  "last_updated": "2026-11-25T20:56:42.404650Z",
   "total_events": 218,
   "sources": [
     "Academy of Natural Sciences",
@@ -27,12 +27,12 @@
   "scrape_report": {
     "successes": [
       "Ensemble Arts Philly: 22 events (HTML)",
-      "Penn Live Arts: 39 events (links)",
+      "Penn Live Arts: 40 events (links)",
       "Opera Philadelphia: 13 events (HTML)",
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 51 events (HTML)",
+      "Chris' Jazz Cafe: 50 events (HTML)",
       "South Jazz Kitchen: 9 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
@@ -53,7 +53,7 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7b0332852780>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x757c094e41a0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
@@ -615,6 +615,24 @@
       "description": "As the demigod son of a Greek god, Percy Jackson has newly-discovered powers he can\u2019t control, a destiny he doesn\u2019t want, and a mythology textbook\u2019s worth of monsters on his trail. When Zeus\u2019s lightning bolt is stolen and Percy becomes the prime suspect, he has to find and return the bolt to prove his innocence and prevent a war between the gods. But to succeed on his quest, Percy will have to do more than catch the thief. He must travel to the Underworld and back, solve the riddle of the Oracle which warns him of betrayal by a friend, and come to terms with the father who abandoned him."
     },
     {
+      "id": "8a233e1cd71a",
+      "title": "Penny Loafers",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "6:00 PM",
+      "venue": "Annenberg Center",
+      "source": "Penn Live Arts",
+      "source_url": "https://pennlivearts.org/events/",
+      "link": "https://pennlivearts.org/event/penny-loafers-icarbly",
+      "price": null,
+      "categories": [
+        "concert",
+        "dance"
+      ],
+      "description": "In 5, 4, 3, 2\u2026 This fall, the Penny Loafers are going live with their show, \u201ciCarbly\u201d! Tune in for a night of sky-high notes and powerhouse vocals as they bring your favorite web show to the stage. With unforgettable music from artists like Ariana Grande, Paramore, and Yebba, this is one webcast you won\u2019t want to miss!"
+    },
+    {
       "id": "bc18d6187890",
       "title": "Penn Ballet",
       "date_display": "",
@@ -703,7 +721,7 @@
         "concert",
         "dance"
       ],
-      "description": "It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle). \"Late Nite Catechism is a theatrical phenomenon!\u201d (On Boston Stages)"
+      "description": "Performances of Sister's Christmas Catechism have been cancelled. Ticketholders have been contacted with more information on this change. It\u2019s CSI meets divine holiday comedy! From the creator of the beloved Late Nite Catechism series, this interactive holiday production stars Denise Fennell, whose \u201cimpeccable comedic timing\u201d shines as she tackles the mystery that has intrigued historians for centuries: whatever happened to that gold, frankincense and myrrh? \u201cFennell is impressive to watch as she interacts with the audience,\u201d retelling the story of the Nativity with nostalgia, humor and sass. \u201cIf you need a little Christmas, right this very minute, let Sister and her lively antics deliver\u201d (Houston Chronicle). \"Late Nite Catechism is a theatrical phenomenon!\u201d (On Boston Stages)"
     },
     {
       "id": "2e0f5465aab7",
@@ -1298,7 +1316,7 @@
       "source": "Opera Philadelphia",
       "source_url": "https://www.operaphila.org/whats-on/events/",
       "link": "https://www.operaphila.org/whats-on/events/lectures/2027/inside-the-music-let-em-eat-cake/",
-      "price": null,
+      "price": "$5.",
       "categories": [
         "opera",
         "classical"
@@ -1419,7 +1437,7 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "47:30 PM",
+      "time": "7:30 PM",
       "venue": "Walnut Street Theatre",
       "source": "Walnut Street Theatre",
       "source_url": "https://www.walnutstreettheatre.org/season/mainstage.php",
@@ -1680,23 +1698,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "0d778c30eb2b",
-      "title": "Bianca Love and her Band",
-      "date_display": "November 24",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/146017",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p><u><b>Set times 7:30pm &amp; 9:00pm</b></u></p> <p>General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $100<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $95<br />(Beverages not included)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees.</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a></p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
-    },
-    {
       "id": "2b07279bfdbf",
       "title": "Vibraphonist Julian Lee & His Quartet",
       "date_display": "November 25",
@@ -1711,7 +1712,7 @@
       "categories": [
         "jazz"
       ],
-      "description": "<p> Julian Lee - Vibraphone<br />Noah Silver - Piano<br />Kenjiro Matsuki - Bass<br />Dexter Sales - Drums </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
+      "description": "<p>This show is SELLING OUT! Get your tickets quickly.</p><p> Julian Lee - Vibraphone<br />Noah Silver - Piano<br />Kenjiro Matsuki - Bass<br />Dexter Sales - Drums </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
     },
     {
       "id": "4d0d9d19f1b8",
