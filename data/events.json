@@ -1,10 +1,9 @@
 {
-  "last_updated": "2026-11-25T20:56:42.404650Z",
-  "total_events": 218,
+  "last_updated": "2026-11-26T20:48:11.511948Z",
+  "total_events": 214,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
-    "BalletX",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -32,11 +31,10 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 50 events (HTML)",
+      "Chris' Jazz Cafe: 48 events (HTML)",
       "South Jazz Kitchen: 9 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
-      "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 19 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
@@ -53,13 +51,14 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x757c094e41a0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x718a464fb5f0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
+      "BalletX: 0 events found at https://www.balletx.org/season-and-tickets/",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -1698,40 +1697,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "2b07279bfdbf",
-      "title": "Vibraphonist Julian Lee & His Quartet",
-      "date_display": "November 25",
-      "date_start": null,
-      "date_end": null,
-      "time": "7:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/events/144013",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>This show is SELLING OUT! Get your tickets quickly.</p><p> Julian Lee - Vibraphone<br />Noah Silver - Piano<br />Kenjiro Matsuki - Bass<br />Dexter Sales - Drums </p> <p> <u><b>Set times 7:30pm &amp; 9:00pm</b></u> </p> <p> General Admission ~ a la carte menu: $20<br />Dinner &amp; Show ~ includes 3-course dinner: $80<br />VIP Dinner &amp; Show ~ includes dinner above and upgrade to stage-front seating: $100<br />(Beverages not included) </p> <p> All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($12) added to Dinner &amp; Show fees. </p> <p> <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\"></a> </p> <p> Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a> </p>"
-    },
-    {
-      "id": "4d0d9d19f1b8",
-      "title": "James Santangelo & The Late Night Jam",
-      "date_display": "November 25",
-      "date_start": null,
-      "date_end": null,
-      "time": "10:30 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/395943",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Starting at 10:30pm</p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
-    },
-    {
       "id": "96734f2e031e",
       "title": "Closed for Thanksgiving",
       "date_display": "November 26",
@@ -1764,6 +1729,23 @@
         "jazz"
       ],
       "description": "<p><b><u>Show Times: 7:30pm &amp; 9:30pm</u></b><br /><b>General Admission</b> ~ a la carte menu: $30 (<u>Friday</u>) / $35 (<u>Saturday</u>)<br /><b>Dinner &amp; Show package</b> ~ includes 3-course dinner: $105 / $110<br /><b>VIP Dinner &amp; Show package</b> ~ includes 3-course dinner and stage-front seating: $125 / $130<br />(<i>Beverages not included</i>)</p> <p>All-In Price at check out inclusive of taxes &amp; fees. Server gratuity ($15) added to Dinner &amp; Show fees.</p> <p>Join our YouTube Channel to watch live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\">Chris' Jazz Cafe</a></p>"
+    },
+    {
+      "id": "a29c1ea0120e",
+      "title": "James Santangelo & The Late Night Jam",
+      "date_display": "November 28",
+      "date_start": null,
+      "date_end": null,
+      "time": "11:00 PM",
+      "venue": "Chris' Jazz Cafe",
+      "source": "Chris' Jazz Cafe",
+      "source_url": "https://www.chrisjazzcafe.com/events",
+      "link": "https://www.chrisjazzcafe.com/shows/394962",
+      "price": null,
+      "categories": [
+        "jazz"
+      ],
+      "description": "<p>Starting at 11pm</p> <p>$15 General Admission</p> <p><a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\" target=\"_blank\"></a></p> <p>Join our YouTube Channel to watch the show live: <a href=\"https://www.youtube.com/@ChrisJazzCafePhilly\">Chris' Jazz Cafe - YouTube</a></p>"
     },
     {
       "id": "aa074f4ddac3",
@@ -2584,63 +2566,9 @@
       "source": "Greater Phila. Cultural Alliance",
       "source_url": "https://www.philaculture.org/events-calendar",
       "link": "https://philaculture.org/event/annual-meeting-and-arts-party-2026/",
-      "price": null,
+      "price": "$",
       "categories": [],
       "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
-    },
-    {
-      "id": "7e0b4f8cc859",
-      "title": "Dance eXchange",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/dance-exchange/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "da74d3abdc28",
-      "title": "For Artists",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/for-artists/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
-    },
-    {
-      "id": "4f348e654a28",
-      "title": "Ways to Support",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "BalletX",
-      "source_url": "https://www.balletx.org/season-and-tickets/",
-      "link": "https://www.balletx.org/ways-to-support/",
-      "price": null,
-      "categories": [
-        "ballet",
-        "dance"
-      ],
-      "description": null
     },
     {
       "id": "a1592309ea02",
@@ -2648,14 +2576,14 @@
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": null,
+      "time": "9:00 AM",
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/the-mummers-parade/",
       "price": null,
       "categories": [],
-      "description": null
+      "description": "An annual tradition, the Mummers Parade features 10,000 men and women dressed in colorful costumes as they strut down Philly's Broad Street."
     },
     {
       "id": "a1b490c67164",
@@ -2868,8 +2796,8 @@
       "description": null
     },
     {
-      "id": "4271b7e79ed6",
-      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Event",
+      "id": "261d904d5025",
+      "title": "Rocky Season 2026: Inside Philly's New, Eight-Week Celebration Rocky Season 2026: Inside Philly's New,... Rocky Season 2026: Inside Philly's New, Eight-Week... Event",
       "date_display": "",
       "date_start": null,
       "date_end": null,
@@ -2878,21 +2806,6 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/rocky-season-philadelphia/",
-      "price": null,
-      "categories": [],
-      "description": null
-    },
-    {
-      "id": "edec4ac02c01",
-      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
-      "date_display": "",
-      "date_start": null,
-      "date_end": null,
-      "time": null,
-      "venue": null,
-      "source": "Visit Philadelphia Events",
-      "source_url": "https://www.visitphilly.com/things-to-do/events/",
-      "link": "https://www.visitphilly.com/events/winter-events/",
       "price": null,
       "categories": [],
       "description": null
@@ -2908,6 +2821,21 @@
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/events/fall-events/",
+      "price": null,
+      "categories": [],
+      "description": null
+    },
+    {
+      "id": "edec4ac02c01",
+      "title": "Winter Events in Philadelphia Winter Events in Philadelphia Winter Events in Philadelphia Category",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "Visit Philadelphia Events",
+      "source_url": "https://www.visitphilly.com/things-to-do/events/",
+      "link": "https://www.visitphilly.com/events/winter-events/",
       "price": null,
       "categories": [],
       "description": null
