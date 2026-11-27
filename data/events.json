@@ -1,9 +1,10 @@
 {
-  "last_updated": "2026-11-26T20:48:11.511948Z",
-  "total_events": 214,
+  "last_updated": "2026-11-27T20:33:36.468296Z",
+  "total_events": 218,
   "sources": [
     "Academy of Natural Sciences",
     "Arden Theatre",
+    "BalletX",
     "Chris' Jazz Cafe",
     "City Winery",
     "Ensemble Arts Philly",
@@ -31,15 +32,16 @@
       "Walnut Street Theatre: 10 events (links)",
       "FringeArts: 1 events (HTML)",
       "Arden Theatre: 4 events (HTML)",
-      "Chris' Jazz Cafe: 48 events (HTML)",
+      "Chris' Jazz Cafe: 47 events (HTML)",
       "South Jazz Kitchen: 9 events (links)",
       "City Winery: 2 events (links)",
       "Greater Phila. Cultural Alliance: 3 events (HTML)",
+      "BalletX: 3 events (HTML)",
       "Visit Philadelphia Events: 19 events (links)",
       "Philadelphia Museum of Art: 4 events (HTML)",
       "Philadelphia Museum of Art Exhibitions: 4 events (HTML)",
-      "The Franklin Institute: 1 events (HTML)",
-      "Franklin Institute Exhibits: 15 events (HTML)",
+      "The Franklin Institute: 2 events (HTML)",
+      "Franklin Institute Exhibits: 16 events (HTML)",
       "Penn Museum: 28 events (HTML)",
       "M\u00fctter Museum: 6 events (HTML)",
       "Science on Tap: 1 events (Squarespace JSON)",
@@ -51,14 +53,13 @@
       "Failed to fetch https://worldcafelive.org/events/ after 3 attempts: HTTPSConnectionPool(host='worldcafelive.org', port=443): Max retries exceeded with url: /events/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)')))",
       "Failed to fetch https://philadelphiadance.org/calendar/: HTTP 522",
       "Failed to fetch https://www.wilmatheater.org/whats-on/: HTTP 404",
-      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x718a464fb5f0>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
+      "Failed to fetch https://phillyfunguide.com/ after 3 attempts: HTTPSConnectionPool(host='phillyfunguide.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='phillyfunguide.com', port=443) at 0x7e1641757470>, 'Connection to phillyfunguide.com timed out. (connect timeout=20)'))",
       "Failed to fetch https://ansp.org/exhibits/exhibits/: HTTP 404"
     ],
     "warnings": [
       "Philadelphia Orchestra: 0 events found at https://philorch.ensembleartsphilly.org/tickets-and-events/events",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/whats-on-stage",
       "Theatre Philadelphia: 0 events found at https://theatrephiladelphia.org/calendar",
-      "BalletX: 0 events found at https://www.balletx.org/season-and-tickets/",
       "Philadelphia Theatre Company: 0 events found at https://www.philatheatreco.org/",
       "Barnes Foundation: 0 events found at https://www.barnesfoundation.org/whats-on",
       "Barnes Foundation Exhibitions: 0 events found at https://www.barnesfoundation.org/whats-on/exhibitions",
@@ -1697,23 +1698,6 @@
       "description": "Kimberly is about to turn 16, but a rare condition causes her to age rapidly, making her look decades older. As she navigates family dysfunction, her first crush, and possible felony charges, Kimberly remains determined to find happiness."
     },
     {
-      "id": "96734f2e031e",
-      "title": "Closed for Thanksgiving",
-      "date_display": "November 26",
-      "date_start": null,
-      "date_end": null,
-      "time": "6:00 PM",
-      "venue": "Chris' Jazz Cafe",
-      "source": "Chris' Jazz Cafe",
-      "source_url": "https://www.chrisjazzcafe.com/events",
-      "link": "https://www.chrisjazzcafe.com/shows/392219",
-      "price": null,
-      "categories": [
-        "jazz"
-      ],
-      "description": "<p>Happy Thanksgiving!!</p>"
-    },
-    {
       "id": "f727817dcc17",
       "title": "Chris Oatts Pretty Big Band and Special Guest Vocalist Chelsea Reed",
       "date_display": "November 27 - November 28",
@@ -2571,19 +2555,73 @@
       "description": "Join the Greater Philadelphia Cultural Alliance for its 2026 Annual Meeting & Arts Party\u2014a night of community and celebration! We are thrilled to invite you to the Greater Philadelphia Cultural Alliance\u2019s Annual Meeting & Arts Party. The event will be held on Tuesday, October 13, 2026 at Independence Seaport Museum. This year\u2019s theme, \u201cAnchoring Histories, Navigating Futures,\u201d celebrates the..."
     },
     {
+      "id": "7e0b4f8cc859",
+      "title": "Dance eXchange",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/dance-exchange/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": "Education Dance eXchange About the Program Dance eXchange is BalletX's in-school education program, using dance to build confidence, creativity, discipline, and self-expression in young people. Offered in partnership with six Philadelphia public schools, Dance eXchange serves 3rd and 4th grade students through an engaging curriculum that introduces the fundamentals of\u2026"
+    },
+    {
+      "id": "da74d3abdc28",
+      "title": "For Artists",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": "10:00 AM",
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/for-artists/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": "For Artists For dancers, choreographers, and presenters, discover opportunities to work, create, and tour with the company, and explore the repertory that defines BalletX as an artistic home for new work. Dance With Us BalletX invites passionate dancers to grow, create, and discover with us through company auditions, our Summer\u2026"
+    },
+    {
+      "id": "4f348e654a28",
+      "title": "Ways to Support",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": null,
+      "source": "BalletX",
+      "source_url": "https://www.balletx.org/season-and-tickets/",
+      "link": "https://www.balletx.org/ways-to-support/",
+      "price": null,
+      "categories": [
+        "ballet",
+        "dance"
+      ],
+      "description": null
+    },
+    {
       "id": "a1592309ea02",
       "title": "Mummers Parade",
       "date_display": "",
       "date_start": null,
       "date_end": null,
-      "time": "9:00 AM",
+      "time": null,
       "venue": null,
       "source": "Visit Philadelphia Events",
       "source_url": "https://www.visitphilly.com/things-to-do/events/",
       "link": "https://www.visitphilly.com/things-to-do/events/the-mummers-parade/",
       "price": null,
       "categories": [],
-      "description": "An annual tradition, the Mummers Parade features 10,000 men and women dressed in colorful costumes as they strut down Philly's Broad Street."
+      "description": null
     },
     {
       "id": "a1b490c67164",
@@ -2870,7 +2908,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "a41c3cba7106",
@@ -2904,7 +2942,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "08d8ed5f5440",
@@ -2921,7 +2959,7 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-8:45pm"
     },
     {
       "id": "f4dc9cd75850",
@@ -2955,7 +2993,42 @@
       "categories": [
         "exhibition"
       ],
-      "description": "Closed today"
+      "description": "Open today: 10am-8:45pm"
+    },
+    {
+      "id": "0365676fdf6f",
+      "title": "The Franklin Institute will be closed December 7-11 for scheduled maintenance. We will reopen Saturday, December 12.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "The Franklin Institute",
+      "source_url": "https://fi.edu/en/events-calendar",
+      "link": "https://fi.edu/en/events-calendar",
+      "price": null,
+      "categories": [
+        "science"
+      ],
+      "description": null
+    },
+    {
+      "id": "1f303d9cbf92",
+      "title": "The Franklin Institute will be closed December 7-11 for scheduled maintenance. We will reopen Saturday, December 12.",
+      "date_display": "",
+      "date_start": null,
+      "date_end": null,
+      "time": null,
+      "venue": "The Franklin Institute",
+      "source": "Franklin Institute Exhibits",
+      "source_url": "https://fi.edu/en/exhibits-experiences",
+      "link": "https://fi.edu/en/exhibits-experiences",
+      "price": null,
+      "categories": [
+        "exhibition",
+        "science"
+      ],
+      "description": null
     },
     {
       "id": "c942040ee91c",
